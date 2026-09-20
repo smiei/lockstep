@@ -32,6 +32,7 @@
   ],
   "exclude": [
     "node_modules",
-    "fboschinfinite-fusion-nuzlocke"
+    "fboschinfinite-fusion-nuzlocke",
+    "reference_domtronn_nuzlocke_app"
   ]
 }

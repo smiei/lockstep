@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     // Local reference clone (see .gitignore) - a separate Next.js project
     // with its own lint baseline, not part of this app.
     "fboschinfinite-fusion-nuzlocke/**",
+    "reference_domtronn_nuzlocke_app/**",
   ]),
 ]);
 

@@ -116,7 +116,7 @@ const de = {
   spriteConsent: {
     title: "Pokémon-Bilder",
     text:
-      "Die Pokémon-Bilder werden direkt von fremden Servern geladen (GitHub, bei Infinite Fusion zusätzlich der Sprite-Server der Community). Dabei erfahren diese Server deine IP-Adresse. Ohne Bilder funktioniert die App genauso.",
+      "Die Pokémon- und Trainerbilder werden direkt von fremden Servern geladen (GitHub und Pokémon Showdown, bei Infinite Fusion zusätzlich der Sprite-Server der Community). Dabei erfahren diese Server deine IP-Adresse. Ohne Bilder funktioniert die App genauso.",
     allow: "Bilder laden",
     deny: "Ohne Bilder",
     settingOn: "Bilder von Fremdservern: an (ausschalten)",
@@ -848,7 +848,7 @@ const en: Dictionary = {
   spriteConsent: {
     title: "Pokémon images",
     text:
-      "Pokémon images are loaded straight from third-party servers (GitHub, plus the community's sprite server for Infinite Fusion). Those servers see your IP address. The app works just the same without images.",
+      "Pokémon and trainer images are loaded straight from third-party servers (GitHub and Pokémon Showdown, plus the community's sprite server for Infinite Fusion). Those servers see your IP address. The app works just the same without images.",
     allow: "Load images",
     deny: "No images",
     settingOn: "Images from third-party servers: on (turn off)",
@@ -1572,7 +1572,7 @@ const fr: Dictionary = {
   spriteConsent: {
     title: "Images Pokémon",
     text:
-      "Les images des Pokémon sont chargées directement depuis des serveurs tiers (GitHub et, pour Infinite Fusion, le serveur de sprites de la communauté). Ces serveurs voient ton adresse IP. L'appli fonctionne pareil sans images.",
+      "Les images des Pokémon et des dresseurs sont chargées directement depuis des serveurs tiers (GitHub et Pokémon Showdown et, pour Infinite Fusion, le serveur de sprites de la communauté). Ces serveurs voient ton adresse IP. L'appli fonctionne pareil sans images.",
     allow: "Charger les images",
     deny: "Sans images",
     settingOn: "Images de serveurs tiers : activées (désactiver)",
@@ -2301,7 +2301,7 @@ const es: Dictionary = {
   spriteConsent: {
     title: "Imágenes de Pokémon",
     text:
-      "Las imágenes de Pokémon se cargan directamente desde servidores de terceros (GitHub y, en Infinite Fusion, el servidor de sprites de la comunidad). Esos servidores ven tu dirección IP. La app funciona igual sin imágenes.",
+      "Las imágenes de Pokémon y de entrenadores se cargan directamente desde servidores de terceros (GitHub y Pokémon Showdown y, en Infinite Fusion, el servidor de sprites de la comunidad). Esos servidores ven tu dirección IP. La app funciona igual sin imágenes.",
     allow: "Cargar imágenes",
     deny: "Sin imágenes",
     settingOn: "Imágenes de servidores externos: activadas (desactivar)",
@@ -3030,7 +3030,7 @@ const it: Dictionary = {
   spriteConsent: {
     title: "Immagini dei Pokémon",
     text:
-      "Le immagini dei Pokémon vengono caricate direttamente da server di terzi (GitHub e, per Infinite Fusion, il server di sprite della community). Questi server vedono il tuo indirizzo IP. L'app funziona uguale senza immagini.",
+      "Le immagini dei Pokémon e degli allenatori vengono caricate direttamente da server di terzi (GitHub e Pokémon Showdown e, per Infinite Fusion, il server di sprite della community). Questi server vedono il tuo indirizzo IP. L'app funziona uguale senza immagini.",
     allow: "Carica le immagini",
     deny: "Senza immagini",
     settingOn: "Immagini da server esterni: attive (disattiva)",
