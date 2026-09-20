@@ -13,6 +13,7 @@ export type ActionError =
   | { key: "soulLinkNotFound"; id: number }
   | { key: "runNotFound" }
   | { key: "notOnPublicInstance" }
+  | { key: "tooManyNewRuns" }
   | { key: "deadCannotEvolve" }
   | { key: "deadCannotRevert" }
   | { key: "invalidEvolutionTarget" }
@@ -51,6 +52,8 @@ export function formatActionError(error: ActionError, lang: Lang): string {
       return t.runNotFound;
     case "notOnPublicInstance":
       return t.notOnPublicInstance;
+    case "tooManyNewRuns":
+      return t.tooManyNewRuns;
     case "deadCannotEvolve":
       return t.deadCannotEvolve;
     case "deadCannotRevert":

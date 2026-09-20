@@ -12,6 +12,7 @@ import { HeaderMenu } from "@/components/HeaderMenu";
 import { DialogProvider } from "@/components/DialogProvider";
 import { ToastProvider } from "@/components/ui/ToastProvider";
 import { LiveRefresh } from "@/components/LiveRefresh";
+import { PublicFooter } from "@/components/PublicFooter";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { ThemeColorSync } from "@/components/ThemeColorSync";
 import { SessionWatch } from "@/components/SessionWatch";
@@ -185,6 +186,7 @@ export default async function RootLayout({
                 </Suspense>
               </StickyNav>
               <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6">{children}</main>
+              <PublicFooter />
               <LiveRefresh />
               <ThemeColorSync />
               <ServiceWorkerRegistrar />
