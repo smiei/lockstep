@@ -113,6 +113,12 @@ const de = {
     importConfirm: "Importieren",
     cancel: "Abbrechen",
   },
+  legal: {
+    imprint: "Impressum",
+    privacy: "Datenschutz",
+    disclaimer:
+      "Fanprojekt, nicht mit Nintendo, Game Freak oder The Pokémon Company verbunden. Die Grafiken gehören ihren jeweiligen Inhabern und werden aus öffentlichen Sprite-Archiven geladen.",
+  },
   landing: {
     title: "Nuzlocke Tracker",
     empty: "Auf diesem Gerät ist noch kein Run geöffnet.",
@@ -698,6 +704,7 @@ const de = {
     soulLinkNotFound: (id: number) => `SoulLink #${id} nicht gefunden.`,
     runNotFound: "Run nicht gefunden - der Link ist ungültig oder der Run wurde gelöscht.",
     notOnPublicInstance: "Das ist auf der öffentlichen Seite nicht verfügbar.",
+    tooManyNewRuns: "Gerade werden sehr viele neue Runs angelegt. Bitte versuche es in einer Minute noch einmal.",
     deadCannotEvolve: "Ein totes Pokémon kann nicht entwickelt werden.",
     deadCannotRevert: "Ein totes Pokémon kann nicht zurückentwickelt werden.",
     invalidEvolutionTarget: "Ungültiges Entwicklungsziel.",
@@ -828,6 +835,12 @@ const en: Dictionary = {
     importNameCollision: "A run with this name already exists.",
     importConfirm: "Import",
     cancel: "Cancel",
+  },
+  legal: {
+    imprint: "Legal notice",
+    privacy: "Privacy",
+    disclaimer:
+      "Fan project, not affiliated with Nintendo, Game Freak or The Pokémon Company. Artwork belongs to its respective owners and is loaded from public sprite archives.",
   },
   landing: {
     title: "Nuzlocke Tracker",
@@ -1408,6 +1421,7 @@ const en: Dictionary = {
     soulLinkNotFound: (id: number) => `SoulLink #${id} not found.`,
     runNotFound: "Run not found - the link is invalid or the run was deleted.",
     notOnPublicInstance: "This is not available on the public site.",
+    tooManyNewRuns: "A lot of new runs are being created right now. Please try again in a minute.",
     deadCannotEvolve: "A dead Pokémon can't be evolved.",
     deadCannotRevert: "A dead Pokémon can't be devolved.",
     invalidEvolutionTarget: "Invalid evolution target.",
@@ -1536,6 +1550,12 @@ const fr: Dictionary = {
     importNameCollision: "Un run porte déjà ce nom.",
     importConfirm: "Importer",
     cancel: "Annuler",
+  },
+  legal: {
+    imprint: "Mentions légales",
+    privacy: "Confidentialité",
+    disclaimer:
+      "Projet de fan, sans lien avec Nintendo, Game Freak ou The Pokémon Company. Les illustrations appartiennent à leurs propriétaires et sont chargées depuis des archives publiques de sprites.",
   },
   landing: {
     title: "Nuzlocke Tracker",
@@ -2120,6 +2140,7 @@ const fr: Dictionary = {
     soulLinkNotFound: (id: number) => `SoulLink #${id} introuvable.`,
     runNotFound: "Run introuvable - le lien est invalide ou le run a été supprimé.",
     notOnPublicInstance: "Ce n'est pas disponible sur le site public.",
+    tooManyNewRuns: "De très nombreux runs sont créés en ce moment. Réessaie dans une minute.",
     deadCannotEvolve: "Un Pokémon mort ne peut pas évoluer.",
     deadCannotRevert: "Impossible d'annuler l'évolution d'un Pokémon mort.",
     invalidEvolutionTarget: "Cible d'évolution invalide.",
@@ -2249,6 +2270,12 @@ const es: Dictionary = {
     importNameCollision: "Ya existe un run con este nombre.",
     importConfirm: "Importar",
     cancel: "Cancelar",
+  },
+  legal: {
+    imprint: "Aviso legal",
+    privacy: "Privacidad",
+    disclaimer:
+      "Proyecto de fans, sin relación con Nintendo, Game Freak ni The Pokémon Company. Las ilustraciones pertenecen a sus propietarios y se cargan desde archivos públicos de sprites.",
   },
   landing: {
     title: "Nuzlocke Tracker",
@@ -2833,6 +2860,7 @@ const es: Dictionary = {
     soulLinkNotFound: (id: number) => `SoulLink #${id} no encontrado.`,
     runNotFound: "Run no encontrado: el enlace no es válido o el run se ha eliminado.",
     notOnPublicInstance: "Esto no está disponible en el sitio público.",
+    tooManyNewRuns: "Se están creando muchísimos runs nuevos ahora mismo. Inténtalo de nuevo en un minuto.",
     deadCannotEvolve: "Un Pokémon muerto no puede evolucionar.",
     deadCannotRevert: "Un Pokémon muerto no puede involucionar.",
     invalidEvolutionTarget: "Objetivo de evolución no válido.",
@@ -2962,6 +2990,12 @@ const it: Dictionary = {
     importNameCollision: "Esiste già un run con questo nome.",
     importConfirm: "Importa",
     cancel: "Annulla",
+  },
+  legal: {
+    imprint: "Note legali",
+    privacy: "Privacy",
+    disclaimer:
+      "Progetto di fan, non affiliato a Nintendo, Game Freak o The Pokémon Company. Le illustrazioni appartengono ai rispettivi proprietari e sono caricate da archivi pubblici di sprite.",
   },
   landing: {
     title: "Nuzlocke Tracker",
@@ -3546,6 +3580,7 @@ const it: Dictionary = {
     soulLinkNotFound: (id: number) => `SoulLink #${id} non trovato.`,
     runNotFound: "Run non trovato: il link non è valido o il run è stato eliminato.",
     notOnPublicInstance: "Non è disponibile sul sito pubblico.",
+    tooManyNewRuns: "In questo momento vengono creati moltissimi run nuovi. Riprova tra un minuto.",
     deadCannotEvolve: "Un Pokémon morto non può evolversi.",
     deadCannotRevert: "Non si può annullare l'evoluzione di un Pokémon morto.",
     invalidEvolutionTarget: "Obiettivo di evoluzione non valido.",

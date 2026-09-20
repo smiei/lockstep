@@ -1,5 +1,6 @@
 import { zipSync } from "fflate";
 import { prisma } from "@/lib/prisma";
+import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import type { Prisma } from "@/generated/prisma/client";
 
 // The types + parseBackup() live in backupParse.ts (no Prisma import, so the
@@ -147,7 +148,11 @@ export async function applyBackup(backup: BackupFile): Promise<string[]> {
             gameId: run.gameId,
             rulesMarkdown: run.rulesMarkdown,
             settingsJson: run.settingsJson,
-            createdAt: new Date(run.createdAt),
+            // A private instance keeps the backup's own date, for the order runs are
+            // listed in. A public one has no such list, and the date decides both the
+            // new-run throttle and when an empty run counts as abandoned - an import
+            // is a new run today whatever the file says.
+            createdAt: IS_PUBLIC_INSTANCE ? new Date() : new Date(run.createdAt),
           },
         });
         runKeys.push(createdRun.accessKey);

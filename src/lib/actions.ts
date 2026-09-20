@@ -5,6 +5,7 @@ import { publishChange } from "@/lib/liveBus";
 import { prisma } from "@/lib/prisma";
 import { findRunByKey, markRunChanged } from "@/lib/runAccess";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
+import { tooManyNewRuns } from "@/lib/runHousekeeping";
 import {
   DEFAULT_GAME_ID,
   getGameById,
@@ -1308,6 +1309,9 @@ export async function createRun(
   if (!trimmed) {
     return { success: false, error: { key: "nameRequired" } };
   }
+  if (IS_PUBLIC_INSTANCE && (await tooManyNewRuns())) {
+    return { success: false, error: { key: "tooManyNewRuns" } };
+  }
   // Unknown/missing game -> default pack instead of a broken run.
   const game = gameId && getGameById(gameId) ? gameId : DEFAULT_GAME_ID;
 
@@ -1850,6 +1854,10 @@ export async function importBackup(json: string, names?: string[]): Promise<Impo
       const name = names[i]?.trim();
       return name ? { ...run, name } : run;
     });
+  }
+
+  if (IS_PUBLIC_INSTANCE && (await tooManyNewRuns())) {
+    return { success: false, error: { key: "tooManyNewRuns" } };
   }
 
   // Catch unexpected failures (e.g. filesystem/permission problems) so the
