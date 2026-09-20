@@ -9,6 +9,7 @@ import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import type { FusableEncounter } from "@/lib/types";
 import { useFusionSprites } from "@/components/SpriteSetProvider";
+import { useExternalImagesAllowed } from "@/components/SpriteConsentProvider";
 import { useToast } from "@/components/ui/ToastProvider";
 import { Button } from "@/components/ui/Button";
 import { FieldLabel, Select } from "@/components/ui/Input";
@@ -54,6 +55,7 @@ export function FuseDialog({
   const router = useRouter();
   const toast = useToast();
   const fusion = useFusionSprites();
+  const externalImages = useExternalImagesAllowed();
   const t = translations[lang].links;
   const [donorId, setDonorId] = useState<number | null>(null);
   const [pending, startTransition] = useTransition();
@@ -65,7 +67,9 @@ export function FuseDialog({
     event.preventDefault();
     if (donorId === null || pending) return;
     startTransition(async () => {
-      if (customSpritesOnly && fusion && donorPokemonId !== null) {
+      // The probe is a request to the sprite CDN, which a public instance may not
+      // make before the visitor agrees; the warning simply does not appear.
+      if (customSpritesOnly && fusion && externalImages && donorPokemonId !== null) {
         const headIf = fusion.ifIdByOurId[hostPokemonId];
         const bodyIf = fusion.ifIdByOurId[donorPokemonId];
         if (headIf != null && bodyIf != null) {
