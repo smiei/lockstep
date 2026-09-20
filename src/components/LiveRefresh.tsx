@@ -139,16 +139,17 @@ function EventStreamRefresh() {
 // row, see /api/runs/[key]/version) and re-render only when it moved.
 //
 // Every poll is a billed function invocation, so the cadence is the budget:
-// fast right after a change (the other players are active), easing off while
-// nothing happens, nothing at all while the tab is hidden, and a full pause
-// after a long stretch without anybody touching this device. Coming back -
+// fast right after a change (the other players are active), easing off to a
+// minute while nothing happens, nothing at all while the tab is hidden, and a
+// full pause after a long stretch without anybody touching this device. A solo
+// run has nobody to wait for and skips the interval altogether. Coming back -
 // tab visible again, a tap, back online - checks at once.
 //
 // The versions a page was RENDERED with count as seen (CanonicalRun reports
 // them), so a player's own edit, which refreshes itself, does not trigger a
 // second refresh from the poll that notices it.
 const POLL_FAST_MS = 5_000;
-const POLL_SLOW_MS = 30_000;
+const POLL_SLOW_MS = 60_000;
 const POLL_BACKOFF = 1.5;
 const POLL_IDLE_PAUSE_MS = 10 * 60_000;
 
@@ -158,6 +159,12 @@ function VersionPolling() {
   useEffect(() => {
     const seen = new Map<string, number>();
     let activeKey: string | null = null;
+    // A one-player run has nobody whose edits a poll could catch. It is only
+    // checked when the tab comes back, the device reconnects or the player
+    // returns after a pause - a second device of the same player is the one case
+    // that waits for that. Most runs on a public instance are solo, so this is
+    // most of what the interval would have cost.
+    let activeSolo = false;
     let delay = POLL_FAST_MS;
     let timer: ReturnType<typeof setTimeout> | null = null;
     let inFlight = false;
@@ -202,7 +209,7 @@ function VersionPolling() {
       } finally {
         inFlight = false;
       }
-      if (!stopped && activeKey !== null) schedule(delay);
+      if (!stopped && activeKey !== null && !activeSolo) schedule(delay);
     }
 
     const unsubscribe = subscribeRenderedRun((run) => {
@@ -211,11 +218,12 @@ function VersionPolling() {
         return;
       }
       seen.set(run.key, Math.max(seen.get(run.key) ?? -1, run.version));
+      activeSolo = run.solo;
       if (activeKey !== run.key) {
         activeKey = run.key;
         delay = POLL_FAST_MS;
-        schedule(delay);
-      } else if (timer === null && !inFlight) {
+        if (!activeSolo) schedule(delay);
+      } else if (timer === null && !inFlight && !activeSolo) {
         schedule(delay);
       }
     });
