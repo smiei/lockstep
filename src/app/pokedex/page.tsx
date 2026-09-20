@@ -59,7 +59,7 @@ export default async function PokedexPage({
   return (
     <BlindflugProvider on={settings.blindflug}>
     <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-      <CanonicalRun runKey={runKey} version={version} />
+      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <PokemonDetailProvider
         pokemonList={pokemon}
         forms={getPokemonFormsForGame(game)}

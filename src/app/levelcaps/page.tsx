@@ -36,7 +36,7 @@ export default async function LevelCapsPage({
 
   return (
     <div>
-      <CanonicalRun runKey={runKey} version={version} />
+      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <PageHeader title={t.heading}>
         <ProgressBar
           done={progress.done}

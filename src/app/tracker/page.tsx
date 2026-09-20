@@ -48,7 +48,7 @@ export default async function TrackerPage({
   return (
     <BlindflugProvider on={settings.blindflug}>
     <div>
-      <CanonicalRun runKey={runKey} version={version} />
+      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
         <PlayerNamesProvider names={settings.playerNames} lang={lang}>
           <PokemonDetailProvider

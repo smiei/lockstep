@@ -190,7 +190,7 @@ export default async function AnalyzePage({
   return (
     <BlindflugProvider on={settings.blindflug}>
     <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-      <CanonicalRun runKey={runKey} version={version} />
+      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <PlayerNamesProvider names={settings.playerNames} lang={lang}>
         <PokemonDetailProvider
           pokemonList={pokemonList}
