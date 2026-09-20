@@ -17,6 +17,7 @@
     "generate:learnsets": "node scripts/generate-learnsets.mjs",
     "generate:if-species": "node scripts/generate-infinite-fusion-species.mjs",
     "generate:if-moves": "node scripts/generate-infinite-fusion-moves.mjs",
+    "generate:trainer-sprites": "node scripts/generate-trainer-sprite-map.mjs",
     "download:sprites": "node scripts/download-sprites.mjs",
     "download:catchrates": "node scripts/download-catchrates.mjs",
     "download:badges": "node scripts/download-badges.mjs",

@@ -22,5 +22,8 @@ public/trainers/**/*.png
 # a stale local copy must not enter the build context.
 public/icons
 
+# Local reference clone of another tracker (see .gitignore): not part of this app.
+reference_domtronn_nuzlocke_app
+
 # Private branding override - applied at runtime via a mount, never baked in.
 branding-local
