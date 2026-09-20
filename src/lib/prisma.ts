@@ -4,6 +4,7 @@ import path from "node:path";
 // the Docker image's Alpine at all - even though Docker never uses it.
 import { PrismaLibSQL } from "@prisma/adapter-libsql/web";
 import { PrismaClient } from "@/generated/prisma/client";
+import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 
 // The Prisma CLI resolves a relative sqlite `file:` URL relative to
 // prisma/schema.prisma (-> prisma/dev.db), but this generated client resolves
@@ -29,6 +30,16 @@ function resolveDatabaseUrl(): string {
 function createClient(): PrismaClient {
   const tursoUrl = process.env.TURSO_DATABASE_URL;
   if (tursoUrl) {
+    // A hosted database means a hosted deployment, and a hosted deployment that
+    // is not built as a public instance lists every run in it to every visitor
+    // (src/lib/instance.ts). scripts/build-public.mjs sets the flag itself, so
+    // this only fires for a build made some other way - fail loudly instead.
+    if (!IS_PUBLIC_INSTANCE) {
+      throw new Error(
+        "TURSO_DATABASE_URL is set, but this build is not a public instance. " +
+          "Build with `npm run build:public` (vercel.json does), or unset TURSO_DATABASE_URL.",
+      );
+    }
     const adapter = new PrismaLibSQL(
       { url: tursoUrl, authToken: process.env.TURSO_AUTH_TOKEN },
       { timestampFormat: "unixepoch-ms" },
