@@ -28,7 +28,7 @@ import { rememberRun } from "@/lib/visitedRuns";
 // 3. On a public instance it records the run in this browser's visited list.
 //    A run opened here for the first time is not in the server-rendered run
 //    switcher yet, so that one visit refreshes once.
-export function CanonicalRun({ runKey, version }: { runKey: string; version: number }) {
+export function CanonicalRun({ runKey, version, solo }: { runKey: string; version: number; solo: boolean }) {
   const router = useRouter();
 
   useEffect(() => {
@@ -41,9 +41,9 @@ export function CanonicalRun({ runKey, version }: { runKey: string; version: num
   }, [runKey, router]);
 
   useEffect(() => {
-    reportRenderedRun({ key: runKey, version });
+    reportRenderedRun({ key: runKey, version, solo });
     return () => reportRenderedRun(null);
-  }, [runKey, version]);
+  }, [runKey, version, solo]);
 
   return null;
 }

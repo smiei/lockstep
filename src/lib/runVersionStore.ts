@@ -6,13 +6,15 @@
 // costing a second refresh: their action is followed by router.refresh(), the
 // page comes back with the bumped version, and the next poll sees nothing new.
 
-export type RenderedRun = { key: string; version: number };
+// `solo`: the run has one player, so there is nobody else whose edits a poll
+// could catch (LiveRefresh's VersionPolling then only checks on focus).
+export type RenderedRun = { key: string; version: number; solo: boolean };
 
 let current: RenderedRun | null = null;
 const listeners = new Set<(run: RenderedRun | null) => void>();
 
 export function reportRenderedRun(run: RenderedRun | null) {
-  if (current?.key === run?.key && current?.version === run?.version) return;
+  if (current?.key === run?.key && current?.version === run?.version && current?.solo === run?.solo) return;
   current = run;
   for (const listener of listeners) listener(current);
 }

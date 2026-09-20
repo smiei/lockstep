@@ -40,7 +40,7 @@ export default async function RulesPage({
 
   return (
     <>
-      <CanonicalRun runKey={runKey} version={version} />
+      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <RulesView
         runKey={runKey}
         lang={lang}
