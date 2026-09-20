@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { getPokemonSpriteUrls } from "@/lib/sprites";
 import { useSpriteSet, useFusionSprites, type FusionSpriteConfig } from "@/components/SpriteSetProvider";
+import { useExternalImagesAllowed } from "@/components/SpriteConsentProvider";
 
 const SIZES = {
   sm: 32,
@@ -75,6 +76,7 @@ export function PokemonSprite({
 }) {
   const spriteSet = useSpriteSet();
   const fusion = useFusionSprites();
+  const externalImages = useExternalImagesAllowed();
   const identity = `${pokemonId}:${bodyId ?? ""}`;
   const [failedStage, setFailedStage] = useState<{ identity: string; stage: number } | null>(null);
   const stage = failedStage && failedStage.identity === identity ? failedStage.stage : 0;
@@ -82,7 +84,9 @@ export function PokemonSprite({
 
   const candidates = spriteCandidates(pokemonId, bodyId, spriteSet, fusion);
 
-  if (stage >= candidates.length) {
+  // A public instance requests nothing from third-party servers until the
+  // visitor agrees (src/lib/spriteConsent.ts): every candidate is one.
+  if (!externalImages || stage >= candidates.length) {
     return (
       <div
         style={{ width: px, height: px }}

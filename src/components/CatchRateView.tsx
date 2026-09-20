@@ -17,6 +17,7 @@ import { computeFusionStats, computeFusionTypes, fusionCatchBaseRate } from "@/l
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { quickCatch } from "@/lib/actions";
 import { getBallSpriteUrl } from "@/lib/sprites";
+import { useExternalImagesAllowed } from "@/components/SpriteConsentProvider";
 import { formatActionError } from "@/lib/actionErrors";
 import { useToast } from "@/components/ui/ToastProvider";
 import { useClampedIntInput } from "@/lib/useClampedIntInput";
@@ -53,7 +54,8 @@ function hpBarColor(hpPercent: number): string {
 // or hotlinked (public instance) - see src/lib/sprites.ts.
 function BallSprite({ ball, size = 24 }: { ball: BallId; size?: number }) {
   const [failed, setFailed] = useState(false);
-  if (failed) return <span style={{ width: size, height: size }} className="inline-block shrink-0" />;
+  const externalImages = useExternalImagesAllowed();
+  if (failed || !externalImages) return <span style={{ width: size, height: size }} className="inline-block shrink-0" />;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img

@@ -13,6 +13,8 @@ import { DialogProvider } from "@/components/DialogProvider";
 import { ToastProvider } from "@/components/ui/ToastProvider";
 import { LiveRefresh } from "@/components/LiveRefresh";
 import { PublicFooter } from "@/components/PublicFooter";
+import { SpriteConsentProvider } from "@/components/SpriteConsentProvider";
+import { SpriteConsentBanner } from "@/components/SpriteConsentBanner";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { ThemeColorSync } from "@/components/ThemeColorSync";
 import { SessionWatch } from "@/components/SessionWatch";
@@ -142,6 +144,7 @@ export default async function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LanguageProvider>
+            <SpriteConsentProvider>
             <ToastProvider>
             <DialogProvider>
             <TabOrderProvider>
@@ -187,6 +190,7 @@ export default async function RootLayout({
               </StickyNav>
               <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6">{children}</main>
               <PublicFooter />
+              <SpriteConsentBanner />
               <LiveRefresh />
               <ThemeColorSync />
               <ServiceWorkerRegistrar />
@@ -196,6 +200,7 @@ export default async function RootLayout({
             </TabOrderProvider>
             </DialogProvider>
             </ToastProvider>
+            </SpriteConsentProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>
