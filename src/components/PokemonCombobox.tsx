@@ -16,6 +16,7 @@ export function PokemonCombobox({
   onClear,
   lockedFamilyIds,
   disabled,
+  label,
 }: {
   lang: Lang;
   pokemonList: Pokemon[];
@@ -26,6 +27,9 @@ export function PokemonCombobox({
   onClear?: () => void;
   lockedFamilyIds: Set<number>;
   disabled?: boolean;
+  // Accessible name. The placeholder alone names every field on the Encounter
+  // tab the same, so a caller with several of them says whose field it is.
+  label?: string;
 }) {
   const t = translations[lang].tracker;
   const listId = useId();
@@ -109,6 +113,7 @@ export function PokemonCombobox({
         <input
           type="text"
           role="combobox"
+          aria-label={label}
           aria-expanded={open}
           aria-controls={listId}
           aria-autocomplete="list"

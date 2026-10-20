@@ -14,6 +14,7 @@ import { translations } from "@/lib/i18n/dictionary";
 import { pokemonName, routeName } from "@/lib/i18n/localize";
 import { PokemonCombobox } from "@/components/PokemonCombobox";
 import { PokemonInfoButton } from "@/components/PokemonDetailProvider";
+import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import type { RunSettings } from "@/lib/runSettings";
 import { clauseView } from "@/lib/speciesClause";
 import { Input } from "@/components/ui/Input";
@@ -165,6 +166,13 @@ export function EncounterEditor({
   const [caughtAsFusion, setCaughtAsFusion] = useState(false);
   const bodyShown =
     caughtAsFusion || Boolean(body?.isFusionBody) || settings.randomizerFuseEverything;
+
+  // Every row of the Encounter tab holds the same set of fields, so their
+  // accessible names carry whose field it is and on which route; the visible
+  // player name above them is not tied to the controls.
+  const playerLabel = usePlayerLabel();
+  const route = routes.find((r) => r.id === routeId);
+  const fieldContext = [playerLabel(player), route ? routeName(route, lang) : `Route #${routeId}`] as const;
 
   const selectedName = (() => {
     const p = selectedId != null ? pokemonList.find((x) => x.id === selectedId) : null;
@@ -322,6 +330,7 @@ export function EncounterEditor({
         onSelect={handleSelectPokemon}
         lockedFamilyIds={lockedFamilyIds}
         disabled={pending}
+        label={t.tracker.pokemonFieldLabel(...fieldContext)}
       />
       {evolvedName && <span className="text-xs text-ink-subtle">({evolvedName})</span>}
       {/* Infinite Fusion: a catch that was already a fusion. The body is a
@@ -380,6 +389,7 @@ export function EncounterEditor({
                 }}
                 lockedFamilyIds={lockedFamilyIds}
                 disabled={pending}
+                label={t.tracker.bodyFieldLabel(...fieldContext)}
               />
             )}
           </div>
@@ -393,6 +403,7 @@ export function EncounterEditor({
               disabled={pending}
               onClick={handleShinyToggle}
               aria-pressed={shiny}
+              aria-label={t.tracker.shinyToggle}
               title={t.tracker.shinyToggle}
               className={`h-10 w-10 shrink-0 rounded-md border transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
                 shiny
@@ -407,6 +418,7 @@ export function EncounterEditor({
             value={status}
             disabled={pending}
             onChange={(e) => handleStatusChange(e.target.value as EncounterStatus)}
+            aria-label={t.tracker.statusFieldLabel(...fieldContext)}
             className={`h-10 shrink-0 rounded-md border px-2 font-medium disabled:cursor-not-allowed disabled:opacity-50 ${STATUS_STYLES[status]}`}
           >
             {Object.values(EncounterStatus).map((s) => (
