@@ -345,7 +345,10 @@ export function LinksView({
                 key={link.id}
                 className={
                   isDead
-                    ? "border-danger-line bg-danger-bg/50 opacity-60"
+                    ? // Dead recedes through the tint, the "Tot" label and the
+                      // tiles' own dead styling - opacity-60 on the whole card
+                      // took its text down to 2.3:1.
+                      "border-danger-line bg-danger-bg/50"
                     : onTeam
                       ? "border-success-line bg-success-bg/40"
                       : ""
