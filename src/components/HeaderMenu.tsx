@@ -108,7 +108,7 @@ export function HeaderMenu({
   const { lang, setLang } = useLanguage();
   const { confirm, alert } = useDialog();
   const toast = useToast();
-  const { open, setOpen, toggle, containerRef } = useDropdown();
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const [renameOpen, setRenameOpen] = useState(false);
   const [tabOrderOpen, setTabOrderOpen] = useState(false);
   const [appearanceOpen, setAppearanceOpen] = useState(false);
@@ -314,6 +314,7 @@ export function HeaderMenu({
         type="button"
         disabled={pending}
         onClick={toggle}
+        {...triggerProps}
         aria-label={t.menu.label}
         title={t.menu.label}
         className="flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-muted transition-colors hover:bg-hover hover:text-ink disabled:cursor-not-allowed disabled:opacity-50"

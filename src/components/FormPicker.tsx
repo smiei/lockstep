@@ -31,7 +31,7 @@ export function FormPicker({
   options: FormOption[];
 }) {
   const router = useRouter();
-  const { open, setOpen, toggle, containerRef } = useDropdown();
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
   const t = translations[lang].pokedex.detail;
@@ -57,7 +57,7 @@ export function FormPicker({
 
   return (
     <div ref={containerRef} className="relative">
-      <Button size="sm" loading={pending} onClick={toggle}>
+      <Button size="sm" loading={pending} onClick={toggle} {...triggerProps}>
         {t.forms}
       </Button>
       {open && (
