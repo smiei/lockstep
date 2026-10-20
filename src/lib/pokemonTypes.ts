@@ -131,3 +131,31 @@ export const TYPE_COLORS: Record<string, string> = {
   // Curse's pre-Gen-6 "???" type - a defunct oddity, not a real battling type.
   unknown: "#68A090",
 };
+
+const TYPE_FALLBACK_COLOR = "#666666";
+const LIGHT_INK = "#ffffff";
+const DARK_INK = "#18181b"; // --ink / --eff-on-light
+
+function relativeLuminance(hex: string): number {
+  const channel = (offset: number) => {
+    const c = parseInt(hex.slice(offset, offset + 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  };
+  return 0.2126 * channel(1) + 0.7152 * channel(3) + 0.0722 * channel(5);
+}
+
+export function contrastRatio(a: string, b: string): number {
+  const [hi, lo] = [relativeLuminance(a), relativeLuminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+}
+
+// Background + text colour of a type chip. The fills are the series' canonical
+// colours, and most of them are light: white text on them measured as low as
+// 1.5:1 (Electric). So the text colour is picked per type - white where it
+// clears WCAG's 4.5:1 (Fighting, Poison, Ghost, Dragon, Dark), dark ink
+// everywhere else - instead of darkening colours players recognise on sight.
+export function typeChipStyle(type: string): { backgroundColor: string; color: string } {
+  const backgroundColor = TYPE_COLORS[type] ?? TYPE_FALLBACK_COLOR;
+  const color = contrastRatio(backgroundColor, LIGHT_INK) >= 4.5 ? LIGHT_INK : DARK_INK;
+  return { backgroundColor, color };
+}
