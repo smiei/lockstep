@@ -56,6 +56,7 @@ export function EncounterTile({
             bodyId={bodyId}
             name={encounter.pokemonName}
             size="xl"
+            className={isDead ? "opacity-50" : undefined}
           />
         </button>
       ) : (
@@ -64,12 +65,14 @@ export function EncounterTile({
           bodyId={bodyId}
           name={encounter.pokemonName}
           size="xl"
-          className="shrink-0"
+          className={`shrink-0 ${isDead ? "opacity-50" : ""}`}
         />
       )}
       <div className="flex min-w-0 flex-col items-start gap-1 text-left">
+        {/* A dead Pokémon fades its picture and strikes its name through;
+            the text itself stays readable. */}
         <span
-          className={`font-medium text-ink ${isDead ? "text-ink-subtle line-through" : ""}`}
+          className={`font-medium ${isDead ? "text-ink-muted line-through" : "text-ink"}`}
         >
           {encounter.shiny && (
             <span className="mr-1 inline-flex align-[-2px] text-warning" title="Shiny">
