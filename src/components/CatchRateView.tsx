@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useId, useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { useDropdown } from "@/lib/useDropdown";
 import { useRouter } from "next/navigation";
@@ -76,24 +76,29 @@ function BallPicker({
   ballIds,
   labels,
   onPick,
+  labelId,
 }: {
   ball: BallId;
   ballIds: BallId[];
   labels: Record<BallId, string>;
   onPick: (ball: BallId) => void;
+  // The visible field label, read out together with the current ball.
+  labelId: string;
 }) {
   const { open, setOpen, toggle, containerRef } = useDropdown();
+  const valueId = useId();
 
   return (
     <div ref={containerRef} className="relative">
       <button
         type="button"
         onClick={toggle}
+        aria-labelledby={`${labelId} ${valueId}`}
         className="flex h-11 w-full items-center justify-between gap-2 rounded-md border border-line-strong bg-panel px-3 text-left text-sm text-ink transition-colors hover:bg-hover"
       >
         <span className="flex min-w-0 items-center gap-2">
           <BallSprite ball={ball} />
-          <span className="truncate">{labels[ball]}</span>
+          <span id={valueId} className="truncate">{labels[ball]}</span>
         </span>
         <span aria-hidden className="shrink-0 text-xs text-ink-subtle">▾</span>
       </button>
@@ -185,6 +190,7 @@ function QuickCatchPanel({
   nicknamesEnabled,
   shinyClauseEnabled,
   onConfirm,
+  label,
 }: {
   slots: OpenSlot[];
   disabled: boolean;
@@ -192,6 +198,8 @@ function QuickCatchPanel({
   nicknamesEnabled: boolean;
   shinyClauseEnabled: boolean;
   onConfirm: (routeId: number, extra: { nickname: string | null; shiny: boolean }) => void;
+  // Accessible name of the route select: whose catch it records.
+  label: string;
 }) {
   const { lang } = useLanguage();
   const t = translations[lang].catchrate;
@@ -214,6 +222,7 @@ function QuickCatchPanel({
         value={routeId}
         disabled={disabled || pending || slots.length === 0}
         onChange={(e) => setRouteId(e.target.value ? Number(e.target.value) : "")}
+        aria-label={label}
         className="h-11 w-full rounded-md border border-line-strong bg-panel px-3 text-sm text-ink disabled:cursor-not-allowed disabled:opacity-50"
       >
         <option value="">{t.selectRoute}</option>
@@ -231,6 +240,7 @@ function QuickCatchPanel({
               disabled={pending}
               onClick={() => setShiny((s) => !s)}
               aria-pressed={shiny}
+              aria-label={tTracker.shinyToggle}
               title={tTracker.shinyToggle}
               className={`rounded border px-1.5 py-1 text-xs transition-colors disabled:opacity-50 ${
                 shiny
@@ -298,6 +308,16 @@ export function CatchCardBody({
   const detail = usePokemonDetail();
   const ballIds = getBallIdsForGeneration(generation, versionGroup);
   const isInfiniteFusion = versionGroup === INFINITE_FUSION_VERSION_GROUP;
+  // Label/field pairs. Several cards can be open at once, so no fixed ids.
+  const fieldId = useId();
+  const ids = {
+    ball: `${fieldId}-ball`,
+    status: `${fieldId}-status`,
+    hp: `${fieldId}-hp`,
+    level: `${fieldId}-level`,
+    ownLevel: `${fieldId}-own-level`,
+    turn: `${fieldId}-turn`,
+  };
 
   const { ball, hpPercent, level, status, turn, conditionMet } = state;
   const [caughtMsg, setCaughtMsg] = useState<string | null>(null);
@@ -423,6 +443,7 @@ export function CatchCardBody({
           nicknamesEnabled={settings.nicknames}
           shinyClauseEnabled={settings.shinyClause}
           onConfirm={(routeId, extra) => handleQuickCatch(routeId, player, extra)}
+          label={players.length > 1 ? `${playerLabel(player)}: ${t.selectRoute}` : t.selectRoute}
         />
       </>
     );
@@ -433,14 +454,25 @@ export function CatchCardBody({
     <>
       <div className="grid grid-cols-2 gap-3">
         <div className="col-span-2 sm:col-span-1">
-          <label className={labelClass}>{t.ballLabel}</label>
-          <BallPicker ball={ball} ballIds={ballIds} labels={t.balls} onPick={(b) => onChange({ ball: b })} />
+          {/* A span, not a label: a <label> would replace the button's own
+              name (the chosen ball) instead of adding to it. */}
+          <span id={ids.ball} className={labelClass}>
+            {t.ballLabel}
+          </span>
+          <BallPicker
+            ball={ball}
+            ballIds={ballIds}
+            labels={t.balls}
+            onPick={(b) => onChange({ ball: b })}
+            labelId={ids.ball}
+          />
         </div>
         <div className="col-span-2 sm:col-span-1">
-          <label className={labelClass} htmlFor="cr-status">
+          <label className={labelClass} htmlFor={ids.status}>
             {t.statusLabel}
           </label>
           <select
+            id={ids.status}
             value={status}
             onChange={(e) => onChange({ status: e.target.value as StatusId })}
             className={inputClass}
@@ -454,11 +486,12 @@ export function CatchCardBody({
         </div>
 
         <div className="col-span-2">
-          <label className={labelClass}>
+          <label className={labelClass} htmlFor={ids.hp}>
             {t.hpLabel}:{" "}
             <span className="font-semibold text-ink">{hpPercent}%</span>
           </label>
           <input
+            id={ids.hp}
             type="range"
             min={1}
             max={100}
@@ -476,9 +509,12 @@ export function CatchCardBody({
 
         {(ball === "nest" || ball === "level") && (
           <div className="col-span-2 sm:col-span-1">
-            <label className={labelClass}>{t.levelLabel}</label>
+            <label className={labelClass} htmlFor={ids.level}>
+              {t.levelLabel}
+            </label>
             <div className="flex items-center gap-1">
               <input
+                id={ids.level}
                 type="text"
                 inputMode="numeric"
                 {...levelInput}
@@ -487,6 +523,8 @@ export function CatchCardBody({
               <button
                 type="button"
                 onClick={() => onChange({ level: 100 })}
+                aria-label={t.setLevel100}
+                title={t.setLevel100}
                 className="inline-flex h-11 shrink-0 items-center rounded-md border border-line-strong px-3 text-sm font-medium text-ink-muted transition-colors hover:bg-hover hover:text-ink"
               >
                 100
@@ -497,15 +535,20 @@ export function CatchCardBody({
 
         {ball === "level" && (
           <div className="col-span-2 sm:col-span-1">
-            <label className={labelClass}>{t.ownLevelLabel}</label>
-            <input type="text" inputMode="numeric" {...ownLevelInput} className={inputClass} />
+            <label className={labelClass} htmlFor={ids.ownLevel}>
+              {t.ownLevelLabel}
+            </label>
+            <input id={ids.ownLevel} type="text" inputMode="numeric" {...ownLevelInput} className={inputClass} />
           </div>
         )}
 
         {(ball === "timer" || ball === "quick") && (
           <div className="col-span-2 sm:col-span-1">
-            <label className={labelClass}>{t.turnLabel}</label>
+            <label className={labelClass} htmlFor={ids.turn}>
+              {t.turnLabel}
+            </label>
             <input
+              id={ids.turn}
               type="text"
               inputMode="numeric"
               {...turnInput}
