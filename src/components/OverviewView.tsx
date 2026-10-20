@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useId, useState, type ReactNode } from "react";
 import { Player, RunMode } from "@/generated/prisma/enums";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import type { Lang } from "@/lib/i18n/dictionary";
@@ -58,6 +58,46 @@ export type OverviewMemorialEntry = {
   sortIndex: number;
   diedAt: number | null;
 };
+
+// A card heading with an "i" that folds an explanation out underneath. The
+// explanation used to sit in a `title` on a plain <span>: hover only, so a
+// phone or a keyboard never reached it, and the "i" was read out as part of
+// the heading.
+function InfoHeading({
+  title,
+  info,
+  toggleLabel,
+}: {
+  title: ReactNode;
+  info: string;
+  toggleLabel: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const infoId = useId();
+  return (
+    <>
+      <div className="mb-2 flex items-center gap-1.5">
+        <h3 className="text-sm font-semibold text-ink">{title}</h3>
+        <button
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          aria-controls={infoId}
+          aria-label={toggleLabel}
+          title={info}
+          className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border font-serif text-xs italic transition-colors ${
+            open ? "border-ink-muted bg-hover text-ink" : "border-line-strong text-ink-muted hover:bg-hover hover:text-ink"
+          }`}
+        >
+          <span aria-hidden="true">i</span>
+        </button>
+      </div>
+      <p id={infoId} hidden={!open} className="mb-2 text-xs text-ink-muted">
+        {info}
+      </p>
+    </>
+  );
+}
 
 // One number, its label, and (SoulLink only) the same number split per player.
 //
@@ -299,20 +339,21 @@ export function OverviewView({
                 (o) =>
                   teams.find((tm) => tm.player === o.player && tm.members.length > 0) && (
                     <Card key={o.player} className="min-w-[260px] flex-1">
-                      <h3 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-ink">
-                        {t.offensiveGaps}
-                        {!isClassic && (
-                          <span className="font-normal text-ink-subtle">
-                            · {playerLabel(o.player)}
-                          </span>
-                        )}
-                        <span
-                          className="inline-flex h-5 w-5 shrink-0 cursor-help items-center justify-center rounded-full border border-line-strong font-serif text-xs italic text-ink-subtle"
-                          title={t.offensiveGapsInfo(coverageLevel)}
-                        >
-                          i
-                        </span>
-                      </h3>
+                      <InfoHeading
+                        title={
+                          <>
+                            {t.offensiveGaps}
+                            {!isClassic && (
+                              <span className="font-normal text-ink-subtle">
+                                {" "}
+                                · {playerLabel(o.player)}
+                              </span>
+                            )}
+                          </>
+                        }
+                        info={t.offensiveGapsInfo(coverageLevel)}
+                        toggleLabel={t.offensiveGapsInfoToggle}
+                      />
                       {!hasMoveData ? (
                         <p className="text-xs text-ink-subtle">
                           {translations[lang].typen.noMoveData}
