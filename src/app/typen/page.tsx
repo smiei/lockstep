@@ -24,6 +24,7 @@ import { resolveRunId } from "@/lib/runs";
 import { boundRouteMap, clauseView } from "@/lib/speciesClause";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { routeName } from "@/lib/i18n/localize";
 import { movepoolId } from "@/lib/forms";
 import { resolveEncounterMon } from "@/lib/encounterMon";
@@ -43,6 +44,8 @@ import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
 // dex, sprites, catch mechanics, level-up movesets) and its current team for
 // the battle matchup / the quick-catch dropdowns.
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("typen");
 
 export default async function AnalyzePage({
   searchParams,

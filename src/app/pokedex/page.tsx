@@ -11,6 +11,7 @@ import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { boundRouteMap, clauseView } from "@/lib/speciesClause";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { translations } from "@/lib/i18n/dictionary";
 import { PokedexTable } from "@/components/PokedexTable";
 import { CanonicalRun } from "@/components/CanonicalRun";
@@ -23,6 +24,8 @@ import { PageHeader } from "@/components/ui/Page";
 // Run-scoped: the Pokédex reflects the current run's game (dex scope, sprites,
 // generation, and the game's evolution methods for the detail card).
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("pokedex");
 
 export default async function PokedexPage({
   searchParams,

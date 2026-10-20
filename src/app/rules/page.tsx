@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { getGameOrDefault } from "@/lib/data";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { DEFAULT_RULES } from "@/lib/defaultRules";
 import { RulesView } from "@/components/RulesView";
 import { CanonicalRun } from "@/components/CanonicalRun";
@@ -9,6 +10,8 @@ import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { RunLanding } from "@/components/RunLanding";
 
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("rules");
 
 export default async function RulesPage({
   searchParams,

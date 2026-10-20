@@ -28,6 +28,7 @@ import { resolveRunId } from "@/lib/runs";
 import { comparePlayers } from "@/lib/players";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { localizeName, pokemonName, routeName } from "@/lib/i18n/localize";
 import { movepoolId } from "@/lib/forms";
 import { EncounterStatus, LinkStatus, Player, RunMode } from "@/generated/prisma/client";
@@ -47,6 +48,8 @@ import {
 import type { TeamMember } from "@/components/TeamWeaknessesView";
 
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("overview");
 
 // Attack-type coverage below the first level cap (no cap defeated yet) is
 // judged against a starter-level team, not an empty one.

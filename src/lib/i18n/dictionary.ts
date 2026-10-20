@@ -686,6 +686,7 @@ const de = {
     offensiveGapsInfo: (level: number) =>
       `Berücksichtigt werden nur Angriffstypen, die das Team bis zum zuletzt erreichten Level-Cap (Level ${level}) tatsächlich erlernt hat.`,
     noGaps: "Keine Lücken – das Team trifft jeden Typ sehr effektiv.",
+    offensiveGapsInfoToggle: "Erklärung anzeigen",
     offensiveHint: "Typen, die kein Team-Mitglied sehr effektiv trifft.",
     memorial: "Friedhof",
     memorialEmpty: "Noch keine Verluste. Bleib vorsichtig.",
@@ -1418,6 +1419,7 @@ const en: Dictionary = {
     offensiveGapsInfo: (level: number) =>
       `Only counts attack types the team has actually learned by the last cleared level cap (level ${level}).`,
     noGaps: "No gaps – the team hits every type super-effectively.",
+    offensiveGapsInfoToggle: "Show explanation",
     offensiveHint: "Types no team member hits super-effectively.",
     memorial: "Memorial",
     memorialEmpty: "No losses yet. Stay careful.",
@@ -2152,6 +2154,7 @@ const fr: Dictionary = {
     offensiveGapsInfo: (level: number) =>
       `Seuls les types d'attaque que l'équipe a réellement appris jusqu'au dernier plafond de niveau franchi (niveau ${level}) sont pris en compte.`,
     noGaps: "Aucune lacune – l'équipe touche chaque type super-efficacement.",
+    offensiveGapsInfoToggle: "Afficher l'explication",
     offensiveHint: "Types qu'aucun membre ne touche super-efficacement.",
     memorial: "Cimetière",
     memorialEmpty: "Aucune perte pour l'instant. Reste prudent.",
@@ -2887,6 +2890,7 @@ const es: Dictionary = {
     offensiveGapsInfo: (level: number) =>
       `Solo cuentan los tipos de ataque que el equipo ha aprendido realmente hasta el último tope de nivel superado (nivel ${level}).`,
     noGaps: "Sin huecos: el equipo golpea a cada tipo de forma súper eficaz.",
+    offensiveGapsInfoToggle: "Mostrar explicación",
     offensiveHint: "Tipos que ningún miembro golpea de forma súper eficaz.",
     memorial: "Cementerio",
     memorialEmpty: "Aún sin bajas. Ten cuidado.",
@@ -3622,6 +3626,7 @@ const it: Dictionary = {
     offensiveGapsInfo: (level: number) =>
       `Contano solo i tipi d'attacco che la squadra ha effettivamente imparato entro l'ultimo tetto di livello superato (livello ${level}).`,
     noGaps: "Nessuna lacuna: la squadra colpisce ogni tipo in modo super efficace.",
+    offensiveGapsInfoToggle: "Mostra spiegazione",
     offensiveHint: "Tipi che nessun membro colpisce in modo super efficace.",
     memorial: "Cimitero",
     memorialEmpty: "Ancora nessuna perdita. Stai attento.",

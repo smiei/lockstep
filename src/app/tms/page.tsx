@@ -11,6 +11,7 @@ import {
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { displayNameWithForm, movepoolId } from "@/lib/forms";
 import { teamLinkIds } from "@/lib/fusionGroups";
 import { EncounterStatus, LinkStatus, Player } from "@/generated/prisma/client";
@@ -24,6 +25,8 @@ import { TmCompatView, type TmTeamMember } from "@/components/TmCompatView";
 import type { MoveOption } from "@/components/MoveCombobox";
 
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("tms");
 
 export default async function TmsPage({
   searchParams,

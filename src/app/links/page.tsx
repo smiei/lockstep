@@ -31,6 +31,7 @@ import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { comparePlayers } from "@/lib/players";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { translations } from "@/lib/i18n/dictionary";
 import { routeName, pokemonName } from "@/lib/i18n/localize";
 import { formatEvolutionMethod } from "@/lib/evolutionMethods";
@@ -40,6 +41,8 @@ import { formedLinks, groupSoulLinks, isFoldedDonor, teamSlotsNeeded } from "@/l
 import type { SoulLinkView, FusableEncounter, EvolutionOptions } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("links");
 
 export default async function LinksPage({
   searchParams,

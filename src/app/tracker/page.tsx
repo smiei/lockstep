@@ -12,6 +12,7 @@ import { resolveRunId } from "@/lib/runs";
 import { boundRouteMap } from "@/lib/speciesClause";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { TrackerView } from "@/components/TrackerView";
 import { CanonicalRun } from "@/components/CanonicalRun";
 import { RunLanding } from "@/components/RunLanding";
@@ -23,6 +24,8 @@ import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
 // Shared, constantly-mutated state (two players editing concurrently) - never
 // serve a build-time snapshot, always hit the DB fresh.
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("tracker");
 
 export default async function TrackerPage({
   searchParams,
