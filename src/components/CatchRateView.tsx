@@ -28,6 +28,7 @@ import { translations } from "@/lib/i18n/dictionary";
 import { pokemonName } from "@/lib/i18n/localize";
 import { baseSpeciesId } from "@/lib/forms";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
+import { SparkleIcon } from "@/components/ActionIcons";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { TypeBadge } from "@/components/TypeBadge";
@@ -243,13 +244,14 @@ function QuickCatchPanel({
               aria-pressed={shiny}
               aria-label={tTracker.shinyToggle}
               title={tTracker.shinyToggle}
-              className={`rounded border px-1.5 py-1 text-xs transition-colors disabled:opacity-50 ${
+              // Same square as the Encounter row's shiny toggle it mirrors.
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md border transition-colors disabled:opacity-50 ${
                 shiny
                   ? "border-warning-line bg-warning-bg text-warning"
-                  : "border-line text-ink-subtle hover:bg-hover hover:text-ink"
+                  : "border-line text-ink-muted hover:bg-hover hover:text-ink"
               }`}
             >
-              ✨
+              <SparkleIcon className="h-5 w-5" />
             </button>
           )}
           {nicknamesEnabled && (
