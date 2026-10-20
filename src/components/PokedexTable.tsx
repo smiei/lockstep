@@ -229,6 +229,11 @@ export function PokedexTable({
                 {COLUMNS.map((col) => (
                   <th
                     key={col.key}
+                    // The ▲/▼ glyph is aria-hidden; this is what tells a screen
+                    // reader which column the table is sorted by.
+                    aria-sort={
+                      sortKey === col.key ? (sortDir === "asc" ? "ascending" : "descending") : undefined
+                    }
                     className={`font-medium text-ink-muted ${
                       col.align === "right" ? "text-right" : "text-left"
                     } ${col.hideClass ?? ""}`}
@@ -268,7 +273,21 @@ export function PokedexTable({
                       <PokemonSprite pokemonId={p.id} name={name} size="sm" />
                     </td>
                     <td className="hidden px-3 py-2 text-ink-muted md:table-cell">{p.id}</td>
-                    <td className="px-3 py-2 font-medium text-ink">{name}</td>
+                    {/* The row click is the mouse/touch way in; this button is
+                        the keyboard's - a <tr> cannot take focus. It fills the
+                        cell so it is a full-height target as well. */}
+                    <td className="p-0">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          detail?.open(p.id);
+                        }}
+                        className="w-full px-3 py-2 text-left font-medium text-ink"
+                      >
+                        {name}
+                      </button>
+                    </td>
                     <td className="hidden px-3 py-2 sm:table-cell">
                       <div className="flex flex-wrap gap-1">
                         {p.types.map((type) => (

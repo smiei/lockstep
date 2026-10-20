@@ -31,9 +31,12 @@ export function AddToTeamButton({
 }) {
   const router = useRouter();
   const toast = useToast();
-  const { open, setOpen, toggle, containerRef } = useDropdown();
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const [pending, startTransition] = useTransition();
   const t = translations[lang].links;
+  // A fusion group can hold several slots (see TeamBar).
+  const occupied = new Set(teamLinks.flatMap((l) => l.teamPositions));
+  const freeSlot = Array.from({ length: TEAM_SIZE }, (_, i) => i).find((i) => !occupied.has(i));
 
   function assign(position: number) {
     startTransition(async () => {
@@ -48,11 +51,6 @@ export function AddToTeamButton({
   }
 
   function handleClick() {
-    // A fusion group can hold several slots (see TeamBar).
-    const occupied = new Set(teamLinks.flatMap((l) => l.teamPositions));
-    const freeSlot = Array.from({ length: TEAM_SIZE }, (_, i) => i).find(
-      (i) => !occupied.has(i),
-    );
     if (freeSlot !== undefined) {
       assign(freeSlot);
     } else {
@@ -62,7 +60,15 @@ export function AddToTeamButton({
 
   return (
     <div ref={containerRef} className="relative">
-      <Button variant="success" size="sm" loading={pending} onClick={handleClick}>
+      {/* Only a disclosure while the team is full: with a free slot the click
+          assigns straight away and nothing opens. */}
+      <Button
+        variant="success"
+        size="sm"
+        loading={pending}
+        onClick={handleClick}
+        {...(freeSlot === undefined ? triggerProps : {})}
+      >
         {t.addToTeam}
       </Button>
       {open && (
