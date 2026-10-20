@@ -411,7 +411,7 @@ export function OverviewView({
             {memorial.map((m) => (
               <li
                 key={m.soulLinkId}
-                className="rounded-lg border border-danger-line bg-danger-bg/40 p-3 opacity-90"
+                className="rounded-lg border border-danger-line bg-danger-bg/40 p-3"
               >
                 <div className="mb-1 text-xs font-medium text-ink-muted">{m.routeName}</div>
                 <div className="flex flex-wrap items-center gap-2">
