@@ -22,7 +22,7 @@ export function EvolveButton({
   targets: { id: number; name: string; method: string | null; available: boolean }[];
 }) {
   const router = useRouter();
-  const { open, setOpen, toggle, containerRef } = useDropdown();
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
   const t = translations[lang].links;
@@ -45,6 +45,11 @@ export function EvolveButton({
   // A level evolution is reachable within the current level cap: give the
   // button a subtle emerald accent plus a light dot travelling around its
   // border (spinning conic gradient behind a padded, masked button).
+  //
+  // Two laps (5s) and then it rests: motion that runs longer than five seconds
+  // next to other content needs a way to stop it (WCAG 2.2.2), and it used to
+  // loop forever on every evolvable card. The green variant keeps saying
+  // "evolvable" after that. Reduced motion skips the dot entirely.
   const anyAvailable = targets.some((target) => target.available);
 
   return (
@@ -53,7 +58,7 @@ export function EvolveButton({
         {anyAvailable && (
           <span
             aria-hidden
-            className="absolute inset-[-1000%] animate-[spin_2.5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_310deg,var(--success)_355deg,transparent_360deg)]"
+            className="absolute inset-[-1000%] animate-[spin_2.5s_linear_2] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_310deg,var(--success)_355deg,transparent_360deg)] motion-reduce:hidden"
           />
         )}
         {/* bg-panel is load-bearing: the spinning conic-gradient ring sits
@@ -63,6 +68,7 @@ export function EvolveButton({
           size="sm"
           loading={pending}
           onClick={toggle}
+          {...triggerProps}
           className="relative bg-panel"
         >
           {t.evolve}

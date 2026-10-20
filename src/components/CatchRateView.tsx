@@ -85,7 +85,7 @@ function BallPicker({
   // The visible field label, read out together with the current ball.
   labelId: string;
 }) {
-  const { open, setOpen, toggle, containerRef } = useDropdown();
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const valueId = useId();
 
   return (
@@ -93,6 +93,7 @@ function BallPicker({
       <button
         type="button"
         onClick={toggle}
+        {...triggerProps}
         aria-labelledby={`${labelId} ${valueId}`}
         className="flex h-11 w-full items-center justify-between gap-2 rounded-md border border-line-strong bg-panel px-3 text-left text-sm text-ink transition-colors hover:bg-hover"
       >

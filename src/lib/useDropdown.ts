@@ -65,5 +65,10 @@ export function useDropdown<T extends HTMLElement = HTMLDivElement>(
     };
   }, [open, close]);
 
-  return { open, setOpen, close, toggle, containerRef };
+  // Spread onto the button that opens the popover: a disclosure button has to
+  // say whether its content is showing (WCAG 4.1.2), and doing it here covers
+  // every dropdown at once, the way the Escape handling above does.
+  const triggerProps = { "aria-expanded": open };
+
+  return { open, setOpen, close, toggle, containerRef, triggerProps };
 }

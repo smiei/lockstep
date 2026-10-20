@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/nav";
@@ -21,8 +22,24 @@ export function Navigation() {
     .filter((item): item is (typeof NAV_ITEMS)[number] => item !== undefined)
     .filter((item) => !hidden.includes(item.href));
 
+  // On a phone the strip scrolls sideways and only the first four or five tabs
+  // fit, so opening Reise, Pokédex, TMs or Regeln used to leave the active tab
+  // off-screen. Bring it into view - by moving the strip's own scroll position,
+  // not with scrollIntoView, which could also scroll the page vertically.
+  const navRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const nav = navRef.current;
+    const active = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (!nav || !active) return;
+    const strip = nav.getBoundingClientRect();
+    const tab = active.getBoundingClientRect();
+    const margin = 16; // the strip's px-4, so the tab does not sit flush
+    if (tab.left < strip.left) nav.scrollLeft += tab.left - strip.left - margin;
+    else if (tab.right > strip.right) nav.scrollLeft += tab.right - strip.right + margin;
+  }, [pathname, order, hidden]);
+
   return (
-    <nav className="flex justify-center-safe gap-1 overflow-x-auto px-4 sm:px-6">
+    <nav ref={navRef} className="flex justify-center-safe gap-1 overflow-x-auto px-4 sm:px-6">
       {items.map((item) => {
         const isActive = pathname === item.href;
         const href = run ? `${item.href}?run=${run}` : item.href;
@@ -30,6 +47,7 @@ export function Navigation() {
           <Link
             key={item.href}
             href={href}
+            aria-current={isActive ? "page" : undefined}
             // Icon over label: eight near-identical text labels are slow to
             // pick out, a shape is recognised without reading. The icon takes
             // its colour from the link, so the active/inactive states below
