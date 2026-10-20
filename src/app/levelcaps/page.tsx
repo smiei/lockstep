@@ -2,6 +2,7 @@ import { getGameOrDefault, getLevelCaps } from "@/lib/data";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { getLang } from "@/lib/i18n/getLang";
+import { tabMetadata } from "@/lib/pageMetadata";
 import { translations } from "@/lib/i18n/dictionary";
 import { computeLevelCapProgress, eliteFourIndex } from "@/lib/progress";
 import { LevelCapsView } from "@/components/LevelCapsView";
@@ -11,6 +12,8 @@ import { ProgressBar } from "@/components/ProgressBar";
 import { PageHeader } from "@/components/ui/Page";
 
 export const dynamic = "force-dynamic";
+
+export const generateMetadata = tabMetadata("levelcaps");
 
 export default async function LevelCapsPage({
   searchParams,

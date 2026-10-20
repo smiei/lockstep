@@ -37,7 +37,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nuzlocke SoulLink Tracker",
+  // Each tab sets its own title (src/lib/pageMetadata.ts); the template adds
+  // the app name, the default covers pages that set none.
+  title: { template: "%s · SoulLink Tracker", default: "Nuzlocke SoulLink Tracker" },
   description: "Pokémon SoulLink Random Nuzlocke Tracker",
   applicationName: "Nuzlocke SoulLink Tracker",
   // Home-screen label on iOS; it truncates around 12 characters, so the full
