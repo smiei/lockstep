@@ -27,8 +27,13 @@
   --line-strong: #d4d4d8; /* input + control border, needs more contrast */
 
   --ink: #18181b; /* primary text */
-  --ink-muted: #71717a; /* secondary text */
-  --ink-subtle: #a1a1aa; /* captions, placeholders */
+  /* Both grey steps are TEXT, so both have to clear WCAG's 4.5:1 - on white and
+     on the tinted cards (success/danger washes) alike. --ink-subtle used to be
+     #a1a1aa (2.6:1), which is why placeholders, captions and the BST/rank lines
+     read as washed out; it took --ink-muted's old value, and --ink-muted moved
+     one step darker so the two stay apart. */
+  --ink-muted: #52525b; /* secondary text, 7.7:1 on white */
+  --ink-subtle: #71717a; /* captions, placeholders, 4.6:1 on the palest tint */
 
   --accent: #18181b; /* primary button fill */
   --accent-ink: #ffffff; /* text on --accent */
@@ -58,7 +63,9 @@
   --info-bg: #f0f9ff;
   --info-line: #7dd3fc;
 
-  --focus: #0ea5e9; /* one focus ring for the whole app */
+  /* One focus ring for the whole app. A focus indicator needs 3:1 against what
+     surrounds it (WCAG 1.4.11); sky-500 managed 2.8:1 on white, sky-600 4.1:1. */
+  --focus: #0284c7;
 
   /* Blindflug's marker colour. One value for both themes, like --danger-solid:
      it is only ever a 3px stripe and a button outline, and a muted violet
@@ -78,7 +85,7 @@
 
   --ink: #fafafa;
   --ink-muted: #a1a1aa;
-  --ink-subtle: #71717a;
+  --ink-subtle: #8b8b94; /* 5.3:1 on --panel; #71717a was 3.7:1 */
 
   --accent: #fafafa;
   --accent-ink: #18181b;
@@ -110,16 +117,21 @@
    where the columns that do not concern the current opponent are dimmed to 25%
    and a pastel at quarter opacity is indistinguishable from the background.
 
-   These are saturated mid-tones instead, one value for both themes, always
-   carrying white text: a mid-tone reads on white and on near-black alike.
-   Shared by the full type matrix, the team matchup and the team weaknesses
-   table, so the three agree on what a multiplier looks like.
+   These are saturated mid-tones instead, one value for both themes: a mid-tone
+   reads on white and on near-black alike. Shared by the full type matrix, the
+   team matchup and the team weaknesses table, so the three agree on what a
+   multiplier looks like.
+
+   The two LIGHT fills (--eff-good, --eff-bad-mild) carry --eff-on-light, the
+   two deep ones white. White on the light pair measured 2.3:1 and 2.8:1 - the
+   digit in the cell is the whole point of the cell, so it has to clear 4.5:1.
    --------------------------------------------------------------------------- */
 :root {
   --eff-good: #22c55e; /* resists / hits hard */
   --eff-good-deep: #15803d; /* the stronger step: 1/4x */
   --eff-bad: #dc2626; /* weak to / barely scratches */
   --eff-bad-mild: #f97316; /* the milder step: 2x taken */
+  --eff-on-light: #18181b; /* digits on the two light fills: 9.2:1 / 6.3:1 */
   --eff-none: #18181b; /* immune */
   --eff-none-ink: #e4e4e7;
 }
@@ -136,6 +148,7 @@
   --color-eff-good-deep: var(--eff-good-deep);
   --color-eff-bad: var(--eff-bad);
   --color-eff-bad-mild: var(--eff-bad-mild);
+  --color-eff-on-light: var(--eff-on-light);
   --color-eff-none: var(--eff-none);
   --color-eff-none-ink: var(--eff-none-ink);
 

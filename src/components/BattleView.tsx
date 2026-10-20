@@ -8,7 +8,7 @@ import { attackTypesAtLevel } from "@/lib/learnset";
 import { BlindflugNotice, useBlindflug } from "@/components/BlindflugProvider";
 import { movepoolId } from "@/lib/forms";
 import { computeFusionTypes } from "@/lib/fusion";
-import { TYPE_COLORS, TYPE_LABELS } from "@/lib/pokemonTypes";
+import { TYPE_LABELS, typeChipStyle } from "@/lib/pokemonTypes";
 import { useClampedIntInput } from "@/lib/useClampedIntInput";
 import type { Player, RunMode } from "@/generated/prisma/client";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
@@ -27,10 +27,10 @@ function TypeAbbrev({ type, lang, dimmed }: { type: string; lang: Lang; dimmed: 
   return (
     <span
       title={label}
-      className={`inline-flex h-7 w-8 items-center justify-center rounded-md text-xs font-semibold uppercase text-white transition-opacity ${
+      className={`inline-flex h-7 w-8 items-center justify-center rounded-md text-xs font-semibold uppercase transition-opacity ${
         dimmed ? "opacity-25" : ""
       }`}
-      style={{ backgroundColor: TYPE_COLORS[type] ?? "#777" }}
+      style={typeChipStyle(type)}
     >
       {label.slice(0, 3)}
     </span>
@@ -50,7 +50,7 @@ function MatrixLegend({ text }: { text: string }) {
 // The fills come from the --eff-* scale, not from --success / --danger: those
 // are text colours and wash out as a cell fill (see globals.css).
 function matrixCellStyle(multiplier: number): { text: string; className: string } {
-  if (multiplier === 2) return { text: "2", className: "bg-eff-good text-white" };
+  if (multiplier === 2) return { text: "2", className: "bg-eff-good text-eff-on-light" };
   if (multiplier === 0.5) return { text: "½", className: "bg-eff-bad text-white" };
   if (multiplier === 0) return { text: "0", className: "bg-eff-none text-eff-none-ink" };
   return { text: "", className: "bg-sunken" };
@@ -65,8 +65,8 @@ function matrixCellStyle(multiplier: number): { text: string; className: string 
 // rather than a different hue.
 function matchupCellStyle(multiplier: number): { text: string; className: string } {
   if (multiplier === 4) return { text: "4", className: "bg-eff-bad text-white" };
-  if (multiplier === 2) return { text: "2", className: "bg-eff-bad-mild text-white" };
-  if (multiplier === 0.5) return { text: "½", className: "bg-eff-good text-white" };
+  if (multiplier === 2) return { text: "2", className: "bg-eff-bad-mild text-eff-on-light" };
+  if (multiplier === 0.5) return { text: "½", className: "bg-eff-good text-eff-on-light" };
   if (multiplier === 0.25) return { text: "¼", className: "bg-eff-good-deep text-white" };
   if (multiplier === 0) return { text: "0", className: "bg-eff-none text-eff-none-ink" };
   return { text: "1", className: "bg-sunken text-ink-subtle" };
@@ -117,8 +117,8 @@ function TeamMatchup({
             <tr key={attack}>
               <td className="whitespace-nowrap py-0.5 pr-2">
                 <span
-                  className="inline-block rounded px-1.5 py-0.5 text-xs font-medium text-white"
-                  style={{ backgroundColor: TYPE_COLORS[attack] ?? "#777" }}
+                  className="inline-block rounded px-1.5 py-0.5 text-xs font-medium"
+                  style={typeChipStyle(attack)}
                 >
                   {TYPE_LABELS[lang][attack] ?? attack}
                 </span>
