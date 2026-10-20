@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import type { Pokemon } from "@/lib/data";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { computeDefenseMultipliers, singleTypeMultiplier } from "@/lib/effectiveness";
@@ -192,6 +193,8 @@ export function BattleCardBody({
   const playerLabel = usePlayerLabel();
   const blindflug = useBlindflug();
   const levelInput = useClampedIntInput(level, 1, 100, 100, (n) => onChange({ level: n }));
+  // Several cards can be open at once, so the label/field id is per card.
+  const levelId = useId();
 
   const selectedRaw = pokemonList.find((p) => p.id === selectedId) ?? null;
   // Infinite Fusion: trainers there field fusions, and the matchup only
@@ -237,11 +240,12 @@ export function BattleCardBody({
   return (
     <>
       <div className="mb-4">
-        <label className="mb-1 block text-xs font-medium text-ink-muted">
+        <label htmlFor={levelId} className="mb-1 block text-xs font-medium text-ink-muted">
           {t.levelLabel}
         </label>
         <div className="flex items-center gap-1">
           <input
+            id={levelId}
             type="text"
             inputMode="numeric"
             {...levelInput}
@@ -250,6 +254,8 @@ export function BattleCardBody({
           <button
             type="button"
             onClick={() => onChange({ level: 100 })}
+            aria-label={t.setLevel100}
+            title={t.setLevel100}
             className="inline-flex h-11 shrink-0 items-center rounded-md border border-line-strong px-3 text-sm font-medium text-ink-muted transition-colors hover:bg-hover hover:text-ink"
           >
             100

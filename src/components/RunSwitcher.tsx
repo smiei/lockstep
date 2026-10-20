@@ -61,6 +61,8 @@ export function RunSwitcher({ runs, games }: { runs: RunSummary[]; games: GameSu
         value={activeRun?.accessKey ?? ""}
         disabled={pending}
         onChange={(e) => handleChange(e.target.value)}
+        aria-label={t.switchLabel}
+        title={t.switchLabel}
         className="h-10 max-w-40 rounded-md border border-line-strong bg-panel px-2 text-sm text-ink disabled:cursor-not-allowed disabled:opacity-50 sm:max-w-56"
       >
         {runs.map((run) => (
