@@ -15,6 +15,7 @@ import { pokemonName, routeName } from "@/lib/i18n/localize";
 import { PokemonCombobox } from "@/components/PokemonCombobox";
 import { PokemonInfoButton } from "@/components/PokemonDetailProvider";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
+import { SparkleIcon, TrashIcon } from "@/components/ActionIcons";
 import type { RunSettings } from "@/lib/runSettings";
 import { clauseView } from "@/lib/speciesClause";
 import { Input } from "@/components/ui/Input";
@@ -405,13 +406,13 @@ export function EncounterEditor({
               aria-pressed={shiny}
               aria-label={t.tracker.shinyToggle}
               title={t.tracker.shinyToggle}
-              className={`h-10 w-10 shrink-0 rounded-md border transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md border transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
                 shiny
                   ? "border-warning-line bg-warning-bg text-warning"
-                  : "border-line text-ink-subtle hover:bg-hover hover:text-ink"
+                  : "border-line text-ink-muted hover:bg-hover hover:text-ink"
               }`}
             >
-              ✨
+              <SparkleIcon className="h-5 w-5" />
             </button>
           )}
           <select
@@ -468,9 +469,9 @@ export function EncounterEditor({
               onClick={handleClear}
               title={t.tracker.clear}
               aria-label={t.tracker.clear}
-              className="h-10 w-10 shrink-0 rounded-md border border-line text-ink-subtle transition-colors hover:bg-danger-bg hover:text-danger disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-line text-ink-muted transition-colors hover:bg-danger-bg hover:text-danger disabled:cursor-not-allowed disabled:opacity-50"
             >
-              🗑
+              <TrashIcon className="h-5 w-5" />
             </button>
           )}
         </div>

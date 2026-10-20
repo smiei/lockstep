@@ -60,6 +60,7 @@ export function PokedexTable({
   const { lang } = useLanguage();
   const detail = usePokemonDetail();
   const t = translations[lang].pokedex;
+  const lockedLabel = translations[lang].tracker.locked;
   const columns = t.columns;
   const locked = useMemo(() => new Set(lockedFamilyIds), [lockedFamilyIds]);
   const [avail, setAvail] = useState<"all" | "available" | "locked">("all");
@@ -262,14 +263,18 @@ export function PokedexTable({
                 const name = pokemonName(p, lang);
                 const isLocked = avail === "all" && locked.has(p.family_id);
                 return (
+                  // A locked family recedes through muted text and a faded
+                  // sprite, and says so in words next to the name (as the
+                  // Pokémon picker does) - opacity on the whole row took its
+                  // text down to 1.8:1 and was the only sign it was locked.
                   <tr
                     key={p.id}
                     onClick={() => detail?.open(p.id)}
                     className={`cursor-pointer border-b border-line last:border-0 hover:bg-hover ${
-                      isLocked ? "opacity-45" : ""
+                      isLocked ? "text-ink-muted" : ""
                     }`}
                   >
-                    <td className="px-2 py-2">
+                    <td className={`px-2 py-2 ${isLocked ? "opacity-45" : ""}`}>
                       <PokemonSprite pokemonId={p.id} name={name} size="sm" />
                     </td>
                     <td className="hidden px-3 py-2 text-ink-muted md:table-cell">{p.id}</td>
@@ -283,9 +288,12 @@ export function PokedexTable({
                           e.stopPropagation();
                           detail?.open(p.id);
                         }}
-                        className="w-full px-3 py-2 text-left font-medium text-ink"
+                        className={`w-full px-3 py-2 text-left font-medium ${isLocked ? "text-ink-muted" : "text-ink"}`}
                       >
                         {name}
+                        {isLocked && (
+                          <span className="ml-2 text-xs font-normal text-danger">{lockedLabel}</span>
+                        )}
                       </button>
                     </td>
                     <td className="hidden px-3 py-2 sm:table-cell">
@@ -324,7 +332,9 @@ export function PokedexTable({
                     <td className="px-3 py-2 text-right tabular-nums text-ink-muted">
                       #{ranks.get(p.id)}
                     </td>
-                    <td className="px-3 py-2 text-right font-semibold tabular-nums text-ink">
+                    <td
+                      className={`px-3 py-2 text-right font-semibold tabular-nums ${isLocked ? "" : "text-ink"}`}
+                    >
                       {p.stats.Summe}
                     </td>
                   </tr>
