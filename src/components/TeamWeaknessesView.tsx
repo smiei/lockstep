@@ -3,7 +3,7 @@
 import type { Player, RunMode } from "@/generated/prisma/client";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { GEN3_TYPES, computeDefenseMultipliers } from "@/lib/effectiveness";
-import { TYPE_COLORS, TYPE_LABELS } from "@/lib/pokemonTypes";
+import { TYPE_LABELS, typeChipStyle } from "@/lib/pokemonTypes";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { PokemonSprite } from "@/components/PokemonSprite";
@@ -31,8 +31,8 @@ export type TeamMember = {
 // and 0x (black).
 function cellStyle(multiplier: number): { text: string; className: string } {
   if (multiplier === 4) return { text: "4", className: "bg-eff-bad text-white" };
-  if (multiplier === 2) return { text: "2", className: "bg-eff-bad-mild text-white" };
-  if (multiplier === 0.5) return { text: "½", className: "bg-eff-good text-white" };
+  if (multiplier === 2) return { text: "2", className: "bg-eff-bad-mild text-eff-on-light" };
+  if (multiplier === 0.5) return { text: "½", className: "bg-eff-good text-eff-on-light" };
   if (multiplier === 0.25) return { text: "¼", className: "bg-eff-good-deep text-white" };
   if (multiplier === 0) return { text: "0", className: "bg-eff-none text-eff-none-ink" };
   return { text: "", className: "bg-sunken" };
@@ -43,8 +43,8 @@ function cellStyle(multiplier: number): { text: string; className: string } {
 function BigTypeBadge({ type, lang }: { type: string; lang: Lang }) {
   return (
     <span
-      className="inline-block rounded-md px-1.5 py-0.5 text-xs font-medium text-white sm:px-2.5 sm:py-1 sm:text-sm"
-      style={{ backgroundColor: TYPE_COLORS[type] ?? "#777" }}
+      className="inline-block rounded-md px-1.5 py-0.5 text-xs font-medium sm:px-2.5 sm:py-1 sm:text-sm"
+      style={typeChipStyle(type)}
     >
       {TYPE_LABELS[lang][type] ?? type}
     </span>
