@@ -7,6 +7,7 @@ import { TypeBadge } from "@/components/TypeBadge";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
+import { SparkleIcon } from "@/components/ActionIcons";
 
 // One Pokémon's display inside a link/team card: sprite on the left, the
 // description (name, types, player/static line, rank·BST) and any extra
@@ -71,8 +72,9 @@ export function EncounterTile({
           className={`font-medium text-ink ${isDead ? "text-ink-subtle line-through" : ""}`}
         >
           {encounter.shiny && (
-            <span className="mr-1" title="Shiny">
-              ✨
+            <span className="mr-1 inline-flex align-[-2px] text-warning" title="Shiny">
+              <SparkleIcon className="h-4 w-4" />
+              <span className="sr-only">Shiny</span>
             </span>
           )}
           {encounter.nickname ?? encounter.pokemonName}
