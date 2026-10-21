@@ -89,3 +89,13 @@ claude.md
 # a one-time data source for the Infinite Fusion game packs (see CLAUDE.md).
 # Not part of this repo.
 /fboschinfinite-fusion-nuzlocke/
+/reference_domtronn_nuzlocke_app/
+
+# /brag launch-video output (rendered frames, scratch scripts, video files) -
+# generated locally, not part of this repo.
+/brag-output*/
+
+# Screenshots, video and release notes prepared for a GitHub release - uploaded
+# to GitHub as attachments, never committed (they show Pokémon artwork).
+/release-assets/
+PUBLIC_RELEASE.md

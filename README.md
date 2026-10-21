@@ -1,115 +1,141 @@
-# SoulLink Nuzlocke Tracker
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/35f456db-2b84-4893-98c6-a440a09445e6" alt="Your Pokémon faints. Your friend's goes with it." width="100%">
+</p>
 
-Self-hosted web app for tracking Pokémon Nuzlocke runs – as a SoulLink for 2–4 players or solo (Classic). Runs as a Docker container, all data is stored locally in SQLite.
+<h1 align="center">SoulLink Nuzlocke Tracker</h1>
 
-> **Disclaimer:** This is an unofficial fan project and is not affiliated with, endorsed by, or connected to Nintendo, Game Freak, Creatures Inc., or The Pokémon Company in any way. Pokémon names, game data, and artwork are the property of their respective owners. This repository and the published Docker image deliberately contain **no** copyrighted artwork: Pokémon sprites are fetched from [PokeAPI](https://github.com/PokeAPI/sprites) at setup time, Infinite Fusion's own ball icons from the game's public repository at container start, fusion sprites are loaded by the browser straight from the Infinite Fusion community's sprite server (never stored), and trainer images are provided by the user. This project is strictly non-commercial.
+<p align="center">
+  Track your Pokémon Nuzlocke runs — solo, or as a SoulLink with up to four friends.<br>
+  Free, self-hosted, and live on every device at the table.
+</p>
 
-## Tech stack
+<p align="center">
+  <a href="https://github.com/smiei/nuzlocke_tracker/releases"><img alt="Release" src="https://img.shields.io/github/v/release/smiei/nuzlocke_tracker?label=release"></a>
+  <a href="https://hub.docker.com/r/gloryy/nuzlocke-tracker"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gloryy/nuzlocke-tracker"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
+</p>
 
-- Next.js 16 (App Router) + TypeScript
-- Tailwind CSS v4
-- Prisma 6 + SQLite
-- Docker / Docker Compose
+https://github.com/user-attachments/assets/30c82361-862b-41bc-870c-b4f4be246e22
 
-## Features (tabs)
+## What is this?
 
-- **Encounter**: catch one Pokémon per route (and player), with the catch-time status (Caught/Killed/Fled) and an optional nickname. Static locations are pre-marked from the data files. Species Clause conflicts show a warning without ever blocking a save; post-game areas are collapsed by default; an "open only" toggle hides completed routes and SoulLink rows missing one player's entry are tinted as a reminder. A 🗑 button clears a mistaken entry outright, an ℹ button opens the Pokémon detail card for the current pick, and a ✨ button marks a catch as shiny (Shiny Clause, when the rule is on) — a shiny is then exempt from the Species Clause and doesn't lock its family for others.
-- **Pokémon**: the active 6-slot team plus all links/catches as cards, "mark as dead" (in SoulLink you pick which player lost their Pokémon; with undo; the catch-time status stays untouched), evolve/devolve incl. evolution methods, a glowing evolve button when a level evolution is reachable within the earned level cap, an "evolvable only" filter, sorting by encounter order, current BST, or fully-evolved **max** BST (dead links always sink to the end). New links and solo catches drop into a free team slot automatically while the team isn't full. Within a link card Player 1 is always shown above Player 2. A broken pair – one player caught, the other Fled/Killed – never appears here (the pair never formed); the surviving catch stays on the Encounter tab. Each card shows the link's combined BST now → fully-evolved max, and marking a link dead can record an optional cause of death (shown in the Memorial).
-- **Battle & Catch**: enter a Pokémon once per card, then toggle between **Wild** and **Trainer**. *Wild* is the catch-chance calculator — ball, HP, level and status-condition inputs using the run's generation formula (Gen 1, Gen 2, Gen 3/4, Gen 5) and ball list — HeartGold/SoulSilver get the Gen 2 Apricorn balls back, so the ball list keys off the version group, not just the generation; conditional balls (Repeat, Dusk, Dive, Fast, Love, Moon, …) have a "condition met?" checkbox with an explanation so the bonus only counts when it applies, and a "Pokémon caught?" dropdown records the pick as caught on an open route (dropping it into a free team slot), one per player in SoulLink. *Trainer* is the battle scout — the opponent's types, its damaging attack types by level, the full type matrix (Gen 1 chart included), and a team-matchup table showing how well each of your team's Pokémon resists that opponent's attacks, with a ⚠ flag for Self-Destruct/Explosion learners (from which level). Both views show the selected Pokémon's type weaknesses and an ℹ detail-card button, and a **+** adds another independent card. Uses the run's game (chart, dex, catch mechanics, level-up movesets, sprites).
-- **TMs**: pick a move **by name** (not TM number – those are randomized) and see which of your living caught Pokémon can learn it via TM/HM or a move tutor, per the **official** game data. Because a randomizer re-rolls TM/tutor compatibility (the 90/50/25 rule), this is a clean reference / house rule ("TM compatibility follows the original games"), not the ROM's actual mapping. Split per player in SoulLink; TM vs HM vs tutor is labelled, and moves that aren't machine/tutor moves in the original game are flagged (with a level-up hint).
-- **Pokédex**: sortable table with rank (by base-stat total, standard competition ranking), a search that filters the table down, and a filter to show only available or only locked (Species-Clause) Pokémon; click a row for a detail card with types, base stats, its rank, its type weaknesses (grouped 4×/2×/½×/¼×/0×), evolutions with their conditions (click any family member to jump to its own card), and the full level-up move list (real localized move names with their type). Reflects the current run's game (dex scope + sprites).
-- **Journey**: boss battles (gym leaders, rival, Team Rocket, Elite Four) with level caps and trainer avatars, click to mark as defeated. Every entry that grants a badge feeds the badge row on the Overview tab.
-- **Overview**: a per-run dashboard, top to bottom: two progress bars (routes done, journey milestones beaten, with a tick where the Elite Four begins) → five stat tiles (deaths, caught, current & next level cap, team BST now → fully-evolved max, bank BST for everything caught and alive but off the team) → the team's type coverage, defensive **and** offensive (types nobody on the team hits super-effectively, judged against the last level cap reached rather than level 100) → the gym badges earned so far → a **Memorial** listing every fallen Pokémon by its **nickname** (species in parentheses) with who lost it, an optional cause of death, and the journey milestone the run had reached when it happened. In a SoulLink run every tile also breaks down per player; in a solo run it does not. Broken pairs are excluded from both the death count and the Memorial. On phones the defensive weakness matrix becomes a one-line-per-type list — a 17×6 grid does not survive a 390px screen. (The former Team-Weaknesses tab lives here now; `/weaknesses` redirects to it.)
-- **Rules**: per-run rule toggles (Species Clause on/off – in SoulLink optionally **per player**, and on top of that with "caught links lock for everyone": a fled or defeated encounter then only locks its own player, while a link every player caught uses the family up for all –, Shiny Clause, nicknames, the two PokeRandoZX randomizer evolution options – "impossible evolutions changed" and "evolutions made easier" – separately, static encounters and their clause exemption) plus, for SoulLink runs, custom player names that replace "Player 1 / Player 2" everywhere, and a markdown section for house rules & notes, editable right in the browser; new runs inherit both from the most recent run. All toggles are informational/UI-level – the server never rejects a save because of them.
-- **Multiple runs & games**: fully separate progress per run (SoulLink for 2, 3 or 4 players, or solo – chosen when the run is created); each run plays one game data pack. Built-in packs: Red/Blue/Yellow (Gen 1), Gold/Silver/Crystal (Gen 2), FireRed/LeafGreen and Emerald (Gen 3), Platinum, HeartGold and SoulSilver (Gen 4), Black and White (Gen 5), and the fan game **Pokémon Infinite Fusion** (Classic and Remix) – more can be added as data under `data/games/<gameId>/` without code changes. Generation-aware mechanics per game: type chart (incl. the Gen 1 oddities), catch formula and ball selection, obtainable Pokémon (dex limit filters pick lists, evolutions, and rankings), era-appropriate battle sprites — and the historical *values*, which is the part PokeAPI cannot give you: it only ever serves a value's current state, so hand-curated correction tables roll back the Gen 6 Fairy re-typings, the ~30 flat base-stat buffs, later catch-rate changes, and moves that were renamed or re-typed after the era being played. Gen 1 is modelled with its single Special stat, counted once in the base-stat total (Mewtwo is 590 there, not 680).
-- **Pokémon Infinite Fusion**: two of your catches can be fused into one battle unit on the Pokémon tab (fuse, swap head and body, split), with the fused name, types, stats and the community's fusion sprite; a catch can also already *be* a fusion ("caught as a fusion" on the Encounter tab, or always open with the randomizer rule "Fuse everything"). Fusions die, occupy team slots and appear in the Memorial as one unit, and a SoulLink pairing stays tied to the route. Species stats, types, catch rates, move lists, TM/HM compatibility, level caps and the capture formula with the game's own 40 balls are read from the game's own data files rather than from PokeAPI.
-- **Installable (PWA)**: add it to the home screen on Android/iOS or install it on desktop — own icon, no browser chrome, and a service worker that caches the sprites/badges locally so they stop crossing the network on every page view. Run data is never cached: it is always fetched live, because two devices share one run. The gear menu offers an install entry where the browser supports it, and instructions where it does not. The tab strip stays pinned to the top of the viewport, folding away as you read down a long list and coming back on the first upward scroll.
-- **Backup & import**: export the current run or all runs as a JSON file; import adds the contained runs (including team assignments, rules, rule settings, player names, death attribution, and nicknames) without ever overwriting existing data.
-- **Multilingual**: UI, Pokémon, route, trainer, and badge names switchable between German, English, French, Spanish, and Italian (language picker in the header gear menu). German and English are hand-curated; the other languages are generated from PokeAPI plus curated tables (`npm run generate:names`) and fall back to English where no official translation exists (a few obscure Sevii-Island areas).
+A **Nuzlocke** is a self-imposed Pokémon challenge:
+- you may catch only the first Pokémon you meet in each area;
+- a Pokémon that faints counts as dead.
 
-## First-time setup (local development)
+In a **SoulLink**, two or more players run the game at the same time, and the catches from each area are linked: when one faints, its partners go with it.
+
+That is a lot of bookkeeping, and it is what this tracker does for you:
+- who caught what, and where;
+- which pairs formed and who is on the team;
+- who died, how, and what the next level cap is.
+
+It runs on your own computer or home server, and everyone opens it in a browser. Phones, laptops and the PC next to the console all see every change live.
+
+## Highlights
+
+- **SoulLink for 2–4 players, or solo.** Linked catches, linked deaths and a shared team, per player.
+- **Encounter log** with Species Clause and Shiny Clause warnings, nicknames, and an "open routes only" view.
+- **Team builder.** Evolve and devolve with the evolution method shown, base-stat totals now and once fully evolved, and auto-filling team slots.
+- **Battle & Catch:**
+  - a catch-rate calculator using the formula and ball list of your game's generation;
+  - a battle scout with the opponent's moves by level, the type matrix and how your team matches up.
+- **Journey** with every gym leader, rival and Elite Four level cap, and the badges you earned.
+- **Overview** with team weaknesses, offensive gaps, stats and a **Memorial** for the fallen, with the cause of death.
+- **Right for the game you play:**
+  - 9 game packs from Red/Blue to Black/White, plus the fan game **Pokémon Infinite Fusion**;
+  - the type chart, stats, catch rates and move names as they were in that generation.
+- **Blind flight** mode for the hardcore: hides every calculated hint.
+- **Installable app** for your phone's home screen, in **5 languages** (English, German, French, Spanish, Italian).
+- **Backups** of one run or all runs, importable anywhere.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/42b2c23c-30e3-42f1-ad45-871061c0e66a" alt="Team tab: each route's linked pair, with types, base stats and evolutions"></td>
+    <td><img src="https://github.com/user-attachments/assets/4cb4028b-d157-489c-ba5d-74d2ae18325e" alt="Encounter tab: one catch per route and player"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/102c23b9-6d99-4461-815a-559bbe2a004e" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
+    <td><img src="https://github.com/user-attachments/assets/38719580-8110-41a7-b3e1-c5c6a9be7f78" alt="Overview: progress, stats and team coverage"></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2bf676e0-4f29-4d83-9d44-082a405845b0" alt="Memorial: who was lost, by whom, how and when" width="70%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8e094809-5384-4259-ba8e-d7a61c4e2a13" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
+</p>
+
+## Quick start
+
+Pick whatever fits you best. All three give you the same app at `http://localhost:3000`, or at your server's address.
+
+### Docker (home servers, NAS, Unraid)
+
+```yaml
+services:
+  nuzlocke-tracker:
+    image: gloryy/nuzlocke-tracker:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:/app/db/nuzlocke.db
+    volumes:
+      - db:/app/db
+      - sprites:/app/public/pokemon-sprites
+    restart: unless-stopped
+
+volumes:
+  db:
+  sprites:
+```
+
+Save that as `compose.yaml` and run `docker compose up -d`. The first start downloads the Pokémon sprites, which takes a few minutes.
+
+### Pinokio (one click, Windows / macOS / Linux)
+
+1. Install [Pinokio](https://pinokio.co/).
+2. Choose **Download from URL** and paste `https://github.com/smiei/nuzlocke-tracker-pinokio`.
+3. Click **Install**, then **Start**.
+
+### Without Docker (Node.js 20.9+)
 
 ```bash
+git clone https://github.com/smiei/nuzlocke_tracker.git
+cd nuzlocke_tracker
 npm install
-cp .env.example .env
-npx prisma migrate dev
-npm run download:sprites
-npm run dev
+npm run setup
+npm start
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+**→ [Self-hosting guide](docs/self-hosting.md):** volumes, updating, backups, HTTPS for installing the app on a phone, trainer pictures, and a custom app icon.
 
-### npm scripts
+## Supported games
 
-| Script | Purpose |
+| Generation | Games |
 | --- | --- |
-| `npm run dev` | Dev server with hot reload |
-| `npm run build` / `npm run start` | Production build / start |
-| `npm run download:sprites` | Downloads the Pokémon battle sprites for every sprite set referenced by a game pack (red-blue, crystal, emerald, platinum, ...) from PokeAPI into `public/pokemon-sprites/<set>/`, skipping files that already exist. **Must be run once after `npm install`** – the sprites are deliberately not part of this repo (copyrighted artwork, see `.gitignore`). Re-run after adding a game pack with a new sprite set. |
-| `npm run generate:evolutions` | Regenerates `data/evolutions.json` (evolution lines incl. evolution methods: level/item/trade/friendship) from PokeAPI. Already included in the repo – only needed when `data/pokemon.json` changes. ROM-specific evolution changes (e.g. from a randomizer's "change impossible evolutions") live in `data/evolution-overrides.json` and are merged at runtime, so they survive regeneration. |
-| `npm run download:catchrates` | Regenerates `data/catchrates.json` (base catch rates for the Wild catch calculator) from PokeAPI. Already included in the repo – only needed when `data/pokemon.json` changes. |
-| `npm run generate:names` | Regenerates the localized display names (`names` objects keyed by language) in `data/pokemon.json` and every game pack's `routes.json`/`levelcaps.json` from PokeAPI plus hand-curated tables (trainers, badges, es/it locations). German/English values are never overwritten. |
-| `npm run generate:learnsets` | Regenerates the level-up move data from PokeAPI: `data/learnsets/<versionGroup>.json` (damaging attack types per Pokémon, for the Battle tab), `data/movesets/<versionGroup>.json` (every level-up move as `[level, slug]`, for the detail card's move list and the Explosion warning), `data/tm-compat/<versionGroup>.json` (which Pokémon can learn a move via machine (`kind` = `tm`/`hm`) or tutor, for the TMs tab) and `data/moves.json` (per-move localized names, type, and whether it deals damage). Needed when a game pack's `versionGroup` changes or `data/pokemon.json` grows. |
-| `npm run generate:if-species` / `npm run generate:if-moves` | Regenerate Infinite Fusion's species table (`data/shared/infinite-fusion-species.json`) and its move/learnset/TM data from the game's own `Data/*.dat` files (downloaded on demand from its public repository). Already included in the repo. |
-| `npm run download:badges` | Downloads the gym-badge icons and crops them out of a single composite sheet into `public/badges/`. Like the sprites, deliberately not part of this repo. Runs automatically on first container start. |
-| `npm run lint` | ESLint |
-| `npm test` | Unit tests (Vitest) for the pure logic – catch formulas, type effectiveness, learnsets/TM compat, ranking, evolution BST, settings parsing, and the historical correction tables. Plus a guard test that reads the source tree and checks the UI conventions (one modal implementation, one click-outside implementation, no raw Tailwind palette classes, no focus ring removed without a replacement). |
+| 1 | Red / Blue / Yellow |
+| 2 | Gold / Silver / Crystal |
+| 3 | FireRed / LeafGreen, Emerald |
+| 4 | Platinum, HeartGold, SoulSilver |
+| 5 | Black, White |
+| Fan game | Pokémon Infinite Fusion (Classic and Remix), with fusions and the game's own data |
 
-The download scripts need internet access once (PokeAPI); after that the app runs fully offline.
+A game pack is plain data in `data/games/<id>/` (routes, level caps, game settings). Another game of a supported generation can be added without code changes; see [development](docs/development.md#data).
 
-### Trainer sprites (optional, manual)
+## Documentation
 
-The Journey page can show trainer avatars (circular avatar next to the name), looked up game-first: `public/trainers/<trainerSet>/<slug>.png` (a per-game folder, so the rival can look different in Emerald vs Platinum; HeartGold/SoulSilver share `heartgold-soulsilver`) with a fallback to the flat `public/trainers/<slug>.png` (so a trainer shared across games, like Brock, needs only one file). There is no automated, legally clean source for these – if no file is found, an initial-letter placeholder is shown instead. The expected file names, folders, and slug rules are listed in `public/trainers/README.txt`. These images are not part of the repo or the Docker image; provide them yourself.
+- [Features in detail](docs/features.md) — every tab and rule explained
+- [Self-hosting](docs/self-hosting.md) — Docker, Pinokio, Node.js, updates, backups, HTTPS
+- [Development](docs/development.md) — local setup, scripts, data, migrations, releasing
 
-## Static data
+## Version history
 
-All reference data is read straight from disk at runtime (not copied into the database). Edits take effect immediately, even inside a running Docker container, without a rebuild.
-
-- **Game-independent** (`data/`): `pokemon.json` (national dex 1-649 plus 22 alternate-forme entries such as the Rotom and Deoxys formes, each carrying its weight and a legendary flag), `evolutions.json`, `effectiveness.json` (Gen 2-5 chart), `effectiveness-gen1.json`, `catchrates.json`, `learnsets/<versionGroup>.json` (damaging level-up move types per Pokémon), `movesets/<versionGroup>.json` (full level-up move lists per Pokémon), `tm-compat/<versionGroup>.json` (official TM/HM/tutor learners per move), `moves.json` (per-move localized names, type, damage flag), and four correction tables – `pokemon-history.json`, `move-type-history.json`, `move-name-history.json`, `catchrate-history.json` – that restore what a value was in the generation being played.
-- **Per game pack** (`data/games/<gameId>/`): `game.json` (id, display names, generation, dexLimit, spriteSet, picker order), `routes.json`, `levelcaps.json`, and optionally `evolution-overrides.json` (ROM/randomizer changes). Each run is bound to one pack (chosen at creation); a run whose pack goes missing falls back to the default pack instead of crashing. Adding another game of a supported generation (1-4) = adding a new folder, no code changes.
-
-Route entries carry a `type` (`"route"` = regular wild encounter, `"static"` = fixed encounter such as gifts, fossils, Snorlax, legendaries – exempt from the Species Clause) and an optional `"postgame": true` flag (collapsed by default on the Encounter tab). Route IDs are referenced by the database and must never be renumbered within a pack.
-
-## Docker
-
-```bash
-docker compose up --build
-```
-
-- The SQLite database lives in a named volume (`db-data`) and survives rebuilds/restarts.
-- `data/` is mounted read-only into the container – routes/Pokémon/milestones/evolutions can be edited without rebuilding the image.
-- Database migrations run automatically on container start (`docker-entrypoint.sh`).
-- **Sprites are not part of the image** (copyrighted artwork, public registry). On first start the entrypoint downloads the Pokémon sprites from PokeAPI into `/app/public/pokemon-sprites` (one-time internet access needed; a volume mount persists them across updates). Trainer sprites are user-provided via the `/app/public/trainers` mount.
-
-### Volume layout (e.g. Unraid)
-
-| Container path | Purpose |
-| --- | --- |
-| `/app/db` | SQLite database (required) |
-| `/app/public/pokemon-sprites` | Pokémon sprites (one subfolder per sprite set) – auto-filled on start with whatever the installed game packs need, persists across image updates (recommended). Old flat layouts are migrated into `emerald/` automatically. |
-| `/app/public/ball-sprites` | Poké Ball item sprites – auto-filled on first start (optional; simply re-downloaded when missing) |
-| `/app/public/trainers` | Trainer avatars – place your own `<slug>.png` files here (optional) |
-| `/app/data` | Static reference data override (optional; omit to use the data baked into the image) |
-| `/app/branding` | Optional. A folder containing `icon.png` (or `.jpg`/`.webp`/`.svg`) replaces the app icon (home screen, install prompt, browser tab) on your own instance at container start. Deliberately a mount rather than a file swap: the published image must stay free of third-party artwork, so it always ships the project's own icon. |
-
-Required environment variable: `DATABASE_URL=file:/app/db/nuzlocke.db`. The app listens on container port `3000`.
-
-### Image tags
-
-The published image is [`gloryy/nuzlocke-tracker`](https://hub.docker.com/r/gloryy/nuzlocke-tracker). Tags follow `MAJOR.MINOR`:
-
-| Tag | Meaning |
-| --- | --- |
-| `latest` | Whatever the newest release is. Moves with every push. |
-| `3.0`, `2.0`, … | An exact, immutable build. Pin one of these if you want to be able to go back. |
-
-`MINOR` goes up for an ordinary batch of changes; `MAJOR` for a release that reworks something across the whole app. Every release is pushed twice – once under its version and once as `latest` – so a rollback is a one-word edit in the container's image field:
-
-```
-gloryy/nuzlocke-tracker:latest   →   gloryy/nuzlocke-tracker:3.0
-```
-
-Version history:
+Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and every version stays available under its own tag for rollbacks.
 
 | Version | What it is |
 | --- | --- |
@@ -117,12 +143,30 @@ Version history:
 | `1.1` | Adds the installable PWA (was `pwa`). |
 | `2.0` | Full UI overhaul: design tokens, shared component primitives, loading/error boundaries, toasts, pinned tab strip, keyboard-navigable dropdowns, one modal implementation, 40/44px touch targets. |
 | `3.0` | Pokémon Infinite Fusion (Classic and Remix: fusions, catches that already are fusions, the game's own species/move/capture data), SoulLink for 3 or 4 players, and per-player Species Clause variants. Backup format v4. |
-| `3.1` | Runs are addressed by an unguessable access key instead of their numeric id (old `?run=<number>` links still open and are rewritten). Accessibility pass from a UI audit: readable type chips, text greys and focus ring, labelled Encounter and Kampf & Fang fields, keyboard access to the Pokédex, a title per tab, drawn icons instead of emoji. Also carries the groundwork for a separate public deployment, which a self-hosted container does not use. |
+| `3.1` | Runs are addressed by an unguessable access key instead of their numeric id (old `?run=<number>` links still open and are rewritten). Accessibility pass from a UI audit: readable type chips, text greys and focus ring, labelled Encounter and Battle & Catch fields, keyboard access to the Pokédex, a title per tab, drawn icons instead of emoji. Runs without Docker via `npm run setup` and with a one-click Pinokio launcher. Now MIT-licensed. |
 
-## Database migrations
+## Acknowledgements
 
-```bash
-npx prisma migrate dev --name <description>
-```
+This project stands on the work of others. Thank you!
 
-creates and applies a new migration locally. In Docker, pending migrations are applied automatically on container start (`prisma migrate deploy`).
+- **[PokéAPI](https://pokeapi.co/)** — Pokémon, move, evolution and catch-rate data, and the [sprite collection](https://github.com/PokeAPI/sprites) the app downloads at runtime.
+- **[infinite-fusion-nuzlocke](https://github.com/fbosch/infinite-fusion-nuzlocke)** by Frederik Bosch — the Infinite Fusion locations, encounters and species list, and the fusion typing rules.
+- **[Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18)** — the game's own stats, moves, trainer levels and capture code. Fusion sprites come from its sprite community.
+- **[Pokémon League Badges](https://github.com/SteGriff/pokemon-badges)** by Stephen Griffiths — the badge icons (CC BY 3.0, cropped from the sheet).
+- **[PokéWiki](https://www.pokewiki.de/)**, **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics and level caps.
+- **[Pokémon Showdown](https://pokemonshowdown.com/)** — trainer sprites for the optional public deployment.
+- Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Geist](https://vercel.com/font) font.
+
+Licenses and attributions in full: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## License
+
+The source code is released under the [MIT License](LICENSE). Data and artwork from third parties keep their own terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+> **Disclaimer:** This is an unofficial, non-commercial fan project. It is not affiliated with, endorsed by, or connected to Nintendo, Game Freak, Creatures Inc. or The Pokémon Company. Pokémon names, game data and artwork are the property of their respective owners.
+>
+> This repository and the published Docker image deliberately contain **no** copyrighted artwork:
+> - Pokémon sprites are downloaded from PokéAPI when the app is set up.
+> - Infinite Fusion's ball icons come from the game's public repository at container start.
+> - Fusion sprites are loaded by the browser straight from the Infinite Fusion community's sprite server and never stored.
+> - Trainer pictures are provided by the user.

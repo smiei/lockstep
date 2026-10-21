@@ -1,8 +1,18 @@
 {
   "name": "nuzlocke-tracker-app",
-  "version": "0.1.0",
+  "version": "3.1.0",
   "private": true,
+  "description": "Self-hosted Pokémon Nuzlocke and SoulLink tracker for 1-4 players.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smiei/nuzlocke_tracker.git"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
+    "setup": "node scripts/setup.mjs",
     "predev": "npm run generate:icons",
     "dev": "next dev",
     "prebuild": "npm run generate:icons",
