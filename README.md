@@ -99,7 +99,7 @@ Save that as `compose.yaml` and run `docker compose up -d`. The first start down
 ### Pinokio (one click, Windows / macOS / Linux)
 
 1. Install [Pinokio](https://pinokio.co/).
-2. Choose **Download from URL** and paste `https://github.com/smiei/nuzlocke-tracker-pinokio`.
+2. On the **Explore** page, paste `https://github.com/smiei/nuzlocke-tracker-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**.
 3. Click **Install**, then **Start**.
 
 ### Without Docker (Node.js 20.9+)
