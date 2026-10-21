@@ -1,0 +1,132 @@
+# Builds the Docker image for amd64 and arm64 and publishes it to Docker Hub
+# (gloryy/nuzlocke-tracker) and GitHub's registry (ghcr.io/smiei/nuzlocke-tracker).
+#
+# - Publishing a GitHub release tagged vMAJOR.MINOR (e.g. v3.2) pushes
+#   MAJOR.MINOR and moves `latest` - unless the release is marked as a
+#   pre-release, which gets only its version tag.
+# - "Run workflow" (Actions tab) builds without pushing by default: a test run.
+#   With `push` ticked and a `tag` given it rebuilds and publishes that
+#   release, e.g. to add arm64 to an older version; `latest` then only moves
+#   when `latest` is ticked too, so an old version cannot replace a newer one.
+#
+# Needs the repository secrets DOCKERHUB_USERNAME and DOCKERHUB_TOKEN (a Docker
+# Hub access token with read & write). GHCR uses the workflow's own token.
+name: Docker image
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to build, e.g. v3.1 (empty: the selected branch, build only)"
+        required: false
+        default: ""
+      push:
+        description: "Publish the image (needs a tag)"
+        type: boolean
+        default: false
+      latest:
+        description: "Also move the `latest` tag"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: docker-image
+  cancel-in-progress: false
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Work out version and tags
+        id: meta
+        env:
+          EVENT: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          PRERELEASE: ${{ github.event.release.prerelease }}
+          INPUT_TAG: ${{ inputs.tag }}
+          INPUT_PUSH: ${{ inputs.push }}
+          INPUT_LATEST: ${{ inputs.latest }}
+        run: |
+          if [ "$EVENT" = "release" ]; then
+            tag="$RELEASE_TAG"; push=true
+            if [ "$PRERELEASE" = "true" ]; then latest=false; else latest=true; fi
+          else
+            tag="$INPUT_TAG"; push="$INPUT_PUSH"; latest="$INPUT_LATEST"
+          fi
+
+          if [ -n "$tag" ]; then
+            # Docker tags are MAJOR.MINOR (see the README's version history).
+            version="${tag#v}"
+            if ! printf '%s' "$version" | grep -Eq '^[0-9]+\.[0-9]+$'; then
+              echo "::error::Tag '$tag' is not of the form vMAJOR.MINOR."
+              exit 1
+            fi
+          else
+            version="dev"
+            if [ "$push" = "true" ]; then
+              echo "::error::Publishing needs a release tag."
+              exit 1
+            fi
+          fi
+
+          images="gloryy/nuzlocke-tracker ghcr.io/smiei/nuzlocke-tracker"
+          tags=""
+          for image in $images; do
+            tags="$tags$image:$version,"
+            if [ "$latest" = "true" ]; then tags="$tags$image:latest,"; fi
+          done
+
+          {
+            echo "ref=${tag:-$GITHUB_REF}"
+            echo "version=$version"
+            echo "push=$push"
+            echo "tags=${tags%,}"
+          } >> "$GITHUB_OUTPUT"
+          echo "Version $version, push=$push, tags: ${tags%,}"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.meta.outputs.ref }}
+
+      - uses: docker/setup-qemu-action@v3
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        if: steps.meta.outputs.push == 'true'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Log in to GitHub Container Registry
+        if: steps.meta.outputs.push == 'true'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build${{ steps.meta.outputs.push == 'true' && ' and push' || '' }}
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          build-args: APP_VERSION=${{ steps.meta.outputs.version }}
+          push: ${{ steps.meta.outputs.push == 'true' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: |
+            org.opencontainers.image.title=SoulLink Nuzlocke Tracker
+            org.opencontainers.image.description=Self-hosted Pokémon Nuzlocke and SoulLink tracker for 1-4 players.
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.licenses=MIT
+            org.opencontainers.image.version=${{ steps.meta.outputs.version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
