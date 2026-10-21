@@ -11,7 +11,9 @@ The tracker is one small web server with a SQLite database. Run it wherever suit
 
 ## Docker
 
-The image is [`gloryy/nuzlocke-tracker`](https://hub.docker.com/r/gloryy/nuzlocke-tracker).
+The image is [`gloryy/nuzlocke-tracker`](https://hub.docker.com/r/gloryy/nuzlocke-tracker) on Docker Hub. The same image is also published as `ghcr.io/smiei/nuzlocke-tracker` on GitHub's registry.
+
+It is built for `amd64` and `arm64`, so it runs on ordinary PCs and servers as well as on a Raspberry Pi 4 or 5 with a 64-bit OS, ARM-based NAS units and Apple Silicon Macs.
 
 ```yaml
 # compose.yaml

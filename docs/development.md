@@ -73,14 +73,20 @@ This creates and applies a new migration locally. Docker, `npm run setup` and th
 ## Releasing
 
 Each release:
-1. Bumps `version` in `package.json` (`MAJOR.MINOR.0`).
-2. Adds a row to the version table in the README.
-3. Builds and pushes the Docker image twice, version tag first:
+1. Bump `version` in `package.json` (`MAJOR.MINOR.0`, also the two root fields in `package-lock.json`).
+2. Add a row to the version table in the README.
+3. Commit, push, and publish a GitHub release tagged `vMAJOR.MINOR`.
+
+Publishing the release starts [`.github/workflows/docker.yml`](../.github/workflows/docker.yml). It builds the image for `linux/amd64` and `linux/arm64` and pushes it to Docker Hub (`gloryy/nuzlocke-tracker`) and the GitHub Container Registry (`ghcr.io/smiei/nuzlocke-tracker`), each as `MAJOR.MINOR` and `latest`. A release marked as a pre-release gets only its version tag.
+
+From the Actions tab, **Run workflow** builds without publishing. With **push** ticked and a **tag** given, it rebuilds an existing release; `latest` then only moves when **latest** is ticked as well.
+
+The workflow needs two repository secrets: `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`, a Docker Hub access token with read and write.
+
+The build passes the version as `APP_VERSION`, which is what the gear menu shows on a Docker install. A non-Docker install takes it from `package.json`.
+
+A manual build is still possible for one platform:
 
 ```bash
-docker build --build-arg APP_VERSION=<MAJOR.MINOR> -t gloryy/nuzlocke-tracker:<MAJOR.MINOR> -t gloryy/nuzlocke-tracker:latest .
-docker push gloryy/nuzlocke-tracker:<MAJOR.MINOR>
-docker push gloryy/nuzlocke-tracker:latest
+docker build --build-arg APP_VERSION=<MAJOR.MINOR> -t gloryy/nuzlocke-tracker:<MAJOR.MINOR> .
 ```
-
-`APP_VERSION` is what the gear menu shows on a Docker install. A non-Docker install takes it from `package.json`.
