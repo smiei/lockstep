@@ -27,3 +27,14 @@ reference_domtronn_nuzlocke_app
 
 # Private branding override - applied at runtime via a mount, never baked in.
 branding-local
+
+# Local-only working folders (never part of the image, and the videos and
+# screenshots in them show Pokémon artwork). A CI checkout has none of them;
+# excluding them keeps a local build context small.
+brag-output*
+release-assets
+raw_trainer_sprites
+graphify-out
+fboschinfinite-fusion-nuzlocke
+.ui-audit
+PUBLIC_RELEASE.md
