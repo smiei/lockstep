@@ -80,8 +80,12 @@ gloryy/nuzlocke-tracker:latest   →   gloryy/nuzlocke-tracker:3.0
 
 [Pinokio](https://pinokio.co/) installs and starts apps with one click and brings its own Node.js and Git.
 
-1. In Pinokio, choose **Download from URL** and paste `https://github.com/smiei/nuzlocke-tracker-pinokio`.
-2. Click **Install**, then **Start**, then **Open Tracker**.
+1. Install Pinokio. On its first start, pick a short home folder without spaces, such as `C:\pinokio`.
+2. On the **Explore** page, paste `https://github.com/smiei/nuzlocke-tracker-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**. Older versions call this **Download from URL** on the **Discover** page.
+3. Click **Install**. If Pinokio asks to install **Coding (Essential)** (Git and Node.js), confirm it.
+4. Click **Start**, then **Open Tracker**.
+
+Not **Ask → Download → Import task**: that imports a Pinokio *task*, which is something different from an app.
 
 Your runs are stored in the launcher's `data/nuzlocke.db`, outside the app folder, so Pinokio's **Update** and **Reset** never touch them. Details are in the [launcher's README](https://github.com/smiei/nuzlocke-tracker-pinokio).
 
