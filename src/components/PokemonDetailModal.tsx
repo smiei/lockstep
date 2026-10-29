@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { Fragment, useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import type { Pokemon, EvolutionEntry } from "@/lib/data";
 import type { MoveEntry, Moveset, MovesTable, MoveTypeHistoryEntry } from "@/lib/learnset";
 import { moveListAtLevel } from "@/lib/learnset";
 import { MoveDetailPanel } from "@/components/MoveDetailPanel";
-import { ChevronDownIcon } from "@/components/ActionIcons";
+import { ArrowRightIcon, ChevronDownIcon } from "@/components/ActionIcons";
+import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { getTypesForGeneration } from "@/lib/effectiveness";
 import { computePokemonRanks, rankForSumme } from "@/lib/ranking";
@@ -59,16 +60,6 @@ function statColor(value: number): string {
   if (value >= 60) return "bg-amber-400";
   if (value >= 40) return "bg-orange-400";
   return "bg-red-400";
-}
-
-// One headline figure above the stat bars (rank / BST / weight).
-function MetaTile({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-md bg-sunken px-1.5 py-1.5 text-center">
-      <div className="truncate text-xs uppercase tracking-wide text-ink-subtle">{label}</div>
-      <div className="mt-0.5 text-sm font-semibold tabular-nums text-ink">{value}</div>
-    </div>
-  );
 }
 
 // A module-scope component (not an inline closure inside the modal's render
@@ -238,7 +229,7 @@ export function PokemonDetailModal({
     const isCurrent = id === speciesId;
     const body = (
       <>
-        <PokemonSprite pokemonId={id} name={nameOf(id)} size="sm" />
+        <PokemonSprite pokemonId={id} name={nameOf(id)} size="md" />
         <span className="max-w-full truncate text-xs leading-tight">{nameOf(id)}</span>
         {label && (
           <span className="max-w-full text-xs leading-tight text-ink-subtle">
@@ -248,7 +239,7 @@ export function PokemonDetailModal({
       </>
     );
     const shell =
-      "flex w-[4.5rem] shrink-0 flex-col items-center rounded-md px-1 py-1 text-center";
+      "flex w-24 shrink-0 flex-col items-center rounded-md px-1 py-1 text-center";
     return isCurrent ? (
       <span
         key={id}
@@ -270,207 +261,211 @@ export function PokemonDetailModal({
   };
 
   return (
-    // titleHidden: the card carries its own header - name centred over the
-    // sprite, types underneath - which the user arranged deliberately. Modal is
-    // here for the behaviour it brings (focus trap, Escape, scroll lock, focus
-    // restore, and the pinned close button), not for its title bar.
+    // A field-guide entry. The old card stacked a header with the evolution
+    // tree squeezed in beside the sprite, four loose number tiles, a link,
+    // the matchups and the stats one under another; this one has a plate and
+    // a body. Top, two columns from sm up: the specimen (sprite, name, types,
+    // its collection label with no. / rank / BST / weight) beside the stat
+    // bars. Below, full width: formes, the evolution line as one horizontal
+    // chain, the moves; the type matchups sit under the stats.
+    // titleHidden: the card carries its own header. Modal is here for the
+    // behaviour it brings (focus trap, Escape, scroll lock, focus restore, and
+    // the pinned close button), not for its title bar.
     <Modal
       open
       onClose={onClose}
       title={displayName}
       titleHidden
       closeLabel={t.dialog.cancel}
-      size="md"
+      size="lg"
     >
-      <div>
-        {/* Name, sprite and types stacked on the centre axis; the dex number
-            moved down into the tiles below. The close button belongs to Modal
-            now (closeLabel above), which pins it to the panel so it stays
-            reachable once the card scrolls. */}
-        <div className="mb-3 flex items-start gap-4">
-          {/* Left column: name centred over the sprite, types underneath.
-              shrink-0 keeps it at its natural width so the evolution tree
-              beside it takes the remaining space. */}
-          <div className="flex shrink-0 flex-col items-center text-center">
-            <h2 className="text-lg font-semibold text-ink">{displayName}</h2>
-            <PokemonSprite
-              pokemonId={pokemon.id}
-              bodyId={body?.id ?? null}
-              name={displayName}
-              size="xl"
-            />
-            <div className="mt-1.5 flex flex-wrap justify-center gap-1">
+      <div className="flex flex-col gap-6">
+        <div className="grid gap-5 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)]">
+          {/* The specimen: sprite on its plate, name, types, label. */}
+          <div className="flex min-w-0 flex-col gap-2">
+            <div className="flex justify-center rounded-md bg-sunken py-2">
+              <PokemonSprite
+                pokemonId={pokemon.id}
+                bodyId={body?.id ?? null}
+                name={displayName}
+                size="xl"
+              />
+            </div>
+            <h2 className="text-2xl font-bold tracking-tight text-ink">{displayName}</h2>
+            <div className="flex flex-wrap gap-1">
               {types.map((type) => (
                 <TypeBadge key={type} type={type} lang={lang} />
               ))}
             </div>
-          </div>
-          {/* Right column: the evolution family, centred against the sprite.
-              pr-10 keeps it clear of the pinned close button. */}
-          <div className="flex min-w-0 flex-1 self-center flex-col gap-0.5 pr-10">
-            {fusion && body ? (
-              <div className="flex flex-wrap justify-center gap-1">
-                {[
-                  { role: td.fusionHead, mon: pokemon },
-                  { role: td.fusionBody, mon: body },
-                ].map(({ role, mon }) => (
-                  <button
-                    key={role}
-                    type="button"
-                    onClick={() => onSelect(mon.id)}
-                    className="flex w-[5.5rem] shrink-0 flex-col items-center rounded-md px-1 py-1 text-center text-ink-muted transition-colors hover:bg-hover hover:text-ink"
-                  >
-                    <span className="text-xs uppercase tracking-wide text-ink-subtle">{role}</span>
-                    <PokemonSprite pokemonId={mon.id} name={displayNameWithForm(mon, lang)} size="md" />
-                    <span className="max-w-full truncate text-xs leading-tight">
-                      {displayNameWithForm(mon, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            ) : !familyHasEvolution ? (
-              <p className="text-xs text-ink-subtle">{td.noEvolution}</p>
-            ) : (
-              evoStages.map((ids, stage) => (
-                <div key={stage} className="flex flex-wrap justify-center gap-0.5">
-                  {ids.map(renderEvoTile)}
-                </div>
-              ))
-            )}
-          </div>
-        </div>
-
-        {/* Headline figures + the jump into the Battle & Catch tab, so the
-            block above the stat bars reads at a glance instead of as a run
-            of loose label: value lines. */}
-        <div className="mb-4 space-y-2">
-          <div className="grid grid-cols-4 gap-1.5">
-            <MetaTile label={td.rank} value={fusion ? "—" : `#${rank}`} />
-            <MetaTile
-              label={td.dexNo}
-              value={
-                body
-                  ? `#${String(pokemon.id).padStart(3, "0")}/${String(body.id).padStart(3, "0")}`
-                  : `#${String(pokemon.id).padStart(3, "0")}`
-              }
-            />
-            <MetaTile label={t.pokedex.columns.summe} value={String(stats.Summe)} />
-            <MetaTile
-              label={td.weight}
-              value={
-                !fusion && pokemon.weight != null
-                  ? `${pokemon.weight.toLocaleString(lang, { maximumFractionDigits: 1 })} kg`
-                  : "—"
-              }
-            />
-          </div>
-          {!fusion && formOptions.length > 1 && (
-            <div>
-              <div className="mb-1 text-xs uppercase tracking-wide text-ink-subtle">
-                {td.forms}
-              </div>
-              <div className="flex flex-wrap gap-1">
-                {formOptions.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    onClick={() => onSelect(option.id)}
-                    aria-pressed={option.id === pokemon.id}
-                    className={`inline-flex h-10 items-center rounded-md border px-3 text-xs transition-colors ${
-                      option.id === pokemon.id
-                        ? "border-accent bg-accent text-accent-ink"
-                        : "border-line text-ink-muted hover:bg-hover hover:text-ink"
-                    }`}
-                  >
-                    {formLabel(option, lang)}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-          <Link
-            href={analyzeHref}
-            onClick={onClose}
-            className="flex h-10 items-center justify-center gap-1.5 rounded-md border border-line px-3 text-sm font-medium text-ink-muted transition-colors hover:bg-hover hover:text-ink"
-          >
-            {td.openInAnalyze} <span aria-hidden>→</span>
-          </Link>
-          {!blindflug && types.length > 0 && (
-            <div className="pt-1">
-              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-ink-muted">
-                {td.weaknesses}
-              </h3>
-              <TypeEffectiveness
-                defenderTypes={types}
-                effectiveness={effectiveness}
-                attackTypes={getTypesForGeneration(generation)}
-                lang={lang}
+            <SpecimenLabel className="mt-1">
+              <LabelRow
+                strong
+                left={`${td.dexNo} ${
+                  body
+                    ? `${String(pokemon.id).padStart(3, "0")}/${String(body.id).padStart(3, "0")}`
+                    : String(pokemon.id).padStart(3, "0")
+                }`}
+                right={`${td.rank} ${fusion ? "—" : `#${rank}`}`}
               />
-            </div>
-          )}
-        </div>
+              <LabelRow
+                left={`${t.pokedex.columns.summe} ${stats.Summe}`}
+                right={
+                  !fusion && pokemon.weight != null
+                    ? `${pokemon.weight.toLocaleString(lang, { maximumFractionDigits: 1 })} kg`
+                    : undefined
+                }
+              />
+            </SpecimenLabel>
+            <Link
+              href={analyzeHref}
+              onClick={onClose}
+              className="mt-1 flex h-10 items-center justify-center gap-1.5 rounded-md border border-line-strong bg-panel px-3 text-sm font-semibold text-ink transition-colors hover:bg-hover"
+            >
+              {td.openInAnalyze}
+              <ArrowRightIcon className="h-4 w-4" />
+            </Link>
+          </div>
 
-        {/* Base stats */}
-        <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-muted">
-          {td.stats}
-        </h3>
-        <div className="mb-4 space-y-1">
-          {(stats.Spezial !== undefined ? STAT_ROWS_GEN1 : STAT_ROWS).map(({ key, labelKey }) => {
-            const value = stats[key] ?? 0;
-            return (
-              <div key={key} className="flex items-center gap-2">
-                <span className="w-14 shrink-0 text-xs text-ink-muted">
-                  {t.pokedex.columns[labelKey]}
+          {/* Base stats. pr-10 keeps the heading clear of the pinned close
+              button. */}
+          <section className="min-w-0">
+            <h3 className="mb-2 pr-10 text-sm font-bold text-ink">{td.stats}</h3>
+            <div className="space-y-1.5">
+              {(stats.Spezial !== undefined ? STAT_ROWS_GEN1 : STAT_ROWS).map(({ key, labelKey }) => {
+                const value = stats[key] ?? 0;
+                return (
+                  <div key={key} className="flex items-center gap-2">
+                    <span className="w-14 shrink-0 text-xs text-ink-muted">
+                      {t.pokedex.columns[labelKey]}
+                    </span>
+                    <span className="w-8 shrink-0 text-right font-mono text-xs font-semibold tabular-nums">
+                      {value}
+                    </span>
+                    <span className="h-2 flex-1 overflow-hidden rounded-full bg-sunken">
+                      <span
+                        className={`block h-full rounded-full ${statColor(value)}`}
+                        style={{ width: `${Math.min(100, (value / 200) * 100)}%` }}
+                      />
+                    </span>
+                  </div>
+                );
+              })}
+              <div className="flex items-center gap-2 border-t border-line pt-1.5">
+                <span className="w-14 shrink-0 text-xs font-semibold text-ink">
+                  {t.pokedex.columns.summe}
                 </span>
-                <span className="w-8 shrink-0 text-right text-xs font-semibold tabular-nums">
-                  {value}
+                <span className="w-8 shrink-0 text-right font-mono text-xs font-bold tabular-nums">
+                  {stats.Summe}
                 </span>
+                {/* BST scaled to the generation's cap (720 from Gen 4, else 680). */}
                 <span className="h-2 flex-1 overflow-hidden rounded-full bg-sunken">
                   <span
-                    className={`block h-full rounded-full ${statColor(value)}`}
-                    style={{ width: `${Math.min(100, (value / 200) * 100)}%` }}
+                    className="block h-full rounded-full bg-ink-muted"
+                    style={{ width: `${Math.min(100, (stats.Summe / maxBST) * 100)}%` }}
                   />
                 </span>
               </div>
-            );
-          })}
-          <div className="flex items-center gap-2 pt-0.5">
-            <span className="w-14 shrink-0 text-xs font-semibold text-ink">
-              {t.pokedex.columns.summe}
-            </span>
-            <span className="w-8 shrink-0 text-right text-xs font-bold tabular-nums">
-              {stats.Summe}
-            </span>
-            {/* BST scaled to the generation's cap (720 from Gen 4, else 680). */}
-            <span className="h-2 flex-1 overflow-hidden rounded-full bg-sunken">
-              <span
-                className="block h-full rounded-full bg-ink-muted"
-                style={{ width: `${Math.min(100, (stats.Summe / maxBST) * 100)}%` }}
-              />
-            </span>
-          </div>
+            </div>
+
+            {/* The matchups share the right column with the stats: the
+                specimen beside them is the taller block, and together the two
+                columns end level. */}
+            {!blindflug && types.length > 0 && (
+              <>
+                <h3 className="mb-2 mt-5 text-sm font-bold text-ink">{td.weaknesses}</h3>
+                <TypeEffectiveness
+                  defenderTypes={types}
+                  effectiveness={effectiveness}
+                  attackTypes={getTypesForGeneration(generation)}
+                  lang={lang}
+                />
+              </>
+            )}
+          </section>
         </div>
 
-        {/* Full level-up move list (bottom). Under Blindflug the heading stays
-            and only the list goes: the heading is what names the thing that is
+        {!fusion && formOptions.length > 1 && (
+          <section>
+            <h3 className="mb-2 text-sm font-bold text-ink">{td.forms}</h3>
+            <div className="flex flex-wrap gap-1">
+              {formOptions.map((option) => (
+                <button
+                  key={option.id}
+                  type="button"
+                  onClick={() => onSelect(option.id)}
+                  aria-pressed={option.id === pokemon.id}
+                  className={`inline-flex h-10 items-center rounded-md border px-3 text-xs transition-colors ${
+                    option.id === pokemon.id
+                      ? "border-accent bg-accent text-accent-ink"
+                      : "border-line text-ink-muted hover:bg-hover hover:text-ink"
+                  }`}
+                >
+                  {formLabel(option, lang)}
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* The family as one chain, left to right, an arrow between stages; a
+            branching stage (Eevee) stacks its options in one column. A
+            fusion's card shows its two components here instead. */}
+        <section>
+          <h3 className="mb-2 text-sm font-bold text-ink">
+            {fusion ? `${td.fusionHead} / ${td.fusionBody}` : td.evolution}
+          </h3>
+          {fusion && body ? (
+            <div className="flex flex-wrap gap-2">
+              {[
+                { role: td.fusionHead, mon: pokemon },
+                { role: td.fusionBody, mon: body },
+              ].map(({ role, mon }) => (
+                <button
+                  key={role}
+                  type="button"
+                  onClick={() => onSelect(mon.id)}
+                  className="flex w-24 shrink-0 flex-col items-center rounded-md border border-line px-1 py-1.5 text-center text-ink-muted transition-colors hover:bg-hover hover:text-ink"
+                >
+                  <span className="text-xs text-ink-subtle">{role}</span>
+                  <PokemonSprite pokemonId={mon.id} name={displayNameWithForm(mon, lang)} size="md" />
+                  <span className="max-w-full truncate text-xs leading-tight">
+                    {displayNameWithForm(mon, lang)}
+                  </span>
+                </button>
+              ))}
+            </div>
+          ) : !familyHasEvolution ? (
+            <p className="text-sm text-ink-subtle">{td.noEvolution}</p>
+          ) : (
+            <div className="flex items-center gap-1 overflow-x-auto pb-1">
+              {evoStages.map((ids, stage) => (
+                <Fragment key={stage}>
+                  {stage > 0 && <ArrowRightIcon className="h-4 w-4 shrink-0 text-ink-subtle" />}
+                  <div className="flex shrink-0 flex-col gap-1">{ids.map(renderEvoTile)}</div>
+                </Fragment>
+              ))}
+            </div>
+          )}
+        </section>
+
+        {/* Full level-up move list. Under Blindflug the heading stays and only
+            the list goes: the heading is what names the thing that is
             missing, and without it the notice is a riddle. */}
         {!fusion && (blindflug || moveList.length > 0 || !gameHasMoveData) && (
-          <div>
-            <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              {td.moves}
-            </h3>
+          <section>
+            <h3 className="mb-2 text-sm font-bold text-ink">{td.moves}</h3>
             {blindflug ? (
               <BlindflugNotice />
             ) : !gameHasMoveData ? (
               <p className="text-xs text-ink-subtle">{td.noMoveData}</p>
             ) : (
-              <div className="divide-y divide-line">
+              <div className="divide-y divide-line border-y border-line">
                 {moveList.map((mv, i) => (
                   <MoveRow key={`${mv.name}-${i}`} move={mv} lang={lang} />
                 ))}
               </div>
             )}
-          </div>
+          </section>
         )}
       </div>
     </Modal>

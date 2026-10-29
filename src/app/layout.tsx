@@ -25,6 +25,7 @@ import { listCapSummaries, listRunsForHeader } from "@/lib/runs";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { getGameSummaries } from "@/lib/data";
 import { uiScaleBootScript } from "@/lib/uiScale";
+import { shellColorBootScript } from "@/lib/shellColor";
 import "./globals.css";
 
 // The interface face and the label face of the collection world (DESIGN.md):
@@ -120,6 +121,8 @@ export default async function RootLayout({
             hydration. React 19 does not hoist inline scripts, so both of these
             run here, in place, ahead of the content. */}
         <script dangerouslySetInnerHTML={{ __html: uiScaleBootScript() }} />
+        {/* Same for the shell colour (data-shell on <html>). */}
+        <script dangerouslySetInnerHTML={{ __html: shellColorBootScript() }} />
         <script
           dangerouslySetInnerHTML={{
             __html:

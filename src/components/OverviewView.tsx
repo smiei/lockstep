@@ -35,6 +35,8 @@ export type OverviewStats = {
   teamSummeMax: number;
   capCurrent: number | null;
   capNext: number | null;
+  // The fight the next cap belongs to - the run sheet's headline.
+  nextCap: { names: LocalizedNames; location: LocalizedNames } | null;
 };
 
 // One count per player of the run, in player order.
@@ -100,72 +102,6 @@ function InfoHeading({
   );
 }
 
-// One number, its label, and (SoulLink only) the same number split per player.
-//
-// That split used to live in a separate four-column table below the tiles,
-// which repeated the tiles' own figures - team BST was stated twice, and in a
-// solo run the whole table was a single row saying what the tiles already said.
-// Folding it in leaves one shape for every statistic.
-function StatTile({
-  value,
-  label,
-  labelHint,
-  parts,
-  footnote,
-  size = "lg",
-}: {
-  value: ReactNode;
-  label: string;
-  labelHint?: string;
-  parts?: { label: string; value: ReactNode }[];
-  footnote?: string;
-  // "sm" for values that carry four numbers (the level cap) - at the default
-  // size those overflow the tile on a two-column phone layout.
-  size?: "lg" | "sm";
-}) {
-  return (
-    <Card padding="sm">
-      <div
-        className={`font-mono font-semibold tabular-nums text-ink ${size === "lg" ? "text-2xl" : "text-base"}`}
-      >
-        {value}
-      </div>
-      <div className="text-xs text-ink-muted" title={labelHint}>
-        {label}
-      </div>
-      {parts && parts.length > 0 && (
-        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-0.5 border-t border-line pt-2">
-          {parts.map((part) => (
-            <span key={part.label} className="text-xs text-ink-muted">
-              <span className="font-semibold tabular-nums text-ink">{part.value}</span> {part.label}
-            </span>
-          ))}
-        </div>
-      )}
-      {footnote && <div className="mt-1 text-xs text-ink-subtle">{footnote}</div>}
-    </Card>
-  );
-}
-
-// A cap prints as "<boss level> / <team level>", same shape the Journey tab
-// uses: one member may match the boss, everyone else sits two below (house
-// rule). The TEAM level carries the emphasis - that's the one you can level
-// every new catch up to right now, so it's the number being looked for.
-function CapValue({ level, emphasize = false }: { level: number | null; emphasize?: boolean }) {
-  if (level === null) return <span>–</span>;
-  // Same colour and weight throughout - the only thing that stands out is the
-  // SIZE of the current cap's team level, the number every new catch can be
-  // raised to right now.
-  if (!emphasize) {
-    return <span className="whitespace-nowrap">{`${level} / ${level - 2}`}</span>;
-  }
-  return (
-    <span className="whitespace-nowrap">
-      {level} / <span className="text-2xl">{level - 2}</span>
-    </span>
-  );
-}
-
 export function OverviewView({
   runKey,
   lang,
@@ -218,106 +154,206 @@ export function OverviewView({
   const bankSumme = sum((r) => r.bankSumme);
   const bankSummeMax = sum((r) => r.bankSummeMax);
 
-  // Per-player splits only mean something in SoulLink; a solo run's "split" is
-  // the total again.
-  const splitBy = (pick: (row: OverviewStats["perPlayer"][number]) => ReactNode) =>
-    isClassic
-      ? undefined
-      : stats.perPlayer.map((row) => ({ label: playerLabel(row.player), value: pick(row) }));
+  const tHeader = translations[lang].header;
+  // "now → max"; below sm the "→ max" half drops to a second line inside the
+  // cell, which is what keeps three columns of ranges inside a phone's width.
+  const range = (now: number, max: number): ReactNode =>
+    max > now ? (
+      <>
+        {now}
+        <span className="block sm:inline"> → {max}</span>
+      </>
+    ) : (
+      String(now)
+    );
+  const deathsOf = (player: Player) =>
+    deathTally?.byPlayer.find((entry) => entry.player === player)?.count ?? 0;
+  // The run sheet's table: one row per figure, one column per player plus the
+  // total (a solo run shows only the total). Figures are strings so a "now →
+  // max" range and a count share one cell shape. `alarm` = a death count,
+  // shown in the label red once it is above zero.
+  const sheetRows: { label: string; hint?: string; perPlayer: ReactNode[]; total: ReactNode; alarm?: boolean }[] = [
+    {
+      label: t.caughtTotal,
+      perPlayer: stats.perPlayer.map((r) => String(r.caught)),
+      total: String(totalCaught),
+    },
+    {
+      label: t.totalDeaths,
+      perPlayer: stats.perPlayer.map((r) => String(deathsOf(r.player))),
+      total: String(stats.totalDeaths),
+      alarm: true,
+    },
+    {
+      label: t.teamBst,
+      hint: t.teamBstColHint,
+      perPlayer: stats.perPlayer.map((r) => range(r.teamSumme, r.teamSummeMax)),
+      total: range(stats.teamSumme, stats.teamSummeMax),
+    },
+    {
+      label: t.bankBst,
+      hint: t.bankBstColHint,
+      perPlayer: stats.perPlayer.map((r) => range(r.bankSumme, r.bankSummeMax)),
+      total: range(bankSumme, bankSummeMax),
+    },
+  ];
 
-  // Nothing caught and nobody lost: the dashboard would be a wall of zeros and
-  // the coverage sections would be empty frames. Say what to do instead.
+  // Nothing caught and nobody lost: the table would be a wall of zeros and the
+  // coverage sections empty frames. Say what to do instead.
   const isFreshRun = totalCaught === 0 && stats.totalDeaths === 0;
 
   return (
     <div>
       <PageHeader title={t.heading} />
 
-      {/* Progress: the same two bars shown on the Encounter and Journey
-          tabs, just bigger. Meaningful even at zero, so it stays first. */}
-      <Section title={t.progress}>
-        <div className="flex flex-col gap-4 sm:flex-row sm:gap-10">
-          <div>
-            <div className="mb-1 text-xs font-medium text-ink-muted">{t.encounterProgress}</div>
-            <ProgressBar
-              size="md"
-              done={routeProgress.done}
-              total={routeProgress.total}
-              percent={routeProgress.percent}
-            />
+      {/* The run sheet: one panel instead of a progress section, five loose
+          tiles and a badge row further down. Top: the next level cap - the
+          number checked before every gym - beside progress and badges. Below:
+          the run's figures as a table, one column per player and a total, so
+          the comparison reads across a row instead of between tiles. */}
+      <section aria-label={t.dashboard} className="mb-8 overflow-hidden rounded-md border border-line bg-panel">
+        <div className="grid gap-6 p-4 sm:p-5 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-10">
+          <div className="min-w-0">
+            <p className="text-xs font-medium text-ink-muted">{tHeader.nextCap}</p>
+            {stats.nextCap && stats.capNext !== null ? (
+              <div className="mt-1 flex items-end justify-between gap-4">
+                <div className="min-w-0">
+                  <p className="truncate text-2xl font-bold tracking-tight text-ink">
+                    {localizeName(stats.nextCap.names, lang)}
+                  </p>
+                  <p className="truncate text-sm text-ink-muted">
+                    {localizeName(stats.nextCap.location, lang)}
+                  </p>
+                </div>
+                <div className="shrink-0 text-right">
+                  <p className="font-mono text-5xl font-semibold leading-none tabular-nums text-ink">
+                    {stats.capNext}
+                  </p>
+                  <p className="mt-1 text-xs text-ink-muted">{t.sheetTeamUpTo(stats.capNext - 2)}</p>
+                </div>
+              </div>
+            ) : (
+              <p className="mt-1 text-lg font-bold text-ink">{tHeader.allCapsDone}</p>
+            )}
+            {stats.capCurrent !== null && (
+              <p className="mt-3 font-mono text-xs tabular-nums text-ink-subtle">
+                {t.sheetLastCap(stats.capCurrent, stats.capCurrent - 2)}
+              </p>
+            )}
           </div>
-          <div>
-            <div className="mb-1 text-xs font-medium text-ink-muted">{t.battleProgress}</div>
-            <ProgressBar
-              size="md"
-              done={levelCapProgress.done}
-              total={levelCapProgress.total}
-              percent={levelCapProgress.percent}
-              markerAt={levelCapMarkerAt ?? undefined}
-              markerTitle={translations[lang].levelcaps.eliteFourMarker}
-            />
+
+          <div className="flex min-w-0 flex-col gap-5">
+            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-x-10">
+              <div>
+                <div className="mb-1 text-xs font-medium text-ink-muted">{t.encounterProgress}</div>
+                <ProgressBar
+                  size="md"
+                  done={routeProgress.done}
+                  total={routeProgress.total}
+                  percent={routeProgress.percent}
+                />
+              </div>
+              <div>
+                <div className="mb-1 text-xs font-medium text-ink-muted">{t.battleProgress}</div>
+                <ProgressBar
+                  size="md"
+                  done={levelCapProgress.done}
+                  total={levelCapProgress.total}
+                  percent={levelCapProgress.percent}
+                  markerAt={levelCapMarkerAt ?? undefined}
+                  markerTitle={translations[lang].levelcaps.eliteFourMarker}
+                />
+              </div>
+            </div>
+            <div>
+              <div className="mb-1.5 flex items-baseline gap-3 text-xs font-medium text-ink-muted">
+                <span>{t.badgesHeading}</span>
+                {badges.length > 0 && (
+                  <span className="font-mono tabular-nums">
+                    {badges.filter((b) => b.defeated).length} / {badges.length}
+                  </span>
+                )}
+              </div>
+              {badges.length === 0 ? (
+                <p className="text-sm text-ink-muted">{t.badgesEmpty}</p>
+              ) : (
+                <div className="flex flex-wrap gap-2">
+                  {badges.map((b) => (
+                    <BadgeIcon
+                      key={b.id}
+                      nameEn={b.badge.en}
+                      label={localizeName(b.badge, lang)}
+                      earned={b.defeated}
+                      size={32}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </Section>
+
+        {!isFreshRun && (
+          <div className="overflow-x-auto border-t border-line">
+            <table className="w-full text-sm">
+              {!isClassic && (
+                <thead>
+                  <tr className="bg-sunken text-left">
+                    <th scope="col" className="px-3 py-2 sm:px-5">
+                      <span className="sr-only">{t.dashboard}</span>
+                    </th>
+                    {stats.perPlayer.map((row) => (
+                      <th key={row.player} scope="col" className="px-2 py-2 text-right text-xs font-semibold text-ink sm:px-4 sm:text-sm">
+                        {playerLabel(row.player)}
+                      </th>
+                    ))}
+                    <th scope="col" className="py-2 pl-2 pr-3 text-right text-xs font-semibold text-ink sm:px-5 sm:text-sm">
+                      {t.sheetTotal}
+                    </th>
+                  </tr>
+                </thead>
+              )}
+              <tbody className="divide-y divide-line">
+                {sheetRows.map((row) => (
+                  <tr key={row.label}>
+                    <th
+                      scope="row"
+                      title={row.hint}
+                      className="px-3 py-2.5 text-left text-xs font-medium text-ink-muted sm:whitespace-nowrap sm:px-5 sm:text-sm"
+                    >
+                      {row.label}
+                    </th>
+                    {!isClassic &&
+                      row.perPlayer.map((value, i) => (
+                        <td
+                          key={i}
+                          className={`whitespace-nowrap px-2 py-2.5 text-right font-mono text-xs tabular-nums sm:px-4 sm:text-sm ${row.alarm && value !== "0" ? "text-danger" : "text-ink"}`}
+                        >
+                          {value}
+                        </td>
+                      ))}
+                    <td
+                      className={`whitespace-nowrap py-2.5 pl-2 pr-3 text-right font-mono text-xs font-semibold tabular-nums sm:px-5 sm:text-sm ${row.alarm && row.total !== "0" ? "text-danger" : "text-ink"}`}
+                    >
+                      {row.total}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {deathTally && deathTally.unattributed > 0 && (
+              <p className="border-t border-line px-4 py-2 text-xs text-ink-subtle sm:px-5">
+                {t.deathTallyUnattributed(deathTally.unattributed)}
+              </p>
+            )}
+          </div>
+        )}
+      </section>
 
       {isFreshRun ? (
-        <Section title={t.dashboard}>
-          <EmptyState title={t.emptyRun} hint={t.emptyRunHint} />
-        </Section>
+        <EmptyState title={t.emptyRun} hint={t.emptyRunHint} />
       ) : (
         <>
-          <Section title={t.dashboard}>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              <StatTile
-                value={stats.totalDeaths}
-                label={t.totalDeaths}
-                parts={
-                  deathTally
-                    ? deathTally.byPlayer.map(({ player, count }) => ({
-                        label: playerLabel(player),
-                        value: count,
-                      }))
-                    : undefined
-                }
-                footnote={
-                  deathTally && deathTally.unattributed > 0
-                    ? t.deathTallyUnattributed(deathTally.unattributed)
-                    : undefined
-                }
-              />
-              <StatTile
-                value={totalCaught}
-                label={t.caughtTotal}
-                parts={splitBy((r) => r.caught)}
-              />
-              <StatTile
-                size="sm"
-                value={
-                  <span className="flex flex-wrap items-baseline gap-x-1.5">
-                    <CapValue level={stats.capCurrent} emphasize />
-                    <span>→</span>
-                    <CapValue level={stats.capNext} />
-                  </span>
-                }
-                label={t.levelCap}
-              />
-              <StatTile
-                size="sm"
-                value={`${stats.teamSumme} → ${stats.teamSummeMax}`}
-                label={t.teamBst}
-                labelHint={t.teamBstColHint}
-                parts={splitBy((r) => `${r.teamSumme} → ${r.teamSummeMax}`)}
-              />
-              <StatTile
-                size="sm"
-                value={`${bankSumme} → ${bankSummeMax}`}
-                label={t.bankBst}
-                labelHint={t.bankBstColHint}
-                parts={splitBy((r) => `${r.bankSumme} → ${r.bankSummeMax}`)}
-              />
-            </div>
-          </Section>
-
           {/* Team coverage: defensive (reused) + offensive gaps. The
               heading stays under Blindflug so the tab does not silently
               lose a section - only its contents go. */}
@@ -382,26 +418,6 @@ export function OverviewView({
           </Section>
         </>
       )}
-
-      {/* Badges sit down here rather than under the progress bars: they are a
-          record of what has happened, which is the same job the Memorial does,
-          and the dashboard is what you open this tab for. */}
-      <Section title={t.badgesHeading}>
-        {badges.length === 0 ? (
-          <p className="text-sm text-ink-muted">{t.badgesEmpty}</p>
-        ) : (
-          <div className="flex flex-wrap gap-3">
-            {badges.map((b) => (
-              <BadgeIcon
-                key={b.id}
-                nameEn={b.badge.en}
-                label={localizeName(b.badge, lang)}
-                earned={b.defeated}
-              />
-            ))}
-          </div>
-        )}
-      </Section>
 
       {/* Memorial / graveyard */}
       {/* Each loss is a withdrawn specimen: a plain tray, its Pokémon, and

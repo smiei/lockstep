@@ -2,35 +2,29 @@
 
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
+import { SHELL_HEX, parseShellColor } from "@/lib/shellColor";
 
-// Keeps <meta name="theme-color"> in step with the active theme, which decides
-// the status-bar colour of the installed PWA on both Android and iOS.
+// Keeps <meta name="theme-color"> in step with the top of the page, which
+// decides the browser chrome's colour (and, on iOS, the installed app's status
+// bar).
 //
-// The static value in layout.tsx's `viewport` export cannot do this alone, and
-// neither can a media-scoped theme-color: next-themes toggles a `dark` class on
-// <html>, which prefers-color-scheme never sees. Without this, a user whose OS
-// is light but who switched the app to dark keeps a white status bar above a
-// near-black page.
-//
-// Since the redesign the top of the page is the shell green in BOTH themes
-// (the phone's top bar, the desktop rail), so both values are that green and
-// match layout.tsx's static viewport.themeColor. The component stays so a
-// future per-theme shell only has to change this pair.
-const THEME_COLORS = { light: "#0f3d30", dark: "#0f3d30" };
+// The static value in layout.tsx's `viewport` export cannot do this alone:
+// the top of the page is the shell field in both themes (the phone's top bar,
+// the desktop rail), and that field's colour is a per-device setting
+// (`data-shell` on <html>, src/lib/shellColor.ts) the server never sees. So
+// the wanted colour is read from the attribute the boot script already set.
+function wantedColor(): string {
+  return SHELL_HEX[parseShellColor(document.documentElement.getAttribute("data-shell") ?? "green")];
+}
 
 export function ThemeColorSync() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    const wanted = resolvedTheme === "dark" ? THEME_COLORS.dark : THEME_COLORS.light;
-
     const apply = () => {
-      // Two tags now (see layout.tsx's `viewport.themeColor`), one per
-      // prefers-color-scheme value, so the status bar is right before any JS
-      // runs. Once the in-app theme is known, both get the same resolved
-      // colour - collapsing the media distinction here is what makes an
-      // in-app override against the OS setting take effect instead of the
-      // "wrong" tag silently winning via its own media match.
+      const wanted = wantedColor();
+      // Collapse every theme-color tag to the one wanted value, so no
+      // media-scoped default can win against it.
       document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
         if (meta.getAttribute("content") !== wanted) meta.setAttribute("content", wanted);
       });
@@ -40,12 +34,11 @@ export function ThemeColorSync() {
 
     // Setting it once is not enough. Next re-emits the tags from the `viewport`
     // export on every client-side navigation, which puts the static default
-    // back - that is why switching tabs in dark mode turned the status bar
-    // white and left it white: this effect had no reason to run again, since
-    // the theme itself never changed. Watching <head> re-applies the value
-    // whenever Next rewrites or replaces the tag, covering route changes and
-    // run switches alike. The equality guard in apply() is what stops the
-    // observer from reacting to its own write.
+    // back. Watching <head> re-applies the value whenever Next rewrites or
+    // replaces the tag, covering route changes and run switches alike. The
+    // equality guard in apply() is what stops the observer from reacting to
+    // its own write. The appearance dialog announces a colour change with
+    // `nuzlocke:shellcolor` (useShellColor).
     const observer = new MutationObserver(apply);
     observer.observe(document.head, {
       childList: true,
@@ -53,7 +46,11 @@ export function ThemeColorSync() {
       attributes: true,
       attributeFilter: ["content"],
     });
-    return () => observer.disconnect();
+    window.addEventListener("nuzlocke:shellcolor", apply);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("nuzlocke:shellcolor", apply);
+    };
   }, [resolvedTheme]);
 
   return null;

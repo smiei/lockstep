@@ -40,8 +40,8 @@
   --ink-muted: #46524b;
   --ink-subtle: #5a665f;
 
-  --accent: #0f3d30; /* primary button fill: the shell's bottle green */
-  --accent-ink: #ffffff; /* text on --accent, 12:1 */
+  --accent: var(--shell); /* primary button fill: the shell's own colour */
+  --accent-ink: var(--shell-on);
 
   --success: #1e6b42;
   --success-bg: #e3f0e7;
@@ -75,9 +75,95 @@
   --blindflug: #8b5cf6;
 
   /* The shell's own field - the side rail on a desktop, the top bar on a
-     phone. The same green in both themes: it is the one place the world's
-     colour owns a whole region, and it is already dark enough for night. */
+     phone. The same colour in both themes: it is the one place the world's
+     colour owns a whole region. Bottle green by default; the appearance
+     dialog can switch it to Pokéball red, blue or yellow (data-shell on
+     <html>, src/lib/shellColor.ts, applied before first paint). Everything
+     the shell needs is one set of variables per colour, so `.shell` below
+     and the page's primary button only ever say var(--shell-*).
+     Contrast of every set was measured: ink >= 6.7:1, ink-subtle >= 4.5:1 on
+     the field and on its hover wash, focus >= 3:1. */
   --shell: #0f3d30;
+  --shell-on: #ffffff; /* text on a --shell fill (page primary button) */
+  --shell-panel: #16493a;
+  --shell-sunken: #0c3328;
+  --shell-hover: #1b5443;
+  --shell-line: #2f5e50;
+  --shell-line-strong: #4a7a6b;
+  --shell-ink: #ffffff;
+  --shell-ink-muted: #dcebe1;
+  --shell-ink-subtle: #a9c7b6;
+  --shell-accent: #dcebe1; /* the active tab: a pale label on the field */
+  --shell-accent-ink: #0f3d30;
+  --shell-focus: #9be3c0;
+  --shell-blindflug: #c4b5fd;
+  --shell-pale: #cfe5d7; /* the primary button in dark mode */
+  --shell-pale-ink: #0f3d30;
+  --shell-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcebe1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Pokéball red. The field's inner steps go darker, not lighter: on red a
+   lighter panel took the pale text under 4.5:1. */
+:root[data-shell="red"] {
+  --shell: #b8101b;
+  --shell-on: #ffffff;
+  --shell-panel: #a30e18;
+  --shell-sunken: #8f0c15;
+  --shell-hover: #9a0d16;
+  --shell-line: #d0424a;
+  --shell-line-strong: #e0767b;
+  --shell-ink: #ffffff;
+  --shell-ink-muted: #ffe3e3;
+  --shell-ink-subtle: #ffd6d8;
+  --shell-accent: #ffe3e3;
+  --shell-accent-ink: #b8101b;
+  --shell-focus: #ffe08a;
+  --shell-blindflug: #e9e3ff;
+  --shell-pale: #ffe3e3;
+  --shell-pale-ink: #b8101b;
+  --shell-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffe3e3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root[data-shell="blue"] {
+  --shell: #1e3a8a;
+  --shell-on: #ffffff;
+  --shell-panel: #1a3378;
+  --shell-sunken: #162c69;
+  --shell-hover: #172f70;
+  --shell-line: #3d5aa6;
+  --shell-line-strong: #6680c2;
+  --shell-ink: #ffffff;
+  --shell-ink-muted: #dde6fb;
+  --shell-ink-subtle: #c3d1f2;
+  --shell-accent: #dde6fb;
+  --shell-accent-ink: #1e3a8a;
+  --shell-focus: #ffd75e;
+  --shell-blindflug: #d9ccff;
+  --shell-pale: #dde6fb;
+  --shell-pale-ink: #1e3a8a;
+  --shell-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dde6fb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Yellow is the one light field: its text is dark, and its active tab is a
+   dark pill instead of a pale one. */
+:root[data-shell="yellow"] {
+  --shell: #ffcb05;
+  --shell-on: #1a1a12;
+  --shell-panel: #ffd83d;
+  --shell-sunken: #f2bd00;
+  --shell-hover: #f2bd00;
+  --shell-line: #d9a900;
+  --shell-line-strong: #a88300;
+  --shell-ink: #1a1a12;
+  --shell-ink-muted: #3d3300;
+  --shell-ink-subtle: #5a4a00;
+  --shell-accent: #1a1a12;
+  --shell-accent-ink: #ffcb05;
+  --shell-focus: #1a1a12;
+  --shell-blindflug: #4c1d95;
+  --shell-pale: #fff0b3;
+  --shell-pale-ink: #1a1a12;
+  --shell-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233d3300' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
 }
 
 .dark {
@@ -93,8 +179,8 @@
   --ink-muted: #a9b8af; /* 9.0:1 on the ground */
   --ink-subtle: #8b9c92; /* 5.8:1 on a tray, 5.5:1 on the palest tint */
 
-  --accent: #cfe5d7;
-  --accent-ink: #0f3d30;
+  --accent: var(--shell-pale);
+  --accent-ink: var(--shell-pale-ink);
 
   --success: #7fd1a0;
   --success-bg: #10261b;
@@ -127,19 +213,19 @@
    on purpose; a custom property cannot be "reset to the inherited-from-root
    value" any other way. */
 .shell {
-  --canvas: #0f3d30;
-  --panel: #16493a;
-  --sunken: #0c3328;
-  --hover: #1b5443;
-  --line: #2f5e50;
-  --line-strong: #4a7a6b;
-  --ink: #ffffff;
-  --ink-muted: #dcebe1; /* 9.8:1 on the field */
-  --ink-subtle: #a9c7b6; /* 6.7:1 on the field, 4.8:1 on a hover wash */
-  --accent: #dcebe1; /* the active tab: a pale label on the green */
-  --accent-ink: #0f3d30;
-  --focus: #9be3c0;
-  --blindflug: #c4b5fd; /* 6.6:1 - the violet itself is 2.9:1 on green */
+  --canvas: var(--shell);
+  --panel: var(--shell-panel);
+  --sunken: var(--shell-sunken);
+  --hover: var(--shell-hover);
+  --line: var(--shell-line);
+  --line-strong: var(--shell-line-strong);
+  --ink: var(--shell-ink);
+  --ink-muted: var(--shell-ink-muted);
+  --ink-subtle: var(--shell-ink-subtle);
+  --accent: var(--shell-accent); /* the active tab */
+  --accent-ink: var(--shell-accent-ink);
+  --focus: var(--shell-focus);
+  --blindflug: var(--shell-blindflug); /* the violet itself is 2.9:1 on green */
   color: var(--ink);
 }
 
@@ -153,8 +239,8 @@
   --ink: #1a1f1c;
   --ink-muted: #46524b;
   --ink-subtle: #5a665f;
-  --accent: #0f3d30;
-  --accent-ink: #ffffff;
+  --accent: var(--shell);
+  --accent-ink: var(--shell-on);
   --focus: #13795b;
   --blindflug: #8b5cf6;
   color: var(--ink);
@@ -170,8 +256,8 @@
   --ink: #e8efea;
   --ink-muted: #a9b8af;
   --ink-subtle: #8b9c92;
-  --accent: #cfe5d7;
-  --accent-ink: #0f3d30;
+  --accent: var(--shell-pale);
+  --accent-ink: var(--shell-pale-ink);
   --focus: #5fd3a5;
 }
 
@@ -278,7 +364,7 @@ body {
    and figures in tables line up. */
 ::selection {
   background: var(--shell);
-  color: #ffffff;
+  color: var(--shell-on);
 }
 
 /* The collection label - the redesign's signature. A double rule (border plus
@@ -328,7 +414,7 @@ body {
 }
 
 .shell {
-  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcebe1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --select-chevron: var(--shell-chevron);
 }
 
 .shell .unshell {
@@ -372,7 +458,13 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .safe-area-top {
-    background: #0f3d30;
+    background: var(--shell);
+  }
+
+  /* A system in dark mode draws light glyphs, which vanish on the yellow
+     field - the strip stays dark there instead. */
+  :root[data-shell="yellow"] .safe-area-top {
+    background: #0e1512;
   }
 }
 

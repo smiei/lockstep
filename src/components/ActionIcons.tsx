@@ -46,6 +46,15 @@ export function ChevronDownIcon({ className }: { className?: string }) {
   );
 }
 
+// The step between two evolution stages on the Pokédex card.
+export function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <LineIcon className={className}>
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </LineIcon>
+  );
+}
+
 // Add: a new run, an empty team slot.
 export function PlusIcon({ className }: { className?: string }) {
   return (
