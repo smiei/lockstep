@@ -36,6 +36,35 @@ export function TrashIcon({ className }: { className?: string }) {
   );
 }
 
+// A dropdown trigger's chevron - replaces the "▾" text glyph, which every
+// platform font drew at a different size and weight.
+export function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <LineIcon className={className}>
+      <path d="M6 9l6 6 6-6" />
+    </LineIcon>
+  );
+}
+
+// Add: a new run, an empty team slot.
+export function PlusIcon({ className }: { className?: string }) {
+  return (
+    <LineIcon className={className}>
+      <path d="M12 5v14M5 12h14" />
+    </LineIcon>
+  );
+}
+
+// Revert an evolution: an arrow turning back.
+export function UndoIcon({ className }: { className?: string }) {
+  return (
+    <LineIcon className={className}>
+      <path d="M9 14 4 9l5-5" />
+      <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+    </LineIcon>
+  );
+}
+
 // Shiny: a four-point sparkle with a small one beside it.
 export function SparkleIcon({ className }: { className?: string }) {
   return (

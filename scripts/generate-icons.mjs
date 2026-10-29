@@ -56,10 +56,10 @@ const sourceFile =
     : resolveSource(path.join(rootDir, "branding"));
 const sourceIsRaster = RASTER_EXTS.has(path.extname(sourceFile).toLowerCase());
 
-// Opaque backdrop for the variants that must not be transparent. Matches the
-// app's dark background (Tailwind zinc-950, i.e. what `dark:bg-zinc-950` on
-// <body> actually paints) and the manifest's background_color.
-const DARK = { r: 9, g: 9, b: 11, alpha: 1 };
+// Opaque backdrop for the variants that must not be transparent: the shell
+// green (--shell in globals.css), which is also the repo icon's own tile and
+// the manifest's background_color, so the maskable crop shows no seam.
+const DARK = { r: 15, g: 61, b: 48, alpha: 1 };
 const CLEAR = { r: 0, g: 0, b: 0, alpha: 0 };
 
 // `scale` = how much of the canvas the motif fills.
@@ -87,7 +87,7 @@ const SVG_COPY = "icon.svg";
 
 // Artwork with its own background (the common case for a bitmap logo) needs
 // that same colour behind the maskable inset, or Android's crop reveals a hard
-// edge between the tile and our zinc-950. Averaging an 8x8 corner patch is
+// edge between the tile and our shell green. Averaging an 8x8 corner patch is
 // enough and costs nothing. A transparent corner means the artwork is a free
 // -standing motif, so the normal rules apply instead.
 async function sampleBackdrop(buffer) {

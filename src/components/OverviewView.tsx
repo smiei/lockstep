@@ -19,6 +19,7 @@ import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { DeathPointPicker, type DeathPointOption } from "@/components/DeathPointPicker";
 import { Card } from "@/components/ui/Card";
 import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
+import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
 
 export type OverviewStats = {
   perPlayer: {
@@ -125,7 +126,7 @@ function StatTile({
   return (
     <Card padding="sm">
       <div
-        className={`font-bold tabular-nums text-ink ${size === "lg" ? "text-2xl" : "text-base"}`}
+        className={`font-mono font-semibold tabular-nums text-ink ${size === "lg" ? "text-2xl" : "text-base"}`}
       >
         {value}
       </div>
@@ -269,7 +270,7 @@ export function OverviewView({
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               <StatTile
                 value={stats.totalDeaths}
-                label={`💀 ${t.totalDeaths}`}
+                label={t.totalDeaths}
                 parts={
                   deathTally
                     ? deathTally.byPlayer.map(({ player, count }) => ({
@@ -403,18 +404,20 @@ export function OverviewView({
       </Section>
 
       {/* Memorial / graveyard */}
-      <Section title={`💀 ${t.memorial}`}>
+      {/* Each loss is a withdrawn specimen: a plain tray, its Pokémon, and
+          the death label under them (SpecimenLabel `dead`, the same one the
+          Team tab's Memorial column uses). */}
+      <Section title={t.memorial}>
         {memorial.length === 0 ? (
           <p className="text-sm text-ink-muted">{t.memorialEmpty}</p>
         ) : (
-          <ul className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+          <ul className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
             {memorial.map((m) => (
               <li
                 key={m.soulLinkId}
-                className="rounded-lg border border-danger-line bg-danger-bg/40 p-3"
+                className="flex flex-col rounded-sm border border-line bg-panel p-3"
               >
-                <div className="mb-1 text-xs font-medium text-ink-muted">{m.routeName}</div>
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   {m.pokemon.map((p, i) => {
                     // Sprite + name together open the Pokédex card, same as
                     // the sprite does on the Team/Encounter tabs.
@@ -424,9 +427,10 @@ export function OverviewView({
                           pokemonId={p.id}
                           bodyId={p.bodyId}
                           name={p.species ?? p.name}
-                          size="sm"
+                          size="md"
+                          className="opacity-50 grayscale"
                         />
-                        <span className="text-sm text-ink">
+                        <span className="text-sm font-medium text-ink">
                           {p.name}
                           {p.species && <span className="text-ink-subtle"> ({p.species})</span>}
                         </span>
@@ -449,14 +453,17 @@ export function OverviewView({
                     );
                   })}
                 </div>
-                {(m.deathPlayer || m.deathCause) && (
-                  <div className="mt-1 text-xs text-danger">
-                    {m.deathPlayer && tLinks.deadBy(playerLabel(m.deathPlayer))}
-                    {m.deathPlayer && m.deathCause ? " · " : ""}
-                    {m.deathCause}
-                  </div>
-                )}
-                <div className="mt-1.5">
+                <SpecimenLabel dead className="mt-auto">
+                  <LabelRow strong left={m.routeName} right={tLinks.dead} />
+                  {(m.deathPlayer || m.deathCause) && (
+                    <p className="font-medium text-danger">
+                      {m.deathPlayer && tLinks.deadBy(playerLabel(m.deathPlayer))}
+                      {m.deathPlayer && m.deathCause ? " · " : ""}
+                      {m.deathCause}
+                    </p>
+                  )}
+                </SpecimenLabel>
+                <div className="mt-2">
                   <DeathPointPicker
                     runKey={runKey}
                     lang={lang}

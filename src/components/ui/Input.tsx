@@ -33,7 +33,8 @@ export function Select({
   ...rest
 }: Omit<ComponentPropsWithRef<"select">, "size"> & { size?: Size }) {
   return (
-    <select className={cn(FIELD, HEIGHTS[size], className)} {...rest}>
+    // select-chevron (globals.css): the world's drawn arrow, not the browser's.
+    <select className={cn(FIELD, "select-chevron", HEIGHTS[size], className)} {...rest}>
       {children}
     </select>
   );

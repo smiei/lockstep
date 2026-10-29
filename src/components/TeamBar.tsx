@@ -1,11 +1,14 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, type ReactNode } from "react";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
 import { useDropdown } from "@/lib/useDropdown";
 import { useRouter } from "next/navigation";
-import type { SoulLinkView } from "@/lib/types";
+import type { EncounterView, SoulLinkView } from "@/lib/types";
+import { formatCatalogueNumber } from "@/lib/routeNumbers";
+import { ChevronDownIcon, PlusIcon } from "@/components/ActionIcons";
 import { LinkStatus, Player, RunMode } from "@/generated/prisma/enums";
 import { clearTeam, markDead, setTeamSlot } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
@@ -59,7 +62,7 @@ function SlotPicker({
   pending: boolean;
   onPick: (soulLinkId: number | null) => void;
 }) {
-  const { open, setOpen, toggle, containerRef } = useDropdown();
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
 
   function pick(id: number | null) {
     setOpen(false);
@@ -70,22 +73,24 @@ function SlotPicker({
     <div ref={containerRef} className="relative">
       <button
         type="button"
-        aria-label={slotLabel}
+        // The tray above already names the pair, so the closed picker shows
+        // only its sprites - a name cut to "Ember & …" said nothing. The full
+        // name stays in the accessible name and the tooltip.
+        aria-label={current ? `${slotLabel}: ${linkLabel(current)}` : slotLabel}
+        title={current ? linkLabel(current) : undefined}
         disabled={pending}
         onClick={toggle}
+        {...triggerProps}
         className="flex h-10 w-full items-center justify-between gap-2 rounded-md border border-line-strong bg-panel px-3 text-left text-sm text-ink transition-colors hover:bg-hover disabled:cursor-not-allowed disabled:opacity-50"
       >
         <span className="flex min-w-0 items-center gap-1.5">
           {current ? (
-            <>
-              <LinkSprites link={current} />
-              <span className="truncate">{linkLabel(current)}</span>
-            </>
+            <LinkSprites link={current} />
           ) : (
             <span className="text-ink-subtle">{placeholder}</span>
           )}
         </span>
-        <span aria-hidden className="shrink-0 text-xs text-ink-subtle">▾</span>
+        <ChevronDownIcon className="h-4 w-4 shrink-0 text-ink-subtle" />
       </button>
       {open && (
         <ul className="absolute bottom-full z-10 mb-1 max-h-64 w-full min-w-[200px] overflow-y-auto rounded-lg border border-line bg-panel shadow-lg">
@@ -120,18 +125,38 @@ function SlotPicker({
   );
 }
 
+// Grid columns for a tray's specimens: one per battle unit, Tailwind needs
+// whole class names. Four units (a four-player SoulLink) stand 2x2, a fusion
+// group with more simply wraps.
+const SPECIMEN_COLS: Record<number, string> = {
+  1: "grid-cols-1",
+  2: "grid-cols-2",
+  3: "grid-cols-3",
+};
+
+// The team as a collection drawer: six trays on the drawer's sunken ground,
+// each holding one group's specimens with its catalogue label under them
+// (see SpecimenLabel). Everything a team card could do still lives here -
+// marking the group dead, picking who sits in the slot - plus the per-Pokémon
+// controls the Team tab hands in through `renderControls` (evolve, forme,
+// fusion), so a team member never has to be looked up a second time below.
 export function TeamBar({
   runKey,
   mode,
   players,
   lang,
   links,
+  renderControls,
+  actions,
 }: {
   runKey: string;
   mode: RunMode;
   players: Player[];
   lang: Lang;
   links: SoulLinkView[];
+  renderControls?: (encounter: EncounterView) => ReactNode;
+  // Extra header actions - the free-team run's "add Pokémon" button.
+  actions?: ReactNode;
 }) {
   const router = useRouter();
   const toast = useToast();
@@ -142,6 +167,10 @@ export function TeamBar({
   const [deadCause, setDeadCause] = useState("");
   const t = translations[lang];
   const isClassic = mode === RunMode.CLASSIC;
+  // Each player once, in the order their specimens stand in the tray.
+  const collectors = (link: SoulLinkView) => [
+    ...new Set(link.encounters.map((e) => playerLabel(e.player))),
+  ];
 
   // Only living links can be on the team; dead ones are filtered out here too
   // (defence in depth - markDead already clears their teamPosition).
@@ -154,6 +183,12 @@ export function TeamBar({
     const link = aliveLinks.find((l) => l.teamPositions.includes(i)) ?? null;
     return { link, primary: link !== null && link.teamPosition === i };
   });
+  const teamGroups = slots.flatMap((s) => (s.link && s.primary ? [s.link] : []));
+  const teamSumme = teamGroups.reduce((sum, l) => sum + l.encounters.reduce((s, e) => s + e.summe, 0), 0);
+  const teamSummeMax = teamGroups.reduce(
+    (sum, l) => sum + l.encounters.reduce((s, e) => s + e.summeMax, 0),
+    0,
+  );
 
   function handleSelect(position: number, soulLinkId: number | null) {
     startTransition(async () => {
@@ -187,63 +222,90 @@ export function TeamBar({
   }
 
   return (
-    <section className="mb-6">
-      <div className="mb-2 flex items-center justify-between gap-2">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
-          {t.links.teamHeading}
-        </h2>
-        {slots.some((s) => s.link !== null) && (
-          <Button size="sm" loading={pending} onClick={handleClearTeam}>
-            {t.links.clearTeam}
-          </Button>
+    <section className="mb-8 min-w-0">
+      <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <h2 className="text-lg font-bold tracking-tight text-ink">{t.links.teamHeading}</h2>
+        {teamGroups.length > 0 && (
+          <span
+            className="font-mono text-sm tabular-nums text-ink-muted"
+            title={t.pokedex.columns.summe}
+          >
+            Σ {teamSumme}
+            {teamSummeMax > teamSumme && ` → ${teamSummeMax}`}
+          </span>
         )}
+        <div className="ml-auto flex flex-wrap gap-2">
+          {actions}
+          {slots.some((s) => s.link !== null) && (
+            <Button size="sm" variant="ghost" loading={pending} onClick={handleClearTeam}>
+              {t.links.clearTeam}
+            </Button>
+          )}
+        </div>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      {/* The drawer: a sunken ground the six trays sit in. */}
+      <div className="grid gap-2 rounded-lg border border-line bg-sunken p-2 sm:grid-cols-2 sm:gap-2.5 sm:p-2.5 xl:grid-cols-3">
         {slots.map(({ link, primary }, i) => {
           return (
             <div
               key={i}
-              className={`flex flex-col rounded-lg border p-4 ${
+              className={`flex min-w-0 flex-col rounded-sm border p-3 ${
                 link && primary
-                  ? "border-warning-line/50 bg-warning-bg/20"
-                  : link
-                    ? "border-dashed border-warning-line/50"
-                    : "border-dashed border-line-strong"
+                  ? "border-line bg-panel"
+                  : "border-dashed border-line-strong bg-panel/50"
               }`}
             >
               {link && primary ? (
                 <>
-                  <div className="mb-3 flex items-start justify-between gap-2">
-                    <div className="min-w-0">
-                      <h3 className="font-medium text-ink">{link.routeName}</h3>
-                      <p
-                        className="text-xs tabular-nums text-ink-subtle"
-                        title={t.pokedex.columns.summe}
+                  <div className={`grid gap-x-2 gap-y-4 ${SPECIMEN_COLS[link.encounters.length] ?? "grid-cols-2"}`}>
+                    {link.encounters.map((e) => (
+                      <EncounterTile
+                        key={e.id}
+                        encounter={e}
+                        isDead={false}
+                        isClassic={isClassic}
+                        showRoute={link.linkIds.length > 1}
+                        variant="specimen"
+                        lang={lang}
                       >
-                        {(() => {
-                          const cur = link.encounters.reduce((s, e) => s + e.summe, 0);
-                          const max = link.encounters.reduce((s, e) => s + e.summeMax, 0);
-                          return max > cur ? `Σ ${cur} → ${max}` : `Σ ${cur}`;
-                        })()}
-                      </p>
-                    </div>
-                    <Button
-                      size="sm"
-                      variant="danger"
-                      disabled={pending}
-                      aria-expanded={deadMenuId === link.id}
-                      onClick={() => {
-                        setDeadCause("");
-                        setDeadMenuId(deadMenuId === link.id ? null : link.id);
-                      }}
-                    >
-                      {t.links.markDead}
-                    </Button>
+                        {renderControls?.(e)}
+                      </EncounterTile>
+                    ))}
+                  </div>
+
+                  {/* Pushed to the tray's foot, so the labels of a row of
+                      trays line up however tall their specimens are. */}
+                  <div className="mt-auto pt-4">
+                  <SpecimenLabel>
+                    <LabelRow
+                      strong
+                      left={link.routeNumber !== null ? t.links.labelNumber(formatCatalogueNumber(link.routeNumber)) : link.routeName}
+                      right={t.links.labelSlot(i + 1)}
+                    />
+                    <LabelRow
+                      left={link.routeNumber !== null ? link.routeName : ""}
+                      right={(() => {
+                        const cur = link.encounters.reduce((s, e) => s + e.summe, 0);
+                        const max = link.encounters.reduce((s, e) => s + e.summeMax, 0);
+                        return max > cur ? `Σ ${cur} → ${max}` : `Σ ${cur}`;
+                      })()}
+                    />
+                    {/* Collectors in the specimens' column order - who
+                        caught what is part of the label, the way a
+                        collection writes it. */}
+                    <LabelRow
+                      left={
+                        <span title={t.links.collectedBy}>
+                          {t.links.labelCollectors(collectors(link).join(" · "))}
+                        </span>
+                      }
+                    />
+                  </SpecimenLabel>
                   </div>
 
                   {/* Mark-dead menu: optional cause + (SoulLink) who lost theirs. */}
                   {deadMenuId === link.id && (
-                    <div className="mb-3 rounded-md border border-danger-line bg-danger-bg/60 p-2">
+                    <div className="mt-3 rounded-md border border-danger-line bg-danger-bg p-2">
                       <Input
                         size="sm"
                         type="text"
@@ -292,18 +354,6 @@ export function TeamBar({
                       )}
                     </div>
                   )}
-                  <div className="flex flex-col gap-3">
-                    {link.encounters.map((e) => (
-                      <EncounterTile
-                        key={e.id}
-                        encounter={e}
-                        isDead={false}
-                        isClassic={isClassic}
-                        showRoute={link.linkIds.length > 1}
-                        lang={lang}
-                      />
-                    ))}
-                  </div>
                 </>
               ) : link ? (
                 <div className="flex flex-1 flex-col items-center justify-center gap-2 py-6 text-center">
@@ -317,21 +367,40 @@ export function TeamBar({
                 </div>
               ) : (
                 <div className="flex flex-1 flex-col items-center justify-center py-10 text-ink-subtle">
-                  <span className="text-3xl leading-none">+</span>
+                  <PlusIcon className="h-7 w-7" />
                   <span className="mt-1 text-xs text-ink-subtle">
                     {t.links.teamEmpty}
                   </span>
                 </div>
               )}
-              <div className="mt-auto pt-3">
-                <SlotPicker
-                  slotLabel={t.links.teamSlotLabel(i + 1)}
-                  placeholder={t.links.teamSelectPlaceholder}
-                  current={link}
-                  options={aliveLinks}
-                  pending={pending}
-                  onPick={(id) => handleSelect(i, id)}
-                />
+              {/* The closed picker is sprites only, so it shares the row with
+                  the death button; in a very narrow tray the button wraps. */}
+              <div className="mt-3 flex flex-wrap gap-2">
+                <div className="min-w-28 flex-1">
+                  <SlotPicker
+                    slotLabel={t.links.teamSlotLabel(i + 1)}
+                    placeholder={t.links.teamSelectPlaceholder}
+                    current={link}
+                    options={aliveLinks}
+                    pending={pending}
+                    onPick={(id) => handleSelect(i, id)}
+                  />
+                </div>
+                {link && primary && (
+                  <Button
+                    size="sm"
+                    variant="danger"
+                    className="grow"
+                    disabled={pending}
+                    aria-expanded={deadMenuId === link.id}
+                    onClick={() => {
+                      setDeadCause("");
+                      setDeadMenuId(deadMenuId === link.id ? null : link.id);
+                    }}
+                  >
+                    {t.links.markDead}
+                  </Button>
+                )}
               </div>
             </div>
           );

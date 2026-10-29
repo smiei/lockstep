@@ -6,39 +6,67 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { createRun } from "@/lib/actions";
 import { pickActiveRun } from "@/lib/runKey";
 import { formatActionError } from "@/lib/actionErrors";
+import { useDropdown } from "@/lib/useDropdown";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
 import { localizeName } from "@/lib/i18n/localize";
+import { parseRunSettings } from "@/lib/runSettings";
+import { runPlayers } from "@/lib/players";
 import { RunMode } from "@/generated/prisma/enums";
 import type { GameSummary, RunSummary } from "@/lib/types";
 import { NewRunDialog } from "@/components/NewRunDialog";
 import { useToast } from "@/components/ui/ToastProvider";
+import { ChevronDownIcon, PlusIcon } from "@/components/ActionIcons";
 
-// Run select + a compact "+" (new run). Rename/delete live in the header
-// menu (HeaderMenu) to keep this bar narrow on phones.
-export function RunSwitcher({ runs, games }: { runs: RunSummary[]; games: GameSummary[] }) {
+// A listed run, plus its settings when the layout has them (it passes the
+// full Run rows) - that is where the player names live.
+type SwitcherRun = RunSummary & { settingsJson?: string };
+
+// The run box: the open run's name with its game and players under it, and a
+// list of every run to switch to - plus a compact "+" (new run). It used to
+// be a native <select>, which cut the name off in the rail and could say
+// nothing about the game or who plays. Rename/delete live in the header menu
+// (HeaderMenu) to keep this bar narrow on phones.
+export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameSummary[] }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [pending, startTransition] = useTransition();
   const [dialogOpen, setDialogOpen] = useState(false);
+  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const { lang } = useLanguage();
   const toast = useToast();
   const t = translations[lang].runSwitcher;
+  const tPlayer = translations[lang].player;
 
   const activeRun = pickActiveRun(runs, searchParams.get("run"));
-  // games[0] is the default pack - only non-default games get a suffix in
-  // the dropdown, so the common case stays short.
   const defaultGameId = games[0]?.id;
 
-  function gameSuffix(run: RunSummary): string {
-    if (run.gameId === defaultGameId) return "";
+  function gameName(run: SwitcherRun): string {
     const game = games.find((g) => g.id === run.gameId);
-    return game ? ` · ${localizeName(game.names, lang)}` : "";
+    return game ? localizeName(game.names, lang) : run.gameId;
   }
 
-  function handleChange(value: string) {
-    router.push(`${pathname}?run=${value}`);
+  // Who plays, the way the run's own pages name them (PlayerNamesProvider):
+  // the custom name, else the localized "Spieler n".
+  function playerNames(run: SwitcherRun): string {
+    if (run.mode === RunMode.CLASSIC) return t.modeClassic;
+    const names = run.settingsJson ? parseRunSettings(run.settingsJson).playerNames : null;
+    return runPlayers(run.mode, run.playerCount)
+      .map((player) => names?.[player]?.trim() || tPlayer[player])
+      .join(" · ");
+  }
+
+  // The mode in words, then who plays: "SoulLink · Red · Leaf" or "Solo".
+  function modeLine(run: SwitcherRun): string {
+    return run.mode === RunMode.CLASSIC ? t.modeClassic : `${t.modeSoullink} · ${playerNames(run)}`;
+  }
+
+  const openNewRun = () => setDialogOpen(true);
+
+  function handlePick(value: string) {
+    setOpen(false);
+    if (value !== activeRun?.accessKey) router.push(`${pathname}?run=${value}`);
   }
 
   function handleCreate(name: string, mode: RunMode, gameId: string, playerCount: number) {
@@ -56,36 +84,90 @@ export function RunSwitcher({ runs, games }: { runs: RunSummary[]; games: GameSu
   }
 
   return (
-    <div className="flex items-center gap-1.5">
-      <select
-        value={activeRun?.accessKey ?? ""}
-        disabled={pending}
-        onChange={(e) => handleChange(e.target.value)}
-        aria-label={t.switchLabel}
+    // From lg the box takes the rail's full width - game and players on
+    // lines of their own, nothing cut off beside a "+" - and "new run"
+    // becomes a labelled row under it. On a phone the box shares its row with
+    // the square "+".
+    <div
+      ref={containerRef}
+      className="relative flex w-full flex-wrap items-center gap-1.5 sm:w-auto lg:w-full"
+    >
+      <button
+        type="button"
+        disabled={pending || runs.length === 0}
+        onClick={toggle}
+        {...triggerProps}
+        aria-label={activeRun ? `${t.switchLabel}: ${activeRun.name}` : t.switchLabel}
         title={t.switchLabel}
-        className="h-10 max-w-40 rounded-md border border-line-strong bg-panel px-2 text-sm text-ink disabled:cursor-not-allowed disabled:opacity-50 sm:max-w-56"
+        className="flex min-h-10 min-w-0 flex-1 items-center gap-2 rounded-md border border-line-strong bg-panel px-3 py-1.5 text-left text-ink transition-colors hover:bg-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-64 sm:flex-none lg:w-full lg:flex-none"
       >
-        {runs.map((run) => (
-          <option key={run.id} value={run.accessKey}>
-            {run.name}
-            {run.mode === RunMode.CLASSIC
-              ? t.soloSuffix
-              : run.playerCount > 2
-                ? t.playersSuffix(run.playerCount)
-                : ""}
-            {gameSuffix(run)}
-          </option>
-        ))}
-      </select>
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-sm font-semibold">{activeRun?.name ?? "—"}</span>
+          {activeRun && (
+            <>
+              <span className="block truncate text-xs text-ink-muted">
+                {gameName(activeRun)}
+                <span className="lg:hidden"> · {modeLine(activeRun)}</span>
+              </span>
+              <span className="hidden truncate text-xs text-ink-muted lg:block">
+                {modeLine(activeRun)}
+              </span>
+            </>
+          )}
+        </span>
+        <ChevronDownIcon className="h-4 w-4 shrink-0 text-ink-muted" />
+      </button>
+      {/* Two triggers for the one dialog below - exactly one is visible. */}
       <Button
         size="sm"
         iconOnly
         loading={pending}
-        icon={<span className="text-lg leading-none">+</span>}
-        onClick={() => setDialogOpen(true)}
+        icon={<PlusIcon className="h-5 w-5" />}
+        onClick={openNewRun}
         aria-label={t.newRunTitle}
         title={t.newRunTitle}
+        className="lg:hidden"
       />
+      {/* A wrapper carries the visibility: `cn` is a plain join, so a
+          `hidden` on the Button itself would fight its built-in inline-flex. */}
+      <div className="hidden w-full lg:block">
+        <Button
+          size="sm"
+          variant="ghost"
+          loading={pending}
+          icon={<PlusIcon className="h-4 w-4" />}
+          onClick={openNewRun}
+          className="w-full"
+        >
+          {t.newRunTitle}
+        </Button>
+      </div>
+      {open && (
+        // `unshell`: a page surface that opens out of the green field.
+        <ul className="unshell absolute left-0 top-full z-50 mt-1 max-h-80 w-full min-w-56 overflow-y-auto rounded-lg border border-line bg-panel py-1 shadow-lg">
+          {runs.map((run) => {
+            const active = run.accessKey === activeRun?.accessKey;
+            return (
+              <li key={run.id}>
+                <button
+                  type="button"
+                  onClick={() => handlePick(run.accessKey)}
+                  aria-current={active ? "true" : undefined}
+                  className={`flex min-h-10 w-full flex-col items-start px-3 py-1.5 text-left hover:bg-hover ${
+                    active ? "bg-hover" : ""
+                  }`}
+                >
+                  <span className={`text-sm text-ink ${active ? "font-semibold" : ""}`}>{run.name}</span>
+                  <span className="text-xs text-ink-muted">
+                    {run.gameId === defaultGameId ? "" : `${gameName(run)} · `}
+                    {modeLine(run)}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
       <NewRunDialog
         lang={lang}
         open={dialogOpen}

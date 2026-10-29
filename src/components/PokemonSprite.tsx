@@ -8,6 +8,8 @@ import { useExternalImagesAllowed } from "@/components/SpriteConsentProvider";
 const SIZES = {
   sm: 32,
   md: 48,
+  // The Team tab's Box column: a 64px Gen-3 sprite at its own size.
+  base: 64,
   lg: 96,
   xl: 140,
 } as const;

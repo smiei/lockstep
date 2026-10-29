@@ -14,98 +14,165 @@
    pairs had drifted - ten different zinc shades were in use for "border", and
    inputs disagreed with each other about their own dark background.
 
-   Rule going forward: reach for a token first. A raw `zinc-*` utility is only
+   The palette is the natural-history collection the redesign is built on
+   (.impeccable/surfaces/src-app-links.md, DESIGN.md): a cool sage ground the
+   specimen trays sit on, white trays, hairline sage rules, a bottle-green
+   shell, and one label red that only ever means death or danger.
+
+   Rule going forward: reach for a token first. A raw palette utility is only
    correct where the colour is genuinely one-off.
    --------------------------------------------------------------------------- */
 :root {
-  --canvas: #ffffff; /* page background */
-  --panel: #ffffff; /* raised surface: card, dropdown, modal */
-  --sunken: #fafafa; /* subtle fill: table head, inactive track */
-  --hover: #f4f4f5; /* hover wash on neutral controls */
+  --canvas: #ebefea; /* page background: the sage ground */
+  --panel: #ffffff; /* raised surface: specimen tray, dropdown, modal */
+  --sunken: #e2e8e2; /* the drawer the trays sit in, table heads, tracks */
+  --hover: #e4ebe5; /* hover wash on neutral controls */
 
-  --line: #e4e4e7; /* default divider / card border */
-  --line-strong: #d4d4d8; /* input + control border, needs more contrast */
+  --line: #c9d6cd; /* default divider / tray border */
+  /* Control borders. 2.7:1 on a tray, up from the old 1.5:1 - the audit left
+     stronger input borders open, and the sage scale gets there for free. */
+  --line-strong: #8fa398;
 
-  --ink: #18181b; /* primary text */
-  /* Both grey steps are TEXT, so both have to clear WCAG's 4.5:1 - on white and
-     on the tinted cards (success/danger washes) alike. --ink-subtle used to be
-     #a1a1aa (2.6:1), which is why placeholders, captions and the BST/rank lines
-     read as washed out; it took --ink-muted's old value, and --ink-muted moved
-     one step darker so the two stay apart. */
-  --ink-muted: #52525b; /* secondary text, 7.7:1 on white */
-  --ink-subtle: #71717a; /* captions, placeholders, 4.6:1 on the palest tint */
+  --ink: #1a1f1c; /* primary text */
+  /* Both grey steps are TEXT, so both have to clear WCAG's 4.5:1 - on a tray,
+     on the sage ground and on the palest tint. ink-muted 7.0:1 / ink-subtle
+     5.2:1 on the ground, 4.8:1 on the drawer. Never lighten them. */
+  --ink-muted: #46524b;
+  --ink-subtle: #5a665f;
 
-  --accent: #18181b; /* primary button fill */
-  --accent-ink: #ffffff; /* text on --accent */
+  --accent: #0f3d30; /* primary button fill: the shell's bottle green */
+  --accent-ink: #ffffff; /* text on --accent, 12:1 */
 
-  --success: #047857;
-  --success-bg: #ecfdf5;
-  --success-line: #6ee7b7;
-  --warning: #b45309;
-  --warning-bg: #fffbeb;
-  --warning-line: #fcd34d;
-  --danger: #b91c1c;
-  --danger-bg: #fef2f2;
-  --danger-line: #fca5a5;
-  /* The palette had success/warning/danger as text, as a wash and as a border,
-     but no FILL - so a destructive primary button, a progress bar and an HP bar
-     all had nowhere to go and reached for the text token instead. In dark mode
-     those are light pastels (they have to read as text on a dark ground), so a
-     bar filled with one comes out washed and chalky.
-     Red is one value for both themes: a mid red carries on white and on
-     near-black alike. Green and amber do not - a mid-tone dark enough to read
-     on white is too dim on near-black - so those get a per-theme step. */
-  --success-solid: #16a34a;
-  --warning-solid: #d97706;
-  --danger-solid: #dc2626;
+  --success: #1e6b42;
+  --success-bg: #e3f0e7;
+  --success-line: #8fc2a0;
+  --warning: #8a5300;
+  --warning-bg: #fbf1dc;
+  --warning-line: #e2b766;
+  --danger: #b3261e; /* the label red */
+  --danger-bg: #fbe9e7;
+  --danger-line: #e3b4b0;
+  /* FILLS, as opposed to the text colours above: bars, switches and the one
+     button that carries out a deletion. In dark mode the text tokens are light
+     pastels, and a bar filled with one comes out chalky.
+     Red is one value for both themes (white on it is 6.5:1, and it reads on
+     the dark ground too); green and amber take a per-theme step. */
+  --success-solid: #2e7d4f;
+  --warning-solid: #c27a0e;
+  --danger-solid: #b3261e;
   --danger-solid-ink: #ffffff;
-  --info: #0369a1;
-  --info-bg: #f0f9ff;
-  --info-line: #7dd3fc;
+  --info: #1f5c7a;
+  --info-bg: #e4eff4;
+  --info-line: #9cc3d6;
 
-  /* One focus ring for the whole app. A focus indicator needs 3:1 against what
-     surrounds it (WCAG 1.4.11); sky-500 managed 2.8:1 on white, sky-600 4.1:1. */
-  --focus: #0284c7;
+  /* One focus ring for the whole app, 3:1 against what surrounds it
+     (WCAG 1.4.11): 5.4:1 on a tray, 4.6:1 on the ground. */
+  --focus: #13795b;
 
-  /* Blindflug's marker colour. One value for both themes, like --danger-solid:
-     it is only ever a 3px stripe and a button outline, and a muted violet
-     reads on white and on near-black alike. Deliberately a hue nothing else in
-     the app uses, so the stripe cannot be mistaken for a status. */
+  /* Blindflug's marker colour. One value for both themes: it is only ever a
+     3px stripe and a button outline. Deliberately a hue nothing else in the
+     app uses, so the stripe cannot be mistaken for a status. */
   --blindflug: #8b5cf6;
+
+  /* The shell's own field - the side rail on a desktop, the top bar on a
+     phone. The same green in both themes: it is the one place the world's
+     colour owns a whole region, and it is already dark enough for night. */
+  --shell: #0f3d30;
 }
 
 .dark {
-  --canvas: #09090b;
-  --panel: #18181b;
-  --sunken: #18181b;
-  --hover: #27272a;
+  --canvas: #0e1512; /* deep green-black ground */
+  --panel: #16201b; /* trays, one step lighter */
+  --sunken: #111a16;
+  --hover: #1e2a24;
 
-  --line: #27272a;
-  --line-strong: #3f3f46;
+  --line: #2a3a32;
+  --line-strong: #4e6559;
 
-  --ink: #fafafa;
-  --ink-muted: #a1a1aa;
-  --ink-subtle: #8b8b94; /* 5.3:1 on --panel; #71717a was 3.7:1 */
+  --ink: #e8efea;
+  --ink-muted: #a9b8af; /* 9.0:1 on the ground */
+  --ink-subtle: #8b9c92; /* 5.8:1 on a tray, 5.5:1 on the palest tint */
 
-  --accent: #fafafa;
-  --accent-ink: #18181b;
+  --accent: #cfe5d7;
+  --accent-ink: #0f3d30;
 
-  --success: #6ee7b7;
-  --success-bg: #022c22;
-  --success-line: #047857;
-  --warning: #fcd34d;
-  --warning-bg: #2c1a02;
-  --warning-line: #b45309;
-  --danger: #fca5a5;
-  --danger-bg: #2c0b0b;
-  --danger-line: #b91c1c;
-  --success-solid: #22c55e;
-  --warning-solid: #f59e0b;
-  --info: #7dd3fc;
-  --info-bg: #082f49;
-  --info-line: #0369a1;
+  --success: #7fd1a0;
+  --success-bg: #10261b;
+  --success-line: #2e6b4a;
+  --warning: #f2c46d;
+  --warning-bg: #2a1f0b;
+  --warning-line: #7a5a1c;
+  --danger: #f2a099;
+  --danger-bg: #2c1312;
+  --danger-line: #8a2d27;
+  --success-solid: #3fa06a;
+  --warning-solid: #d99a2b;
+  --info: #8cc6e0;
+  --info-bg: #0f2330;
+  --info-line: #2b5d78;
 
-  --focus: #38bdf8;
+  --focus: #5fd3a5;
+}
+
+/* The shell (side rail / phone top bar) redefines the tokens for everything
+   inside it, so the run switcher, the gear, the theme and Blindflug buttons and
+   the tab links need no shell-specific variant at all: their `bg-panel`,
+   `border-line` and `text-ink-muted` simply resolve to the green field's own
+   steps. Same values in both themes - the field does not change colour.
+
+   `.unshell` puts the page palette back for anything that opens out of the
+   shell but must not look like it: the gear's dropdown, and every Modal
+   (Modal renders in place, so a dialog opened from the run switcher would
+   otherwise come up green). The two selectors repeat the :root / .dark values
+   on purpose; a custom property cannot be "reset to the inherited-from-root
+   value" any other way. */
+.shell {
+  --canvas: #0f3d30;
+  --panel: #16493a;
+  --sunken: #0c3328;
+  --hover: #1b5443;
+  --line: #2f5e50;
+  --line-strong: #4a7a6b;
+  --ink: #ffffff;
+  --ink-muted: #dcebe1; /* 9.8:1 on the field */
+  --ink-subtle: #a9c7b6; /* 6.7:1 on the field, 4.8:1 on a hover wash */
+  --accent: #dcebe1; /* the active tab: a pale label on the green */
+  --accent-ink: #0f3d30;
+  --focus: #9be3c0;
+  --blindflug: #c4b5fd; /* 6.6:1 - the violet itself is 2.9:1 on green */
+  color: var(--ink);
+}
+
+.shell .unshell {
+  --canvas: #ebefea;
+  --panel: #ffffff;
+  --sunken: #e2e8e2;
+  --hover: #e4ebe5;
+  --line: #c9d6cd;
+  --line-strong: #8fa398;
+  --ink: #1a1f1c;
+  --ink-muted: #46524b;
+  --ink-subtle: #5a665f;
+  --accent: #0f3d30;
+  --accent-ink: #ffffff;
+  --focus: #13795b;
+  --blindflug: #8b5cf6;
+  color: var(--ink);
+}
+
+.dark .shell .unshell {
+  --canvas: #0e1512;
+  --panel: #16201b;
+  --sunken: #111a16;
+  --hover: #1e2a24;
+  --line: #2a3a32;
+  --line-strong: #4e6559;
+  --ink: #e8efea;
+  --ink-muted: #a9b8af;
+  --ink-subtle: #8b9c92;
+  --accent: #cfe5d7;
+  --accent-ink: #0f3d30;
+  --focus: #5fd3a5;
 }
 
 /* ---------------------------------------------------------------------------
@@ -186,21 +253,106 @@
 
   --color-focus: var(--focus);
   --color-blindflug: var(--blindflug);
+  --color-shell: var(--shell);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Familjen Grotesk carries the interface, Red Hat Mono the label data and
+     the figures (catalogue numbers, BST, caps) - see layout.tsx. */
+  --font-sans: var(--font-familjen);
+  --font-mono: var(--font-redhat-mono);
 }
 
-/* The two canvas values also appear in ThemeColorSync.tsx - change both
-   together. manifest.webmanifest's theme_color is DELIBERATELY NOT this pair:
-   see the comment on that field for why it pins dark unconditionally. */
+/* The shell green also appears in ThemeColorSync.tsx and layout.tsx's
+   viewport themeColor - the browser chrome continues the phone's green top
+   bar in both themes. manifest.webmanifest pins the same green; see
+   pwa.test.ts for why the installed app cannot follow the theme. */
 body {
   background: var(--canvas);
   color: var(--ink);
   /* Previously `Arial, Helvetica, sans-serif`, which silently overrode the
-     Geist font loaded in layout.tsx: the whole app rendered in Arial while
+     font loaded in layout.tsx: the whole app rendered in Arial while
      --font-sans went unused in all 58 components. */
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Browser surfaces carry the palette too: selected text is the shell green,
+   and figures in tables line up. */
+::selection {
+  background: var(--shell);
+  color: #ffffff;
+}
+
+/* The collection label - the redesign's signature. A double rule (border plus
+   an offset outline in the same ink) around small mono data, the way a
+   museum labels a specimen: number, locality, who collected it. Used under
+   every pair on the Team tab and on the Memorial. */
+.specimen-label {
+  border: 1px solid var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: 2px;
+  background: var(--panel);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The Entwickeln button's travelling dot (EvolveControls): two laps, then it
+   fades out instead of resting as a green sliver on the button's edge. Finite
+   on purpose (WCAG 2.2.2); reduced motion hides it entirely. */
+@keyframes evolve-sweep {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.evolve-sweep {
+  animation: evolve-sweep 5s linear 1 forwards;
+}
+
+/* Native selects drawn in the world's own chevron instead of each browser's.
+   The arrow is a data-URI SVG, which cannot take currentColor, so its stroke
+   is a token per palette: page light/dark, and the shell's green field. */
+:root {
+  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2346524b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.dark,
+.dark .shell .unshell {
+  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a9b8af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.shell {
+  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcebe1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.shell .unshell {
+  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2346524b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Unlayered on purpose: Tailwind's utilities live in a cascade layer, so a
+   call site's `px-2` would otherwise take back the room the arrow needs. */
+.select-chevron {
+  appearance: none;
+  background-image: var(--select-chevron);
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 1rem;
+  padding-right: 2.25rem;
+}
+
+/* A death label: a heavy rule on top instead of the double frame, the way a
+   collection marks a specimen withdrawn from the drawer. */
+.specimen-label-dead {
+  border-top: 4px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
 }
 
 /* The strip Android 15 draws its transparent status bar over on an installed
@@ -210,16 +362,17 @@ body {
    PHONE's system setting regardless of what theme is active inside the app,
    so a user who pins Light in-app while their phone is system-dark still
    needs a dark strip here, or the (light) glyphs the OS insists on drawing
-   go invisible on it - the exact bug this exists to fix. Same two colours as
-   ThemeColorSync's THEME_COLORS / --canvas, kept in step by hand as usual. */
+   go invisible on it - the exact bug this exists to fix. Light system: the
+   light sage ground, so the OS's dark glyphs stay readable; dark system: the
+   shell green, which continues the phone's top bar. */
 .safe-area-top {
   height: env(safe-area-inset-top, 0px);
-  background: #ffffff;
+  background: #ebefea;
 }
 
 @media (prefers-color-scheme: dark) {
   .safe-area-top {
-    background: #09090b;
+    background: #0f3d30;
   }
 }
 

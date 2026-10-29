@@ -7,6 +7,7 @@ import type { Pokemon, EvolutionEntry } from "@/lib/data";
 import type { MoveEntry, Moveset, MovesTable, MoveTypeHistoryEntry } from "@/lib/learnset";
 import { moveListAtLevel } from "@/lib/learnset";
 import { MoveDetailPanel } from "@/components/MoveDetailPanel";
+import { ChevronDownIcon } from "@/components/ActionIcons";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { getTypesForGeneration } from "@/lib/effectiveness";
 import { computePokemonRanks, rankForSumme } from "@/lib/ranking";
@@ -94,13 +95,11 @@ function MoveRow({ move, lang }: { move: MoveEntry; lang: Lang }) {
         <span className={`flex-1 ${move.damaging ? "text-ink" : "text-ink-muted"}`}>
           {move.name}
         </span>
-        <span
-          className={`shrink-0 text-xs text-ink-subtle transition-transform ${
-            open ? "rotate-90" : ""
+        <ChevronDownIcon
+          className={`h-4 w-4 shrink-0 text-ink-subtle transition-transform motion-reduce:transition-none ${
+            open ? "" : "-rotate-90"
           }`}
-        >
-          ▸
-        </span>
+        />
       </button>
       {open && <MoveDetailPanel move={move} lang={lang} className="mb-1.5" />}
     </div>
