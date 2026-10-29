@@ -23,22 +23,22 @@
    correct where the colour is genuinely one-off.
    --------------------------------------------------------------------------- */
 :root {
-  --canvas: #ebefea; /* page background: the sage ground */
-  --panel: #ffffff; /* raised surface: specimen tray, dropdown, modal */
-  --sunken: #e2e8e2; /* the drawer the trays sit in, table heads, tracks */
-  --hover: #e4ebe5; /* hover wash on neutral controls */
+  --page-canvas: #ebefea; /* page background: the sage ground */
+  --page-panel: #ffffff; /* raised surface: specimen tray, dropdown, modal */
+  --page-sunken: #e2e8e2; /* the drawer the trays sit in, table heads, tracks */
+  --page-hover: #e4ebe5; /* hover wash on neutral controls */
 
-  --line: #c9d6cd; /* default divider / tray border */
+  --page-line: #c9d6cd; /* default divider / tray border */
   /* Control borders. 2.7:1 on a tray, up from the old 1.5:1 - the audit left
      stronger input borders open, and the sage scale gets there for free. */
-  --line-strong: #8fa398;
+  --page-line-strong: #8fa398;
 
-  --ink: #1a1f1c; /* primary text */
+  --page-ink: #1a1f1c; /* primary text */
   /* Both grey steps are TEXT, so both have to clear WCAG's 4.5:1 - on a tray,
      on the sage ground and on the palest tint. ink-muted 7.0:1 / ink-subtle
      5.2:1 on the ground, 4.8:1 on the drawer. Never lighten them. */
-  --ink-muted: #46524b;
-  --ink-subtle: #5a665f;
+  --page-ink-muted: #46524b;
+  --page-ink-subtle: #5a665f;
 
   --accent: var(--shell); /* primary button fill: the shell's own colour */
   --accent-ink: var(--shell-on);
@@ -67,7 +67,7 @@
 
   /* One focus ring for the whole app, 3:1 against what surrounds it
      (WCAG 1.4.11): 5.4:1 on a tray, 4.6:1 on the ground. */
-  --focus: #13795b;
+  --page-focus: #13795b;
 
   /* Blindflug's marker colour. One value for both themes: it is only ever a
      3px stripe and a button outline. Deliberately a hue nothing else in the
@@ -167,17 +167,17 @@
 }
 
 .dark {
-  --canvas: #0e1512; /* deep green-black ground */
-  --panel: #16201b; /* trays, one step lighter */
-  --sunken: #111a16;
-  --hover: #1e2a24;
+  --page-canvas: #0e1512; /* deep green-black ground */
+  --page-panel: #16201b; /* trays, one step lighter */
+  --page-sunken: #111a16;
+  --page-hover: #1e2a24;
 
-  --line: #2a3a32;
-  --line-strong: #4e6559;
+  --page-line: #2a3a32;
+  --page-line-strong: #4e6559;
 
-  --ink: #e8efea;
-  --ink-muted: #a9b8af; /* 9.0:1 on the ground */
-  --ink-subtle: #8b9c92; /* 5.8:1 on a tray, 5.5:1 on the palest tint */
+  --page-ink: #e8efea;
+  --page-ink-muted: #a9b8af; /* 9.0:1 on the ground */
+  --page-ink-subtle: #8b9c92; /* 5.8:1 on a tray, 5.5:1 on the palest tint */
 
   --accent: var(--shell-pale);
   --accent-ink: var(--shell-pale-ink);
@@ -197,7 +197,116 @@
   --info-bg: #0f2330;
   --info-line: #2b5d78;
 
-  --focus: #5fd3a5;
+  --page-focus: #5fd3a5;
+}
+
+/* The page's neutral tokens read the --page-* ramp above, so a shell colour
+   (data-shell on <html>) can retint the ground, the trays, the rules, the
+   text greys and the focus ring in both themes. Each colour's ramp is the
+   green one turned to that colour's hue with saturation and lightness kept,
+   and every text and focus contrast was re-measured (>= 4.5:1 / 3:1). The
+   state colours (success, warning, danger, info) do not move: green means
+   caught, red means death, whatever the shell looks like. */
+:root {
+  --canvas: var(--page-canvas);
+  --panel: var(--page-panel);
+  --sunken: var(--page-sunken);
+  --hover: var(--page-hover);
+  --line: var(--page-line);
+  --line-strong: var(--page-line-strong);
+  --ink: var(--page-ink);
+  --ink-muted: var(--page-ink-muted);
+  --ink-subtle: var(--page-ink-subtle);
+  --focus: var(--page-focus);
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2346524b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.dark {
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a9b8af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root[data-shell="red"] {
+  --page-canvas: #efeaea;
+  --page-panel: #ffffff;
+  --page-sunken: #e8e2e2;
+  --page-hover: #ebe4e4;
+  --page-line: #d6c9ca;
+  --page-line-strong: #a38f90;
+  --page-ink: #1f1a1a;
+  --page-ink-muted: #524647;
+  --page-ink-subtle: #665a5b;
+  --page-focus: #79131a;
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23524647' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root.dark[data-shell="red"] {
+  --page-canvas: #150e0e;
+  --page-panel: #201617;
+  --page-sunken: #1a1112;
+  --page-hover: #2a1e1f;
+  --page-line: #3a2a2b;
+  --page-line-strong: #654e50;
+  --page-ink: #efe8e8;
+  --page-ink-muted: #b8a9aa;
+  --page-ink-subtle: #9c8b8c;
+  --page-focus: #d35f67;
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8a9aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root[data-shell="blue"] {
+  --page-canvas: #eaebef;
+  --page-panel: #ffffff;
+  --page-sunken: #e2e4e8;
+  --page-hover: #e4e6eb;
+  --page-line: #c9ccd6;
+  --page-line-strong: #8f94a3;
+  --page-ink: #1a1b1f;
+  --page-ink-muted: #464952;
+  --page-ink-subtle: #5a5d66;
+  --page-focus: #132e79;
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23464952' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root.dark[data-shell="blue"] {
+  --page-canvas: #0e1015;
+  --page-panel: #161920;
+  --page-sunken: #11131a;
+  --page-hover: #1e212a;
+  --page-line: #2a2e3a;
+  --page-line-strong: #4e5465;
+  --page-ink: #e8eaef;
+  --page-ink-muted: #a9adb8;
+  --page-ink-subtle: #8b909c;
+  --page-focus: #5f7ed3;
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a9adb8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root[data-shell="yellow"] {
+  --page-canvas: #efeeea;
+  --page-panel: #ffffff;
+  --page-sunken: #e8e6e2;
+  --page-hover: #ebe9e4;
+  --page-line: #d6d3c9;
+  --page-line-strong: #a39e8f;
+  --page-ink: #1f1e1a;
+  --page-ink-muted: #524f46;
+  --page-ink-subtle: #66635a;
+  --page-focus: #795e13;
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23524f46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+:root.dark[data-shell="yellow"] {
+  --page-canvas: #15130e;
+  --page-panel: #201d16;
+  --page-sunken: #1a1811;
+  --page-hover: #2a271e;
+  --page-line: #3a362a;
+  --page-line-strong: #655f4e;
+  --page-ink: #efede8;
+  --page-ink-muted: #b8b4a9;
+  --page-ink-subtle: #9c978b;
+  --page-focus: #d3b45f;
+  --page-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8b4a9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
 }
 
 /* The shell (side rail / phone top bar) redefines the tokens for everything
@@ -230,35 +339,25 @@
 }
 
 .shell .unshell {
-  --canvas: #ebefea;
-  --panel: #ffffff;
-  --sunken: #e2e8e2;
-  --hover: #e4ebe5;
-  --line: #c9d6cd;
-  --line-strong: #8fa398;
-  --ink: #1a1f1c;
-  --ink-muted: #46524b;
-  --ink-subtle: #5a665f;
+  --canvas: var(--page-canvas);
+  --panel: var(--page-panel);
+  --sunken: var(--page-sunken);
+  --hover: var(--page-hover);
+  --line: var(--page-line);
+  --line-strong: var(--page-line-strong);
+  --ink: var(--page-ink);
+  --ink-muted: var(--page-ink-muted);
+  --ink-subtle: var(--page-ink-subtle);
+  --focus: var(--page-focus);
   --accent: var(--shell);
   --accent-ink: var(--shell-on);
-  --focus: #13795b;
   --blindflug: #8b5cf6;
   color: var(--ink);
 }
 
 .dark .shell .unshell {
-  --canvas: #0e1512;
-  --panel: #16201b;
-  --sunken: #111a16;
-  --hover: #1e2a24;
-  --line: #2a3a32;
-  --line-strong: #4e6559;
-  --ink: #e8efea;
-  --ink-muted: #a9b8af;
-  --ink-subtle: #8b9c92;
   --accent: var(--shell-pale);
   --accent-ink: var(--shell-pale-ink);
-  --focus: #5fd3a5;
 }
 
 /* ---------------------------------------------------------------------------
@@ -405,12 +504,7 @@ body {
    The arrow is a data-URI SVG, which cannot take currentColor, so its stroke
    is a token per palette: page light/dark, and the shell's green field. */
 :root {
-  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2346524b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-}
-
-.dark,
-.dark .shell .unshell {
-  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a9b8af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --select-chevron: var(--page-chevron);
 }
 
 .shell {
@@ -418,7 +512,7 @@ body {
 }
 
 .shell .unshell {
-  --select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2346524b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --select-chevron: var(--page-chevron);
 }
 
 /* Unlayered on purpose: Tailwind's utilities live in a cascade layer, so a

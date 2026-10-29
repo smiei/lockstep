@@ -67,6 +67,24 @@ describe("globals.css", () => {
     }
   });
 
+  it("retints the page's neutral ramp per colour, in both themes", () => {
+    // Without these the ground, trays and text greys stay green under a red
+    // or blue shell.
+    const tokens = ["canvas", "panel", "sunken", "hover", "line", "line-strong", "ink", "ink-muted", "ink-subtle", "focus", "chevron"];
+    for (const color of SHELL_COLORS.filter((c) => c !== "green")) {
+      for (const selector of [`:root[data-shell="${color}"] {`, `:root.dark[data-shell="${color}"] {`]) {
+        // Every block under that selector (the shell set and the page ramp
+        // are separate blocks), joined.
+        const block = css
+          .split(selector)
+          .slice(1)
+          .map((part) => part.split("}")[0])
+          .join("\n");
+        for (const token of tokens) expect(block, `${selector} --page-${token}`).toContain(`--page-${token}:`);
+      }
+    }
+  });
+
   it("keeps the swatch hex values in step with --shell", () => {
     expect(css).toContain(`--shell: ${SHELL_HEX.green};`);
     for (const color of SHELL_COLORS.filter((c) => c !== "green")) {

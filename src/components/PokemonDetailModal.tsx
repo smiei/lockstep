@@ -372,12 +372,13 @@ export function PokemonDetailModal({
                 columns end level. */}
             {!blindflug && types.length > 0 && (
               <>
-                <h3 className="mb-2 mt-5 text-sm font-bold text-ink">{td.weaknesses}</h3>
+                <h3 className="mb-2 mt-5 text-center text-sm font-bold text-ink sm:text-left">{td.weaknesses}</h3>
                 <TypeEffectiveness
                   defenderTypes={types}
                   effectiveness={effectiveness}
                   attackTypes={getTypesForGeneration(generation)}
                   lang={lang}
+                  className="mx-auto w-fit sm:mx-0"
                 />
               </>
             )}
@@ -411,11 +412,11 @@ export function PokemonDetailModal({
             branching stage (Eevee) stacks its options in one column. A
             fusion's card shows its two components here instead. */}
         <section>
-          <h3 className="mb-2 text-sm font-bold text-ink">
+          <h3 className="mb-2 text-center text-sm font-bold text-ink">
             {fusion ? `${td.fusionHead} / ${td.fusionBody}` : td.evolution}
           </h3>
           {fusion && body ? (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {[
                 { role: td.fusionHead, mon: pokemon },
                 { role: td.fusionBody, mon: body },
@@ -435,9 +436,9 @@ export function PokemonDetailModal({
               ))}
             </div>
           ) : !familyHasEvolution ? (
-            <p className="text-sm text-ink-subtle">{td.noEvolution}</p>
+            <p className="text-center text-sm text-ink-subtle">{td.noEvolution}</p>
           ) : (
-            <div className="flex items-center gap-1 overflow-x-auto pb-1">
+            <div className="flex items-center justify-center-safe gap-1 overflow-x-auto pb-1">
               {evoStages.map((ids, stage) => (
                 <Fragment key={stage}>
                   {stage > 0 && <ArrowRightIcon className="h-4 w-4 shrink-0 text-ink-subtle" />}
