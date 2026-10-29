@@ -10,9 +10,13 @@ import { useTheme } from "next-themes";
 // neither can a media-scoped theme-color: next-themes toggles a `dark` class on
 // <html>, which prefers-color-scheme never sees. Without this, a user whose OS
 // is light but who switched the app to dark keeps a white status bar above a
-// near-black page. Colours match what <body> actually paints, i.e. `bg-white`
-// and `dark:bg-zinc-950`.
-const THEME_COLORS = { light: "#ffffff", dark: "#09090b" };
+// near-black page.
+//
+// Since the redesign the top of the page is the shell green in BOTH themes
+// (the phone's top bar, the desktop rail), so both values are that green and
+// match layout.tsx's static viewport.themeColor. The component stays so a
+// future per-theme shell only has to change this pair.
+const THEME_COLORS = { light: "#0f3d30", dark: "#0f3d30" };
 
 export function ThemeColorSync() {
   const { resolvedTheme } = useTheme();

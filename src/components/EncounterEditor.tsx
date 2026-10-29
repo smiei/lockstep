@@ -420,7 +420,7 @@ export function EncounterEditor({
             disabled={pending}
             onChange={(e) => handleStatusChange(e.target.value as EncounterStatus)}
             aria-label={t.tracker.statusFieldLabel(...fieldContext)}
-            className={`h-10 shrink-0 rounded-md border px-2 font-medium disabled:cursor-not-allowed disabled:opacity-50 ${STATUS_STYLES[status]}`}
+            className={`select-chevron h-10 shrink-0 rounded-md border px-2 font-semibold disabled:cursor-not-allowed disabled:opacity-50 ${STATUS_STYLES[status]}`}
           >
             {Object.values(EncounterStatus).map((s) => (
               <option key={s} value={s}>

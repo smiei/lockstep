@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T12:00:00Z",
+  "title": "Design System: Lockstep",
+  "extensions": {
+    "colorMeta": {
+      "shell-green": { "role": "primary", "displayName": "Bottle Green", "canonical": "#0f3d30", "tonalRamp": ["oklch(15% 0.04 168)", "oklch(25% 0.05 168)", "oklch(32% 0.055 168)", "oklch(45% 0.06 168)", "oklch(58% 0.06 168)", "oklch(70% 0.05 168)", "oklch(84% 0.035 168)", "oklch(95% 0.015 168)"] },
+      "caught-green": { "role": "secondary", "displayName": "Caught Green", "canonical": "#1e6b42", "tonalRamp": ["oklch(18% 0.05 155)", "oklch(28% 0.07 155)", "oklch(46% 0.1 155)", "oklch(55% 0.11 155)", "oklch(65% 0.11 155)", "oklch(76% 0.09 155)", "oklch(87% 0.05 155)", "oklch(95% 0.02 155)"] },
+      "missing-amber": { "role": "secondary", "displayName": "Missing Amber", "canonical": "#8a5300", "tonalRamp": ["oklch(20% 0.05 70)", "oklch(32% 0.08 70)", "oklch(48% 0.11 70)", "oklch(60% 0.13 70)", "oklch(70% 0.13 75)", "oklch(80% 0.11 80)", "oklch(89% 0.06 85)", "oklch(96% 0.025 85)"] },
+      "info-blue": { "role": "secondary", "displayName": "Archive Blue", "canonical": "#1f5c7a", "tonalRamp": ["oklch(18% 0.04 230)", "oklch(28% 0.06 230)", "oklch(43% 0.08 230)", "oklch(55% 0.08 230)", "oklch(66% 0.07 230)", "oklch(77% 0.06 230)", "oklch(88% 0.03 230)", "oklch(95% 0.015 230)"] },
+      "label-red": { "role": "tertiary", "displayName": "Label Red", "canonical": "#b3261e", "tonalRamp": ["oklch(20% 0.08 28)", "oklch(32% 0.12 28)", "oklch(44% 0.16 28)", "oklch(52% 0.18 28)", "oklch(64% 0.15 28)", "oklch(76% 0.1 28)", "oklch(87% 0.05 28)", "oklch(95% 0.02 28)"] },
+      "blindflug-violet": { "role": "tertiary", "displayName": "Blindflug Violet", "canonical": "#8b5cf6", "tonalRamp": ["oklch(20% 0.1 293)", "oklch(32% 0.16 293)", "oklch(45% 0.2 293)", "oklch(60% 0.22 293)", "oklch(70% 0.17 293)", "oklch(80% 0.11 293)", "oklch(89% 0.06 293)", "oklch(96% 0.02 293)"] },
+      "sage-ground": { "role": "neutral", "displayName": "Sage Ground", "canonical": "#ebefea", "tonalRamp": ["oklch(16% 0.01 150)", "oklch(26% 0.015 150)", "oklch(40% 0.02 150)", "oklch(55% 0.02 150)", "oklch(68% 0.02 150)", "oklch(82% 0.02 150)", "oklch(91% 0.012 150)", "oklch(95% 0.008 145)"] },
+      "tray-white": { "role": "neutral", "displayName": "Tray White", "canonical": "#ffffff" },
+      "drawer-sage": { "role": "neutral", "displayName": "Drawer Sage", "canonical": "#e2e8e2" },
+      "hover-sage": { "role": "neutral", "displayName": "Hover Sage", "canonical": "#e4ebe5" },
+      "hairline-sage": { "role": "neutral", "displayName": "Hairline Sage", "canonical": "#c9d6cd" },
+      "control-sage": { "role": "neutral", "displayName": "Control Sage", "canonical": "#8fa398" },
+      "specimen-ink": { "role": "neutral", "displayName": "Specimen Ink", "canonical": "#1a1f1c" },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted (7.0:1)", "canonical": "#46524b" },
+      "ink-subtle": { "role": "neutral", "displayName": "Ink Subtle (5.2:1)", "canonical": "#5a665f" },
+      "focus-green": { "role": "neutral", "displayName": "Focus Green (3:1)", "canonical": "#13795b" },
+      "dark-ground": { "role": "neutral", "displayName": "Night Ground (dark theme)", "canonical": "#0e1512" },
+      "dark-tray": { "role": "neutral", "displayName": "Night Tray (dark theme)", "canonical": "#16201b" },
+      "dark-accent": { "role": "primary", "displayName": "Pale Label Green (dark primary)", "canonical": "#cfe5d7" },
+      "shell-panel": { "role": "neutral", "displayName": "Shell Control Field", "canonical": "#16493a" },
+      "shell-ink-muted": { "role": "neutral", "displayName": "Shell Pale Label (active tab)", "canonical": "#dcebe1" },
+      "eff-good": { "role": "data", "displayName": "Effectiveness: resists / hits hard", "canonical": "#22c55e" },
+      "eff-bad": { "role": "data", "displayName": "Effectiveness: weak to", "canonical": "#dc2626" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Page Title", "purpose": "The page's single h1 in PageHeader; 1.875rem below sm, 2.25rem from sm." },
+      "headline": { "displayName": "Section Heading", "purpose": "Section, drawer and modal titles." },
+      "title": { "displayName": "Specimen Name", "purpose": "A specimen's name under its sprite, the next cap's trainer." },
+      "body": { "displayName": "Interface", "purpose": "Controls, rows, fields, descriptions." },
+      "label": { "displayName": "Small Label", "purpose": "Field labels, phone tab labels, badges, outcome words." },
+      "specimen-data": { "displayName": "Specimen Data", "purpose": "Red Hat Mono with tabular figures: label rows, catalogue and route numbers, BST." },
+      "figure-large": { "displayName": "Large Figure", "purpose": "The next level cap's number in the rail card." }
+    },
+    "shadows": [
+      { "name": "float", "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)", "purpose": "Dropdowns, comboboxes, menus, toasts, consent banner." },
+      { "name": "dialog", "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)", "purpose": "The Modal panel over a 50% black backdrop." },
+      { "name": "specimen-double-rule", "value": "border: 1px solid var(--ink); outline: 1px solid var(--ink); outline-offset: 2px", "purpose": "Not a shadow: the specimen label's double frame, recorded here because it is a border-plus-outline token." },
+      { "name": "focus-ring", "value": "outline: 2px solid var(--focus); outline-offset: 2px", "purpose": "The single focus-visible ring on every interactive element." }
+    ],
+    "motion": [
+      { "name": "evolve-sweep", "value": "evolve-sweep 5s linear 1 forwards (two 360deg laps, fade out in the last 15%)", "purpose": "The travelling caught-green dot on the Entwickeln button; hidden under reduced motion." },
+      { "name": "sticky-nav-slide", "value": "transform 200ms (Tailwind default ease)", "purpose": "Phone tab strip hides past 96px scroll down, returns on scroll up, 8px jitter threshold; reduced motion drops the slide." },
+      { "name": "blindflug-sweep", "value": "blindflug-sweep 1600ms ease-in-out forwards", "purpose": "One violet band down the page and back when Blindflug turns on; 1ms under reduced motion so animationend still fires." },
+      { "name": "colour-transition", "value": "transition-colors (150ms)", "purpose": "Hover washes on buttons, tabs and rows." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px (shell becomes the 232px side rail)" },
+      { "name": "xl", "value": "1280px (team drawer 3x2)" },
+      { "name": "team-side-column", "value": "105rem (drawer plus 24rem Box/Memorial column side by side)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Bottle-green fill for the main action of a view; 44px.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Pokémon hinzufügen</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 6px; font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; border: 0; cursor: pointer; transition: background-color 150ms, opacity 150ms; } .ds-btn-primary { background: var(--accent, #0f3d30); color: var(--accent-ink, #ffffff); } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn:focus-visible { outline: 2px solid var(--focus, #13795b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The default button: a tray-white control with a control-sage rule.",
+      "html": "<button class=\"ds-btn2\">Sortieren</button>",
+      "css": ".ds-btn2 { display: inline-flex; align-items: center; height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid var(--line-strong, #8fa398); background: var(--panel, #ffffff); color: var(--ink, #1a1f1c); font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: background-color 150ms; } .ds-btn2:hover { background: var(--hover, #e4ebe5); } .ds-btn2:focus-visible { outline: 2px solid var(--focus, #13795b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Label-red outline for actions that lead to a death or deletion; the solid variant only performs the deletion.",
+      "html": "<button class=\"ds-btn-danger\">Als tot markieren</button>",
+      "css": ".ds-btn-danger { display: inline-flex; align-items: center; height: 40px; padding: 0 12px; border-radius: 6px; border: 1px solid var(--danger-line, #e3b4b0); background: var(--panel, #ffffff); color: var(--danger, #b3261e); font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: background-color 150ms; } .ds-btn-danger:hover { background: var(--danger-bg, #fbe9e7); } .ds-btn-danger:focus-visible { outline: 2px solid var(--focus, #13795b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Tray-white field with a control-sage border; height is a prop (40/44px).",
+      "html": "<label class=\"ds-label\" for=\"ds-nick\">Spitzname</label><input id=\"ds-nick\" class=\"ds-input\" placeholder=\"Optional\">",
+      "css": ".ds-label { display: block; margin-bottom: 4px; font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; color: var(--ink-muted, #46524b); } .ds-input { width: 100%; height: 44px; padding: 0 12px; border-radius: 6px; border: 1px solid var(--line-strong, #8fa398); background: var(--panel, #ffffff); color: var(--ink, #1a1f1c); font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.875rem; } .ds-input::placeholder { color: var(--ink-subtle, #5a665f); } .ds-input:focus-visible { outline: 2px solid var(--focus, #13795b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "nav-tab-active-rail",
+      "description": "The bottle-green side rail's tab list; the active tab is a pale label with green text.",
+      "html": "<nav class=\"ds-rail\"><a class=\"ds-tab ds-tab-active\" aria-current=\"page\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"12\" r=\"3\"/><circle cx=\"16\" cy=\"12\" r=\"3\"/><path d=\"M11 12h2\"/></svg>Team</a><a class=\"ds-tab\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\"><path d=\"M4 6h16M4 12h16M4 18h10\"/></svg>Encounter</a></nav>",
+      "css": ".ds-rail { display: flex; flex-direction: column; gap: 2px; width: 232px; padding: 12px; background: #0f3d30; } .ds-tab { display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 12px; border-radius: 6px; color: #dcebe1; font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background-color 150ms; } .ds-tab:hover { background: #1b5443; } .ds-tab-active { background: #dcebe1; color: #0f3d30; font-weight: 600; } .ds-tab-active:hover { background: #dcebe1; } .ds-tab:focus-visible { outline: 2px solid #9be3c0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge-neutral",
+      "description": "Small semantic tag; tones neutral, success, warning, danger, info.",
+      "html": "<span class=\"ds-badge\">Statisch</span> <span class=\"ds-badge ds-badge-success\">Gefangen</span> <span class=\"ds-badge ds-badge-danger\">Tot</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--line, #c9d6cd); background: var(--sunken, #e2e8e2); color: var(--ink-muted, #46524b); font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; } .ds-badge-success { border-color: var(--success-line, #8fc2a0); background: var(--success-bg, #e3f0e7); color: var(--success, #1e6b42); } .ds-badge-danger { border-color: var(--danger-line, #e3b4b0); background: var(--danger-bg, #fbe9e7); color: var(--danger, #b3261e); }"
+    },
+    {
+      "name": "Specimen Tray with Label",
+      "kind": "card",
+      "refersTo": "specimen-tray",
+      "description": "The signature: a white tray in the sage drawer with the double-ruled collection label under the pair.",
+      "html": "<div class=\"ds-drawer\"><div class=\"ds-tray\"><div class=\"ds-specimen\"><div class=\"ds-sprite\"></div><div class=\"ds-name\">Bisasam</div></div><div class=\"ds-slabel\"><div class=\"ds-row ds-row-strong\"><span>Nr. 004</span><span>Platz 3</span></div><div class=\"ds-row\"><span>Vertania Wald</span><span>Σ 318 → 525</span></div></div></div></div>",
+      "css": ".ds-drawer { padding: 10px; border-radius: 8px; border: 1px solid var(--line, #c9d6cd); background: var(--sunken, #e2e8e2); } .ds-tray { display: flex; flex-direction: column; gap: 16px; padding: 12px; border-radius: 4px; border: 1px solid var(--line, #c9d6cd); background: var(--panel, #ffffff); } .ds-specimen { display: flex; flex-direction: column; align-items: center; gap: 4px; } .ds-sprite { width: 64px; height: 64px; border-radius: 4px; background: var(--sunken, #e2e8e2); } .ds-name { font-family: 'Familjen Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 600; color: var(--ink, #1a1f1c); } .ds-slabel { margin: 3px; padding: 6px 8px; border: 1px solid var(--ink, #1a1f1c); outline: 1px solid var(--ink, #1a1f1c); outline-offset: 2px; background: var(--panel, #ffffff); color: var(--ink, #1a1f1c); font-family: 'Red Hat Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; font-size: 0.75rem; line-height: 1.625; } .ds-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; } .ds-row-strong { font-weight: 600; }"
+    },
+    {
+      "name": "Dead Specimen Label",
+      "kind": "custom",
+      "refersTo": "specimen-label",
+      "description": "The withdrawn-specimen label: heavy top rule instead of the double frame, for dead pairs and the Memorial.",
+      "html": "<div class=\"ds-dlabel\"><div class=\"ds-drow ds-drow-strong\"><span>Nr. 012</span><span>Rocko</span></div><div class=\"ds-drow\"><span>Route 3</span><span>Lv. 12</span></div></div>",
+      "css": ".ds-dlabel { padding: 6px 0; border-top: 4px solid var(--ink, #1a1f1c); border-bottom: 1px solid var(--ink, #1a1f1c); color: var(--ink, #1a1f1c); font-family: 'Red Hat Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; font-size: 0.75rem; line-height: 1.625; } .ds-drow { display: flex; justify-content: space-between; gap: 12px; } .ds-drow-strong { font-weight: 600; }"
+    },
+    {
+      "name": "Route Tray",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Encounter-tab route tray: outcome-tinted header strip with mono catalogue number, hairline-divided player columns.",
+      "html": "<div class=\"ds-route\"><div class=\"ds-route-head\"><span class=\"ds-route-no\">017</span><span class=\"ds-route-name\">Route 22</span><span class=\"ds-route-out\">Gefangen</span></div><div class=\"ds-route-cols\"><div class=\"ds-route-col\">Spieler 1</div><div class=\"ds-route-col\">Spieler 2</div></div></div>",
+      "css": ".ds-route { overflow: hidden; border-radius: 6px; border: 1px solid var(--line, #c9d6cd); background: var(--panel, #ffffff); font-family: 'Familjen Grotesk', system-ui, sans-serif; } .ds-route-head { display: flex; align-items: baseline; gap: 10px; padding: 8px 16px; background: var(--success-bg, #e3f0e7); } .ds-route-no { font-family: 'Red Hat Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; font-size: 0.75rem; font-weight: 600; color: var(--ink-muted, #46524b); } .ds-route-name { font-weight: 600; color: var(--ink, #1a1f1c); } .ds-route-out { margin-left: auto; font-size: 0.75rem; font-weight: 600; color: var(--success, #1e6b42); } .ds-route-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line, #c9d6cd); } .ds-route-col { padding: 12px 16px; background: var(--panel, #ffffff); font-size: 0.75rem; font-weight: 600; color: var(--ink-muted, #46524b); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Naturkunde-Sammlung",
+    "overview": "Every catch is a specimen and the run is the collection. A bottle-green shell carries the navigation like the painted frame of a museum cabinet; inside it, a cool sage ground holds white specimen trays drawn with hairline sage rules and nearly square corners. Under each specimen sits its collection label: a double-ruled box of small monospaced data - catalogue number, locality (the route), collectors (the players), base-stat total. The world is quiet and archival so that the two things that must shout can: the label red of a death, and the green of a route that is complete.\n\nThe interface is dense on purpose. Players read it between battles on a phone beside the console and as a second screen during a call, so the system favours many small, legible facts over large decorative surfaces. Hierarchy comes from the tray, the label and the type weight, not from colour fields or shadows. Both themes and the shell are one palette expressed three ways: daylight sage, a deep green-black night, and the green field that never changes.\n\nThe build refuses the category default it was set against: a dark zinc dashboard of identical rounded cards with pastel type pills.",
+    "keyCharacteristics": [
+      "Bottle-green shell (side rail from `lg`, top bar plus sticky tab strip on a phone), identical in both themes.",
+      "White trays on a sage ground, separated by 1px sage hairlines; tray corners 4px, controls 6px.",
+      "The double-ruled specimen label as the signature, set in Red Hat Mono with tabular figures.",
+      "Familjen Grotesk for everything you read and press; Red Hat Mono only for data and figures.",
+      "Flat at rest: depth is the drawer under the trays, shadows exist only on things that float.",
+      "Red means death or danger and nothing else."
+    ],
+    "rules": [
+      { "name": "The Label Red Rule", "body": "Red marks death or danger and nothing else. A route that is lost, a pair that died, a button that deletes. Never use it for emphasis, counts or decoration.", "section": "colors" },
+      { "name": "The Text Token Rule", "body": "`--success`, `--warning`, `--danger` and `--info` are text colours (pastels in dark mode). Fill a bar, switch or cell with the `*-solid` or `--eff-*` steps; a chalky fill means the text token was used.", "section": "colors" },
+      { "name": "The Shell Scope Rule", "body": "Shell components use the ordinary tokens; the `.shell` scope re-points them. Never give a component a shell-specific colour variant, and wrap anything that pops out of the shell in `.unshell`.", "section": "colors" },
+      { "name": "The Never Lighten Rule", "body": "The ink greys and the focus colours are tuned to WCAG 2.2 AA (4.5:1 text, 3:1 focus) on the ground, the tray and the drawer. Do not lighten them.", "section": "colors" },
+      { "name": "The Mono Means Data Rule", "body": "Red Hat Mono is for numbers and catalogue data - catalogue and route numbers, BST, level caps, label rows. Prose, names and buttons stay in Familjen Grotesk.", "section": "typography" },
+      { "name": "The Token Size Rule", "body": "Sizes come from the Tailwind scale (`text-xs` to `text-4xl`); arbitrary `text-[Npx]` is forbidden by test. The user's UI-scale setting changes the root font size, so everything is sized in `rem`.", "section": "typography" },
+      { "name": "The Drawer Not Shadow Rule", "body": "Trays, cards and labels never carry a shadow. If something needs to stand out at rest, it gets a tone step or a rule, not elevation.", "section": "elevation" },
+      { "name": "The Finite Motion Rule", "body": "Every decorative animation ends by itself and honours `prefers-reduced-motion` (WCAG 2.2.2). Only a pending spinner may loop.", "section": "components" },
+      { "name": "The Fade The Picture Rule", "body": "A dimmed state (defeated, locked, dead) fades only the sprite or icon, uses ink muted for text and says the state in words. Never put opacity on a block that contains text.", "section": "components" }
+    ],
+    "dos": [
+      "**Do** reach for a token (`bg-panel`, `border-line`, `text-ink-muted`) first; a call site that needs its own colours means a primitive is missing a variant.",
+      "**Do** build with the primitives: `Button`, `Card`, `Badge`, `Input`/`Select`/`Textarea`/`FieldLabel`, `Modal`, `Spinner`, `ToastProvider`, `PageHeader`/`Section`/`EmptyState`, `SpecimenLabel`.",
+      "**Do** put a catch's catalogue data in a `SpecimenLabel` (dead variant for the dead and the Memorial), set in Red Hat Mono with tabular figures.",
+      "**Do** separate trays and columns with 1px sage hairlines and tone steps (ground → drawer → tray).",
+      "**Do** keep every touch target at 40px or more (44px for primary and destructive actions).",
+      "**Do** give each state colour one meaning: green caught/progress, amber missing, red death/danger, violet Blindflug.",
+      "**Do** wrap any dropdown or dialog opened from the shell in `.unshell`.",
+      "**Do** name every control (`useId` + `htmlFor` or `aria-label`, with context for repeated fields) and spread `useDropdown().triggerProps` on dropdown triggers.",
+      "**Do** fill bars, switches and cells with `*-solid` or `--eff-*` steps, and type chips with `typeChipStyle()`."
+    ],
+    "donts": [
+      "**Don't** use raw Tailwind palette classes (`bg-zinc-200`, `text-red-500`) or arbitrary `text-[Npx]` - both fail `uiConventions.test.ts`.",
+      "**Don't** add a second modal, a second click-outside handler, an `<input type=\"number\">`, `outline-none` without a ring, or a page-title-sized `<h2>`.",
+      "**Don't** nest two Modals; confirm inline inside a dialog.",
+      "**Don't** use label red for anything that is not death or danger.",
+      "**Don't** put shadows on trays, cards or labels; shadows belong to dropdowns, toasts and the Modal.",
+      "**Don't** round trays beyond 4px or controls beyond 6px, and don't turn cards into pills.",
+      "**Don't** use emoji or glyph characters as icons; draw line SVGs in the `NavIcon` idiom.",
+      "**Don't** put `text-white` on a type colour or a text-state token on a fill.",
+      "**Don't** lighten the ink greys or the focus colours.",
+      "**Don't** add uppercase, letter-spaced kicker lines above headings; a heading stands on its own.",
+      "**Don't** use Pokémon or Poké Ball imagery in the logo or any shipped artwork."
+    ]
+  }
+}

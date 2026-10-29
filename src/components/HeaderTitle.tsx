@@ -25,12 +25,12 @@ export function HeaderTitle() {
           width={32}
           height={32}
           onError={() => setLogoFailed(true)}
-          className="h-7 w-7 shrink-0 rounded-md sm:h-8 sm:w-8"
+          className="h-8 w-8 shrink-0 rounded-md"
         />
       )}
       {/* Deliberately not an <h1>: the app name is chrome, repeated on every
           page. The page title carries the <h1> (see ui/Page.tsx PageHeader). */}
-      <p className="truncate text-base font-semibold text-ink sm:text-lg">
+      <p className="truncate text-xl font-bold tracking-tight text-ink lg:text-2xl">
         <span className="sm:hidden">{t.titleShort}</span>
         <span className="hidden sm:inline">{t.titleFull}</span>
       </p>

@@ -9,8 +9,13 @@ export const LANG_COOKIE = "lang";
 
 const de = {
   header: {
-    titleShort: "SoulLink Tracker",
-    titleFull: "SoulLink Nuzlocke Tracker",
+    titleShort: "Lockstep",
+    titleFull: "Lockstep",
+    // The shell's next-level-cap card (NextCapCard).
+    nextCap: "Nächster Level-Cap",
+    badges: (earned: number, total: number) => `${earned} von ${total} Orden`,
+    allCapsDone: "Alle Level-Caps geschafft",
+    capShort: "Cap",
   },
   nav: {
     tracker: "Encounter",
@@ -155,9 +160,7 @@ const de = {
     create: "Erstellen",
     confirmDelete1: (name: string) =>
       `Run "${name}" wirklich löschen? Alle Encounters, Links und der Level-Cap-Fortschritt dieses Runs gehen unwiderruflich verloren.`,
-    soloSuffix: " (Solo)",
     playersLabel: "Spieler",
-    playersSuffix: (n: number) => ` (${n} Spieler)`,
   },
   player: {
     PLAYER1: "Spieler 1",
@@ -217,6 +220,11 @@ const de = {
     openOnly: "Nur offene",
     openOnlyTitle: "Nur Routen ohne vollständigen Eintrag anzeigen",
     missingPlayer: "Encounter fehlt noch für mindestens einen Spieler",
+    // The route label's outcome, in words beside its colour.
+    statusOpen: "offen",
+    statusMissing: "Eintrag fehlt",
+    statusCaught: "gefangen",
+    statusLost: "verloren",
     clear: "Leeren",
     clearConfirm: "Diesen Encounter wirklich löschen?",
     nicknamePlaceholder: "Spitzname",
@@ -284,8 +292,17 @@ const de = {
     sortSummeMax: "Max BST",
     filterEvolvable: "Entwickelbar",
     filterEvolvableTitle: "Nur Pokémon mit jetzt möglicher Level-Entwicklung anzeigen",
-    hideTeam: "Team ausblenden",
-    hideTeamTitle: "Pokémon im Team ausblenden",
+    // The Team tab's side column: what is caught but not on the team.
+    boxHeading: "Box",
+    // The specimen label under every pair: catalogue number and team slot.
+    labelNumber: (n: string) => `Nr. ${n}`,
+    labelSlot: (n: number) => `Platz ${n}`,
+    // "leg." is the collection label's own abbreviation (legit, Latin for
+    // "collected") and the same in every language; the title spells it out.
+    labelCollectors: (names: string) => `leg. ${names}`,
+    collectedBy: "gefangen von",
+    evolveReady: (names: string) => `${names} jetzt möglich`,
+    summary: (team: number, box: number, dead: number) => `${team} im Team · ${box} in der Box · ${dead} tot`,
     filterTypes: "Typen",
     filterTypesTitle: "Nach Typ filtern",
     filterTypesClear: "Zurücksetzen",
@@ -749,8 +766,13 @@ export type Dictionary = typeof de;
 
 const en: Dictionary = {
   header: {
-    titleShort: "SoulLink Tracker",
-    titleFull: "SoulLink Nuzlocke Tracker",
+    titleShort: "Lockstep",
+    titleFull: "Lockstep",
+    // The shell's next-level-cap card (NextCapCard).
+    nextCap: "Next level cap",
+    badges: (earned: number, total: number) => `${earned} of ${total} badges`,
+    allCapsDone: "Every level cap done",
+    capShort: "Cap",
   },
   nav: {
     tracker: "Encounter",
@@ -894,9 +916,7 @@ const en: Dictionary = {
     create: "Create",
     confirmDelete1: (name: string) =>
       `Really delete run "${name}"? All encounters, links, and level cap progress for this run will be lost permanently.`,
-    soloSuffix: " (Solo)",
     playersLabel: "Players",
-    playersSuffix: (n: number) => ` (${n} players)`,
   },
   player: {
     PLAYER1: "Player 1",
@@ -956,6 +976,11 @@ const en: Dictionary = {
     openOnly: "Open only",
     openOnlyTitle: "Show only routes without a complete entry",
     missingPlayer: "Encounter still missing for at least one player",
+    // The route label's outcome, in words beside its colour.
+    statusOpen: "open",
+    statusMissing: "entry missing",
+    statusCaught: "caught",
+    statusLost: "lost",
     clear: "Clear",
     clearConfirm: "Really delete this encounter?",
     nicknamePlaceholder: "Nickname",
@@ -1023,8 +1048,17 @@ const en: Dictionary = {
     sortSummeMax: "Max BST",
     filterEvolvable: "Evolvable",
     filterEvolvableTitle: "Show only Pokémon with a level evolution available now",
-    hideTeam: "Hide team",
-    hideTeamTitle: "Hide Pokémon that are on the team",
+    // The Team tab's side column: what is caught but not on the team.
+    boxHeading: "Box",
+    // The specimen label under every pair: catalogue number and team slot.
+    labelNumber: (n: string) => `No. ${n}`,
+    labelSlot: (n: number) => `Slot ${n}`,
+    // "leg." is the collection label's own abbreviation (legit, Latin for
+    // "collected") and the same in every language; the title spells it out.
+    labelCollectors: (names: string) => `leg. ${names}`,
+    collectedBy: "caught by",
+    evolveReady: (names: string) => `${names} possible now`,
+    summary: (team: number, box: number, dead: number) => `${team} on the team · ${box} in the box · ${dead} dead`,
     filterTypes: "Types",
     filterTypesTitle: "Filter by type",
     filterTypesClear: "Reset",
@@ -1479,8 +1513,13 @@ const en: Dictionary = {
 
 const fr: Dictionary = {
   header: {
-    titleShort: "SoulLink Tracker",
-    titleFull: "SoulLink Nuzlocke Tracker",
+    titleShort: "Lockstep",
+    titleFull: "Lockstep",
+    // The shell's next-level-cap card (NextCapCard).
+    nextCap: "Prochain plafond de niveau",
+    badges: (earned: number, total: number) => `${earned} badges sur ${total}`,
+    allCapsDone: "Tous les plafonds atteints",
+    capShort: "Max.",
   },
   nav: {
     tracker: "Rencontres",
@@ -1625,9 +1664,7 @@ const fr: Dictionary = {
     create: "Créer",
     confirmDelete1: (name: string) =>
       `Vraiment supprimer le run « ${name} » ? Toutes les rencontres, tous les liens et la progression des level caps de ce run seront définitivement perdus.`,
-    soloSuffix: " (Solo)",
     playersLabel: "Joueurs",
-    playersSuffix: (n: number) => ` (${n} joueurs)`,
   },
   player: {
     PLAYER1: "Joueur 1",
@@ -1689,6 +1726,11 @@ const fr: Dictionary = {
     openOnly: "Ouvertes",
     openOnlyTitle: "N'afficher que les routes sans entrée complète",
     missingPlayer: "Rencontre encore manquante pour au moins un joueur",
+    // The route label's outcome, in words beside its colour.
+    statusOpen: "ouvert",
+    statusMissing: "entrée manquante",
+    statusCaught: "capturé",
+    statusLost: "perdu",
     clear: "Vider",
     clearConfirm: "Vraiment supprimer cette rencontre ?",
     nicknamePlaceholder: "Surnom",
@@ -1758,8 +1800,17 @@ const fr: Dictionary = {
     filterEvolvable: "Évolution possible",
     filterEvolvableTitle:
       "N'afficher que les Pokémon avec une évolution par niveau possible maintenant",
-    hideTeam: "Masquer l'équipe",
-    hideTeamTitle: "Masquer les Pokémon de l'équipe",
+    // The Team tab's side column: what is caught but not on the team.
+    boxHeading: "Boîte",
+    // The specimen label under every pair: catalogue number and team slot.
+    labelNumber: (n: string) => `N° ${n}`,
+    labelSlot: (n: number) => `Place ${n}`,
+    // "leg." is the collection label's own abbreviation (legit, Latin for
+    // "collected") and the same in every language; the title spells it out.
+    labelCollectors: (names: string) => `leg. ${names}`,
+    collectedBy: "capturé par",
+    evolveReady: (names: string) => `${names} possible maintenant`,
+    summary: (team: number, box: number, dead: number) => `${team} dans l'équipe · ${box} dans la boîte · ${dead} mort(s)`,
     filterTypes: "Types",
     filterTypesTitle: "Filtrer par type",
     filterTypesClear: "Réinitialiser",
@@ -2216,8 +2267,13 @@ const fr: Dictionary = {
 
 const es: Dictionary = {
   header: {
-    titleShort: "SoulLink Tracker",
-    titleFull: "SoulLink Nuzlocke Tracker",
+    titleShort: "Lockstep",
+    titleFull: "Lockstep",
+    // The shell's next-level-cap card (NextCapCard).
+    nextCap: "Próximo tope de nivel",
+    badges: (earned: number, total: number) => `${earned} de ${total} medallas`,
+    allCapsDone: "Todos los topes superados",
+    capShort: "Tope",
   },
   nav: {
     tracker: "Encuentros",
@@ -2361,9 +2417,7 @@ const es: Dictionary = {
     create: "Crear",
     confirmDelete1: (name: string) =>
       `¿Eliminar de verdad el run "${name}"? Todos los encuentros, enlaces y el progreso de level caps de este run se perderán para siempre.`,
-    soloSuffix: " (Solo)",
     playersLabel: "Jugadores",
-    playersSuffix: (n: number) => ` (${n} jugadores)`,
   },
   player: {
     PLAYER1: "Jugador 1",
@@ -2425,6 +2479,11 @@ const es: Dictionary = {
     openOnly: "Solo abiertas",
     openOnlyTitle: "Mostrar solo rutas sin entrada completa",
     missingPlayer: "Aún falta el encuentro de al menos un jugador",
+    // The route label's outcome, in words beside its colour.
+    statusOpen: "abierta",
+    statusMissing: "falta entrada",
+    statusCaught: "capturado",
+    statusLost: "perdido",
     clear: "Vaciar",
     clearConfirm: "¿Eliminar este encuentro?",
     nicknamePlaceholder: "Mote",
@@ -2494,8 +2553,17 @@ const es: Dictionary = {
     filterEvolvable: "Evolucionable",
     filterEvolvableTitle:
       "Mostrar solo Pokémon con evolución por nivel disponible ahora",
-    hideTeam: "Ocultar equipo",
-    hideTeamTitle: "Ocultar los Pokémon del equipo",
+    // The Team tab's side column: what is caught but not on the team.
+    boxHeading: "Caja",
+    // The specimen label under every pair: catalogue number and team slot.
+    labelNumber: (n: string) => `N.º ${n}`,
+    labelSlot: (n: number) => `Puesto ${n}`,
+    // "leg." is the collection label's own abbreviation (legit, Latin for
+    // "collected") and the same in every language; the title spells it out.
+    labelCollectors: (names: string) => `leg. ${names}`,
+    collectedBy: "capturado por",
+    evolveReady: (names: string) => `${names} posible ahora`,
+    summary: (team: number, box: number, dead: number) => `${team} en el equipo · ${box} en la caja · ${dead} muertos`,
     filterTypes: "Tipos",
     filterTypesTitle: "Filtrar por tipo",
     filterTypesClear: "Restablecer",
@@ -2952,8 +3020,13 @@ const es: Dictionary = {
 
 const it: Dictionary = {
   header: {
-    titleShort: "SoulLink Tracker",
-    titleFull: "SoulLink Nuzlocke Tracker",
+    titleShort: "Lockstep",
+    titleFull: "Lockstep",
+    // The shell's next-level-cap card (NextCapCard).
+    nextCap: "Prossimo tetto di livello",
+    badges: (earned: number, total: number) => `${earned} medaglie su ${total}`,
+    allCapsDone: "Tutti i tetti superati",
+    capShort: "Tetto",
   },
   nav: {
     tracker: "Incontri",
@@ -3097,9 +3170,7 @@ const it: Dictionary = {
     create: "Crea",
     confirmDelete1: (name: string) =>
       `Eliminare davvero il run "${name}"? Tutti gli incontri, i link e i progressi dei level cap di questo run andranno persi per sempre.`,
-    soloSuffix: " (Solo)",
     playersLabel: "Giocatori",
-    playersSuffix: (n: number) => ` (${n} giocatori)`,
   },
   player: {
     PLAYER1: "Giocatore 1",
@@ -3161,6 +3232,11 @@ const it: Dictionary = {
     openOnly: "Solo aperti",
     openOnlyTitle: "Mostra solo i percorsi senza voce completa",
     missingPlayer: "Manca ancora l'incontro di almeno un giocatore",
+    // The route label's outcome, in words beside its colour.
+    statusOpen: "aperta",
+    statusMissing: "manca voce",
+    statusCaught: "catturato",
+    statusLost: "perso",
     clear: "Svuota",
     clearConfirm: "Eliminare davvero questo incontro?",
     nicknamePlaceholder: "Soprannome",
@@ -3230,8 +3306,17 @@ const it: Dictionary = {
     filterEvolvable: "Evolvibile",
     filterEvolvableTitle:
       "Mostra solo i Pokémon con un'evoluzione di livello disponibile ora",
-    hideTeam: "Nascondi squadra",
-    hideTeamTitle: "Nascondi i Pokémon in squadra",
+    // The Team tab's side column: what is caught but not on the team.
+    boxHeading: "Box",
+    // The specimen label under every pair: catalogue number and team slot.
+    labelNumber: (n: string) => `N. ${n}`,
+    labelSlot: (n: number) => `Posto ${n}`,
+    // "leg." is the collection label's own abbreviation (legit, Latin for
+    // "collected") and the same in every language; the title spells it out.
+    labelCollectors: (names: string) => `leg. ${names}`,
+    collectedBy: "catturato da",
+    evolveReady: (names: string) => `${names} possibile ora`,
+    summary: (team: number, box: number, dead: number) => `${team} in squadra · ${box} nel box · ${dead} morti`,
     filterTypes: "Tipi",
     filterTypesTitle: "Filtra per tipo",
     filterTypesClear: "Reimposta",

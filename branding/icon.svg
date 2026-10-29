@@ -1,31 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Two interlocking rings: the SoulLink metaphor (two players, one linked
-       fate). Deliberately abstract - no Pokemon or Poke Ball imagery, since
-       the repo and the public Docker image must stay free of copyrighted
-       artwork. Also the app's favicon: Next serves app/icon.svg directly, and
-       scripts/generate-icons.mjs rasterises this same file into the PNG sizes
-       the manifest and iOS need, so there is one source of truth.
+  <!-- Lockstep's mark: a collection label - the double-ruled frame a museum
+       puts under a specimen - holding two linked dots, the two catches of one
+       route that live and die together. It is the redesign's signature
+       element (globals.css .specimen-label) drawn as a logo. Deliberately
+       abstract - no Pokemon or Poke Ball imagery, since the repo and the
+       public Docker image must stay free of copyrighted artwork.
+
+       Also the favicon and the rail's logo (HeaderTitle loads /icons/icon.svg):
+       scripts/generate-icons.mjs rasterises this file into the PNG sizes the
+       manifest and iOS need, so there is one source of truth. The tile is the
+       shell green (#0f3d30), the same colour the generator uses behind the
+       maskable and Apple insets, so Android's crop shows no seam - and on the
+       green rail itself only the pale mark is visible.
 
        Rendered by librsvg (via sharp), not a browser: SVG 1.1 presentation
-       attributes only - no CSS, no text, no filters, no currentColor.
-
-       Geometry is chosen so the union bounding box is square and centred:
-       r=130 + half-stroke 24 = 154 reach; centres offset +-47 along the
-       /-diagonal put the box at 55..457 on both axes.
-       The rings cross at (176.8, 176.8) and (335.2, 335.2). Drawing order is
-       sky, amber, then sky again clipped to the x+y<512 half-plane, so sky
-       passes OVER amber at the upper-left crossing and UNDER it at the lower
-       right - a real weave rather than one ring simply on top. The clip edge
-       meets the sky ring at two points that are both clear of the amber
-       stroke, so it leaves no visible seam. -->
-  <defs>
-    <clipPath id="upperLeft">
-      <polygon points="0,0 512,0 0,512" />
-    </clipPath>
-  </defs>
-  <g fill="none" stroke-width="48">
-    <circle cx="209" cy="303" r="130" stroke="#0ea5e9" />
-    <circle cx="303" cy="209" r="130" stroke="#f59e0b" />
-    <circle cx="209" cy="303" r="130" stroke="#0ea5e9" clip-path="url(#upperLeft)" />
-  </g>
+       attributes only - no CSS, no text, no filters, no currentColor. -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="#0f3d30" />
+  <rect x="72" y="150" width="368" height="212" rx="20" fill="none" stroke="#dcebe1" stroke-width="26" />
+  <rect x="104" y="182" width="304" height="148" rx="6" fill="none" stroke="#dcebe1" stroke-width="8" />
+  <rect x="190" y="244" width="132" height="24" fill="#ffffff" />
+  <circle cx="190" cy="256" r="44" fill="#ffffff" />
+  <circle cx="322" cy="256" r="44" fill="#ffffff" />
 </svg>

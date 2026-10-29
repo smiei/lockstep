@@ -4,7 +4,8 @@ import { useState, useTransition } from "react";
 import { useDropdown } from "@/lib/useDropdown";
 import { useRouter } from "next/navigation";
 import type { Pokemon } from "@/lib/data";
-import type { SoulLinkView, FusableEncounter } from "@/lib/types";
+import type { EncounterView, SoulLinkView, FusableEncounter } from "@/lib/types";
+import { formatCatalogueNumber } from "@/lib/routeNumbers";
 import { LinkStatus, Player, RunMode } from "@/generated/prisma/enums";
 import { markDead, markAlive, unfuseEncounter, swapFusion } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
@@ -25,8 +26,9 @@ import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { usePersistentState } from "@/lib/usePersistentState";
 import { useToast } from "@/components/ui/ToastProvider";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { Input, Select } from "@/components/ui/Input";
+import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
+import { ChevronDownIcon } from "@/components/ActionIcons";
 import { EmptyState } from "@/components/ui/Page";
 import { FreeTeamDialog } from "@/components/FreeTeamDialog";
 
@@ -71,7 +73,6 @@ export function LinksView({
     null,
   );
   const [evolvableOnly, setEvolvableOnly] = useState(false);
-  const [hideTeam, setHideTeam] = useState(false);
   const [typeFilter, setTypeFilter] = useState<string[]>([]);
   const {
     open: typeMenuOpen,
@@ -83,10 +84,18 @@ export function LinksView({
   const t = translations[lang];
   const isClassic = mode === RunMode.CLASSIC;
 
-  // Only offer types that actually occur in this run's Pokémon, in canonical
+  // The team lives in the drawer (TeamBar), with all of its controls; the side
+  // column is the rest of the collection - the Box (caught, alive, off the
+  // team) and the Memorial. That is what the old "hide team" toggle did by
+  // hand, so the toggle is gone: the list never repeats the team any more.
+  const collectionLinks = soulLinks.filter(
+    (l) => l.status === LinkStatus.DEAD || l.teamPosition === null,
+  );
+
+  // Only offer types that actually occur in the listed Pokémon, in canonical
   // chart order.
   const availableTypes = GEN3_TYPES.filter((type) =>
-    soulLinks.some((l) => l.encounters.some((e) => e.types.includes(type))),
+    collectionLinks.some((l) => l.encounters.some((e) => e.types.includes(type))),
   );
 
   function toggleType(type: string) {
@@ -110,7 +119,7 @@ export function LinksView({
 
   // Dead links always sink to the end; within alive/dead groups the chosen
   // sort applies (server order already has dead last for the default sort).
-  const sortedLinks = [...soulLinks].sort(
+  const sortedLinks = [...collectionLinks].sort(
     (a, b) =>
       Number(a.status === LinkStatus.DEAD) - Number(b.status === LinkStatus.DEAD) ||
       (sortMode === "summe"
@@ -131,7 +140,6 @@ export function LinksView({
       )
     )
       return false;
-    if (hideTeam && link.teamPosition !== null && link.status !== LinkStatus.DEAD) return false;
     // Type filter (OR): keep the link if any of its Pokémon has a selected type.
     if (
       typeFilter.length > 0 &&
@@ -141,11 +149,12 @@ export function LinksView({
     return true;
   });
 
-  const filtersActive = evolvableOnly || hideTeam || typeFilter.length > 0;
+  const filtersActive = evolvableOnly || typeFilter.length > 0;
+  const boxLinks = visibleLinks.filter((l) => l.status !== LinkStatus.DEAD);
+  const deadLinks = visibleLinks.filter((l) => l.status === LinkStatus.DEAD);
 
   function resetFilters() {
     setEvolvableOnly(false);
-    setHideTeam(false);
     setTypeFilter([]);
   }
 
@@ -209,6 +218,244 @@ export function LinksView({
     />
   ) : null;
 
+  // Per-Pokémon controls - evolve, forme, revert, and Infinite Fusion's fuse/
+  // swap/split - shared by the drawer's trays (handed to TeamBar) and the Box
+  // entries, so a Pokémon has the same buttons wherever it sits. `compact` is
+  // the drawer's: two specimens share a tray, so the row is centred under its
+  // specimen and the buttons are narrower (still 40px tall).
+  function encounterControls(e: EncounterView, isDead: boolean, compact = false) {
+    return (
+      <>
+        {!isDead && (
+          <div className={`mt-1 flex flex-wrap gap-1.5 ${compact ? "justify-center" : ""}`}>
+            <EvolveButton
+              runKey={runKey}
+              lang={lang}
+              encounterId={e.id}
+              targets={e.evolvesTo}
+              compact={compact}
+            />
+            <FormPicker
+              runKey={runKey}
+              lang={lang}
+              encounterId={e.id}
+              currentId={e.pokemonId}
+              options={e.formOptions}
+            />
+            {e.evolvesFrom && (
+              <RevertButton runKey={runKey} lang={lang} encounterId={e.id} compact={compact} />
+            )}
+            {fusionEnabled && !e.body && (
+              <Button
+                size="sm"
+                onClick={() => setFuseHost({ id: e.id, pokemonId: e.pokemonId, player: e.player })}
+              >
+                {t.links.fuse}
+              </Button>
+            )}
+            {fusionEnabled && e.body && (
+              <>
+                <Button
+                  size="sm"
+                  disabled={pendingId === e.id}
+                  title={t.links.swapTitle}
+                  onClick={() => handleSwap(e.id)}
+                >
+                  {t.links.swap}
+                </Button>
+                <Button
+                  size="sm"
+                  variant="danger"
+                  disabled={pendingId === e.id}
+                  onClick={() => handleUnfuse(e.id)}
+                >
+                  {t.links.unfuse}
+                </Button>
+              </>
+            )}
+          </div>
+        )}
+        {e.body && (
+          <div className="mt-2 w-full rounded-md border border-line-strong bg-sunken p-2 text-left">
+            <p className="mb-1 flex items-center gap-1 text-xs font-medium text-ink-muted">
+              {t.links.bodyLabel}: {e.body.pokemonName} · {e.body.routeName}
+              <span className="origin-left scale-[0.6]">
+                <PokemonInfoButton pokemonId={e.body.pokemonId} label={e.body.pokemonName} />
+              </span>
+            </p>
+            {!isDead && (
+              <div className="flex flex-wrap gap-1.5">
+                <EvolveButton
+                  runKey={runKey}
+                  lang={lang}
+                  encounterId={e.body.encounterId}
+                  targets={e.body.evolvesTo}
+                />
+                <FormPicker
+                  runKey={runKey}
+                  lang={lang}
+                  encounterId={e.body.encounterId}
+                  currentId={e.body.pokemonId}
+                  options={e.body.formOptions}
+                />
+                {e.body.evolvesFrom && (
+                  <RevertButton runKey={runKey} lang={lang} encounterId={e.body.encounterId} />
+                )}
+              </div>
+            )}
+          </div>
+        )}
+      </>
+    );
+  }
+
+
+  // One Box or Memorial entry: the group's Pokémon in compact rows, its label,
+  // and what can be done with it from here.
+  function collectionEntry(link: SoulLinkView) {
+    const isDead = link.status === LinkStatus.DEAD;
+    const summe = totalSumme(link);
+    const summeMax = totalSummeMax(link);
+    const number =
+      link.routeNumber !== null ? t.links.labelNumber(formatCatalogueNumber(link.routeNumber)) : null;
+    // Same collectors row as the drawer's labels, in the entries' order.
+    const collectorsRow = (
+      <LabelRow
+        left={
+          <span title={t.links.collectedBy}>
+            {t.links.labelCollectors(
+              [...new Set(link.encounters.map((e) => playerLabel(e.player)))].join(" · "),
+            )}
+          </span>
+        }
+      />
+    );
+    return (
+      <div key={link.id} className="flex min-w-0 flex-col rounded-sm border border-line bg-panel p-3">
+        {/* One dense row per Pokémon, controls beside it (compact). */}
+        <div className="flex flex-col gap-2.5">
+          {link.encounters.map((e) => (
+            <EncounterTile
+              key={e.id}
+              encounter={e}
+              isDead={isDead}
+              isClassic={isClassic}
+              showRoute={link.linkIds.length > 1}
+              variant="compact"
+              lang={lang}
+            >
+              {encounterControls(e, isDead, true)}
+            </EncounterTile>
+          ))}
+        </div>
+
+        <div className="mt-auto pt-3">
+          {isDead ? (
+            <SpecimenLabel dead>
+              <LabelRow strong left={number ?? link.routeName} right={t.links.dead} />
+              {number && <LabelRow left={link.routeName} right={`Σ ${summe}`} />}
+              {collectorsRow}
+              {(link.deathPlayer || link.deathCause) && (
+                <p className="font-medium text-danger">
+                  {link.deathPlayer && t.links.deadBy(playerLabel(link.deathPlayer))}
+                  {link.deathPlayer && link.deathCause ? " · " : ""}
+                  {link.deathCause}
+                </p>
+              )}
+            </SpecimenLabel>
+          ) : (
+            <SpecimenLabel>
+              {number && <LabelRow strong left={number} />}
+              <LabelRow
+                left={link.routeName}
+                right={summeMax > summe ? `Σ ${summe} → ${summeMax}` : `Σ ${summe}`}
+              />
+              {collectorsRow}
+            </SpecimenLabel>
+          )}
+        </div>
+
+        {/* Mark-dead menu: optional cause + (SoulLink) who lost their mon. */}
+        {!isDead && deadMenuId === link.id && (
+          <div className="mt-3 rounded-md border border-danger-line bg-danger-bg p-2">
+            <Input
+              size="sm"
+              type="text"
+              value={deadCause}
+              onChange={(e) => setDeadCause(e.target.value)}
+              maxLength={80}
+              placeholder={t.links.deathCausePlaceholder}
+              aria-label={t.links.deathCausePlaceholder}
+              className="mb-2"
+            />
+            {isClassic ? (
+              <Button
+                size="sm"
+                variant="danger"
+                loading={pendingId === link.id}
+                onClick={() => handleMarkDead(link.id)}
+              >
+                {t.links.markDead}
+              </Button>
+            ) : (
+              <>
+                <p className="mb-1.5 text-xs font-medium text-ink-muted">{t.links.whoLost}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {players.map((p) => (
+                    <Button
+                      key={p}
+                      size="sm"
+                      variant="danger"
+                      disabled={pendingId === link.id}
+                      onClick={() => handleMarkDead(link.id, p)}
+                    >
+                      {playerLabel(p)}
+                    </Button>
+                  ))}
+                  {/* No blame: deathPlayer stays null (counts as unattributed). */}
+                  <Button
+                    size="sm"
+                    disabled={pendingId === link.id}
+                    onClick={() => handleMarkDead(link.id)}
+                  >
+                    {t.links.noAttribution}
+                  </Button>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
+        <div className="mt-3 flex flex-wrap gap-2">
+          {isDead ? (
+            <Button
+              size="sm"
+              loading={pendingId === link.id}
+              onClick={() => handleMarkAlive(link.id)}
+            >
+              {t.links.revive}
+            </Button>
+          ) : (
+            <>
+              <AddToTeamButton runKey={runKey} lang={lang} linkId={link.id} teamLinks={teamLinks} />
+              <Button
+                size="sm"
+                variant="danger"
+                disabled={pendingId === link.id}
+                aria-expanded={deadMenuId === link.id}
+                onClick={() => {
+                  setDeadCause("");
+                  setDeadMenuId(deadMenuId === link.id ? null : link.id);
+                }}
+              >
+                {t.links.markDead}
+              </Button>
+            </>
+          )}
+        </div>
+      </div>
+    );
+  }
   if (soulLinks.length === 0) {
     // A free-team run starts here every time, so the way to add the first
     // member has to be reachable from the empty state itself.
@@ -239,326 +486,145 @@ export function LinksView({
           customSpritesOnly={customSpritesOnly}
         />
       )}
-      <TeamBar runKey={runKey} mode={mode} players={players} lang={lang} links={soulLinks} />
-      <div className="mb-6 flex flex-wrap items-center gap-2">
-        <label htmlFor="links-sort" className="text-sm font-medium text-ink-muted">
-          {t.links.sortLabel}
-        </label>
-        {/* Select is w-full of its box, so the width is set here rather than
-            through className - `cn` is a plain join and cannot drop w-full. */}
-        <div className="w-44">
-          <Select
-            id="links-sort"
-            size="sm"
-            value={sortMode}
-            onChange={(e) => setSortMode(e.target.value as SortMode)}
-          >
-            <option value="default">{t.links.sortDefault}</option>
-            <option value="summe">{t.links.sortSumme}</option>
-            <option value="summeMax">{t.links.sortSummeMax}</option>
-          </Select>
-        </div>
-        <Button
-          size="sm"
-          variant={evolvableOnly ? "primary" : "secondary"}
-          aria-pressed={evolvableOnly}
-          title={t.links.filterEvolvableTitle}
-          onClick={() => setEvolvableOnly((v) => !v)}
-        >
-          {t.links.filterEvolvable}
-        </Button>
-        {addButton}
-        <Button
-          size="sm"
-          variant={hideTeam ? "primary" : "secondary"}
-          aria-pressed={hideTeam}
-          title={t.links.hideTeamTitle}
-          onClick={() => setHideTeam((v) => !v)}
-        >
-          {t.links.hideTeam}
-        </Button>
-        <div ref={typeMenuRef} className="relative">
-          <Button
-            size="sm"
-            variant={typeFilter.length > 0 ? "primary" : "secondary"}
-            aria-expanded={typeMenuOpen}
-            title={t.links.filterTypesTitle}
-            onClick={toggleTypeMenu}
-          >
-            {t.links.filterTypes}
-            {typeFilter.length > 0 && <span className="tabular-nums">({typeFilter.length})</span>}
-            <span aria-hidden className="text-xs">
-              ▾
-            </span>
-          </Button>
-          {typeMenuOpen && (
-            <div className="absolute left-0 z-20 mt-1 w-56 rounded-lg border border-line bg-panel p-1 shadow-lg">
-              <div className="max-h-72 overflow-y-auto">
-                {availableTypes.map((type) => (
-                  <label
-                    key={type}
-                    className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-2 hover:bg-hover"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={typeFilter.includes(type)}
-                      onChange={() => toggleType(type)}
-                      className="accent-success"
-                    />
-                    <TypeBadge type={type} lang={lang} />
-                    <span className="text-sm text-ink">{TYPE_LABELS[lang][type] ?? type}</span>
-                  </label>
-                ))}
-              </div>
-              {typeFilter.length > 0 && (
-                <button
-                  type="button"
-                  onClick={() => setTypeFilter([])}
-                  className="mt-1 h-10 w-full rounded-md px-2 text-left text-sm text-ink-muted hover:bg-hover hover:text-ink"
-                >
-                  {t.links.filterTypesClear}
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {visibleLinks.length === 0 ? (
-        <EmptyState
-          title={t.links.noMatches}
-          action={
-            filtersActive ? (
-              <Button size="sm" onClick={resetFilters}>
-                {t.links.filterTypesClear}
-              </Button>
-            ) : undefined
-          }
+      {/* The drawer (team) beside the rest of the collection from 105rem
+          (1680px) up; narrower, the column would squeeze the trays until two
+          specimens and their buttons no longer fit side by side, so the
+          collection follows below the drawer instead. */}
+      <div className="min-[105rem]:grid min-[105rem]:grid-cols-[minmax(0,1fr)_24rem] min-[105rem]:items-start min-[105rem]:gap-6">
+        <TeamBar
+          runKey={runKey}
+          mode={mode}
+          players={players}
+          lang={lang}
+          links={soulLinks}
+          renderControls={(e) => encounterControls(e, false, true)}
+          actions={addButton}
         />
-      ) : (
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {visibleLinks.map((link) => {
-            const isDead = link.status === LinkStatus.DEAD;
-            const onTeam = link.teamPosition !== null;
-            return (
-              <Card
-                key={link.id}
-                className={
-                  isDead
-                    ? // Dead recedes through the tint, the "Tot" label and the
-                      // tiles' own dead styling - opacity-60 on the whole card
-                      // took its text down to 2.3:1.
-                      "border-danger-line bg-danger-bg/50"
-                    : onTeam
-                      ? "border-success-line bg-success-bg/40"
-                      : ""
-                }
+
+        <aside className="min-w-0">
+          <div className="mb-3 flex items-baseline justify-between gap-2">
+            <h2 className="text-lg font-bold tracking-tight text-ink">{t.links.boxHeading}</h2>
+            <span className="font-mono text-sm tabular-nums text-ink-muted">{boxLinks.length}</span>
+          </div>
+          {/* The filters scope this column only - the team above is always
+              shown whole. */}
+          <div className="mb-3 flex flex-wrap items-center gap-2">
+            {/* In the narrow side column the sort field takes a row of its
+                own, so the two filter buttons wrap under it instead of
+                squeezing the select down to its arrow. */}
+            <div className="flex items-center gap-2 min-[105rem]:w-full">
+              <label htmlFor="links-sort" className="text-sm font-medium text-ink-muted">
+                {t.links.sortLabel}
+              </label>
+              {/* Select is w-full of its box, so the width is set here rather
+                  than through className - `cn` is a plain join and cannot
+                  drop w-full. */}
+              <div className="w-52 min-[105rem]:w-auto min-[105rem]:min-w-0 min-[105rem]:flex-1">
+                <Select
+                  id="links-sort"
+                  size="sm"
+                  value={sortMode}
+                  onChange={(e) => setSortMode(e.target.value as SortMode)}
+                >
+                  <option value="default">{t.links.sortDefault}</option>
+                  <option value="summe">{t.links.sortSumme}</option>
+                  <option value="summeMax">{t.links.sortSummeMax}</option>
+                </Select>
+              </div>
+            </div>
+            <Button
+              size="sm"
+              variant={evolvableOnly ? "primary" : "secondary"}
+              aria-pressed={evolvableOnly}
+              title={t.links.filterEvolvableTitle}
+              onClick={() => setEvolvableOnly((v) => !v)}
+            >
+              {t.links.filterEvolvable}
+            </Button>
+            <div ref={typeMenuRef} className="relative">
+              <Button
+                size="sm"
+                variant={typeFilter.length > 0 ? "primary" : "secondary"}
+                aria-expanded={typeMenuOpen}
+                title={t.links.filterTypesTitle}
+                onClick={toggleTypeMenu}
               >
-                <div className="mb-3 flex items-start justify-between gap-2">
-                  <div className="min-w-0">
-                    <h2 className="font-medium text-ink">{link.routeName}</h2>
-                    {/* Combined BST now → fully-evolved max (only when it can grow). */}
-                    <p
-                      className="text-xs tabular-nums text-ink-subtle"
-                      title={t.pokedex.columns.summe}
-                    >
-                      Σ {totalSumme(link)}
-                      {totalSummeMax(link) > totalSumme(link) && ` → ${totalSummeMax(link)}`}
-                    </p>
-                  </div>
-                  {isDead ? (
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-semibold text-danger">{t.links.dead}</span>
-                      <Button
-                        size="sm"
-                        loading={pendingId === link.id}
-                        onClick={() => handleMarkAlive(link.id)}
+                {t.links.filterTypes}
+                {typeFilter.length > 0 && <span className="tabular-nums">({typeFilter.length})</span>}
+                <ChevronDownIcon className="h-4 w-4" />
+              </Button>
+              {typeMenuOpen && (
+                <div className="absolute right-0 z-20 mt-1 w-56 rounded-lg border border-line bg-panel p-1 shadow-lg">
+                  <div className="max-h-72 overflow-y-auto">
+                    {availableTypes.map((type) => (
+                      <label
+                        key={type}
+                        className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-2 hover:bg-hover"
                       >
-                        {t.links.revive}
-                      </Button>
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-1.5">
-                      {!onTeam && (
-                        <AddToTeamButton
-                          runKey={runKey}
-                          lang={lang}
-                          linkId={link.id}
-                          teamLinks={teamLinks}
+                        <input
+                          type="checkbox"
+                          checked={typeFilter.includes(type)}
+                          onChange={() => toggleType(type)}
+                          className="accent-success"
                         />
-                      )}
-                      <Button
-                        size="sm"
-                        variant="danger"
-                        disabled={pendingId === link.id}
-                        aria-expanded={deadMenuId === link.id}
-                        onClick={() => {
-                          setDeadCause("");
-                          setDeadMenuId(deadMenuId === link.id ? null : link.id);
-                        }}
-                      >
-                        {t.links.markDead}
-                      </Button>
-                    </div>
+                        <TypeBadge type={type} lang={lang} />
+                        <span className="text-sm text-ink">{TYPE_LABELS[lang][type] ?? type}</span>
+                      </label>
+                    ))}
+                  </div>
+                  {typeFilter.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => setTypeFilter([])}
+                      className="mt-1 h-10 w-full rounded-md px-2 text-left text-sm text-ink-muted hover:bg-hover hover:text-ink"
+                    >
+                      {t.links.filterTypesClear}
+                    </button>
                   )}
                 </div>
+              )}
+            </div>
+          </div>
 
-                {/* Mark-dead menu: optional cause + (SoulLink) who lost their mon. */}
-                {!isDead && deadMenuId === link.id && (
-                  <div className="mb-3 rounded-md border border-danger-line bg-danger-bg/60 p-2">
-                    <Input
-                      size="sm"
-                      type="text"
-                      value={deadCause}
-                      onChange={(e) => setDeadCause(e.target.value)}
-                      maxLength={80}
-                      placeholder={t.links.deathCausePlaceholder}
-                      aria-label={t.links.deathCausePlaceholder}
-                      className="mb-2"
-                    />
-                    {isClassic ? (
-                      <Button
-                        size="sm"
-                        variant="danger"
-                        loading={pendingId === link.id}
-                        onClick={() => handleMarkDead(link.id)}
-                      >
-                        {t.links.markDead}
-                      </Button>
-                    ) : (
-                      <>
-                        <p className="mb-1.5 text-xs font-medium text-ink-muted">
-                          {t.links.whoLost}
-                        </p>
-                        <div className="flex flex-wrap gap-1.5">
-                          {players.map((p) => (
-                            <Button
-                              key={p}
-                              size="sm"
-                              variant="danger"
-                              disabled={pendingId === link.id}
-                              onClick={() => handleMarkDead(link.id, p)}
-                            >
-                              {playerLabel(p)}
-                            </Button>
-                          ))}
-                          {/* No blame: deathPlayer stays null (counts as unattributed). */}
-                          <Button
-                            size="sm"
-                            disabled={pendingId === link.id}
-                            onClick={() => handleMarkDead(link.id)}
-                          >
-                            {t.links.noAttribution}
-                          </Button>
-                        </div>
-                      </>
-                    )}
-                  </div>
-                )}
-
-                {isDead && (link.deathPlayer || link.deathCause) && (
-                  <p className="mb-2 text-xs font-medium text-danger">
-                    {link.deathPlayer && t.links.deadBy(playerLabel(link.deathPlayer))}
-                    {link.deathPlayer && link.deathCause ? " · " : ""}
-                    {link.deathCause}
-                  </p>
-                )}
-                <div className="flex flex-col gap-3">
-                  {link.encounters.map((e) => (
-                    <EncounterTile
-                      key={e.id}
-                      encounter={e}
-                      isDead={isDead}
-                      isClassic={isClassic}
-                      showRoute={link.linkIds.length > 1}
-                      lang={lang}
-                    >
-                      {!isDead && (
-                        <div className="mt-1 flex flex-wrap gap-1.5">
-                          <EvolveButton
-                            runKey={runKey}
-                            lang={lang}
-                            encounterId={e.id}
-                            targets={e.evolvesTo}
-                          />
-                          <FormPicker
-                            runKey={runKey}
-                            lang={lang}
-                            encounterId={e.id}
-                            currentId={e.pokemonId}
-                            options={e.formOptions}
-                          />
-                          {e.evolvesFrom && (
-                            <RevertButton runKey={runKey} lang={lang} encounterId={e.id} />
-                          )}
-                          {fusionEnabled && !e.body && (
-                            <Button
-                              size="sm"
-                              onClick={() => setFuseHost({ id: e.id, pokemonId: e.pokemonId, player: e.player })}
-                            >
-                              {t.links.fuse}
-                            </Button>
-                          )}
-                          {fusionEnabled && e.body && (
-                            <>
-                              <Button
-                                size="sm"
-                                disabled={pendingId === e.id}
-                                title={t.links.swapTitle}
-                                onClick={() => handleSwap(e.id)}
-                              >
-                                {t.links.swap}
-                              </Button>
-                              <Button
-                                size="sm"
-                                variant="danger"
-                                disabled={pendingId === e.id}
-                                onClick={() => handleUnfuse(e.id)}
-                              >
-                                {t.links.unfuse}
-                              </Button>
-                            </>
-                          )}
-                        </div>
-                      )}
-                      {e.body && (
-                        <div className="mt-2 rounded-md border border-line-strong bg-sunken p-2">
-                          <p className="mb-1 flex items-center gap-1 text-xs font-medium text-ink-muted">
-                            {t.links.bodyLabel}: {e.body.pokemonName} · {e.body.routeName}
-                            <span className="origin-left scale-[0.6]">
-                              <PokemonInfoButton pokemonId={e.body.pokemonId} label={e.body.pokemonName} />
-                            </span>
-                          </p>
-                          {!isDead && (
-                            <div className="flex flex-wrap gap-1.5">
-                              <EvolveButton
-                                runKey={runKey}
-                                lang={lang}
-                                encounterId={e.body.encounterId}
-                                targets={e.body.evolvesTo}
-                              />
-                              <FormPicker
-                                runKey={runKey}
-                                lang={lang}
-                                encounterId={e.body.encounterId}
-                                currentId={e.body.pokemonId}
-                                options={e.body.formOptions}
-                              />
-                              {e.body.evolvesFrom && (
-                                <RevertButton runKey={runKey} lang={lang} encounterId={e.body.encounterId} />
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </EncounterTile>
-                  ))}
+          {visibleLinks.length === 0 ? (
+            <EmptyState
+              title={t.links.noMatches}
+              action={
+                filtersActive ? (
+                  <Button size="sm" onClick={resetFilters}>
+                    {t.links.filterTypesClear}
+                  </Button>
+                ) : undefined
+              }
+            />
+          ) : (
+            <>
+              {boxLinks.length > 0 ? (
+                <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 min-[105rem]:grid-cols-1">
+                  {boxLinks.map((link) => collectionEntry(link))}
                 </div>
-              </Card>
-            );
-          })}
-        </div>
-      )}
+              ) : (
+                // Everything caught is on the team (or dead) - an empty tray,
+                // not the "nothing matches your filters" message.
+                <p className="rounded-sm border border-dashed border-line-strong bg-panel/50 px-3 py-4 text-center text-sm text-ink-subtle">
+                  {t.links.teamEmpty}
+                </p>
+              )}
+              {deadLinks.length > 0 && (
+                <>
+                  <div className="mt-8 mb-3 flex items-baseline justify-between gap-2">
+                    <h2 className="text-lg font-bold tracking-tight text-ink">{t.overview.memorial}</h2>
+                    <span className="font-mono text-sm tabular-nums text-ink-muted">{deadLinks.length}</span>
+                  </div>
+                  <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 min-[105rem]:grid-cols-1">
+                    {deadLinks.map((link) => collectionEntry(link))}
+                  </div>
+                </>
+              )}
+            </>
+          )}
+        </aside>
+      </div>
     </div>
   );
 }

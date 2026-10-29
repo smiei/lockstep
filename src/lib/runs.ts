@@ -6,6 +6,8 @@ import { runPlayers } from "@/lib/players";
 import { isRunKeyShaped } from "@/lib/runKey";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { VISITED_RUNS_COOKIE, parseVisitedRuns } from "@/lib/visitedRuns";
+import { getLevelCaps } from "@/lib/data";
+import type { RunCapSummary } from "@/lib/types";
 
 export type ResolvedRun = {
   // For the page's own queries. Never handed to the client for an action -
@@ -90,4 +92,30 @@ export async function listRunsForHeader(): Promise<Run[]> {
   if (visited.length === 0) return [];
   const runs = await prisma.run.findMany({ where: { accessKey: { in: visited } } });
   return visited.flatMap((key) => runs.filter((run) => run.accessKey === key));
+}
+
+// The next level cap for every run the header lists - one query for all of
+// them, the rest is the pack's levelcaps.json. Same rule as the Overview tab's
+// "next cap": the first capped fight in pack order that is not ticked off.
+export async function listCapSummaries(runs: Run[]): Promise<RunCapSummary[]> {
+  if (runs.length === 0) return [];
+  const defeated = await prisma.levelCapProgress.findMany({
+    where: { runId: { in: runs.map((run) => run.id) }, defeated: true },
+    select: { runId: true, levelCapId: true },
+  });
+  return runs.map((run) => {
+    const done = new Set(defeated.filter((row) => row.runId === run.id).map((row) => row.levelCapId));
+    const caps = getLevelCaps(run.gameId);
+    const next = caps.find((cap) => cap.max_level !== null && !done.has(cap.id));
+    const badgeCaps = caps.filter((cap) => cap.badge !== null);
+    return {
+      accessKey: run.accessKey,
+      next:
+        next && next.max_level !== null
+          ? { names: next.names, location: next.location, level: next.max_level }
+          : null,
+      badges: badgeCaps.filter((cap) => done.has(cap.id)).length,
+      badgesTotal: badgeCaps.length,
+    };
+  });
 }

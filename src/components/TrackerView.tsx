@@ -20,15 +20,18 @@ import type { RunSettings } from "@/lib/runSettings";
 import { useDebugMode } from "@/lib/useDebugMode";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { EmptyState, PageHeader } from "@/components/ui/Page";
+import { ChevronDownIcon } from "@/components/ActionIcons";
+import { formatCatalogueNumber, routeNumbers } from "@/lib/routeNumbers";
 
 // Tailwind only sees whole class names, so the column count per player count
-// is spelled out rather than built from a number.
+// is spelled out rather than built from a number. Three players on two
+// columns would leave an empty, line-coloured cell (the columns are divided
+// by the grid's 1px gaps over bg-line), so the third spans the row there.
 const EDITOR_GRID: Record<number, string> = {
   1: "",
   2: "sm:grid-cols-2",
-  3: "sm:grid-cols-2 lg:grid-cols-3",
+  3: "sm:grid-cols-2 sm:[&>*:last-child]:col-span-2 lg:grid-cols-3 lg:[&>*:last-child]:col-span-1",
   4: "sm:grid-cols-2 lg:grid-cols-4",
 };
 
@@ -60,10 +63,8 @@ export function TrackerView({
 }) {
   const playerLabel = usePlayerLabel();
   const tTracker = translations[lang].tracker;
+  const tLinks = translations[lang].links;
   const isClassic = players.length === 1;
-  // From three players on, the route name sits above the editors instead of
-  // beside them: four columns next to a name column do not fit the page.
-  const nameAbove = players.length > 2;
   // Post-game areas (Sevii 4-7, Cerulean Cave) are collapsed by default so
   // the main-game list stays tidy until the league is beaten.
   const [showPostgame, setShowPostgame] = useState(false);
@@ -128,94 +129,101 @@ export function TrackerView({
   // Overall completion, independent of the "Nur offene" filter above -
   // post-game areas don't count toward "the run" until the league is beaten.
   const progress = computeRouteProgress(routes, encounters, players, settings.statics);
+  // The catalogue number in every route label - the same number the Team
+  // tab's specimen labels carry (src/lib/routeNumbers.ts).
+  const catalogue = routeNumbers(routes);
 
   function renderRoute(route: Route) {
     const filled = players
       .map((player) => encounters.find((e) => e.routeId === route.id && e.player === player))
       .filter((e): e is Encounter => e !== undefined);
     // SoulLink: some but not all players have an entry -> the rest still owe
-    // theirs; the warning sign next to the route name says so.
+    // theirs; the amber outcome word in the route label says so.
     const halfDone = !isClassic && filled.length > 0 && filled.length < players.length;
-    // Every row carries a 4px rail on its left, grey until the route resolves.
     // One lost encounter settles the whole route - in SoulLink the pair can
     // never form, in Classic there is nothing else to wait for - so it outranks
     // "still missing an entry" and a killed encounter reads red even while the
-    // other player owes theirs. This is what tells two adjacent routes apart at
-    // a glance; a hairline divider between two tall two-column rows does not.
+    // other player owes theirs.
     const lost = filled.some((e) => e.status !== EncounterStatus.CAUGHT);
     const complete = filled.length === players.length;
-    const tone = lost
-      ? "border-l-danger-line bg-danger-bg/40"
-      : complete
-        ? "border-l-success-line bg-success-bg/40"
-        : halfDone
-          ? "border-l-warning-line bg-warning-bg/40"
-          : "border-l-line-strong";
+    // Each route is a tray of its own, headed by its label - catalogue number,
+    // name, outcome in words - on a strip tinted with that outcome, grey until
+    // the route resolves. That strip is what tells two adjacent routes apart at
+    // a glance (it replaced a 4px coloured left rail).
+    const outcome = lost ? "lost" : complete ? "caught" : halfDone ? "missing" : "open";
+    const labelTone = {
+      lost: "bg-danger-bg",
+      caught: "bg-success-bg",
+      missing: "bg-warning-bg",
+      open: "bg-sunken",
+    }[outcome];
+    const outcomeText = {
+      lost: "text-danger",
+      caught: "text-success",
+      missing: "text-warning",
+      open: "text-ink-subtle",
+    }[outcome];
+    const outcomeLabel = {
+      lost: tTracker.statusLost,
+      caught: tTracker.statusCaught,
+      missing: tTracker.statusMissing,
+      open: tTracker.statusOpen,
+    }[outcome];
+    const number = catalogue.get(route.id);
     return (
-      <div
-        key={route.id}
-        className={`flex flex-col gap-3 border-l-4 p-3 sm:gap-4 sm:p-4 ${nameAbove ? "" : "sm:flex-row sm:items-start"} ${tone}`}
-      >
-        <div className={`shrink-0 pt-1.5 ${nameAbove ? "" : "sm:w-40"}`}>
-          {halfDone && (
-            <span className="mr-1 text-sm text-warning" title={tTracker.missingPlayer}>
-              ⚠
+      <div key={route.id} className="overflow-hidden rounded-md border border-line bg-panel">
+        {/* The route label is the tray's header strip - "Nr. 001 Starter",
+            outcome at the end - so every player column below gets the full
+            width and its controls fit on one row. */}
+        <div className={`flex flex-wrap items-baseline gap-x-2.5 gap-y-1 px-3 py-2 sm:px-4 ${labelTone}`}>
+          {number !== undefined && (
+            <span className="font-mono text-xs font-semibold tabular-nums text-ink-muted">
+              {tLinks.labelNumber(formatCatalogueNumber(number))}
             </span>
           )}
-          <span className="font-medium text-ink">{routeName(route, lang)}</span>
-          {route.type === "static" && (
-            <Badge tone="info" className="ml-1.5 align-middle">
-              {tTracker.typeStatic}
-            </Badge>
-          )}
+          <span className="font-semibold text-ink">
+            {routeName(route, lang)}
+            {route.type === "static" && (
+              <Badge tone="info" className="ml-1.5 align-middle">
+                {tTracker.typeStatic}
+              </Badge>
+            )}
+          </span>
+          <span
+            className={`ml-auto text-xs font-semibold ${outcomeText}`}
+            title={halfDone ? tTracker.missingPlayer : undefined}
+          >
+            {outcomeLabel}
+          </span>
         </div>
-        <div
-          className={`grid flex-1 grid-cols-1 gap-3 sm:gap-4 ${EDITOR_GRID[players.length] ?? ""}`}
-        >
-          {isClassic ? (
-            <EncounterEditor
-              runKey={runKey}
-              lang={lang}
-              settings={settings}
-              routeId={route.id}
-              player={players[0]}
-              routes={routes}
-              pokemonList={pokemonList}
-              encounters={encounters}
-              fusionEnabled={fusionEnabled}
-              players={players}
-              boundRoutes={boundRoutes}
-              onTouched={setLastTouchedRouteId}
-            />
-          ) : (
-            <>
-              {/* Each player gets an outlined surface of their own. Stacked on
-                  a phone, a filled row is four controls tall per player, and
-                  with nothing but a gap between them the two blocks read as one
-                  long list - you cannot see where Player 1 ends. */}
-              {players.map((player) => (
-                <div key={player} className="rounded-md border border-line p-2">
-                  <span className="mb-1 block text-xs font-medium text-ink-subtle">
-                    {playerLabel(player)}
-                  </span>
-                  <EncounterEditor
-                    runKey={runKey}
-                    lang={lang}
-                    settings={settings}
-                    routeId={route.id}
-                    player={player}
-                    routes={routes}
-                    pokemonList={pokemonList}
-                    encounters={encounters}
-                    fusionEnabled={fusionEnabled}
-                    players={players}
-                    boundRoutes={boundRoutes}
-                    onTouched={setLastTouchedRouteId}
-                  />
-                </div>
-              ))}
-            </>
-          )}
+        {/* One column per player, divided by hairlines: the 1px gaps of the
+            grid show its line-coloured ground. A rule is what tells where one
+            player's controls end - stacked on a phone a filled entry is three
+            controls tall - without nesting a bordered card inside the tray. */}
+        <div className={`grid grid-cols-1 gap-px bg-line ${EDITOR_GRID[players.length] ?? ""}`}>
+          {players.map((player) => (
+            <div key={player} className="min-w-0 bg-panel p-3 sm:px-4">
+              {!isClassic && (
+                <span className="mb-1.5 block text-xs font-semibold text-ink-muted">
+                  {playerLabel(player)}
+                </span>
+              )}
+              <EncounterEditor
+                runKey={runKey}
+                lang={lang}
+                settings={settings}
+                routeId={route.id}
+                player={player}
+                routes={routes}
+                pokemonList={pokemonList}
+                encounters={encounters}
+                fusionEnabled={fusionEnabled}
+                players={players}
+                boundRoutes={boundRoutes}
+                onTouched={setLastTouchedRouteId}
+              />
+            </div>
+          ))}
         </div>
       </div>
     );
@@ -281,28 +289,26 @@ export function TrackerView({
           }
         />
       ) : (
-        <Card padding="none" className="divide-y-2 divide-line-strong overflow-hidden">
-          {/* divide-y-2 on the Card above: a hairline has to hold its own
-              against the outcome tint filling the rows on either side of it. */}
+        // One tray per route on the sage ground: the gap between them is what
+        // separates two routes, no divider needed.
+        <div className="flex flex-col gap-2">
           {mainRoutes.map(renderRoute)}
           {postgameRoutes.length > 0 && (
             <>
               <button
                 type="button"
                 onClick={() => setShowPostgame((v) => !v)}
-                className="flex w-full items-center justify-center gap-2 bg-sunken p-3 text-sm font-medium text-ink-muted transition-colors hover:bg-hover hover:text-ink"
+                className="flex w-full items-center justify-center gap-2 rounded-md border border-dashed border-line-strong p-3 text-sm font-semibold text-ink-muted transition-colors hover:bg-hover hover:text-ink"
               >
-                <span
-                  className={`inline-block transition-transform ${showPostgame ? "rotate-90" : ""}`}
-                >
-                  ▸
-                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 transition-transform motion-reduce:transition-none ${showPostgame ? "" : "-rotate-90"}`}
+                />
                 {showPostgame ? tTracker.postgameHide : tTracker.postgameShow(postgameRoutes.length)}
               </button>
               {showPostgame && postgameRoutes.map(renderRoute)}
             </>
           )}
-        </Card>
+        </div>
       )}
     </div>
   );

@@ -9,17 +9,23 @@ import { formatActionError } from "@/lib/actionErrors";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { PokemonSprite } from "@/components/PokemonSprite";
+import { UndoIcon } from "@/components/ActionIcons";
 
+// `compact`: the Team drawer's specimens stand two to a tray and the Box rows
+// carry their buttons beside the text, so the buttons keep the 40px touch
+// height but drop to small text and tight padding.
 export function EvolveButton({
   runKey,
   lang,
   encounterId,
   targets,
+  compact = false,
 }: {
   runKey: string;
   lang: Lang;
   encounterId: number;
   targets: { id: number; name: string; method: string | null; available: boolean }[];
+  compact?: boolean;
 }) {
   const router = useRouter();
   const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
@@ -58,7 +64,10 @@ export function EvolveButton({
         {anyAvailable && (
           <span
             aria-hidden
-            className="absolute inset-[-1000%] animate-[spin_2.5s_linear_2] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_310deg,var(--success)_355deg,transparent_360deg)] motion-reduce:hidden"
+            // evolve-sweep (globals.css), not Tailwind's spin: it fades the
+            // ring out on its last turn, so the dot does not stay parked as
+            // a sliver on the button's edge once the two laps are done.
+            className="evolve-sweep absolute inset-[-1000%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_310deg,var(--success)_355deg,transparent_360deg)] motion-reduce:hidden"
           />
         )}
         {/* bg-panel is load-bearing: the spinning conic-gradient ring sits
@@ -69,7 +78,7 @@ export function EvolveButton({
           loading={pending}
           onClick={toggle}
           {...triggerProps}
-          className="relative bg-panel"
+          className={compact ? "relative bg-panel px-2.5 text-xs" : "relative bg-panel"}
         >
           {t.evolve}
         </Button>
@@ -108,14 +117,19 @@ export function EvolveButton({
   );
 }
 
+// `compact` draws it as a square icon button (name in aria-label and title):
+// reverting is a correction, rarer than evolving, and "Zurückentwickeln"
+// does not fit beside "Entwickeln" under a specimen.
 export function RevertButton({
   runKey,
   lang,
   encounterId,
+  compact = false,
 }: {
   runKey: string;
   lang: Lang;
   encounterId: number;
+  compact?: boolean;
 }) {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
@@ -136,9 +150,21 @@ export function RevertButton({
 
   return (
     <div>
-      <Button size="sm" loading={pending} onClick={handleClick}>
-        {t.revert}
-      </Button>
+      {compact ? (
+        <Button
+          size="sm"
+          iconOnly
+          loading={pending}
+          onClick={handleClick}
+          icon={<UndoIcon className="h-4 w-4" />}
+          aria-label={t.revert}
+          title={t.revert}
+        />
+      ) : (
+        <Button size="sm" loading={pending} onClick={handleClick}>
+          {t.revert}
+        </Button>
+      )}
       {error && <p className="mt-1 text-xs text-danger">{error}</p>}
     </div>
   );

@@ -75,9 +75,10 @@ export function LevelCapsView({
             onClick={() => handleToggle(cap)}
             // A defeated entry recedes through its tint, the strike-through, the
             // muted text and the faded picture - not through opacity on the
-            // whole row, which took its text down to 1.6:1.
+            // whole row, which took its text down to 1.6:1. The tint is green:
+            // a beaten leader is progress, and red only ever means a death.
             className={`flex w-full items-center gap-4 p-3 text-left transition-colors disabled:opacity-70 sm:p-4 ${
-              defeated ? "bg-danger-bg/60" : "hover:bg-hover"
+              defeated ? "bg-success-bg/70" : "hover:bg-hover"
             }`}
           >
             {/* Sprite files are slugged from the canonical German name; the
@@ -107,7 +108,7 @@ export function LevelCapsView({
                 {/* "cap / cap-2": one team member may reach the cap, the rest
                     stay two levels below (house rule). */}
                 <div
-                  className={`text-lg font-semibold tabular-nums ${defeated ? "text-ink-muted" : "text-ink"}`}
+                  className={`font-mono text-lg font-semibold tabular-nums ${defeated ? "text-ink-muted" : "text-ink"}`}
                 >
                   {cap.max_level}
                   <span className="text-ink-subtle"> / {cap.max_level - 2}</span>

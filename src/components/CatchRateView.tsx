@@ -28,7 +28,7 @@ import { translations } from "@/lib/i18n/dictionary";
 import { pokemonName } from "@/lib/i18n/localize";
 import { baseSpeciesId } from "@/lib/forms";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
-import { SparkleIcon } from "@/components/ActionIcons";
+import { ChevronDownIcon, SparkleIcon } from "@/components/ActionIcons";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { TypeBadge } from "@/components/TypeBadge";
@@ -102,7 +102,7 @@ function BallPicker({
           <BallSprite ball={ball} />
           <span id={valueId} className="truncate">{labels[ball]}</span>
         </span>
-        <span aria-hidden className="shrink-0 text-xs text-ink-subtle">▾</span>
+        <ChevronDownIcon className="h-4 w-4 shrink-0 text-ink-subtle" />
       </button>
       {open && (
         <ul className="absolute z-10 mt-1 max-h-72 w-full overflow-y-auto rounded-lg border border-line bg-panel shadow-lg">
@@ -225,7 +225,7 @@ function QuickCatchPanel({
         disabled={disabled || pending || slots.length === 0}
         onChange={(e) => setRouteId(e.target.value ? Number(e.target.value) : "")}
         aria-label={label}
-        className="h-11 w-full rounded-md border border-line-strong bg-panel px-3 text-sm text-ink disabled:cursor-not-allowed disabled:opacity-50"
+        className="select-chevron h-11 w-full rounded-md border border-line-strong bg-panel px-3 text-sm text-ink disabled:cursor-not-allowed disabled:opacity-50"
       >
         <option value="">{t.selectRoute}</option>
         {slots.map((s) => (
@@ -478,7 +478,7 @@ export function CatchCardBody({
             id={ids.status}
             value={status}
             onChange={(e) => onChange({ status: e.target.value as StatusId })}
-            className={inputClass}
+            className={`${inputClass} select-chevron`}
           >
             {STATUS_IDS.map((id) => (
               <option key={id} value={id}>
@@ -602,7 +602,7 @@ export function CatchCardBody({
               <select
                 value={dexOwned}
                 onChange={(e) => onChange({ dexOwned: Number(e.target.value) })}
-                className="h-10 rounded-md border border-line-strong bg-panel px-3 text-sm text-ink"
+                className="select-chevron h-10 rounded-md border border-line-strong bg-panel px-3 text-sm text-ink"
               >
                 {[0, 301, 451, 601].map((value, i) => (
                   <option key={value} value={value}>

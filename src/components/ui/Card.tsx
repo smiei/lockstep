@@ -1,9 +1,9 @@
 import type { HTMLAttributes } from "react";
 import { cn } from "./cn";
 
-// One surface, replacing 52 distinct card-like class strings. `bg-panel` is
-// what makes cards readable in dark mode: previously they were transparent on
-// the page background, so nothing separated a card from the page.
+// One surface, replacing 52 distinct card-like class strings: the specimen
+// tray - white on the sage ground, a hairline sage rule, nearly square
+// corners. `bg-panel` is also what keeps it readable in dark mode.
 type Padding = "none" | "sm" | "md";
 
 const PADDING: Record<Padding, string> = {
@@ -20,7 +20,7 @@ export function Card({
 }: HTMLAttributes<HTMLDivElement> & { padding?: Padding }) {
   return (
     <div
-      className={cn("rounded-lg border border-line bg-panel", PADDING[padding], className)}
+      className={cn("rounded-md border border-line bg-panel", PADDING[padding], className)}
       {...rest}
     >
       {children}

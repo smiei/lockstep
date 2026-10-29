@@ -17,6 +17,7 @@ import {
   isInDex,
 } from "@/lib/gameData";
 import { getRoutesForRun } from "@/lib/runRoutes";
+import { routeNumbers } from "@/lib/routeNumbers";
 import { EncounterStatus, LinkStatus, RunMode } from "@/generated/prisma/client";
 import { SpriteSetProvider } from "@/components/SpriteSetProvider";
 import { CanonicalRun } from "@/components/CanonicalRun";
@@ -142,6 +143,9 @@ export default async function LinksPage({
   // Routes no longer in the pack sort last rather than to the front.
   const routeOrder = new Map(routes.map((r, i) => [r.id, i]));
   const orderOfRoute = (routeId: number) => routeOrder.get(routeId) ?? Number.MAX_SAFE_INTEGER;
+  // The catalogue number on each specimen label - same numbering as the
+  // Encounter tab's rows.
+  const catalogue = routeNumbers(routes);
 
   // Shared by a host row and its donor's body sub-object - see EvolutionOptions.
   function buildEvolutionOptions(currentPokemonId: number): EvolutionOptions {
@@ -238,6 +242,11 @@ export default async function LinksPage({
       )
         .map((link) => routeNameOf(link.routeId))
         .join(" + "),
+      routeNumber:
+        members
+          .map((link) => catalogue.get(link.routeId))
+          .filter((n): n is number => n !== undefined)
+          .sort((a, b) => a - b)[0] ?? null,
       status: members.every((link) => link.status === LinkStatus.DEAD) ? LinkStatus.DEAD : LinkStatus.ALIVE,
       teamPosition: teamPositions[0] ?? null,
       teamPositions,
@@ -336,7 +345,18 @@ export default async function LinksPage({
     <BlindflugProvider on={settings.blindflug}>
     <div>
       <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
-      <PageHeader title={heading} />
+      <PageHeader
+        title={heading}
+        description={
+          views.length > 0
+            ? translations[lang].links.summary(
+                views.filter((v) => v.status !== LinkStatus.DEAD && v.teamPosition !== null).length,
+                views.filter((v) => v.status !== LinkStatus.DEAD && v.teamPosition === null).length,
+                views.filter((v) => v.status === LinkStatus.DEAD).length,
+              )
+            : undefined
+        }
+      />
       <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
         <PlayerNamesProvider names={settings.playerNames} lang={lang}>
           <PokemonDetailProvider

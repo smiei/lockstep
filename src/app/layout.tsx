@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Familjen_Grotesk, Red_Hat_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navigation } from "@/components/Navigation";
 import { StickyNav } from "@/components/StickyNav";
@@ -9,6 +9,7 @@ import { BlindflugToggle } from "@/components/BlindflugToggle";
 import { HeaderTitle } from "@/components/HeaderTitle";
 import { RunSwitcher } from "@/components/RunSwitcher";
 import { HeaderMenu } from "@/components/HeaderMenu";
+import { NextCapCard } from "@/components/NextCapCard";
 import { DialogProvider } from "@/components/DialogProvider";
 import { ToastProvider } from "@/components/ui/ToastProvider";
 import { LiveRefresh } from "@/components/LiveRefresh";
@@ -20,31 +21,34 @@ import { ThemeColorSync } from "@/components/ThemeColorSync";
 import { SessionWatch } from "@/components/SessionWatch";
 import { TabOrderProvider } from "@/components/TabOrderProvider";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
-import { listRunsForHeader } from "@/lib/runs";
+import { listCapSummaries, listRunsForHeader } from "@/lib/runs";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { getGameSummaries } from "@/lib/data";
 import { uiScaleBootScript } from "@/lib/uiScale";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// The interface face and the label face of the collection world (DESIGN.md):
+// a grotesk with some warmth for everything you read and press, a mono for
+// the data a specimen label carries - numbers, BST, caps.
+const familjen = Familjen_Grotesk({
+  variable: "--font-familjen",
+  subsets: ["latin", "latin-ext"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const redHatMono = Red_Hat_Mono({
+  variable: "--font-redhat-mono",
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
   // Each tab sets its own title (src/lib/pageMetadata.ts); the template adds
   // the app name, the default covers pages that set none.
-  title: { template: "%s · SoulLink Tracker", default: "Nuzlocke SoulLink Tracker" },
-  description: "Pokémon SoulLink Random Nuzlocke Tracker",
-  applicationName: "Nuzlocke SoulLink Tracker",
+  title: { template: "%s · Lockstep", default: "Lockstep – Nuzlocke & SoulLink Tracker" },
+  description: "Pokémon Nuzlocke and SoulLink tracker",
+  applicationName: "Lockstep",
   // Home-screen label on iOS; it truncates around 12 characters, so the full
   // title would be cut mid-word.
-  appleWebApp: { capable: true, title: "SoulLink" },
+  appleWebApp: { capable: true, title: "Lockstep" },
   // This app is wall-to-wall numbers (levels, catch rates, dex ids) and iOS
   // Safari auto-links digit runs as phone numbers - blue, underlined, and
   // they hijack the tap.
@@ -52,21 +56,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  // A media-scoped pair, not one flat string: Android reads theme-color for
-  // an installed standalone PWA's status bar before React ever hydrates, and
-  // in that window ThemeColorSync hasn't run yet - a single "#ffffff" default
-  // left the status bar white (with icons Android had already picked white
-  // too, to match a system-dark device) whenever the OS was in dark mode,
-  // which is exactly the "invisible battery icon on a white bar" bug this
-  // fixes. The media query lets the browser pick correctly with no JS at all
-  // for the common case (defaultTheme="system"). ThemeColorSync still
-  // overrides both tags once it runs, for the case where the in-app theme is
-  // switched against the OS setting. Keep in step with --canvas in
-  // globals.css and background_color in manifest.webmanifest.
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
-  ],
+  // The shell green in both themes: on a phone the page starts with the green
+  // top bar in light and dark alike, so the browser chrome continues it. (It
+  // used to be a light/dark media pair that followed --canvas; the top of the
+  // page no longer changes with the theme.) Keep in step with --shell in
+  // globals.css, ThemeColorSync and manifest.webmanifest.
+  themeColor: "#0f3d30",
   // "cover": since Android 15, an installed standalone PWA is drawn
   // edge-to-edge with a TRANSPARENT status bar - the clock/battery glyphs sit
   // directly on the app's own pixels, coloured by the PHONE's system light/
@@ -85,12 +80,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const runs = await listRunsForHeader();
+  const caps = await listCapSummaries(runs);
   const games = getGameSummaries();
 
   return (
     <html
       lang="de"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${familjen.variable} ${redHatMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
@@ -150,48 +146,96 @@ export default async function RootLayout({
             <ToastProvider>
             <DialogProvider>
             <TabOrderProvider>
-              {/* The title row is deliberately NOT sticky: the run switcher
-                  and the gear are occasional, the tabs are constant. */}
-              <header>
-                {/* flex-wrap: on narrow screens the controls wrap to a second
-                    line instead of widening the page (horizontal scroll). */}
-                <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-3 sm:px-6">
-                  <HeaderTitle />
-                  <div className="flex flex-wrap items-center gap-2">
-                    <Suspense
-                      fallback={
-                        <div className="h-9 w-32 rounded-md border border-line" />
-                      }
-                    >
-                      <RunSwitcher runs={runs} games={games} />
+              {/* The shell: one green field that is a side rail from lg up and
+                  a top bar plus the sticky tab strip below that. It is ONE set
+                  of elements re-arranged by CSS, never rendered twice - the
+                  gear menu, the run switcher and Blindflug all own dialogs,
+                  a hidden file input or the hazard tape, and two copies would
+                  double them.
+                  Below lg the wrapper and the header are `display: contents`,
+                  so the tab strip is a direct child of the page column and can
+                  stay sticky against it (a sticky element cannot leave its
+                  parent's box). From lg the wrapper is the sticky rail and the
+                  header dissolves into it, its parts placed by `order`:
+                  title, run switcher, tabs, next cap, then the utility buttons
+                  at the foot. `.shell` re-points the colour tokens at the
+                  green field for everything inside (globals.css).
+                  lg:z-30 is load-bearing: a sticky element is a stacking
+                  context of its own, so the dialogs that open from the rail
+                  (new run, rename, import...) carry their z-50 only inside
+                  it - without a z-index on the rail itself, the page's own
+                  positioned buttons painted over those dialogs. 30 keeps it
+                  under Modal (50) and Toast (60) at the root. */}
+              <div className="flex min-h-full flex-1 flex-col lg:flex-row">
+                <div className="shell contents lg:sticky lg:top-0 lg:z-30 lg:flex lg:h-dvh lg:w-58 lg:shrink-0 lg:flex-col lg:self-start lg:overflow-y-auto lg:bg-shell lg:pb-4">
+                  {/* The title row is deliberately NOT sticky on a phone: the
+                      run switcher and the gear are occasional, the tabs are
+                      constant. flex-wrap: on narrow screens the controls wrap
+                      to a second line instead of widening the page. */}
+                  <header className="flex flex-wrap items-center gap-x-3 gap-y-2 bg-shell px-4 py-3 sm:px-6 lg:contents">
+                    <div className="mr-auto min-w-0 lg:order-1 lg:mr-0 lg:px-5 lg:pt-6 lg:pb-5">
+                      <HeaderTitle />
+                    </div>
+                    {/* On a phone the run switcher takes a row of its own
+                        under the name and the buttons - it carries the run's
+                        name, the one thing here worth the width. */}
+                    <div className="order-3 w-full sm:order-none sm:w-auto lg:order-2 lg:w-auto lg:px-4 lg:pb-4">
+                      <Suspense
+                        fallback={
+                          <div className="h-10 w-32 rounded-md border border-line lg:w-full" />
+                        }
+                      >
+                        <RunSwitcher runs={runs} games={games} />
+                      </Suspense>
+                    </div>
+                    {/* The next level cap as a chip in the phone's top bar;
+                        from lg the rail's card carries it instead. */}
+                    <div className="order-2 sm:order-none lg:hidden">
+                      <Suspense fallback={null}>
+                        <NextCapCard runs={runs} caps={caps} variant="chip" />
+                      </Suspense>
+                    </div>
+                    <div className="order-2 flex items-center gap-2 sm:order-none lg:order-5 lg:px-4 lg:pt-3">
+                      <Suspense fallback={<div className="h-10 w-10 rounded-md border border-line" />}>
+                        <HeaderMenu runs={runs} games={games} />
+                      </Suspense>
+                      <ThemeToggle />
+                      {/* Suspense because it reads ?run= via useSearchParams,
+                          which would otherwise opt the statically prerendered
+                          "/" out of static rendering - the same reason
+                          RunSwitcher and Navigation are wrapped. */}
+                      <Suspense fallback={<div className="h-10 w-10 rounded-md border border-line" />}>
+                        <BlindflugToggle
+                          runs={runs.map((run) => ({ id: run.id, accessKey: run.accessKey, settingsJson: run.settingsJson }))}
+                        />
+                      </Suspense>
+                    </div>
+                  </header>
+                  <StickyNav className="lg:order-3">
+                    {/* Exactly one tab's height on a phone (2px bottom border +
+                        8px + 20px icon + 4px gap + 16px label + 8px), so the
+                        strip does not jump when Navigation replaces the
+                        fallback. In rem, not px, so it follows the UI-size
+                        setting like the strip itself. */}
+                    <Suspense fallback={<div className="h-[3.625rem] lg:h-80" />}>
+                      <Navigation />
                     </Suspense>
-                    <Suspense fallback={<div className="h-9 w-9 rounded-md border border-line" />}>
-                      <HeaderMenu runs={runs} games={games} />
-                    </Suspense>
-                    <ThemeToggle />
-                    {/* Suspense because it reads ?run= via useSearchParams,
-                        which would otherwise opt the statically prerendered
-                        "/" out of static rendering - the same reason
-                        RunSwitcher and Navigation are wrapped. */}
-                    <Suspense fallback={<div className="h-10 w-10 rounded-md border border-line" />}>
-                      <BlindflugToggle
-                        runs={runs.map((run) => ({ id: run.id, accessKey: run.accessKey, settingsJson: run.settingsJson }))}
-                      />
+                  </StickyNav>
+                  {/* Rail only: a phone's top bar has no room for it, and the
+                      Overview tab carries the same number. */}
+                  <div className="hidden lg:order-4 lg:mt-auto lg:block lg:px-4 lg:pt-6">
+                    <Suspense fallback={null}>
+                      <NextCapCard runs={runs} caps={caps} />
                     </Suspense>
                   </div>
                 </div>
-              </header>
-              <StickyNav>
-                {/* Exactly one tab's height (2px bottom border + 8px + 20px
-                    icon + 4px gap + 16px label + 8px), so the strip does not
-                    jump when Navigation replaces the fallback. In rem, not px,
-                    so it follows the UI-size setting like the strip itself. */}
-                <Suspense fallback={<div className="h-[3.625rem]" />}>
-                  <Navigation />
-                </Suspense>
-              </StickyNav>
-              <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6">{children}</main>
-              <PublicFooter />
+                <div className="flex min-w-0 flex-1 flex-col">
+                  {/* 96rem: wide enough for the Team tab's drawer and its
+                      side column side by side on a 1920px screen. */}
+                  <main className="mx-auto w-full max-w-[96rem] flex-1 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">{children}</main>
+                  <PublicFooter />
+                </div>
+              </div>
               <SpriteConsentBanner />
               <LiveRefresh />
               <ThemeColorSync />

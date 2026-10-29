@@ -20,7 +20,9 @@ const HIDE_BELOW = 96;
 // trackpad and on the rubber-band bounce at the end of a list.
 const DELTA = 8;
 
-export function StickyNav({ children }: { children: ReactNode }) {
+// From lg up the strip lives in the side rail (layout.tsx) instead: static,
+// no border, no hide-on-scroll - the rail itself is sticky.
+export function StickyNav({ children, className = "" }: { children: ReactNode; className?: string }) {
   const [hidden, setHidden] = useState(false);
   const lastY = useRef(0);
   const ticking = useRef(false);
@@ -62,11 +64,11 @@ export function StickyNav({ children }: { children: ReactNode }) {
     <div
       // z-40: under Modal (50) and Toast (60), over page content.
       // motion-reduce drops the slide, not the behaviour.
-      className={`sticky top-0 z-40 border-b border-line bg-canvas transition-transform duration-200 motion-reduce:transition-none ${
+      className={`sticky top-0 z-40 border-b border-line bg-canvas transition-transform duration-200 motion-reduce:transition-none lg:static lg:z-auto lg:translate-y-0 lg:border-b-0 lg:bg-transparent lg:transition-none ${
         hidden ? "-translate-y-full" : "translate-y-0"
-      }`}
+      } ${className}`}
     >
-      <div className="mx-auto max-w-6xl">{children}</div>
+      <div className="mx-auto max-w-6xl lg:max-w-none">{children}</div>
     </div>
   );
 }
