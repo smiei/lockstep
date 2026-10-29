@@ -4,10 +4,13 @@ import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
 import { UI_SCALE_DEFAULT, UI_SCALE_STEPS } from "@/lib/uiScale";
 import { useUiScale } from "@/lib/useUiScale";
+import { SHELL_COLORS, SHELL_COLOR_DEFAULT, SHELL_HEX } from "@/lib/shellColor";
+import { useShellColor } from "@/lib/useShellColor";
 import { Button } from "@/components/ui/Button";
 import { Modal } from "@/components/ui/Modal";
 
-// Opened from the header menu. A real slider rather than five buttons because
+// Opened from the header menu: the shell colour and the UI size, both per
+// device. A real slider rather than five buttons because
 // the whole interface resizes live underneath it, which makes dragging it the
 // obvious way to find the size you want. (`type="range"` is fine here - the
 // convention test bans `type="number"`, whose mobile UA validation fights a
@@ -16,6 +19,7 @@ export function AppearanceDialog({ open, onClose }: { open: boolean; onClose: ()
   const { lang } = useLanguage();
   const t = translations[lang].appearance;
   const [index, setIndex] = useUiScale();
+  const [color, setColor] = useShellColor();
 
   return (
     <Modal
@@ -26,8 +30,11 @@ export function AppearanceDialog({ open, onClose }: { open: boolean; onClose: ()
         <div className="flex w-full justify-between gap-2">
           <Button
             size="sm"
-            disabled={index === UI_SCALE_DEFAULT}
-            onClick={() => setIndex(UI_SCALE_DEFAULT)}
+            disabled={index === UI_SCALE_DEFAULT && color === SHELL_COLOR_DEFAULT}
+            onClick={() => {
+              setIndex(UI_SCALE_DEFAULT);
+              setColor(SHELL_COLOR_DEFAULT);
+            }}
           >
             {t.reset}
           </Button>
@@ -37,6 +44,39 @@ export function AppearanceDialog({ open, onClose }: { open: boolean; onClose: ()
         </div>
       }
     >
+      {/* The shell colour: rail, top bar and primary buttons. Radio inputs
+          under the swatches keep it a real, keyboard-operable choice. */}
+      <fieldset className="mb-5">
+        <legend className="mb-1.5 block text-xs font-medium text-ink-muted">{t.colorLabel}</legend>
+        <div className="grid grid-cols-2 gap-2">
+          {SHELL_COLORS.map((option) => (
+            <label
+              key={option}
+              className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-md border px-2.5 py-2 text-sm transition-colors has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-focus ${
+                color === option
+                  ? "border-ink bg-hover font-semibold text-ink"
+                  : "border-line-strong text-ink-muted hover:bg-hover hover:text-ink"
+              }`}
+            >
+              <input
+                type="radio"
+                name="shell-color"
+                value={option}
+                checked={color === option}
+                onChange={() => setColor(option)}
+                className="sr-only"
+              />
+              <span
+                aria-hidden
+                className="h-5 w-5 shrink-0 rounded-sm border border-line-strong"
+                style={{ backgroundColor: SHELL_HEX[option] }}
+              />
+              {t.colors[option]}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
       <label htmlFor="ui-scale" className="mb-1 block text-xs font-medium text-ink-muted">
         {t.sizeLabel}
       </label>

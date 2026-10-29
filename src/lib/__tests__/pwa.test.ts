@@ -60,10 +60,10 @@ describe("public/manifest.webmanifest", () => {
     // dark mode, which is the common case for this app. Pinning dark instead
     // of mirroring globals.css's light/dark pair is a deliberate, asymmetric
     // trade-off - see the "Android PWA status-bar bug" note in CLAUDE.md.
-    // Since the redesign the dark value is the shell green (--shell): light
-    // glyphs read on it at 12:1, and it continues the phone's green top bar.
+    // Since the redesign it is the logo tile's Pokéball red: light glyphs
+    // read on it at 5.9:1, and the splash screen matches the icon.
     expect(manifest.theme_color).toBe(manifest.background_color);
-    expect(manifest.theme_color).toBe("#0f3d30");
+    expect(manifest.theme_color).toBe("#cc0000");
   });
 
   it("sets an explicit id", () => {
