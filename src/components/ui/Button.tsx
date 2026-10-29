@@ -15,12 +15,15 @@ type Size = "sm" | "md";
 
 const VARIANTS: Record<Variant, string> = {
   primary: "bg-accent text-accent-ink hover:opacity-90",
-  secondary: "border border-line-strong text-ink-muted hover:bg-hover hover:text-ink",
+  // A tray-white control with a sage rule - it sits on the ground and on a
+  // tray alike. Inside the green shell the same tokens give a green-on-green
+  // control (globals.css `.shell`).
+  secondary: "border border-line-strong bg-panel text-ink hover:bg-hover",
   // Symmetric with `danger`: an outline in the semantic colour, filling in on
   // hover. "Add to team", "evolve" and the quick-catch confirm all had this
   // exact string inline.
-  success: "border border-success-line text-success hover:bg-success-bg",
-  danger: "border border-danger-line text-danger hover:bg-danger-bg",
+  success: "border border-success-line bg-panel text-success hover:bg-success-bg",
+  danger: "border border-danger-line bg-panel text-danger hover:bg-danger-bg",
   // The destructive counterpart of `primary`: for the one button that carries
   // out the deletion, not for every button that could lead to one.
   "danger-solid": "bg-danger-solid text-danger-solid-ink hover:opacity-90",
@@ -66,7 +69,7 @@ export function Button({
       disabled={disabled || loading}
       aria-busy={loading || undefined}
       className={cn(
-        "inline-flex shrink-0 items-center justify-center gap-2 rounded-md font-medium transition-colors",
+        "inline-flex shrink-0 items-center justify-center gap-2 rounded-md font-semibold transition-colors",
         "disabled:cursor-not-allowed disabled:opacity-50",
         VARIANTS[variant],
         iconOnly ? ICON_SIZES[size] : SIZES[size],

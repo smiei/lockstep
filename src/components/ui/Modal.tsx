@@ -117,11 +117,21 @@ export function Modal({
           // bg-panel, because the body scrolls underneath it.
           className="absolute right-2 top-2 z-10 flex h-10 w-10 items-center justify-center rounded-md bg-panel text-ink-subtle transition-colors hover:bg-hover hover:text-ink"
         >
-          ✕
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            aria-hidden
+            className="h-5 w-5"
+          >
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
         </button>
       )}
       {!titleHidden && (
-        <h2 className="border-b border-line px-4 py-3 text-base font-semibold text-ink">{title}</h2>
+        <h2 className="border-b border-line px-4 py-3 text-lg font-bold tracking-tight text-ink">{title}</h2>
       )}
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">{children}</div>
       {footer && (
@@ -150,8 +160,10 @@ export function Modal({
   };
 
   return (
+    // `unshell`: a dialog opened from the green shell (run switcher, gear
+    // menu) renders in place, so it would otherwise take the shell's colours.
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      className="unshell fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
       onClick={dismissOnBackdrop ? onClose : undefined}
     >
       {onSubmit ? (

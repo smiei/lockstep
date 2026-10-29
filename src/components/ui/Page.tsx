@@ -25,9 +25,9 @@ export function PageHeader({
       )}
     >
       <div>
-        <h1 className="text-xl font-semibold text-ink">{title}</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h1>
         {description && (
-          <p className="mt-1 max-w-prose text-sm text-ink-subtle">{description}</p>
+          <p className="mt-1.5 max-w-prose text-sm text-ink-muted">{description}</p>
         )}
       </div>
       {children}
@@ -36,7 +36,9 @@ export function PageHeader({
 }
 
 // A titled block within a page. Four to five variants of this eyebrow existed
-// (uppercase or not, text-sm or text-xs, mb-3 or mb-2, coloured or not).
+// (uppercase or not, text-sm or text-xs, mb-3 or mb-2, coloured or not). Since
+// the redesign it is a plain bold heading, not a tracked small-caps eyebrow:
+// the heading carries its own weight.
 export function Section({
   title,
   actions,
@@ -53,9 +55,7 @@ export function Section({
       {(title || actions) && (
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           {title && (
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">
-              {title}
-            </h2>
+            <h2 className="text-lg font-bold tracking-tight text-ink">{title}</h2>
           )}
           {actions}
         </div>
@@ -77,7 +77,7 @@ export function EmptyState({
   action?: ReactNode;
 }) {
   return (
-    <div className="rounded-lg border border-dashed border-line px-6 py-10 text-center">
+    <div className="rounded-md border border-dashed border-line-strong bg-panel/60 px-6 py-10 text-center">
       <p className="text-sm text-ink-muted">{title}</p>
       {hint && <p className="mt-1 text-xs text-ink-subtle">{hint}</p>}
       {action && <div className="mt-4 flex justify-center">{action}</div>}

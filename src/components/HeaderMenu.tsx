@@ -333,7 +333,11 @@ export function HeaderMenu({
         // sticky at z-40 now, and this menu opens straight down across it.
         // A dialog opened FROM here is also z-50 but sits later in the DOM, so
         // it still paints on top.
-        <div className="absolute right-0 z-50 mt-1 w-60 overflow-hidden rounded-lg border border-line bg-panel py-1 shadow-lg">
+        // From lg up the gear sits at the foot of the side rail, so the menu
+        // opens upwards and left-aligned, narrow enough to stay inside the
+        // rail's scroll box. `unshell`: the menu is a page surface, not part
+        // of the green field (globals.css).
+        <div className="unshell absolute right-0 z-50 mt-1 w-60 overflow-hidden rounded-lg border border-line bg-panel py-1 shadow-lg lg:bottom-full lg:left-0 lg:right-auto lg:mb-1 lg:mt-0 lg:w-52">
           {mounted && !isStandalone && (
             <>
               <MenuItem onClick={handleInstall}>{t.install.menuLabel}</MenuItem>

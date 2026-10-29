@@ -12,6 +12,18 @@ export type RunSummary = {
   gameId: string;
 };
 
+// The shell's "next level cap" card, per listed run: built server-side in the
+// root layout (it needs LevelCapProgress and the pack's levelcaps.json), picked
+// client-side by the same ?run= resolution the run switcher uses.
+export type RunCapSummary = {
+  accessKey: string;
+  // The first cap in the pack's order that is not ticked off yet - null once
+  // every capped fight is done.
+  next: { names: LocalizedNames; location: LocalizedNames; level: number } | null;
+  badges: number;
+  badgesTotal: number;
+};
+
 // Client-safe slice of data.ts's GameInfo (components can't import data.ts -
 // it reads from node:fs). games[0] is the default pack (lowest sort).
 export type GameSummary = {
@@ -44,6 +56,10 @@ export type SoulLinkView = {
   routeId: number;
   // All of the group's route names joined with " + ".
   routeName: string;
+  // The catalogue number on the group's specimen label (src/lib/routeNumbers.ts):
+  // the lowest of its routes'. null when every route is hidden (a free-team
+  // member is not a place).
+  routeNumber: number | null;
   status: LinkStatus;
   // The lowest team slot the group holds - where its card sits.
   teamPosition: number | null;

@@ -51,7 +51,7 @@ export function DeathPointPicker({
         disabled={pending}
         aria-label={t.deathPoint}
         onChange={(e) => handleChange(e.target.value)}
-        className={`h-10 max-w-[15rem] truncate rounded-md border bg-transparent px-2 text-xs disabled:cursor-not-allowed disabled:opacity-50 ${
+        className={`select-chevron h-10 max-w-[15rem] truncate rounded-md border bg-transparent px-2 text-xs disabled:cursor-not-allowed disabled:opacity-50 ${
           recorded
             ? "border-line text-ink-muted"
             : "border-dashed border-warning-line text-warning"

@@ -39,7 +39,10 @@ export function Navigation() {
   }, [pathname, order, hidden]);
 
   return (
-    <nav ref={navRef} className="flex justify-center-safe gap-1 overflow-x-auto px-4 sm:px-6">
+    <nav
+      ref={navRef}
+      className="flex justify-center-safe gap-1 overflow-x-auto px-4 sm:px-6 lg:flex-col lg:justify-start lg:gap-0.5 lg:overflow-visible lg:px-3"
+    >
       {items.map((item) => {
         const isActive = pathname === item.href;
         const href = run ? `${item.href}?run=${run}` : item.href;
@@ -55,10 +58,13 @@ export function Navigation() {
             // active: gives the tap something to acknowledge in the moment before the
             // route commits. With loading.tsx in place that gap is now short, but
             // on a slow tunnel it is still perceptible.
-            className={`flex min-w-16 shrink-0 flex-col items-center gap-1 whitespace-nowrap border-b-2 px-3 pt-2 pb-2 text-xs font-medium transition-colors active:bg-hover ${
+            // From lg up the strip is the rail's vertical list: icon beside
+            // the label, and the active tab a pale label on the green field
+            // instead of an underline.
+            className={`flex min-w-16 shrink-0 flex-col items-center gap-1 whitespace-nowrap border-b-2 px-3 pt-2 pb-2 text-xs font-medium transition-colors active:bg-hover lg:h-10 lg:min-w-0 lg:flex-row lg:gap-3 lg:rounded-md lg:border-b-0 lg:px-3 lg:py-0 lg:text-sm ${
               isActive
-                ? "border-ink text-ink"
-                : "border-transparent text-ink-muted hover:text-ink"
+                ? "border-ink text-ink lg:bg-accent lg:font-semibold lg:text-accent-ink"
+                : "border-transparent text-ink-muted hover:text-ink lg:hover:bg-hover"
             }`}
           >
             <NavIcon href={item.href} className="h-5 w-5" />

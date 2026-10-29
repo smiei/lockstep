@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/components/Navigation.tsx"
+        ],
+        "createdAt": "2026-10-28T20:20:33.668Z",
+        "reason": "agent triage: the 2px underline is the phone tab strip's active marker; from lg the link is lg:border-b-0 lg:rounded-md, so the border and the radius never apply at the same time"
+      }
+    ]
+  }
+}
