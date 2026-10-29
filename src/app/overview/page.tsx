@@ -174,7 +174,8 @@ export default async function OverviewPage({
   }));
   const caps = levelCapItems.filter((c) => c.max_level !== null);
   const capCurrent = caps.filter((c) => defeatedIds.has(c.id)).at(-1)?.max_level ?? null;
-  const capNext = caps.find((c) => !defeatedIds.has(c.id))?.max_level ?? null;
+  const nextCapEntry = caps.find((c) => !defeatedIds.has(c.id)) ?? null;
+  const capNext = nextCapEntry?.max_level ?? null;
 
   // Progress bars (Encounter tab's + Journey tab's), mirrored at the top of
   // the Overview tab.
@@ -376,6 +377,8 @@ export default async function OverviewPage({
     teamSummeMax,
     capCurrent,
     capNext,
+    // Who the next cap belongs to, for the run sheet's headline.
+    nextCap: nextCapEntry ? { names: nextCapEntry.names, location: nextCapEntry.location } : null,
   };
 
   const pokemonList = getPokemonListForGame(game);
