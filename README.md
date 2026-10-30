@@ -53,12 +53,12 @@ It runs on your own computer or home server, and everyone opens it in a browser.
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/40827efc-efef-4279-8e0f-23b82a473e86" alt="Team tab: the six team slots as specimen trays, each linked pair with its label, types, base stats and evolutions"></td>
-    <td><img src="https://github.com/user-attachments/assets/92661acc-217f-4974-ae69-73f3f2148b34" alt="Encounter tab: one catch per route and player"></td>
+    <td><img src="https://github.com/user-attachments/assets/c779d1b7-d5df-4415-b17f-39353f910860" alt="Team tab: the six team slots as specimen trays, each linked pair with its label, types, base stats and evolutions"></td>
+    <td><img src="https://github.com/user-attachments/assets/4ac44ff5-1e5f-462f-aace-d3643884258d" alt="Encounter tab: one catch per route and player"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/3b4c835b-b8c8-4ebd-9663-bf09d4723f4b" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
-    <td><img src="https://github.com/user-attachments/assets/de2fe094-2d92-4f28-985e-133c5511ce41" alt="Overview: the next level cap, progress, badges and per-player figures"></td>
+    <td><img src="https://github.com/user-attachments/assets/853ded65-2508-472a-8b70-019227f7cb28" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
+    <td><img src="https://github.com/user-attachments/assets/167c8e9d-dde3-46a2-b731-e40b9679caf1" alt="Overview: the next level cap, progress, badges and per-player figures"></td>
   </tr>
 </table>
 
@@ -67,7 +67,7 @@ It runs on your own computer or home server, and everyone opens it in a browser.
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0280cf00-1b19-4321-847f-dae7317122b0" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
+  <img src="https://github.com/user-attachments/assets/c29125ff-d726-4b78-8968-1a81e59c259b" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
 </p>
 
 ## Quick start
