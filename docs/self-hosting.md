@@ -58,15 +58,28 @@ docker run -d --name nuzlocke-tracker -p 3000:3000 \
 
 ### Volumes (e.g. Unraid)
 
+Most setups need **two** mounts, or three if you have your own trainer pictures:
+
 | Container path | Purpose |
 | --- | --- |
-| `/app/db` | SQLite database. **Required** — this is your data. |
-| `/app/public/pokemon-sprites` | Pokémon sprites, one subfolder per sprite set. Filled automatically on start with whatever the game packs need. Recommended, so they survive image updates. |
-| `/app/public/ball-sprites` | Poké Ball item sprites. Filled automatically; optional. |
-| `/app/public/badges` | Gym badge icons. Filled automatically; optional. |
-| `/app/public/trainers` | Your own trainer pictures (optional, see below). |
-| `/app/data` | Override for the game data (optional; leave it out to use the data built into the image). |
-| `/app/branding` | Your own app icon (optional, see below). |
+| `/app/db` | SQLite database. **Required**, because this is your data. |
+| `/app/public/pokemon-sprites` | Pokémon sprites, one subfolder per sprite set. **Recommended:** without it, every new container (each image update) downloads them again, which takes a few minutes. |
+| `/app/public/trainers` | Your own trainer pictures. Only if you use them (see below). |
+
+Everything else is optional and usually best left out:
+
+| Container path | Purpose |
+| --- | --- |
+| `/app/public/ball-sprites` | Poké Ball item sprites. Small; downloaded on start if missing. |
+| `/app/public/badges` | Gym badge icons. Small; downloaded on start if missing. |
+| `/app/data` | Your own copy of the game data. The folder must hold a complete copy of the image's `data/`, because an empty mount hides the built-in data. Leave it out to use the data from the image. |
+| `/app/branding` | Your own app icon (see below). |
+
+> **Don't mount `/app/public` as a whole.** The folder also holds files that ship with the image and change with updates: the web app manifest, the service worker and the app icons.
+> - **Host folder (Unraid):** it starts empty, so the app has no icons and can no longer be installed on a phone.
+> - **Docker named volume:** Docker fills it only once, when the volume is created. After that, no image update reaches those files, without any error.
+>
+> Mount only the subfolders above.
 
 The only required environment variable is `DATABASE_URL=file:/app/db/nuzlocke.db`. The app listens on port `3000` inside the container.
 
