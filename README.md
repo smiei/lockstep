@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/35f456db-2b84-4893-98c6-a440a09445e6" alt="Your Pokémon faints. Your friend's goes with it." width="100%">
+  <img src="https://github.com/user-attachments/assets/22c168c6-64f1-4d59-9598-12db63b1e570" alt="Lockstep, the SoulLink Nuzlocke tracker: Gen 1-5, Infinite Fusion, 2-4 players or solo, 5 languages, free and self-hosted" width="100%">
 </p>
 
 <h1 align="center">SoulLink Nuzlocke Tracker</h1>
@@ -15,7 +15,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
-https://github.com/user-attachments/assets/30c82361-862b-41bc-870c-b4f4be246e22
+https://github.com/user-attachments/assets/04eee5f1-df8e-44cb-9464-106f85dc3f99
 
 ## What is this?
 
