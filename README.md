@@ -5,7 +5,7 @@
 <h1 align="center">SoulLink Nuzlocke Tracker</h1>
 
 <p align="center">
-  Track your Pokémon Nuzlocke runs — solo, or as a SoulLink with up to four friends.<br>
+  A Nuzlocke tracker built around SoulLink: 2–4 players, linked deaths, the rules of your generation.<br>
   Free, self-hosted, and live on every device at the table.
 </p>
 
@@ -17,37 +17,52 @@
 
 https://github.com/user-attachments/assets/04eee5f1-df8e-44cb-9464-106f85dc3f99
 
-## What is this?
+<details>
+<summary>New to the format?</summary>
 
-A **Nuzlocke** is a self-imposed Pokémon challenge:
-- you may catch only the first Pokémon you meet in each area;
-- a Pokémon that faints counts as dead.
+A **Nuzlocke** lets you catch only the first Pokémon in each area, and a fainted Pokémon is dead. In a **SoulLink**, several players run at the same time and each area's catches are linked: one dies, its partners die too.
 
-In a **SoulLink**, two or more players run the game at the same time, and the catches from each area are linked: when one faints, its partners go with it.
+</details>
 
-That is a lot of bookkeeping, and it is what this tracker does for you:
-- who caught what, and where;
-- which pairs formed and who is on the team;
-- who died, how, and what the next level cap is.
+## What sets it apart
 
-It runs on your own computer or home server, and everyone opens it in a browser. Phones, laptops and the PC next to the console all see every change live.
+You know the rules. This is what the tracker handles so you don't have to.
 
-## Highlights
+### SoulLink, the way you actually play it
+- **2–4 players or solo**, each with their own catches per route. Every device at the table sees each change live.
+- **A link forms only once every player has caught on that route.** If one player's encounter fled or was knocked out, the pair never formed: the survivor stays in the box and never shows up as a link.
+- **Marking a link dead takes all of its Pokémon**, and records who lost theirs and how ("lost by Red · Lt. Surge's Raichu"). The run's **Memorial** keeps the list.
+- **Your team is linked too.** A team slot holds the whole link, and new catches fill free slots on their own.
 
-- **SoulLink for 2–4 players, or solo.** Linked catches, linked deaths and a shared team, per player.
-- **Encounter log** with Species Clause and Shiny Clause warnings, nicknames, and an "open routes only" view.
-- **Team builder.** Evolve and devolve with the evolution method shown, base-stat totals now and once fully evolved, and auto-filling team slots.
-- **Battle & Catch:**
-  - a catch-rate calculator using the formula and ball list of your game's generation;
-  - a battle scout with the opponent's moves by level, the type matrix and how your team matches up.
-- **Journey** with every gym leader, rival and Elite Four level cap, and the badges you earned.
-- **Overview** with team weaknesses, offensive gaps, stats and a **Memorial** for the fallen, with the cause of death.
-- **Right for the game you play:**
-  - 9 game packs from Red/Blue to Black/White, plus the fan game **Pokémon Infinite Fusion**;
-  - the type chart, stats, catch rates and move names as they were in that generation.
-- **Blind flight** mode for the hardcore: hides every calculated hint.
-- **Installable app** for your phone's home screen, in **5 languages** (English, German, French, Spanish, Italian).
-- **Backups** of one run or all runs, importable anywhere.
+### Clauses that know the difference
+- **Species Clause** in three variants:
+  - across all players;
+  - per player;
+  - per player, but with a formed link locking its families for everyone.
+- Evolution families, statics and fusions are handled.
+- **Shiny Clause**: a shiny never locks its family.
+- The clauses only warn, they never block. Your group's house rules win.
+- **Rule presets** carry a ruleset, including your written rules, from one run to the next.
+
+### Accurate to the generation you're playing
+- **The type chart, base stats, catch rates and move names your game actually had:** Gen 1's single Special, no Fairy type before Gen 6, pre-buff stats, old move names.
+- **Catch rates** use that generation's formula and ball list, Apricorn Balls included.
+- **Evolution overrides** for randomizers and ROM hacks: impossible, easier or time-based evolutions.
+
+### Planning the next fight
+- **Level caps** for every gym leader, rival and Elite Four member, with the next cap always in view.
+- **Battle scout:** the opponent's moves by level and its matchup against each player's team.
+- **Team coverage** (weaknesses and offensive gaps), judged at your last level cap rather than at level 100.
+- **Base-stat totals** now and fully evolved, with a note when an evolution is possible within the cap.
+
+### And also
+- **[Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18)** (Classic and Remix): fusions are one battle unit, and a fused catch locks both families.
+- **Custom routes** for areas a game pack doesn't list.
+- **Free-team mode** for runs that aren't Nuzlockes.
+- **Blind flight**, which hides every calculated hint.
+- **An installable phone app** in 5 languages: English, German, French, Spanish and Italian.
+- **Backups** of one run or all of them.
+- No account, no cloud: it runs on your PC or home server.
 
 ## Screenshots
 
