@@ -53,21 +53,21 @@ It runs on your own computer or home server, and everyone opens it in a browser.
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/42b2c23c-30e3-42f1-ad45-871061c0e66a" alt="Team tab: each route's linked pair, with types, base stats and evolutions"></td>
-    <td><img src="https://github.com/user-attachments/assets/4cb4028b-d157-489c-ba5d-74d2ae18325e" alt="Encounter tab: one catch per route and player"></td>
+    <td><img src="https://github.com/user-attachments/assets/40827efc-efef-4279-8e0f-23b82a473e86" alt="Team tab: the six team slots as specimen trays, each linked pair with its label, types, base stats and evolutions"></td>
+    <td><img src="https://github.com/user-attachments/assets/92661acc-217f-4974-ae69-73f3f2148b34" alt="Encounter tab: one catch per route and player"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/102c23b9-6d99-4461-815a-559bbe2a004e" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
-    <td><img src="https://github.com/user-attachments/assets/38719580-8110-41a7-b3e1-c5c6a9be7f78" alt="Overview: progress, stats and team coverage"></td>
+    <td><img src="https://github.com/user-attachments/assets/3b4c835b-b8c8-4ebd-9663-bf09d4723f4b" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
+    <td><img src="https://github.com/user-attachments/assets/de2fe094-2d92-4f28-985e-133c5511ce41" alt="Overview: the next level cap, progress, badges and per-player figures"></td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2bf676e0-4f29-4d83-9d44-082a405845b0" alt="Memorial: who was lost, by whom, how and when" width="70%">
+  <img src="https://github.com/user-attachments/assets/a8a442e4-01e1-4c69-a9eb-3ee3002cabf1" alt="Memorial: who was lost, by whom, how and when" width="70%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8e094809-5384-4259-ba8e-d7a61c4e2a13" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
+  <img src="https://github.com/user-attachments/assets/0280cf00-1b19-4321-847f-dae7317122b0" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
 </p>
 
 ## Quick start

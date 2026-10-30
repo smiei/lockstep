@@ -215,10 +215,10 @@ export function EncounterEditor({
     if (!conflict) return null;
     return t.actions.speciesLocked(
       pokemonName(picked, lang),
-      t.player[conflict.player],
+      playerLabel(conflict.player),
       placeName(conflict, encounters, routes, lang),
     );
-  }, [settings, shiny, selectedId, routeIsStatic, clauseEncounters, encounters, pokemonList, routes, lang, t]);
+  }, [settings, shiny, selectedId, routeIsStatic, clauseEncounters, encounters, pokemonList, routes, lang, t, playerLabel]);
 
   function persist(next: {
     pokemonId: number;
