@@ -92,6 +92,10 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
       ref={containerRef}
       className="relative flex w-full flex-wrap items-center gap-1.5 sm:w-auto lg:w-full"
     >
+      {/* The list hangs off the box itself, not off the whole block: from lg
+          the block also holds the "new run" row, and a list opened under
+          that covered the tabs with a strip of the active one showing. */}
+      <div className="relative min-w-0 flex-1 sm:w-64 sm:flex-none lg:w-full lg:flex-none">
       <button
         type="button"
         disabled={pending || runs.length === 0}
@@ -99,7 +103,7 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
         {...triggerProps}
         aria-label={activeRun ? `${t.switchLabel}: ${activeRun.name}` : t.switchLabel}
         title={t.switchLabel}
-        className="flex min-h-10 min-w-0 flex-1 items-center gap-2 rounded-md border border-line-strong bg-panel px-3 py-1.5 text-left text-ink transition-colors hover:bg-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-64 sm:flex-none lg:w-full lg:flex-none"
+        className="flex min-h-10 w-full min-w-0 items-center gap-2 rounded-md border border-line-strong bg-panel px-3 py-1.5 text-left text-ink transition-colors hover:bg-hover disabled:cursor-not-allowed disabled:opacity-50"
       >
         <span className="min-w-0 flex-1">
           <span className="block truncate text-sm font-semibold">{activeRun?.name ?? "—"}</span>
@@ -117,6 +121,37 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
         </span>
         <ChevronDownIcon className="h-4 w-4 shrink-0 text-ink-muted" />
       </button>
+      {open && (
+        // `unshell`: a page surface that opens out of the green field. A
+        // strong border and a deep shadow, because in dark mode the panel
+        // otherwise melts into the rail and the dark page beside it; rows are
+        // ruled apart, and the open run carries an accent bar, not just bold.
+        <ul className="unshell absolute -left-1 top-full z-50 mt-1 max-h-96 w-[calc(100%+0.5rem)] min-w-64 divide-y divide-line overflow-y-auto rounded-lg border border-line-strong bg-panel shadow-2xl">
+          {runs.map((run) => {
+            const active = run.accessKey === activeRun?.accessKey;
+            return (
+              <li key={run.id}>
+                <button
+                  type="button"
+                  onClick={() => handlePick(run.accessKey)}
+                  aria-current={active ? "true" : undefined}
+                  className={`relative flex min-h-12 w-full flex-col items-start gap-0.5 py-2 pl-4 pr-3 text-left transition-colors hover:bg-hover ${
+                    active ? "bg-sunken" : ""
+                  }`}
+                >
+                  {active && <span aria-hidden className="absolute inset-y-1.5 left-1 w-1 rounded-full bg-accent" />}
+                  <span className={`text-sm text-ink ${active ? "font-semibold" : "font-medium"}`}>{run.name}</span>
+                  <span className="text-xs text-ink-muted">
+                    {run.gameId === defaultGameId ? "" : `${gameName(run)} · `}
+                    {modeLine(run)}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      </div>
       {/* Two triggers for the one dialog below - exactly one is visible. */}
       <Button
         size="sm"
@@ -142,32 +177,6 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
           {t.newRunTitle}
         </Button>
       </div>
-      {open && (
-        // `unshell`: a page surface that opens out of the green field.
-        <ul className="unshell absolute left-0 top-full z-50 mt-1 max-h-80 w-full min-w-56 overflow-y-auto rounded-lg border border-line bg-panel py-1 shadow-lg">
-          {runs.map((run) => {
-            const active = run.accessKey === activeRun?.accessKey;
-            return (
-              <li key={run.id}>
-                <button
-                  type="button"
-                  onClick={() => handlePick(run.accessKey)}
-                  aria-current={active ? "true" : undefined}
-                  className={`flex min-h-10 w-full flex-col items-start px-3 py-1.5 text-left hover:bg-hover ${
-                    active ? "bg-hover" : ""
-                  }`}
-                >
-                  <span className={`text-sm text-ink ${active ? "font-semibold" : ""}`}>{run.name}</span>
-                  <span className="text-xs text-ink-muted">
-                    {run.gameId === defaultGameId ? "" : `${gameName(run)} · `}
-                    {modeLine(run)}
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      )}
       <NewRunDialog
         lang={lang}
         open={dialogOpen}
