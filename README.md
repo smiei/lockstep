@@ -144,6 +144,7 @@ Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and eve
 | `2.0` | Full UI overhaul: design tokens, shared component primitives, loading/error boundaries, toasts, pinned tab strip, keyboard-navigable dropdowns, one modal implementation, 40/44px touch targets. |
 | `3.0` | Pokémon Infinite Fusion (Classic and Remix: fusions, catches that already are fusions, the game's own species/move/capture data), SoulLink for 3 or 4 players, and per-player Species Clause variants. Backup format v4. |
 | `3.1` | Runs are addressed by an unguessable access key instead of their numeric id (old `?run=<number>` links still open and are rewritten). Accessibility pass from a UI audit: readable type chips, text greys and focus ring, labelled Encounter and Battle & Catch fields, keyboard access to the Pokédex, a title per tab, drawn icons instead of emoji. Runs without Docker via `npm run setup` and with a one-click Pinokio launcher. Now MIT-licensed. |
+| `4.0` | Redesign as a natural-history collection (the app is now called **Lockstep** in its interface): sage ground, specimen trays and labels, a green side rail on desktop, a new logo and fonts. The Team tab becomes a drawer of six trays plus a Box and Memorial column; Overview opens with one run sheet; the Pokédex card is a field-guide entry. Per-device shell colour (green, Poké Ball red, blue, yellow). Docker image for amd64 and arm64, also on GHCR. |
 
 ## Acknowledgements
 
@@ -155,7 +156,7 @@ This project stands on the work of others. Thank you!
 - **[Pokémon League Badges](https://github.com/SteGriff/pokemon-badges)** by Stephen Griffiths — the badge icons (CC BY 3.0, cropped from the sheet).
 - **[PokéWiki](https://www.pokewiki.de/)**, **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics and level caps.
 - **[Pokémon Showdown](https://pokemonshowdown.com/)** — trainer sprites for the optional public deployment.
-- Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Geist](https://vercel.com/font) font.
+- Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Familjen Grotesk](https://fonts.google.com/specimen/Familjen+Grotesk) and [Red Hat Mono](https://fonts.google.com/specimen/Red+Hat+Mono) fonts.
 
 Licenses and attributions in full: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
