@@ -65,6 +65,15 @@ describe("parseRunSettings", () => {
 });
 
 describe("serializePresetSettings", () => {
+  it("permanent blindflug forces blindflug on, whatever is stored", () => {
+    const settings = parseRunSettings('{"blindflug": false, "blindflugPermanent": true}');
+    expect(settings.blindflug).toBe(true);
+    expect(settings.blindflugPermanent).toBe(true);
+    // Switching the lock off again leaves the stored blindflug in charge.
+    expect(parseRunSettings('{"blindflug": false, "blindflugPermanent": false}').blindflug).toBe(false);
+    expect(parseRunSettings("{}").blindflugPermanent).toBe(false);
+  });
+
   it("carries blindflug, because it is a house rule about the whole run", () => {
     // Unlike debugMode (per device, excluded), Blindflug is something both
     // players agreed to, so a saved ruleset must bring it along.
