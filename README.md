@@ -161,6 +161,7 @@ Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and eve
 | `3.1` | Runs are addressed by an unguessable access key instead of their numeric id (old `?run=<number>` links still open and are rewritten). Accessibility pass from a UI audit: readable type chips, text greys and focus ring, labelled Encounter and Battle & Catch fields, keyboard access to the Pokédex, a title per tab, drawn icons instead of emoji. Runs without Docker via `npm run setup` and with a one-click Pinokio launcher. Now MIT-licensed. |
 | `4.0` | Redesign as a natural-history collection (the app is now called **Lockstep** in its interface): sage ground, specimen trays and labels, a green side rail on desktop, a new logo and fonts. The Team tab becomes a drawer of six trays plus a Box and Memorial column; Overview opens with one run sheet; the Pokédex card is a field-guide entry. Per-device shell colour (green, Poké Ball red, blue, yellow). Docker image for amd64 and arm64, also on GHCR. |
 | `4.1` | The logo is back in the shell's bottle green (4.0 shipped it on a red tile); the app icon, splash screen and status bar follow. |
+| `4.2` | The run list opens right under the run box and reads clearly in dark mode (ruled rows, the open run marked). Clearer Docker volume guide and a by-game reference for trainer pictures. |
 
 ## Acknowledgements
 
