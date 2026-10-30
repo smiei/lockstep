@@ -69,6 +69,7 @@ const markdownComponents = {
 const TOGGLE_ORDER: BooleanSettingKey[] = [
   "freeTeam",
   "blindflug",
+  "blindflugPermanent",
   "speciesClause",
   // SoulLink only: the per-player variants of the clause.
   "speciesClausePerPlayer",
@@ -92,6 +93,7 @@ const TOGGLE_ORDER: BooleanSettingKey[] = [
 
 // A toggle's parents, nearest last. The depth of the chain is its indentation.
 const CLAUSE_PARENTS: Partial<Record<BooleanSettingKey, BooleanSettingKey[]>> = {
+  blindflugPermanent: ["blindflug"],
   speciesClausePerPlayer: ["speciesClause"],
   speciesClauseLinkedLocksAll: ["speciesClause", "speciesClausePerPlayer"],
   staticsExemptFromClause: ["speciesClause"],
@@ -282,7 +284,13 @@ export function RulesView({
         label={t.toggles[key].label}
         description={t.toggles[key].description}
         on={local[key]}
-        disabled={pending || parents.some((parent) => !local[parent])}
+        // Permanent Blindflug holds its parent on: lifting it goes through the
+        // child switch, which is the whole point of the rule.
+        disabled={
+          pending ||
+          parents.some((parent) => !local[parent]) ||
+          (key === "blindflug" && local.blindflugPermanent)
+        }
         depth={parents.length}
         onToggle={() => handleToggle(key)}
       />

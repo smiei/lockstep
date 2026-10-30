@@ -26,6 +26,15 @@ function BlindfoldIcon({ className }: { className?: string }) {
   );
 }
 
+function LockIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} className={className} aria-hidden>
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path strokeLinecap="round" d="M8 11V8a4 4 0 0 1 8 0v3" />
+    </svg>
+  );
+}
+
 // Sits next to the theme toggle, because that is where a "how does this thing
 // present itself to me" switch belongs. It writes a RUN setting though, not a
 // device one: Blindflug is a house rule both players agreed to, so it syncs.
@@ -48,7 +57,11 @@ export function BlindflugToggle({
   const [flash, setFlash] = useState(false);
 
   const run = pickActiveRun(runs, searchParams.get("run"));
-  const on = run ? parseRunSettings(run.settingsJson).blindflug : false;
+  const parsed = run ? parseRunSettings(run.settingsJson) : null;
+  const on = parsed?.blindflug ?? false;
+  // Permanent Blindflug (Rules tab): the button stays as the run's badge but
+  // no longer switches anything.
+  const locked = parsed?.blindflugPermanent ?? false;
 
   // Fire the sweep on the TRANSITION into the mode, not in the click handler.
   // Blindflug is a run setting, so updateRunSettings publishes over SSE and
@@ -86,14 +99,18 @@ export function BlindflugToggle({
       <button
         type="button"
         onClick={toggle}
-        disabled={pending}
+        disabled={pending || locked}
         aria-pressed={on}
-        aria-label={on ? t.disable : t.enable}
-        title={on ? t.disable : t.enable}
+        aria-label={locked ? t.locked : on ? t.disable : t.enable}
+        title={locked ? t.locked : on ? t.disable : t.enable}
         // Active it grows from an icon square into a labelled pill. The mode
         // is not a preference you set once and forget - it should be legible
         // from across the room which state the run is in.
-        className={`flex h-10 items-center justify-center gap-2 rounded-md border font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+        // Locked keeps full colour (it is a state, not an unavailable
+        // control); only the pointer changes.
+        className={`flex h-10 items-center justify-center gap-2 rounded-md border font-semibold transition-colors disabled:cursor-not-allowed ${
+          locked ? "" : "disabled:opacity-50"
+        } ${
           on
             ? "border-blindflug bg-blindflug/10 px-3 text-blindflug"
             : "w-10 border-line text-ink-muted hover:bg-hover hover:text-ink"
@@ -101,6 +118,7 @@ export function BlindflugToggle({
       >
         {pending ? <Spinner /> : <BlindfoldIcon className="h-5 w-5" />}
         {on && <span className="text-xs uppercase tracking-wider">{t.name}</span>}
+        {locked && <LockIcon className="h-3.5 w-3.5" />}
       </button>
 
       {/* Hazard tape across the top of the viewport: the run is sealed off.

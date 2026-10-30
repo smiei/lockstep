@@ -42,6 +42,11 @@ export type RunSettings = {
   // material rather than an answer. A house rule about how the run is played,
   // so it is a run setting (both players, all devices) and travels in presets.
   blindflug: boolean;
+  // Permanent Blindflug: for a run played without any help at all. While on,
+  // blindflug reads as on whatever is stored (parseRunSettings forces it), so
+  // the header button cannot lift it for a quick peek - not even a stale click
+  // from another device. Only switching this rule off in the Rules tab can.
+  blindflugPermanent: boolean;
   // Free team: the run is not a Nuzlocke at all. The Team tab gets a direct
   // "add a Pokemon" button, so a normal playthrough can use the battle scout
   // without entering a route for every catch. Informational like every other
@@ -88,6 +93,7 @@ export const DEFAULT_RUN_SETTINGS: RunSettings = {
   statics: true,
   staticsExemptFromClause: true,
   blindflug: false,
+  blindflugPermanent: false,
   freeTeam: false,
   customSpritesOnly: false,
   wildFusionSplit: true,
@@ -125,6 +131,7 @@ export function parseRunSettings(json: string): RunSettings {
     const value = (raw as Record<string, unknown>)[key];
     if (typeof value === "boolean") (settings[key] as boolean) = value;
   }
+  if (settings.blindflugPermanent) settings.blindflug = true;
   settings.playerNames = parsePlayerNames((raw as Record<string, unknown>).playerNames);
   return settings;
 }

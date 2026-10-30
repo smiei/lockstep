@@ -103,7 +103,7 @@ Per-run rule toggles. They are informational: they drive warnings and visibility
 - **Static encounters** and their clause exemption.
 
 On top of the toggles:
-- **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions.
+- **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions. **Permanent blind flight** (nested under it) locks it on for runs played without any help: the header button can no longer switch it off for a quick peek, only the rule itself can.
 - **Player names** replace "Player 1 / Player 2" everywhere.
 - **House rules** are a Markdown section, edited in the browser.
 - **Rule presets** carry a rule set from one playthrough to the next.
