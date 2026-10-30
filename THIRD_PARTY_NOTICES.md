@@ -91,7 +91,7 @@ All four were consulted for facts (names, numbers); no text or images were copie
 
 ## Font
 
-[Geist and Geist Mono](https://github.com/vercel/geist-font) by Vercel, SIL Open Font License 1.1. Loaded through `next/font` at build time.
+[Familjen Grotesk](https://github.com/Familjen-Sthlm/Familjen-Grotesk) by Familjen STHLM and [Red Hat Mono](https://github.com/RedHatOfficial/RedHatFont) by Red Hat, both under the SIL Open Font License 1.1. Loaded through `next/font` at build time.
 
 ## npm packages
 
