@@ -22,6 +22,7 @@ So: put a file in the flat ROOT to use it for ALL games; put one in a
 trainerSet SUBFOLDERS (one per game; HeartGold + SoulSilver share one, since
 their trainers are identical):
   red-blue/   gold-silver/   firered/   emerald/   platinum/   heartgold-soulsilver/
+  black-white/   infinite-fusion/   (Black + White share one, so do Classic + Remix)
 
 NOTE ON THE RIVAL: every game calls its rival "Rivale" -> slug "rivale", but
 it is a DIFFERENT character/look per game. Give each its own file:
@@ -32,79 +33,183 @@ Recurring gym leaders/Elite Four (Rocko, Misty, ...) are the same person across
 games: one file in the root is enough, unless you want generation-accurate art
 - then drop a per-game copy in that game folder.
 
-FULL NAME REFERENCE (74 slugs) - [folders where the name appears]:
+BY GAME - folder, then every trainer in journey order (105 distinct slugs).
+A name listed under several games can live once in the root instead.
+Infinite Fusion uses English names, so its slugs are English (brock.png ...).
 
-  adam.png                    Adam                    [platinum]
-  agathe.png                  Agathe                  [red-blue, firered]
-  antonia.png                 Antonia                 [emerald]
-  archie.png                  Archie                  [emerald]
-  ben-svenja.png              Ben & Svenja            [emerald]
-  bianka.png                  Bianka                  [gold-silver, heartgold-soulsilver]
-  blau.png                    Blau                    [gold-silver, heartgold-soulsilver]
-  bruno.png                   Bruno                   [red-blue, gold-silver, firered, heartgold-soulsilver]
-  champ.png                   Champ / Rivale          [red-blue, firered]
-  cynthia.png                 Cynthia                 [platinum]
-  dragan.png                  Dragan                  [emerald]
-  erika.png                   Erika                   [red-blue, gold-silver, firered, heartgold-soulsilver]
-  eusin.png                   Eusin                   [heartgold-soulsilver]
-  falk.png                    Falk                    [gold-silver, heartgold-soulsilver]
-  felizia.png                 Felizia                 [emerald]
-  flavia.png                  Flavia                  [emerald]
-  frida.png                   Frida                   [platinum]
-  frosina.png                 Frosina                 [emerald]
-  giovanni.png                Giovanni                [red-blue, firered]
-  hartwig.png                 Hartwig                 [gold-silver, heartgold-soulsilver]
-  heiko.png                   Heiko                   [emerald]
-  herbaro.png                 Herbaro                 [platinum]
-  hilda.png                   Hilda                   [platinum]
-  ignaz.png                   Ignaz                   [platinum]
-  janina.png                  Janina                  [gold-silver, heartgold-soulsilver]
-  jasmin.png                  Jasmin                  [gold-silver, heartgold-soulsilver]
-  jens.png                    Jens                    [gold-silver, heartgold-soulsilver]
-  juan.png                    Juan                    [emerald]
-  jupiter.png                 Jupiter                 [platinum]
-  kai.png                     Kai                     [gold-silver, heartgold-soulsilver]
-  kalle.png                   Kalle                   [emerald]
-  kamillo.png                 Kamillo                 [emerald]
-  kimono-madels.png           Kimono-Mädels           [heartgold-soulsilver]
-  koga.png                    Koga                    [red-blue, gold-silver, firered, heartgold-soulsilver]
-  kordula.png                 Kordula                 [emerald]
-  lamina.png                  Lamina                  [platinum]
-  lorelei.png                 Lorelei                 [red-blue, firered]
-  lucian.png                  Lucian                  [platinum]
-  major-bob.png               Major Bob               [red-blue, gold-silver, firered, heartgold-soulsilver]
-  marinus.png                 Marinus                 [platinum]
-  mars.png                    Mars                    [platinum]
-  mars-jupiter.png            Mars & Jupiter          [platinum]
-  maxie.png                   Maxie                   [emerald]
-  maxie-kalle.png             Maxie & Kalle           [emerald]
-  melanie.png                 Melanie                 [gold-silver, heartgold-soulsilver]
-  misty.png                   Misty                   [red-blue, gold-silver, firered, heartgold-soulsilver]
-  norbert.png                 Norbert                 [gold-silver, heartgold-soulsilver]
-  norman.png                  Norman                  [emerald]
-  pyro.png                    Pyro                    [red-blue, gold-silver, firered, heartgold-soulsilver]
-  rivale.png                  Rivale                  [red-blue, gold-silver, emerald, platinum, heartgold-soulsilver]
-  rocko.png                   Rocko                   [red-blue, gold-silver, firered, heartgold-soulsilver]
-  rot.png                     Rot                     [gold-silver, heartgold-soulsilver]
-  sabrina.png                 Sabrina                 [red-blue, gold-silver, firered, heartgold-soulsilver]
-  sandra.png                  Sandra                  [gold-silver, heartgold-soulsilver]
-  saturn.png                  Saturn                  [platinum]
-  siegfried.png               Siegfried               [red-blue, gold-silver, firered, heartgold-soulsilver]
-  silvana.png                 Silvana                 [platinum]
-  teresa.png                  Teresa                  [platinum]
-  troy-trumm.png              Troy Trumm              [emerald]
-  ulrich.png                  Ulrich                  [emerald]
-  veit.png                    Veit                    [platinum]
-  volkner.png                 Volkner                 [platinum]
-  vorstand-athena.png         Vorstand Athena         [heartgold-soulsilver]
-  vorstand-athena-rupel.png   Vorstand Athena & Rüpel [heartgold-soulsilver]
-  vorstand-atlas.png          Vorstand Atlas          [heartgold-soulsilver]
-  vorstand-lamda.png          Vorstand Lamda          [heartgold-soulsilver]
-  vorstand-lanzo.png          Vorstand Lanzo          [heartgold-soulsilver]
-  walter.png                  Walter                  [emerald]
-  wassili.png                 Wassili                 [emerald]
-  weise-li.png                Weise Li                [heartgold-soulsilver]
-  wibke.png                   Wibke                   [emerald]
-  willi.png                   Willi                   [gold-silver, heartgold-soulsilver]
-  wolfgang.png                Wolfgang                [emerald]
-  zyrus.png                   Zyrus                   [platinum]
+  Red / Blue / Yellow  ->  red-blue/   (14)
+    rivale.png                  Rivale (Rival)
+    rocko.png                   Rocko (Brock)
+    misty.png                   Misty
+    major-bob.png               Major Bob (Lt. Surge)
+    erika.png                   Erika
+    giovanni.png                Giovanni
+    koga.png                    Koga
+    sabrina.png                 Sabrina
+    pyro.png                    Pyro (Blaine)
+    lorelei.png                 Lorelei
+    bruno.png                   Bruno
+    agathe.png                  Agathe (Agatha)
+    siegfried.png               Siegfried (Lance)
+    champ.png                   Champ (Champion)
+
+  Gold / Silver / Crystal  ->  gold-silver/   (23)
+    falk.png                    Falk (Falkner)
+    rivale.png                  Rivale (Rival)
+    kai.png                     Kai (Bugsy)
+    bianka.png                  Bianka (Whitney)
+    jens.png                    Jens (Morty)
+    hartwig.png                 Hartwig (Chuck)
+    jasmin.png                  Jasmin (Jasmine)
+    norbert.png                 Norbert (Pryce)
+    sandra.png                  Sandra (Clair)
+    willi.png                   Willi (Will)
+    koga.png                    Koga
+    bruno.png                   Bruno
+    melanie.png                 Melanie (Karen)
+    siegfried.png               Siegfried (Lance)
+    major-bob.png               Major Bob (Lt. Surge)
+    sabrina.png                 Sabrina
+    misty.png                   Misty
+    erika.png                   Erika
+    janina.png                  Janina (Janine)
+    rocko.png                   Rocko (Brock)
+    pyro.png                    Pyro (Blaine)
+    blau.png                    Blau (Blue)
+    rot.png                     Rot (Red)
+
+  FireRed / LeafGreen  ->  firered/   (13)
+    champ.png                   Rivale (Rival)
+    rocko.png                   Rocko (Brock)
+    misty.png                   Misty
+    major-bob.png               Major Bob (Lt. Surge)
+    erika.png                   Erika
+    giovanni.png                Giovanni
+    sabrina.png                 Sabrina
+    koga.png                    Koga
+    pyro.png                    Pyro (Blaine)
+    lorelei.png                 Lorelei
+    bruno.png                   Bruno
+    agathe.png                  Agathe (Agatha)
+    siegfried.png               Siegfried (Lance)
+
+  Emerald  ->  emerald/   (22)
+    rivale.png                  Rivale (Rival)
+    felizia.png                 Felizia (Roxanne)
+    kamillo.png                 Kamillo (Brawly)
+    heiko.png                   Heiko (Wally)
+    walter.png                  Walter (Wattson)
+    kalle.png                   Kalle (Tabitha)
+    flavia.png                  Flavia (Flannery)
+    norman.png                  Norman
+    kordula.png                 Kordula (Shelly)
+    wibke.png                   Wibke (Winona)
+    maxie.png                   Maxie
+    wolfgang.png                Wolfgang (Matt)
+    ben-svenja.png              Ben & Svenja (Tate & Liza)
+    maxie-kalle.png             Maxie & Kalle (Maxie & Tabitha)
+    archie.png                  Archie
+    juan.png                    Juan
+    ulrich.png                  Ulrich (Sidney)
+    antonia.png                 Antonia (Phoebe)
+    frosina.png                 Frosina (Glacia)
+    dragan.png                  Dragan (Drake)
+    wassili.png                 Wassili (Wallace)
+    troy-trumm.png              Troy Trumm (Steven)
+
+  Platinum  ->  platinum/   (19)
+    rivale.png                  Rivale (Rival)
+    veit.png                    Veit (Roark)
+    mars.png                    Mars
+    silvana.png                 Silvana (Gardenia)
+    jupiter.png                 Jupiter
+    lamina.png                  Lamina (Fantina)
+    hilda.png                   Hilda (Maylene)
+    marinus.png                 Marinus (Crasher Wake)
+    zyrus.png                   Zyrus (Cyrus)
+    adam.png                    Adam (Byron)
+    saturn.png                  Saturn
+    frida.png                   Frida (Candice)
+    mars-jupiter.png            Mars & Jupiter
+    volkner.png                 Volkner
+    herbaro.png                 Herbaro (Aaron)
+    teresa.png                  Teresa (Bertha)
+    ignaz.png                   Ignaz (Flint)
+    lucian.png                  Lucian
+    cynthia.png                 Cynthia
+
+  HeartGold / SoulSilver  ->  heartgold-soulsilver/   (31)
+    rivale.png                  Rivale (Rival)
+    weise-li.png                Weise Li (Elder Li)
+    falk.png                    Falk (Falkner)
+    vorstand-lanzo.png          Vorstand Lanzo (Executive Proton)
+    kai.png                     Kai (Bugsy)
+    bianka.png                  Bianka (Whitney)
+    jens.png                    Jens (Morty)
+    eusin.png                   Eusin (Eusine)
+    hartwig.png                 Hartwig (Chuck)
+    jasmin.png                  Jasmin (Jasmine)
+    vorstand-lamda.png          Vorstand Lamda (Executive Petrel)
+    vorstand-athena-rupel.png   Vorstand Athena & Rüpel (Executive Ariana & Grunt)
+    norbert.png                 Norbert (Pryce)
+    vorstand-athena.png         Vorstand Athena (Executive Ariana)
+    vorstand-atlas.png          Vorstand Atlas (Executive Archer)
+    sandra.png                  Sandra (Clair)
+    kimono-madels.png           Kimono-Mädels (Kimono Girls)
+    willi.png                   Willi (Will)
+    koga.png                    Koga
+    bruno.png                   Bruno
+    melanie.png                 Melanie (Karen)
+    siegfried.png               Siegfried (Lance)
+    major-bob.png               Major Bob (Lt. Surge)
+    sabrina.png                 Sabrina
+    erika.png                   Erika
+    janina.png                  Janina (Janine)
+    misty.png                   Misty
+    rocko.png                   Rocko (Brock)
+    pyro.png                    Pyro (Blaine)
+    blau.png                    Blau (Blue)
+    rot.png                     Rot (Red)
+
+  Black / White  ->  black-white/   (18)
+    cheren.png                  Cheren
+    benny-maik-colin.png        Benny, Maik & Colin (Cilan, Chili & Cress)
+    bel.png                     Bel (Bianca)
+    aloe.png                    Aloe (Lenora)
+    n.png                       N
+    artie.png                   Artie (Burgh)
+    kamilla.png                 Kamilla (Elesa)
+    turner.png                  Turner (Clay)
+    geraldine.png               Géraldine (Skyla)
+    sandro.png                  Sandro (Brycen)
+    g-cis.png                   G-Cis (Ghetsis)
+    lysander.png                Lysander (Drayden)
+    anissa.png                  Anissa (Shauntal)
+    astor.png                   Astor (Grimsley)
+    kattlea.png                 Kattlea (Caitlin)
+    eugen.png                   Eugen (Marshal)
+    lauro.png                   Lauro (Alder)
+    lilia.png                   Lilia (Iris)
+
+  Infinite Fusion (Classic + Remix)  ->  infinite-fusion/   (21)
+    brock.png                   Brock
+    misty.png                   Misty
+    lt-surge.png                Lt. Surge
+    erika.png                   Erika
+    koga.png                    Koga
+    sabrina.png                 Sabrina
+    blaine.png                  Blaine
+    giovanni.png                Giovanni
+    falkner.png                 Falkner
+    kurt.png                    Kurt
+    whitney.png                 Whitney
+    morty.png                   Morty
+    chuck.png                   Chuck
+    jasmine.png                 Jasmine
+    pryce.png                   Pryce
+    clair.png                   Clair
+    lorelei.png                 Lorelei
+    bruno.png                   Bruno
+    agatha.png                  Agatha
+    lance.png                   Lance
+    champ.png                   Champion
