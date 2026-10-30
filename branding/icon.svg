@@ -8,16 +8,16 @@
 
        Also the favicon and the rail's logo (HeaderTitle loads /icons/icon.svg):
        scripts/generate-icons.mjs rasterises this file into the PNG sizes the
-       manifest and iOS need, so there is one source of truth. The tile is
-       Pokeball red (#cc0000, white on it 5.9:1) - the colour only, no ball -
-       and the generator uses the same red behind the maskable and Apple
-       insets, so Android's crop shows no seam.
+       manifest and iOS need, so there is one source of truth. The tile is the
+       shell green (#0f3d30), the same colour the generator uses behind the
+       maskable and Apple insets, so Android's crop shows no seam - and on the
+       green rail itself only the pale mark is visible.
 
        Rendered by librsvg (via sharp), not a browser: SVG 1.1 presentation
        attributes only - no CSS, no text, no filters, no currentColor. -->
-  <rect x="0" y="0" width="512" height="512" rx="112" fill="#cc0000" />
-  <rect x="72" y="150" width="368" height="212" rx="20" fill="none" stroke="#ffe3e3" stroke-width="26" />
-  <rect x="104" y="182" width="304" height="148" rx="6" fill="none" stroke="#ffe3e3" stroke-width="8" />
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="#0f3d30" />
+  <rect x="72" y="150" width="368" height="212" rx="20" fill="none" stroke="#dcebe1" stroke-width="26" />
+  <rect x="104" y="182" width="304" height="148" rx="6" fill="none" stroke="#dcebe1" stroke-width="8" />
   <rect x="190" y="244" width="132" height="24" fill="#ffffff" />
   <circle cx="190" cy="256" r="44" fill="#ffffff" />
   <circle cx="322" cy="256" r="44" fill="#ffffff" />

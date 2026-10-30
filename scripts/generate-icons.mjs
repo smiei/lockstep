@@ -56,10 +56,10 @@ const sourceFile =
     : resolveSource(path.join(rootDir, "branding"));
 const sourceIsRaster = RASTER_EXTS.has(path.extname(sourceFile).toLowerCase());
 
-// Opaque backdrop for the variants that must not be transparent: the logo
-// tile's Pokéball red (branding/icon.svg), which is also the manifest's
-// background_color, so the maskable crop shows no seam.
-const DARK = { r: 204, g: 0, b: 0, alpha: 1 };
+// Opaque backdrop for the variants that must not be transparent: the shell
+// green (--shell in globals.css), which is also the repo icon's own tile and
+// the manifest's background_color, so the maskable crop shows no seam.
+const DARK = { r: 15, g: 61, b: 48, alpha: 1 };
 const CLEAR = { r: 0, g: 0, b: 0, alpha: 0 };
 
 // `scale` = how much of the canvas the motif fills.
