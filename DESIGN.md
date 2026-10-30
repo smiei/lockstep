@@ -220,7 +220,7 @@ The build refuses the category default it was set against: a dark zinc dashboard
 A cool, low-chroma sage-and-green collection palette with one saturated red reserved for loss; every colour is a CSS custom property declared once per scope in `globals.css` and consumed through Tailwind tokens (`bg-panel`, `text-ink-muted`), never as raw palette classes.
 
 ### Primary
-- **Bottle Green** (shell-green): the default shell field (side rail, phone top bar, browser chrome, `::selection`) and the light-theme primary button fill (`--accent`). In dark mode the primary button inverts to **Pale Label Green** (dark-accent) with bottle-green text. The shell colour is a per-device choice: Pokéball red `#b8101b`, blue `#1e3a8a` or yellow `#ffcb05` (dark ink) replace the green through one `--shell-*` variable set each (`:root[data-shell=...]` in globals.css), the primary button following along. The neutral ramp follows too (`--page-*`, light and dark per colour): the green ramp turned to the colour's hue at the same saturation and lightness, so the ground, trays, rules, text greys and focus ring carry the chosen hue while every contrast stays as measured. State colours do not move. The logo tile is always Pokéball red `#cc0000`.
+- **Bottle Green** (shell-green): the default shell field (side rail, phone top bar, browser chrome, `::selection`) and the light-theme primary button fill (`--accent`). In dark mode the primary button inverts to **Pale Label Green** (dark-accent) with bottle-green text. The shell colour is a per-device choice: Pokéball red `#b8101b`, blue `#1e3a8a` or yellow `#ffcb05` (dark ink) replace the green through one `--shell-*` variable set each (`:root[data-shell=...]` in globals.css), the primary button following along. The neutral ramp follows too (`--page-*`, light and dark per colour): the green ramp turned to the colour's hue at the same saturation and lightness, so the ground, trays, rules, text greys and focus ring carry the chosen hue while every contrast stays as measured. State colours do not move. The logo tile stays bottle green whatever the shell colour.
 
 ### Secondary
 - **Caught Green** (caught-green, with success-bg / success-line / success-solid): progress and success - a completed route's tinted label strip, the "Gefangen" outcome, evolve and add-to-team outlines, progress bars and switches (solid step).
@@ -300,7 +300,7 @@ Flat by default, with tonal layering. Depth is the drawer: trays (tray white) si
 
 Nearly square. Specimen trays and badges use 4px corners, controls and cards 6px, floating surfaces (drawer, dropdowns, modals, toasts) 8px; nothing is pill-shaped except switch knobs. Borders are 1px hairlines in hairline sage; controls use the stronger control sage. An empty slot or an "add" affordance is the same tray with a dashed control-sage border on a half-transparent tray.
 
-The signature form is the double rule: a 1px ink border plus a 1px ink outline offset 2px, square-cornered, around the specimen label. A dead specimen's label replaces the double frame with a heavy 4px ink rule on top and a 1px rule below. The logo draws the same frame - a double-ruled label holding two linked dots - on a Pokéball-red tile.
+The signature form is the double rule: a 1px ink border plus a 1px ink outline offset 2px, square-cornered, around the specimen label. A dead specimen's label replaces the double frame with a heavy 4px ink rule on top and a 1px rule below. The logo draws the same frame - a double-ruled label holding two linked dots - on a bottle-green tile.
 
 ## Components
 
