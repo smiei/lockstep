@@ -5,6 +5,7 @@ import { getEvolutionById, getEvolutions, getMoveset, getMoves, getPokemonById, 
 import { getCatchRatesForGame, getPokemonFormsForGame, getPokemonListForGame, isInDex } from "@/lib/gameData";
 import { formatEvolutionMethod } from "@/lib/evolutionMethods";
 import { LANGS } from "@/lib/i18n/dictionary";
+import { getPokemonSpriteUrls, placeholderSpriteBase } from "@/lib/sprites";
 
 // The data extension for ROM hacks on modern data (Radical Red & co.): the
 // dex up to Gen 9, Gen 6+ formes gated by `since`, regional forms with their
@@ -162,6 +163,16 @@ describe("fakemon.json (a ROM hack's own Pokémon)", () => {
     expect(getEvolutionById(venonat.id)?.evolvesTo).toEqual(venonat.evolvesTo);
     expect(getEvolutionById(venonat.evolvesTo![0])?.evolvesFrom).toBe(venonat.id);
     expect(getCatchRatesForGame(blazingEmerald).find((r) => r.id === oreon.id)?.catch_rate).toBe(oreon.catchRate);
+  });
+
+  it("borrow their species' sprite as a placeholder; new species have none", () => {
+    const sevii = fakemon.find((f) => f.alias === "doduo-sevii")!;
+    expect(placeholderSpriteBase(sevii.id)).toBe(84);
+    expect(getPokemonSpriteUrls(sevii.id, "emerald")).toEqual(getPokemonSpriteUrls(84, "emerald"));
+    const oreon = fakemon.find((f) => f.alias === "oreon")!;
+    expect(placeholderSpriteBase(oreon.id)).toBeNull();
+    expect(getPokemonSpriteUrls(oreon.id, "emerald")).toEqual([]);
+    expect(placeholderSpriteBase(84)).toBeNull();
   });
 });
 

@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { getPokemonSpriteUrls } from "@/lib/sprites";
+import { getPokemonSpriteUrls, placeholderSpriteBase } from "@/lib/sprites";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
+import { translations } from "@/lib/i18n/dictionary";
 import { useSpriteSet, useFusionSprites, type FusionSpriteConfig } from "@/components/SpriteSetProvider";
 import { useExternalImagesAllowed } from "@/components/SpriteConsentProvider";
 
@@ -101,8 +103,7 @@ export function PokemonSprite({
 
   const src = candidates[stage];
   const isHotlinked = src.startsWith("http");
-
-  return (
+  const image = (imgClass: string) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={src}
@@ -114,7 +115,52 @@ export function PokemonSprite({
       referrerPolicy={isHotlinked ? "no-referrer" : undefined}
       onError={() => setFailedStage({ identity, stage: stage + 1 })}
       style={{ imageRendering: "pixelated" }}
-      className={`shrink-0 ${className}`}
+      className={imgClass}
     />
+  );
+
+  // A ROM hack's own form shows its base species' sprite (src/lib/sprites.ts),
+  // faded and labelled as a placeholder, so nobody takes it for the real art.
+  // Only the picture fades - the label stays at full contrast.
+  if (bodyId == null && placeholderSpriteBase(pokemonId) !== null) {
+    return (
+      <PlaceholderSprite px={px} small={size === "sm"} className={className}>
+        {image("opacity-60")}
+      </PlaceholderSprite>
+    );
+  }
+
+  return image(`shrink-0 ${className}`);
+}
+
+function PlaceholderSprite({
+  px,
+  small,
+  className,
+  children,
+}: {
+  px: number;
+  small: boolean;
+  className: string;
+  children: React.ReactNode;
+}) {
+  const { lang } = useLanguage();
+  const t = translations[lang].dataNotice;
+  return (
+    <span
+      style={{ width: px, height: px }}
+      className={`relative inline-flex shrink-0 ${className}`}
+      title={t.spritePlaceholderTitle}
+    >
+      {children}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center leading-none"
+      >
+        <span className="origin-bottom scale-75 rounded-sm bg-panel px-1 text-xs font-medium text-ink-muted">
+          {small ? "≈" : t.spritePlaceholder}
+        </span>
+      </span>
+    </span>
   );
 }

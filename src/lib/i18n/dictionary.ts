@@ -75,6 +75,8 @@ const de = {
       "wähle „Zum Startbildschirm hinzufügen“ bzw. „Installieren“.",
   },
   dataNotice: {
+    spritePlaceholder: "Platzhalter",
+    spritePlaceholderTitle: "Platzhalter: Bild der Grundart. Diese Form sieht im Spiel anders aus; für ihr eigenes Bild gibt es keine Quelle mit Nutzungsrechten.",
     machineTranslated: "Maschinell übersetzt – Pokémon-Namen sind offiziell.",
     machineTranslatedLong:
       "Diese Sprache ist maschinell übersetzt und kann Fehler enthalten, vor allem bei Orts- und Routennamen. Die Pokémon-Namen sind offiziell.",
@@ -890,6 +892,8 @@ const en: Dictionary = {
       "“Add to Home screen” or “Install”.",
   },
   dataNotice: {
+    spritePlaceholder: "placeholder",
+    spritePlaceholderTitle: "Placeholder: the base species' picture. This form looks different in the game; there is no source for its own picture that we may use.",
     machineTranslated: "Machine-translated – Pokémon names are official.",
     machineTranslatedLong:
       "This language is machine-translated and may contain mistakes, especially in place and route names. Pokémon names are official.",
@@ -1695,6 +1699,8 @@ const fr: Dictionary = {
       "« Ajouter à l'écran d'accueil » ou « Installer ».",
   },
   dataNotice: {
+    spritePlaceholder: "substitut",
+    spritePlaceholderTitle: "Image de substitution : celle de l'espèce de base. Cette forme est différente dans le jeu ; aucune source de son image n'est utilisable librement.",
     machineTranslated: "Traduction automatique – les noms des Pokémon sont officiels.",
     machineTranslatedLong:
       "Cette langue est traduite automatiquement et peut contenir des erreurs, surtout dans les noms de lieux et de routes. Les noms des Pokémon sont officiels.",
@@ -2507,6 +2513,8 @@ const es: Dictionary = {
       "«Añadir a pantalla de inicio» o «Instalar».",
   },
   dataNotice: {
+    spritePlaceholder: "provisional",
+    spritePlaceholderTitle: "Imagen provisional de la especie base. Esta forma es distinta en el juego; no hay ninguna fuente de su imagen que podamos usar.",
     machineTranslated: "Traducción automática: los nombres de los Pokémon son oficiales.",
     machineTranslatedLong:
       "Este idioma está traducido automáticamente y puede contener errores, sobre todo en los nombres de lugares y rutas. Los nombres de los Pokémon son oficiales.",
@@ -3318,6 +3326,8 @@ const it: Dictionary = {
       "«Aggiungi a Home» o «Installa».",
   },
   dataNotice: {
+    spritePlaceholder: "segnaposto",
+    spritePlaceholderTitle: "Segnaposto: l'immagine della specie base. Nel gioco questa forma è diversa; non esiste una fonte utilizzabile per la sua immagine.",
     machineTranslated: "Traduzione automatica: i nomi dei Pokémon sono ufficiali.",
     machineTranslatedLong:
       "Questa lingua è tradotta automaticamente e può contenere errori, soprattutto nei nomi di luoghi e percorsi. I nomi dei Pokémon sono ufficiali.",

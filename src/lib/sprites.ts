@@ -1,6 +1,7 @@
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import spriteSources from "../../data/sprite-sources.json";
 import trainerSources from "../../data/trainer-sprite-sources.json";
+import fakemonData from "../../data/fakemon.json";
 
 // Pokémon battle sprites and item (ball) icons.
 //
@@ -29,10 +30,24 @@ const TRAINER_SPRITES = trainerSources.map as Record<string, string>;
 
 // Forme ids (Deoxys' formes, Rotom's appliances, ...) start here - see
 // src/lib/forms.ts. A ROM hack's own Pokémon (data/fakemon.json) start at
-// 20001 and have no sprite anywhere we may load from: PokemonSprite shows its
-// placeholder straight away instead of requesting a sure 404.
+// 20001 and have no sprite anywhere we may load from (the hacks' art carries
+// no licence we could use). A form of a known species - Radical Red's Sevii,
+// Blazing Emerald's Hoenn forms - borrows its species' sprite, which
+// PokemonSprite marks as a placeholder; a new species gets the "?" tile
+// straight away instead of requesting a sure 404.
 const FORME_ID_THRESHOLD = 10001;
 const FAKEMON_ID_THRESHOLD = 20001;
+const FAKEMON_BASE = new Map(
+  (fakemonData.fakemon as { id: number; baseId?: number }[])
+    .filter((f) => f.baseId !== undefined)
+    .map((f) => [f.id, f.baseId as number]),
+);
+
+// The species whose sprite stands in for a ROM hack's own form, or null when
+// the id is no such form (a regular Pokémon, or a hack's entirely new species).
+export function placeholderSpriteBase(pokemonId: number): number | null {
+  return pokemonId >= FAKEMON_ID_THRESHOLD ? (FAKEMON_BASE.get(pokemonId) ?? null) : null;
+}
 
 // Every URL worth trying for this Pokémon's battle sprite, most preferred
 // first. Locally there is exactly one (a missing file 404s, same as always).
@@ -47,7 +62,10 @@ const FAKEMON_ID_THRESHOLD = 20001;
 // already saved those into the set's own folder; hotlinked, a species past
 // the range goes straight there and a forme gets it as the last candidate.
 export function getPokemonSpriteUrls(pokemonId: number, spriteSet: string = DEFAULT_SPRITE_SET): string[] {
-  if (pokemonId >= FAKEMON_ID_THRESHOLD) return [];
+  if (pokemonId >= FAKEMON_ID_THRESHOLD) {
+    const base = placeholderSpriteBase(pokemonId);
+    return base === null ? [] : getPokemonSpriteUrls(base, spriteSet);
+  }
   if (!IS_PUBLIC_INSTANCE) return [`/pokemon-sprites/${spriteSet}/${pokemonId}.png`];
 
   const config = SPRITE_SETS[spriteSet] ?? SPRITE_SETS[DEFAULT_SPRITE_SET];
