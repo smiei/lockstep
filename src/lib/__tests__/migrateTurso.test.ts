@@ -67,7 +67,7 @@ describe("migrate", () => {
     expect(await count(client, TRACKING_TABLE)).toBe(all.length);
 
     const columns = (await client.execute(`PRAGMA table_info("Run")`)).rows.map((r) => r.name);
-    expect(columns).toEqual(expect.arrayContaining(["accessKey", "version", "playerCount"]));
+    expect(columns).toEqual(expect.arrayContaining(["accessKey", "version", "playerCount", "changedAt"]));
 
     const again = await migrate(client, { log: quiet });
     expect(again.applied).toEqual([]);
@@ -102,9 +102,10 @@ describe("migrate", () => {
 
     await migrate(client, { log: quiet });
 
-    // ("Run" also holds the run 1 an early migration creates.)
+    // The run 1 an early migration seeds is removed again by
+    // add_run_changed_at, since nobody touched it.
     for (const [table, expected] of [
-      ["Run", 3],
+      ["Run", 2],
       ["SoulLink", 2],
       ["Encounter", 3],
       ["LevelCapProgress", 1],
@@ -114,7 +115,7 @@ describe("migrate", () => {
       expect(await count(client, table), table).toBe(expected);
     }
     const keys = (await client.execute(`SELECT "accessKey" FROM "Run"`)).rows.map((r) => String(r.accessKey));
-    expect(new Set(keys).size).toBe(3);
+    expect(new Set(keys).size).toBe(2);
     expect(keys.every((key) => key.length >= 16)).toBe(true);
     // The rebuilt table is still the parent of the children: deleting a run still cascades.
     await client.execute(`DELETE FROM "Run" WHERE "id" = 102`);

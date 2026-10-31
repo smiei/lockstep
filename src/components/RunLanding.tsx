@@ -1,9 +1,8 @@
-import { getGameSummaries } from "@/lib/data";
-import { getLang } from "@/lib/i18n/getLang";
-import { RunLandingView } from "@/components/RunLandingView";
+import { RunHome } from "@/components/RunHome";
 
-// Rendered by every run-scoped page when resolveRunId found no run, which only
-// a public instance ever reports.
+// Rendered by every run-scoped page when resolveRunId found no run: a fresh
+// install with none yet, or a public instance this browser holds no key for.
+// It is the start page - the welcome, or the runs this browser may open.
 export async function RunLanding() {
-  return <RunLandingView lang={await getLang()} games={getGameSummaries()} />;
+  return <RunHome />;
 }

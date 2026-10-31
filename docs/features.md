@@ -110,6 +110,7 @@ On top of the toggles:
 
 ## Runs, games and players
 
+- **Start page:** the house icon next to the logo opens the collection: every run as a card with its team, route progress, badges, next level cap and deaths, played-last first. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
 - **Game packs:** each run plays one game pack: Red/Blue/Yellow, Gold/Silver/Crystal, FireRed/LeafGreen, Emerald, Platinum, HeartGold, SoulSilver, Black, White, and the fan game Pokémon Infinite Fusion (Classic and Remix).
 - **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.

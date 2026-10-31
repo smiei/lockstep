@@ -1,23 +1,21 @@
 "use client";
 
-import { useRef, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { Spinner } from "@/components/ui/Spinner";
 import { useDropdown } from "@/lib/useDropdown";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { unzipSync } from "fflate";
-import { deleteRun, exportAllBackup, exportRunBackup, importBackup, renameRun } from "@/lib/actions";
+import { deleteRun, exportAllBackup, exportRunBackup, renameRun } from "@/lib/actions";
 import { pickActiveRun } from "@/lib/runKey";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
-import { forgetRun, rememberRun } from "@/lib/visitedRuns";
+import { forgetRun } from "@/lib/visitedRuns";
 import { formatActionError } from "@/lib/actionErrors";
-import { BACKUP_FORMAT, BACKUP_VERSION, parseBackup, type BackupFile } from "@/lib/backupParse";
 import { useDialog } from "@/components/DialogProvider";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { useInstallPrompt } from "@/lib/useInstallPrompt";
 import { LANGS, REVIEWED_LANGS, translations } from "@/lib/i18n/dictionary";
 import type { GameSummary, RunSummary } from "@/lib/types";
 import { RenameRunDialog } from "@/components/RenameRunDialog";
-import { ImportBackupDialog } from "@/components/ImportBackupDialog";
+import { useBackupImport } from "@/components/useBackupImport";
 import { TabOrderDialog } from "@/components/TabOrderDialog";
 import { AppearanceDialog } from "@/components/AppearanceDialog";
 import { useToast } from "@/components/ui/ToastProvider";
@@ -112,14 +110,15 @@ export function HeaderMenu({
   const [renameOpen, setRenameOpen] = useState(false);
   const [tabOrderOpen, setTabOrderOpen] = useState(false);
   const [appearanceOpen, setAppearanceOpen] = useState(false);
-  const [importState, setImportState] = useState<{ json: string; runs: { name: string }[] } | null>(
-    null,
-  );
   const [pending, startTransition] = useTransition();
   const [busy, setBusy] = useState<Busy>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
   const { canPrompt, isStandalone, isIos, mounted, promptInstall } = useInstallPrompt();
   const t = translations[lang];
+  const backupImport = useBackupImport({
+    lang,
+    existingNames: runs.map((r) => r.name),
+    openPath: pathname,
+  });
 
   const activeRun = pickActiveRun(runs, searchParams.get("run"));
   // Infinite Fusion hotlinks community sprites and builds on outside data -
@@ -166,76 +165,7 @@ export function HeaderMenu({
 
   function handleImportClick() {
     setOpen(false);
-    fileInputRef.current?.click();
-  }
-
-  async function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const file = event.target.files?.[0];
-    event.target.value = ""; // allow re-picking the same file later
-    if (!file) return;
-
-    let json: string;
-    if (file.name.toLowerCase().endsWith(".zip")) {
-      const entries = unzipSync(new Uint8Array(await file.arrayBuffer()));
-      const decoder = new TextDecoder();
-      const parts = Object.values(entries)
-        .map((bytes) => parseBackup(decoder.decode(bytes)))
-        .filter((b): b is BackupFile => b !== null);
-      if (parts.length === 0) {
-        toast.error(formatActionError({ key: "backupInvalid" }, lang));
-        return;
-      }
-      const merged: BackupFile = {
-        format: BACKUP_FORMAT,
-        version: BACKUP_VERSION,
-        exportedAt: new Date().toISOString(),
-        runs: parts.flatMap((p) => p.runs),
-      };
-      json = JSON.stringify(merged);
-    } else {
-      json = await file.text();
-    }
-    const parsed = parseBackup(json);
-    if (!parsed) {
-      toast.error(formatActionError({ key: "backupInvalid" }, lang));
-      return;
-    }
-    if (parsed.runs.length === 0) {
-      toast.error(formatActionError({ key: "backupEmpty" }, lang));
-      return;
-    }
-    // A file newer than this build understands - an older build reading it
-    // would silently drop fields it doesn't know about yet (fusions
-    // included). Not a hard stop: the import is still lenient/best-effort.
-    if (parsed.version > BACKUP_VERSION) {
-      toast.info(t.backup.importNewerVersion);
-    }
-    // Naming is asked for every time (see ImportBackupDialog) rather than
-    // reusing the backup's stored name - re-importing an old backup of a run
-    // that's since moved on used to silently shadow the newer run under the
-    // same name.
-    setImportState({ json, runs: parsed.runs.map((r) => ({ name: r.name })) });
-  }
-
-  function handleImportConfirm(names: string[]) {
-    if (!importState) return;
-    startTransition(async () => {
-      const result = await importBackup(importState.json, names);
-      if (result.success) {
-        setImportState(null);
-        if (IS_PUBLIC_INSTANCE && result.runKeys.length > 0) {
-          // Nothing lists every run here, so an imported run this browser does
-          // not remember would be unreachable. Remember all, open the first.
-          for (const key of [...result.runKeys].reverse()) rememberRun(key);
-          router.push(`${pathname}?run=${result.runKeys[0]}`);
-        } else {
-          router.refresh();
-        }
-        toast.success(t.backup.importSuccess(result.runKeys.length));
-      } else {
-        toast.error(formatActionError(result.error, lang));
-      }
-    });
+    backupImport.pick();
   }
 
   // A public run is reached only through its link, and an installed app has no
@@ -312,7 +242,7 @@ export function HeaderMenu({
     <div ref={containerRef} className="relative">
       <button
         type="button"
-        disabled={pending}
+        disabled={pending || backupImport.pending}
         onClick={toggle}
         {...triggerProps}
         aria-label={t.menu.label}
@@ -321,13 +251,7 @@ export function HeaderMenu({
       >
         <GearIcon className="h-5 w-5" />
       </button>
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="application/json,.json,application/zip,.zip"
-        onChange={handleFileChange}
-        className="hidden"
-      />
+      {backupImport.elements}
       {open && (
         // z-50, not the z-20 it used to be: the tab strip below the header is
         // sticky at z-40 now, and this menu opens straight down across it.
@@ -490,16 +414,6 @@ export function HeaderMenu({
       />
       <TabOrderDialog open={tabOrderOpen} onClose={() => setTabOrderOpen(false)} />
       <AppearanceDialog open={appearanceOpen} onClose={() => setAppearanceOpen(false)} />
-      {importState && (
-        <ImportBackupDialog
-          lang={lang}
-          pending={pending}
-          runs={importState.runs}
-          existingNames={runs.map((r) => r.name)}
-          onClose={() => setImportState(null)}
-          onConfirm={handleImportConfirm}
-        />
-      )}
     </div>
   );
 }

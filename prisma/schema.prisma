@@ -70,6 +70,10 @@ model Run {
   // run on creation, like rulesMarkdown.
   settingsJson     String             @default("{}")
   createdAt        DateTime           @default(now())
+  // When the run's data last changed - set by markRunChanged next to
+  // `version`. Orders the start page's run list and picks the run a link
+  // without ?run= opens. Not part of backups (an import is a change).
+  changedAt        DateTime           @default(now())
   soulLinks        SoulLink[]
   encounters       Encounter[]
   levelCapProgress LevelCapProgress[]
