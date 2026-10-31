@@ -1,0 +1,47 @@
+name: Report a data mistake
+description: A wrong or missing route, a wrong route order, a wrong level cap or a mistranslated name.
+title: "[Data] "
+labels: ["data"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: As shown in the app, e.g. "Gold / Silver / Crystal".
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is wrong?
+      options:
+        - Route missing or extra
+        - Route order
+        - Place or route name
+        - Level cap or boss
+        - Translation of the interface
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - German
+        - English
+        - French
+        - Spanish
+        - Italian
+  - type: textarea
+    id: details
+    attributes:
+      label: What is shown, and what is right?
+      placeholder: 'Route 46 is listed before Route 29, but you reach Route 29 first.'
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where the correct value comes from (the game itself, Bulbapedia, PokéWiki ...).

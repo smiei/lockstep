@@ -1,0 +1,34 @@
+# Example game pack as a plain text list - turn it into a pack file with
+#   npm run pack -- from-text docs/examples/game-pack-example.txt --out my-pack.json
+# Everything after # is a comment. Names: "English ; Deutsch" (German optional).
+
+[game]
+id = example-hack            # lowercase, digits, dashes; "custom-example-hack" to import it in the app
+name = Example Hack          # the same in every language; or name.en = ... / name.de = ...
+kind = romhack               # official, romhack or fangame
+generation = 3               # the engine: catch formula and Poké Balls
+dataGeneration = 9           # the data era: type chart, stats, move names (modern hacks)
+dexLimit = 386               # highest national-dex number in the game
+spriteSet = emerald          # red-blue, crystal, emerald, firered-leafgreen, platinum, heartgold-soulsilver, black-white
+versionGroup = emerald       # moves and TMs: red-blue, crystal, emerald, firered-leafgreen, platinum, heartgold-soulsilver, black-white
+sort = 50                    # position in the game list
+
+[routes]
+# Route (English ; German ; flags) - flags: static (gift, fossil, legendary), postgame
+Starter ; Starter ; static
+Route 1
+Viridian Forest ; Vertania-Wald
+Route 22
+Old Amber ; Altbernstein ; static
+Cerulean Cave ; Azuria-Höhle ; postgame
+
+[levelcaps]
+# Boss (en ; de) | Place (en ; de) | Badge (en ; de, may be empty) | Level cap (may be empty)
+Rival ; Rivale | Route 22 | | 
+Brock ; Rocko | Pewter City ; Marmoria City | Boulder Badge ; Felsorden | 14
+Misty | Cerulean City ; Azuria City | Cascade Badge ; Quellorden | 21
+Lorelei | Elite Four ; Top Vier | | 54
+Bruno | Elite Four ; Top Vier | | 56
+Agatha ; Agathe | Elite Four ; Top Vier | | 58
+Lance ; Siegfried | Elite Four ; Top Vier | | 60
+Champion ; Champ | Elite Four ; Top Vier | | 63

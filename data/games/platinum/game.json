@@ -1,6 +1,7 @@
 {
   "id": "platinum",
   "sort": 5,
+  "kind": "official",
   "dataStatus": "verified",
   "generation": 4,
   "dexLimit": 493,
