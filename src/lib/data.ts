@@ -39,6 +39,11 @@ export type GameInfo = {
   id: string;
   // Display order in the game picker.
   sort: number;
+  // Whether the maintainer has checked this pack's route list, route order
+  // and DE/EN names against the game. Missing = "unverified", the safe
+  // default for a new or contributed pack: the New-Run dialog and the
+  // Encounter tab then say so (A1 of the 5.0 roadmap).
+  dataStatus?: "verified" | "unverified";
   generation: number;
   // Highest national-dex id obtainable in this game - filters the pick
   // lists, evolution targets, and per-run rankings.
@@ -215,7 +220,12 @@ export function getGames(): GameInfo[] {
 
 // The client-safe slice the header and the new-run dialog need.
 export function getGameSummaries(): GameSummary[] {
-  return getGames().map((game) => ({ id: game.id, names: game.names, fusion: Boolean(game.fusion) }));
+  return getGames().map((game) => ({
+    id: game.id,
+    names: game.names,
+    fusion: Boolean(game.fusion),
+    unverified: game.dataStatus !== "verified",
+  }));
 }
 
 export function getGameById(gameId: string): GameInfo | undefined {
