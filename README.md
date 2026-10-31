@@ -196,7 +196,7 @@ npm start
 ## Documentation
 
 - [Features in detail](docs/features.md) — every tab and rule explained
-- [Self-hosting](docs/self-hosting.md) — Docker, Pinokio, Node.js, updates, backups, HTTPS
+- [Self-hosting](docs/self-hosting.md) — Windows app, Docker, Pinokio, Node.js, updates, backups, HTTPS
 - [Development](docs/development.md) — local setup, scripts, data, migrations, releasing
 - [Game packs](docs/game-packs.md) — add a game or ROM hack, in the app or as a contribution ([CONTRIBUTING](CONTRIBUTING.md))
 
