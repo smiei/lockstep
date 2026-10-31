@@ -18,6 +18,7 @@ import { SpriteConsentProvider } from "@/components/SpriteConsentProvider";
 import { SpriteConsentBanner } from "@/components/SpriteConsentBanner";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { ThemeColorSync } from "@/components/ThemeColorSync";
+import { TranslationNotice } from "@/components/TranslationNotice";
 import { SessionWatch } from "@/components/SessionWatch";
 import { TabOrderProvider } from "@/components/TabOrderProvider";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
@@ -249,6 +250,7 @@ export default async function RootLayout({
               <SpriteConsentBanner />
               <LiveRefresh />
               <ThemeColorSync />
+              <TranslationNotice />
               <ServiceWorkerRegistrar />
               {/* Watches a Cloudflare Access session, which only a private
                   instance sits behind. */}

@@ -1,6 +1,7 @@
 {
   "id": "gold-silver",
   "sort": 4,
+  "dataStatus": "unverified",
   "generation": 2,
   "dexLimit": 251,
   "spriteSet": "crystal",

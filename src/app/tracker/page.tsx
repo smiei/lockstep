@@ -83,6 +83,7 @@ export default async function TrackerPage({
               pokemonList={pokemonList}
               encounters={encounters}
               fusionEnabled={Boolean(game.fusion)}
+              unverifiedData={game.dataStatus !== "verified"}
             />
           </PokemonDetailProvider>
         </PlayerNamesProvider>

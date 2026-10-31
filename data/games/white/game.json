@@ -1,6 +1,7 @@
 {
   "id": "white",
   "sort": 9,
+  "dataStatus": "unverified",
   "generation": 5,
   "dexLimit": 649,
   "spriteSet": "black-white",

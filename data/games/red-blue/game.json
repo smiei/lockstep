@@ -1,6 +1,7 @@
 {
   "id": "red-blue",
   "sort": 3,
+  "dataStatus": "unverified",
   "generation": 1,
   "dexLimit": 151,
   "spriteSet": "red-blue",

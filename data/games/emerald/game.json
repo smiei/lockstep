@@ -1,6 +1,7 @@
 {
   "id": "emerald",
   "sort": 2,
+  "dataStatus": "verified",
   "generation": 3,
   "dexLimit": 386,
   "spriteSet": "emerald",

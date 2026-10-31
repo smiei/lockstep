@@ -1,6 +1,12 @@
 export const LANGS = ["de", "en", "fr", "es", "it"] as const;
 export type Lang = (typeof LANGS)[number];
 
+// Languages the maintainer reviewed by hand. The rest were machine-translated
+// (interface texts and place/route names); Pokémon names come from PokeAPI in
+// every language and are official either way. The gear menu and a one-time
+// notice say so (TranslationNotice).
+export const REVIEWED_LANGS: readonly Lang[] = ["de", "en"];
+
 export function isLang(value: unknown): value is Lang {
   return typeof value === "string" && (LANGS as readonly string[]).includes(value);
 }
@@ -67,6 +73,16 @@ const de = {
     manualHint:
       "Dein Browser bietet keine direkte Installation an. Öffne das Browsermenü und " +
       "wähle „Zum Startbildschirm hinzufügen“ bzw. „Installieren“.",
+  },
+  dataNotice: {
+    machineTranslated: "Maschinell übersetzt – Pokémon-Namen sind offiziell.",
+    machineTranslatedLong:
+      "Diese Sprache ist maschinell übersetzt und kann Fehler enthalten, vor allem bei Orts- und Routennamen. Die Pokémon-Namen sind offiziell.",
+    unverifiedBadge: "Daten ungeprüft",
+    unverifiedHint:
+      "Routenliste, Reihenfolge und Ortsnamen dieses Spiels wurden noch nicht mit dem Spiel abgeglichen und können Fehler enthalten.",
+    report: "Fehler melden",
+    unverifiedSuffix: "ungeprüft",
   },
   blindflug: {
     name: "Blindflug",
@@ -837,6 +853,16 @@ const en: Dictionary = {
       "Your browser has no direct install option. Open the browser menu and choose " +
       "“Add to Home screen” or “Install”.",
   },
+  dataNotice: {
+    machineTranslated: "Machine-translated – Pokémon names are official.",
+    machineTranslatedLong:
+      "This language is machine-translated and may contain mistakes, especially in place and route names. Pokémon names are official.",
+    unverifiedBadge: "Data unverified",
+    unverifiedHint:
+      "This game's route list, order and place names have not been checked against the game yet and may contain mistakes.",
+    report: "Report a mistake",
+    unverifiedSuffix: "unverified",
+  },
   blindflug: {
     name: "Blind flight",
     hidden: "Hidden in blind flight",
@@ -1595,6 +1621,16 @@ const fr: Dictionary = {
     manualHint:
       "Votre navigateur ne propose pas d'installation directe. Ouvrez son menu et choisissez " +
       "« Ajouter à l'écran d'accueil » ou « Installer ».",
+  },
+  dataNotice: {
+    machineTranslated: "Traduction automatique – les noms des Pokémon sont officiels.",
+    machineTranslatedLong:
+      "Cette langue est traduite automatiquement et peut contenir des erreurs, surtout dans les noms de lieux et de routes. Les noms des Pokémon sont officiels.",
+    unverifiedBadge: "Données non vérifiées",
+    unverifiedHint:
+      "La liste des routes, leur ordre et les noms de lieux de ce jeu n’ont pas encore été vérifiés et peuvent contenir des erreurs.",
+    report: "Signaler une erreur",
+    unverifiedSuffix: "non vérifié",
   },
   blindflug: {
     name: "Vol à l’aveugle",
@@ -2362,6 +2398,16 @@ const es: Dictionary = {
       "Tu navegador no ofrece instalación directa. Abre el menú del navegador y elige " +
       "«Añadir a pantalla de inicio» o «Instalar».",
   },
+  dataNotice: {
+    machineTranslated: "Traducción automática: los nombres de los Pokémon son oficiales.",
+    machineTranslatedLong:
+      "Este idioma está traducido automáticamente y puede contener errores, sobre todo en los nombres de lugares y rutas. Los nombres de los Pokémon son oficiales.",
+    unverifiedBadge: "Datos sin verificar",
+    unverifiedHint:
+      "La lista de rutas, su orden y los nombres de lugares de este juego aún no se han comprobado y pueden contener errores.",
+    report: "Informar de un error",
+    unverifiedSuffix: "sin verificar",
+  },
   blindflug: {
     name: "Vuelo a ciegas",
     hidden: "Oculto en vuelo a ciegas",
@@ -3126,6 +3172,16 @@ const it: Dictionary = {
     manualHint:
       "Il tuo browser non offre un'installazione diretta. Apri il menu del browser e scegli " +
       "«Aggiungi a Home» o «Installa».",
+  },
+  dataNotice: {
+    machineTranslated: "Traduzione automatica: i nomi dei Pokémon sono ufficiali.",
+    machineTranslatedLong:
+      "Questa lingua è tradotta automaticamente e può contenere errori, soprattutto nei nomi di luoghi e percorsi. I nomi dei Pokémon sono ufficiali.",
+    unverifiedBadge: "Dati non verificati",
+    unverifiedHint:
+      "L’elenco dei percorsi, il loro ordine e i nomi dei luoghi di questo gioco non sono ancora stati verificati e possono contenere errori.",
+    report: "Segnala un errore",
+    unverifiedSuffix: "non verificato",
   },
   blindflug: {
     name: "Volo cieco",

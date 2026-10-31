@@ -146,4 +146,8 @@ On top of the toggles:
 
 ## Languages
 
-The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.
+The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu.
+
+German and English are reviewed by hand. French, Spanish and Italian are **machine-translated**, the interface as well as the place and route names, and may contain mistakes. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI.
+
+Some game packs' route lists, route order and place names have not been checked against the game yet: Red/Blue/Yellow, Gold/Silver/Crystal, Black/White and Infinite Fusion. They carry a "Data unverified" badge in the New-Run dialog and a note on the Encounter tab, with a link to report mistakes. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.

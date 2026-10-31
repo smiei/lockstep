@@ -1,6 +1,7 @@
 {
   "id": "platinum",
   "sort": 5,
+  "dataStatus": "verified",
   "generation": 4,
   "dexLimit": 493,
   "spriteSet": "platinum",

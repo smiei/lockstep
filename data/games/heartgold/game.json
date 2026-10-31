@@ -1,6 +1,7 @@
 {
   "id": "heartgold",
   "sort": 6,
+  "dataStatus": "verified",
   "generation": 4,
   "dexLimit": 493,
   "spriteSet": "heartgold-soulsilver",
