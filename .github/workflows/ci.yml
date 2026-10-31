@@ -1,0 +1,49 @@
+# Tests, lint and a production build for every pull request (Dependabot's
+# included) and every push to master: a dependency update is merged only
+# once this is green. The lint step fails on any error beyond the known
+# baseline of 7 react-hooks/set-state-in-effect errors (see CLAUDE.md).
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # The build reads the Run table while prerendering, so it needs a
+      # migrated throwaway database, as in the Dockerfile.
+      DATABASE_URL: file:./ci.db
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npx prisma migrate deploy
+      - run: npm test
+
+      - name: Lint (baseline 7 errors)
+        run: |
+          npx eslint --format json --output-file eslint.json . || true
+          node -e '
+            const r = require("./eslint.json");
+            const errors = r.flatMap((f) => f.messages.filter((m) => m.severity === 2).map((m) => `${f.filePath}:${m.line} ${m.ruleId}`));
+            const unexpected = errors.filter((e) => !e.endsWith("react-hooks/set-state-in-effect"));
+            console.log(`${errors.length} lint errors (baseline: 7 react-hooks/set-state-in-effect)`);
+            if (unexpected.length || errors.length > 7) { console.log(errors.join("\n")); process.exit(1); }
+          '
+
+      - run: npm run build
