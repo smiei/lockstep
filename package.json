@@ -1,6 +1,6 @@
 {
   "name": "lockstep",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "private": true,
   "description": "Self-hosted Pokémon Nuzlocke and SoulLink tracker for 1-4 players.",
   "license": "MIT",
