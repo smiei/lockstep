@@ -7,9 +7,12 @@ import { cn } from "./cn";
 export function PageHeader({
   title,
   description,
+  align = "start",
   children,
 }: {
   title: string;
+  // "center" for a page that is a single centred block (the start page's welcome).
+  align?: "start" | "center";
   // Small print that belongs to the page as a whole - e.g. the TM tab's note
   // that a randomizer may have re-rolled compatibility.
   description?: string;
@@ -18,7 +21,8 @@ export function PageHeader({
   return (
     <div
       className={cn(
-        "mb-6 flex flex-wrap justify-between gap-3",
+        "mb-6 flex flex-wrap gap-3",
+        align === "center" ? "justify-center text-center" : "justify-between",
         // With a description the block is two lines tall, so the actions align
         // to the title; without one they sit centred against it.
         description ? "items-start" : "items-center",
@@ -27,7 +31,7 @@ export function PageHeader({
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h1>
         {description && (
-          <p className="mt-1.5 max-w-prose text-sm text-ink-muted">{description}</p>
+          <p className={cn("mt-1.5 max-w-prose text-sm text-ink-muted", align === "center" && "mx-auto")}>{description}</p>
         )}
       </div>
       {children}
