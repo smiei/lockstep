@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/22c168c6-64f1-4d59-9598-12db63b1e570" alt="Lockstep, the SoulLink Nuzlocke tracker: Gen 1-5, Infinite Fusion, 2-4 players or solo, 5 languages, free and self-hosted" width="100%">
+  <img src="https://github.com/user-attachments/assets/eb3b31c4-d025-4314-a770-a94d2cad7e81" alt="Lockstep, the SoulLink &amp; Nuzlocke tracker: Gen 1-5, many ROM hacks, Infinite Fusion, 2-4 players or solo, 5 languages, free and self-hosted" width="100%">
 </p>
 
 <h1 align="center">Lockstep</h1>
@@ -17,7 +17,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
-https://github.com/user-attachments/assets/04eee5f1-df8e-44cb-9464-106f85dc3f99
+https://github.com/user-attachments/assets/344cc46e-e123-43b3-86c2-4e0ba2f43676
 
 <details>
 <summary>New to the format?</summary>
@@ -151,7 +151,16 @@ npm start
 
 Lockstep tracks [Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18) runs, Classic and Remix, fusions included.
 
-<!-- B4b: IF screenshots (release-assets/v5.0/if-team.png, if-card.png, if-wild-fusion.png) go here once uploaded -->
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/f693af6f-a0d9-4672-82e8-c3e353593d38" alt="Team tab of an Infinite Fusion SoulLink: each tray holds both players' fusions with their fused names, types, stats and sprites"></td>
+    <td><img src="https://github.com/user-attachments/assets/e740bc76-660f-4c3b-b9b0-e6296e9c9f08" alt="Pokédex card of a fusion: fusion sprite, fused types, base stats and weaknesses, with head and body as their own cards"></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/47104f3d-c646-4a11-b933-d6229d5754cd" alt="Encounter tab: two catches entered as wild fusions with &quot;Caught as a fusion&quot;" width="85%">
+</p>
 
 - **Fuse on the Team tab:** two of a player's catches become one battle unit. Swap head and body, or split them again.
 - **Real fusion values:** name, types and base stats are worked out from the pair the way the game does it. The sprite is the community's hand-drawn fusion art, or the generated one where nobody has drawn it yet.
