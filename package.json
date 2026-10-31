@@ -42,13 +42,13 @@
     "@prisma/client": "^6.19.3",
     "dotenv": "^17.4.2",
     "fflate": "^0.8.3",
-    "next": "16.2.10",
+    "next": "16.4.3",
     "next-themes": "^0.4.6",
     "prisma": "^6.19.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-markdown": "^10.1.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@hyrious/marshal": "^0.3.4",
@@ -57,7 +57,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.4.3",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^3.2.7"

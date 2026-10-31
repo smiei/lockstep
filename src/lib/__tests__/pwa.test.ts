@@ -33,8 +33,15 @@ describe("manifest wiring", () => {
   it("still needs the workaround (i.e. Next has not fixed it)", () => {
     // If a Next upgrade drops the VERCEL_ENV condition, this fails and the
     // hand-written link can go back to being app/manifest.ts.
-    const metadata = read("node_modules/next/dist/lib/metadata/metadata.js");
-    expect(metadata).toContain("VERCEL_ENV === 'preview' ? 'use-credentials' : undefined");
+    // Next 16.4 moved the manifest link from metadata.js to metadata-elements.js
+    // (and added an origin check); either file still carrying the condition
+    // means the auto-injected link stays credential-less here.
+    const sources = ["metadata.js", "metadata-elements.js"]
+      .map((file) => path.join("node_modules/next/dist/lib/metadata", file))
+      .filter((rel) => existsSync(path.join(root, rel)))
+      .map(read)
+      .join("\n");
+    expect(sources).toMatch(/VERCEL_ENV === 'preview' \? 'use-credentials' : undefined/);
   });
 });
 

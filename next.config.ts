@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/*": ["./data/**/*"],
   },
+  // Since Next 16.4 Turbopack warns about every runtime path it cannot trace.
+  // These two files build theirs on purpose at runtime: imported game packs in
+  // custom-games/ beside the database, and the sprite folder an import checks.
+  // Neither belongs in a trace (Docker and the Windows app ship whole folders).
+  turbopack: {
+    ignoreIssue: [
+      { path: "**/src/lib/customGames.ts", title: /file pattern|Dynamic filesystem access/ },
+      { path: "**/src/lib/actions.ts", title: /file pattern|Dynamic filesystem access/ },
+    ],
+  },
   async headers() {
     return [
       {
