@@ -105,7 +105,9 @@ Pick whatever fits you best. All four give you the same app at `http://localhost
 2. Lockstep starts in the system tray and opens in your browser. The first start downloads the Pokémon sprites, which takes a few minutes.
 3. Friends on the same Wi-Fi open the address shown under **Address for other devices** in the tray menu. Allow access when the Windows firewall asks.
 
-The installer is not code-signed, so Windows SmartScreen may warn the first time: click **More info → Run anyway**.
+The installer is not code-signed yet, so your browser or Windows may warn about it even though it is safe:
+- **Browser** ("may contain a virus", "not commonly downloaded"): keep or allow the download.
+- **Windows SmartScreen** ("Windows protected your PC"): click **More info → Run anyway**.
 
 ### Docker (home servers, NAS, Unraid)
 
