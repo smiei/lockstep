@@ -60,7 +60,7 @@ You know the rules. This is what the tracker handles so you don't have to.
 - **Custom routes** for areas a game pack doesn't list.
 - **Free-team mode** for runs that aren't Nuzlockes.
 - **Blind flight**, which hides every calculated hint, optionally locked on for the whole run.
-- **An installable phone app** in 5 languages: English, German, French, Spanish and Italian.
+- **An installable phone app** in 5 languages: English, German, French, Spanish and Italian. German and English are reviewed by hand. French, Spanish and Italian are machine-translated, apart from the Pokémon names, which are official in every language.
 - **Backups** of one run or all of them.
 - No account, no cloud: it runs on your PC or home server.
 
@@ -133,14 +133,16 @@ npm start
 
 ## Supported games
 
-| Generation | Games |
-| --- | --- |
-| 1 | Red / Blue / Yellow |
-| 2 | Gold / Silver / Crystal |
-| 3 | FireRed / LeafGreen, Emerald |
-| 4 | Platinum, HeartGold, SoulSilver |
-| 5 | Black, White |
-| Fan game | Pokémon Infinite Fusion (Classic and Remix), with fusions and the game's own data |
+| Generation | Games | Route data |
+| --- | --- | --- |
+| 1 | Red / Blue / Yellow | unverified |
+| 2 | Gold / Silver / Crystal | unverified |
+| 3 | FireRed / LeafGreen, Emerald | checked |
+| 4 | Platinum, HeartGold, SoulSilver | checked |
+| 5 | Black, White | unverified |
+| Fan game | Pokémon Infinite Fusion (Classic and Remix), with fusions and the game's own data | unverified |
+
+"Route data" is the list and order of routes plus the place names. **Checked** packs were compared against the game. **Unverified** ones may contain mistakes, and the app says so when you pick one. Corrections are welcome as an issue.
 
 A game pack is plain data in `data/games/<id>/` (routes, level caps, game settings). Another game of a supported generation can be added without code changes; see [development](docs/development.md#data).
 

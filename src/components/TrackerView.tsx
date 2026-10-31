@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/Button";
 import { EmptyState, PageHeader } from "@/components/ui/Page";
 import { ChevronDownIcon } from "@/components/ActionIcons";
 import { formatCatalogueNumber, routeNumbers } from "@/lib/routeNumbers";
+import { UnverifiedDataNote } from "@/components/UnverifiedDataNote";
 
 // Tailwind only sees whole class names, so the column count per player count
 // is spelled out rather than built from a number. Three players on two
@@ -45,6 +46,7 @@ export function TrackerView({
   pokemonList,
   encounters,
   fusionEnabled = false,
+  unverifiedData = false,
 }: {
   runKey: string;
   // The run's players in order - one in Classic, 2-4 in SoulLink.
@@ -60,6 +62,8 @@ export function TrackerView({
   // Infinite Fusion: a catch can already BE a fusion, so each row offers a
   // second species (the body).
   fusionEnabled?: boolean;
+  // The pack's routes and names are not checked yet (game.json dataStatus).
+  unverifiedData?: boolean;
 }) {
   const playerLabel = usePlayerLabel();
   const tTracker = translations[lang].tracker;
@@ -258,6 +262,8 @@ export function TrackerView({
           />
         </div>
       </PageHeader>
+
+      {unverifiedData && <UnverifiedDataNote lang={lang} className="mb-4" />}
 
       <CustomRoutesDialog
         open={customOpen}

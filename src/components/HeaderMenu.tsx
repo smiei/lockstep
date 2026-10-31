@@ -14,7 +14,7 @@ import { BACKUP_FORMAT, BACKUP_VERSION, parseBackup, type BackupFile } from "@/l
 import { useDialog } from "@/components/DialogProvider";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { useInstallPrompt } from "@/lib/useInstallPrompt";
-import { LANGS, translations } from "@/lib/i18n/dictionary";
+import { LANGS, REVIEWED_LANGS, translations } from "@/lib/i18n/dictionary";
 import type { GameSummary, RunSummary } from "@/lib/types";
 import { RenameRunDialog } from "@/components/RenameRunDialog";
 import { ImportBackupDialog } from "@/components/ImportBackupDialog";
@@ -399,6 +399,9 @@ export function HeaderMenu({
                 </button>
               ))}
             </div>
+            {!REVIEWED_LANGS.includes(lang) && (
+              <p className="mt-1.5 text-xs text-ink-muted">{t.dataNotice.machineTranslated}</p>
+            )}
           </div>
           <div className="my-1 border-t border-line" />
           {IS_PUBLIC_INSTANCE && (

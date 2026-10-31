@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { FieldLabel, Input, Select } from "@/components/ui/Input";
 import { Modal } from "@/components/ui/Modal";
 import { MAX_SOULLINK_PLAYERS, MIN_SOULLINK_PLAYERS } from "@/lib/players";
+import { UnverifiedDataNote } from "@/components/UnverifiedDataNote";
 
 const PLAYER_COUNTS = Array.from(
   { length: MAX_SOULLINK_PLAYERS - MIN_SOULLINK_PLAYERS + 1 },
@@ -36,6 +37,7 @@ export function NewRunDialog({
   onCreate: (name: string, mode: RunMode, gameId: string, playerCount: number) => void;
 }) {
   const t = translations[lang].runSwitcher;
+  const tNotice = translations[lang].dataNotice;
   const [name, setName] = useState("");
   const [mode, setMode] = useState<RunMode>(RunMode.SOULLINK);
   const [playerCount, setPlayerCount] = useState(MIN_SOULLINK_PLAYERS);
@@ -108,9 +110,13 @@ export function NewRunDialog({
           {games.map((game) => (
             <option key={game.id} value={game.id}>
               {localizeName(game.names, lang)}
+              {game.unverified ? ` (${tNotice.unverifiedSuffix})` : ""}
             </option>
           ))}
         </Select>
+        {games.find((game) => game.id === gameId)?.unverified && (
+          <UnverifiedDataNote lang={lang} className="mt-2" />
+        )}
       </div>
 
       {/* Mode is fixed at creation, so it is a two-way choice rather than a
