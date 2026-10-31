@@ -48,13 +48,13 @@ All generated data is committed. The generators only need re-running when the un
 All reference data is read from disk at runtime and never copied into the database. Edits take effect without a rebuild, even inside a running container with `data/` mounted.
 
 **Game-independent data** lives in `data/`:
-- `pokemon.json`: national dex 1–800, plus alternate formes such as Deoxys and Rotom.
-- `evolutions.json`, the type charts and `catchrates.json`.
-- The move data: `moves.json`, `learnsets/`, `movesets/`, `tm-compat/`.
+- `pokemon.json`: national dex 1–1025, plus alternate formes such as Deoxys, Rotom and the Alolan, Galarian, Hisuian and Paldean forms. A forme from Gen 6 on carries `since` (its generation) and only appears in packs of that data generation or newer.
+- `evolutions.json`, the type charts and `catchrates.json`; `form-evolutions.json` adds how regional forms evolve, which PokéAPI's chains leave out.
+- The move data: `moves.json`, `learnsets/`, `movesets/`, `tm-compat/`. The version group `modern` is the app's own: per Pokémon the moves of the newest game that has them, for ROM hacks on current data (`node scripts/generate-learnsets.mjs modern` regenerates only that one).
 - Four correction tables that restore what a value was in the generation being played: `pokemon-history.json`, `move-type-history.json`, `move-name-history.json`, `catchrate-history.json`.
 
 **Game packs** live in `data/games/<gameId>/`:
-- `game.json`: names, generation, dex limit, sprite set, version group;
+- `game.json`: names, generation, dex limit, sprite set, version group, and `regionalForms` when regional forms are caught on routes;
 - `routes.json` and `levelcaps.json`;
 - optionally `evolution-overrides.json`.
 

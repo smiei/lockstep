@@ -4,12 +4,19 @@
 // to the forme it actually is and the app shows that forme's stats/types.
 //
 // Two filters decide what counts, and both matter:
-//   1. The forme's own version group must be generation <= 5. Without this
-//      you also pull in every Mega, Gigantamax and Alolan/Galarian/Hisuian
-//      form - none of which exist in the games this app covers.
+//   1. The forme's own version group must be generation <= 5 - or it is a
+//      later forme that is no battle state (see MODERN_EXCLUDE below). Without this
+//      you also pull in every Mega, Gigantamax and Totem form.
 //   2. Its stats or types must actually differ from the default forme.
 //      Drops the purely cosmetic sets (Unown's 28 letters, Cherrim's
 //      Sunshine), which would be noise in the picker.
+//
+// Formes from Gen 6 on (the Alolan/Galarian/Hisuian/Paldean regional forms,
+// Pumpkaboo's sizes, Lycanroc Dusk, ...) carry `since: <generation>`: only a
+// pack whose data generation is at least that offers them (gameData.ts), so
+// FireRed never shows an Alolan Vulpix. Regional forms are also `regional:
+// true` - in a pack with game.json `regionalForms` they are catchable entries
+// of their own, not only a state to switch into.
 //
 // Forme entries reuse PokeAPI's own pokemon ids (10001+), which can never
 // collide with a species id and keep getPokemonList(dexLimit) excluding them
@@ -70,6 +77,13 @@ const EXTRA_FORMS = new Set([
   "necrozma-ultra",
 ]);
 
+// Gen 6+ formes that are left out although their stats differ: battle-only
+// states PokeAPI does not flag (Totems, Eternamax), Let's Go's partner
+// starters, a duplicate of Zygarde 10%, and Minior's core colours (all equal
+// to the one "minior-red" above).
+const MODERN_EXCLUDE = /-totem|-starter$|-eternamax$|^zygarde-10-power-construct$|^minior-(orange|yellow|green|blue|indigo|violet)$/;
+const REGIONAL = /-(alola|galar|hisui|paldea)(-|$)/;
+
 async function fetchJson(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
@@ -105,7 +119,10 @@ async function formLabels(slug) {
       form.names.find((n) => n.language?.name === lang)?.name;
     if (hit) names[lang] = hit;
   }
-  return { generation, names: Object.keys(names).length > 0 ? names : null };
+  // Castform's weather and Darmanitan's Zen Mode are battle states too, but
+  // they were kept long before Gen 6+ formes were - the flag only filters those.
+  const battle = form.is_battle_only || form.is_mega;
+  return { generation, names: Object.keys(names).length > 0 ? names : null, battle };
 }
 
 async function main() {
@@ -134,8 +151,10 @@ async function main() {
           if (variety.is_default) continue;
           const mon = await fetchJson(variety.pokemon.url);
           if (shapeOf(mon) === defaultShape) continue; // cosmetic only
-          const { generation, names } = await formLabels(mon.name);
-          if (!EXTRA_FORMS.has(mon.name) && (!generation || generation > MAX_GENERATION)) continue; // mega/regional/gmax
+          const { generation, names, battle } = await formLabels(mon.forms[0]?.name ?? mon.name);
+          if (!generation) continue;
+          const classic = EXTRA_FORMS.has(mon.name) || generation <= MAX_GENERATION;
+          if (!classic && (battle || MODERN_EXCLUDE.test(mon.name))) continue; // mega/gmax/in-battle
           kept.push({
             id: mon.id,
             names: entry.names,
@@ -146,11 +165,13 @@ async function main() {
             weight: Math.round(mon.weight) / 10,
             baseId: entry.id,
             formNames: names ?? { en: mon.name },
+            ...(classic ? {} : { since: generation }),
+            ...(!classic && REGIONAL.test(mon.name) ? { regional: true } : {}),
           });
         }
         if (kept.length === 0) return;
         forms.push(...kept);
-        const { names } = await formLabels(defaultMon.name);
+        const { names } = await formLabels(defaultMon.forms[0]?.name ?? defaultMon.name);
         if (names) baseFormNames.set(entry.id, names);
       }),
     );

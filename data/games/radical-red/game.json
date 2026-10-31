@@ -1,0 +1,22 @@
+{
+  "id": "radical-red",
+  "sort": 42,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dataGeneration": 9,
+  "dexLimit": 1025,
+  "spriteSet": "emerald",
+  "versionGroup": "modern",
+  "trainerSet": "firered",
+  "speciesData": "radical-red",
+  "regionalForms": true,
+  "names": {
+    "de": "Radical Red",
+    "en": "Radical Red",
+    "fr": "Radical Red",
+    "es": "Radical Red",
+    "it": "Radical Red"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (radred)"
+}

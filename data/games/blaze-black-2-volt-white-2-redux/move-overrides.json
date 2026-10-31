@@ -56,6 +56,9 @@
   "energy-ball": {
     "power": 80
   },
+  "esper-wing": {
+    "power": 75
+  },
   "fire-blast": {
     "power": 120
   },
@@ -94,6 +97,9 @@
   },
   "grass-pledge": {
     "power": 50
+  },
+  "headlong-rush": {
+    "power": 100
   },
   "heart-stamp": {
     "power": 60
@@ -179,6 +185,14 @@
   "psycho-cut": {
     "power": 70
   },
+  "psyshield-bash": {
+    "type": "psychic",
+    "power": 70,
+    "damageClass": "special"
+  },
+  "raging-fury": {
+    "power": 90
+  },
   "rapid-spin": {
     "power": 20
   },
@@ -237,6 +251,9 @@
   "thunder": {
     "power": 120
   },
+  "triple-axel": {
+    "power": 20
+  },
   "twineedle": {
     "power": 25
   },
@@ -251,6 +268,9 @@
   },
   "water-pledge": {
     "power": 50
+  },
+  "wave-crash": {
+    "power": 75
   },
   "charm": {
     "type": "fairy"

@@ -49,8 +49,9 @@ There are two ways to add a game:
 | `generation` | The game **engine**: the catch formula and the Poké Balls (1–9). |
 | `dataGeneration` | Optional. The **data era**: the type chart, stats and move names. Set it when a hack runs modern data on an old engine, e.g. `generation: 3` and `dataGeneration: 9` for Fairy types on a FireRed base. Missing = same as `generation`. |
 | `dexLimit` | The highest national-dex number you can catch. Pick lists stop there. |
-| `spriteSet` | Which sprites the app downloads: `red-blue`, `crystal`, `emerald`, `firered-leafgreen`, `platinum`, `heartgold-soulsilver`, `black-white`. Sprites only exist up to that set's generation, so a hack with Pokémon from later generations shows a placeholder for them for now. |
-| `versionGroup` | Which move and TM data the app uses: `red-blue`, `crystal`, `emerald`, `firered-leafgreen`, `platinum`, `heartgold-soulsilver`, `black-white`. |
+| `spriteSet` | Which sprites the app downloads: `red-blue`, `crystal`, `emerald`, `firered-leafgreen`, `platinum`, `heartgold-soulsilver`, `black-white`, or `modern` (current sprites for every Pokémon). Pokémon and forms the chosen set does not have, such as a Gen 8 Pokémon in a Gen 3 hack, come from `modern`. |
+| `versionGroup` | Which move and TM data the app uses: `red-blue`, `crystal`, `emerald`, `firered-leafgreen`, `platinum`, `heartgold-soulsilver`, `black-white`, or `modern` (each Pokémon's moves from the newest game that has them, for hacks on current data). |
+| `regionalForms` | Optional. `true` when Alolan, Galarian, Hisuian or Paldean forms are caught on routes: they are then listed beside the species when you enter a catch. Without it they can still be switched into on the Team tab, as long as `dataGeneration` is new enough. |
 | `trainerSet` | Optional. The folder under `public/trainers/` for trainer pictures (default: the id). |
 | `names` | The game's name. `de` and `en` are required; `fr`, `es` and `it` are optional and fall back to English. |
 
@@ -115,7 +116,7 @@ The built-in ROM-hack packs carry two more files:
 - `data/shared/<id>-species.json`, referenced from `game.json` as `"speciesData"`, holds the Pokémon whose stats or types the hack changes;
 - `move-overrides.json` holds the moves whose power, type or category it changes.
 
-They are generated from nuzlocke.app's data by `node scripts/import-nuzlocke-app.mjs`, and changed evolutions and catch rates are not part of that source. Packs you import or contribute cannot carry species data yet; open an issue if your hack needs it.
+They are generated from nuzlocke.app's data by `node scripts/import-nuzlocke-app.mjs`, and changed evolutions and catch rates are not part of that source. Forms only a hack has (Radical Red's Sevii forms, Blazing Emerald's Hoenn forms) are not in the app's data and cannot be picked. Packs you import or contribute cannot carry species data yet; open an issue if your hack needs it.
 
 ## Writing a pack as a text list
 

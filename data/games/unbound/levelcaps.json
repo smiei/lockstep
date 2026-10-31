@@ -1,0 +1,591 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Rival Axelrod",
+      "en": "Rival Axelrod",
+      "fr": "Rival Axelrod",
+      "es": "Rival Axelrod",
+      "it": "Rival Axelrod"
+    },
+    "location": {
+      "de": "Frozen Heights",
+      "en": "Frozen Heights",
+      "fr": "Frozen Heights",
+      "es": "Frozen Heights",
+      "it": "Frozen Heights"
+    },
+    "badge": null,
+    "max_level": 10
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Rival Axelrod",
+      "en": "Rival Axelrod",
+      "fr": "Rival Axelrod",
+      "es": "Rival Axelrod",
+      "it": "Rival Axelrod"
+    },
+    "location": {
+      "de": "Icicle Cave",
+      "en": "Icicle Cave",
+      "fr": "Icicle Cave",
+      "es": "Icicle Cave",
+      "it": "Icicle Cave"
+    },
+    "badge": null,
+    "max_level": 13
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Leader Mirskle",
+      "en": "Leader Mirskle",
+      "fr": "Leader Mirskle",
+      "es": "Leader Mirskle",
+      "it": "Leader Mirskle"
+    },
+    "location": {
+      "de": "Dresco Town Gym",
+      "en": "Dresco Town Gym",
+      "fr": "Dresco Town Gym",
+      "es": "Dresco Town Gym",
+      "it": "Dresco Town Gym"
+    },
+    "badge": null,
+    "max_level": 21
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Shadow Admin Marlon & Grunt",
+      "en": "Shadow Admin Marlon & Grunt",
+      "fr": "Shadow Admin Marlon & Grunt",
+      "es": "Shadow Admin Marlon & Grunt",
+      "it": "Shadow Admin Marlon & Grunt"
+    },
+    "location": {
+      "de": "Cinder Volcano",
+      "en": "Cinder Volcano",
+      "fr": "Cinder Volcano",
+      "es": "Cinder Volcano",
+      "it": "Cinder Volcano"
+    },
+    "badge": null,
+    "max_level": 28
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Leader Vega",
+      "en": "Leader Vega",
+      "fr": "Leader Vega",
+      "es": "Leader Vega",
+      "it": "Leader Vega"
+    },
+    "location": {
+      "de": "Crater Town Gym",
+      "en": "Crater Town Gym",
+      "fr": "Crater Town Gym",
+      "es": "Crater Town Gym",
+      "it": "Crater Town Gym"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Shadow Admin Ivory",
+      "en": "Shadow Admin Ivory",
+      "fr": "Shadow Admin Ivory",
+      "es": "Shadow Admin Ivory",
+      "it": "Shadow Admin Ivory"
+    },
+    "location": {
+      "de": "Cinder Volcano",
+      "en": "Cinder Volcano",
+      "fr": "Cinder Volcano",
+      "es": "Cinder Volcano",
+      "it": "Cinder Volcano"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Shadow Boss Zeph",
+      "en": "Shadow Boss Zeph",
+      "fr": "Shadow Boss Zeph",
+      "es": "Shadow Boss Zeph",
+      "it": "Shadow Boss Zeph"
+    },
+    "location": {
+      "de": "Cinder Volcano",
+      "en": "Cinder Volcano",
+      "fr": "Cinder Volcano",
+      "es": "Cinder Volcano",
+      "it": "Cinder Volcano"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Rival Axelford",
+      "en": "Rival Axelford",
+      "fr": "Rival Axelford",
+      "es": "Rival Axelford",
+      "it": "Rival Axelford"
+    },
+    "location": {
+      "de": "Frost Mountain",
+      "en": "Frost Mountain",
+      "fr": "Frost Mountain",
+      "es": "Frost Mountain",
+      "it": "Frost Mountain"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Leader Alice",
+      "en": "Leader Alice",
+      "fr": "Leader Alice",
+      "es": "Leader Alice",
+      "it": "Leader Alice"
+    },
+    "location": {
+      "de": "Blizzard City Gym",
+      "en": "Blizzard City Gym",
+      "fr": "Blizzard City Gym",
+      "es": "Blizzard City Gym",
+      "it": "Blizzard City Gym"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Leader Mel",
+      "en": "Leader Mel",
+      "fr": "Leader Mel",
+      "es": "Leader Mel",
+      "it": "Leader Mel"
+    },
+    "location": {
+      "de": "Fallshore City Gym",
+      "en": "Fallshore City Gym",
+      "fr": "Fallshore City Gym",
+      "es": "Fallshore City Gym",
+      "it": "Fallshore City Gym"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Shadow Admin Ivory & Grunt",
+      "en": "Shadow Admin Ivory & Grunt",
+      "fr": "Shadow Admin Ivory & Grunt",
+      "es": "Shadow Admin Ivory & Grunt",
+      "it": "Shadow Admin Ivory & Grunt"
+    },
+    "location": {
+      "de": "Underground Passage",
+      "en": "Underground Passage",
+      "fr": "Underground Passage",
+      "es": "Underground Passage",
+      "it": "Underground Passage"
+    },
+    "badge": null,
+    "max_level": 38
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Successor Maxima",
+      "en": "Successor Maxima",
+      "fr": "Successor Maxima",
+      "es": "Successor Maxima",
+      "it": "Successor Maxima"
+    },
+    "location": {
+      "de": "Tramigan Mansion",
+      "en": "Tramigan Mansion",
+      "fr": "Tramigan Mansion",
+      "es": "Tramigan Mansion",
+      "it": "Tramigan Mansion"
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Shadow Admin Marlon",
+      "en": "Shadow Admin Marlon",
+      "fr": "Shadow Admin Marlon",
+      "es": "Shadow Admin Marlon",
+      "it": "Shadow Admin Marlon"
+    },
+    "location": {
+      "de": "Thunder Cap Mt.",
+      "en": "Thunder Cap Mt.",
+      "fr": "Thunder Cap Mt.",
+      "es": "Thunder Cap Mt.",
+      "it": "Thunder Cap Mt."
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Rival Axelford",
+      "en": "Rival Axelford",
+      "fr": "Rival Axelford",
+      "es": "Rival Axelford",
+      "it": "Rival Axelford"
+    },
+    "location": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Route 12",
+      "it": "Route 12"
+    },
+    "badge": null,
+    "max_level": 47
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Leader Galavan",
+      "en": "Leader Galavan",
+      "fr": "Leader Galavan",
+      "es": "Leader Galavan",
+      "it": "Leader Galavan"
+    },
+    "location": {
+      "de": "Dehara City Gym",
+      "en": "Dehara City Gym",
+      "fr": "Dehara City Gym",
+      "es": "Dehara City Gym",
+      "it": "Dehara City Gym"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Ruin Agent Vega & Grunt",
+      "en": "Ruin Agent Vega & Grunt",
+      "fr": "Ruin Agent Vega & Grunt",
+      "es": "Ruin Agent Vega & Grunt",
+      "it": "Ruin Agent Vega & Grunt"
+    },
+    "location": {
+      "de": "Ruins of Void",
+      "en": "Ruins of Void",
+      "fr": "Ruins of Void",
+      "es": "Ruins of Void",
+      "it": "Ruins of Void"
+    },
+    "badge": null,
+    "max_level": 47
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Shadow Boss Zeph",
+      "en": "Shadow Boss Zeph",
+      "fr": "Shadow Boss Zeph",
+      "es": "Shadow Boss Zeph",
+      "it": "Shadow Boss Zeph"
+    },
+    "location": {
+      "de": "Shadow Base",
+      "en": "Shadow Base",
+      "fr": "Shadow Base",
+      "es": "Shadow Base",
+      "it": "Shadow Base"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Ruin Leader Aklove",
+      "en": "Ruin Leader Aklove",
+      "fr": "Ruin Leader Aklove",
+      "es": "Ruin Leader Aklove",
+      "it": "Ruin Leader Aklove"
+    },
+    "location": {
+      "de": "Vivill Warehouse",
+      "en": "Vivill Warehouse",
+      "fr": "Vivill Warehouse",
+      "es": "Vivill Warehouse",
+      "it": "Vivill Warehouse"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Leader Big Mo",
+      "en": "Leader Big Mo",
+      "fr": "Leader Big Mo",
+      "es": "Leader Big Mo",
+      "it": "Leader Big Mo"
+    },
+    "location": {
+      "de": "Antisis City Gym",
+      "en": "Antisis City Gym",
+      "fr": "Antisis City Gym",
+      "es": "Antisis City Gym",
+      "it": "Antisis City Gym"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Leader Tessy",
+      "en": "Leader Tessy",
+      "fr": "Leader Tessy",
+      "es": "Leader Tessy",
+      "it": "Leader Tessy"
+    },
+    "location": {
+      "de": "Polder Town Gym",
+      "en": "Polder Town Gym",
+      "fr": "Polder Town Gym",
+      "es": "Polder Town Gym",
+      "it": "Polder Town Gym"
+    },
+    "badge": null,
+    "max_level": 58
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Rival Axelford",
+      "en": "Rival Axelford",
+      "fr": "Rival Axelford",
+      "es": "Rival Axelford",
+      "it": "Rival Axelford"
+    },
+    "location": {
+      "de": "Magnolia Town",
+      "en": "Magnolia Town",
+      "fr": "Magnolia Town",
+      "es": "Magnolia Town",
+      "it": "Magnolia Town"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Ruin Admin Ivory",
+      "en": "Ruin Admin Ivory",
+      "fr": "Ruin Admin Ivory",
+      "es": "Ruin Admin Ivory",
+      "it": "Ruin Admin Ivory"
+    },
+    "location": {
+      "de": "Crystal Peak",
+      "en": "Crystal Peak",
+      "fr": "Crystal Peak",
+      "es": "Crystal Peak",
+      "it": "Crystal Peak"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Ruin Leader Aklove",
+      "en": "Ruin Leader Aklove",
+      "fr": "Ruin Leader Aklove",
+      "es": "Ruin Leader Aklove",
+      "it": "Ruin Leader Aklove"
+    },
+    "location": {
+      "de": "Crystal Peak",
+      "en": "Crystal Peak",
+      "fr": "Crystal Peak",
+      "es": "Crystal Peak",
+      "it": "Crystal Peak"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Ex-Shadow Admin Marlon",
+      "en": "Ex-Shadow Admin Marlon",
+      "fr": "Ex-Shadow Admin Marlon",
+      "es": "Ex-Shadow Admin Marlon",
+      "it": "Ex-Shadow Admin Marlon"
+    },
+    "location": {
+      "de": "Crystal Peak",
+      "en": "Crystal Peak",
+      "fr": "Crystal Peak",
+      "es": "Crystal Peak",
+      "it": "Crystal Peak"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Leader Benjamin",
+      "en": "Leader Benjamin",
+      "fr": "Leader Benjamin",
+      "es": "Leader Benjamin",
+      "it": "Leader Benjamin"
+    },
+    "location": {
+      "de": "Redwood Village Gym",
+      "en": "Redwood Village Gym",
+      "fr": "Redwood Village Gym",
+      "es": "Redwood Village Gym",
+      "it": "Redwood Village Gym"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Moleman",
+      "en": "Moleman",
+      "fr": "Moleman",
+      "es": "Moleman",
+      "it": "Moleman"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 76
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Elias",
+      "en": "Elias",
+      "fr": "Elias",
+      "es": "Elias",
+      "it": "Elias"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 76
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Arabella",
+      "en": "Arabella",
+      "fr": "Arabella",
+      "es": "Arabella",
+      "it": "Arabella"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 76
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Penny",
+      "en": "Penny",
+      "fr": "Penny",
+      "es": "Penny",
+      "it": "Penny"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 76
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Jax",
+      "en": "Jax",
+      "fr": "Jax",
+      "es": "Jax",
+      "it": "Jax"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 76
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Ruin Leader Aklove",
+      "en": "Ruin Leader Aklove",
+      "fr": "Ruin Leader Aklove",
+      "es": "Ruin Leader Aklove",
+      "it": "Ruin Leader Aklove"
+    },
+    "location": {
+      "de": "Ruins of Void",
+      "en": "Ruins of Void",
+      "fr": "Ruins of Void",
+      "es": "Ruins of Void",
+      "it": "Ruins of Void"
+    },
+    "badge": null,
+    "max_level": 74
+  }
+]

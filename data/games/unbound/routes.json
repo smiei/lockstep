@@ -1,0 +1,673 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Inicial",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Bellin Town",
+      "en": "Bellin Town",
+      "fr": "Bellin Town",
+      "es": "Bellin Town",
+      "it": "Bellin Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Icicle Cave",
+      "en": "Icicle Cave",
+      "fr": "Icicle Cave",
+      "es": "Icicle Cave",
+      "it": "Icicle Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Dresco Town",
+      "en": "Dresco Town",
+      "fr": "Dresco Town",
+      "es": "Dresco Town",
+      "it": "Dresco Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Flower Paradise",
+      "en": "Flower Paradise",
+      "fr": "Flower Paradise",
+      "es": "Flower Paradise",
+      "it": "Flower Paradise"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Grim Woods",
+      "en": "Grim Woods",
+      "fr": "Grim Woods",
+      "es": "Grim Woods",
+      "it": "Grim Woods"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Cinder Volcano",
+      "en": "Cinder Volcano",
+      "fr": "Cinder Volcano",
+      "es": "Cinder Volcano",
+      "it": "Cinder Volcano"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Crater Town",
+      "en": "Crater Town",
+      "fr": "Crater Town",
+      "es": "Crater Town",
+      "it": "Crater Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "KBT Expressway",
+      "en": "KBT Expressway",
+      "fr": "KBT Expressway",
+      "es": "KBT Expressway",
+      "it": "KBT Expressway"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Valley Cave",
+      "en": "Valley Cave",
+      "fr": "Valley Cave",
+      "es": "Valley Cave",
+      "it": "Valley Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Ruta 6",
+      "it": "Percorso 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Frost Mountain",
+      "en": "Frost Mountain",
+      "fr": "Frost Mountain",
+      "es": "Frost Mountain",
+      "it": "Frost Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Blizzard City",
+      "en": "Blizzard City",
+      "fr": "Blizzard City",
+      "es": "Blizzard City",
+      "it": "Blizzard City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Frozen Forest",
+      "en": "Frozen Forest",
+      "fr": "Frozen Forest",
+      "es": "Frozen Forest",
+      "it": "Frozen Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Fallshore City",
+      "en": "Fallshore City",
+      "fr": "Fallshore City",
+      "es": "Fallshore City",
+      "it": "Fallshore City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Epidimy Town",
+      "en": "Epidimy Town",
+      "fr": "Epidimy Town",
+      "es": "Epidimy Town",
+      "it": "Epidimy Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Ruta 10",
+      "it": "Percorso 10"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Auburn Waterway",
+      "en": "Auburn Waterway",
+      "fr": "Auburn Waterway",
+      "es": "Auburn Waterway",
+      "it": "Auburn Waterway"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Tehl Town",
+      "en": "Tehl Town",
+      "fr": "Tehl Town",
+      "es": "Tehl Town",
+      "it": "Tehl Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Tarmigan Town",
+      "en": "Tarmigan Town",
+      "fr": "Tarmigan Town",
+      "es": "Tarmigan Town",
+      "it": "Tarmigan Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Thundercap Mt.",
+      "en": "Thundercap Mt.",
+      "fr": "Thundercap Mt.",
+      "es": "Thundercap Mt.",
+      "it": "Thundercap Mt."
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Dehara City",
+      "en": "Dehara City",
+      "fr": "Dehara City",
+      "es": "Dehara City",
+      "it": "Dehara City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Ruins of Void",
+      "en": "Ruins of Void",
+      "fr": "Ruins of Void",
+      "es": "Ruins of Void",
+      "it": "Ruins of Void"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Lost Tunnel",
+      "en": "Lost Tunnel",
+      "fr": "Lost Tunnel",
+      "es": "Lost Tunnel",
+      "it": "Lost Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Great Desert",
+      "en": "Great Desert",
+      "fr": "Great Desert",
+      "es": "Great Desert",
+      "it": "Great Desert"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Gurun Town",
+      "en": "Gurun Town",
+      "fr": "Gurun Town",
+      "es": "Gurun Town",
+      "it": "Gurun Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Vivill Woods",
+      "en": "Vivill Woods",
+      "fr": "Vivill Woods",
+      "es": "Vivill Woods",
+      "it": "Vivill Woods"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Vivill Town",
+      "en": "Vivill Town",
+      "fr": "Vivill Town",
+      "es": "Vivill Town",
+      "it": "Vivill Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Vivill Warehouse",
+      "en": "Vivill Warehouse",
+      "fr": "Vivill Warehouse",
+      "es": "Vivill Warehouse",
+      "it": "Vivill Warehouse"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Ruta 16",
+      "it": "Percorso 16"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Antisis City",
+      "en": "Antisis City",
+      "fr": "Antisis City",
+      "es": "Antisis City",
+      "it": "Antisis City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Antisis Sewers",
+      "en": "Antisis Sewers",
+      "fr": "Antisis Sewers",
+      "es": "Antisis Sewers",
+      "it": "Antisis Sewers"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Icy Hole",
+      "en": "Icy Hole",
+      "fr": "Icy Hole",
+      "es": "Icy Hole",
+      "it": "Icy Hole"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Seaport City",
+      "en": "Seaport City",
+      "fr": "Seaport City",
+      "es": "Seaport City",
+      "it": "Seaport City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Polder Town",
+      "en": "Polder Town",
+      "fr": "Polder Town",
+      "es": "Polder Town",
+      "it": "Polder Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Safari-Zone",
+      "en": "Safari Zone",
+      "fr": "Parc Safari",
+      "es": "Zona Safari",
+      "it": "Zona Safari"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Cootes Bog",
+      "en": "Cootes Bog",
+      "fr": "Cootes Bog",
+      "es": "Cootes Bog",
+      "it": "Cootes Bog"
+    },
+    "type": "route"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Magnolia Town",
+      "en": "Magnolia Town",
+      "fr": "Magnolia Town",
+      "es": "Magnolia Town",
+      "it": "Magnolia Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Crystal Peak",
+      "en": "Crystal Peak",
+      "fr": "Crystal Peak",
+      "es": "Crystal Peak",
+      "it": "Crystal Peak"
+    },
+    "type": "route"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Magnolia Fields",
+      "en": "Magnolia Fields",
+      "fr": "Magnolia Fields",
+      "es": "Magnolia Fields",
+      "it": "Magnolia Fields"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Redwood Village",
+      "en": "Redwood Village",
+      "fr": "Redwood Village",
+      "es": "Redwood Village",
+      "it": "Redwood Village"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Route 18",
+      "en": "Route 18",
+      "fr": "Route 18",
+      "es": "Ruta 18",
+      "it": "Percorso 18"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Tomb of Borrius",
+      "en": "Tomb of Borrius",
+      "fr": "Tomb of Borrius",
+      "es": "Tomb of Borrius",
+      "it": "Tomb of Borrius"
+    },
+    "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Rift Cave",
+      "en": "Rift Cave",
+      "fr": "Rift Cave",
+      "es": "Rift Cave",
+      "it": "Rift Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Redwood Forest",
+      "en": "Redwood Forest",
+      "fr": "Redwood Forest",
+      "es": "Redwood Forest",
+      "it": "Redwood Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Cliff Cave",
+      "en": "Cliff Cave",
+      "fr": "Cliff Cave",
+      "es": "Cliff Cave",
+      "it": "Cliff Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Cube Corp.",
+      "en": "Cube Corp.",
+      "fr": "Cube Corp.",
+      "es": "Cube Corp.",
+      "it": "Cube Corp."
+    },
+    "type": "route"
+  }
+]

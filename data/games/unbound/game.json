@@ -1,0 +1,21 @@
+{
+  "id": "unbound",
+  "sort": 43,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dataGeneration": 8,
+  "dexLimit": 905,
+  "spriteSet": "emerald",
+  "versionGroup": "modern",
+  "trainerSet": "unbound",
+  "regionalForms": true,
+  "names": {
+    "de": "Unbound",
+    "en": "Unbound",
+    "fr": "Unbound",
+    "es": "Unbound",
+    "it": "Unbound"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (unbound)"
+}

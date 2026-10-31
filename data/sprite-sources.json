@@ -31,6 +31,10 @@
     "heartgold-soulsilver": {
       "path": "versions/generation-iv/heartgold-soulsilver",
       "maxId": 493
+    },
+    "modern": {
+      "path": "",
+      "maxId": 1025
     }
   },
   "balls": [

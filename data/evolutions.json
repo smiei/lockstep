@@ -453,7 +453,8 @@
     "id": 52,
     "evolvesFrom": null,
     "evolvesTo": [
-      53
+      53,
+      863
     ]
   },
   {
@@ -491,7 +492,9 @@
   {
     "id": 57,
     "evolvesFrom": 56,
-    "evolvesTo": [],
+    "evolvesTo": [
+      979
+    ],
     "method": {
       "kind": "level",
       "level": 28
@@ -716,7 +719,9 @@
   {
     "id": 83,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      865
+    ]
   },
   {
     "id": 84,
@@ -1031,7 +1036,9 @@
   {
     "id": 122,
     "evolvesFrom": 439,
-    "evolvesTo": [],
+    "evolvesTo": [
+      866
+    ],
     "method": {
       "kind": "levelMove",
       "move": "mimic",
@@ -1042,7 +1049,8 @@
     "id": 123,
     "evolvesFrom": null,
     "evolvesTo": [
-      212
+      212,
+      900
     ]
   },
   {
@@ -1619,7 +1627,8 @@
     "id": 194,
     "evolvesFrom": null,
     "evolvesTo": [
-      195
+      195,
+      980
     ]
   },
   {
@@ -1689,7 +1698,9 @@
   {
     "id": 203,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      981
+    ]
   },
   {
     "id": 204,
@@ -1710,7 +1721,9 @@
   {
     "id": 206,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      982
+    ]
   },
   {
     "id": 207,
@@ -1747,7 +1760,9 @@
   {
     "id": 211,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      904
+    ]
   },
   {
     "id": 212,
@@ -1772,7 +1787,8 @@
     "id": 215,
     "evolvesFrom": null,
     "evolvesTo": [
-      461
+      461,
+      903
     ]
   },
   {
@@ -1785,7 +1801,9 @@
   {
     "id": 217,
     "evolvesFrom": 216,
-    "evolvesTo": [],
+    "evolvesTo": [
+      901
+    ],
     "method": {
       "kind": "level",
       "level": 30
@@ -1828,7 +1846,9 @@
   {
     "id": 222,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      864
+    ]
   },
   {
     "id": 223,
@@ -1920,7 +1940,9 @@
   {
     "id": 234,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      899
+    ]
   },
   {
     "id": 235,
@@ -2144,7 +2166,9 @@
   {
     "id": 264,
     "evolvesFrom": 263,
-    "evolvesTo": [],
+    "evolvesTo": [
+      862
+    ],
     "method": {
       "kind": "level",
       "level": 20
@@ -4395,7 +4419,9 @@
   {
     "id": 550,
     "evolvesFrom": null,
-    "evolvesTo": []
+    "evolvesTo": [
+      902
+    ]
   },
   {
     "id": 551,
@@ -4486,7 +4512,8 @@
     "id": 562,
     "evolvesFrom": null,
     "evolvesTo": [
-      563
+      563,
+      867
     ]
   },
   {
@@ -4992,7 +5019,9 @@
   {
     "id": 625,
     "evolvesFrom": 624,
-    "evolvesTo": [],
+    "evolvesTo": [
+      983
+    ],
     "method": {
       "kind": "level",
       "level": 52
@@ -6291,6 +6320,1673 @@
   },
   {
     "id": 800,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 801,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 802,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 803,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      804
+    ]
+  },
+  {
+    "id": 804,
+    "evolvesFrom": 803,
+    "evolvesTo": [],
+    "method": {
+      "kind": "levelMove",
+      "move": "dragon-pulse",
+      "time": null
+    }
+  },
+  {
+    "id": 805,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 806,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 807,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 808,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      809
+    ]
+  },
+  {
+    "id": 809,
+    "evolvesFrom": 808,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 810,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      811
+    ]
+  },
+  {
+    "id": 811,
+    "evolvesFrom": 810,
+    "evolvesTo": [
+      812
+    ],
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "id": 812,
+    "evolvesFrom": 811,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 813,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      814
+    ]
+  },
+  {
+    "id": 814,
+    "evolvesFrom": 813,
+    "evolvesTo": [
+      815
+    ],
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "id": 815,
+    "evolvesFrom": 814,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 816,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      817
+    ]
+  },
+  {
+    "id": 817,
+    "evolvesFrom": 816,
+    "evolvesTo": [
+      818
+    ],
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "id": 818,
+    "evolvesFrom": 817,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 819,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      820
+    ]
+  },
+  {
+    "id": 820,
+    "evolvesFrom": 819,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "id": 821,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      822
+    ]
+  },
+  {
+    "id": 822,
+    "evolvesFrom": 821,
+    "evolvesTo": [
+      823
+    ],
+    "method": {
+      "kind": "level",
+      "level": 18
+    }
+  },
+  {
+    "id": 823,
+    "evolvesFrom": 822,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "id": 824,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      825
+    ]
+  },
+  {
+    "id": 825,
+    "evolvesFrom": 824,
+    "evolvesTo": [
+      826
+    ],
+    "method": {
+      "kind": "level",
+      "level": 10
+    }
+  },
+  {
+    "id": 826,
+    "evolvesFrom": 825,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "id": 827,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      828
+    ]
+  },
+  {
+    "id": 828,
+    "evolvesFrom": 827,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 18
+    }
+  },
+  {
+    "id": 829,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      830
+    ]
+  },
+  {
+    "id": 830,
+    "evolvesFrom": 829,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 20
+    }
+  },
+  {
+    "id": 831,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      832
+    ]
+  },
+  {
+    "id": 832,
+    "evolvesFrom": 831,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "id": 833,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      834
+    ]
+  },
+  {
+    "id": 834,
+    "evolvesFrom": 833,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 22
+    }
+  },
+  {
+    "id": 835,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      836
+    ]
+  },
+  {
+    "id": 836,
+    "evolvesFrom": 835,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 25
+    }
+  },
+  {
+    "id": 837,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      838
+    ]
+  },
+  {
+    "id": 838,
+    "evolvesFrom": 837,
+    "evolvesTo": [
+      839
+    ],
+    "method": {
+      "kind": "level",
+      "level": 18
+    }
+  },
+  {
+    "id": 839,
+    "evolvesFrom": 838,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "id": 840,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      841,
+      842,
+      1011
+    ]
+  },
+  {
+    "id": 841,
+    "evolvesFrom": 840,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "tart-apple"
+    }
+  },
+  {
+    "id": 842,
+    "evolvesFrom": 840,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "sweet-apple"
+    }
+  },
+  {
+    "id": 843,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      844
+    ]
+  },
+  {
+    "id": 844,
+    "evolvesFrom": 843,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "id": 845,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 846,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      847
+    ]
+  },
+  {
+    "id": 847,
+    "evolvesFrom": 846,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 26
+    }
+  },
+  {
+    "id": 848,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      849
+    ]
+  },
+  {
+    "id": 849,
+    "evolvesFrom": 848,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "id": 850,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      851
+    ]
+  },
+  {
+    "id": 851,
+    "evolvesFrom": 850,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
+  },
+  {
+    "id": 852,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      853
+    ]
+  },
+  {
+    "id": 853,
+    "evolvesFrom": 852,
+    "evolvesTo": [],
+    "method": {
+      "kind": "levelMove",
+      "move": "taunt",
+      "time": null
+    }
+  },
+  {
+    "id": 854,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      855
+    ]
+  },
+  {
+    "id": 855,
+    "evolvesFrom": 854,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "cracked-pot"
+    }
+  },
+  {
+    "id": 856,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      857
+    ]
+  },
+  {
+    "id": 857,
+    "evolvesFrom": 856,
+    "evolvesTo": [
+      858
+    ],
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "id": 858,
+    "evolvesFrom": 857,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 42
+    }
+  },
+  {
+    "id": 859,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      860
+    ]
+  },
+  {
+    "id": 860,
+    "evolvesFrom": 859,
+    "evolvesTo": [
+      861
+    ],
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "id": 861,
+    "evolvesFrom": 860,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 42
+    }
+  },
+  {
+    "id": 862,
+    "evolvesFrom": 264,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 863,
+    "evolvesFrom": 52,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
+  },
+  {
+    "id": 864,
+    "evolvesFrom": 222,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "id": 865,
+    "evolvesFrom": 83,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 866,
+    "evolvesFrom": 122,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 42
+    }
+  },
+  {
+    "id": 867,
+    "evolvesFrom": 562,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 868,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      869
+    ]
+  },
+  {
+    "id": 869,
+    "evolvesFrom": 868,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 870,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 871,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 872,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      873
+    ]
+  },
+  {
+    "id": 873,
+    "evolvesFrom": 872,
+    "evolvesTo": [],
+    "method": {
+      "kind": "happiness",
+      "time": "night"
+    }
+  },
+  {
+    "id": 874,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 875,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 876,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 877,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 878,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      879
+    ]
+  },
+  {
+    "id": 879,
+    "evolvesFrom": 878,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "id": 880,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 881,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 882,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 883,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 884,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      1018
+    ]
+  },
+  {
+    "id": 885,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      886
+    ]
+  },
+  {
+    "id": 886,
+    "evolvesFrom": 885,
+    "evolvesTo": [
+      887
+    ],
+    "method": {
+      "kind": "level",
+      "level": 50
+    }
+  },
+  {
+    "id": 887,
+    "evolvesFrom": 886,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 60
+    }
+  },
+  {
+    "id": 888,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 889,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 890,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 891,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      892
+    ]
+  },
+  {
+    "id": 892,
+    "evolvesFrom": 891,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 893,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 894,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 895,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 896,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 897,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 898,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 899,
+    "evolvesFrom": 234,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 900,
+    "evolvesFrom": 123,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "black-augurite"
+    }
+  },
+  {
+    "id": 901,
+    "evolvesFrom": 217,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "peat-block"
+    }
+  },
+  {
+    "id": 902,
+    "evolvesFrom": 550,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 903,
+    "evolvesFrom": 215,
+    "evolvesTo": [],
+    "method": {
+      "kind": "levelHeld",
+      "item": "razor-claw",
+      "time": "day"
+    }
+  },
+  {
+    "id": 904,
+    "evolvesFrom": 211,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 905,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 906,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      907
+    ]
+  },
+  {
+    "id": 907,
+    "evolvesFrom": 906,
+    "evolvesTo": [
+      908
+    ],
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "id": 908,
+    "evolvesFrom": 907,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "id": 909,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      910
+    ]
+  },
+  {
+    "id": 910,
+    "evolvesFrom": 909,
+    "evolvesTo": [
+      911
+    ],
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "id": 911,
+    "evolvesFrom": 910,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "id": 912,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      913
+    ]
+  },
+  {
+    "id": 913,
+    "evolvesFrom": 912,
+    "evolvesTo": [
+      914
+    ],
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "id": 914,
+    "evolvesFrom": 913,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "id": 915,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      916
+    ]
+  },
+  {
+    "id": 916,
+    "evolvesFrom": 915,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 18
+    }
+  },
+  {
+    "id": 917,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      918
+    ]
+  },
+  {
+    "id": 918,
+    "evolvesFrom": 917,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 15
+    }
+  },
+  {
+    "id": 919,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      920
+    ]
+  },
+  {
+    "id": 920,
+    "evolvesFrom": 919,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "id": 921,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      922
+    ]
+  },
+  {
+    "id": 922,
+    "evolvesFrom": 921,
+    "evolvesTo": [
+      923
+    ],
+    "method": {
+      "kind": "level",
+      "level": 18
+    }
+  },
+  {
+    "id": 923,
+    "evolvesFrom": 922,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 924,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      925
+    ]
+  },
+  {
+    "id": 925,
+    "evolvesFrom": 924,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 926,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      927
+    ]
+  },
+  {
+    "id": 927,
+    "evolvesFrom": 926,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 26
+    }
+  },
+  {
+    "id": 928,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      929
+    ]
+  },
+  {
+    "id": 929,
+    "evolvesFrom": 928,
+    "evolvesTo": [
+      930
+    ],
+    "method": {
+      "kind": "level",
+      "level": 25
+    }
+  },
+  {
+    "id": 930,
+    "evolvesFrom": 929,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 931,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 932,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      933
+    ]
+  },
+  {
+    "id": 933,
+    "evolvesFrom": 932,
+    "evolvesTo": [
+      934
+    ],
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "id": 934,
+    "evolvesFrom": 933,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "id": 935,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      936,
+      937
+    ]
+  },
+  {
+    "id": 936,
+    "evolvesFrom": 935,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "auspicious-armor"
+    }
+  },
+  {
+    "id": 937,
+    "evolvesFrom": 935,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "malicious-armor"
+    }
+  },
+  {
+    "id": 938,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      939
+    ]
+  },
+  {
+    "id": 939,
+    "evolvesFrom": 938,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "id": 940,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      941
+    ]
+  },
+  {
+    "id": 941,
+    "evolvesFrom": 940,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 25
+    }
+  },
+  {
+    "id": 942,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      943
+    ]
+  },
+  {
+    "id": 943,
+    "evolvesFrom": 942,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "id": 944,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      945
+    ]
+  },
+  {
+    "id": 945,
+    "evolvesFrom": 944,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
+  },
+  {
+    "id": 946,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      947
+    ]
+  },
+  {
+    "id": 947,
+    "evolvesFrom": 946,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 948,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      949
+    ]
+  },
+  {
+    "id": 949,
+    "evolvesFrom": 948,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "id": 950,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 951,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      952
+    ]
+  },
+  {
+    "id": 952,
+    "evolvesFrom": 951,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "fire-stone"
+    }
+  },
+  {
+    "id": 953,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      954
+    ]
+  },
+  {
+    "id": 954,
+    "evolvesFrom": 953,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 955,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      956
+    ]
+  },
+  {
+    "id": 956,
+    "evolvesFrom": 955,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 957,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      958
+    ]
+  },
+  {
+    "id": 958,
+    "evolvesFrom": 957,
+    "evolvesTo": [
+      959
+    ],
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "id": 959,
+    "evolvesFrom": 958,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "id": 960,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      961
+    ]
+  },
+  {
+    "id": 961,
+    "evolvesFrom": 960,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 26
+    }
+  },
+  {
+    "id": 962,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 963,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      964
+    ]
+  },
+  {
+    "id": 964,
+    "evolvesFrom": 963,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "id": 965,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      966
+    ]
+  },
+  {
+    "id": 966,
+    "evolvesFrom": 965,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "id": 967,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 968,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 969,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      970
+    ]
+  },
+  {
+    "id": 970,
+    "evolvesFrom": 969,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 971,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      972
+    ]
+  },
+  {
+    "id": 972,
+    "evolvesFrom": 971,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "id": 973,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 974,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      975
+    ]
+  },
+  {
+    "id": 975,
+    "evolvesFrom": 974,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "id": 976,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 977,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 978,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 979,
+    "evolvesFrom": 57,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 980,
+    "evolvesFrom": 194,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 20
+    }
+  },
+  {
+    "id": 981,
+    "evolvesFrom": 203,
+    "evolvesTo": [],
+    "method": {
+      "kind": "levelMove",
+      "move": "twin-beam",
+      "time": null
+    }
+  },
+  {
+    "id": 982,
+    "evolvesFrom": 206,
+    "evolvesTo": [],
+    "method": {
+      "kind": "levelMove",
+      "move": "hyper-drill",
+      "time": null
+    }
+  },
+  {
+    "id": 983,
+    "evolvesFrom": 625,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 984,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 985,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 986,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 987,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 988,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 989,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 990,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 991,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 992,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 993,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 994,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 995,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 996,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      997
+    ]
+  },
+  {
+    "id": 997,
+    "evolvesFrom": 996,
+    "evolvesTo": [
+      998
+    ],
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "id": 998,
+    "evolvesFrom": 997,
+    "evolvesTo": [],
+    "method": {
+      "kind": "level",
+      "level": 54
+    }
+  },
+  {
+    "id": 999,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      1000
+    ]
+  },
+  {
+    "id": 1000,
+    "evolvesFrom": 999,
+    "evolvesTo": [],
+    "method": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": 1001,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1002,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1003,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1004,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1005,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1006,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1007,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1008,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1009,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1010,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1011,
+    "evolvesFrom": 840,
+    "evolvesTo": [
+      1019
+    ],
+    "method": {
+      "kind": "item",
+      "item": "syrupy-apple"
+    }
+  },
+  {
+    "id": 1012,
+    "evolvesFrom": null,
+    "evolvesTo": [
+      1013
+    ]
+  },
+  {
+    "id": 1013,
+    "evolvesFrom": 1012,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "unremarkable-teacup"
+    }
+  },
+  {
+    "id": 1014,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1015,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1016,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1017,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1018,
+    "evolvesFrom": 884,
+    "evolvesTo": [],
+    "method": {
+      "kind": "item",
+      "item": "metal-alloy"
+    }
+  },
+  {
+    "id": 1019,
+    "evolvesFrom": 1011,
+    "evolvesTo": [],
+    "method": {
+      "kind": "levelMove",
+      "move": "dragon-cheer",
+      "time": null
+    }
+  },
+  {
+    "id": 1020,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1021,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1022,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1023,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1024,
+    "evolvesFrom": null,
+    "evolvesTo": []
+  },
+  {
+    "id": 1025,
     "evolvesFrom": null,
     "evolvesTo": []
   }

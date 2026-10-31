@@ -5,7 +5,7 @@ import type { Pokemon } from "@/lib/data";
 import { computePokemonRanks } from "@/lib/ranking";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
-import { pokemonName } from "@/lib/i18n/localize";
+import { baseSpeciesId, displayNameWithForm } from "@/lib/forms";
 import { TypeBadge } from "@/components/TypeBadge";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
@@ -36,9 +36,10 @@ function getSortValue(
 ): number | string {
   switch (key) {
     case "id":
-      return pokemon.id;
+      // A regional form (GameInfo.regionalForms) sorts right after its species.
+      return pokemon.baseId !== undefined ? pokemon.baseId + 0.5 : pokemon.id;
     case "name":
-      return pokemonName(pokemon, lang);
+      return displayNameWithForm(pokemon, lang);
     case "types":
       return pokemon.types.join(", ");
     case "rang":
@@ -157,7 +158,7 @@ export function PokedexTable({
     // this long, because you search to narrow down, not to be shown where
     // something already was. That also retires the suggestion dropdown, its
     // click-outside listener and the scroll-into-view machinery.
-    if (query) list = list.filter((p) => pokemonName(p, lang).toLowerCase().includes(query));
+    if (query) list = list.filter((p) => displayNameWithForm(p, lang).toLowerCase().includes(query));
     return list;
   }, [sorted, avail, locked, onlyLegendary, query, lang]);
 
@@ -260,7 +261,7 @@ export function PokedexTable({
             </thead>
             <tbody>
               {visible.map((p) => {
-                const name = pokemonName(p, lang);
+                const name = displayNameWithForm(p, lang);
                 const isLocked = avail === "all" && locked.has(p.family_id);
                 return (
                   // A locked family recedes through muted text and a faded
@@ -277,7 +278,7 @@ export function PokedexTable({
                     <td className={`px-2 py-2 ${isLocked ? "opacity-45" : ""}`}>
                       <PokemonSprite pokemonId={p.id} name={name} size="sm" />
                     </td>
-                    <td className="hidden px-3 py-2 text-ink-muted md:table-cell">{p.id}</td>
+                    <td className="hidden px-3 py-2 text-ink-muted md:table-cell">{baseSpeciesId(p)}</td>
                     {/* The row click is the mouse/touch way in; this button is
                         the keyboard's - a <tr> cannot take focus. It fills the
                         cell so it is a full-height target as well. */}
