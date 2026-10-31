@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (incem)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-10-31T03:38:12.588Z",
+  "generatedAt": "2026-10-31T10:22:20.201Z",
   "species": [
     {
       "id": 12,
@@ -117,6 +117,25 @@
       "weight": 18.5
     },
     {
+      "id": 10092,
+      "name": "Raticate",
+      "types": [
+        "dark",
+        "normal"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 86,
+        "Vert.": 80,
+        "Sp.-A.": 40,
+        "Sp.-V.": 80,
+        "Init.": 77,
+        "Summe": 438
+      },
+      "catchRate": 45,
+      "weight": 25.5
+    },
+    {
       "id": 22,
       "name": "Fearow",
       "types": [
@@ -173,6 +192,25 @@
       "weight": 30
     },
     {
+      "id": 10100,
+      "name": "Raichu",
+      "types": [
+        "electric",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 85,
+        "Vert.": 50,
+        "Sp.-A.": 95,
+        "Sp.-V.": 85,
+        "Init.": 115,
+        "Summe": 490
+      },
+      "catchRate": 45,
+      "weight": 21
+    },
+    {
       "id": 28,
       "name": "Sandslash",
       "types": [
@@ -191,6 +229,25 @@
       "weight": 29.5
     },
     {
+      "id": 10102,
+      "name": "Sandslash",
+      "types": [
+        "ice",
+        "steel"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 110,
+        "Vert.": 120,
+        "Sp.-A.": 25,
+        "Sp.-V.": 65,
+        "Init.": 65,
+        "Summe": 480
+      },
+      "catchRate": 45,
+      "weight": 55
+    },
+    {
       "id": 38,
       "name": "Ninetales",
       "types": [
@@ -207,6 +264,25 @@
         "Summe": 515
       },
       "catchRate": 75,
+      "weight": 19.9
+    },
+    {
+      "id": 10104,
+      "name": "Ninetales",
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 73,
+        "Ang.": 67,
+        "Vert.": 75,
+        "Sp.-A.": 91,
+        "Sp.-V.": 100,
+        "Init.": 109,
+        "Summe": 515
+      },
+      "catchRate": 45,
       "weight": 19.9
     },
     {
@@ -321,6 +397,24 @@
       "weight": 32
     },
     {
+      "id": 10108,
+      "name": "Persian",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 60,
+        "Vert.": 70,
+        "Sp.-A.": 105,
+        "Sp.-V.": 65,
+        "Init.": 115,
+        "Summe": 480
+      },
+      "catchRate": 45,
+      "weight": 33
+    },
+    {
       "id": 55,
       "name": "Golduck",
       "types": [
@@ -394,6 +488,25 @@
       },
       "catchRate": 45,
       "weight": 300
+    },
+    {
+      "id": 10111,
+      "name": "Golem",
+      "types": [
+        "rock",
+        "electric"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 135,
+        "Vert.": 130,
+        "Sp.-A.": 55,
+        "Sp.-V.": 65,
+        "Init.": 45,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 316
     },
     {
       "id": 78,
@@ -488,6 +601,25 @@
       "weight": 30
     },
     {
+      "id": 10113,
+      "name": "Muk",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "stats": {
+        "KP": 105,
+        "Ang.": 115,
+        "Vert.": 85,
+        "Sp.-A.": 65,
+        "Sp.-V.": 100,
+        "Init.": 50,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 52
+    },
+    {
       "id": 97,
       "name": "Hypno",
       "types": [
@@ -540,6 +672,25 @@
       },
       "catchRate": 75,
       "weight": 45
+    },
+    {
+      "id": 10115,
+      "name": "Marowak",
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 80,
+        "Vert.": 110,
+        "Sp.-A.": 50,
+        "Sp.-V.": 80,
+        "Init.": 45,
+        "Summe": 440
+      },
+      "catchRate": 45,
+      "weight": 34
     },
     {
       "id": 106,
@@ -2404,6 +2555,63 @@
       "weight": 149.5
     },
     {
+      "id": 413,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 59,
+        "Vert.": 85,
+        "Sp.-A.": 99,
+        "Sp.-V.": 105,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
+      "id": 10004,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "ground"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 99,
+        "Vert.": 105,
+        "Sp.-A.": 59,
+        "Sp.-V.": 85,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
+      "id": 10005,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 69,
+        "Vert.": 105,
+        "Sp.-A.": 69,
+        "Sp.-V.": 105,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
       "id": 414,
       "name": "Mothim",
       "types": [
@@ -3705,6 +3913,24 @@
       "weight": 81.5
     },
     {
+      "id": 678,
+      "name": "Meowstic",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 94,
+        "Ang.": 48,
+        "Vert.": 76,
+        "Sp.-A.": 103,
+        "Sp.-V.": 81,
+        "Init.": 104,
+        "Summe": 506
+      },
+      "catchRate": 75,
+      "weight": 8.5
+    },
+    {
       "id": 693,
       "name": "Clawitzer",
       "types": [
@@ -3875,6 +4101,25 @@
       "weight": 12.5
     },
     {
+      "id": 10031,
+      "name": "Gourgeist",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 58,
+        "Vert.": 122,
+        "Sp.-A.": 90,
+        "Sp.-V.": 75,
+        "Init.": 69,
+        "Summe": 489
+      },
+      "catchRate": 45,
+      "weight": 14
+    },
+    {
       "id": 724,
       "name": "Decidueye",
       "types": [
@@ -3987,6 +4232,62 @@
       },
       "catchRate": 45,
       "weight": 3.4
+    },
+    {
+      "id": 745,
+      "name": "Lycanroc",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 125,
+        "Vert.": 70,
+        "Sp.-A.": 55,
+        "Sp.-V.": 70,
+        "Init.": 112,
+        "Summe": 507
+      },
+      "catchRate": 90,
+      "weight": 25
+    },
+    {
+      "id": 10126,
+      "name": "Lycanroc",
+      "types": [
+        "rock",
+        "dark"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 115,
+        "Vert.": 85,
+        "Sp.-A.": 55,
+        "Sp.-V.": 75,
+        "Init.": 82,
+        "Summe": 507
+      },
+      "catchRate": 45,
+      "weight": 25
+    },
+    {
+      "id": 10152,
+      "name": "Lycanroc",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 127,
+        "Vert.": 70,
+        "Sp.-A.": 55,
+        "Sp.-V.": 70,
+        "Init.": 110,
+        "Summe": 507
+      },
+      "catchRate": 45,
+      "weight": 25
     },
     {
       "id": 752,

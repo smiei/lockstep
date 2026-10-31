@@ -25,8 +25,7 @@ import type { RunSettings } from "@/lib/runSettings";
 import { Player, RunMode } from "@/generated/prisma/enums";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
-import { pokemonName } from "@/lib/i18n/localize";
-import { baseSpeciesId } from "@/lib/forms";
+import { baseSpeciesId, displayNameWithForm } from "@/lib/forms";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { ChevronDownIcon, SparkleIcon } from "@/components/ActionIcons";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
@@ -366,8 +365,8 @@ export function CatchCardBody({
     : undefined;
   const displayName = selected
     ? body
-      ? `${pokemonName(selected, lang)} / ${pokemonName(body, lang)}`
-      : pokemonName(selected, lang)
+      ? `${displayNameWithForm(selected, lang)} / ${displayNameWithForm(body, lang)}`
+      : displayNameWithForm(selected, lang)
     : "";
 
   const result =
@@ -411,7 +410,7 @@ export function CatchCardBody({
     if (selected === null) return;
     const slot = openSlots.find((s) => s.routeId === routeId && s.player === player);
     if (!slot) return;
-    const name = pokemonName(selected, lang);
+    const name = displayNameWithForm(selected, lang);
     setCaughtMsg(null);
     startCatch(async () => {
       const res = await quickCatch(runKey, routeId, player, selected.id, extra);

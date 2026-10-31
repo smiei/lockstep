@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (blazevolt)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-10-31T03:38:12.569Z",
+  "generatedAt": "2026-10-31T10:22:20.179Z",
   "species": [
     {
       "id": 12,
@@ -1725,6 +1725,63 @@
       },
       "catchRate": 75,
       "weight": 14.5
+    },
+    {
+      "id": 413,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 59,
+        "Vert.": 85,
+        "Sp.-A.": 99,
+        "Sp.-V.": 125,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
+      "id": 10004,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "ground"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 99,
+        "Vert.": 125,
+        "Sp.-A.": 59,
+        "Sp.-V.": 85,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
+      "id": 10005,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 69,
+        "Vert.": 115,
+        "Sp.-A.": 69,
+        "Sp.-V.": 115,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
     },
     {
       "id": 414,

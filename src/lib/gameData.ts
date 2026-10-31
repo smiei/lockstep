@@ -43,6 +43,9 @@ export function getDataGenerationForGame(game: GameInfo): number {
 
 const dataGeneration = getDataGenerationForGame;
 
+// Forme entries reuse PokeAPI's pokemon ids, which start here (src/lib/forms.ts).
+const FORME_ID_START = 10001;
+
 function speciesAllowlist(game: GameInfo): Set<number> | undefined {
   if (!game.species) return undefined;
   return new Set(getSpeciesList(game.id).map((entry) => entry.ourId));
@@ -97,9 +100,14 @@ function forGame(game: GameInfo, pokemon: Pokemon): Pokemon {
 export function getPokemonListForGame(game: GameInfo): Pokemon[] {
   const generation = dataGeneration(game);
   const allowed = speciesAllowlist(game);
-  const list = allowed
+  const species = allowed
     ? getPokemonList(undefined, generation).filter((p) => allowed.has(p.id))
     : getPokemonList(game.dexLimit, generation);
+  // GameInfo.regionalForms: Alolan Vulpix & co. are caught on routes, so they
+  // are entries of their own here (after the species, ids 10001+).
+  const list = game.regionalForms
+    ? [...species, ...getPokemonFormsForGame(game).filter((p) => p.regional)]
+    : species;
   return game.nameLang || game.speciesData ? list.map((p) => forGame(game, p)) : list;
 }
 
@@ -111,9 +119,11 @@ export function getPokemonByIdForGame(game: GameInfo, id: number): Pokemon | und
 export function getPokemonFormsForGame(game: GameInfo): Pokemon[] {
   const generation = dataGeneration(game);
   const allowed = speciesAllowlist(game);
+  // The allowlist (Infinite Fusion) keeps exactly the formes it always had:
+  // Gen 6+ formes (`since`) are not in its dex.
   const forms = allowed
     ? getPokemonList(undefined, generation).filter(
-        (p) => p.baseId !== undefined && allowed.has(p.baseId),
+        (p) => p.baseId !== undefined && p.since === undefined && allowed.has(p.baseId),
       )
     : getPokemonForms(game.dexLimit, generation);
   return game.nameLang || game.speciesData ? forms.map((p) => forGame(game, p)) : forms;
@@ -169,7 +179,11 @@ export function getAttackTypesForGame(game: GameInfo): string[] {
 // (evolution-target filtering, ranking's pool size) rather than through
 // getPokemonList. Those need the same allowlist-vs-ceiling split; this is the
 // membership check to use there instead of `id <= game.dexLimit`.
+// A forme id (10001+) is in the dex when the pack offers that forme - which
+// is what lets Alolan Vulpix evolve into Alolan Ninetales (form-evolutions.json)
+// only where Alolan forms exist.
 export function isInDex(game: GameInfo, id: number): boolean {
+  if (id >= FORME_ID_START) return getPokemonFormsForGame(game).some((p) => p.id === id);
   const allowed = speciesAllowlist(game);
   return allowed ? allowed.has(id) : id <= game.dexLimit;
 }

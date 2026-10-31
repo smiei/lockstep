@@ -36,7 +36,22 @@ const SPRITE_SETS = {
   platinum: { path: "versions/generation-iv/platinum", maxId: 493 },
   "black-white": { path: "versions/generation-v/black-white", maxId: 649 },
   "heartgold-soulsilver": { path: "versions/generation-iv/heartgold-soulsilver", maxId: 493 },
+  // PokeAPI's default sprites (sprites/pokemon/<id>.png): every species up to
+  // Gen 9 and every forme. A pack can pick it, and every other set borrows
+  // from it what it lacks (MODERN below).
+  modern: { path: "", maxId: 1025 },
 };
+
+// A species past a set's own range, or a forme the set never had (every Gen
+// 6+ forme: Alolan Vulpix has no Emerald sprite), comes from the modern set
+// instead - saved into the pack's own folder, so the app keeps asking for
+// /pokemon-sprites/<set>/<id>.png and needs no fallback of its own. A ROM
+// hack on an old engine with newer Pokémon therefore mixes the two styles,
+// which beats a placeholder.
+const MODERN = SPRITE_SETS.modern;
+
+const spriteUrl = (spritePath, id) =>
+  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${spritePath ? `${spritePath}/` : ""}${id}.png`;
 
 // Local ball id (see src/lib/catchrate.ts) -> PokeAPI item sprite name.
 const BALLS = [
@@ -128,8 +143,12 @@ async function main() {
   await migrateFlatLayout();
 
   // Which sets do the installed game packs need - the built-in ones and the
-  // ones imported in the app (custom-games next to the database)?
+  // ones imported in the app (custom-games next to the database)? Per set the
+  // highest dex number and data generation among its packs: how far it has
+  // to borrow from the modern set.
   const sets = new Set();
+  const setDex = new Map();
+  const setGeneration = new Map();
   for (const root of [path.join(dataDir, "games"), customGamesDir()].filter(Boolean)) {
     let gameDirs = [];
     try {
@@ -141,7 +160,10 @@ async function main() {
       if (!dir.isDirectory()) continue;
       try {
         const game = JSON.parse(await readFile(path.join(root, dir.name, "game.json"), "utf-8"));
-        sets.add(game.spriteSet ?? "emerald");
+        const set = game.spriteSet ?? "emerald";
+        sets.add(set);
+        setDex.set(set, Math.max(setDex.get(set) ?? 0, game.dexLimit ?? 0));
+        setGeneration.set(set, Math.max(setGeneration.get(set) ?? 0, game.dataGeneration ?? game.generation ?? 0));
       } catch {
         // No game.json - skip.
       }
@@ -166,7 +188,8 @@ async function main() {
     const outDir = path.join(outRoot, set);
     await mkdir(outDir, { recursive: true });
     const ids = [];
-    for (let id = 1; id <= Math.min(config.maxId, maxKnownId); id++) {
+    const lastId = Math.min(Math.max(config.maxId, setDex.get(set) ?? 0), maxKnownId);
+    for (let id = 1; id <= lastId; id++) {
       if (!existsSync(path.join(outDir, `${id}.png`))) ids.push(id);
     }
     if (ids.length === 0) {
@@ -179,7 +202,7 @@ async function main() {
       await Promise.all(
         batch.map((id) =>
           download(
-            `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${config.path}/${id}.png`,
+            spriteUrl(id <= config.maxId ? config.path : MODERN.path, id),
             path.join(outDir, `${id}.png`),
           ),
         ),
@@ -193,26 +216,31 @@ async function main() {
   // Coverage is genuinely patchy per set - in the real games a Deoxys forme
   // depended on the cartridge, so PokeAPI only has Attack/Defense for
   // FireRed-LeafGreen and Speed for Emerald - and later formes (Rotom,
-  // Giratina Origin, Shaymin Sky) don't exist before Gen 4 at all. A missing
-  // one is therefore expected, not an error: skip it and let PokemonSprite
-  // fall back.
+  // Giratina Origin, Shaymin Sky) don't exist before Gen 4 at all. The modern
+  // set is the last resort; one missing even there is skipped, and
+  // PokemonSprite falls back.
   for (const set of sets) {
     const config = SPRITE_SETS[set];
     if (!config) continue;
     const outDir = path.join(outRoot, set);
     const wanted = formEntries.filter(
-      (f) => f.baseId <= config.maxId && !existsSync(path.join(outDir, `${f.id}.png`)),
+      (f) =>
+        f.baseId <= Math.max(config.maxId, setDex.get(set) ?? 0) &&
+        (f.since ?? 0) <= (setGeneration.get(set) ?? 0) &&
+        !existsSync(path.join(outDir, `${f.id}.png`)),
     );
     if (wanted.length === 0) continue;
     let saved = 0;
-    const paths = [config.path, config.formFallbackPath].filter(Boolean);
     for (const form of wanted) {
+      // A Gen 6+ forme or one of a species past the set's range can only be
+      // in the modern set; the others try the set itself first.
+      const own = form.since === undefined && form.baseId <= config.maxId;
+      const paths = own
+        ? [...new Set([config.path, config.formFallbackPath, MODERN.path].filter((p) => p !== undefined))]
+        : [MODERN.path];
       for (const spritePath of paths) {
         try {
-          await download(
-            `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${spritePath}/${form.id}.png`,
-            path.join(outDir, `${form.id}.png`),
-          );
+          await download(spriteUrl(spritePath, form.id), path.join(outDir, `${form.id}.png`));
           saved++;
           break;
         } catch {

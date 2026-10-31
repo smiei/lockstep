@@ -95,6 +95,11 @@ export type GameInfo = {
   // shared data for this pack only, species it doesn't list keep it. Missing
   // = every pack before Infinite Fusion, i.e. shared data as before.
   speciesData?: string;
+  // The game has regional forms you can catch (Alolan Vulpix on a route), so
+  // the encounter pickers and the Pokédex list them beside the species
+  // (gameData.ts). Set by scripts/import-nuzlocke-app.mjs for hacks whose
+  // encounters contain them. Missing = forms are only a state to switch into.
+  regionalForms?: boolean;
   // Gates the whole fusion feature (the Team tab's fuse/unfuse/swap UI,
   // fusion-aware rendering) and carries the fan-art CDN's URL template, so a
   // takedown (see CLAUDE.md - the canonical sprite source has already been
@@ -165,6 +170,13 @@ export type Pokemon = {
   // Localized forme label ("Angriffsform"). Present on formes AND on the base
   // entry of any species that has them, so a picker can offer the way back.
   formNames?: LocalizedNames;
+  // Formes from Gen 6 on only: the generation that introduced them. A pack
+  // offers such a forme only when its data generation is at least this, so
+  // FireRed never shows an Alolan Vulpix (getPokemonForms).
+  since?: number;
+  // An Alolan/Galarian/Hisuian/Paldean form: in a pack with
+  // GameInfo.regionalForms it is a catchable entry of its own.
+  regional?: boolean;
 };
 
 export type LevelCap = {
@@ -327,13 +339,17 @@ export function getPokemonById(pokemonId: number, generation?: number): Pokemon 
   return pokemonForGeneration(getPokemonHistory(), hit, generation);
 }
 
-// Alternate formes whose base species is within this game's dex. Kept apart
-// from getPokemonList() because a forme is a state a caught Pokémon can be
-// switched INTO, never something the Pokédex lists or an encounter picks.
+// Alternate formes whose base species is within this game's dex and that
+// exist in its generation (`since`; omitted generation = present day). Kept
+// apart from getPokemonList() because a forme is a state a caught Pokémon can
+// be switched INTO - only a regional form in a pack with regionalForms is
+// also something an encounter picks (gameData.ts).
 export function getPokemonForms(dexLimit?: number, generation?: number): Pokemon[] {
   return getPokemonList(undefined, generation).filter(
     (pokemon) =>
-      pokemon.baseId !== undefined && (dexLimit === undefined || pokemon.baseId <= dexLimit),
+      pokemon.baseId !== undefined &&
+      (dexLimit === undefined || pokemon.baseId <= dexLimit) &&
+      (pokemon.since === undefined || pokemon.since <= (generation ?? Infinity)),
   );
 }
 
@@ -440,13 +456,55 @@ type EvolutionOverride = {
 // rule toggles select which override categories apply (both default on).
 // Overrides only ever swap `method`, never the evolvesTo/evolvesFrom
 // structure - so evolve/devolve validation is unaffected by the toggles.
+// data/form-evolutions.json: how regional forms evolve, which PokeAPI's
+// per-species chains cannot say. An edge into a forme adds it beside the
+// species' own evolution (Pikachu -> Raichu and Alolan Raichu); an edge into
+// a species makes the forme its only pre-evolution (Perrserker comes from
+// Galarian Meowth, not Meowth). Whether a forme shows at all is decided where
+// the targets are filtered (isInDex), so older games keep their chains.
+type FormEvolutionEdge = { from: number; to: number; method: EvolutionMethod };
+
+function withFormEvolutions(entries: EvolutionEntry[]): EvolutionEntry[] {
+  let edges: FormEvolutionEdge[] = [];
+  try {
+    edges = readJson<{ edges: FormEvolutionEdge[] }>("form-evolutions.json").edges;
+  } catch {
+    return entries;
+  }
+  const byId = new Map(entries.map((entry) => [entry.id, { ...entry, evolvesTo: [...entry.evolvesTo] }]));
+  const entryOf = (id: number) => {
+    let entry = byId.get(id);
+    if (!entry) {
+      entry = { id, evolvesFrom: null, evolvesTo: [] };
+      byId.set(id, entry);
+    }
+    return entry;
+  };
+  for (const edge of edges) {
+    const target = entryOf(edge.to);
+    if (edge.to < 10001 && target.evolvesFrom !== null) {
+      const old = byId.get(target.evolvesFrom);
+      if (old) old.evolvesTo = old.evolvesTo.filter((id) => id !== edge.to);
+    }
+    target.evolvesFrom = edge.from;
+    target.method = edge.method;
+    const source = entryOf(edge.from);
+    if (!source.evolvesTo.includes(edge.to)) source.evolvesTo.push(edge.to);
+  }
+  return [...byId.values()];
+}
+
+const evolutionTable = cache((): EvolutionEntry[] =>
+  withFormEvolutions(readJson<EvolutionEntry[]>("evolutions.json")),
+);
+
 export function getEvolutions(options?: {
   gameId?: string;
   impossible?: boolean;
   easier?: boolean;
   timeBased?: boolean;
 }): EvolutionEntry[] {
-  const entries = readJson<EvolutionEntry[]>("evolutions.json");
+  const entries = evolutionTable();
   const applyImpossible = options?.impossible ?? true;
   const applyEasier = options?.easier ?? true;
   const applyTimeBased = options?.timeBased ?? true;

@@ -1,0 +1,21 @@
+{
+  "id": "run-and-bun",
+  "sort": 44,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dataGeneration": 8,
+  "dexLimit": 905,
+  "spriteSet": "emerald",
+  "versionGroup": "modern",
+  "trainerSet": "emerald",
+  "regionalForms": true,
+  "names": {
+    "de": "Run & Bun",
+    "en": "Run & Bun",
+    "fr": "Run & Bun",
+    "es": "Run & Bun",
+    "it": "Run & Bun"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (emrunbun)"
+}

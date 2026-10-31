@@ -1,0 +1,20 @@
+{
+  "absorb": {
+    "power": 40
+  },
+  "astonish": {
+    "power": 40
+  },
+  "covet": {
+    "type": "fairy"
+  },
+  "lick": {
+    "power": 40
+  },
+  "octazooka": {
+    "power": 80
+  },
+  "super-fang": {
+    "type": "dark"
+  }
+}

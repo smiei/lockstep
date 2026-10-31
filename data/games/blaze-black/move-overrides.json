@@ -129,5 +129,11 @@
   },
   "glaciate": {
     "power": 100
+  },
+  "freeze-shock": {
+    "power": 180
+  },
+  "ice-burn": {
+    "power": 180
   }
 }

@@ -8,10 +8,9 @@ import type { Learnset } from "@/lib/learnset";
 import type { Player, RunMode } from "@/generated/prisma/client";
 import type { RunSettings } from "@/lib/runSettings";
 import { usePersistentState } from "@/lib/usePersistentState";
-import { baseSpeciesId } from "@/lib/forms";
+import { baseSpeciesId, displayNameWithForm } from "@/lib/forms";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
-import { pokemonName } from "@/lib/i18n/localize";
 import { PokemonCombobox } from "@/components/PokemonCombobox";
 import { PokemonInfoButton } from "@/components/PokemonDetailProvider";
 import {
@@ -121,7 +120,7 @@ function AnalyzeCard({
             lockedFamilyIds={catchShared.lockedFamilies}
           />
         </div>
-        <PokemonInfoButton pokemonId={selectedId} label={selected ? pokemonName(selected, lang) : ""} />
+        <PokemonInfoButton pokemonId={selectedId} label={selected ? displayNameWithForm(selected, lang) : ""} />
       </div>
       {/* Infinite Fusion: opposing trainers field fusions, and a wild fusion
           catches differently - the picker above is then the head. */}
@@ -138,7 +137,7 @@ function AnalyzeCard({
               lockedFamilyIds={catchShared.lockedFamilies}
             />
           </div>
-          <PokemonInfoButton pokemonId={bodyId} label={body ? pokemonName(body, lang) : ""} />
+          <PokemonInfoButton pokemonId={bodyId} label={body ? displayNameWithForm(body, lang) : ""} />
         </div>
       )}
       {isLocked && (
