@@ -5,7 +5,7 @@ import type { Pokemon } from "@/lib/data";
 import { computePokemonRanks } from "@/lib/ranking";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
-import { baseSpeciesId, displayNameWithForm } from "@/lib/forms";
+import { dexNumber, displayNameWithForm } from "@/lib/forms";
 import { TypeBadge } from "@/components/TypeBadge";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
@@ -278,7 +278,7 @@ export function PokedexTable({
                     <td className={`px-2 py-2 ${isLocked ? "opacity-45" : ""}`}>
                       <PokemonSprite pokemonId={p.id} name={name} size="sm" />
                     </td>
-                    <td className="hidden px-3 py-2 text-ink-muted md:table-cell">{baseSpeciesId(p)}</td>
+                    <td className="hidden px-3 py-2 text-ink-muted md:table-cell">{dexNumber(p) ?? "—"}</td>
                     {/* The row click is the mouse/touch way in; this button is
                         the keyboard's - a <tr> cannot take focus. It fills the
                         cell so it is a full-height target as well. */}

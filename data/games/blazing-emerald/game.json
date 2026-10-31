@@ -10,6 +10,7 @@
   "versionGroup": "modern",
   "trainerSet": "emerald",
   "speciesData": "blazing-emerald",
+  "regionalForms": true,
   "names": {
     "de": "Blazing Emerald",
     "en": "Blazing Emerald",
