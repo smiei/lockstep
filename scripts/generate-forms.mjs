@@ -31,6 +31,8 @@
 //
 // Re-runnable: rebuilds every forme entry from scratch each time.
 // Run manually: node scripts/generate-forms.mjs
+// Only re-apply LABEL_FIXES to the existing file (no network):
+//   node scripts/generate-forms.mjs --labels
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -84,6 +86,44 @@ const EXTRA_FORMS = new Set([
 const MODERN_EXCLUDE = /-totem|-starter$|-eternamax$|^zygarde-10-power-construct$|^minior-(orange|yellow|green|blue|indigo|violet)$/;
 const REGIONAL = /-(alola|galar|hisui|paldea)(-|$)/;
 
+// PokeAPI has no German, Spanish or Italian label yet for a few of the newest
+// formes, and the Paldean Tauros breeds lose their breed in French. Keyed by
+// the English label: `fill` adds the missing languages, `all` replaces every
+// label.
+const paldeanBreed = (de, en, fr, es, it) => ({
+  all: {
+    de: `Paldea-Form (${de})`,
+    en: `Paldean Form (${en})`,
+    fr: `Forme de Paldéa (${fr})`,
+    es: `Forma de Paldea (${es})`,
+    it: `Forma di Paldea (${it})`,
+  },
+});
+const LABEL_FIXES = {
+  "Hisuian Form": { fill: { es: "Forma de Hisui", it: "Forma di Hisui" } },
+  "Paldean Form": { fill: { de: "Paldea-Form", es: "Forma de Paldea", it: "Forma di Paldea" } },
+  "Paldean Form (Combat Breed)": paldeanBreed("Gefechtsrasse", "Combat Breed", "Race Combative", "Raza Combatiente", "Razza Combattiva"),
+  "Paldean Form (Blaze Breed)": paldeanBreed("Flammenrasse", "Blaze Breed", "Race Flamboyante", "Raza Llameante", "Razza Infuocata"),
+  "Paldean Form (Aqua Breed)": paldeanBreed("Flutenrasse", "Aqua Breed", "Race Aquatique", "Raza Acuática", "Razza Acquatica"),
+  Male: { fill: { de: "Männlich", fr: "Mâle", es: "Macho", it: "Maschio" } },
+  Female: { fill: { de: "Weiblich", fr: "Femelle", es: "Hembra", it: "Femmina" } },
+  "Origin Forme": { fill: { es: "Forma Origen", it: "Forma Originale" } },
+  "Therian Forme": { fill: { es: "Forma Tótem", it: "Forma Totem" } },
+  "Incarnate Forme": { fill: { de: "Inkarnationsform", fr: "Forme Avatar", es: "Forma Avatar", it: "Forma Incarnazione" } },
+  "Chest Form": { fill: { de: "Truhenform", fr: "Forme Coffre", es: "Forma Cofre", it: "Forma Scrigno" } },
+  "Roaming Form": { fill: { de: "Wanderform", fr: "Forme Marche", es: "Forma Andante", it: "Forma Ambulante" } },
+};
+
+function fixLabels(names) {
+  const fix = names && LABEL_FIXES[names.en];
+  if (!fix) return names;
+  return fix.all ?? { ...fix.fill, ...names };
+}
+
+// Order the language keys like every other entry (de, en, fr, es, it).
+const ordered = (names) =>
+  Object.fromEntries(LANGS.filter((lang) => names[lang]).map((lang) => [lang, names[lang]]));
+
 async function fetchJson(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
@@ -122,11 +162,17 @@ async function formLabels(slug) {
   // Castform's weather and Darmanitan's Zen Mode are battle states too, but
   // they were kept long before Gen 6+ formes were - the flag only filters those.
   const battle = form.is_battle_only || form.is_mega;
-  return { generation, names: Object.keys(names).length > 0 ? names : null, battle };
+  return { generation, names: Object.keys(names).length > 0 ? ordered(fixLabels(names)) : null, battle };
 }
 
 async function main() {
   const pokemon = JSON.parse(await readFile(pokemonPath, "utf-8"));
+  if (process.argv.includes("--labels")) {
+    const fixed = pokemon.map((p) => (p.formNames ? { ...p, formNames: ordered(fixLabels(p.formNames)) } : p));
+    await writeFile(pokemonPath, JSON.stringify(fixed, null, 2) + "\n", "utf-8");
+    console.log("pokemon.json: labels fixed");
+    return;
+  }
   const base = pokemon.filter((p) => p.baseId === undefined);
   const maxSpeciesId = Math.max(...base.map((p) => p.id));
 

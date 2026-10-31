@@ -23137,8 +23137,11 @@
     "legendary": false,
     "weight": 110,
     "formNames": {
+      "de": "Männlich",
       "en": "Male",
-      "fr": "Mâle"
+      "fr": "Mâle",
+      "es": "Macho",
+      "it": "Maschio"
     }
   },
   {
@@ -23219,8 +23222,11 @@
     "legendary": true,
     "weight": 48,
     "formNames": {
+      "de": "Inkarnationsform",
       "en": "Incarnate Forme",
-      "fr": "Forme Avatar"
+      "fr": "Forme Avatar",
+      "es": "Forma Avatar",
+      "it": "Forma Incarnazione"
     }
   },
   {
@@ -23501,8 +23507,11 @@
     "legendary": false,
     "weight": 120,
     "formNames": {
+      "de": "Männlich",
       "en": "Male",
-      "fr": "Mâle"
+      "fr": "Mâle",
+      "es": "Macho",
+      "it": "Maschio"
     }
   },
   {
@@ -25630,8 +25639,11 @@
     "legendary": false,
     "weight": 5,
     "formNames": {
+      "de": "Truhenform",
       "en": "Chest Form",
-      "fr": "Forme Coffre"
+      "fr": "Forme Coffre",
+      "es": "Forma Cofre",
+      "it": "Forma Scrigno"
     }
   },
   {
@@ -29168,7 +29180,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29202,7 +29216,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29236,7 +29252,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29270,7 +29288,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29304,7 +29324,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29338,7 +29360,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29372,7 +29396,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29406,7 +29432,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29440,7 +29468,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29474,7 +29504,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29508,7 +29540,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29542,7 +29576,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29576,7 +29612,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29610,7 +29648,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29644,7 +29684,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29678,7 +29720,9 @@
     "formNames": {
       "de": "Hisui-Form",
       "en": "Hisuian Form",
-      "fr": "Forme de Hisui"
+      "fr": "Forme de Hisui",
+      "es": "Forma de Hisui",
+      "it": "Forma di Hisui"
     },
     "since": 8,
     "regional": true
@@ -29712,7 +29756,9 @@
     "formNames": {
       "de": "Urform",
       "en": "Origin Forme",
-      "fr": "Forme Originelle"
+      "fr": "Forme Originelle",
+      "es": "Forma Origen",
+      "it": "Forma Originale"
     },
     "since": 8
   },
@@ -29745,7 +29791,9 @@
     "formNames": {
       "de": "Urform",
       "en": "Origin Forme",
-      "fr": "Forme Originelle"
+      "fr": "Forme Originelle",
+      "es": "Forma Origen",
+      "it": "Forma Originale"
     },
     "since": 8
   },
@@ -29778,7 +29826,9 @@
     "formNames": {
       "de": "Weiblich",
       "en": "Female",
-      "fr": "Femelle"
+      "fr": "Femelle",
+      "es": "Hembra",
+      "it": "Femmina"
     },
     "since": 8
   },
@@ -29811,7 +29861,9 @@
     "formNames": {
       "de": "Tiergeistform",
       "en": "Therian Forme",
-      "fr": "Forme Totémique"
+      "fr": "Forme Totémique",
+      "es": "Forma Tótem",
+      "it": "Forma Totem"
     },
     "since": 8
   },
@@ -29841,8 +29893,11 @@
     "weight": 115,
     "baseId": 128,
     "formNames": {
+      "de": "Paldea-Form (Gefechtsrasse)",
       "en": "Paldean Form (Combat Breed)",
-      "fr": "Forme de Paldéa"
+      "fr": "Forme de Paldéa (Race Combative)",
+      "es": "Forma de Paldea (Raza Combatiente)",
+      "it": "Forma di Paldea (Razza Combattiva)"
     },
     "since": 9,
     "regional": true
@@ -29874,8 +29929,11 @@
     "weight": 85,
     "baseId": 128,
     "formNames": {
+      "de": "Paldea-Form (Flammenrasse)",
       "en": "Paldean Form (Blaze Breed)",
-      "fr": "Forme de Paldéa"
+      "fr": "Forme de Paldéa (Race Flamboyante)",
+      "es": "Forma de Paldea (Raza Llameante)",
+      "it": "Forma di Paldea (Razza Infuocata)"
     },
     "since": 9,
     "regional": true
@@ -29907,8 +29965,11 @@
     "weight": 110,
     "baseId": 128,
     "formNames": {
+      "de": "Paldea-Form (Flutenrasse)",
       "en": "Paldean Form (Aqua Breed)",
-      "fr": "Forme de Paldéa"
+      "fr": "Forme de Paldéa (Race Aquatique)",
+      "es": "Forma de Paldea (Raza Acuática)",
+      "it": "Forma di Paldea (Razza Acquatica)"
     },
     "since": 9,
     "regional": true
@@ -29940,8 +30001,11 @@
     "weight": 11,
     "baseId": 194,
     "formNames": {
+      "de": "Paldea-Form",
       "en": "Paldean Form",
-      "fr": "Forme de Paldéa"
+      "fr": "Forme de Paldéa",
+      "es": "Forma de Paldea",
+      "it": "Forma di Paldea"
     },
     "since": 9,
     "regional": true
@@ -29972,8 +30036,11 @@
     "weight": 120,
     "baseId": 916,
     "formNames": {
+      "de": "Weiblich",
       "en": "Female",
-      "fr": "Femelle"
+      "fr": "Femelle",
+      "es": "Hembra",
+      "it": "Femmina"
     },
     "since": 9
   },
@@ -30003,8 +30070,11 @@
     "weight": 1,
     "baseId": 999,
     "formNames": {
+      "de": "Wanderform",
       "en": "Roaming Form",
-      "fr": "Forme Marche"
+      "fr": "Forme Marche",
+      "es": "Forma Andante",
+      "it": "Forma Ambulante"
     },
     "since": 9
   },
