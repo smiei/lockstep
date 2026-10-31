@@ -112,6 +112,7 @@ On top of the toggles:
 
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
 - **Game packs:** each run plays one game pack: Red/Blue/Yellow, Gold/Silver/Crystal, FireRed/LeafGreen, Emerald, Platinum, HeartGold, SoulSilver, Black, White, and the fan game Pokémon Infinite Fusion (Classic and Remix).
+- **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.
 - **Generation-aware mechanics:** the type chart (Gen 1 quirks included), the catch formula and balls, which Pokémon are obtainable, and era-appropriate sprites.
 - **Historical values:** these are something PokéAPI cannot give you, because it only serves today's values. Correction tables roll back:
   - the Gen 6 Fairy re-typings;

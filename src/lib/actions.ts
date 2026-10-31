@@ -1,5 +1,7 @@
 "use server";
 
+import fs from "node:fs";
+import path from "node:path";
 import { revalidatePath } from "next/cache";
 import { publishChange } from "@/lib/liveBus";
 import { prisma } from "@/lib/prisma";
@@ -12,6 +14,7 @@ import {
   getPokemonById,
   getEvolutionById,
   getLevelCaps,
+  getPackContext,
 } from "@/lib/data";
 import { EncounterStatus, LinkStatus, Player, RunMode, type Prisma, type Run } from "@/generated/prisma/client";
 import { getRouteForRun, getRoutesForRun, nextCustomRouteId } from "@/lib/runRoutes";
@@ -23,6 +26,8 @@ import type { ActionError } from "@/lib/actionErrors";
 import type { BackupFile } from "@/lib/backup";
 import { applyBackup, backupFilename, buildBackup, buildBackupZip, parseBackup } from "@/lib/backup";
 import { DEFAULT_RULES } from "@/lib/defaultRules";
+import { customGamesDir, removeCustomGame, writeCustomGame } from "@/lib/customGames";
+import { formatIssue, hasErrors, isCustomPackId, validateBundle, type GamePackBundle } from "@/lib/gamePack";
 import {
   PRESET_NAME_MAX,
   parsePlayerNames,
@@ -1873,4 +1878,63 @@ export async function importBackup(json: string, names?: string[]): Promise<Impo
   // Imports add whole runs - no single runId; 0 = "anything changed".
   publishChange(0);
   return { success: true, runKeys };
+}
+
+// --- Custom game packs (New Run -> Import your own game) ------------------
+//
+// A pack file is validated with the same rules as the repository's packs
+// (src/lib/gamePack.ts) and stored next to the database (customGames.ts), so
+// it lives in the same volume as the runs that play it. Not run-scoped, like
+// rule presets - and off on a public instance, which has no such folder and
+// would otherwise let strangers install games for everybody.
+
+export type ImportGamePackResult =
+  // spritesPending: the pack uses a sprite set no other game needed, so its
+  // sprites are only downloaded at the next start (download-sprites.mjs).
+  | { success: true; gameId: string; spritesPending: boolean }
+  | { success: false; error: ActionError; issues?: string[] };
+
+const PACK_MAX_CHARS = 2_000_000;
+
+export async function importGamePack(json: string): Promise<ImportGamePackResult> {
+  if (IS_PUBLIC_INSTANCE) return { success: false, error: { key: "notOnPublicInstance" } };
+  if (!customGamesDir()) return { success: false, error: { key: "customPacksUnavailable" } };
+  if (typeof json !== "string" || json.length > PACK_MAX_CHARS) {
+    return { success: false, error: { key: "packInvalid" } };
+  }
+  let bundle: unknown;
+  try {
+    bundle = JSON.parse(json);
+  } catch {
+    return { success: false, error: { key: "packInvalid" }, issues: ["The file is not valid JSON."] };
+  }
+  const issues = validateBundle(bundle, getPackContext());
+  if (hasErrors(issues)) {
+    return {
+      success: false,
+      error: { key: "packInvalid" },
+      issues: issues.filter((issue) => issue.level === "error").map(formatIssue),
+    };
+  }
+  try {
+    const gameId = writeCustomGame(bundle as GamePackBundle);
+    revalidatePath("/", "layout");
+    const spriteSet = String((bundle as GamePackBundle).game.spriteSet);
+    const spritesPending = !fs.existsSync(path.join(process.cwd(), "public", "pokemon-sprites", spriteSet));
+    return { success: true, gameId, spritesPending };
+  } catch (err) {
+    console.error("importGamePack failed", err);
+    return { success: false, error: { key: "unexpected" } };
+  }
+}
+
+export type RemoveGamePackResult = { success: true } | { success: false; error: ActionError };
+
+export async function removeGamePack(gameId: string): Promise<RemoveGamePackResult> {
+  if (IS_PUBLIC_INSTANCE) return { success: false, error: { key: "notOnPublicInstance" } };
+  if (typeof gameId !== "string" || !isCustomPackId(gameId)) return { success: false, error: { key: "packNotFound" } };
+  if ((await prisma.run.count({ where: { gameId } })) > 0) return { success: false, error: { key: "packInUse" } };
+  if (!removeCustomGame(gameId)) return { success: false, error: { key: "packNotFound" } };
+  revalidatePath("/", "layout");
+  return { success: true };
 }

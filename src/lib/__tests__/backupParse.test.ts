@@ -141,3 +141,15 @@ describe("parseBackup v4 fields", () => {
     expect(parsed.runs[0].soulLinks.map((sl) => sl.boundToRouteId)).toEqual([null, null]);
   });
 });
+
+describe("gamePacks (v5)", () => {
+  it("keeps the custom game packs the runs play and drops anything else", () => {
+    const pack = { format: "lockstep-game-pack", version: 1, game: { id: "custom-hack" } };
+    const parsed = parseBackup(JSON.stringify({ ...JSON.parse(envelope([])), gamePacks: { "custom-hack": pack, firered: pack, "custom-bad": 3 } }));
+    expect(Object.keys(parsed?.gamePacks ?? {})).toEqual(["custom-hack"]);
+  });
+
+  it("leaves the field out when a backup has none", () => {
+    expect(parseBackup(envelope([]))?.gamePacks).toBeUndefined();
+  });
+});

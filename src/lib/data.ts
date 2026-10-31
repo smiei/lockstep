@@ -10,7 +10,9 @@ import {
 } from "@/lib/pokemonHistory";
 import type { LocalizedNames } from "@/lib/i18n/localize";
 import type { GameSummary } from "@/lib/types";
-import type { PackKind } from "@/lib/gamePack";
+import type { PackContext, PackKind } from "@/lib/gamePack";
+import { isCustomPackId } from "@/lib/gamePack";
+import { customGameDir, listCustomGameIds } from "@/lib/customGames";
 import {
   historicalMoveNames,
   type Learnset,
@@ -198,8 +200,14 @@ function readJson<T>(filename: string): T {
 // Reads a file from a game pack, falling back to the default pack when the
 // requested one doesn't have it - a run whose pack was removed from a
 // live-edited /data keeps working instead of crashing every page.
+// A pack's folder: data/games/<id>/ for a built-in pack, the custom-games
+// folder next to the database for one imported in the app (customGames.ts).
+function gameDir(gameId: string): string {
+  return (isCustomPackId(gameId) && customGameDir(gameId)) || path.join(GAMES_DIR, gameId);
+}
+
 function readGameJson<T>(gameId: string, filename: string): T {
-  const primary = path.join(GAMES_DIR, gameId, filename);
+  const primary = path.join(gameDir(gameId), filename);
   if (fs.existsSync(primary)) {
     return parseFileCached(primary) as T;
   }
@@ -211,16 +219,39 @@ function readGameJson<T>(gameId: string, filename: string): T {
 }
 
 export function getGames(): GameInfo[] {
-  return fs
+  const builtIn = fs
     .readdirSync(GAMES_DIR, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
-    .map(
-      (entry) =>
-        JSON.parse(
-          fs.readFileSync(path.join(GAMES_DIR, entry.name, "game.json"), "utf-8"),
-        ) as GameInfo,
-    )
+    .map((entry) => path.join(GAMES_DIR, entry.name));
+  const custom = listCustomGameIds().map((id) => gameDir(id));
+  return [...builtIn, ...custom]
+    .flatMap((dir) => {
+      try {
+        return [JSON.parse(fs.readFileSync(path.join(dir, "game.json"), "utf-8")) as GameInfo];
+      } catch {
+        // A broken custom pack must not take the game list down with it.
+        return [];
+      }
+    })
     .sort((a, b) => a.sort - b.sort);
+}
+
+// What the pack validator needs to know about this installation - for the
+// in-app import (client-side preview and the server's own check).
+export function getPackContext(): PackContext {
+  const pokemon = parseFileCached(path.join(DATA_DIR, "pokemon.json")) as { id: number; baseId?: number }[];
+  return {
+    maxDexId: Math.max(...pokemon.filter((p) => p.baseId === undefined).map((p) => p.id)),
+    versionGroups: fs
+      .readdirSync(path.join(DATA_DIR, "movesets"))
+      .filter((file) => file.endsWith(".json"))
+      .map((file) => file.replace(/\.json$/, "")),
+    builtInIds: fs
+      .readdirSync(GAMES_DIR, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name),
+    custom: true,
+  };
 }
 
 // The client-safe slice the header and the new-run dialog need.
@@ -413,7 +444,7 @@ export function getEvolutions(options?: {
   let overrides: EvolutionOverride[] = [];
   try {
     overrides = parseFileCached(
-      path.join(GAMES_DIR, options?.gameId ?? DEFAULT_GAME_ID, "evolution-overrides.json"),
+      path.join(gameDir(options?.gameId ?? DEFAULT_GAME_ID), "evolution-overrides.json"),
     ) as EvolutionOverride[];
   } catch {
     // No override file for this pack - vanilla methods apply.

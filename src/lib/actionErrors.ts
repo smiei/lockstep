@@ -33,6 +33,10 @@ export type ActionError =
   | { key: "fusionNotFound" }
   | { key: "fusionDead" }
   | { key: "fusionSplitDisabled" }
+  | { key: "packInvalid" }
+  | { key: "packInUse" }
+  | { key: "packNotFound" }
+  | { key: "customPacksUnavailable" }
   | { key: "unexpected" };
 
 export function formatActionError(error: ActionError, lang: Lang): string {
@@ -92,6 +96,14 @@ export function formatActionError(error: ActionError, lang: Lang): string {
       return t.fusionDead;
     case "fusionSplitDisabled":
       return t.fusionSplitDisabled;
+    case "packInvalid":
+      return t.packInvalid;
+    case "packInUse":
+      return t.packInUse;
+    case "packNotFound":
+      return t.packNotFound;
+    case "customPacksUnavailable":
+      return t.customPacksUnavailable;
     case "unexpected":
       return t.unexpected;
   }
