@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import { LANG_COOKIE, isLang, type Lang } from "@/lib/i18n/dictionary";
 import { clientRuntimeConfig, pickLang } from "@/lib/runtimeConfig";
@@ -8,6 +8,9 @@ import { clientRuntimeConfig, pickLang } from "@/lib/runtimeConfig";
 type LanguageContextValue = { lang: Lang; setLang: (lang: Lang) => void };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
+
+// What the server renders: the provider starts on "de" (see below).
+const SERVER_LANG: Lang = "de";
 
 function readCookieLang(): Lang | null {
   if (typeof document === "undefined") return null;
@@ -70,6 +73,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setLangState(next);
   }, [router]);
 
+  // The layout's <html lang> is static; screen readers need the real one.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   function setLang(next: Lang) {
     setLangState(next);
     writeLangCookie(next);
@@ -83,8 +91,19 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
+const noSubscribe = () => () => {};
+
+// While a component hydrates it gets the server's language, afterwards the
+// real one. That matters for a Suspense boundary that hydrates only after the
+// provider switched (the gear menu and Blindflug button, which read ?run=):
+// hydrating it straight in the new language left the server's German
+// aria-label/title in the DOM, because React does not patch attributes that
+// differ during hydration. getServerSnapshot is what hydration reads, so the
+// boundary first matches the server HTML and then re-renders in the real
+// language.
 export function useLanguage(): LanguageContextValue {
   const ctx = useContext(LanguageContext);
+  const hydrated = useSyncExternalStore(noSubscribe, () => true, () => false);
   if (!ctx) throw new Error("useLanguage must be used within a LanguageProvider");
-  return ctx;
+  return hydrated ? ctx : { ...ctx, lang: SERVER_LANG };
 }
