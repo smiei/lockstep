@@ -2,8 +2,8 @@
 
 import { useCallback } from "react";
 import { usePersistentState } from "@/lib/usePersistentState";
+import { clientRuntimeConfig } from "@/lib/runtimeConfig";
 import {
-  SHELL_COLOR_DEFAULT,
   SHELL_COLOR_KEY,
   applyShellColor,
   parseShellColor,
@@ -15,7 +15,9 @@ import {
 // them. Applied in the setter, not in an effect: on a cold load the boot script
 // has already set the attribute.
 export function useShellColor(): [ShellColor, (color: ShellColor) => void] {
-  const [raw, setRaw] = usePersistentState<string>(SHELL_COLOR_KEY, SHELL_COLOR_DEFAULT);
+  // Nothing stored on this device: the server's DEFAULT_SHELL_COLOR, the same
+  // fallback the boot script applied before first paint.
+  const [raw, setRaw] = usePersistentState<string>(SHELL_COLOR_KEY, clientRuntimeConfig().shellColor);
   const color = parseShellColor(raw);
 
   const setColor = useCallback(

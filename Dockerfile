@@ -53,6 +53,10 @@ COPY --from=builder /app/data ./data
 # badge icons via scripts/download-*.mjs if they're missing (they are
 # deliberately NOT in this image - see .dockerignore).
 COPY --from=builder /app/scripts ./scripts
+# The repo's own logo (no third-party art), so DEFAULT_SHELL_COLOR can re-render
+# the icons at start without a branding mount. Deliberately not /app/branding:
+# the entrypoint treats that path as "a private logo is mounted".
+COPY --from=builder /app/branding/icon.svg ./branding-default/icon.svg
 RUN mkdir -p /app/public/pokemon-sprites /app/public/ball-sprites /app/public/trainers /app/public/badges
 # The generated Prisma client (incl. the native query engine binary for this
 # platform) lives outside node_modules; Next's build doesn't bundle it, so it

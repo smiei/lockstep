@@ -99,6 +99,8 @@ services:
       - "3000:3000"
     environment:
       - DATABASE_URL=file:/app/db/nuzlocke.db
+      # - DEFAULT_SHELL_COLOR=blue                  # optional: green (default), red, blue or yellow
+      # - DEFAULT_LANGUAGE=en                       # optional: de, en, fr, es or it
     volumes:
       - db:/app/db
       - sprites:/app/public/pokemon-sprites

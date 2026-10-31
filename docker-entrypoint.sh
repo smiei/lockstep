@@ -33,9 +33,13 @@ node scripts/download-badges.mjs || echo "WARNING: badge download failed; badges
 # /app/branding on its own, and hardcoding one name here is exactly how a
 # dropped-in icon.png ended up being ignored in silence. An empty or absent
 # mount leaves the icons baked in at build time untouched.
-if [ -d /app/branding ]; then
-  echo "Checking branding override in /app/branding..."
-  node scripts/generate-icons.mjs --force || echo "WARNING: icon generation failed; defaults kept."
+#
+# DEFAULT_SHELL_COLOR (red|blue|yellow) re-renders the icons too, in that
+# colour, and points the manifest's theme colour at it (--manifest). Without
+# a mount the source is the repo logo the image carries in branding-default/.
+if [ -d /app/branding ] || { [ -n "$DEFAULT_SHELL_COLOR" ] && [ "$DEFAULT_SHELL_COLOR" != "green" ]; }; then
+  echo "Generating app icons (branding mount and/or DEFAULT_SHELL_COLOR=${DEFAULT_SHELL_COLOR:-green})..."
+  node scripts/generate-icons.mjs --force --manifest || echo "WARNING: icon generation failed; defaults kept."
 fi
 
 npx prisma migrate deploy
