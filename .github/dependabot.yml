@@ -3,9 +3,9 @@
 # Security fixes arrive as their own pull requests at once, whatever the
 # schedule (enable "Dependabot security updates" in the repository settings).
 #
-# Minor and patch updates come grouped, one pull request per ecosystem.
-# Major versions (Next, Prisma, React, ...) arrive one by one, because they
-# usually need code changes and are reviewed and tested by hand.
+# Version updates are minor and patch only, grouped into one pull request per
+# ecosystem. Major versions (Prisma 7, a new Node LTS, ...) need code changes
+# and a decision, so they are planned by hand instead of arriving weekly.
 version: 2
 updates:
   - package-ecosystem: npm
@@ -17,6 +17,9 @@ updates:
     groups:
       npm-minor-and-patch:
         update-types: [minor, patch]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     commit-message:
       prefix: "deps"
 
@@ -31,11 +34,15 @@ updates:
     commit-message:
       prefix: "ci"
 
-  # The image's base (node:<LTS>-alpine). Only new LTS majors need a decision;
-  # the alpine tag itself already moves with Node's patch releases.
+  # The image's base (node:<LTS>-alpine). The tag already moves with Node's
+  # patch releases; a new major is a deliberate switch to the next LTS (odd
+  # majors like 25 are not LTS at all), so majors are ignored here.
   - package-ecosystem: docker
     directory: /
     schedule:
       interval: monthly
+    ignore:
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]
     commit-message:
       prefix: "docker"
