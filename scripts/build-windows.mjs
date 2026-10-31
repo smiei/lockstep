@@ -133,6 +133,8 @@ for (const { link, target } of links) {
 console.log(`Copied ${links.length} externalised packages into .next/node_modules.`);
 await rm(path.join(modules, "next", "dist", "docs"), { recursive: true, force: true });
 for (const file of ["LICENSE", "THIRD_PARTY_NOTICES.md"]) await copyFile(path.join(root, file), path.join(stage, file));
+// The waiting page template the tray program fills in on the first start.
+await copyFile(path.join(root, "windows", "wait.html"), path.join(stage, "wait.html"));
 await copyFile(path.join(root, "LICENSE"), path.join(stage, "LICENSE.txt"));
 
 // 3. Node.js, checked against the pinned hash.

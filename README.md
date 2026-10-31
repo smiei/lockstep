@@ -102,7 +102,7 @@ Pick whatever fits you best. All four give you the same app at `http://localhost
 ### Windows app (one download)
 
 1. Download **`Lockstep-Setup-<version>.exe`** from the [latest release](https://github.com/smiei/lockstep/releases/latest) and run it. No admin rights needed; there is also a portable zip.
-2. Lockstep starts in the system tray and opens in your browser. The first start downloads the Pokémon sprites, which takes a few minutes.
+2. Your browser opens with a short waiting page while the first start downloads the Pokémon sprites (a few minutes); it switches to Lockstep by itself. Lockstep then keeps running in the system tray.
 3. Friends on the same Wi-Fi open the address shown under **Address for other devices** in the tray menu. Allow access when the Windows firewall asks.
 
 The installer is not code-signed yet, so your browser or Windows may warn about it even though it is safe:
