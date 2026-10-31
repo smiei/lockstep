@@ -11,7 +11,7 @@ The tracker is one small web server with a SQLite database. Run it wherever suit
 
 ## Docker
 
-The image is [`gloryy/lockstep`](https://hub.docker.com/r/gloryy/lockstep) on Docker Hub. The same image is also published as `ghcr.io/smiei/lockstep` on GitHub's registry.
+The image is [`ghcr.io/smiei/lockstep`](https://github.com/smiei/lockstep/pkgs/container/lockstep) on GitHub's container registry.
 
 It is built for `amd64` and `arm64`, so it runs on ordinary PCs and servers as well as on a Raspberry Pi 4 or 5 with a 64-bit OS, ARM-based NAS units and Apple Silicon Macs.
 
@@ -19,7 +19,7 @@ It is built for `amd64` and `arm64`, so it runs on ordinary PCs and servers as w
 # compose.yaml
 services:
   lockstep:
-    image: gloryy/lockstep:latest
+    image: ghcr.io/smiei/lockstep:latest
     ports:
       - "3000:3000"
     environment:
@@ -56,7 +56,7 @@ On the first start the container downloads the Pokémon sprites and badge icons,
 docker run -d --name lockstep -p 3000:3000 \
   -e DATABASE_URL=file:/app/db/nuzlocke.db \
   -v nuzlocke-db:/app/db -v nuzlocke-sprites:/app/public/pokemon-sprites \
-  --restart unless-stopped gloryy/lockstep:latest
+  --restart unless-stopped ghcr.io/smiei/lockstep:latest
 ```
 
 ### Volumes (e.g. Unraid)
@@ -105,12 +105,12 @@ The app listens on port `3000` inside the container.
 Tags follow `MAJOR.MINOR`. `latest` always points at the newest release, and every release is also pushed under its own version, so a rollback is a one-word edit:
 
 ```
-gloryy/lockstep:latest   →   gloryy/lockstep:5.0
+ghcr.io/smiei/lockstep:latest   →   ghcr.io/smiei/lockstep:5.0
 ```
 
 ### Moving from the old image name
 
-Up to 4.3 the app was called SoulLink Nuzlocke Tracker and the image `gloryy/nuzlocke-tracker` (`ghcr.io/smiei/nuzlocke-tracker`). From 5.0 on only `gloryy/lockstep` gets new releases. To switch, change the image name and keep everything else - volumes, `DATABASE_URL`, ports. Your runs stay where they are, and the database is migrated on the first start. The old image stays available for rollbacks to 4.3 and earlier.
+Up to 4.3 the app was called SoulLink Nuzlocke Tracker and the image `gloryy/nuzlocke-tracker` on Docker Hub (also `ghcr.io/smiei/nuzlocke-tracker`). From 5.0 on only `ghcr.io/smiei/lockstep` gets new releases; Docker Hub gets none. To switch, change the image name and keep everything else - volumes, `DATABASE_URL`, ports. Your runs stay where they are, and the database is migrated on the first start. The old image stays available for rollbacks to 4.3 and earlier.
 
 ## Pinokio
 

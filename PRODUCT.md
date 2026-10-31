@@ -39,7 +39,7 @@ Built around the SoulLink itself, not a solo tracker with a second column: linke
 
 ## Brand Commitments
 
-- Name: **Lockstep**, subtitle "SoulLink & Nuzlocke tracker" (so a search for "Nuzlocke" still finds it). GitHub repo `smiei/lockstep`, Docker image `gloryy/lockstep` (also `ghcr.io/smiei/lockstep`), Pinokio launcher `smiei/lockstep-pinokio` - all renamed for 5.0.
+- Name: **Lockstep**, subtitle "SoulLink & Nuzlocke tracker" (so a search for "Nuzlocke" still finds it). GitHub repo `smiei/lockstep`, Docker image `ghcr.io/smiei/lockstep` (GitHub's registry only; Docker Hub `gloryy/nuzlocke-tracker` kept for releases up to 4.3), Pinokio launcher `smiei/lockstep-pinokio` - all renamed for 5.0.
 - The current logo and branding are explicitly rejected and must be replaced.
 - Strictly non-commercial fan project.
 

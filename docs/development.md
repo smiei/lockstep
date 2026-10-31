@@ -78,16 +78,16 @@ Each release:
 2. Add a row to the version table in the README.
 3. Commit, push, and publish a GitHub release tagged `vMAJOR.MINOR`.
 
-Publishing the release starts [`.github/workflows/docker.yml`](../.github/workflows/docker.yml). It builds the image for `linux/amd64` and `linux/arm64` and pushes it to Docker Hub (`gloryy/lockstep`) and the GitHub Container Registry (`ghcr.io/smiei/lockstep`), each as `MAJOR.MINOR` and `latest`. A release marked as a pre-release gets only its version tag.
+Publishing the release starts [`.github/workflows/docker.yml`](../.github/workflows/docker.yml). It builds the image for `linux/amd64` and `linux/arm64` and pushes it to the GitHub Container Registry as `ghcr.io/smiei/lockstep`, as `MAJOR.MINOR` and `latest`. A release marked as a pre-release gets only its version tag.
 
 From the Actions tab, **Run workflow** builds without publishing. With **push** ticked and a **tag** given, it rebuilds an existing release; `latest` then only moves when **latest** is ticked as well.
 
-The workflow needs two repository secrets: `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`, a Docker Hub access token with read and write.
+The workflow needs no secrets: it pushes with the workflow's own token. A newly created package starts private; set it to public once in its package settings.
 
 The build passes the version as `APP_VERSION`, which is what the gear menu shows on a Docker install. A non-Docker install takes it from `package.json`.
 
 A manual build is still possible for one platform:
 
 ```bash
-docker build --build-arg APP_VERSION=<MAJOR.MINOR> -t gloryy/lockstep:<MAJOR.MINOR> .
+docker build --build-arg APP_VERSION=<MAJOR.MINOR> -t ghcr.io/smiei/lockstep:<MAJOR.MINOR> .
 ```

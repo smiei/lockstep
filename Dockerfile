@@ -18,7 +18,7 @@ ENV DATABASE_URL="file:./dev.db"
 RUN npx prisma generate
 RUN npx prisma migrate deploy
 # Surfaced in the gear menu, so a running instance can be checked against the
-# Docker Hub tag it's supposed to be - this is what would have made "did the
+# registry tag it's supposed to be - this is what would have made "did the
 # Pixel actually get the status-bar fix yet" a one-glance question instead of
 # a guess. NEXT_PUBLIC_* vars are inlined into the client bundle at build
 # time only, so this must be set before `next build`, not at container start;
