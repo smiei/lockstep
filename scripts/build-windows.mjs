@@ -94,8 +94,8 @@ await writeFile(path.join(appDir, "next.config.mjs"), nextConfig, "utf-8");
 // Turbopack reaches server packages it keeps external through links with
 // hashed names in .next/node_modules (@libsql/client-<hash> -> the package).
 // On Windows they are junctions with ABSOLUTE paths into this build folder, so
-// they cannot ship: prepare-runtime.mjs recreates them from this list on the
-// user's machine, wherever the app was installed.
+// they cannot ship. They become real copies of the (pruned) packages below -
+// about 16 MB, and nothing has to be linked on the user's machine.
 const links = [];
 const linkRoot = path.join(root, ".next", "node_modules");
 if (existsSync(linkRoot)) {
@@ -109,9 +109,6 @@ if (existsSync(linkRoot)) {
     }
   }
 }
-await writeFile(path.join(appDir, "windows-links.json"), JSON.stringify(links, null, 2) + "\n", "utf-8");
-console.log(`Recorded ${links.length} package links for the runtime.`);
-
 run("npm", ["ci", "--omit=dev", "--no-audit", "--no-fund"], { cwd: appDir });
 
 // Prune what `next start` and the Prisma CLI never load - roughly a third of
@@ -130,6 +127,10 @@ await prune(modules);
 for (const dir of await readdir(path.join(modules, "@next"))) {
   if (dir.startsWith("swc-")) await rm(path.join(modules, "@next", dir), { recursive: true });
 }
+for (const { link, target } of links) {
+  await cp(path.join(appDir, target), path.join(appDir, link), { recursive: true });
+}
+console.log(`Copied ${links.length} externalised packages into .next/node_modules.`);
 await rm(path.join(modules, "next", "dist", "docs"), { recursive: true, force: true });
 for (const file of ["LICENSE", "THIRD_PARTY_NOTICES.md"]) await copyFile(path.join(root, file), path.join(stage, file));
 await copyFile(path.join(root, "LICENSE"), path.join(stage, "LICENSE.txt"));
