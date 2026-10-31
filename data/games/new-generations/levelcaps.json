@@ -1,0 +1,960 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Rocko",
+      "en": "Brock",
+      "fr": "Pierre",
+      "es": "Brock",
+      "it": "Brock"
+    },
+    "location": {
+      "de": "Pewter City Gym",
+      "en": "Pewter City Gym",
+      "fr": "Pewter City Gym",
+      "es": "Pewter City Gym",
+      "it": "Pewter City Gym"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Roxanne",
+      "en": "Roxanne",
+      "fr": "Roxanne",
+      "es": "Roxanne",
+      "it": "Roxanne"
+    },
+    "location": {
+      "de": "Pewter City Gym",
+      "en": "Pewter City Gym",
+      "fr": "Pewter City Gym",
+      "es": "Pewter City Gym",
+      "it": "Pewter City Gym"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Gym Laeder Joey",
+      "en": "Gym Laeder Joey",
+      "fr": "Gym Laeder Joey",
+      "es": "Gym Laeder Joey",
+      "it": "Gym Laeder Joey"
+    },
+    "location": {
+      "de": "Pewter City Gym",
+      "en": "Pewter City Gym",
+      "fr": "Pewter City Gym",
+      "es": "Pewter City Gym",
+      "it": "Pewter City Gym"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Misty",
+      "en": "Misty",
+      "fr": "Ondine",
+      "es": "Misty",
+      "it": "Misty"
+    },
+    "location": {
+      "de": "Cerulean City Gym",
+      "en": "Cerulean City Gym",
+      "fr": "Cerulean City Gym",
+      "es": "Cerulean City Gym",
+      "it": "Cerulean City Gym"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Brawly",
+      "en": "Brawly",
+      "fr": "Brawly",
+      "es": "Brawly",
+      "it": "Brawly"
+    },
+    "location": {
+      "de": "Cerulean City Gym",
+      "en": "Cerulean City Gym",
+      "fr": "Cerulean City Gym",
+      "es": "Cerulean City Gym",
+      "it": "Cerulean City Gym"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Gym Leaders Duff & Eda",
+      "en": "Gym Leaders Duff & Eda",
+      "fr": "Gym Leaders Duff & Eda",
+      "es": "Gym Leaders Duff & Eda",
+      "it": "Gym Leaders Duff & Eda"
+    },
+    "location": {
+      "de": "Cerulean City Gym",
+      "en": "Cerulean City Gym",
+      "fr": "Cerulean City Gym",
+      "es": "Cerulean City Gym",
+      "it": "Cerulean City Gym"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Route 24",
+      "en": "Route 24",
+      "fr": "Route 24",
+      "es": "Route 24",
+      "it": "Route 24"
+    },
+    "badge": null,
+    "max_level": 30,
+    "sprite": "champ"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "S.S. Anne",
+      "en": "S.S. Anne",
+      "fr": "S.S. Anne",
+      "es": "S.S. Anne",
+      "it": "S.S. Anne"
+    },
+    "badge": null,
+    "max_level": 40,
+    "sprite": "champ"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Major Bob",
+      "en": "Lt. Surge",
+      "fr": "Major Bob",
+      "es": "Teniente Surge",
+      "it": "Lt. Surge"
+    },
+    "location": {
+      "de": "Vermillion City Gym",
+      "en": "Vermillion City Gym",
+      "fr": "Vermillion City Gym",
+      "es": "Vermillion City Gym",
+      "it": "Vermillion City Gym"
+    },
+    "badge": null,
+    "max_level": 40
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Wattson",
+      "en": "Wattson",
+      "fr": "Wattson",
+      "es": "Wattson",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Vermillion City Gym",
+      "en": "Vermillion City Gym",
+      "fr": "Vermillion City Gym",
+      "es": "Vermillion City Gym",
+      "it": "Vermillion City Gym"
+    },
+    "badge": null,
+    "max_level": 40
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Gym Leader Franklin",
+      "en": "Gym Leader Franklin",
+      "fr": "Gym Leader Franklin",
+      "es": "Gym Leader Franklin",
+      "it": "Gym Leader Franklin"
+    },
+    "location": {
+      "de": "Vermillion City Gym",
+      "en": "Vermillion City Gym",
+      "fr": "Vermillion City Gym",
+      "es": "Vermillion City Gym",
+      "it": "Vermillion City Gym"
+    },
+    "badge": null,
+    "max_level": 40
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Erika",
+      "en": "Erika",
+      "fr": "Erika",
+      "es": "Erika",
+      "it": "Erika"
+    },
+    "location": {
+      "de": "Celadon City Gym",
+      "en": "Celadon City Gym",
+      "fr": "Celadon City Gym",
+      "es": "Celadon City Gym",
+      "it": "Celadon City Gym"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Flannery",
+      "en": "Flannery",
+      "fr": "Flannery",
+      "es": "Flannery",
+      "it": "Flannery"
+    },
+    "location": {
+      "de": "Celadon City Gym",
+      "en": "Celadon City Gym",
+      "fr": "Celadon City Gym",
+      "es": "Celadon City Gym",
+      "it": "Celadon City Gym"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Gym Leader Charles",
+      "en": "Gym Leader Charles",
+      "fr": "Gym Leader Charles",
+      "es": "Gym Leader Charles",
+      "it": "Gym Leader Charles"
+    },
+    "location": {
+      "de": "Celadon City Gym",
+      "en": "Celadon City Gym",
+      "fr": "Celadon City Gym",
+      "es": "Celadon City Gym",
+      "it": "Celadon City Gym"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Pokémon Tower",
+      "en": "Pokémon Tower",
+      "fr": "Pokémon Tower",
+      "es": "Pokémon Tower",
+      "it": "Pokémon Tower"
+    },
+    "badge": null,
+    "max_level": 55,
+    "sprite": "champ"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Koga",
+      "en": "Koga",
+      "fr": "Koga",
+      "es": "Koga",
+      "it": "Koga"
+    },
+    "location": {
+      "de": "Fuschia City Gym",
+      "en": "Fuschia City Gym",
+      "fr": "Fuschia City Gym",
+      "es": "Fuschia City Gym",
+      "it": "Fuschia City Gym"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Norman",
+      "en": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "location": {
+      "de": "Fuschia City Gym",
+      "en": "Fuschia City Gym",
+      "fr": "Fuschia City Gym",
+      "es": "Fuschia City Gym",
+      "it": "Fuschia City Gym"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Gym Leader AAAAAAAHHH",
+      "en": "Gym Leader AAAAAAAHHH",
+      "fr": "Gym Leader AAAAAAAHHH",
+      "es": "Gym Leader AAAAAAAHHH",
+      "it": "Gym Leader AAAAAAAHHH"
+    },
+    "location": {
+      "de": "Fuschia City Gym",
+      "en": "Fuschia City Gym",
+      "fr": "Fuschia City Gym",
+      "es": "Fuschia City Gym",
+      "it": "Fuschia City Gym"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Silph Co",
+      "en": "Silph Co",
+      "fr": "Silph Co",
+      "es": "Silph Co",
+      "it": "Silph Co"
+    },
+    "badge": null,
+    "max_level": 65,
+    "sprite": "champ"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Sabrina",
+      "en": "Sabrina",
+      "fr": "Morgane",
+      "es": "Sabrina",
+      "it": "Sabrina"
+    },
+    "location": {
+      "de": "Saffron City Gym",
+      "en": "Saffron City Gym",
+      "fr": "Saffron City Gym",
+      "es": "Saffron City Gym",
+      "it": "Saffron City Gym"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Winona",
+      "en": "Winona",
+      "fr": "Winona",
+      "es": "Winona",
+      "it": "Winona"
+    },
+    "location": {
+      "de": "Saffron City Gym",
+      "en": "Saffron City Gym",
+      "fr": "Saffron City Gym",
+      "es": "Saffron City Gym",
+      "it": "Saffron City Gym"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Gym Leader Bob",
+      "en": "Gym Leader Bob",
+      "fr": "Gym Leader Bob",
+      "es": "Gym Leader Bob",
+      "it": "Gym Leader Bob"
+    },
+    "location": {
+      "de": "Saffron City Gym",
+      "en": "Saffron City Gym",
+      "fr": "Saffron City Gym",
+      "es": "Saffron City Gym",
+      "it": "Saffron City Gym"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Pyro",
+      "en": "Blaine",
+      "fr": "Auguste",
+      "es": "Blaine",
+      "it": "Blaine"
+    },
+    "location": {
+      "de": "Cinnabar City Gym",
+      "en": "Cinnabar City Gym",
+      "fr": "Cinnabar City Gym",
+      "es": "Cinnabar City Gym",
+      "it": "Cinnabar City Gym"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Tate & Liza",
+      "en": "Tate & Liza",
+      "fr": "Tate & Liza",
+      "es": "Tate & Liza",
+      "it": "Tate & Liza"
+    },
+    "location": {
+      "de": "Cinnabar City Gym",
+      "en": "Cinnabar City Gym",
+      "fr": "Cinnabar City Gym",
+      "es": "Cinnabar City Gym",
+      "it": "Cinnabar City Gym"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Gym Leader Deidara",
+      "en": "Gym Leader Deidara",
+      "fr": "Gym Leader Deidara",
+      "es": "Gym Leader Deidara",
+      "it": "Gym Leader Deidara"
+    },
+    "location": {
+      "de": "Cinnabar City Gym",
+      "en": "Cinnabar City Gym",
+      "fr": "Cinnabar City Gym",
+      "es": "Cinnabar City Gym",
+      "it": "Cinnabar City Gym"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Giovanni",
+      "en": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "location": {
+      "de": "Viridian City Gym",
+      "en": "Viridian City Gym",
+      "fr": "Viridian City Gym",
+      "es": "Viridian City Gym",
+      "it": "Viridian City Gym"
+    },
+    "badge": null,
+    "max_level": 80,
+    "sprite": "giovanni"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Wallace",
+      "en": "Wallace",
+      "fr": "Wallace",
+      "es": "Wallace",
+      "it": "Wallace"
+    },
+    "location": {
+      "de": "Viridian City Gym",
+      "en": "Viridian City Gym",
+      "fr": "Viridian City Gym",
+      "es": "Viridian City Gym",
+      "it": "Viridian City Gym"
+    },
+    "badge": null,
+    "max_level": 80
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Gym Leader Eevolove",
+      "en": "Gym Leader Eevolove",
+      "fr": "Gym Leader Eevolove",
+      "es": "Gym Leader Eevolove",
+      "it": "Gym Leader Eevolove"
+    },
+    "location": {
+      "de": "Viridian City Gym",
+      "en": "Viridian City Gym",
+      "fr": "Viridian City Gym",
+      "es": "Viridian City Gym",
+      "it": "Viridian City Gym"
+    },
+    "badge": null,
+    "max_level": 80
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Viridian City Gym",
+      "en": "Viridian City Gym",
+      "fr": "Viridian City Gym",
+      "es": "Viridian City Gym",
+      "it": "Viridian City Gym"
+    },
+    "badge": null,
+    "max_level": 85,
+    "sprite": "champ"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Rocko",
+      "en": "Brock",
+      "fr": "Pierre",
+      "es": "Brock",
+      "it": "Brock"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Misty",
+      "en": "Misty",
+      "fr": "Ondine",
+      "es": "Misty",
+      "it": "Misty"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Major Bob",
+      "en": "Lt. Surge",
+      "fr": "Major Bob",
+      "es": "Teniente Surge",
+      "it": "Lt. Surge"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Erika",
+      "en": "Erika",
+      "fr": "Erika",
+      "es": "Erika",
+      "it": "Erika"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Koga",
+      "en": "Koga",
+      "fr": "Koga",
+      "es": "Koga",
+      "it": "Koga"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Sabrina",
+      "en": "Sabrina",
+      "fr": "Morgane",
+      "es": "Sabrina",
+      "it": "Sabrina"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Pyro",
+      "en": "Blaine",
+      "fr": "Auguste",
+      "es": "Blaine",
+      "it": "Blaine"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Giovanni",
+      "en": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "location": {
+      "de": "Victory Road (left)",
+      "en": "Victory Road (left)",
+      "fr": "Victory Road (left)",
+      "es": "Victory Road (left)",
+      "it": "Victory Road (left)"
+    },
+    "badge": null,
+    "max_level": 95,
+    "sprite": "giovanni"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Roxanne",
+      "en": "Roxanne",
+      "fr": "Roxanne",
+      "es": "Roxanne",
+      "it": "Roxanne"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Brawly",
+      "en": "Brawly",
+      "fr": "Brawly",
+      "es": "Brawly",
+      "it": "Brawly"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Wattson",
+      "en": "Wattson",
+      "fr": "Wattson",
+      "es": "Wattson",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Flannery",
+      "en": "Flannery",
+      "fr": "Flannery",
+      "es": "Flannery",
+      "it": "Flannery"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Norman",
+      "en": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Winona",
+      "en": "Winona",
+      "fr": "Winona",
+      "es": "Winona",
+      "it": "Winona"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Tate & Liza",
+      "en": "Tate & Liza",
+      "fr": "Tate & Liza",
+      "es": "Tate & Liza",
+      "it": "Tate & Liza"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Wallace",
+      "en": "Wallace",
+      "fr": "Wallace",
+      "es": "Wallace",
+      "it": "Wallace"
+    },
+    "location": {
+      "de": "Victory Road (right)",
+      "en": "Victory Road (right)",
+      "fr": "Victory Road (right)",
+      "es": "Victory Road (right)",
+      "it": "Victory Road (right)"
+    },
+    "badge": null,
+    "max_level": 95
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Lorelei",
+      "en": "Lorelei",
+      "fr": "Olga",
+      "es": "Lorelei",
+      "it": "Lorelei"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Bruno",
+      "en": "Bruno",
+      "fr": "Aldo",
+      "es": "Bruno",
+      "it": "Bruno"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Agathe",
+      "en": "Agatha",
+      "fr": "Agatha",
+      "es": "Agatha",
+      "it": "Agatha"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Siegfried",
+      "en": "Lance",
+      "fr": "Peter",
+      "es": "Lance",
+      "it": "Lance"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100,
+    "sprite": "champ"
+  }
+]

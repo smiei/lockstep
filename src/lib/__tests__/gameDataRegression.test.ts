@@ -22,7 +22,7 @@ const allGames = readdirSync(path.join(root, "data", "games"), { withFileTypes: 
     (entry) =>
       JSON.parse(
         readFileSync(path.join(root, "data", "games", entry.name, "game.json"), "utf-8"),
-      ) as { id: string; generation: number; dexLimit: number },
+      ) as { id: string; generation: number; dexLimit: number; kind?: string },
   );
 // The two Infinite Fusion packs deliberately use `generation: 5` (battle
 // mechanics) with `dataGeneration: 7` (Fairy, era corrections) - see
@@ -31,7 +31,9 @@ const allGames = readdirSync(path.join(root, "data", "games"), { withFileTypes: 
 // hasn't changed; it would give wrong answers for a pack that actually needs
 // dataGeneration, so they're excluded from this file's scope on purpose (see
 // infiniteFusionPacks.test.ts for their own pins).
-const games = allGames.filter((g) => !g.id.startsWith("infinite-fusion"));
+// Official games only: ROM hacks (kind "romhack") carry their own species and
+// move changes on purpose and are checked by gamePacks.test.ts instead.
+const games = allGames.filter((g) => !g.id.startsWith("infinite-fusion") && (g.kind ?? "official") === "official");
 
 describe("game data regression (pre Infinite Fusion refactor)", () => {
   it("covers exactly the nine pre-Infinite-Fusion games this pins - a tenth pack changes this test's scope", () => {

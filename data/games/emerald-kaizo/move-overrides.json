@@ -1,0 +1,126 @@
+{
+  "rock-smash": {
+    "power": 40
+  },
+  "drill-run": {
+    "power": 80
+  },
+  "pin-missile": {
+    "power": 15
+  },
+  "petal-dance": {
+    "power": 95
+  },
+  "earth-power": {
+    "power": 90
+  },
+  "egg-bomb": {
+    "type": "grass",
+    "power": 120
+  },
+  "head-smash": {
+    "power": 150
+  },
+  "sky-attack": {
+    "power": 120
+  },
+  "superpower": {
+    "power": 120
+  },
+  "overheat": {
+    "power": 120
+  },
+  "dizzy-punch": {
+    "power": 90
+  },
+  "crabhammer": {
+    "power": 120
+  },
+  "super-fang": {
+    "type": "dark"
+  },
+  "aeroblast": {
+    "power": 120
+  },
+  "octazooka": {
+    "power": 95
+  },
+  "bone-rush": {
+    "power": 100
+  },
+  "giga-drain": {
+    "power": 75
+  },
+  "steel-wing": {
+    "power": 80
+  },
+  "return": {
+    "power": 103
+  },
+  "frustration": {
+    "power": 103
+  },
+  "extreme-speed": {
+    "power": 100
+  },
+  "ancient-power": {
+    "power": 80
+  },
+  "spit-up": {
+    "power": 100
+  },
+  "heat-wave": {
+    "power": 100
+  },
+  "draco-meteor": {
+    "power": 120
+  },
+  "mist-ball": {
+    "power": 90
+  },
+  "luster-purge": {
+    "power": 90
+  },
+  "blaze-kick": {
+    "power": 100
+  },
+  "needle-arm": {
+    "power": 95
+  },
+  "hyper-voice": {
+    "power": 120
+  },
+  "poison-fang": {
+    "power": 90
+  },
+  "crush-claw": {
+    "power": 100
+  },
+  "air-slash": {
+    "power": 80
+  },
+  "flash-cannon": {
+    "power": 90
+  },
+  "shadow-punch": {
+    "power": 70
+  },
+  "sky-uppercut": {
+    "power": 90
+  },
+  "poison-tail": {
+    "power": 120
+  },
+  "bullet-seed": {
+    "power": 25
+  },
+  "leaf-blade": {
+    "power": 90
+  },
+  "water-spout": {
+    "power": 150
+  },
+  "psycho-boost": {
+    "power": 140
+  }
+}

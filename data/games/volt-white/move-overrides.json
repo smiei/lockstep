@@ -1,0 +1,133 @@
+{
+  "pin-missile": {
+    "power": 25
+  },
+  "spike-cannon": {
+    "power": 25
+  },
+  "comet-punch": {
+    "power": 25
+  },
+  "arm-thrust": {
+    "power": 25
+  },
+  "absorb": {
+    "power": 50
+  },
+  "mega-drain": {
+    "power": 50
+  },
+  "incinerate": {
+    "power": 50
+  },
+  "struggle-bug": {
+    "power": 50
+  },
+  "twister": {
+    "power": 50
+  },
+  "snarl": {
+    "power": 60
+  },
+  "cut": {
+    "type": "grass",
+    "power": 60
+  },
+  "shadow-punch": {
+    "power": 70
+  },
+  "magnet-bomb": {
+    "power": 70
+  },
+  "shock-wave": {
+    "power": 70
+  },
+  "wing-attack": {
+    "power": 75
+  },
+  "flame-wheel": {
+    "power": 75
+  },
+  "ice-fang": {
+    "power": 75
+  },
+  "fire-fang": {
+    "power": 75
+  },
+  "thunder-fang": {
+    "power": 75
+  },
+  "bulldoze": {
+    "power": 80
+  },
+  "shadow-claw": {
+    "power": 80
+  },
+  "rock-slide": {
+    "power": 80
+  },
+  "sky-drop": {
+    "power": 80
+  },
+  "steamroller": {
+    "power": 80
+  },
+  "fire-punch": {
+    "power": 80
+  },
+  "ice-punch": {
+    "power": 80
+  },
+  "strength": {
+    "type": "rock",
+    "power": 85
+  },
+  "waterfall": {
+    "power": 85
+  },
+  "energy-ball": {
+    "power": 90
+  },
+  "dark-pulse": {
+    "power": 90
+  },
+  "shadow-ball": {
+    "power": 90
+  },
+  "horn-leech": {
+    "power": 90
+  },
+  "needle-arm": {
+    "power": 90
+  },
+  "power-gem": {
+    "power": 90
+  },
+  "icicle-crash": {
+    "power": 90
+  },
+  "dig": {
+    "power": 100
+  },
+  "dive": {
+    "power": 100
+  },
+  "fly": {
+    "power": 100
+  },
+  "fire-pledge": {
+    "power": 100
+  },
+  "water-pledge": {
+    "power": 100
+  },
+  "grass-pledge": {
+    "power": 100
+  },
+  "night-daze": {
+    "power": 100
+  },
+  "glaciate": {
+    "power": 100
+  }
+}
