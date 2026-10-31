@@ -26,8 +26,8 @@ A **Nuzlocke** lets you catch only the first Pokémon in each area, and a fainte
 
 - [What sets it apart](#what-sets-it-apart)
 - [Screenshots](#screenshots)
-- [Quick start](#quick-start): Windows app, Docker, Pinokio, or Node.js
 - [Pokémon Infinite Fusion](#pokémon-infinite-fusion)
+- [Quick start](#quick-start): Windows app, Docker, Pinokio, or Node.js
 - [Supported games](#supported-games)
 - [Documentation](#documentation)
 - [Version history](#version-history)
@@ -95,6 +95,29 @@ You know the rules. This is what the tracker handles so you don't have to.
   <img src="https://github.com/user-attachments/assets/c29125ff-d726-4b78-8968-1a81e59c259b" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
 </p>
 
+## Pokémon Infinite Fusion
+
+Lockstep tracks [Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18) runs, Classic and Remix, fusions included.
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/f693af6f-a0d9-4672-82e8-c3e353593d38" alt="Team tab of an Infinite Fusion SoulLink: each tray holds both players' fusions with their fused names, types, stats and sprites"></td>
+    <td><img src="https://github.com/user-attachments/assets/e740bc76-660f-4c3b-b9b0-e6296e9c9f08" alt="Pokédex card of a fusion: fusion sprite, fused types, base stats and weaknesses, with head and body as their own cards"></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/47104f3d-c646-4a11-b933-d6229d5754cd" alt="Encounter tab: two catches entered as wild fusions with &quot;Caught as a fusion&quot;" width="85%">
+</p>
+
+- **Fuse on the Team tab:** two of a player's catches become one battle unit. Swap head and body, or split them again.
+- **Real fusion values:** name, types and base stats are worked out from the pair the way the game does it. The sprite is the community's hand-drawn fusion art, or the generated one where nobody has drawn it yet.
+- **Wild fusions:** a catch can already be a fusion ("Caught as a fusion" on the Encounter tab), or every catch is, with the randomizer rule "Fuse everything".
+- **SoulLink with fusions:** a pairing stays tied to its routes, so a death takes everything linked to it, across fusions. A fused catch locks both families for the Species Clause; you can switch that off.
+- **The game's own data:** stats, types, catch rates, moves, TM compatibility, the trainers' level caps, and the capture formula with all 40 of the game's balls.
+
+Details: [features](docs/features.md#pokémon-infinite-fusion).
+
 ## Quick start
 
 Pick whatever fits you best. All four give you the same app at `http://localhost:3000`, or at your server's address.
@@ -152,29 +175,6 @@ npm start
 ```
 
 **→ [Self-hosting guide](docs/self-hosting.md):** volumes, updating, backups, HTTPS for installing the app on a phone, trainer pictures, and a custom app icon.
-
-## Pokémon Infinite Fusion
-
-Lockstep tracks [Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18) runs, Classic and Remix, fusions included.
-
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/f693af6f-a0d9-4672-82e8-c3e353593d38" alt="Team tab of an Infinite Fusion SoulLink: each tray holds both players' fusions with their fused names, types, stats and sprites"></td>
-    <td><img src="https://github.com/user-attachments/assets/e740bc76-660f-4c3b-b9b0-e6296e9c9f08" alt="Pokédex card of a fusion: fusion sprite, fused types, base stats and weaknesses, with head and body as their own cards"></td>
-  </tr>
-</table>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/47104f3d-c646-4a11-b933-d6229d5754cd" alt="Encounter tab: two catches entered as wild fusions with &quot;Caught as a fusion&quot;" width="85%">
-</p>
-
-- **Fuse on the Team tab:** two of a player's catches become one battle unit. Swap head and body, or split them again.
-- **Real fusion values:** name, types and base stats are worked out from the pair the way the game does it. The sprite is the community's hand-drawn fusion art, or the generated one where nobody has drawn it yet.
-- **Wild fusions:** a catch can already be a fusion ("Caught as a fusion" on the Encounter tab), or every catch is, with the randomizer rule "Fuse everything".
-- **SoulLink with fusions:** a pairing stays tied to its routes, so a death takes everything linked to it, across fusions. A fused catch locks both families for the Species Clause; you can switch that off.
-- **The game's own data:** stats, types, catch rates, moves, TM compatibility, the trainers' level caps, and the capture formula with all 40 of the game's balls.
-
-Details: [features](docs/features.md#pokémon-infinite-fusion).
 
 ## Supported games
 
