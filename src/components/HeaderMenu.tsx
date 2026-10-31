@@ -12,7 +12,8 @@ import { formatActionError } from "@/lib/actionErrors";
 import { useDialog } from "@/components/DialogProvider";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { useInstallPrompt } from "@/lib/useInstallPrompt";
-import { LANGS, REVIEWED_LANGS, translations } from "@/lib/i18n/dictionary";
+import { translations } from "@/lib/i18n/dictionary";
+import { LanguagePicker } from "@/components/LanguagePicker";
 import type { GameSummary, RunSummary } from "@/lib/types";
 import { RenameRunDialog } from "@/components/RenameRunDialog";
 import { useBackupImport } from "@/components/useBackupImport";
@@ -103,7 +104,7 @@ export function HeaderMenu({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
   const { confirm, alert } = useDialog();
   const toast = useToast();
   const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
@@ -300,33 +301,7 @@ export function HeaderMenu({
           >
             {t.appearance.label} …
           </button>
-          <div className="px-3 py-2">
-            <span className="mb-1.5 block text-xs font-medium text-ink-subtle">
-              {t.menu.language}
-            </span>
-            <div className="flex gap-1">
-              {LANGS.map((code) => (
-                <button
-                  key={code}
-                  type="button"
-                  onClick={() => {
-                    setLang(code);
-                    setOpen(false);
-                  }}
-                  className={`h-10 flex-1 rounded-md border text-xs font-semibold uppercase transition-colors ${
-                    code === lang
-                      ? "border-accent bg-accent text-accent-ink"
-                      : "border-line text-ink-muted hover:bg-hover hover:text-ink"
-                  }`}
-                >
-                  {code}
-                </button>
-              ))}
-            </div>
-            {!REVIEWED_LANGS.includes(lang) && (
-              <p className="mt-1.5 text-xs text-ink-muted">{t.dataNotice.machineTranslated}</p>
-            )}
-          </div>
+          <LanguagePicker className="px-3 py-2" onPick={() => setOpen(false)} />
           <div className="my-1 border-t border-line" />
           {IS_PUBLIC_INSTANCE && (
             <MenuItem onClick={handleCopyLink} disabled={!activeRun}>
