@@ -62,6 +62,10 @@ const ALIAS_BY_ENGLISH_NAME = {
   "tate & liza": "tateandliza-gen3",
   "kimono girls": "kimonogirl",
   "elder li": "li",
+  // ROM hacks: Radical Red calls the Kanto rival by his anime name, and the
+  // source data misspells Emerald's optional Brendan fight.
+  gary: "blue-gen3",
+  brandan: "brendan-gen3",
 };
 // Per game set. FireRed/LeafGreen's and Red/Blue's rival is Blue whatever the
 // player calls him, and the level-cap data files him under `champ`; the Johto
@@ -80,7 +84,35 @@ const ALIAS_BY_SET_AND_SLUG = {
 };
 const SKIP_ON_PURPOSE = {
   "emerald/rivale": "Brendan or May depending on the player's gender - unknown to the app",
+  // Unbound's own villain; stripped of his titles he would match Showdown's
+  // "marlon", the unrelated Black 2 / White 2 gym leader. Every new hit of the
+  // title stripping below was checked by hand; these were the wrong ones.
+  "unbound/ex-shadow-admin-marlon": "Unbound's own Marlon - Showdown's is the Black 2 / White 2 gym leader",
+  "unbound/shadow-admin-marlon": "Unbound's own Marlon - Showdown's is the Black 2 / White 2 gym leader",
+  "unbound/shadow-admin-marlon-grunt": "Unbound's own Marlon - Showdown's is the Black 2 / White 2 gym leader",
 };
+
+// ROM hacks dress their bosses up: "Cynthia (Team B)", "Brock Rematch",
+// "Aqua Leader Archie", "Tabitha & Courtney". These titles are stripped from
+// the FRONT of a name, one word at a time, to reach the person Showdown knows.
+// Only titles - never a word that could be part of a name.
+const TITLE_WORDS = new Set([
+  "admin", "agent", "alpha", "aqua", "arcade", "boss", "castle", "ex-shadow", "executive",
+  "galactic", "gym", "hail", "laeder", "lader", "leader", "leaders", "magma", "plasma",
+  "pokemon", "rain", "rival", "rocket", "ruin", "sand", "shadow", "star", "successor",
+  "sun", "team", "trainer", "valet",
+]);
+
+// The names worth trying for one trainer, most specific first: as written; without
+// "(Team A)" / "(optional)" / "Rematch"; the first person of a duo; and that
+// person without the titles in front.
+function coreNames(en) {
+  const plain = en.replace(/\s*\([^)]*\)/g, "").replace(/\s+rematch$/i, "").trim();
+  const first = plain.split(/\s*(?:&|,|\bor\b|\band\b)\s*/i)[0].trim();
+  const words = first.split(/\s+/);
+  while (words.length > 1 && TITLE_WORDS.has(words[0].toLowerCase())) words.shift();
+  return [en, plain, first, words.join(" ")].filter((n, i, all) => n && all.indexOf(n) === i);
+}
 
 const GENERATIONS = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -127,14 +159,18 @@ async function main() {
         unmapped[key] = SKIP_ON_PURPOSE[key];
         continue;
       }
-      const base = showdownBase(t.en);
       const candidates = [
         ALIAS_BY_SET_AND_SLUG[key],
-        `${base}-gen${t.generation}`,
-        base,
-        ...GENERATIONS.map((g) => `${base}-gen${g}`),
-        `${base}-lgpe`,
-        ALIAS_BY_ENGLISH_NAME[t.en.toLowerCase()],
+        ...coreNames(t.en).flatMap((name) => {
+          const base = showdownBase(name);
+          return [
+            ALIAS_BY_ENGLISH_NAME[name.toLowerCase()],
+            `${base}-gen${t.generation}`,
+            base,
+            ...GENERATIONS.map((g) => `${base}-gen${g}`),
+            `${base}-lgpe`,
+          ];
+        }),
       ].filter((name, i, all) => name && all.indexOf(name) === i);
       let found = null;
       for (const name of candidates) {
