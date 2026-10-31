@@ -164,6 +164,7 @@ Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and eve
 | `4.0` | Redesign as a natural-history collection (the app is now called **Lockstep** in its interface): sage ground, specimen trays and labels, a green side rail on desktop, a new logo and fonts. The Team tab becomes a drawer of six trays plus a Box and Memorial column; Overview opens with one run sheet; the Pokédex card is a field-guide entry. Per-device shell colour (green, Poké Ball red, blue, yellow). Docker image for amd64 and arm64, also on GHCR. |
 | `4.1` | The logo is back in the shell's bottle green (4.0 shipped it on a red tile); the app icon, splash screen and status bar follow. |
 | `4.2` | The run list opens right under the run box and reads clearly in dark mode (ruled rows, the open run marked). New rule: permanent blind flight, which locks blind flight on so the header button cannot lift it. Clearer Docker volume guide and a by-game reference for trainer pictures. |
+| `4.3` | Server defaults for the colour (`DEFAULT_SHELL_COLOR`, icons included) and the browser language (`DEFAULT_LANGUAGE`); the installed app follows the phone's language. The side-rail logo takes the shell colour, the run list reaches past the rail, the dark-mode button can return to following the device, and "Lock blind flight" got its name. |
 
 ## Acknowledgements
 
