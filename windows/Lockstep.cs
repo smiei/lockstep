@@ -51,7 +51,7 @@ namespace LockstepTray
     static class Program
     {
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             bool created;
             using (var mutex = new Mutex(true, "Local\\LockstepTray", out created))
@@ -67,7 +67,10 @@ namespace LockstepTray
                 }
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Tray());
+                // Every start a person makes opens the browser (installer,
+                // Start menu, double-click); the sign-in autostart passes
+                // --background and stays in the tray.
+                Application.Run(new Tray(Array.IndexOf(args, "--background") < 0));
             }
         }
     }
@@ -75,7 +78,6 @@ namespace LockstepTray
     class Settings
     {
         public int Port = 3000;
-        public bool Opened;
 
         static string FileOf(string dataDir) { return Path.Combine(dataDir, "settings.json"); }
 
@@ -87,7 +89,6 @@ namespace LockstepTray
                 var text = File.ReadAllText(FileOf(dataDir));
                 var port = Regex.Match(text, "\"port\"\\s*:\\s*(\\d+)");
                 if (port.Success) s.Port = int.Parse(port.Groups[1].Value);
-                s.Opened = Regex.IsMatch(text, "\"opened\"\\s*:\\s*true");
             }
             catch (Exception) { }
             return s;
@@ -96,7 +97,7 @@ namespace LockstepTray
         public void Save(string dataDir)
         {
             File.WriteAllText(FileOf(dataDir),
-                "{\n  \"port\": " + Port + ",\n  \"opened\": " + (Opened ? "true" : "false") + "\n}\n");
+                "{\n  \"port\": " + Port + "\n}\n");
         }
     }
 
@@ -114,7 +115,7 @@ namespace LockstepTray
         Settings settings;
         Job job;
         Process server;
-        bool quitting, ready;
+        bool quitting, ready, openOnStart;
         int generation, port;
         int waitStep; // 0 images, 1 database, 2 server
 
@@ -127,8 +128,9 @@ namespace LockstepTray
 
         public static string WaitFile(string dataDir) { return Path.Combine(dataDir, "wait.html"); }
 
-        public Tray()
+        public Tray(bool open)
         {
+            openOnStart = open;
             t = Texts.For(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
             baseDir = AppDomain.CurrentDomain.BaseDirectory;
             appDir = Path.Combine(baseDir, "app");
@@ -200,12 +202,17 @@ namespace LockstepTray
                 }
                 this.port = port;
 
-                // The waiting page: written now, and opened at once on the
-                // first start, so nobody stares at a tray icon for minutes.
+                // The waiting page: written now, and opened at once when a
+                // person started Lockstep (not the sign-in autostart, not a
+                // restart from the menu), so nobody stares at a tray icon while
+                // the first start downloads images. It switches to the app by
+                // itself, and a quick start simply passes through it.
                 waitStep = 0;
                 WriteWaitPage(false);
-                if (!settings.Opened)
+                if (openOnStart)
                 {
+                    openOnStart = false;
+                    Log("Opening the browser.");
                     Ui(delegate
                     {
                         OpenUrl(WaitFile(dataDir));
@@ -243,12 +250,6 @@ namespace LockstepTray
                             UpdateAddress();
                             SetStatus(t["running"], false);
                             icon.ShowBalloonTip(4000, "Lockstep", t["runningText"] + " http://localhost:" + port, ToolTipIcon.Info);
-                            // The waiting page switches over by itself.
-                            if (!settings.Opened)
-                            {
-                                settings.Opened = true;
-                                settings.Save(dataDir);
-                            }
                         });
                         break;
                     }
@@ -408,7 +409,7 @@ namespace LockstepTray
             using (var key = Registry.CurrentUser.CreateSubKey(RunKey))
             {
                 if (AutostartEnabled()) key.DeleteValue("Lockstep", false);
-                else key.SetValue("Lockstep", "\"" + Application.ExecutablePath + "\"");
+                else key.SetValue("Lockstep", "\"" + Application.ExecutablePath + "\" --background");
             }
             autostartItem.Checked = AutostartEnabled();
         }

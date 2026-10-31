@@ -22,7 +22,7 @@ The Windows app is the same server with Node.js built in, the way Jellyfin's Win
 - **Open Lockstep**, also by double-clicking the icon.
 - **Address for other devices**: the address phones and friends' laptops on the same network use, for example `http://192.168.1.20:3000`. Click it to copy it. When the Windows firewall asks on the first start, allow access for private networks, or other devices cannot connect.
 - **Open data folder** and **Open log**.
-- **Start with Windows**: starts Lockstep when you sign in.
+- **Start with Windows**: starts Lockstep in the background when you sign in, without opening the browser. Starting it yourself (Start menu, desktop icon) always opens it.
 - **Restart server** and **Quit**.
 - When a newer release is out, an **Update available** entry opens its download page.
 
