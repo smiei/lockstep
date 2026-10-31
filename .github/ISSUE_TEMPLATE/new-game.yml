@@ -1,0 +1,49 @@
+name: Add a game or ROM hack
+description: Ask for a game, ROM hack or fan game - or offer its data.
+title: "[Game] "
+labels: ["game pack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A game pack is small: the routes in play order and the boss fights with their level caps. No encounter tables are needed.
+        See [docs/game-packs.md](https://github.com/smiei/nuzlocke_tracker/blob/master/docs/game-packs.md). With a plain text list you can build the pack yourself (`npm run pack -- from-text`).
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: Name and version, e.g. "Radical Red 4.1".
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Official game
+        - ROM hack
+        - Fan game
+    validations:
+      required: true
+  - type: input
+    id: base
+    attributes:
+      label: Base game and mechanics
+      description: For a hack, e.g. "FireRed engine, Gen 9 types and stats, Pokémon up to #898".
+  - type: textarea
+    id: sources
+    attributes:
+      label: Data sources
+      description: Where route lists and level caps can be found (official docs, spreadsheets, wikis). Please say if a source has a license.
+  - type: textarea
+    id: data
+    attributes:
+      label: Data (optional)
+      description: Paste a text list in the format from docs/game-packs.md, or attach a pack file.
+      render: text
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help?
+      options:
+        - label: I can collect or check the route list and level caps.

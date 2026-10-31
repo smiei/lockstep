@@ -1,0 +1,36 @@
+# Checks every game pack (data/games/*) with the same validator the in-app
+# import uses - see docs/game-packs.md. Runs on pull requests and pushes that
+# touch game data or the validator, so a contributed pack is checked before it
+# is reviewed.
+name: Validate game packs
+
+on:
+  pull_request:
+    paths:
+      - "data/games/**"
+      - "data/pokemon.json"
+      - "src/lib/gamePack.ts"
+      - "src/lib/__tests__/gamePacks.test.ts"
+      - "scripts/pack-tool.mjs"
+      - "docs/examples/**"
+  push:
+    branches: [master]
+    paths:
+      - "data/games/**"
+      - "src/lib/gamePack.ts"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      # --ignore-scripts: no Prisma client or icons are needed to check JSON.
+      - run: npm ci --ignore-scripts
+      - run: npm run validate:packs

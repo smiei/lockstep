@@ -11,11 +11,29 @@ import { FieldLabel, Input, Select } from "@/components/ui/Input";
 import { Modal } from "@/components/ui/Modal";
 import { MAX_SOULLINK_PLAYERS, MIN_SOULLINK_PLAYERS } from "@/lib/players";
 import { UnverifiedDataNote } from "@/components/UnverifiedDataNote";
+import { isCustomPackId } from "@/lib/gamePack";
 
 const PLAYER_COUNTS = Array.from(
   { length: MAX_SOULLINK_PLAYERS - MIN_SOULLINK_PLAYERS + 1 },
   (_, i) => MIN_SOULLINK_PLAYERS + i,
 );
+
+// Official games, ROM hacks, fan games and imported packs, in that order.
+// One group only (the common case today) renders as a plain list without a
+// heading.
+function gameGroups(
+  games: GameSummary[],
+  t: (typeof translations)["de"]["runSwitcher"],
+): [string | null, GameSummary[]][] {
+  const groups: [string, GameSummary[]][] = [
+    [t.gameGroupOfficial, games.filter((g) => !isCustomPackId(g.id) && (g.kind ?? "official") === "official")],
+    [t.gameGroupRomhack, games.filter((g) => !isCustomPackId(g.id) && g.kind === "romhack")],
+    [t.gameGroupFangame, games.filter((g) => !isCustomPackId(g.id) && g.kind === "fangame")],
+    [t.gameGroupCustom, games.filter((g) => isCustomPackId(g.id))],
+  ];
+  const used = groups.filter(([, list]) => list.length > 0);
+  return used.length > 1 ? used : [[null, games]];
+}
 
 export function NewRunDialog({
   lang,
@@ -38,6 +56,15 @@ export function NewRunDialog({
 }) {
   const t = translations[lang].runSwitcher;
   const tNotice = translations[lang].dataNotice;
+
+  function renderGameOption(game: GameSummary) {
+    return (
+      <option key={game.id} value={game.id}>
+        {localizeName(game.names, lang)}
+        {game.unverified ? ` (${tNotice.unverifiedSuffix})` : ""}
+      </option>
+    );
+  }
   const [name, setName] = useState("");
   const [mode, setMode] = useState<RunMode>(RunMode.SOULLINK);
   const [playerCount, setPlayerCount] = useState(MIN_SOULLINK_PLAYERS);
@@ -107,12 +134,15 @@ export function NewRunDialog({
           disabled={pending}
           onChange={(e) => setGameId(e.target.value)}
         >
-          {games.map((game) => (
-            <option key={game.id} value={game.id}>
-              {localizeName(game.names, lang)}
-              {game.unverified ? ` (${tNotice.unverifiedSuffix})` : ""}
-            </option>
-          ))}
+          {gameGroups(games, t).map(([label, group]) =>
+            label ? (
+              <optgroup key={label} label={label}>
+                {group.map(renderGameOption)}
+              </optgroup>
+            ) : (
+              group.map(renderGameOption)
+            ),
+          )}
         </Select>
         {games.find((game) => game.id === gameId)?.unverified && (
           <UnverifiedDataNote lang={lang} className="mt-2" />

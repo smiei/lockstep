@@ -35,6 +35,8 @@ export type GameSummary = {
   // Route list and names not yet checked against the game (game.json
   // dataStatus) - the New-Run dialog marks it.
   unverified?: boolean;
+  // official / romhack / fangame (game.json kind) - the dialog groups by it.
+  kind?: "official" | "romhack" | "fangame";
 };
 
 // Shared by a fusion's host row and its body sub-object - the evolution

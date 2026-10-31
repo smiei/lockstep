@@ -10,6 +10,7 @@ import {
 } from "@/lib/pokemonHistory";
 import type { LocalizedNames } from "@/lib/i18n/localize";
 import type { GameSummary } from "@/lib/types";
+import type { PackKind } from "@/lib/gamePack";
 import {
   historicalMoveNames,
   type Learnset,
@@ -44,6 +45,10 @@ export type GameInfo = {
   // default for a new or contributed pack: the New-Run dialog and the
   // Encounter tab then say so (A1 of the 5.0 roadmap).
   dataStatus?: "verified" | "unverified";
+  // Official game, ROM hack or fan game - groups the New-Run dialog's list.
+  // Missing = "official". Imported packs (id "custom-...") form a group of
+  // their own whatever they say here.
+  kind?: PackKind;
   generation: number;
   // Highest national-dex id obtainable in this game - filters the pick
   // lists, evolution targets, and per-run rankings.
@@ -225,6 +230,7 @@ export function getGameSummaries(): GameSummary[] {
     names: game.names,
     fusion: Boolean(game.fusion),
     unverified: game.dataStatus !== "verified",
+    kind: game.kind ?? "official",
   }));
 }
 
