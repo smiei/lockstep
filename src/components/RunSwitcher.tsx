@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { createRun } from "@/lib/actions";
@@ -41,6 +41,40 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
 
   const activeRun = pickActiveRun(runs, searchParams.get("run"));
   const defaultGameId = games[0]?.id;
+
+  // The list is position: fixed at coordinates measured from the box when it
+  // opens. From lg the box sits in the rail, which scrolls (overflow-y-auto)
+  // and so clips anything absolutely positioned inside it - long game names
+  // and player lists were cut off at the rail's edge. Fixed escapes that clip
+  // and lets the list be wider than the rail. It stays in the container's DOM,
+  // so useDropdown's click-outside and Escape still cover it.
+  const [anchor, setAnchor] = useState<{ left: number; top: number; width: number } | null>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+
+  function handleTrigger(event: React.MouseEvent<HTMLButtonElement>) {
+    if (!open) {
+      const r = event.currentTarget.getBoundingClientRect();
+      setAnchor({ left: r.left - 4, top: r.bottom + 4, width: Math.max(r.width + 8, 352) });
+    }
+    toggle();
+  }
+
+  // Fixed coordinates go stale as soon as anything under them scrolls, so
+  // scrolling the page or the rail closes the list - scrolling the list
+  // itself does not.
+  useEffect(() => {
+    if (!open) return;
+    function onScroll(event: Event) {
+      if (listRef.current?.contains(event.target as Node)) return;
+      setOpen(false);
+    }
+    window.addEventListener("scroll", onScroll, true);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll, true);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [open, setOpen]);
 
   function gameName(run: SwitcherRun): string {
     const game = games.find((g) => g.id === run.gameId);
@@ -99,7 +133,7 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
       <button
         type="button"
         disabled={pending || runs.length === 0}
-        onClick={toggle}
+        onClick={handleTrigger}
         {...triggerProps}
         aria-label={activeRun ? `${t.switchLabel}: ${activeRun.name}` : t.switchLabel}
         title={t.switchLabel}
@@ -121,12 +155,22 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
         </span>
         <ChevronDownIcon className="h-4 w-4 shrink-0 text-ink-muted" />
       </button>
-      {open && (
+      {open && anchor && (
         // `unshell`: a page surface that opens out of the green field. A
         // strong border and a deep shadow, because in dark mode the panel
         // otherwise melts into the rail and the dark page beside it; rows are
         // ruled apart, and the open run carries an accent bar, not just bold.
-        <ul className="unshell absolute -left-1 top-full z-50 mt-1 max-h-96 w-[calc(100%+0.5rem)] min-w-64 divide-y divide-line overflow-y-auto rounded-lg border border-line-strong bg-panel shadow-2xl">
+        <ul
+          ref={listRef}
+          style={{
+            left: anchor.left,
+            top: anchor.top,
+            width: anchor.width,
+            maxWidth: `calc(100vw - ${anchor.left + 12}px)`,
+            maxHeight: `min(24rem, calc(100dvh - ${anchor.top + 12}px))`,
+          }}
+          className="unshell fixed z-50 divide-y divide-line overflow-y-auto rounded-lg border border-line-strong bg-panel shadow-2xl"
+        >
           {runs.map((run) => {
             const active = run.accessKey === activeRun?.accessKey;
             return (
