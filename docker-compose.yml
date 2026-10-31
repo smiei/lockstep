@@ -1,12 +1,12 @@
 services:
   lockstep:
     build: .
-    # Tag the built image with the Docker Hub name so `docker compose build`
-    # (or `up --build`) produces exactly the image you push. Without this,
-    # compose names it "<project>-<service>" and `docker push
-    # gloryy/lockstep:latest` would push a stale, separately-tagged
+    # Tag the built image with the registry name so `docker compose build`
+    # (or `up --build`) produces exactly the image a manual push would send.
+    # Without this, compose names it "<project>-<service>" and `docker push
+    # ghcr.io/smiei/lockstep:latest` would push a stale, separately-tagged
     # image ("Layer already exists" for everything).
-    image: gloryy/lockstep:latest
+    image: ghcr.io/smiei/lockstep:latest
     ports:
       - "3000:3000"
     volumes:

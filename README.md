@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://github.com/smiei/lockstep/releases"><img alt="Release" src="https://img.shields.io/github/v/release/smiei/lockstep?label=release"></a>
-  <a href="https://hub.docker.com/r/gloryy/lockstep"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gloryy/lockstep"></a>
+  <a href="https://github.com/smiei/lockstep/pkgs/container/lockstep"><img alt="Image: ghcr.io/smiei/lockstep" src="https://img.shields.io/badge/image-ghcr.io%2Fsmiei%2Flockstep-2496ED?logo=docker&logoColor=white"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
@@ -96,7 +96,7 @@ Pick whatever fits you best. All three give you the same app at `http://localhos
 ```yaml
 services:
   lockstep:
-    image: gloryy/lockstep:latest
+    image: ghcr.io/smiei/lockstep:latest
     ports:
       - "3000:3000"
     environment:
