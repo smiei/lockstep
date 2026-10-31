@@ -1,4 +1,4 @@
-// Service worker for the Nuzlocke tracker PWA.
+// Service worker for the Lockstep PWA.
 //
 // Deliberately narrow. This app is entirely DB-backed, every content page is
 // force-dynamic, and two devices sync live over SSE - so caching page data

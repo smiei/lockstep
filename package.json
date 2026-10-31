@@ -1,12 +1,12 @@
 {
-  "name": "nuzlocke-tracker-app",
+  "name": "lockstep",
   "version": "4.3.0",
   "private": true,
   "description": "Self-hosted Pokémon Nuzlocke and SoulLink tracker for 1-4 players.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/smiei/nuzlocke_tracker.git"
+    "url": "https://github.com/smiei/lockstep.git"
   },
   "engines": {
     "node": ">=20.9.0"

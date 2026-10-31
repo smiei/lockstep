@@ -313,5 +313,5 @@ export function backupFilename(runLabel: string, ext: "json" | "zip" = "json"): 
       .replace(/^-+|-+$/g, "")
       .slice(0, 40) || "run";
   const date = new Date().toISOString().slice(0, 10);
-  return `nuzlocke-${slug}-${date}.${ext}`;
+  return `lockstep-${slug}-${date}.${ext}`;
 }

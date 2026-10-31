@@ -11,6 +11,8 @@ import { clampPlayerCount } from "@/lib/players";
 // alongside existing runs without primary-key collisions. The only in-file
 // relationship that matters (Encounter -> SoulLink) is expressed via the
 // SoulLink's routeId, which is unique per run and stable across a round-trip.
+// The format id keeps the app's old name on purpose: every backup ever
+// written carries it, and parseBackup recognises a file by it.
 export const BACKUP_FORMAT = "nuzlocke-tracker-backup";
 // 2 added `customRoutes` and `routeEntries`. 3 added `deathLevelCapId`/
 // `diedAt` on SoulLink (missing before, so a restore lost the Memorial's

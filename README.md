@@ -2,7 +2,9 @@
   <img src="https://github.com/user-attachments/assets/22c168c6-64f1-4d59-9598-12db63b1e570" alt="Lockstep, the SoulLink Nuzlocke tracker: Gen 1-5, Infinite Fusion, 2-4 players or solo, 5 languages, free and self-hosted" width="100%">
 </p>
 
-<h1 align="center">SoulLink Nuzlocke Tracker</h1>
+<h1 align="center">Lockstep</h1>
+
+<p align="center"><strong>SoulLink &amp; Nuzlocke tracker</strong></p>
 
 <p align="center">
   A Nuzlocke tracker built around SoulLink: 2–4 players, linked deaths, the rules of your generation.<br>
@@ -10,8 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/smiei/nuzlocke_tracker/releases"><img alt="Release" src="https://img.shields.io/github/v/release/smiei/nuzlocke_tracker?label=release"></a>
-  <a href="https://hub.docker.com/r/gloryy/nuzlocke-tracker"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gloryy/nuzlocke-tracker"></a>
+  <a href="https://github.com/smiei/lockstep/releases"><img alt="Release" src="https://img.shields.io/github/v/release/smiei/lockstep?label=release"></a>
+  <a href="https://hub.docker.com/r/gloryy/lockstep"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gloryy/lockstep"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
@@ -93,8 +95,8 @@ Pick whatever fits you best. All three give you the same app at `http://localhos
 
 ```yaml
 services:
-  nuzlocke-tracker:
-    image: gloryy/nuzlocke-tracker:latest
+  lockstep:
+    image: gloryy/lockstep:latest
     ports:
       - "3000:3000"
     environment:
@@ -118,14 +120,14 @@ Save that as `compose.yaml` and run `docker compose up -d`. The first start down
 ### Pinokio (one click, Windows / macOS / Linux)
 
 1. Install [Pinokio](https://pinokio.co/).
-2. On the **Explore** page, paste `https://github.com/smiei/nuzlocke-tracker-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**.
+2. On the **Explore** page, paste `https://github.com/smiei/lockstep-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**.
 3. Click **Install**, then **Start**.
 
 ### Without Docker (Node.js 20.9+)
 
 ```bash
-git clone https://github.com/smiei/nuzlocke_tracker.git
-cd nuzlocke_tracker
+git clone https://github.com/smiei/lockstep.git
+cd lockstep
 npm install
 npm run setup
 npm start
