@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.8.1",
-    "@prisma/adapter-libsql": "^6.19.3",
+    "@prisma/adapter-libsql": "^7.10.1",
     "@prisma/client": "^6.19.3",
     "dotenv": "^17.4.2",
     "fflate": "^0.8.3",
