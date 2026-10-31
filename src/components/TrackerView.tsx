@@ -161,12 +161,22 @@ export function TrackerView({
       missing: "bg-warning-bg",
       open: "bg-sunken",
     }[outcome];
-    const outcomeText = {
-      lost: "text-danger",
-      caught: "text-success",
-      missing: "text-warning",
-      open: "text-ink-subtle",
+    // The strip's tint alone is too faint in dark mode (success-bg and sunken
+    // sit a few steps apart), so the whole tray's frame carries the outcome
+    // too: a coloured line once the route has a result, dashed while it is
+    // still open - the same "empty slot" the Team tab's free slots use.
+    const trayFrame = {
+      lost: "border-danger-line",
+      caught: "border-success-line",
+      missing: "border-warning-line",
+      open: "border-dashed border-line-strong",
     }[outcome];
+    const outcomeTone = ({
+      lost: "danger",
+      caught: "success",
+      missing: "warning",
+      open: "neutral",
+    } as const)[outcome];
     const outcomeLabel = {
       lost: tTracker.statusLost,
       caught: tTracker.statusCaught,
@@ -175,7 +185,7 @@ export function TrackerView({
     }[outcome];
     const number = catalogue.get(route.id);
     return (
-      <div key={route.id} className="overflow-hidden rounded-md border border-line bg-panel">
+      <div key={route.id} className={`overflow-hidden rounded-md border bg-panel ${trayFrame}`}>
         {/* The route label is the tray's header strip - "Nr. 001 Starter",
             outcome at the end - so every player column below gets the full
             width and its controls fit on one row. */}
@@ -193,11 +203,8 @@ export function TrackerView({
               </Badge>
             )}
           </span>
-          <span
-            className={`ml-auto text-xs font-semibold ${outcomeText}`}
-            title={halfDone ? tTracker.missingPlayer : undefined}
-          >
-            {outcomeLabel}
+          <span className="ml-auto self-center" title={halfDone ? tTracker.missingPlayer : undefined}>
+            <Badge tone={outcomeTone}>{outcomeLabel}</Badge>
           </span>
         </div>
         {/* One column per player, divided by hairlines: the 1px gaps of the
