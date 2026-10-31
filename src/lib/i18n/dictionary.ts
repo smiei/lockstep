@@ -73,7 +73,7 @@ const de = {
     hidden: "Im Blindflug ausgeblendet",
     enable: "Blindflug einschalten",
     disable: "Blindflug ausschalten",
-    locked: "Dauerhafter Blindflug – nur in den Regeln abschaltbar",
+    locked: "Blindflug gesperrt – in den Regeln entsperren",
   },
   appearance: {
     label: "Darstellung",
@@ -471,7 +471,7 @@ const de = {
           "Blendet alles aus, was die App für dich ausrechnet: Typeneffektivität an jeder Stelle sowie Attackenlisten und -beschreibungen. Die Typentabelle selbst bleibt. Gilt für den ganzen Run.",
       },
       blindflugPermanent: {
-        label: "Dauerhafter Blindflug",
+        label: "Blindflug sperren",
         description:
           "Für Runs ganz ohne Hilfen: Blindflug bleibt immer an, der Schalter oben ist gesperrt – kein kurzes Nachschauen. Nur dieser Schalter hebt ihn wieder auf.",
       },
@@ -842,7 +842,7 @@ const en: Dictionary = {
     hidden: "Hidden in blind flight",
     enable: "Turn on blind flight",
     disable: "Turn off blind flight",
-    locked: "Permanent blind flight – can only be turned off in the Rules tab",
+    locked: "Blind flight locked – unlock it in the Rules tab",
   },
   appearance: {
     label: "Appearance",
@@ -1237,7 +1237,7 @@ const en: Dictionary = {
           "Hides everything the app works out for you: type effectiveness everywhere, plus move lists and descriptions. The type chart itself stays. Applies to the whole run.",
       },
       blindflugPermanent: {
-        label: "Permanent blind flight",
+        label: "Lock blind flight",
         description:
           "For a run without any help: blind flight stays on and the header button is locked, so there is no quick peek. Only this switch turns it off.",
       },
@@ -1601,7 +1601,7 @@ const fr: Dictionary = {
     hidden: "Masqué en vol à l’aveugle",
     enable: "Activer le vol à l’aveugle",
     disable: "Désactiver le vol à l’aveugle",
-    locked: "Vol à l’aveugle permanent – désactivable uniquement dans les règles",
+    locked: "Vol à l’aveugle verrouillé – à déverrouiller dans les règles",
   },
   appearance: {
     label: "Affichage",
@@ -2001,7 +2001,7 @@ const fr: Dictionary = {
           "Masque tout ce que l’application calcule pour vous : l’efficacité des types partout, ainsi que les listes et descriptions d’attaques. La table des types reste. Vaut pour tout le run.",
       },
       blindflugPermanent: {
-        label: "Vol à l’aveugle permanent",
+        label: "Verrouiller le vol à l’aveugle",
         description:
           "Pour jouer sans aucune aide : le vol à l’aveugle reste toujours actif et le bouton de l’en-tête est verrouillé. Désactivable uniquement ici.",
       },
@@ -2367,7 +2367,7 @@ const es: Dictionary = {
     hidden: "Oculto en vuelo a ciegas",
     enable: "Activar vuelo a ciegas",
     disable: "Desactivar vuelo a ciegas",
-    locked: "Vuelo a ciegas permanente: solo se desactiva en las reglas",
+    locked: "Vuelo a ciegas bloqueado: desbloquéalo en las reglas",
   },
   appearance: {
     label: "Apariencia",
@@ -2766,7 +2766,7 @@ const es: Dictionary = {
           "Oculta todo lo que la aplicación calcula por ti: la efectividad de tipos en todas partes y las listas y descripciones de movimientos. La tabla de tipos permanece. Vale para todo el run.",
       },
       blindflugPermanent: {
-        label: "Vuelo a ciegas permanente",
+        label: "Bloquear vuelo a ciegas",
         description:
           "Para jugar sin ninguna ayuda: el vuelo a ciegas queda siempre activo y el botón de la cabecera se bloquea. Solo se desactiva aquí.",
       },
@@ -3132,7 +3132,7 @@ const it: Dictionary = {
     hidden: "Nascosto in volo cieco",
     enable: "Attiva il volo cieco",
     disable: "Disattiva il volo cieco",
-    locked: "Volo cieco permanente: si disattiva solo nelle regole",
+    locked: "Volo cieco bloccato: sbloccalo nelle regole",
   },
   appearance: {
     label: "Aspetto",
@@ -3531,7 +3531,7 @@ const it: Dictionary = {
           "Nasconde tutto ciò che l’app calcola per te: l’efficacia dei tipi ovunque e gli elenchi e le descrizioni delle mosse. La tabella dei tipi resta. Vale per tutto il run.",
       },
       blindflugPermanent: {
-        label: "Volo cieco permanente",
+        label: "Blocca il volo cieco",
         description:
           "Per chi gioca senza alcun aiuto: il volo cieco resta sempre attivo e il pulsante nell’intestazione è bloccato. Si disattiva solo qui.",
       },
