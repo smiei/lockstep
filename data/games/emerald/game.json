@@ -1,6 +1,7 @@
 {
   "id": "emerald",
   "sort": 2,
+  "kind": "official",
   "dataStatus": "verified",
   "generation": 3,
   "dexLimit": 386,

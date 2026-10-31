@@ -146,13 +146,15 @@ npm start
 
 "Route data" is the list and order of routes plus the place names. **Checked** packs were compared against the game. **Unverified** ones may contain mistakes, and the app says so when you pick one. Corrections are welcome as an issue.
 
-A game pack is plain data in `data/games/<id>/` (routes, level caps, game settings). Another game of a supported generation can be added without code changes; see [development](docs/development.md#data).
+**Playing a ROM hack or another game?** A pack is just the route list and the boss level caps, with no encounter tables. You can import your own in the app or contribute it for everyone; see [game packs](docs/game-packs.md).
+
 
 ## Documentation
 
 - [Features in detail](docs/features.md) — every tab and rule explained
 - [Self-hosting](docs/self-hosting.md) — Docker, Pinokio, Node.js, updates, backups, HTTPS
 - [Development](docs/development.md) — local setup, scripts, data, migrations, releasing
+- [Game packs](docs/game-packs.md) — add a game or ROM hack, in the app or as a contribution ([CONTRIBUTING](CONTRIBUTING.md))
 
 ## Version history
 

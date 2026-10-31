@@ -1,6 +1,7 @@
 {
   "id": "firered",
   "sort": 1,
+  "kind": "official",
   "dataStatus": "verified",
   "generation": 3,
   "dexLimit": 386,

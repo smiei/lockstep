@@ -1,6 +1,7 @@
 {
   "id": "black",
   "sort": 8,
+  "kind": "official",
   "dataStatus": "unverified",
   "generation": 5,
   "dexLimit": 649,
