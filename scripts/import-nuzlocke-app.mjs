@@ -40,7 +40,9 @@ const RAW = `https://raw.githubusercontent.com/${SOURCE_REPO}/${SOURCE_COMMIT}/s
 const GEN_MAX_ID = { 1: 151, 2: 251, 3: 386, 4: 493, 5: 649, 6: 721, 7: 809, 8: 905, 9: 1025 };
 
 // src: the source's game id; routes/league/patch default to it.
-// base: our pack the hack is built on (names, places, badges, trainers).
+// base: our pack the hack is built on (names, places, badges, trainers);
+// trainerSet overrides the trainer-picture folder for a hack whose bosses are
+// all its own.
 const HACKS = [
   { id: "renegade-platinum", src: "renplat", base: "platinum", name: "Renegade Platinum", generation: 4, dataGeneration: 6, spriteSet: "platinum", versionGroup: "platinum", sort: 30 },
   { id: "sacred-gold", src: "sacredgold", league: "sssg", patch: "sssg", base: "heartgold", name: "Sacred Gold", generation: 4, dataGeneration: 4, spriteSet: "heartgold-soulsilver", versionGroup: "heartgold-soulsilver", sort: 31 },
@@ -54,6 +56,14 @@ const HACKS = [
   { id: "sinking-sapphire", src: "ssaph", league: "rrss", patch: "rrss", base: "emerald", name: "Sinking Sapphire", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 39 },
   { id: "glazed", src: "glazed", base: "emerald", name: "Glazed", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 40 },
   { id: "new-generations", src: "newgen", base: "firered", name: "New Generations", generation: 3, dataGeneration: 3, spriteSet: "emerald", versionGroup: "firered-leafgreen", sort: 41 },
+  // Modern data on the Gen 3 engine: Pokémon up to Gen 8/9 with regional
+  // forms, moves from the synthetic "modern" version group
+  // (generate-learnsets.mjs). Unbound plays in its own region, so its places
+  // and bosses stay English.
+  { id: "radical-red", src: "radred", base: "firered", name: "Radical Red", generation: 3, dataGeneration: 9, spriteSet: "emerald", versionGroup: "modern", sort: 42 },
+  { id: "unbound", src: "unbound", base: "firered", trainerSet: "unbound", name: "Unbound", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 43 },
+  { id: "run-and-bun", src: "emrunbun", base: "emerald", name: "Run & Bun", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 44 },
+  { id: "blazing-emerald", src: "blazingem", base: "emerald", name: "Blazing Emerald", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 45 },
 ];
 
 const STAT_KEYS = { hp: "KP", atk: "Ang.", def: "Vert.", spa: "Sp.-A.", spd: "Sp.-V.", spe: "Init." };
@@ -71,6 +81,51 @@ const slug = (name) =>
 const key = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 const allLangs = (text) => Object.fromEntries(LANGS.map((lang) => [lang, text]));
 const readJson = async (file) => JSON.parse(await readFile(file, "utf-8"));
+
+// The source names a few formes differently from PokeAPI.
+const SLUG_ALIASES = {
+  "indeedee-f": "indeedee-female",
+  "indeedee-m": "indeedee-male",
+  "darmanitan-galar": "darmanitan-galar-standard",
+  "basculegion-f": "basculegion-female",
+  "basculegion-m": "basculegion-male",
+  "meowstic-f": "meowstic-female",
+  "meowstic-m": "meowstic-male",
+  "oinkologne-f": "oinkologne-female",
+  "pikachu-rockstar": "pikachu-rock-star",
+  typenull: "type-null",
+  mrmime: "mr-mime",
+};
+
+// Source slug -> this app's id: a species, or a forme (Alolan Vulpix is
+// PokeAPI's "vulpix-alola", id 10103, and so is ours). A purely cosmetic forme
+// pokemon.json leaves out (Pikachu in a costume, Low Key Toxtricity) counts as
+// its species - but never a battle state (Mega, Gigantamax, Primal, Totem),
+// whose stats would overwrite the species'. A forme only the hack has (Radical
+// Red's "-sevii", Blazing Emerald's "-hoenn") resolves to nothing - it is not
+// in this app's data. `exact` tells a direct hit from a cosmetic fallback.
+const BATTLE_STATE = /-(mega|mega-x|mega-y|gmax|primal|totem|eternamax)$|-totem-/;
+
+async function slugResolver(pokemon) {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000");
+  if (!res.ok) throw new Error(`PokeAPI pokemon list: HTTP ${res.status}`);
+  const pokeApiIds = new Map((await res.json()).results.map((r) => [r.name, Number(r.url.split("/").at(-2))]));
+  const ours = new Map(pokemon.map((p) => [p.id, p]));
+  const species = new Map(pokemon.filter((p) => p.baseId === undefined).map((p) => [slug(p.names.en), p]));
+  return (name) => {
+    const s = SLUG_ALIASES[slug(name)] ?? slug(name);
+    if (species.has(s)) return { pokemon: species.get(s), exact: true };
+    const id = pokeApiIds.get(s);
+    if (id === undefined) return undefined;
+    if (ours.has(id)) return { pokemon: ours.get(id), exact: true };
+    if (BATTLE_STATE.test(s)) return undefined;
+    // A cosmetic forme of PokeAPI's: the longest species slug it starts with.
+    for (let cut = s.lastIndexOf("-"); cut > 0; cut = s.lastIndexOf("-", cut - 1)) {
+      if (species.has(s.slice(0, cut))) return { pokemon: species.get(s.slice(0, cut)), exact: false };
+    }
+    return undefined;
+  };
+}
 
 async function fetchJson(name) {
   const res = await fetch(`${RAW}/${name}.json`);
@@ -98,7 +153,7 @@ async function main() {
   const catchRates = new Map((await readJson(path.join(dataDir, "catchrates.json"))).map((c) => [c.id, c.catch_rate]));
   const history = await readJson(path.join(dataDir, "pokemon-history.json"));
   const moves = await readJson(path.join(dataDir, "moves.json"));
-  const bySlug = new Map(pokemon.filter((p) => p.baseId === undefined).map((p) => [slug(p.names.en), p]));
+  const resolve = await slugResolver(pokemon);
   const maxDex = Math.max(...pokemon.filter((p) => p.baseId === undefined).map((p) => p.id));
 
   for (const hack of hacks) {
@@ -157,9 +212,17 @@ async function main() {
     // Species and moves from the hack's patches ---------------------------------
     const patch = sourcePatches[hack.patch ?? hack.src] ?? {};
     const species = [];
-    for (const [name, change] of Object.entries(patch.pokemon ?? {})) {
-      const own = bySlug.get(slug(change.name ?? name));
-      if (!own || (!change.stats && !change.types)) continue;
+    // Direct hits first, so a cosmetic fallback (meowstic-female -> Meowstic)
+    // never replaces the species' own entry; one entry per id.
+    const patched = Object.entries(patch.pokemon ?? {})
+      .map(([name, change]) => ({ change, hit: resolve(change.name ?? name) }))
+      .filter(({ change, hit }) => hit && (change.stats || change.types))
+      .sort((a, b) => Number(b.hit.exact) - Number(a.hit.exact));
+    const patchedIds = new Set();
+    for (const { change, hit } of patched) {
+      const own = hit.pokemon;
+      if (patchedIds.has(own.id)) continue;
+      patchedIds.add(own.id);
       let types = own.types;
       for (const h of history
         .filter((e) => e.id === own.id && e.types && hack.dataGeneration <= e.maxGeneration)
@@ -189,6 +252,12 @@ async function main() {
       if (Object.keys(out).length) moveOverrides[name] = out;
     }
 
+    // Encounters: whether regional forms are caught here, and what is unknown.
+    const encounterSlugs = new Set(entries.flatMap((e) => e.encounters ?? []));
+    const encountered = [...encounterSlugs].map((name) => [name, resolve(name)?.pokemon]);
+    const regionalForms = encountered.some(([, p]) => p?.regional);
+    const unknown = encountered.filter(([, p]) => !p).map(([name]) => name);
+
     // game.json -------------------------------------------------------------------
     const game = {
       id: hack.id,
@@ -200,8 +269,9 @@ async function main() {
       dexLimit: Math.min(GEN_MAX_ID[hack.dataGeneration], maxDex),
       spriteSet: hack.spriteSet,
       versionGroup: hack.versionGroup,
-      trainerSet: baseGame.trainerSet ?? baseGame.id,
+      trainerSet: hack.trainerSet ?? baseGame.trainerSet ?? baseGame.id,
       ...(species.length ? { speciesData: hack.id } : {}),
+      ...(regionalForms ? { regionalForms: true } : {}),
       names: allLangs(hack.name),
       source: `${SOURCE_REPO}@${SOURCE_COMMIT.slice(0, 7)} (${hack.src})`,
     };
@@ -224,7 +294,10 @@ async function main() {
     const matchedRoutes = routes.filter((r) => r.names.de !== r.names.en || routeByName.has(key(r.names.en))).length;
     console.log(
       `${hack.id}: ${routes.length} routes (${matchedRoutes} named from ${hack.base}), ${levelcaps.length} bosses, ` +
-        `${species.length} species changed, ${Object.keys(moveOverrides).length} moves changed`,
+        `${species.length} species changed, ${Object.keys(moveOverrides).length} moves changed` +
+        (regionalForms ? ", regional forms" : "") +
+        (unknown.length ? `
+  ${unknown.length} of ${encounterSlugs.size} encounters unknown: ${unknown.join(" ")}` : ""),
     );
   }
 }

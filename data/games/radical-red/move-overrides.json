@@ -1,0 +1,36 @@
+{
+  "triple-kick": {
+    "power": 20
+  },
+  "self-destruct": {
+    "power": 100
+  },
+  "explosion": {
+    "power": 100
+  },
+  "poison-fang": {
+    "power": 75
+  },
+  "shadow-claw": {
+    "power": 80
+  },
+  "parabolic-charge": {
+    "power": 75
+  },
+  "rock-smash": {
+    "power": 60
+  },
+  "roar-of-time": {
+    "power": 80
+  },
+  "chloroblast": {
+    "type": "grass",
+    "power": 150,
+    "damageClass": "special"
+  },
+  "infernal-parade": {
+    "type": "ghost",
+    "power": 60,
+    "damageClass": "special"
+  }
+}

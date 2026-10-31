@@ -1,0 +1,978 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Gary",
+      "en": "Gary",
+      "fr": "Gary",
+      "es": "Gary",
+      "it": "Gary"
+    },
+    "location": {
+      "de": "Oak's Laboratory",
+      "en": "Oak's Laboratory",
+      "fr": "Oak's Laboratory",
+      "es": "Oak's Laboratory",
+      "it": "Oak's Laboratory"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Gary",
+      "en": "Gary",
+      "fr": "Gary",
+      "es": "Gary",
+      "it": "Gary"
+    },
+    "location": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Route 1",
+      "it": "Route 1"
+    },
+    "badge": null,
+    "max_level": 9
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "Virdian Forest",
+      "en": "Virdian Forest",
+      "fr": "Virdian Forest",
+      "es": "Virdian Forest",
+      "it": "Virdian Forest"
+    },
+    "badge": null,
+    "max_level": 8
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Falkner",
+      "en": "Falkner",
+      "fr": "Falkner",
+      "es": "Falkner",
+      "it": "Falkner"
+    },
+    "location": {
+      "de": "Pewter City Museum",
+      "en": "Pewter City Museum",
+      "fr": "Pewter City Museum",
+      "es": "Pewter City Museum",
+      "it": "Pewter City Museum"
+    },
+    "badge": null,
+    "max_level": 14
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Rocko",
+      "en": "Brock",
+      "fr": "Pierre",
+      "es": "Brock",
+      "it": "Brock"
+    },
+    "location": {
+      "de": "Marmoria City",
+      "en": "Pewter City",
+      "fr": "Argenta",
+      "es": "Ciudad Plateada",
+      "it": "Plumbeopoli"
+    },
+    "badge": {
+      "de": "Felsorden",
+      "en": "Boulder Badge",
+      "fr": "Badge Roche",
+      "es": "Medalla Roca",
+      "it": "Medaglia Sasso"
+    },
+    "max_level": 14
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Admin Archer",
+      "en": "Admin Archer",
+      "fr": "Admin Archer",
+      "es": "Admin Archer",
+      "it": "Admin Archer"
+    },
+    "location": {
+      "de": "Mt. Moon",
+      "en": "Mt. Moon",
+      "fr": "Mt. Moon",
+      "es": "Mt. Moon",
+      "it": "Mt. Moon"
+    },
+    "badge": null,
+    "max_level": 21
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Gary",
+      "en": "Gary",
+      "fr": "Gary",
+      "es": "Gary",
+      "it": "Gary"
+    },
+    "location": {
+      "de": "Route 24",
+      "en": "Route 24",
+      "fr": "Route 24",
+      "es": "Route 24",
+      "it": "Route 24"
+    },
+    "badge": null,
+    "max_level": 21
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Bugsy",
+      "en": "Bugsy",
+      "fr": "Bugsy",
+      "es": "Bugsy",
+      "it": "Bugsy"
+    },
+    "location": {
+      "de": "Bill's House",
+      "en": "Bill's House",
+      "fr": "Bill's House",
+      "es": "Bill's House",
+      "it": "Bill's House"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Misty",
+      "en": "Misty",
+      "fr": "Ondine",
+      "es": "Misty",
+      "it": "Misty"
+    },
+    "location": {
+      "de": "Azuria City",
+      "en": "Cerulean City",
+      "fr": "Azuria",
+      "es": "Ciudad Celeste",
+      "it": "Celestopoli"
+    },
+    "badge": {
+      "de": "Quellorden",
+      "en": "Cascade Badge",
+      "fr": "Badge Cascade",
+      "es": "Medalla Cascada",
+      "it": "Medaglia Cascata"
+    },
+    "max_level": 27
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Major Bob",
+      "en": "Lt. Surge",
+      "fr": "Major Bob",
+      "es": "Teniente Surge",
+      "it": "Lt. Surge"
+    },
+    "location": {
+      "de": "Orania City",
+      "en": "Vermilion City",
+      "fr": "Carmin sur Mer",
+      "es": "Ciudad Carmín",
+      "it": "Aranciopoli"
+    },
+    "badge": {
+      "de": "Donnerorden",
+      "en": "Thunder Badge",
+      "fr": "Badge Foudre",
+      "es": "Medalla Trueno",
+      "it": "Medaglia Tuono"
+    },
+    "max_level": 34
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "S.S. Anne",
+      "en": "S.S. Anne",
+      "fr": "S.S. Anne",
+      "es": "S.S. Anne",
+      "it": "S.S. Anne"
+    },
+    "badge": null,
+    "max_level": 29
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Whitney",
+      "en": "Whitney",
+      "fr": "Whitney",
+      "es": "Whitney",
+      "it": "Whitney"
+    },
+    "location": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Route 11",
+      "it": "Route 11"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Morty",
+      "en": "Morty",
+      "fr": "Morty",
+      "es": "Morty",
+      "it": "Morty"
+    },
+    "location": {
+      "de": "Lavender Town",
+      "en": "Lavender Town",
+      "fr": "Lavender Town",
+      "es": "Lavender Town",
+      "it": "Lavender Town"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Erika",
+      "en": "Erika",
+      "fr": "Erika",
+      "es": "Erika",
+      "it": "Erika"
+    },
+    "location": {
+      "de": "Prismania City",
+      "en": "Celadon City",
+      "fr": "Céladopole",
+      "es": "Ciudad Azulona",
+      "it": "Azzurropoli"
+    },
+    "badge": {
+      "de": "Farborden",
+      "en": "Rainbow Badge",
+      "fr": "Badge Prisme",
+      "es": "Medalla Arcoíris",
+      "it": "Medaglia Arcobaleno"
+    },
+    "max_level": 44
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Giovanni",
+      "en": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "location": {
+      "de": "Celadon City Game Corner",
+      "en": "Celadon City Game Corner",
+      "fr": "Celadon City Game Corner",
+      "es": "Celadon City Game Corner",
+      "it": "Celadon City Game Corner"
+    },
+    "badge": null,
+    "max_level": 46,
+    "sprite": "giovanni"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Gary",
+      "en": "Gary",
+      "fr": "Gary",
+      "es": "Gary",
+      "it": "Gary"
+    },
+    "location": {
+      "de": "Silph Co. Rival",
+      "en": "Silph Co. Rival",
+      "fr": "Silph Co. Rival",
+      "es": "Silph Co. Rival",
+      "it": "Silph Co. Rival"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Archer & Ariana",
+      "en": "Archer & Ariana",
+      "fr": "Archer & Ariana",
+      "es": "Archer & Ariana",
+      "it": "Archer & Ariana"
+    },
+    "location": {
+      "de": "Silph Co.",
+      "en": "Silph Co.",
+      "fr": "Silph Co.",
+      "es": "Silph Co.",
+      "it": "Silph Co."
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Giovanni",
+      "en": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "location": {
+      "de": "Silph Co.",
+      "en": "Silph Co.",
+      "fr": "Silph Co.",
+      "es": "Silph Co.",
+      "it": "Silph Co."
+    },
+    "badge": null,
+    "max_level": 56,
+    "sprite": "giovanni"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Chuck",
+      "en": "Chuck",
+      "fr": "Chuck",
+      "es": "Chuck",
+      "it": "Chuck"
+    },
+    "location": {
+      "de": "Saffron City Dojo",
+      "en": "Saffron City Dojo",
+      "fr": "Saffron City Dojo",
+      "es": "Saffron City Dojo",
+      "it": "Saffron City Dojo"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Sabrina",
+      "en": "Sabrina",
+      "fr": "Morgane",
+      "es": "Sabrina",
+      "it": "Sabrina"
+    },
+    "location": {
+      "de": "Saffronia City",
+      "en": "Saffron City",
+      "fr": "Safrania",
+      "es": "Ciudad Azafrán",
+      "it": "Zafferanopoli"
+    },
+    "badge": {
+      "de": "Sumpforden",
+      "en": "Marsh Badge",
+      "fr": "Badge Marais",
+      "es": "Medalla Pantano",
+      "it": "Medaglia Palude"
+    },
+    "max_level": 59
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "Safari Zone",
+      "en": "Safari Zone",
+      "fr": "Safari Zone",
+      "es": "Safari Zone",
+      "it": "Safari Zone"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Koga",
+      "en": "Koga",
+      "fr": "Koga",
+      "es": "Koga",
+      "it": "Koga"
+    },
+    "location": {
+      "de": "Fuchsania City",
+      "en": "Fuchsia City",
+      "fr": "Parmanie",
+      "es": "Ciudad Fucsia",
+      "it": "Fucsiapoli"
+    },
+    "badge": {
+      "de": "Seelenorden",
+      "en": "Soul Badge",
+      "fr": "Badge Âme",
+      "es": "Medalla Alma",
+      "it": "Medaglia Anima"
+    },
+    "max_level": 68
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Pryce (Team A)",
+      "en": "Pryce (Team A)",
+      "fr": "Pryce (Team A)",
+      "es": "Pryce (Team A)",
+      "it": "Pryce (Team A)"
+    },
+    "location": {
+      "de": "Seafoam Islands",
+      "en": "Seafoam Islands",
+      "fr": "Seafoam Islands",
+      "es": "Seafoam Islands",
+      "it": "Seafoam Islands"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Pryce (Team B)",
+      "en": "Pryce (Team B)",
+      "fr": "Pryce (Team B)",
+      "es": "Pryce (Team B)",
+      "it": "Pryce (Team B)"
+    },
+    "location": {
+      "de": "Seafoam Islands",
+      "en": "Seafoam Islands",
+      "fr": "Seafoam Islands",
+      "es": "Seafoam Islands",
+      "it": "Seafoam Islands"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Pryce (Team C)",
+      "en": "Pryce (Team C)",
+      "fr": "Pryce (Team C)",
+      "es": "Pryce (Team C)",
+      "it": "Pryce (Team C)"
+    },
+    "location": {
+      "de": "Seafoam Islands",
+      "en": "Seafoam Islands",
+      "fr": "Seafoam Islands",
+      "es": "Seafoam Islands",
+      "it": "Seafoam Islands"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Jasmine (Team A)",
+      "en": "Jasmine (Team A)",
+      "fr": "Jasmine (Team A)",
+      "es": "Jasmine (Team A)",
+      "it": "Jasmine (Team A)"
+    },
+    "location": {
+      "de": "Cinnabar Island",
+      "en": "Cinnabar Island",
+      "fr": "Cinnabar Island",
+      "es": "Cinnabar Island",
+      "it": "Cinnabar Island"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Jasmine (Team B)",
+      "en": "Jasmine (Team B)",
+      "fr": "Jasmine (Team B)",
+      "es": "Jasmine (Team B)",
+      "it": "Jasmine (Team B)"
+    },
+    "location": {
+      "de": "Cinnabar Island",
+      "en": "Cinnabar Island",
+      "fr": "Cinnabar Island",
+      "es": "Cinnabar Island",
+      "it": "Cinnabar Island"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Jasmine (Team C)",
+      "en": "Jasmine (Team C)",
+      "fr": "Jasmine (Team C)",
+      "es": "Jasmine (Team C)",
+      "it": "Jasmine (Team C)"
+    },
+    "location": {
+      "de": "Cinnabar Island",
+      "en": "Cinnabar Island",
+      "fr": "Cinnabar Island",
+      "es": "Cinnabar Island",
+      "it": "Cinnabar Island"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "May",
+      "en": "May",
+      "fr": "May",
+      "es": "May",
+      "it": "May"
+    },
+    "location": {
+      "de": "Pokémon Mansion Entrance",
+      "en": "Pokémon Mansion Entrance",
+      "fr": "Pokémon Mansion Entrance",
+      "es": "Pokémon Mansion Entrance",
+      "it": "Pokémon Mansion Entrance"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Pyro",
+      "en": "Blaine",
+      "fr": "Auguste",
+      "es": "Blaine",
+      "it": "Blaine"
+    },
+    "location": {
+      "de": "Zinnoberinsel",
+      "en": "Cinnabar Island",
+      "fr": "Cramois'Ile",
+      "es": "Isla Canela",
+      "it": "Cinabropoli"
+    },
+    "badge": {
+      "de": "Vulkanorden",
+      "en": "Volcano Badge",
+      "fr": "Badge Volcan",
+      "es": "Medalla Volcán",
+      "it": "Medaglia Vulcano"
+    },
+    "max_level": 76
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Clair",
+      "en": "Clair",
+      "fr": "Clair",
+      "es": "Clair",
+      "it": "Clair"
+    },
+    "location": {
+      "de": "Viridian City Gym",
+      "en": "Viridian City Gym",
+      "fr": "Viridian City Gym",
+      "es": "Viridian City Gym",
+      "it": "Viridian City Gym"
+    },
+    "badge": null,
+    "max_level": 81
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Gary",
+      "en": "Gary",
+      "fr": "Gary",
+      "es": "Gary",
+      "it": "Gary"
+    },
+    "location": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Route 22",
+      "it": "Route 22"
+    },
+    "badge": null,
+    "max_level": 81
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "Indigo Plateau",
+      "en": "Indigo Plateau",
+      "fr": "Indigo Plateau",
+      "es": "Indigo Plateau",
+      "it": "Indigo Plateau"
+    },
+    "badge": null,
+    "max_level": 82
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Lorelei (Team A)",
+      "en": "Lorelei (Team A)",
+      "fr": "Lorelei (Team A)",
+      "es": "Lorelei (Team A)",
+      "it": "Lorelei (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Lorelei (Team B)",
+      "en": "Lorelei (Team B)",
+      "fr": "Lorelei (Team B)",
+      "es": "Lorelei (Team B)",
+      "it": "Lorelei (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Bruno (Team A)",
+      "en": "Bruno (Team A)",
+      "fr": "Bruno (Team A)",
+      "es": "Bruno (Team A)",
+      "it": "Bruno (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Bruno (Team B)",
+      "en": "Bruno (Team B)",
+      "fr": "Bruno (Team B)",
+      "es": "Bruno (Team B)",
+      "it": "Bruno (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Agatha (Team A)",
+      "en": "Agatha (Team A)",
+      "fr": "Agatha (Team A)",
+      "es": "Agatha (Team A)",
+      "it": "Agatha (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Agatha (Team B)",
+      "en": "Agatha (Team B)",
+      "fr": "Agatha (Team B)",
+      "es": "Agatha (Team B)",
+      "it": "Agatha (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Lance (Team A)",
+      "en": "Lance (Team A)",
+      "fr": "Lance (Team A)",
+      "es": "Lance (Team A)",
+      "it": "Lance (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Lance (Team B)",
+      "en": "Lance (Team B)",
+      "fr": "Lance (Team B)",
+      "es": "Lance (Team B)",
+      "it": "Lance (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Gary",
+      "en": "Gary",
+      "fr": "Gary",
+      "es": "Gary",
+      "it": "Gary"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Brock Rematch",
+      "en": "Brock Rematch",
+      "fr": "Brock Rematch",
+      "es": "Brock Rematch",
+      "it": "Brock Rematch"
+    },
+    "location": {
+      "de": "Pewter City Gym",
+      "en": "Pewter City Gym",
+      "fr": "Pewter City Gym",
+      "es": "Pewter City Gym",
+      "it": "Pewter City Gym"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Misty Rematch",
+      "en": "Misty Rematch",
+      "fr": "Misty Rematch",
+      "es": "Misty Rematch",
+      "it": "Misty Rematch"
+    },
+    "location": {
+      "de": "Cerulean City Gym",
+      "en": "Cerulean City Gym",
+      "fr": "Cerulean City Gym",
+      "es": "Cerulean City Gym",
+      "it": "Cerulean City Gym"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Lt. Surge Rematch",
+      "en": "Lt. Surge Rematch",
+      "fr": "Lt. Surge Rematch",
+      "es": "Lt. Surge Rematch",
+      "it": "Lt. Surge Rematch"
+    },
+    "location": {
+      "de": "Vermillion City Gym",
+      "en": "Vermillion City Gym",
+      "fr": "Vermillion City Gym",
+      "es": "Vermillion City Gym",
+      "it": "Vermillion City Gym"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Erika Rematch",
+      "en": "Erika Rematch",
+      "fr": "Erika Rematch",
+      "es": "Erika Rematch",
+      "it": "Erika Rematch"
+    },
+    "location": {
+      "de": "Celadon City Gym",
+      "en": "Celadon City Gym",
+      "fr": "Celadon City Gym",
+      "es": "Celadon City Gym",
+      "it": "Celadon City Gym"
+    },
+    "badge": null,
+    "max_level": null
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Admin Archer",
+      "en": "Admin Archer",
+      "fr": "Admin Archer",
+      "es": "Admin Archer",
+      "it": "Admin Archer"
+    },
+    "location": {
+      "de": "Cerulean Cave",
+      "en": "Cerulean Cave",
+      "fr": "Cerulean Cave",
+      "es": "Cerulean Cave",
+      "it": "Cerulean Cave"
+    },
+    "badge": null,
+    "max_level": 79
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Admin Ariana",
+      "en": "Admin Ariana",
+      "fr": "Admin Ariana",
+      "es": "Admin Ariana",
+      "it": "Admin Ariana"
+    },
+    "location": {
+      "de": "Cerulean Cave",
+      "en": "Cerulean Cave",
+      "fr": "Cerulean Cave",
+      "es": "Cerulean Cave",
+      "it": "Cerulean Cave"
+    },
+    "badge": null,
+    "max_level": 79
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Giovanni",
+      "en": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "location": {
+      "de": "Cerulean Cave",
+      "en": "Cerulean Cave",
+      "fr": "Cerulean Cave",
+      "es": "Cerulean Cave",
+      "it": "Cerulean Cave"
+    },
+    "badge": null,
+    "max_level": 80,
+    "sprite": "giovanni"
+  }
+]

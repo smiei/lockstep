@@ -48,7 +48,16 @@
 // Pokédex move list applies the same table through at render time instead,
 // since moves.json itself is shared/generation-agnostic.
 //
+// "modern" is no PokeAPI version group but this app's own, for ROM hacks that
+// run current data on an old engine (Radical Red & co.): per Pokémon the
+// newest game that has its level-up moves (MODERN_GROUPS - Scarlet/Violet with
+// its DLC first, then Sword/Shield with its DLC, ...), learnsets, machines and
+// tutors all from that one game. Every machine counts as a TM there.
+//
 // Run manually: node scripts/generate-learnsets.mjs
+// Only some version groups: node scripts/generate-learnsets.mjs modern
+//   -> rewrites just their files and ADDS missing moves to moves.json, leaving
+//      every existing entry (and the Infinite Fusion moves) as it is.
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -83,6 +92,33 @@ function historicalType(moveTypeHistory, slug, generation, currentType) {
 }
 
 const ROMAN = { i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9 };
+
+// The synthetic "modern" version group (see the header): newest game first.
+// A game and its DLC count as one, since PokeAPI lists the DLC separately.
+const MODERN = "modern";
+const MODERN_GROUPS = [
+  ["scarlet-violet", "the-teal-mask", "the-indigo-disk"],
+  ["sword-shield", "the-isle-of-armor", "the-crown-tundra"],
+  ["brilliant-diamond-and-shining-pearl"],
+  ["legends-arceus"],
+  ["ultra-sun-ultra-moon"],
+  ["sun-moon"],
+  ["omega-ruby-alpha-sapphire"],
+  ["x-y"],
+  ["black-2-white-2"],
+  ["black-white"],
+];
+
+// The game the modern version group takes this Pokémon's moves from.
+function modernGroup(mon) {
+  return MODERN_GROUPS.find((group) =>
+    mon.moves.some((m) =>
+      m.version_group_details.some(
+        (v) => group.includes(v.version_group.name) && v.move_learn_method.name === "level-up",
+      ),
+    ),
+  );
+}
 
 // version-group name -> generation number, for turning PokeAPI's
 // past_values[].version_group into our maxGeneration convention.
@@ -164,6 +200,7 @@ function buildFlavor(move, vgGenerations) {
 }
 
 async function main() {
+  const only = process.argv.slice(2);
   // Which version groups do the installed game packs need, and up to which id?
   const gameDirs = await readdir(path.join(dataDir, "games"), { withFileTypes: true });
   const versionGroups = new Map(); // vg -> maxDexId needed
@@ -182,12 +219,27 @@ async function main() {
       // No game.json - skip.
     }
   }
+  const pokemonData = JSON.parse(await readFile(path.join(dataDir, "pokemon.json"), "utf-8"));
+  const maxSpeciesId = Math.max(...pokemonData.filter((p) => p.baseId === undefined).map((p) => p.id));
+  if (only.length > 0) {
+    // A version group no pack uses yet covers the whole dex.
+    for (const vg of only) {
+      if (!versionGroups.has(vg)) versionGroups.set(vg, maxSpeciesId);
+      if (vg === MODERN) vgGeneration.set(vg, 9);
+    }
+    for (const vg of [...versionGroups.keys()]) if (!only.includes(vg)) versionGroups.delete(vg);
+  }
   const moveTypeHistory = await loadMoveTypeHistory();
   const vgGenerations = await loadVersionGroupGenerations();
 
   const maxId = Math.max(0, ...versionGroups.values());
   // slug -> { type, damaging, names } (fetched once, reused across all games).
   const moveCache = new Map();
+  // A partial run keeps every move it already has (and does not refetch it).
+  const existingMoves = only.length > 0
+    ? JSON.parse(await readFile(path.join(dataDir, "moves.json"), "utf-8"))
+    : {};
+  for (const [slug, move] of Object.entries(existingMoves)) moveCache.set(slug, move);
   const typeLearnsets = new Map([...versionGroups.keys()].map((vg) => [vg, {}]));
   const movesets = new Map([...versionGroups.keys()].map((vg) => [vg, {}]));
   const tmCompat = new Map([...versionGroups.keys()].map((vg) => [vg, {}]));
@@ -200,11 +252,7 @@ async function main() {
   // learn different moves per forme (Rotom, Castform and Giratina don't, but
   // fetching them too keeps the rule simple). Their dex gate is the base
   // species, since a forme id (10001+) is far past every dexLimit.
-  const formeIds = new Map(
-    JSON.parse(await readFile(path.join(dataDir, "pokemon.json"), "utf-8"))
-      .filter((p) => p.baseId !== undefined)
-      .map((p) => [p.id, p.baseId]),
-  );
+  const formeIds = new Map(pokemonData.filter((p) => p.baseId !== undefined).map((p) => [p.id, p.baseId]));
   const allIds = [...Array.from({ length: maxId }, (_, i) => i + 1), ...formeIds.keys()];
 
   const batchSize = 4;
@@ -213,6 +261,7 @@ async function main() {
     await Promise.all(
       ids.map(async (pid) => {
         const mon = await fetchJson(`https://pokeapi.co/api/v2/pokemon/${pid}`);
+        const modern = movesets.has(MODERN) ? modernGroup(mon) : undefined;
         for (const m of mon.moves) {
           const slug = m.move.name;
           // Per our version groups: level-up (min level), machine (TM/HM), tutor.
@@ -230,6 +279,7 @@ async function main() {
               pid === 386 && rawVg === "ruby-sapphire"
                 ? ["emerald", "firered-leafgreen"]
                 : [rawVg];
+            if (modern?.includes(rawVg)) effectiveVgs.push(MODERN);
             for (const vg of effectiveVgs) {
               if (!movesets.has(vg)) continue;
               if ((formeIds.get(pid) ?? pid) > (versionGroups.get(vg) ?? 0)) continue;
@@ -358,6 +408,10 @@ async function main() {
 
   const moves = {};
   for (const slug of [...moveCache.keys()].sort()) moves[slug] = moveCache.get(slug);
+  if (only.length > 0) {
+    const added = Object.keys(moves).filter((slug) => !(slug in existingMoves));
+    console.log(`moves.json: added ${added.length} moves (${added.join(", ")})`);
+  }
   await writeFile(path.join(dataDir, "moves.json"), JSON.stringify(moves) + "\n", "utf-8");
   console.log(`moves.json: ${Object.keys(moves).length} moves`);
 }

@@ -143,7 +143,7 @@ npm start
 | 4 | Platinum, HeartGold, SoulSilver | checked |
 | 5 | Black, White | unverified |
 | Fan game | Pokémon Infinite Fusion (Classic and Remix), with fusions and the game's own data | unverified |
-| ROM hacks | Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, New Generations, with each hack's own stats, types and moves | unverified |
+| ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald, Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms | unverified |
 
 "Route data" is the list and order of routes plus the place names. **Checked** packs were compared against the game. **Unverified** ones may contain mistakes, and the app says so when you pick one. Corrections are welcome as an issue.
 

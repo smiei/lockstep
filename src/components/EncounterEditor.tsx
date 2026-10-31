@@ -11,7 +11,8 @@ import { formatActionError } from "@/lib/actionErrors";
 import { useDialog } from "@/components/DialogProvider";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
-import { pokemonName, routeName } from "@/lib/i18n/localize";
+import { routeName } from "@/lib/i18n/localize";
+import { displayNameWithForm } from "@/lib/forms";
 import { PokemonCombobox } from "@/components/PokemonCombobox";
 import { PokemonInfoButton } from "@/components/PokemonDetailProvider";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
@@ -135,7 +136,7 @@ export function EncounterEditor({
 
   const speciesName = (id: number) => {
     const p = pokemonList.find((x) => x.id === id);
-    return p ? pokemonName(p, lang) : `#${id}`;
+    return p ? displayNameWithForm(p, lang) : `#${id}`;
   };
 
   // Tracker always shows what was actually caught (pokemonId); if it has
@@ -144,7 +145,7 @@ export function EncounterEditor({
   const evolvedName = useMemo(() => {
     if (!current || current.currentPokemonId === current.pokemonId) return null;
     const evolved = pokemonList.find((p) => p.id === current.currentPokemonId);
-    return evolved ? pokemonName(evolved, lang) : null;
+    return evolved ? displayNameWithForm(evolved, lang) : null;
   }, [current, pokemonList, lang]);
 
   // While there is no real Encounter yet, another client's unconfirmed pick
@@ -177,7 +178,7 @@ export function EncounterEditor({
 
   const selectedName = (() => {
     const p = selectedId != null ? pokemonList.find((x) => x.id === selectedId) : null;
-    return p ? pokemonName(p, lang) : "";
+    return p ? displayNameWithForm(p, lang) : "";
   })();
 
   useEffect(() => {
@@ -214,7 +215,7 @@ export function EncounterEditor({
     const conflict = clauseEncounters.find((e) => e.familyId === picked.family_id);
     if (!conflict) return null;
     return t.actions.speciesLocked(
-      pokemonName(picked, lang),
+      displayNameWithForm(picked, lang),
       playerLabel(conflict.player),
       placeName(conflict, encounters, routes, lang),
     );

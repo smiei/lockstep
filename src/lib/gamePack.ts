@@ -15,6 +15,7 @@ export const SPRITE_SET_IDS = [
   "platinum",
   "heartgold-soulsilver",
   "black-white",
+  "modern",
 ] as const;
 
 export const PACK_KINDS = ["official", "romhack", "fangame"] as const;
@@ -55,6 +56,8 @@ const GAME_KEYS = new Set([
   "names",
   // Where a generated pack came from (scripts/import-nuzlocke-app.mjs).
   "source",
+  // Regional forms are catchable (GameInfo.regionalForms).
+  "regionalForms",
 ]);
 const BUILT_IN_ONLY_GAME_KEYS = new Set(["species", "nameLang", "speciesData", "fusion", "sourceVersion", "sourceDate"]);
 
@@ -186,6 +189,9 @@ function checkGame(c: Collector, game: unknown, ctx: PackContext) {
   }
   if (!ctx.versionGroups.includes(game.versionGroup as string)) {
     c.error("game", "versionGroup", `must be one of ${ctx.versionGroups.join(", ")} (move and TM data exist for these)`);
+  }
+  if (game.regionalForms !== undefined && typeof game.regionalForms !== "boolean") {
+    c.error("game", "regionalForms", "must be true or false");
   }
   if (game.trainerSet !== undefined && (typeof game.trainerSet !== "string" || !/^[a-z0-9-]+$/.test(game.trainerSet))) {
     c.error("game", "trainerSet", "must be lowercase letters, digits and dashes");

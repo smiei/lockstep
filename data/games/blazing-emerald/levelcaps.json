@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Felizia",
+      "en": "Roxanne",
+      "fr": "Roxanne",
+      "es": "Petra",
+      "it": "Roxanne"
+    },
+    "location": {
+      "de": "Metarost City",
+      "en": "Rustboro City",
+      "fr": "Mérouville",
+      "es": "Ciudad Férrica",
+      "it": "Ferrugipoli"
+    },
+    "badge": {
+      "de": "Steinorden",
+      "en": "Stone Badge",
+      "fr": "Badge Roc",
+      "es": "Medalla Piedra",
+      "it": "Medaglia Roccia"
+    },
+    "max_level": 15
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Blake",
+      "en": "Blake",
+      "fr": "Blake",
+      "es": "Blake",
+      "it": "Blake"
+    },
+    "location": {
+      "de": "Dewford Town Gym",
+      "en": "Dewford Town Gym",
+      "fr": "Dewford Town Gym",
+      "es": "Dewford Town Gym",
+      "it": "Dewford Town Gym"
+    },
+    "badge": null,
+    "max_level": 22
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Walter",
+      "en": "Wattson",
+      "fr": "Voltère",
+      "es": "Erico",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Malvenfroh City",
+      "en": "Mauville City",
+      "fr": "Lavandia",
+      "es": "Ciudad Malvalona",
+      "it": "Ciclamipoli"
+    },
+    "badge": {
+      "de": "Dynamoorden",
+      "en": "Dynamo Badge",
+      "fr": "Badge Dynamo",
+      "es": "Medalla Dinamo",
+      "it": "Medaglia Dinamo"
+    },
+    "max_level": 32
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Flavia",
+      "en": "Flannery",
+      "fr": "Adriane",
+      "es": "Candela",
+      "it": "Flannery"
+    },
+    "location": {
+      "de": "Bad Lavastadt",
+      "en": "Lavaridge Town",
+      "fr": "Vermilava",
+      "es": "Pueblo Lavacalda",
+      "it": "Cuordilava"
+    },
+    "badge": {
+      "de": "Hitzeorden",
+      "en": "Heat Badge",
+      "fr": "Badge Chaleur",
+      "es": "Medalla Calor",
+      "it": "Medaglia Calore"
+    },
+    "max_level": 37
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Norman",
+      "en": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "location": {
+      "de": "Blütenburg City",
+      "en": "Petalburg City",
+      "fr": "Clémenti-Ville",
+      "es": "Ciudad Petalia",
+      "it": "Petalipoli"
+    },
+    "badge": {
+      "de": "Balanceorden",
+      "en": "Balance Badge",
+      "fr": "Badge Équilibre",
+      "es": "Medalla Equilibrio",
+      "it": "Medaglia Equilibrio"
+    },
+    "max_level": 43
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Wibke",
+      "en": "Winona",
+      "fr": "Alizée",
+      "es": "Alana",
+      "it": "Winona"
+    },
+    "location": {
+      "de": "Baumhausen City",
+      "en": "Fortree City",
+      "fr": "Cimetronelle",
+      "es": "Ciudad Arborada",
+      "it": "Forestopoli"
+    },
+    "badge": {
+      "de": "Federorden",
+      "en": "Feather Badge",
+      "fr": "Badge Plume",
+      "es": "Medalla Pluma",
+      "it": "Medaglia Piuma"
+    },
+    "max_level": 50
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Ben & Svenja",
+      "en": "Tate & Liza",
+      "fr": "Lévy & Tatia",
+      "es": "Vito & Leti",
+      "it": "Tate & Liza"
+    },
+    "location": {
+      "de": "Moosbach City",
+      "en": "Mossdeep City",
+      "fr": "Algatia",
+      "es": "Ciudad Algaria",
+      "it": "Verdeazzupoli"
+    },
+    "badge": {
+      "de": "Psychoorden",
+      "en": "Mind Badge",
+      "fr": "Badge Esprit",
+      "es": "Medalla Mente",
+      "it": "Medaglia Mente"
+    },
+    "max_level": 54
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Juan",
+      "en": "Juan",
+      "fr": "Juan",
+      "es": "Galano",
+      "it": "Juan"
+    },
+    "location": {
+      "de": "Xeneroville",
+      "en": "Sootopolis City",
+      "fr": "Atalanopolis",
+      "es": "Arrecípolis",
+      "it": "Ceneride"
+    },
+    "badge": {
+      "de": "Regenorden",
+      "en": "Rain Badge",
+      "fr": "Badge Pluie",
+      "es": "Medalla Lluvia",
+      "it": "Medaglia Pioggia"
+    },
+    "max_level": 60
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Ulrich",
+      "en": "Sidney",
+      "fr": "Damien",
+      "es": "Sixto",
+      "it": "Sidney"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Bede",
+      "en": "Bede",
+      "fr": "Bede",
+      "es": "Bede",
+      "it": "Bede"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Dragan",
+      "en": "Drake",
+      "fr": "Aragon",
+      "es": "Dracón",
+      "it": "Drake"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 71
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Wassili",
+      "en": "Wallace",
+      "fr": "Marc",
+      "es": "Plubio",
+      "it": "Wallace"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Troy Trumm",
+      "en": "Steven",
+      "fr": "Steven",
+      "es": "Steven",
+      "it": "Steven"
+    },
+    "location": {
+      "de": "Meteor Falls Champion",
+      "en": "Meteor Falls Champion",
+      "fr": "Meteor Falls Champion",
+      "es": "Meteor Falls Champion",
+      "it": "Meteor Falls Champion"
+    },
+    "badge": null,
+    "max_level": 76
+  }
+]

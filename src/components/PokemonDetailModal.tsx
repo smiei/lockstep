@@ -170,7 +170,7 @@ export function PokemonDetailModal({
         stats: computeFusionStats(pokemon, body),
       }
     : null;
-  const displayName = fusion?.name ?? pokemonName(pokemon, lang);
+  const displayName = fusion?.name ?? displayNameWithForm(pokemon, lang);
   const types = fusion?.types ?? pokemon.types;
   const stats = fusion?.stats ?? pokemon.stats;
   // The evolution tree is keyed by SPECIES, so a forme resolves to its base.
@@ -302,8 +302,8 @@ export function PokemonDetailModal({
                 strong
                 left={`${td.dexNo} ${
                   body
-                    ? `${String(pokemon.id).padStart(3, "0")}/${String(body.id).padStart(3, "0")}`
-                    : String(pokemon.id).padStart(3, "0")
+                    ? `${String(baseSpeciesId(pokemon)).padStart(3, "0")}/${String(baseSpeciesId(body)).padStart(3, "0")}`
+                    : String(baseSpeciesId(pokemon)).padStart(3, "0")
                 }`}
                 right={`${td.rank} ${fusion ? "—" : `#${rank}`}`}
               />

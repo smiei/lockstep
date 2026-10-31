@@ -8,7 +8,7 @@ import { addFreeTeamMember } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
-import { pokemonName } from "@/lib/i18n/localize";
+import { displayNameWithForm } from "@/lib/forms";
 import { PokemonCombobox } from "@/components/PokemonCombobox";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { NICKNAME_MAX } from "@/components/EncounterEditor";
@@ -56,7 +56,7 @@ export function FreeTeamDialog({
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if (pokemonId === null || pending) return;
-    const label = picked ? pokemonName(picked, lang) : String(pokemonId);
+    const label = picked ? displayNameWithForm(picked, lang) : String(pokemonId);
     startTransition(async () => {
       const result = await addFreeTeamMember(
         runKey,

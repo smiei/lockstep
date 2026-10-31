@@ -38,14 +38,22 @@ const FORME_ID_THRESHOLD = 10001;
 // shipped one of its formes) - download-sprites.mjs tries the same two paths
 // when populating a volume, this just defers that choice to the browser via
 // PokemonSprite's onError chain instead of deciding it once at download time.
+//
+// What a set lacks - a species past its range, a Gen 6+ forme - comes from
+// the "modern" set (PokeAPI's default sprites). Locally the download script
+// already saved those into the set's own folder; hotlinked, a species past
+// the range goes straight there and a forme gets it as the last candidate.
 export function getPokemonSpriteUrls(pokemonId: number, spriteSet: string = DEFAULT_SPRITE_SET): string[] {
   if (!IS_PUBLIC_INSTANCE) return [`/pokemon-sprites/${spriteSet}/${pokemonId}.png`];
 
   const config = SPRITE_SETS[spriteSet] ?? SPRITE_SETS[DEFAULT_SPRITE_SET];
-  const urls = [`${spriteSources.pokeApiBase}/pokemon/${config.path}/${pokemonId}.png`];
-  if (pokemonId >= FORME_ID_THRESHOLD && config.formFallbackPath) {
-    urls.push(`${spriteSources.pokeApiBase}/pokemon/${config.formFallbackPath}/${pokemonId}.png`);
-  }
+  const at = (spritePath: string) =>
+    `${spriteSources.pokeApiBase}/pokemon/${spritePath ? `${spritePath}/` : ""}${pokemonId}.png`;
+  const modern = at(SPRITE_SETS.modern.path);
+  if (pokemonId < FORME_ID_THRESHOLD) return [pokemonId <= config.maxId ? at(config.path) : modern];
+  const urls = [at(config.path)];
+  if (config.formFallbackPath) urls.push(at(config.formFallbackPath));
+  if (!urls.includes(modern)) urls.push(modern);
   return urls;
 }
 
