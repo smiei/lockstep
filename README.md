@@ -209,6 +209,7 @@ Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and eve
 | `4.1` | The logo is back in the shell's bottle green (4.0 shipped it on a red tile); the app icon, splash screen and status bar follow. |
 | `4.2` | The run list opens right under the run box and reads clearly in dark mode (ruled rows, the open run marked). New rule: permanent blind flight, which locks blind flight on so the header button cannot lift it. Clearer Docker volume guide and a by-game reference for trainer pictures. |
 | `4.3` | Server defaults for the colour (`DEFAULT_SHELL_COLOR`, icons included) and the browser language (`DEFAULT_LANGUAGE`); the installed app follows the phone's language. The side-rail logo takes the shell colour, the run list reaches past the rail, the dark-mode button can return to following the device, and "Lock blind flight" got its name. |
+| `5.0` | The app is now called **Lockstep**, and so are the repository (`smiei/lockstep`) and the image, which is published on GitHub's registry only (`ghcr.io/smiei/lockstep`). 16 ROM hacks (Radical Red, Unbound, Run & Bun, Renegade Platinum, and more) with their own stats, types and moves; Pokémon data up to Gen 9 with regional forms; a hack's own Pokémon as placeholders. Import your own game pack in the app, or contribute one. A start page with every run as a card. Boss-trainer pictures download by themselves. Notes on machine-translated languages and unverified game data. Backup format v5. |
 
 ## Acknowledgements
 
