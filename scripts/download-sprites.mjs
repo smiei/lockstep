@@ -113,21 +113,38 @@ async function migrateFlatLayout() {
   console.log(`migrated ${flat.length} flat sprites into emerald/`);
 }
 
+// Same rule as src/lib/customGames.ts: CUSTOM_GAMES_DIR, else `custom-games`
+// beside the SQLite file of DATABASE_URL (relative paths are relative to prisma/).
+function customGamesDir() {
+  if (process.env.CUSTOM_GAMES_DIR) return path.resolve(process.env.CUSTOM_GAMES_DIR);
+  const url = process.env.DATABASE_URL;
+  if (process.env.TURSO_DATABASE_URL || !url?.startsWith("file:")) return null;
+  const file = url.slice("file:".length).split("?")[0];
+  const absolute = path.isAbsolute(file) ? file : path.resolve(process.cwd(), "prisma", file);
+  return path.join(path.dirname(absolute), "custom-games");
+}
+
 async function main() {
   await migrateFlatLayout();
 
-  // Which sets do the installed game packs need?
-  const gameDirs = await readdir(path.join(dataDir, "games"), { withFileTypes: true });
+  // Which sets do the installed game packs need - the built-in ones and the
+  // ones imported in the app (custom-games next to the database)?
   const sets = new Set();
-  for (const dir of gameDirs) {
-    if (!dir.isDirectory()) continue;
+  for (const root of [path.join(dataDir, "games"), customGamesDir()].filter(Boolean)) {
+    let gameDirs = [];
     try {
-      const game = JSON.parse(
-        await readFile(path.join(dataDir, "games", dir.name, "game.json"), "utf-8"),
-      );
-      sets.add(game.spriteSet ?? "emerald");
+      gameDirs = await readdir(root, { withFileTypes: true });
     } catch {
-      // No game.json - skip.
+      continue; // no custom games yet
+    }
+    for (const dir of gameDirs) {
+      if (!dir.isDirectory()) continue;
+      try {
+        const game = JSON.parse(await readFile(path.join(root, dir.name, "game.json"), "utf-8"));
+        sets.add(game.spriteSet ?? "emerald");
+      } catch {
+        // No game.json - skip.
+      }
     }
   }
 

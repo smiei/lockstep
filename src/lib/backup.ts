@@ -9,6 +9,42 @@ import type { Prisma } from "@/generated/prisma/client";
 // server-side imports of "@/lib/backup" keep working unchanged.
 export * from "@/lib/backupParse";
 import { BACKUP_FORMAT, BACKUP_VERSION, type BackupFile, type BackupRun } from "@/lib/backupParse";
+import { readCustomGameBundle, writeCustomGame } from "@/lib/customGames";
+import { getGameById, getPackContext } from "@/lib/data";
+import { hasErrors, isCustomPackId, validateBundle, type GamePackBundle } from "@/lib/gamePack";
+
+// The custom game packs a set of runs plays, keyed by id - what a backup
+// carries so the game travels with its runs.
+function gamePacksFor(gameIds: string[]): Record<string, GamePackBundle> | undefined {
+  const packs: Record<string, GamePackBundle> = {};
+  for (const id of new Set(gameIds)) {
+    if (!isCustomPackId(id)) continue;
+    const bundle = readCustomGameBundle(id);
+    if (bundle) packs[id] = bundle;
+  }
+  return Object.keys(packs).length > 0 ? packs : undefined;
+}
+
+// Installs the backup's custom games this server does not have yet. One that
+// fails validation is skipped (its runs then fall back to the default game,
+// as for any missing pack) rather than failing the whole import; an already
+// installed pack with the same id is left alone, never overwritten.
+function installGamePacks(backup: BackupFile) {
+  if (!backup.gamePacks) return;
+  for (const [id, bundle] of Object.entries(backup.gamePacks)) {
+    if (getGameById(id)) continue;
+    const issues = validateBundle(bundle, getPackContext());
+    if (hasErrors(issues) || (bundle as GamePackBundle).game?.id !== id) {
+      console.warn(`[backup] custom game "${id}" in the backup is invalid - not installed`);
+      continue;
+    }
+    try {
+      writeCustomGame(bundle as GamePackBundle);
+    } catch (err) {
+      console.warn(`[backup] custom game "${id}" could not be installed`, err);
+    }
+  }
+}
 
 const BACKUP_INCLUDE = {
   soulLinks: true,
@@ -91,11 +127,13 @@ export async function buildBackup(runIds?: number[]): Promise<BackupFile> {
     include: BACKUP_INCLUDE,
   });
 
+  const gamePacks = gamePacksFor(runs.map((run) => run.gameId));
   return {
     format: BACKUP_FORMAT,
     version: BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
     runs: runs.map(runToBackupRun),
+    ...(gamePacks ? { gamePacks } : {}),
   };
 }
 
@@ -112,11 +150,13 @@ export async function buildBackupZip(): Promise<{ filename: string; data: Uint8A
   const usedNames = new Set<string>();
   const files: Record<string, Uint8Array> = {};
   for (const run of runs) {
+    const gamePacks = gamePacksFor([run.gameId]);
     const backup: BackupFile = {
       format: BACKUP_FORMAT,
       version: BACKUP_VERSION,
       exportedAt: new Date().toISOString(),
       runs: [runToBackupRun(run)],
+      ...(gamePacks ? { gamePacks } : {}),
     };
     let name = backupFilename(run.name);
     let suffix = 2;
@@ -136,6 +176,7 @@ export async function buildBackupZip(): Promise<{ filename: string; data: Uint8A
 // aren't restored; createdAt is preserved to keep run/encounter ordering.
 // Returns the new runs' access keys, in backup order.
 export async function applyBackup(backup: BackupFile): Promise<string[]> {
+  if (!IS_PUBLIC_INSTANCE) installGamePacks(backup);
   const runKeys: string[] = [];
   await prisma.$transaction(
     async (tx) => {

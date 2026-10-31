@@ -90,6 +90,7 @@ Everything else is optional and usually best left out:
 | --- | --- |
 | `DATABASE_URL` | **Required.** `file:/app/db/nuzlocke.db` |
 | `DEFAULT_SHELL_COLOR` | Optional. The colour every device starts with: `green` (default), `red`, `blue` or `yellow`. The browser-tab icon, the home-screen icon and the installed app's splash screen and status bar take this colour too. Anyone can still pick their own colour in the gear menu, which is kept per device. |
+| `CUSTOM_GAMES_DIR` | Optional. Where games imported in the app are saved (default: `custom-games` next to the database, see [Backups](#backups)). |
 | `TRAINER_SPRITES` | Optional. `off` skips the trainer-picture download (see [Trainer pictures](#trainer-pictures)). |
 | `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with German as the last fallback. A language picked in the gear menu always wins. |
 
@@ -168,6 +169,8 @@ For a file-level backup, copy the database while the tracker is stopped:
 | Docker | `nuzlocke.db` in the volume mounted at `/app/db` |
 | Pinokio | `data/nuzlocke.db` in the launcher folder |
 | Without Docker | `prisma/dev.db` |
+
+Games imported in the app (New Run → *Import your own game*) are saved in a `custom-games` folder **next to the database**: in the `/app/db` volume, in Pinokio's `data/` folder, or in `prisma/` without Docker. Copy that folder along with the database. Run backups made in the app carry their custom game anyway. `CUSTOM_GAMES_DIR` moves the folder elsewhere.
 
 ## HTTPS and installing the app
 
