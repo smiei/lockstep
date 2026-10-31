@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { HomeIcon } from "@/components/ActionIcons";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
 
@@ -58,6 +61,8 @@ function tint(text: string): string | null {
 export function HeaderTitle() {
   const { lang } = useLanguage();
   const t = translations[lang].header;
+  const home = translations[lang].home;
+  const atHome = usePathname() === "/";
   // /icons/ is a build artefact (scripts/generate-icons.mjs via npm's prebuild
   // hook) that docker-entrypoint.sh regenerates at container start whenever a
   // private branding folder is mounted or DEFAULT_SHELL_COLOR is set - so this
@@ -80,6 +85,18 @@ export function HeaderTitle() {
 
   return (
     <div className="flex min-w-0 items-center gap-2">
+      {/* The start page: every run of this install, played-last first. */}
+      <Link
+        href="/"
+        aria-label={home.homeLabel}
+        title={home.homeLabel}
+        aria-current={atHome ? "page" : undefined}
+        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-line transition-colors hover:bg-hover hover:text-ink ${
+          atHome ? "bg-hover text-ink" : "text-ink-muted"
+        }`}
+      >
+        <HomeIcon className="h-5 w-5" />
+      </Link>
       {tinted ? (
         <span
           aria-hidden

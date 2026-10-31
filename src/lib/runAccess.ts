@@ -19,7 +19,10 @@ export async function findRunByKey(key: unknown): Promise<Run | null> {
 // It still must never fail the mutation that already happened.
 export async function markRunChanged(runId: number): Promise<void> {
   try {
-    await prisma.run.updateMany({ where: { id: runId }, data: { version: { increment: 1 } } });
+    await prisma.run.updateMany({
+      where: { id: runId },
+      data: { version: { increment: 1 }, changedAt: new Date() },
+    });
   } catch (error) {
     console.error("markRunChanged failed:", error);
   }
