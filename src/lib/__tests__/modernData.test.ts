@@ -36,6 +36,13 @@ describe("pokemon.json", () => {
     expect(byId.get(10103)).toMatchObject({ baseId: 37, since: 7, regional: true, types: ["ice"] });
     expect(byId.get(10152)?.regional).toBeUndefined(); // Lycanroc Dusk: a forme, not a regional form
   });
+
+  it("labels every forme in all five languages (LABEL_FIXES in generate-forms.mjs)", () => {
+    for (const p of pokemon.filter((entry) => entry.formNames)) {
+      for (const lang of LANGS) expect(p.formNames![lang], `${p.id} ${lang}`).toBeTruthy();
+    }
+    expect(byId.get(10253)?.formNames?.de).toBe("Paldea-Form");
+  });
 });
 
 describe("Gen 6+ formes per pack", () => {
