@@ -1,0 +1,883 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Inicial",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Route 101",
+      "en": "Route 101",
+      "fr": "Route 101",
+      "es": "Ruta 101",
+      "it": "Percorso 101"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Route 102",
+      "en": "Route 102",
+      "fr": "Route 102",
+      "es": "Ruta 102",
+      "it": "Percorso 102"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Route 103",
+      "en": "Route 103",
+      "fr": "Route 103",
+      "es": "Ruta 103",
+      "it": "Percorso 103"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Blütenburg City",
+      "en": "Petalburg City",
+      "fr": "Clémenti-Ville",
+      "es": "Ciudad Petalia",
+      "it": "Petalipoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Route 104",
+      "en": "Route 104",
+      "fr": "Route 104",
+      "es": "Ruta 104",
+      "it": "Percorso 104"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Blütenburgwald",
+      "en": "Petalburg Woods",
+      "fr": "Bois Clémenti",
+      "es": "Bosque Petalia",
+      "it": "Bosco Petalo"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Metarost City",
+      "en": "Rustboro City",
+      "fr": "Mérouville",
+      "es": "Ciudad Férrica",
+      "it": "Ferrugipoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Route 105",
+      "en": "Route 105",
+      "fr": "Chenal 105",
+      "es": "Ruta 105",
+      "it": "Percorso 105"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Route 116",
+      "en": "Route 116",
+      "fr": "Route 116",
+      "es": "Ruta 116",
+      "it": "Percorso 116"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Metarost-Tunnel",
+      "en": "Rusturf Tunnel",
+      "fr": "Tunnel Mérazon",
+      "es": "Túnel Fervergal",
+      "it": "Tunnel Menferro"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Faustauhaven",
+      "en": "Dewford Town",
+      "fr": "Myokara",
+      "es": "Pueblo Azuliza",
+      "it": "Bluruvia"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Route 106",
+      "en": "Route 106",
+      "fr": "Chenal 106",
+      "es": "Ruta 106",
+      "it": "Percorso 106"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Granithöhle",
+      "en": "Granite Cave",
+      "fr": "Grotte Granite",
+      "es": "Cueva Granito",
+      "it": "Grotta Pietrosa"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 107",
+      "en": "Route 107",
+      "fr": "Chenal 107",
+      "es": "Ruta 107",
+      "it": "Percorso 107"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Graphitport City",
+      "en": "Slateport City",
+      "fr": "Poivressel",
+      "es": "Ciudad Portual",
+      "it": "Porto Selcepoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Route 110",
+      "en": "Route 110",
+      "fr": "Route 110",
+      "es": "Ruta 110",
+      "it": "Percorso 110"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Neu Malvenfroh",
+      "en": "New Mauville",
+      "fr": "New Lavandia",
+      "es": "Malvalanova",
+      "it": "Ciclanova"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Route 117",
+      "en": "Route 117",
+      "fr": "Route 117",
+      "es": "Ruta 117",
+      "it": "Percorso 117"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Verdanturf Town",
+      "en": "Verdanturf Town",
+      "fr": "Verdanturf Town",
+      "es": "Verdanturf Town",
+      "it": "Verdanturf Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Route 111",
+      "en": "Route 111",
+      "fr": "Route 111",
+      "es": "Ruta 111",
+      "it": "Percorso 111"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Route 112",
+      "en": "Route 112",
+      "fr": "Route 112",
+      "es": "Ruta 112",
+      "it": "Percorso 112"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Feuriger Pfad",
+      "en": "Fiery Path",
+      "fr": "Chemin Ardent",
+      "es": "Senda Ígnea",
+      "it": "Cammino Ardente"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Route 113",
+      "en": "Route 113",
+      "fr": "Route 113",
+      "es": "Ruta 113",
+      "it": "Percorso 113"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Fallarbor Town",
+      "en": "Fallarbor Town",
+      "fr": "Fallarbor Town",
+      "es": "Fallarbor Town",
+      "it": "Fallarbor Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Route 114",
+      "en": "Route 114",
+      "fr": "Fossile Tour Mirage",
+      "es": "Route 114",
+      "it": "Route 114"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Meteorfälle",
+      "en": "Meteor Falls",
+      "fr": "Site Météore",
+      "es": "Cascada Meteoro",
+      "it": "Cascate Meteora"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Route 115",
+      "en": "Route 115",
+      "fr": "Route 115",
+      "es": "Ruta 115",
+      "it": "Percorso 115"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Steilpass",
+      "en": "Jagged Pass",
+      "fr": "Sentier Sinuroc",
+      "es": "Desfiladero",
+      "it": "Passo Selvaggio"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Bad Lavastadt",
+      "en": "Lavaridge Town",
+      "fr": "Vermilava",
+      "es": "Pueblo Lavacalda",
+      "it": "Cuordilava"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Route 118",
+      "en": "Route 118",
+      "fr": "Route 118",
+      "es": "Ruta 118",
+      "it": "Percorso 118"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Southern Island",
+      "en": "Southern Island",
+      "fr": "Southern Island",
+      "es": "Southern Island",
+      "it": "Southern Island"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Route 119",
+      "en": "Route 119",
+      "fr": "Route 119",
+      "es": "Ruta 119",
+      "it": "Percorso 119"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Weather Institute",
+      "en": "Weather Institute",
+      "fr": "Weather Institute",
+      "es": "Weather Institute",
+      "it": "Weather Institute"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 120",
+      "en": "Route 120",
+      "fr": "Œuf d'Okéoké Vermilava",
+      "es": "Huevo de Wynaut Pueblo Lavacalda",
+      "it": "Uovo di Wynaut Cuordilava"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Scorched Slab",
+      "en": "Scorched Slab",
+      "fr": "Scorched Slab",
+      "es": "Scorched Slab",
+      "it": "Scorched Slab"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Route 121",
+      "en": "Route 121",
+      "fr": "Morphéo Institut Météo",
+      "es": "Castform Instituto Meteorológico",
+      "it": "Route 121"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Route 122",
+      "en": "Route 122",
+      "fr": "Chenal 122",
+      "es": "Ruta 122",
+      "it": "Percorso 122"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Pyroberg",
+      "en": "Mt. Pyre",
+      "fr": "Rayquaza Pilier Céleste",
+      "es": "Rayquaza Pilar Celeste",
+      "it": "Rayquaza Torre dei Cieli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Route 123",
+      "en": "Route 123",
+      "fr": "Kecleon Route 120",
+      "es": "Kecleon Ruta 120",
+      "it": "Kecleon Percorso 120"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Safari-Zone",
+      "en": "Safari Zone",
+      "fr": "Parc Safari",
+      "es": "Zona Safari",
+      "it": "Zona Safari"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Seegrasulb City",
+      "en": "Lilycove City",
+      "fr": "Registeel Tombeau Antique",
+      "es": "Registeel Tumba Antigua",
+      "it": "Registeel Tomba Antica"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Team Magma Hideout",
+      "en": "Team Magma Hideout",
+      "fr": "Team Magma Hideout",
+      "es": "Team Magma Hideout",
+      "it": "Team Magma Hideout"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Route 124",
+      "en": "Route 124",
+      "fr": "Chenal 124",
+      "es": "Ruta 124",
+      "it": "Percorso 124"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Moosbach City",
+      "en": "Mossdeep City",
+      "fr": "Terhal Algatia",
+      "es": "Beldum Ciudad Algaria",
+      "it": "Beldum Verdeazzupoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Route 125",
+      "en": "Route 125",
+      "fr": "Chenal 125",
+      "es": "Ruta 125",
+      "it": "Percorso 125"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Küstenhöhle",
+      "en": "Shoal Cave",
+      "fr": "Kyogre Grotte Marine",
+      "es": "Shoal Cave",
+      "it": "Shoal Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Route 127",
+      "en": "Route 127",
+      "fr": "Chenal 127",
+      "es": "Ruta 127",
+      "it": "Percorso 127"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Route 128",
+      "en": "Route 128",
+      "fr": "Chenal 128",
+      "es": "Ruta 128",
+      "it": "Percorso 128"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Tiefseehöhle",
+      "en": "Seafloor Cavern",
+      "fr": "Groudon Grotte Terra",
+      "es": "Seafloor Cavern",
+      "it": "Seafloor Cavern"
+    },
+    "type": "route"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Route 126",
+      "en": "Route 126",
+      "fr": "Chenal 126",
+      "es": "Ruta 126",
+      "it": "Percorso 126"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Xeneroville",
+      "en": "Sootopolis City",
+      "fr": "Atalanopolis",
+      "es": "Arrecípolis",
+      "it": "Ceneride"
+    },
+    "type": "route"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Urzeithöhle",
+      "en": "Cave of Origin",
+      "fr": "Grotte Origine",
+      "es": "Cueva Ancestral",
+      "it": "Grotta dei Tempi"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Soaring",
+      "en": "Soaring",
+      "fr": "Soaring",
+      "es": "Soaring",
+      "it": "Soaring"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Route 129",
+      "en": "Route 129",
+      "fr": "Chenal 129",
+      "es": "Ruta 129",
+      "it": "Percorso 129"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Route 130",
+      "en": "Route 130",
+      "fr": "Électrode Repaire Aqua",
+      "es": "Electrode Guarida Aqua",
+      "it": "Electrode Covo Aqua"
+    },
+    "type": "route"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Route 131",
+      "en": "Route 131",
+      "fr": "Chenal 131",
+      "es": "Ruta 131",
+      "it": "Percorso 131"
+    },
+    "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Himmelturm",
+      "en": "Sky Pillar",
+      "fr": "Pilier Céleste",
+      "es": "Pilar Celeste",
+      "it": "Torre dei Cieli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Edge of space",
+      "en": "Edge of space",
+      "fr": "Edge of space",
+      "es": "Edge of space",
+      "it": "Edge of space"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Floßbrunn",
+      "en": "Pacifidlog Town",
+      "fr": "Pacifiville",
+      "es": "Pueblo Oromar",
+      "it": "Orocea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Wundereiland",
+      "en": "Mirage Island",
+      "fr": "Mirage Island",
+      "es": "Mirage Island",
+      "it": "Mirage Island"
+    },
+    "type": "route"
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Route 108",
+      "en": "Route 108",
+      "fr": "Chenal 108",
+      "es": "Ruta 108",
+      "it": "Percorso 108"
+    },
+    "type": "route"
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Sea Mauville",
+      "en": "Sea Mauville",
+      "fr": "Sea Mauville",
+      "es": "Sea Mauville",
+      "it": "Sea Mauville"
+    },
+    "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Route 109",
+      "en": "Route 109",
+      "fr": "Chenal 109",
+      "es": "Ruta 109",
+      "it": "Percorso 109"
+    },
+    "type": "route"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Route 132",
+      "en": "Route 132",
+      "fr": "Chenal 132",
+      "es": "Ruta 132",
+      "it": "Percorso 132"
+    },
+    "type": "route"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Route 133",
+      "en": "Route 133",
+      "fr": "Chenal 133",
+      "es": "Ruta 133",
+      "it": "Percorso 133"
+    },
+    "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Route 134",
+      "en": "Route 134",
+      "fr": "Chenal 134",
+      "es": "Ruta 134",
+      "it": "Percorso 134"
+    },
+    "type": "route"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Prachtpolis City",
+      "en": "Ever Grande City",
+      "fr": "Éternara",
+      "es": "Ciudad Colosalia",
+      "it": "Iridopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Battle Resort",
+      "en": "Battle Resort",
+      "fr": "Battle Resort",
+      "es": "Battle Resort",
+      "it": "Battle Resort"
+    },
+    "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "MS Tide",
+      "en": "S.S. Tidal",
+      "fr": "S.S. Tidal",
+      "es": "S.S. Tidal",
+      "it": "S.S. Tidal"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Pathless Plain",
+      "en": "Pathless Plain",
+      "fr": "Pathless Plain",
+      "es": "Pathless Plain",
+      "it": "Pathless Plain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Nameless Cavern",
+      "en": "Nameless Cavern",
+      "fr": "Nameless Cavern",
+      "es": "Nameless Cavern",
+      "it": "Nameless Cavern"
+    },
+    "type": "route"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Fabled Cave",
+      "en": "Fabled Cave",
+      "fr": "Fabled Cave",
+      "es": "Fabled Cave",
+      "it": "Fabled Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Gnarled Den",
+      "en": "Gnarled Den",
+      "fr": "Gnarled Den",
+      "es": "Gnarled Den",
+      "it": "Gnarled Den"
+    },
+    "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Trackless Forest",
+      "en": "Trackless Forest",
+      "fr": "Trackless Forest",
+      "es": "Trackless Forest",
+      "it": "Trackless Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Crescent Isle",
+      "en": "Crescent Isle",
+      "fr": "Crescent Isle",
+      "es": "Crescent Isle",
+      "it": "Crescent Isle"
+    },
+    "type": "route"
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Mirage Cave",
+      "en": "Mirage Cave",
+      "fr": "Mirage Cave",
+      "es": "Mirage Cave",
+      "it": "Mirage Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Mirage Forest",
+      "en": "Mirage Forest",
+      "fr": "Mirage Forest",
+      "es": "Mirage Forest",
+      "it": "Mirage Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Mirage Mountain",
+      "en": "Mirage Mountain",
+      "fr": "Mirage Mountain",
+      "es": "Mirage Mountain",
+      "it": "Mirage Mountain"
+    },
+    "type": "route"
+  }
+]

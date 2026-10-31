@@ -1,0 +1,21 @@
+{
+  "id": "rising-ruby",
+  "sort": 38,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dataGeneration": 6,
+  "dexLimit": 721,
+  "spriteSet": "emerald",
+  "versionGroup": "emerald",
+  "trainerSet": "emerald",
+  "speciesData": "rising-ruby",
+  "names": {
+    "de": "Rising Ruby",
+    "en": "Rising Ruby",
+    "fr": "Rising Ruby",
+    "es": "Rising Ruby",
+    "it": "Rising Ruby"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (rrss)"
+}

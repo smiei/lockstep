@@ -1,0 +1,20 @@
+{
+  "id": "blaze-black",
+  "sort": 33,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 5,
+  "dexLimit": 649,
+  "spriteSet": "black-white",
+  "versionGroup": "black-white",
+  "trainerSet": "black-white",
+  "speciesData": "blaze-black",
+  "names": {
+    "de": "Blaze Black",
+    "en": "Blaze Black",
+    "fr": "Blaze Black",
+    "es": "Blaze Black",
+    "it": "Blaze Black"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (blaze)"
+}

@@ -236,6 +236,16 @@ export function getGames(): GameInfo[] {
     .sort((a, b) => a.sort - b.sort);
 }
 
+// A ROM hack's own move changes (data/games/<id>/move-overrides.json:
+// { "<move slug>": { type?, power?, damageClass? } }), applied on top of the
+// shared move table by gameData.ts getMovesForGame. Missing file = none.
+export type MoveOverride = { type?: string; power?: number; damageClass?: "physical" | "special" | "status" };
+
+export function getMoveOverrides(gameId: string): Record<string, MoveOverride> | null {
+  const file = path.join(gameDir(gameId), "move-overrides.json");
+  return fs.existsSync(file) ? (parseFileCached(file) as Record<string, MoveOverride>) : null;
+}
+
 // What the pack validator needs to know about this installation - for the
 // in-app import (client-side preview and the server's own check).
 export function getPackContext(): PackContext {

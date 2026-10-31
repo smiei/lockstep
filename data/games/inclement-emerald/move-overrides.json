@@ -1,0 +1,46 @@
+{
+  "cut": {
+    "type": "steel",
+    "power": 90
+  },
+  "strength": {
+    "type": "rock",
+    "power": 100
+  },
+  "wing-attack": {
+    "power": 80
+  },
+  "shadow-punch": {
+    "power": 80
+  },
+  "water-pulse": {
+    "power": 80
+  },
+  "arm-thrust": {
+    "power": 25
+  },
+  "mega-drain": {
+    "power": 60
+  },
+  "mystical-fire": {
+    "power": 85
+  },
+  "draining-kiss": {
+    "power": 75
+  },
+  "freeze-dry": {
+    "power": 95
+  },
+  "steel-wing": {
+    "power": 90
+  },
+  "power-gem": {
+    "power": 90
+  },
+  "needle-arm": {
+    "power": 90
+  },
+  "cross-poison": {
+    "power": 90
+  }
+}

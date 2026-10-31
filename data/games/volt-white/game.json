@@ -1,0 +1,20 @@
+{
+  "id": "volt-white",
+  "sort": 34,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 5,
+  "dexLimit": 649,
+  "spriteSet": "black-white",
+  "versionGroup": "black-white",
+  "trainerSet": "black-white",
+  "speciesData": "volt-white",
+  "names": {
+    "de": "Volt White",
+    "en": "Volt White",
+    "fr": "Volt White",
+    "es": "Volt White",
+    "it": "Volt White"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (volt)"
+}

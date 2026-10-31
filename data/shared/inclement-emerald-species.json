@@ -1,0 +1,4179 @@
+{
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (incem)",
+  "sourceVersion": "2b4f2ec",
+  "generatedAt": "2026-10-31T03:38:12.588Z",
+  "species": [
+    {
+      "id": 12,
+      "name": "Butterfree",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 45,
+        "Vert.": 50,
+        "Sp.-A.": 100,
+        "Sp.-V.": 80,
+        "Init.": 90,
+        "Summe": 425
+      },
+      "catchRate": 45,
+      "weight": 32
+    },
+    {
+      "id": 15,
+      "name": "Beedrill",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 100,
+        "Vert.": 40,
+        "Sp.-A.": 45,
+        "Sp.-V.": 90,
+        "Init.": 75,
+        "Summe": 415
+      },
+      "catchRate": 45,
+      "weight": 29.5
+    },
+    {
+      "id": 16,
+      "name": "Pidgey",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 40,
+        "Ang.": 36,
+        "Vert.": 40,
+        "Sp.-A.": 45,
+        "Sp.-V.": 35,
+        "Init.": 56,
+        "Summe": 252
+      },
+      "catchRate": 255,
+      "weight": 1.8
+    },
+    {
+      "id": 17,
+      "name": "Pidgeotto",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 63,
+        "Ang.": 50,
+        "Vert.": 55,
+        "Sp.-A.": 60,
+        "Sp.-V.": 50,
+        "Init.": 71,
+        "Summe": 349
+      },
+      "catchRate": 120,
+      "weight": 30
+    },
+    {
+      "id": 18,
+      "name": "Pidgeot",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 83,
+        "Ang.": 70,
+        "Vert.": 75,
+        "Sp.-A.": 95,
+        "Sp.-V.": 70,
+        "Init.": 101,
+        "Summe": 494
+      },
+      "catchRate": 45,
+      "weight": 39.5
+    },
+    {
+      "id": 20,
+      "name": "Raticate",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 55,
+        "Ang.": 101,
+        "Vert.": 60,
+        "Sp.-A.": 50,
+        "Sp.-V.": 70,
+        "Init.": 102,
+        "Summe": 438
+      },
+      "catchRate": 127,
+      "weight": 18.5
+    },
+    {
+      "id": 22,
+      "name": "Fearow",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 110,
+        "Vert.": 75,
+        "Sp.-A.": 61,
+        "Sp.-V.": 72,
+        "Init.": 100,
+        "Summe": 483
+      },
+      "catchRate": 90,
+      "weight": 38
+    },
+    {
+      "id": 24,
+      "name": "Arbok",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 105,
+        "Vert.": 79,
+        "Sp.-A.": 65,
+        "Sp.-V.": 79,
+        "Init.": 80,
+        "Summe": 488
+      },
+      "catchRate": 90,
+      "weight": 65
+    },
+    {
+      "id": 26,
+      "name": "Raichu",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 90,
+        "Vert.": 55,
+        "Sp.-A.": 90,
+        "Sp.-V.": 80,
+        "Init.": 115,
+        "Summe": 490
+      },
+      "catchRate": 75,
+      "weight": 30
+    },
+    {
+      "id": 28,
+      "name": "Sandslash",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 110,
+        "Vert.": 110,
+        "Sp.-A.": 45,
+        "Sp.-V.": 55,
+        "Init.": 65,
+        "Summe": 480
+      },
+      "catchRate": 90,
+      "weight": 29.5
+    },
+    {
+      "id": 38,
+      "name": "Ninetales",
+      "types": [
+        "fire",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 73,
+        "Ang.": 76,
+        "Vert.": 75,
+        "Sp.-A.": 91,
+        "Sp.-V.": 100,
+        "Init.": 100,
+        "Summe": 515
+      },
+      "catchRate": 75,
+      "weight": 19.9
+    },
+    {
+      "id": 39,
+      "name": "Jigglypuff",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 105,
+        "Ang.": 45,
+        "Vert.": 20,
+        "Sp.-A.": 65,
+        "Sp.-V.": 35,
+        "Init.": 20,
+        "Summe": 290
+      },
+      "catchRate": 170,
+      "weight": 5.5
+    },
+    {
+      "id": 40,
+      "name": "Wigglytuff",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 120,
+        "Ang.": 70,
+        "Vert.": 45,
+        "Sp.-A.": 105,
+        "Sp.-V.": 60,
+        "Init.": 45,
+        "Summe": 445
+      },
+      "catchRate": 50,
+      "weight": 12
+    },
+    {
+      "id": 45,
+      "name": "Vileplume",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 60,
+        "Vert.": 95,
+        "Sp.-A.": 120,
+        "Sp.-V.": 100,
+        "Init.": 50,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 18.6
+    },
+    {
+      "id": 47,
+      "name": "Parasect",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 115,
+        "Vert.": 95,
+        "Sp.-A.": 60,
+        "Sp.-V.": 95,
+        "Init.": 30,
+        "Summe": 475
+      },
+      "catchRate": 75,
+      "weight": 29.5
+    },
+    {
+      "id": 49,
+      "name": "Venomoth",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 65,
+        "Vert.": 60,
+        "Sp.-A.": 100,
+        "Sp.-V.": 75,
+        "Init.": 100,
+        "Summe": 470
+      },
+      "catchRate": 75,
+      "weight": 12.5
+    },
+    {
+      "id": 53,
+      "name": "Persian",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 70,
+        "Vert.": 60,
+        "Sp.-A.": 105,
+        "Sp.-V.": 65,
+        "Init.": 115,
+        "Summe": 480
+      },
+      "catchRate": 90,
+      "weight": 32
+    },
+    {
+      "id": 55,
+      "name": "Golduck",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 102,
+        "Vert.": 78,
+        "Sp.-A.": 105,
+        "Sp.-V.": 80,
+        "Init.": 85,
+        "Summe": 530
+      },
+      "catchRate": 75,
+      "weight": 76.6
+    },
+    {
+      "id": 57,
+      "name": "Primeape",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 115,
+        "Vert.": 60,
+        "Sp.-A.": 60,
+        "Sp.-V.": 70,
+        "Init.": 115,
+        "Summe": 485
+      },
+      "catchRate": 75,
+      "weight": 32
+    },
+    {
+      "id": 62,
+      "name": "Poliwrath",
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 115,
+        "Vert.": 95,
+        "Sp.-A.": 70,
+        "Sp.-V.": 90,
+        "Init.": 70,
+        "Summe": 530
+      },
+      "catchRate": 45,
+      "weight": 54
+    },
+    {
+      "id": 76,
+      "name": "Golem",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 135,
+        "Vert.": 130,
+        "Sp.-A.": 55,
+        "Sp.-V.": 65,
+        "Init.": 45,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 300
+    },
+    {
+      "id": 78,
+      "name": "Rapidash",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 110,
+        "Vert.": 70,
+        "Sp.-A.": 80,
+        "Sp.-V.": 80,
+        "Init.": 105,
+        "Summe": 530
+      },
+      "catchRate": 60,
+      "weight": 95
+    },
+    {
+      "id": 83,
+      "name": "Farfetch’d",
+      "types": [
+        "fighting-flying"
+      ],
+      "stats": {
+        "KP": 52,
+        "Ang.": 90,
+        "Vert.": 55,
+        "Sp.-A.": 58,
+        "Sp.-V.": 62,
+        "Init.": 100,
+        "Summe": 417
+      },
+      "catchRate": 45,
+      "weight": 15
+    },
+    {
+      "id": 85,
+      "name": "Dodrio",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 110,
+        "Vert.": 70,
+        "Sp.-A.": 60,
+        "Sp.-V.": 60,
+        "Init.": 110,
+        "Summe": 490
+      },
+      "catchRate": 45,
+      "weight": 85.2
+    },
+    {
+      "id": 87,
+      "name": "Dewgong",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 90,
+        "Vert.": 60,
+        "Sp.-A.": 95,
+        "Sp.-V.": 95,
+        "Init.": 90,
+        "Summe": 520
+      },
+      "catchRate": 75,
+      "weight": 120
+    },
+    {
+      "id": 89,
+      "name": "Muk",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "KP": 105,
+        "Ang.": 125,
+        "Vert.": 75,
+        "Sp.-A.": 65,
+        "Sp.-V.": 100,
+        "Init.": 50,
+        "Summe": 520
+      },
+      "catchRate": 75,
+      "weight": 30
+    },
+    {
+      "id": 97,
+      "name": "Hypno",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 73,
+        "Vert.": 70,
+        "Sp.-A.": 115,
+        "Sp.-V.": 115,
+        "Init.": 67,
+        "Summe": 535
+      },
+      "catchRate": 75,
+      "weight": 75.6
+    },
+    {
+      "id": 99,
+      "name": "Kingler",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 130,
+        "Vert.": 115,
+        "Sp.-A.": 50,
+        "Sp.-V.": 50,
+        "Init.": 75,
+        "Summe": 500
+      },
+      "catchRate": 60,
+      "weight": 60
+    },
+    {
+      "id": 105,
+      "name": "Marowak",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 80,
+        "Vert.": 110,
+        "Sp.-A.": 50,
+        "Sp.-V.": 80,
+        "Init.": 45,
+        "Summe": 440
+      },
+      "catchRate": 75,
+      "weight": 45
+    },
+    {
+      "id": 106,
+      "name": "Hitmonlee",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 120,
+        "Vert.": 53,
+        "Sp.-A.": 35,
+        "Sp.-V.": 110,
+        "Init.": 87,
+        "Summe": 485
+      },
+      "catchRate": 45,
+      "weight": 49.8
+    },
+    {
+      "id": 107,
+      "name": "Hitmonchan",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 105,
+        "Vert.": 79,
+        "Sp.-A.": 35,
+        "Sp.-V.": 110,
+        "Init.": 76,
+        "Summe": 485
+      },
+      "catchRate": 45,
+      "weight": 50.2
+    },
+    {
+      "id": 110,
+      "name": "Weezing",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 90,
+        "Vert.": 120,
+        "Sp.-A.": 95,
+        "Sp.-V.": 70,
+        "Init.": 60,
+        "Summe": 500
+      },
+      "catchRate": 60,
+      "weight": 9.5
+    },
+    {
+      "id": 119,
+      "name": "Seaking",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 112,
+        "Vert.": 65,
+        "Sp.-A.": 65,
+        "Sp.-V.": 100,
+        "Init.": 98,
+        "Summe": 520
+      },
+      "catchRate": 60,
+      "weight": 39
+    },
+    {
+      "id": 122,
+      "name": "Mr. Mime",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 40,
+        "Ang.": 45,
+        "Vert.": 65,
+        "Sp.-A.": 120,
+        "Sp.-V.": 120,
+        "Init.": 90,
+        "Summe": 480
+      },
+      "catchRate": 45,
+      "weight": 54.5
+    },
+    {
+      "id": 124,
+      "name": "Jynx",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 50,
+        "Vert.": 35,
+        "Sp.-A.": 115,
+        "Sp.-V.": 95,
+        "Init.": 115,
+        "Summe": 475
+      },
+      "catchRate": 45,
+      "weight": 40.6
+    },
+    {
+      "id": 128,
+      "name": "Tauros",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 120,
+        "Vert.": 95,
+        "Sp.-A.": 40,
+        "Sp.-V.": 70,
+        "Init.": 110,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 88.4
+    },
+    {
+      "id": 131,
+      "name": "Lapras",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "stats": {
+        "KP": 130,
+        "Ang.": 85,
+        "Vert.": 80,
+        "Sp.-A.": 95,
+        "Sp.-V.": 95,
+        "Init.": 60,
+        "Summe": 545
+      },
+      "catchRate": 45,
+      "weight": 220
+    },
+    {
+      "id": 136,
+      "name": "Flareon",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 130,
+        "Vert.": 60,
+        "Sp.-A.": 65,
+        "Sp.-V.": 65,
+        "Init.": 110,
+        "Summe": 525
+      },
+      "catchRate": 45,
+      "weight": 25
+    },
+    {
+      "id": 144,
+      "name": "Articuno",
+      "types": [
+        "ice",
+        "flying"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 85,
+        "Vert.": 100,
+        "Sp.-A.": 125,
+        "Sp.-V.": 95,
+        "Init.": 85,
+        "Summe": 580
+      },
+      "catchRate": 3,
+      "weight": 55.4
+    },
+    {
+      "id": 154,
+      "name": "Meganium",
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 82,
+        "Vert.": 100,
+        "Sp.-A.": 92,
+        "Sp.-V.": 100,
+        "Init.": 80,
+        "Summe": 534
+      },
+      "catchRate": 45,
+      "weight": 100.5
+    },
+    {
+      "id": 156,
+      "name": "Quilava",
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "stats": {
+        "KP": 58,
+        "Ang.": 64,
+        "Vert.": 58,
+        "Sp.-A.": 80,
+        "Sp.-V.": 65,
+        "Init.": 80,
+        "Summe": 405
+      },
+      "catchRate": 45,
+      "weight": 19
+    },
+    {
+      "id": 157,
+      "name": "Typhlosion",
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "stats": {
+        "KP": 78,
+        "Ang.": 84,
+        "Vert.": 78,
+        "Sp.-A.": 109,
+        "Sp.-V.": 85,
+        "Init.": 100,
+        "Summe": 534
+      },
+      "catchRate": 45,
+      "weight": 79.5
+    },
+    {
+      "id": 160,
+      "name": "Feraligatr",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 105,
+        "Vert.": 100,
+        "Sp.-A.": 69,
+        "Sp.-V.": 83,
+        "Init.": 88,
+        "Summe": 530
+      },
+      "catchRate": 45,
+      "weight": 88.8
+    },
+    {
+      "id": 162,
+      "name": "Furret",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 76,
+        "Vert.": 64,
+        "Sp.-A.": 45,
+        "Sp.-V.": 75,
+        "Init.": 110,
+        "Summe": 455
+      },
+      "catchRate": 90,
+      "weight": 32.5
+    },
+    {
+      "id": 164,
+      "name": "Noctowl",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 50,
+        "Vert.": 70,
+        "Sp.-A.": 96,
+        "Sp.-V.": 96,
+        "Init.": 70,
+        "Summe": 482
+      },
+      "catchRate": 90,
+      "weight": 40.8
+    },
+    {
+      "id": 165,
+      "name": "Ledyba",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 40,
+        "Ang.": 40,
+        "Vert.": 30,
+        "Sp.-A.": 20,
+        "Sp.-V.": 80,
+        "Init.": 55,
+        "Summe": 265
+      },
+      "catchRate": 255,
+      "weight": 10.8
+    },
+    {
+      "id": 166,
+      "name": "Ledian",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 55,
+        "Ang.": 95,
+        "Vert.": 50,
+        "Sp.-A.": 35,
+        "Sp.-V.": 110,
+        "Init.": 105,
+        "Summe": 450
+      },
+      "catchRate": 90,
+      "weight": 35.6
+    },
+    {
+      "id": 168,
+      "name": "Ariados",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 110,
+        "Vert.": 80,
+        "Sp.-A.": 60,
+        "Sp.-V.": 80,
+        "Init.": 40,
+        "Summe": 450
+      },
+      "catchRate": 90,
+      "weight": 33.5
+    },
+    {
+      "id": 171,
+      "name": "Lanturn",
+      "types": [
+        "water",
+        "electric"
+      ],
+      "stats": {
+        "KP": 125,
+        "Ang.": 58,
+        "Vert.": 58,
+        "Sp.-A.": 86,
+        "Sp.-V.": 86,
+        "Init.": 67,
+        "Summe": 480
+      },
+      "catchRate": 75,
+      "weight": 22.5
+    },
+    {
+      "id": 178,
+      "name": "Xatu",
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 75,
+        "Vert.": 70,
+        "Sp.-A.": 115,
+        "Sp.-V.": 70,
+        "Init.": 105,
+        "Summe": 500
+      },
+      "catchRate": 75,
+      "weight": 15
+    },
+    {
+      "id": 181,
+      "name": "Ampharos",
+      "types": [
+        "electric",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 75,
+        "Vert.": 85,
+        "Sp.-A.": 115,
+        "Sp.-V.": 90,
+        "Init.": 55,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 61.5
+    },
+    {
+      "id": 182,
+      "name": "Bellossom",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 60,
+        "Vert.": 95,
+        "Sp.-A.": 110,
+        "Sp.-V.": 100,
+        "Init.": 50,
+        "Summe": 505
+      },
+      "catchRate": 45,
+      "weight": 5.8
+    },
+    {
+      "id": 185,
+      "name": "Sudowoodo",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 110,
+        "Vert.": 125,
+        "Sp.-A.": 30,
+        "Sp.-V.": 65,
+        "Init.": 30,
+        "Summe": 430
+      },
+      "catchRate": 65,
+      "weight": 38
+    },
+    {
+      "id": 186,
+      "name": "Politoed",
+      "types": [
+        "water",
+        "normal"
+      ],
+      "stats": {
+        "KP": 110,
+        "Ang.": 75,
+        "Vert.": 75,
+        "Sp.-A.": 100,
+        "Sp.-V.": 100,
+        "Init.": 70,
+        "Summe": 530
+      },
+      "catchRate": 45,
+      "weight": 33.9
+    },
+    {
+      "id": 189,
+      "name": "Jumpluff",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 75,
+        "Vert.": 70,
+        "Sp.-A.": 55,
+        "Sp.-V.": 95,
+        "Init.": 130,
+        "Summe": 500
+      },
+      "catchRate": 45,
+      "weight": 3
+    },
+    {
+      "id": 192,
+      "name": "Sunflora",
+      "types": [
+        "grass",
+        "fire"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 75,
+        "Vert.": 55,
+        "Sp.-A.": 125,
+        "Sp.-V.": 85,
+        "Init.": 30,
+        "Summe": 465
+      },
+      "catchRate": 120,
+      "weight": 8.5
+    },
+    {
+      "id": 195,
+      "name": "Quagsire",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 95,
+        "Vert.": 95,
+        "Sp.-A.": 65,
+        "Sp.-V.": 65,
+        "Init.": 35,
+        "Summe": 450
+      },
+      "catchRate": 90,
+      "weight": 75
+    },
+    {
+      "id": 200,
+      "name": "Misdreavus",
+      "types": [
+        "ghost",
+        "fariy"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 60,
+        "Vert.": 60,
+        "Sp.-A.": 85,
+        "Sp.-V.": 85,
+        "Init.": 85,
+        "Summe": 435
+      },
+      "catchRate": 45,
+      "weight": 1
+    },
+    {
+      "id": 203,
+      "name": "Girafarig",
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 90,
+        "Vert.": 65,
+        "Sp.-A.": 100,
+        "Sp.-V.": 65,
+        "Init.": 105,
+        "Summe": 495
+      },
+      "catchRate": 60,
+      "weight": 41.5
+    },
+    {
+      "id": 205,
+      "name": "Forretress",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 100,
+        "Vert.": 140,
+        "Sp.-A.": 60,
+        "Sp.-V.": 80,
+        "Init.": 20,
+        "Summe": 475
+      },
+      "catchRate": 75,
+      "weight": 125.8
+    },
+    {
+      "id": 206,
+      "name": "Dunsparce",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 110,
+        "Ang.": 80,
+        "Vert.": 80,
+        "Sp.-A.": 65,
+        "Sp.-V.": 75,
+        "Init.": 45,
+        "Summe": 455
+      },
+      "catchRate": 190,
+      "weight": 14
+    },
+    {
+      "id": 208,
+      "name": "Steelix",
+      "types": [
+        "steel",
+        "ground"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 105,
+        "Vert.": 200,
+        "Sp.-A.": 55,
+        "Sp.-V.": 75,
+        "Init.": 20,
+        "Summe": 530
+      },
+      "catchRate": 25,
+      "weight": 400
+    },
+    {
+      "id": 210,
+      "name": "Granbull",
+      "types": [
+        "fairy",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 130,
+        "Vert.": 75,
+        "Sp.-A.": 60,
+        "Sp.-V.": 60,
+        "Init.": 65,
+        "Summe": 480
+      },
+      "catchRate": 75,
+      "weight": 48.7
+    },
+    {
+      "id": 211,
+      "name": "Qwilfish",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 95,
+        "Vert.": 115,
+        "Sp.-A.": 55,
+        "Sp.-V.": 55,
+        "Init.": 85,
+        "Summe": 470
+      },
+      "catchRate": 45,
+      "weight": 3.9
+    },
+    {
+      "id": 217,
+      "name": "Ursaring",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 130,
+        "Vert.": 75,
+        "Sp.-A.": 75,
+        "Sp.-V.": 75,
+        "Init.": 75,
+        "Summe": 520
+      },
+      "catchRate": 60,
+      "weight": 125.8
+    },
+    {
+      "id": 222,
+      "name": "Corsola",
+      "types": [
+        "water",
+        "rock"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 55,
+        "Vert.": 95,
+        "Sp.-A.": 85,
+        "Sp.-V.": 95,
+        "Init.": 35,
+        "Summe": 450
+      },
+      "catchRate": 60,
+      "weight": 5
+    },
+    {
+      "id": 224,
+      "name": "Octillery",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 65,
+        "Vert.": 95,
+        "Sp.-A.": 125,
+        "Sp.-V.": 95,
+        "Init.": 45,
+        "Summe": 500
+      },
+      "catchRate": 75,
+      "weight": 28.5
+    },
+    {
+      "id": 225,
+      "name": "Delibird",
+      "types": [
+        "ice",
+        "flying"
+      ],
+      "stats": {
+        "KP": 45,
+        "Ang.": 85,
+        "Vert.": 45,
+        "Sp.-A.": 65,
+        "Sp.-V.": 45,
+        "Init.": 95,
+        "Summe": 380
+      },
+      "catchRate": 45,
+      "weight": 16
+    },
+    {
+      "id": 229,
+      "name": "Houndoom",
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 90,
+        "Vert.": 50,
+        "Sp.-A.": 110,
+        "Sp.-V.": 80,
+        "Init.": 105,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 35
+    },
+    {
+      "id": 232,
+      "name": "Donphan",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 130,
+        "Vert.": 130,
+        "Sp.-A.": 60,
+        "Sp.-V.": 60,
+        "Init.": 50,
+        "Summe": 520
+      },
+      "catchRate": 60,
+      "weight": 120
+    },
+    {
+      "id": 234,
+      "name": "Stantler",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 73,
+        "Ang.": 115,
+        "Vert.": 62,
+        "Sp.-A.": 85,
+        "Sp.-V.": 65,
+        "Init.": 95,
+        "Summe": 495
+      },
+      "catchRate": 45,
+      "weight": 71.2
+    },
+    {
+      "id": 237,
+      "name": "Hitmontop",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 95,
+        "Vert.": 95,
+        "Sp.-A.": 35,
+        "Sp.-V.": 110,
+        "Init.": 70,
+        "Summe": 485
+      },
+      "catchRate": 45,
+      "weight": 48
+    },
+    {
+      "id": 241,
+      "name": "Miltank",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 100,
+        "Vert.": 105,
+        "Sp.-A.": 40,
+        "Sp.-V.": 70,
+        "Init.": 100,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 75.5
+    },
+    {
+      "id": 254,
+      "name": "Sceptile",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 85,
+        "Vert.": 65,
+        "Sp.-A.": 105,
+        "Sp.-V.": 85,
+        "Init.": 120,
+        "Summe": 530
+      },
+      "catchRate": 45,
+      "weight": 52.2
+    },
+    {
+      "id": 262,
+      "name": "Mightyena",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 110,
+        "Vert.": 70,
+        "Sp.-A.": 60,
+        "Sp.-V.": 60,
+        "Init.": 90,
+        "Summe": 460
+      },
+      "catchRate": 127,
+      "weight": 37
+    },
+    {
+      "id": 264,
+      "name": "Linoone",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 78,
+        "Ang.": 100,
+        "Vert.": 61,
+        "Sp.-A.": 50,
+        "Sp.-V.": 61,
+        "Init.": 110,
+        "Summe": 460
+      },
+      "catchRate": 90,
+      "weight": 32.5
+    },
+    {
+      "id": 267,
+      "name": "Beautifly",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 50,
+        "Vert.": 60,
+        "Sp.-A.": 110,
+        "Sp.-V.": 60,
+        "Init.": 85,
+        "Summe": 425
+      },
+      "catchRate": 45,
+      "weight": 28.4
+    },
+    {
+      "id": 269,
+      "name": "Dustox",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 30,
+        "Vert.": 90,
+        "Sp.-A.": 70,
+        "Sp.-V.": 90,
+        "Init.": 65,
+        "Summe": 425
+      },
+      "catchRate": 45,
+      "weight": 31.6
+    },
+    {
+      "id": 272,
+      "name": "Ludicolo",
+      "types": [
+        "water",
+        "grass"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 70,
+        "Vert.": 70,
+        "Sp.-A.": 100,
+        "Sp.-V.": 100,
+        "Init.": 80,
+        "Summe": 500
+      },
+      "catchRate": 45,
+      "weight": 55
+    },
+    {
+      "id": 275,
+      "name": "Shiftry",
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 110,
+        "Vert.": 60,
+        "Sp.-A.": 100,
+        "Sp.-V.": 60,
+        "Init.": 80,
+        "Summe": 500
+      },
+      "catchRate": 45,
+      "weight": 59.6
+    },
+    {
+      "id": 277,
+      "name": "Swellow",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 85,
+        "Vert.": 60,
+        "Sp.-A.": 85,
+        "Sp.-V.": 50,
+        "Init.": 125,
+        "Summe": 465
+      },
+      "catchRate": 45,
+      "weight": 19.8
+    },
+    {
+      "id": 282,
+      "name": "Gardevoir",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 68,
+        "Ang.": 60,
+        "Vert.": 65,
+        "Sp.-A.": 125,
+        "Sp.-V.": 115,
+        "Init.": 100,
+        "Summe": 533
+      },
+      "catchRate": 45,
+      "weight": 48.4
+    },
+    {
+      "id": 284,
+      "name": "Masquerain",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 60,
+        "Vert.": 72,
+        "Sp.-A.": 110,
+        "Sp.-V.": 82,
+        "Init.": 80,
+        "Summe": 474
+      },
+      "catchRate": 75,
+      "weight": 3.6
+    },
+    {
+      "id": 291,
+      "name": "Ninjask",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 61,
+        "Ang.": 100,
+        "Vert.": 45,
+        "Sp.-A.": 50,
+        "Sp.-V.": 50,
+        "Init.": 160,
+        "Summe": 466
+      },
+      "catchRate": 120,
+      "weight": 12
+    },
+    {
+      "id": 292,
+      "name": "Shedinja",
+      "types": [
+        "bug",
+        "ghost"
+      ],
+      "stats": {
+        "KP": 1,
+        "Ang.": 100,
+        "Vert.": 45,
+        "Sp.-A.": 100,
+        "Sp.-V.": 30,
+        "Init.": 40,
+        "Summe": 316
+      },
+      "catchRate": 45,
+      "weight": 1.2
+    },
+    {
+      "id": 295,
+      "name": "Exploud",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 104,
+        "Ang.": 91,
+        "Vert.": 63,
+        "Sp.-A.": 111,
+        "Sp.-V.": 83,
+        "Init.": 68,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 84
+    },
+    {
+      "id": 297,
+      "name": "Hariyama",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "KP": 144,
+        "Ang.": 130,
+        "Vert.": 70,
+        "Sp.-A.": 40,
+        "Sp.-V.": 70,
+        "Init.": 50,
+        "Summe": 504
+      },
+      "catchRate": 200,
+      "weight": 253.8
+    },
+    {
+      "id": 301,
+      "name": "Delcatty",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 85,
+        "Vert.": 65,
+        "Sp.-A.": 85,
+        "Sp.-V.": 55,
+        "Init.": 110,
+        "Summe": 470
+      },
+      "catchRate": 60,
+      "weight": 32.6
+    },
+    {
+      "id": 302,
+      "name": "Sableye",
+      "types": [
+        "dark",
+        "ghost"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 75,
+        "Vert.": 80,
+        "Sp.-A.": 65,
+        "Sp.-V.": 70,
+        "Init.": 50,
+        "Summe": 410
+      },
+      "catchRate": 45,
+      "weight": 11
+    },
+    {
+      "id": 303,
+      "name": "Mawile",
+      "types": [
+        "steel"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 85,
+        "Vert.": 95,
+        "Sp.-A.": 55,
+        "Sp.-V.": 55,
+        "Init.": 50,
+        "Summe": 410
+      },
+      "catchRate": 45,
+      "weight": 11.5
+    },
+    {
+      "id": 310,
+      "name": "Manectric",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 75,
+        "Vert.": 60,
+        "Sp.-A.": 125,
+        "Sp.-V.": 60,
+        "Init.": 105,
+        "Summe": 495
+      },
+      "catchRate": 45,
+      "weight": 40.2
+    },
+    {
+      "id": 311,
+      "name": "Plusle",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 50,
+        "Vert.": 40,
+        "Sp.-A.": 85,
+        "Sp.-V.": 105,
+        "Init.": 105,
+        "Summe": 445
+      },
+      "catchRate": 200,
+      "weight": 4.2
+    },
+    {
+      "id": 313,
+      "name": "Volbeat",
+      "types": [
+        "bug",
+        "electric"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 73,
+        "Vert.": 85,
+        "Sp.-A.": 47,
+        "Sp.-V.": 85,
+        "Init.": 115,
+        "Summe": 470
+      },
+      "catchRate": 150,
+      "weight": 17.7
+    },
+    {
+      "id": 314,
+      "name": "Illumise",
+      "types": [
+        "bug",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 47,
+        "Vert.": 75,
+        "Sp.-A.": 93,
+        "Sp.-V.": 85,
+        "Init.": 105,
+        "Summe": 470
+      },
+      "catchRate": 150,
+      "weight": 17.7
+    },
+    {
+      "id": 317,
+      "name": "Swalot",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 83,
+        "Vert.": 93,
+        "Sp.-A.": 83,
+        "Sp.-V.": 93,
+        "Init.": 55,
+        "Summe": 507
+      },
+      "catchRate": 75,
+      "weight": 80
+    },
+    {
+      "id": 319,
+      "name": "Sharpedo",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 120,
+        "Vert.": 40,
+        "Sp.-A.": 115,
+        "Sp.-V.": 40,
+        "Init.": 95,
+        "Summe": 480
+      },
+      "catchRate": 60,
+      "weight": 88.8
+    },
+    {
+      "id": 321,
+      "name": "Wailord",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 170,
+        "Ang.": 90,
+        "Vert.": 65,
+        "Sp.-A.": 90,
+        "Sp.-V.": 65,
+        "Init.": 60,
+        "Summe": 540
+      },
+      "catchRate": 60,
+      "weight": 398
+    },
+    {
+      "id": 323,
+      "name": "Camerupt",
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 100,
+        "Vert.": 80,
+        "Sp.-A.": 105,
+        "Sp.-V.": 85,
+        "Init.": 40,
+        "Summe": 500
+      },
+      "catchRate": 150,
+      "weight": 220
+    },
+    {
+      "id": 326,
+      "name": "Grumpig",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 45,
+        "Vert.": 65,
+        "Sp.-A.": 100,
+        "Sp.-V.": 110,
+        "Init.": 80,
+        "Summe": 500
+      },
+      "catchRate": 60,
+      "weight": 71.5
+    },
+    {
+      "id": 327,
+      "name": "Spinda",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 90,
+        "Vert.": 60,
+        "Sp.-A.": 90,
+        "Sp.-V.": 60,
+        "Init.": 90,
+        "Summe": 450
+      },
+      "catchRate": 255,
+      "weight": 5
+    },
+    {
+      "id": 330,
+      "name": "Flygon",
+      "types": [
+        "ground",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 100,
+        "Vert.": 80,
+        "Sp.-A.": 100,
+        "Sp.-V.": 80,
+        "Init.": 100,
+        "Summe": 540
+      },
+      "catchRate": 45,
+      "weight": 82
+    },
+    {
+      "id": 332,
+      "name": "Cacturne",
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 115,
+        "Vert.": 60,
+        "Sp.-A.": 115,
+        "Sp.-V.": 60,
+        "Init.": 85,
+        "Summe": 505
+      },
+      "catchRate": 60,
+      "weight": 77.4
+    },
+    {
+      "id": 334,
+      "name": "Altaria",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 90,
+        "Vert.": 90,
+        "Sp.-A.": 70,
+        "Sp.-V.": 105,
+        "Init.": 80,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 20.6
+    },
+    {
+      "id": 336,
+      "name": "Seviper",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "KP": 73,
+        "Ang.": 100,
+        "Vert.": 60,
+        "Sp.-A.": 100,
+        "Sp.-V.": 60,
+        "Init.": 100,
+        "Summe": 493
+      },
+      "catchRate": 90,
+      "weight": 52.5
+    },
+    {
+      "id": 337,
+      "name": "Lunatone",
+      "types": [
+        "rock",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 55,
+        "Vert.": 65,
+        "Sp.-A.": 125,
+        "Sp.-V.": 115,
+        "Init.": 70,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 168
+    },
+    {
+      "id": 338,
+      "name": "Solrock",
+      "types": [
+        "rock",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 125,
+        "Vert.": 115,
+        "Sp.-A.": 55,
+        "Sp.-V.": 65,
+        "Init.": 70,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 154
+    },
+    {
+      "id": 340,
+      "name": "Whiscash",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "stats": {
+        "KP": 110,
+        "Ang.": 98,
+        "Vert.": 73,
+        "Sp.-A.": 76,
+        "Sp.-V.": 71,
+        "Init.": 60,
+        "Summe": 488
+      },
+      "catchRate": 75,
+      "weight": 23.6
+    },
+    {
+      "id": 344,
+      "name": "Claydol",
+      "types": [
+        "ground",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 70,
+        "Vert.": 105,
+        "Sp.-A.": 90,
+        "Sp.-V.": 120,
+        "Init.": 75,
+        "Summe": 530
+      },
+      "catchRate": 90,
+      "weight": 108
+    },
+    {
+      "id": 346,
+      "name": "Cradily",
+      "types": [
+        "rock",
+        "grass"
+      ],
+      "stats": {
+        "KP": 96,
+        "Ang.": 81,
+        "Vert.": 97,
+        "Sp.-A.": 91,
+        "Sp.-V.": 107,
+        "Init.": 43,
+        "Summe": 515
+      },
+      "catchRate": 45,
+      "weight": 60.4
+    },
+    {
+      "id": 348,
+      "name": "Armaldo",
+      "types": [
+        "rock",
+        "bug"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 125,
+        "Vert.": 120,
+        "Sp.-A.": 70,
+        "Sp.-V.": 80,
+        "Init.": 45,
+        "Summe": 515
+      },
+      "catchRate": 45,
+      "weight": 68.2
+    },
+    {
+      "id": 352,
+      "name": "Kecleon",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 100,
+        "Vert.": 70,
+        "Sp.-A.": 60,
+        "Sp.-V.": 120,
+        "Init.": 40,
+        "Summe": 470
+      },
+      "catchRate": 200,
+      "weight": 22
+    },
+    {
+      "id": 353,
+      "name": "Shuppet",
+      "types": [
+        "ghost",
+        "normal"
+      ],
+      "stats": {
+        "KP": 44,
+        "Ang.": 75,
+        "Vert.": 35,
+        "Sp.-A.": 63,
+        "Sp.-V.": 33,
+        "Init.": 45,
+        "Summe": 295
+      },
+      "catchRate": 225,
+      "weight": 2.3
+    },
+    {
+      "id": 354,
+      "name": "Banette",
+      "types": [
+        "ghost",
+        "normal"
+      ],
+      "stats": {
+        "KP": 64,
+        "Ang.": 125,
+        "Vert.": 85,
+        "Sp.-A.": 65,
+        "Sp.-V.": 63,
+        "Init.": 83,
+        "Summe": 485
+      },
+      "catchRate": 45,
+      "weight": 12.5
+    },
+    {
+      "id": 357,
+      "name": "Tropius",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "stats": {
+        "KP": 99,
+        "Ang.": 88,
+        "Vert.": 93,
+        "Sp.-A.": 72,
+        "Sp.-V.": 97,
+        "Init.": 51,
+        "Summe": 500
+      },
+      "catchRate": 200,
+      "weight": 100
+    },
+    {
+      "id": 358,
+      "name": "Chimecho",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 50,
+        "Vert.": 90,
+        "Sp.-A.": 95,
+        "Sp.-V.": 100,
+        "Init.": 65,
+        "Summe": 485
+      },
+      "catchRate": 45,
+      "weight": 1
+    },
+    {
+      "id": 359,
+      "name": "Absol",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 130,
+        "Vert.": 65,
+        "Sp.-A.": 75,
+        "Sp.-V.": 65,
+        "Init.": 85,
+        "Summe": 485
+      },
+      "catchRate": 30,
+      "weight": 47
+    },
+    {
+      "id": 362,
+      "name": "Glalie",
+      "types": [
+        "ice",
+        "rock"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 100,
+        "Vert.": 70,
+        "Sp.-A.": 80,
+        "Sp.-V.": 70,
+        "Init.": 100,
+        "Summe": 500
+      },
+      "catchRate": 75,
+      "weight": 256.5
+    },
+    {
+      "id": 365,
+      "name": "Walrein",
+      "types": [
+        "ice",
+        "water"
+      ],
+      "stats": {
+        "KP": 110,
+        "Ang.": 90,
+        "Vert.": 90,
+        "Sp.-A.": 95,
+        "Sp.-V.": 90,
+        "Init.": 65,
+        "Summe": 540
+      },
+      "catchRate": 45,
+      "weight": 150.6
+    },
+    {
+      "id": 367,
+      "name": "Huntail",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 55,
+        "Ang.": 114,
+        "Vert.": 105,
+        "Sp.-A.": 94,
+        "Sp.-V.": 75,
+        "Init.": 72,
+        "Summe": 515
+      },
+      "catchRate": 60,
+      "weight": 27
+    },
+    {
+      "id": 368,
+      "name": "Gorebyss",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 55,
+        "Ang.": 84,
+        "Vert.": 105,
+        "Sp.-A.": 124,
+        "Sp.-V.": 75,
+        "Init.": 72,
+        "Summe": 515
+      },
+      "catchRate": 60,
+      "weight": 22.6
+    },
+    {
+      "id": 369,
+      "name": "Relicanth",
+      "types": [
+        "water",
+        "rock"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 110,
+        "Vert.": 130,
+        "Sp.-A.": 45,
+        "Sp.-V.": 65,
+        "Init.": 55,
+        "Summe": 505
+      },
+      "catchRate": 25,
+      "weight": 23.4
+    },
+    {
+      "id": 370,
+      "name": "Luvdisc",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 43,
+        "Ang.": 30,
+        "Vert.": 55,
+        "Sp.-A.": 95,
+        "Sp.-V.": 65,
+        "Init.": 97,
+        "Summe": 385
+      },
+      "catchRate": 225,
+      "weight": 8.7
+    },
+    {
+      "id": 389,
+      "name": "Torterra",
+      "types": [
+        "grass",
+        "ground"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 109,
+        "Vert.": 114,
+        "Sp.-A.": 75,
+        "Sp.-V.": 85,
+        "Init.": 56,
+        "Summe": 534
+      },
+      "catchRate": 45,
+      "weight": 310
+    },
+    {
+      "id": 400,
+      "name": "Bibarel",
+      "types": [
+        "normal",
+        "water"
+      ],
+      "stats": {
+        "KP": 89,
+        "Ang.": 85,
+        "Vert.": 80,
+        "Sp.-A.": 55,
+        "Sp.-V.": 60,
+        "Init.": 71,
+        "Summe": 440
+      },
+      "catchRate": 127,
+      "weight": 31.5
+    },
+    {
+      "id": 401,
+      "name": "Kricketot",
+      "types": [
+        "bug",
+        "normal"
+      ],
+      "stats": {
+        "KP": 37,
+        "Ang.": 25,
+        "Vert.": 41,
+        "Sp.-A.": 25,
+        "Sp.-V.": 41,
+        "Init.": 25,
+        "Summe": 194
+      },
+      "catchRate": 255,
+      "weight": 2.2
+    },
+    {
+      "id": 402,
+      "name": "Kricketune",
+      "types": [
+        "bug",
+        "normal"
+      ],
+      "stats": {
+        "KP": 77,
+        "Ang.": 65,
+        "Vert.": 51,
+        "Sp.-A.": 100,
+        "Sp.-V.": 51,
+        "Init.": 85,
+        "Summe": 429
+      },
+      "catchRate": 45,
+      "weight": 25.5
+    },
+    {
+      "id": 405,
+      "name": "Luxray",
+      "types": [
+        "electric",
+        "dark"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 120,
+        "Vert.": 79,
+        "Sp.-A.": 75,
+        "Sp.-V.": 79,
+        "Init.": 90,
+        "Summe": 533
+      },
+      "catchRate": 45,
+      "weight": 42
+    },
+    {
+      "id": 409,
+      "name": "Rampardos",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "KP": 97,
+        "Ang.": 165,
+        "Vert.": 80,
+        "Sp.-A.": 65,
+        "Sp.-V.": 50,
+        "Init.": 58,
+        "Summe": 515
+      },
+      "catchRate": 45,
+      "weight": 102.5
+    },
+    {
+      "id": 411,
+      "name": "Bastiodon",
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 52,
+        "Vert.": 168,
+        "Sp.-A.": 47,
+        "Sp.-V.": 138,
+        "Init.": 30,
+        "Summe": 515
+      },
+      "catchRate": 45,
+      "weight": 149.5
+    },
+    {
+      "id": 414,
+      "name": "Mothim",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 54,
+        "Vert.": 70,
+        "Sp.-A.": 94,
+        "Sp.-V.": 70,
+        "Init.": 86,
+        "Summe": 444
+      },
+      "catchRate": 45,
+      "weight": 23.3
+    },
+    {
+      "id": 416,
+      "name": "Vespiquen",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 80,
+        "Vert.": 112,
+        "Sp.-A.": 80,
+        "Sp.-V.": 112,
+        "Init.": 40,
+        "Summe": 494
+      },
+      "catchRate": 45,
+      "weight": 38.5
+    },
+    {
+      "id": 417,
+      "name": "Pachirisu",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 45,
+        "Vert.": 70,
+        "Sp.-A.": 75,
+        "Sp.-V.": 110,
+        "Init.": 95,
+        "Summe": 455
+      },
+      "catchRate": 200,
+      "weight": 3.9
+    },
+    {
+      "id": 419,
+      "name": "Floatzel",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 120,
+        "Vert.": 55,
+        "Sp.-A.": 100,
+        "Sp.-V.": 50,
+        "Init.": 115,
+        "Summe": 525
+      },
+      "catchRate": 75,
+      "weight": 33.5
+    },
+    {
+      "id": 420,
+      "name": "Cherubi",
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 45,
+        "Ang.": 62,
+        "Vert.": 45,
+        "Sp.-A.": 62,
+        "Sp.-V.": 53,
+        "Init.": 35,
+        "Summe": 302
+      },
+      "catchRate": 190,
+      "weight": 3.3
+    },
+    {
+      "id": 424,
+      "name": "Ambipom",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 100,
+        "Vert.": 66,
+        "Sp.-A.": 60,
+        "Sp.-V.": 66,
+        "Init.": 125,
+        "Summe": 492
+      },
+      "catchRate": 45,
+      "weight": 20.3
+    },
+    {
+      "id": 426,
+      "name": "Drifblim",
+      "types": [
+        "ghost",
+        "flying"
+      ],
+      "stats": {
+        "KP": 150,
+        "Ang.": 80,
+        "Vert.": 54,
+        "Sp.-A.": 90,
+        "Sp.-V.": 74,
+        "Init.": 80,
+        "Summe": 528
+      },
+      "catchRate": 60,
+      "weight": 15
+    },
+    {
+      "id": 428,
+      "name": "Lopunny",
+      "types": [
+        "normal",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 96,
+        "Vert.": 84,
+        "Sp.-A.": 54,
+        "Sp.-V.": 96,
+        "Init.": 105,
+        "Summe": 500
+      },
+      "catchRate": 60,
+      "weight": 33.3
+    },
+    {
+      "id": 429,
+      "name": "Mismagius",
+      "types": [
+        "ghost",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 60,
+        "Vert.": 60,
+        "Sp.-A.": 110,
+        "Sp.-V.": 110,
+        "Init.": 110,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 4.4
+    },
+    {
+      "id": 432,
+      "name": "Purugly",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 71,
+        "Ang.": 102,
+        "Vert.": 74,
+        "Sp.-A.": 64,
+        "Sp.-V.": 69,
+        "Init.": 119,
+        "Summe": 499
+      },
+      "catchRate": 75,
+      "weight": 43.8
+    },
+    {
+      "id": 435,
+      "name": "Skuntank",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "stats": {
+        "KP": 103,
+        "Ang.": 113,
+        "Vert.": 67,
+        "Sp.-A.": 71,
+        "Sp.-V.": 61,
+        "Init.": 84,
+        "Summe": 499
+      },
+      "catchRate": 60,
+      "weight": 38
+    },
+    {
+      "id": 441,
+      "name": "Chatot",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 76,
+        "Ang.": 65,
+        "Vert.": 45,
+        "Sp.-A.": 102,
+        "Sp.-V.": 42,
+        "Init.": 101,
+        "Summe": 431
+      },
+      "catchRate": 30,
+      "weight": 1.9
+    },
+    {
+      "id": 442,
+      "name": "Spiritomb",
+      "types": [
+        "ghost",
+        "dark"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 92,
+        "Vert.": 108,
+        "Sp.-A.": 92,
+        "Sp.-V.": 108,
+        "Init.": 35,
+        "Summe": 505
+      },
+      "catchRate": 100,
+      "weight": 108
+    },
+    {
+      "id": 452,
+      "name": "Drapion",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 100,
+        "Vert.": 120,
+        "Sp.-A.": 60,
+        "Sp.-V.": 75,
+        "Init.": 95,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 61.5
+    },
+    {
+      "id": 454,
+      "name": "Toxicroak",
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 83,
+        "Ang.": 106,
+        "Vert.": 65,
+        "Sp.-A.": 86,
+        "Sp.-V.": 65,
+        "Init.": 95,
+        "Summe": 500
+      },
+      "catchRate": 75,
+      "weight": 44.4
+    },
+    {
+      "id": 460,
+      "name": "Abomasnow",
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 102,
+        "Vert.": 75,
+        "Sp.-A.": 102,
+        "Sp.-V.": 85,
+        "Init.": 60,
+        "Summe": 514
+      },
+      "catchRate": 60,
+      "weight": 135.5
+    },
+    {
+      "id": 455,
+      "name": "Carnivine",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "KP": 74,
+        "Ang.": 100,
+        "Vert.": 92,
+        "Sp.-A.": 90,
+        "Sp.-V.": 92,
+        "Init.": 46,
+        "Summe": 494
+      },
+      "catchRate": 200,
+      "weight": 27
+    },
+    {
+      "id": 457,
+      "name": "Lumineon",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 69,
+        "Ang.": 69,
+        "Vert.": 76,
+        "Sp.-A.": 109,
+        "Sp.-V.": 86,
+        "Init.": 91,
+        "Summe": 500
+      },
+      "catchRate": 75,
+      "weight": 24
+    },
+    {
+      "id": 463,
+      "name": "Lickilicky",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 110,
+        "Ang.": 95,
+        "Vert.": 95,
+        "Sp.-A.": 90,
+        "Sp.-V.": 95,
+        "Init.": 50,
+        "Summe": 535
+      },
+      "catchRate": 30,
+      "weight": 140
+    },
+    {
+      "id": 466,
+      "name": "Electivire",
+      "types": [
+        "electric",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 123,
+        "Vert.": 67,
+        "Sp.-A.": 95,
+        "Sp.-V.": 85,
+        "Init.": 95,
+        "Summe": 540
+      },
+      "catchRate": 30,
+      "weight": 138.6
+    },
+    {
+      "id": 467,
+      "name": "Magmortar",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 95,
+        "Vert.": 67,
+        "Sp.-A.": 125,
+        "Sp.-V.": 85,
+        "Init.": 93,
+        "Summe": 540
+      },
+      "catchRate": 30,
+      "weight": 68
+    },
+    {
+      "id": 469,
+      "name": "Yanmega",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "KP": 86,
+        "Ang.": 76,
+        "Vert.": 86,
+        "Sp.-A.": 126,
+        "Sp.-V.": 56,
+        "Init.": 95,
+        "Summe": 525
+      },
+      "catchRate": 30,
+      "weight": 51.5
+    },
+    {
+      "id": 474,
+      "name": "Porygon-Z",
+      "types": [
+        "normal",
+        "electric"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 80,
+        "Vert.": 70,
+        "Sp.-A.": 135,
+        "Sp.-V.": 75,
+        "Init.": 90,
+        "Summe": 535
+      },
+      "catchRate": 30,
+      "weight": 34
+    },
+    {
+      "id": 475,
+      "name": "Gallade",
+      "types": [
+        "psychic",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 68,
+        "Ang.": 125,
+        "Vert.": 65,
+        "Sp.-A.": 60,
+        "Sp.-V.": 115,
+        "Init.": 100,
+        "Summe": 533
+      },
+      "catchRate": 45,
+      "weight": 52
+    },
+    {
+      "id": 476,
+      "name": "Probopass",
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 55,
+        "Vert.": 145,
+        "Sp.-A.": 95,
+        "Sp.-V.": 150,
+        "Init.": 40,
+        "Summe": 545
+      },
+      "catchRate": 60,
+      "weight": 340
+    },
+    {
+      "id": 477,
+      "name": "Dusknoir",
+      "types": [
+        "ghost"
+      ],
+      "stats": {
+        "KP": 45,
+        "Ang.": 120,
+        "Vert.": 135,
+        "Sp.-A.": 55,
+        "Sp.-V.": 135,
+        "Init.": 45,
+        "Summe": 535
+      },
+      "catchRate": 45,
+      "weight": 106.6
+    },
+    {
+      "id": 478,
+      "name": "Froslass",
+      "types": [
+        "ice",
+        "ghost"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 70,
+        "Vert.": 70,
+        "Sp.-A.": 110,
+        "Sp.-V.": 70,
+        "Init.": 110,
+        "Summe": 500
+      },
+      "catchRate": 75,
+      "weight": 26.6
+    },
+    {
+      "id": 497,
+      "name": "Serperior",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 75,
+        "Vert.": 95,
+        "Sp.-A.": 75,
+        "Sp.-V.": 95,
+        "Init.": 113,
+        "Summe": 528
+      },
+      "catchRate": 45,
+      "weight": 63
+    },
+    {
+      "id": 500,
+      "name": "Emboar",
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 110,
+        "Ang.": 123,
+        "Vert.": 80,
+        "Sp.-A.": 70,
+        "Sp.-V.": 80,
+        "Init.": 65,
+        "Summe": 528
+      },
+      "catchRate": 45,
+      "weight": 150
+    },
+    {
+      "id": 502,
+      "name": "Dewott",
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 75,
+        "Vert.": 60,
+        "Sp.-A.": 83,
+        "Sp.-V.": 60,
+        "Init.": 60,
+        "Summe": 413
+      },
+      "catchRate": 45,
+      "weight": 24.5
+    },
+    {
+      "id": 503,
+      "name": "Samurott",
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 100,
+        "Vert.": 85,
+        "Sp.-A.": 108,
+        "Sp.-V.": 70,
+        "Init.": 70,
+        "Summe": 528
+      },
+      "catchRate": 45,
+      "weight": 94.6
+    },
+    {
+      "id": 505,
+      "name": "Watchog",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 95,
+        "Vert.": 79,
+        "Sp.-A.": 60,
+        "Sp.-V.": 79,
+        "Init.": 77,
+        "Summe": 465
+      },
+      "catchRate": 255,
+      "weight": 27
+    },
+    {
+      "id": 508,
+      "name": "Stoutland",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 120,
+        "Vert.": 90,
+        "Sp.-A.": 45,
+        "Sp.-V.": 90,
+        "Init.": 80,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 61
+    },
+    {
+      "id": 510,
+      "name": "Liepard",
+      "types": [
+        "dark"
+      ],
+      "stats": {
+        "KP": 64,
+        "Ang.": 98,
+        "Vert.": 50,
+        "Sp.-A.": 98,
+        "Sp.-V.": 50,
+        "Init.": 106,
+        "Summe": 466
+      },
+      "catchRate": 90,
+      "weight": 37.5
+    },
+    {
+      "id": 512,
+      "name": "Simisage",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 108,
+        "Vert.": 63,
+        "Sp.-A.": 108,
+        "Sp.-V.": 63,
+        "Init.": 101,
+        "Summe": 518
+      },
+      "catchRate": 75,
+      "weight": 30.5
+    },
+    {
+      "id": 514,
+      "name": "Simisear",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 108,
+        "Vert.": 63,
+        "Sp.-A.": 108,
+        "Sp.-V.": 63,
+        "Init.": 101,
+        "Summe": 518
+      },
+      "catchRate": 75,
+      "weight": 28
+    },
+    {
+      "id": 516,
+      "name": "Simipour",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 108,
+        "Vert.": 63,
+        "Sp.-A.": 108,
+        "Sp.-V.": 63,
+        "Init.": 101,
+        "Summe": 518
+      },
+      "catchRate": 75,
+      "weight": 29
+    },
+    {
+      "id": 518,
+      "name": "Musharna",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 116,
+        "Ang.": 55,
+        "Vert.": 85,
+        "Sp.-A.": 117,
+        "Sp.-V.": 95,
+        "Init.": 29,
+        "Summe": 497
+      },
+      "catchRate": 75,
+      "weight": 60.5
+    },
+    {
+      "id": 521,
+      "name": "Unfezant",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 115,
+        "Vert.": 80,
+        "Sp.-A.": 65,
+        "Sp.-V.": 55,
+        "Init.": 93,
+        "Summe": 508
+      },
+      "catchRate": 45,
+      "weight": 29
+    },
+    {
+      "id": 523,
+      "name": "Zebstrika",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 110,
+        "Vert.": 63,
+        "Sp.-A.": 80,
+        "Sp.-V.": 63,
+        "Init.": 116,
+        "Summe": 517
+      },
+      "catchRate": 75,
+      "weight": 79.5
+    },
+    {
+      "id": 524,
+      "name": "Roggenrola",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "KP": 55,
+        "Ang.": 25,
+        "Vert.": 85,
+        "Sp.-A.": 75,
+        "Sp.-V.": 25,
+        "Init.": 15,
+        "Summe": 280
+      },
+      "catchRate": 255,
+      "weight": 18
+    },
+    {
+      "id": 525,
+      "name": "Boldore",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 50,
+        "Vert.": 105,
+        "Sp.-A.": 105,
+        "Sp.-V.": 40,
+        "Init.": 20,
+        "Summe": 390
+      },
+      "catchRate": 120,
+      "weight": 102
+    },
+    {
+      "id": 526,
+      "name": "Gigalith",
+      "types": [
+        "rock"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 60,
+        "Vert.": 130,
+        "Sp.-A.": 135,
+        "Sp.-V.": 80,
+        "Init.": 25,
+        "Summe": 515
+      },
+      "catchRate": 45,
+      "weight": 260
+    },
+    {
+      "id": 528,
+      "name": "Swoobat",
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "stats": {
+        "KP": 67,
+        "Ang.": 57,
+        "Vert.": 55,
+        "Sp.-A.": 97,
+        "Sp.-V.": 55,
+        "Init.": 114,
+        "Summe": 445
+      },
+      "catchRate": 45,
+      "weight": 10.5
+    },
+    {
+      "id": 531,
+      "name": "Audino",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 103,
+        "Ang.": 60,
+        "Vert.": 96,
+        "Sp.-A.": 80,
+        "Sp.-V.": 96,
+        "Init.": 50,
+        "Summe": 485
+      },
+      "catchRate": 255,
+      "weight": 31
+    },
+    {
+      "id": 537,
+      "name": "Seismitoad",
+      "types": [
+        "water",
+        "ground"
+      ],
+      "stats": {
+        "KP": 105,
+        "Ang.": 105,
+        "Vert.": 75,
+        "Sp.-A.": 95,
+        "Sp.-V.": 75,
+        "Init.": 74,
+        "Summe": 529
+      },
+      "catchRate": 45,
+      "weight": 62
+    },
+    {
+      "id": 542,
+      "name": "Leavanny",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 113,
+        "Vert.": 80,
+        "Sp.-A.": 70,
+        "Sp.-V.": 80,
+        "Init.": 102,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 20.5
+    },
+    {
+      "id": 548,
+      "name": "Petilil",
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 45,
+        "Ang.": 35,
+        "Vert.": 50,
+        "Sp.-A.": 70,
+        "Sp.-V.": 50,
+        "Init.": 30,
+        "Summe": 280
+      },
+      "catchRate": 190,
+      "weight": 6.6
+    },
+    {
+      "id": 549,
+      "name": "Lilligant",
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 60,
+        "Vert.": 75,
+        "Sp.-A.": 110,
+        "Sp.-V.": 75,
+        "Init.": 90,
+        "Summe": 480
+      },
+      "catchRate": 75,
+      "weight": 16.3
+    },
+    {
+      "id": 556,
+      "name": "Maractus",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 56,
+        "Vert.": 87,
+        "Sp.-A.": 106,
+        "Sp.-V.": 87,
+        "Init.": 60,
+        "Summe": 471
+      },
+      "catchRate": 255,
+      "weight": 28
+    },
+    {
+      "id": 558,
+      "name": "Crustle",
+      "types": [
+        "bug",
+        "rock"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 115,
+        "Vert.": 135,
+        "Sp.-A.": 65,
+        "Sp.-V.": 75,
+        "Init.": 45,
+        "Summe": 505
+      },
+      "catchRate": 75,
+      "weight": 200
+    },
+    {
+      "id": 563,
+      "name": "Cofagrigus",
+      "types": [
+        "ghost",
+        "steel"
+      ],
+      "stats": {
+        "KP": 58,
+        "Ang.": 50,
+        "Vert.": 145,
+        "Sp.-A.": 95,
+        "Sp.-V.": 105,
+        "Init.": 30,
+        "Summe": 483
+      },
+      "catchRate": 90,
+      "weight": 76.5
+    },
+    {
+      "id": 565,
+      "name": "Carracosta",
+      "types": [
+        "water",
+        "rock"
+      ],
+      "stats": {
+        "KP": 74,
+        "Ang.": 128,
+        "Vert.": 133,
+        "Sp.-A.": 83,
+        "Sp.-V.": 65,
+        "Init.": 32,
+        "Summe": 515
+      },
+      "catchRate": 45,
+      "weight": 81
+    },
+    {
+      "id": 569,
+      "name": "Garbodor",
+      "types": [
+        "poison",
+        "steel"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 95,
+        "Vert.": 102,
+        "Sp.-A.": 60,
+        "Sp.-V.": 82,
+        "Init.": 75,
+        "Summe": 494
+      },
+      "catchRate": 60,
+      "weight": 107.3
+    },
+    {
+      "id": 573,
+      "name": "Cinccino",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 115,
+        "Vert.": 60,
+        "Sp.-A.": 65,
+        "Sp.-V.": 60,
+        "Init.": 115,
+        "Summe": 490
+      },
+      "catchRate": 60,
+      "weight": 7.5
+    },
+    {
+      "id": 581,
+      "name": "Swanna",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 87,
+        "Vert.": 63,
+        "Sp.-A.": 107,
+        "Sp.-V.": 63,
+        "Init.": 103,
+        "Summe": 498
+      },
+      "catchRate": 45,
+      "weight": 24.2
+    },
+    {
+      "id": 584,
+      "name": "Vanilluxe",
+      "types": [
+        "ice"
+      ],
+      "stats": {
+        "KP": 71,
+        "Ang.": 69,
+        "Vert.": 85,
+        "Sp.-A.": 120,
+        "Sp.-V.": 95,
+        "Init.": 95,
+        "Summe": 535
+      },
+      "catchRate": 45,
+      "weight": 57.5
+    },
+    {
+      "id": 586,
+      "name": "Sawsbuck",
+      "types": [
+        "normal",
+        "grass"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 110,
+        "Vert.": 70,
+        "Sp.-A.": 60,
+        "Sp.-V.": 70,
+        "Init.": 105,
+        "Summe": 495
+      },
+      "catchRate": 75,
+      "weight": 92.5
+    },
+    {
+      "id": 587,
+      "name": "Emolga",
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "stats": {
+        "KP": 55,
+        "Ang.": 75,
+        "Vert.": 60,
+        "Sp.-A.": 105,
+        "Sp.-V.": 60,
+        "Init.": 113,
+        "Summe": 468
+      },
+      "catchRate": 200,
+      "weight": 5
+    },
+    {
+      "id": 596,
+      "name": "Galvantula",
+      "types": [
+        "bug",
+        "electric"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 77,
+        "Vert.": 60,
+        "Sp.-A.": 107,
+        "Sp.-V.": 60,
+        "Init.": 108,
+        "Summe": 482
+      },
+      "catchRate": 75,
+      "weight": 14.3
+    },
+    {
+      "id": 604,
+      "name": "Eelektross",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 115,
+        "Vert.": 90,
+        "Sp.-A.": 105,
+        "Sp.-V.": 90,
+        "Init.": 50,
+        "Summe": 535
+      },
+      "catchRate": 30,
+      "weight": 80.5
+    },
+    {
+      "id": 606,
+      "name": "Beheeyem",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 75,
+        "Vert.": 95,
+        "Sp.-A.": 125,
+        "Sp.-V.": 95,
+        "Init.": 40,
+        "Summe": 505
+      },
+      "catchRate": 90,
+      "weight": 34.5
+    },
+    {
+      "id": 614,
+      "name": "Beartic",
+      "types": [
+        "ice",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 130,
+        "Vert.": 80,
+        "Sp.-A.": 70,
+        "Sp.-V.": 80,
+        "Init.": 70,
+        "Summe": 525
+      },
+      "catchRate": 60,
+      "weight": 260
+    },
+    {
+      "id": 621,
+      "name": "Druddigon",
+      "types": [
+        "dragon"
+      ],
+      "stats": {
+        "KP": 97,
+        "Ang.": 120,
+        "Vert.": 90,
+        "Sp.-A.": 60,
+        "Sp.-V.": 90,
+        "Init.": 48,
+        "Summe": 505
+      },
+      "catchRate": 45,
+      "weight": 139
+    },
+    {
+      "id": 623,
+      "name": "Golurk",
+      "types": [
+        "ground",
+        "ghost"
+      ],
+      "stats": {
+        "KP": 89,
+        "Ang.": 134,
+        "Vert.": 90,
+        "Sp.-A.": 55,
+        "Sp.-V.": 90,
+        "Init.": 55,
+        "Summe": 513
+      },
+      "catchRate": 90,
+      "weight": 330
+    },
+    {
+      "id": 626,
+      "name": "Bouffalant",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 95,
+        "Ang.": 120,
+        "Vert.": 95,
+        "Sp.-A.": 40,
+        "Sp.-V.": 95,
+        "Init.": 55,
+        "Summe": 500
+      },
+      "catchRate": 45,
+      "weight": 94.6
+    },
+    {
+      "id": 631,
+      "name": "Heatmor",
+      "types": [
+        "fire",
+        "steel"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 97,
+        "Vert.": 96,
+        "Sp.-A.": 85,
+        "Sp.-V.": 96,
+        "Init.": 65,
+        "Summe": 524
+      },
+      "catchRate": 90,
+      "weight": 58
+    },
+    {
+      "id": 632,
+      "name": "Durant",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "KP": 58,
+        "Ang.": 109,
+        "Vert.": 112,
+        "Sp.-A.": 48,
+        "Sp.-V.": 78,
+        "Init.": 109,
+        "Summe": 514
+      },
+      "catchRate": 90,
+      "weight": 33
+    },
+    {
+      "id": 673,
+      "name": "Gogoat",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "KP": 123,
+        "Ang.": 100,
+        "Vert.": 62,
+        "Sp.-A.": 79,
+        "Sp.-V.": 81,
+        "Init.": 95,
+        "Summe": 540
+      },
+      "catchRate": 45,
+      "weight": 91
+    },
+    {
+      "id": 668,
+      "name": "Pyroar",
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "stats": {
+        "KP": 86,
+        "Ang.": 68,
+        "Vert.": 72,
+        "Sp.-A.": 129,
+        "Sp.-V.": 66,
+        "Init.": 106,
+        "Summe": 527
+      },
+      "catchRate": 65,
+      "weight": 81.5
+    },
+    {
+      "id": 693,
+      "name": "Clawitzer",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 71,
+        "Ang.": 73,
+        "Vert.": 108,
+        "Sp.-A.": 120,
+        "Sp.-V.": 89,
+        "Init.": 59,
+        "Summe": 520
+      },
+      "catchRate": 55,
+      "weight": 35.3
+    },
+    {
+      "id": 695,
+      "name": "Heliolisk",
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "stats": {
+        "KP": 62,
+        "Ang.": 55,
+        "Vert.": 52,
+        "Sp.-A.": 119,
+        "Sp.-V.": 94,
+        "Init.": 109,
+        "Summe": 491
+      },
+      "catchRate": 75,
+      "weight": 21
+    },
+    {
+      "id": 697,
+      "name": "Tyrantrum",
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 82,
+        "Ang.": 121,
+        "Vert.": 119,
+        "Sp.-A.": 69,
+        "Sp.-V.": 69,
+        "Init.": 81,
+        "Summe": 541
+      },
+      "catchRate": 45,
+      "weight": 270
+    },
+    {
+      "id": 699,
+      "name": "Aurorus",
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "stats": {
+        "KP": 123,
+        "Ang.": 77,
+        "Vert.": 72,
+        "Sp.-A.": 119,
+        "Sp.-V.": 92,
+        "Init.": 58,
+        "Summe": 541
+      },
+      "catchRate": 45,
+      "weight": 225
+    },
+    {
+      "id": 702,
+      "name": "Dedenne",
+      "types": [
+        "electric",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 67,
+        "Ang.": 58,
+        "Vert.": 57,
+        "Sp.-A.": 101,
+        "Sp.-V.": 87,
+        "Init.": 101,
+        "Summe": 471
+      },
+      "catchRate": 180,
+      "weight": 2.2
+    },
+    {
+      "id": 706,
+      "name": "Goodra",
+      "types": [
+        "dragon",
+        "water"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 100,
+        "Vert.": 85,
+        "Sp.-A.": 110,
+        "Sp.-V.": 135,
+        "Init.": 80,
+        "Summe": 600
+      },
+      "catchRate": 45,
+      "weight": 150.5
+    },
+    {
+      "id": 709,
+      "name": "Trevenant",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 110,
+        "Vert.": 76,
+        "Sp.-A.": 65,
+        "Sp.-V.": 92,
+        "Init.": 56,
+        "Summe": 484
+      },
+      "catchRate": 60,
+      "weight": 71
+    },
+    {
+      "id": 710,
+      "name": "Pumpkaboo",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "KP": 49,
+        "Ang.": 44,
+        "Vert.": 70,
+        "Sp.-A.": 66,
+        "Sp.-V.": 55,
+        "Init.": 51,
+        "Summe": 335
+      },
+      "catchRate": 120,
+      "weight": 5
+    },
+    {
+      "id": 711,
+      "name": "Gourgeist",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 58,
+        "Vert.": 122,
+        "Sp.-A.": 90,
+        "Sp.-V.": 75,
+        "Init.": 84,
+        "Summe": 494
+      },
+      "catchRate": 60,
+      "weight": 12.5
+    },
+    {
+      "id": 724,
+      "name": "Decidueye",
+      "types": [
+        "grass",
+        "ghost"
+      ],
+      "stats": {
+        "KP": 78,
+        "Ang.": 107,
+        "Vert.": 75,
+        "Sp.-A.": 70,
+        "Sp.-V.": 90,
+        "Init.": 110,
+        "Summe": 530
+      },
+      "catchRate": 45,
+      "weight": 36.6
+    },
+    {
+      "id": 733,
+      "name": "Toucannon",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 120,
+        "Vert.": 95,
+        "Sp.-A.": 75,
+        "Sp.-V.": 95,
+        "Init.": 60,
+        "Summe": 525
+      },
+      "catchRate": 45,
+      "weight": 26
+    },
+    {
+      "id": 737,
+      "name": "Charjabug",
+      "types": [
+        "bug",
+        "electric"
+      ],
+      "stats": {
+        "KP": 57,
+        "Ang.": 102,
+        "Vert.": 95,
+        "Sp.-A.": 55,
+        "Sp.-V.": 75,
+        "Init.": 36,
+        "Summe": 420
+      },
+      "catchRate": 120,
+      "weight": 10.5
+    },
+    {
+      "id": 738,
+      "name": "Vikavolt",
+      "types": [
+        "bug",
+        "electric"
+      ],
+      "stats": {
+        "KP": 77,
+        "Ang.": 95,
+        "Vert.": 99,
+        "Sp.-A.": 145,
+        "Sp.-V.": 75,
+        "Init.": 109,
+        "Summe": 600
+      },
+      "catchRate": 45,
+      "weight": 45
+    },
+    {
+      "id": 740,
+      "name": "Crabominable",
+      "types": [
+        "fighting",
+        "ice"
+      ],
+      "stats": {
+        "KP": 97,
+        "Ang.": 132,
+        "Vert.": 97,
+        "Sp.-A.": 62,
+        "Sp.-V.": 87,
+        "Init.": 43,
+        "Summe": 518
+      },
+      "catchRate": 60,
+      "weight": 180
+    },
+    {
+      "id": 741,
+      "name": "Oricorio",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "stats": {
+        "KP": 75,
+        "Ang.": 70,
+        "Vert.": 70,
+        "Sp.-A.": 108,
+        "Sp.-V.": 70,
+        "Init.": 103,
+        "Summe": 496
+      },
+      "catchRate": 45,
+      "weight": 3.4
+    },
+    {
+      "id": 752,
+      "name": "Araquanid",
+      "types": [
+        "water",
+        "bug"
+      ],
+      "stats": {
+        "KP": 68,
+        "Ang.": 90,
+        "Vert.": 92,
+        "Sp.-A.": 50,
+        "Sp.-V.": 132,
+        "Init.": 42,
+        "Summe": 474
+      },
+      "catchRate": 100,
+      "weight": 82
+    },
+    {
+      "id": 754,
+      "name": "Lurantis",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 115,
+        "Vert.": 95,
+        "Sp.-A.": 80,
+        "Sp.-V.": 95,
+        "Init.": 45,
+        "Summe": 510
+      },
+      "catchRate": 75,
+      "weight": 18.5
+    },
+    {
+      "id": 756,
+      "name": "Shiinotic",
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 45,
+        "Vert.": 80,
+        "Sp.-A.": 100,
+        "Sp.-V.": 110,
+        "Init.": 30,
+        "Summe": 445
+      },
+      "catchRate": 75,
+      "weight": 11.5
+    },
+    {
+      "id": 763,
+      "name": "Tsareena",
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 72,
+        "Ang.": 120,
+        "Vert.": 90,
+        "Sp.-A.": 50,
+        "Sp.-V.": 90,
+        "Init.": 108,
+        "Summe": 530
+      },
+      "catchRate": 45,
+      "weight": 21.4
+    },
+    {
+      "id": 770,
+      "name": "Palossand",
+      "types": [
+        "ghost",
+        "ground"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 75,
+        "Vert.": 120,
+        "Sp.-A.": 100,
+        "Sp.-V.": 85,
+        "Init.": 35,
+        "Summe": 500
+      },
+      "catchRate": 60,
+      "weight": 250
+    },
+    {
+      "id": 773,
+      "name": "Silvally",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 100,
+        "Vert.": 100,
+        "Sp.-A.": 100,
+        "Sp.-V.": 100,
+        "Init.": 100,
+        "Summe": 600
+      },
+      "catchRate": 3,
+      "weight": 100.5
+    },
+    {
+      "id": 775,
+      "name": "Komala",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "KP": 85,
+        "Ang.": 115,
+        "Vert.": 95,
+        "Sp.-A.": 55,
+        "Sp.-V.": 95,
+        "Init.": 65,
+        "Summe": 510
+      },
+      "catchRate": 45,
+      "weight": 19.9
+    },
+    {
+      "id": 776,
+      "name": "Turtonator",
+      "types": [
+        "fire",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 78,
+        "Vert.": 135,
+        "Sp.-A.": 111,
+        "Sp.-V.": 85,
+        "Init.": 36,
+        "Summe": 505
+      },
+      "catchRate": 70,
+      "weight": 212
+    },
+    {
+      "id": 777,
+      "name": "Togedemaru",
+      "types": [
+        "electric",
+        "steel"
+      ],
+      "stats": {
+        "KP": 65,
+        "Ang.": 108,
+        "Vert.": 83,
+        "Sp.-A.": 40,
+        "Sp.-V.": 73,
+        "Init.": 106,
+        "Summe": 475
+      },
+      "catchRate": 180,
+      "weight": 3.3
+    },
+    {
+      "id": 781,
+      "name": "Dhelmise",
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "stats": {
+        "KP": 70,
+        "Ang.": 131,
+        "Vert.": 120,
+        "Sp.-A.": 76,
+        "Sp.-V.": 90,
+        "Init.": 40,
+        "Summe": 527
+      },
+      "catchRate": 25,
+      "weight": 210
+    }
+  ]
+}

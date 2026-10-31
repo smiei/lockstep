@@ -1,0 +1,64 @@
+{
+  "aurora-beam": {
+    "power": 75
+  },
+  "blaze-kick": {
+    "power": 90
+  },
+  "bubble-beam": {
+    "power": 75
+  },
+  "chatter": {
+    "power": 90
+  },
+  "cross-poison": {
+    "power": 90
+  },
+  "cut": {
+    "type": "grass",
+    "power": 60
+  },
+  "disarming-voice": {
+    "type": "50"
+  },
+  "draining-kiss": {
+    "power": 75
+  },
+  "flame-wheel": {
+    "power": 75
+  },
+  "fly": {
+    "power": 100
+  },
+  "needle-arm": {
+    "power": 90
+  },
+  "poison-fang": {
+    "power": 65
+  },
+  "poison-tail": {
+    "power": 90
+  },
+  "rock-climb": {
+    "type": "rock",
+    "power": 80
+  },
+  "rock-smash": {
+    "power": 60
+  },
+  "shadow-claw": {
+    "power": 80
+  },
+  "shadow-punch": {
+    "power": 80
+  },
+  "sludge": {
+    "power": 75
+  },
+  "strength": {
+    "power": 100
+  },
+  "wild-charge": {
+    "power": 100
+  }
+}

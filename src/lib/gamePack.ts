@@ -53,6 +53,8 @@ const GAME_KEYS = new Set([
   "versionGroup",
   "trainerSet",
   "names",
+  // Where a generated pack came from (scripts/import-nuzlocke-app.mjs).
+  "source",
 ]);
 const BUILT_IN_ONLY_GAME_KEYS = new Set(["species", "nameLang", "speciesData", "fusion", "sourceVersion", "sourceDate"]);
 

@@ -1,0 +1,1098 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Neuborkia",
+      "en": "New Bark Town",
+      "fr": "Bourg Geon",
+      "es": "New Bark Town",
+      "it": "New Bark Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Route 29",
+      "en": "Route 29",
+      "fr": "Route 29",
+      "es": "Ruta 29",
+      "it": "Percorso 29"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Mr. Pokemon's House",
+      "en": "Mr. Pokemon's House",
+      "fr": "Mr. Pokemon's House",
+      "es": "Mr. Pokemon's House",
+      "it": "Mr. Pokemon's House"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 46",
+      "en": "Route 46",
+      "fr": "Route 46",
+      "es": "Ruta 46",
+      "it": "Percorso 46"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Rosalia City",
+      "en": "Cherrygrove City",
+      "fr": "Ville Griotte",
+      "es": "Cherrygrove City",
+      "it": "Cherrygrove City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Route 30",
+      "en": "Route 30",
+      "fr": "Route 30",
+      "es": "Ruta 30",
+      "it": "Percorso 30"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Route 31",
+      "en": "Route 31",
+      "fr": "Route 31",
+      "es": "Ruta 31",
+      "it": "Percorso 31"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Dunkelhöhle",
+      "en": "Dark Cave",
+      "fr": "Antre Noir",
+      "es": "Dark Cave",
+      "it": "Dark Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Viola City",
+      "en": "Violet City",
+      "fr": "Mauville",
+      "es": "Violet City",
+      "it": "Violet City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Knofensa-Turm",
+      "en": "Sprout Tower",
+      "fr": "Tour Chetiflor",
+      "es": "Sprout Tower",
+      "it": "Sprout Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Route 32",
+      "en": "Route 32",
+      "fr": "Route 32",
+      "es": "Ruta 32",
+      "it": "Percorso 32"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Alph-Ruinen",
+      "en": "Ruins of Alph",
+      "fr": "Ruines d'Alpha",
+      "es": "Ruins of Alph",
+      "it": "Ruins of Alph"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Einheitstunnel",
+      "en": "Union Cave",
+      "fr": "Caves Jumelles",
+      "es": "Union Cave",
+      "it": "Union Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 33",
+      "en": "Route 33",
+      "fr": "Route 33",
+      "es": "Ruta 33",
+      "it": "Percorso 33"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Azalea City",
+      "en": "Azalea Town",
+      "fr": "Ecorcia",
+      "es": "Azalea Town",
+      "it": "Azalea Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Flegmon-Brunnen",
+      "en": "Slowpoke Well",
+      "fr": "Puits Ramoloss",
+      "es": "Slowpoke Well",
+      "it": "Slowpoke Well"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Steineichenwald",
+      "en": "Ilex Forest",
+      "fr": "Bois aux Chênes",
+      "es": "Ilex Forest",
+      "it": "Ilex Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Route 34",
+      "en": "Route 34",
+      "fr": "Route 34",
+      "es": "Ruta 34",
+      "it": "Percorso 34"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Dukatia City",
+      "en": "Goldenrod City",
+      "fr": "Doublonville",
+      "es": "Goldenrod City",
+      "it": "Goldenrod City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Route 35",
+      "en": "Route 35",
+      "fr": "Route 35",
+      "es": "Ruta 35",
+      "it": "Percorso 35"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Nationalpark",
+      "en": "National Park",
+      "fr": "Parc Naturel",
+      "es": "National Park",
+      "it": "National Park"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Route 36",
+      "en": "Route 36",
+      "fr": "Route 36",
+      "es": "Ruta 36",
+      "it": "Percorso 36"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Route 37",
+      "en": "Route 37",
+      "fr": "Route 37",
+      "es": "Ruta 37",
+      "it": "Percorso 37"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Teak City",
+      "en": "Ecruteak City",
+      "fr": "Rosalia",
+      "es": "Ecruteak City",
+      "it": "Ecruteak City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Turmruine",
+      "en": "Burned Tower",
+      "fr": "Tour Cendrée",
+      "es": "Burned Tower",
+      "it": "Burned Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Glockenturm",
+      "en": "Bell Tower",
+      "fr": "Tour Carillon",
+      "es": "Bell Tower",
+      "it": "Bell Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Route 38",
+      "en": "Route 38",
+      "fr": "Route 38",
+      "es": "Ruta 38",
+      "it": "Percorso 38"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Route 39",
+      "en": "Route 39",
+      "fr": "Route 39",
+      "es": "Ruta 39",
+      "it": "Percorso 39"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Oliviana City",
+      "en": "Olivine City",
+      "fr": "Oliville",
+      "es": "Olivine City",
+      "it": "Olivine City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Strudelinseln",
+      "en": "Whirl Islands",
+      "fr": "Tourb'Iles",
+      "es": "Whirl Islands",
+      "it": "Whirl Islands"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Route 40",
+      "en": "Route 40",
+      "fr": "Route 40",
+      "es": "Ruta 40",
+      "it": "Percorso 40"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Route 41",
+      "en": "Route 41",
+      "fr": "Route 41",
+      "es": "Ruta 41",
+      "it": "Percorso 41"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Anemonia City",
+      "en": "Cianwood City",
+      "fr": "Irisia",
+      "es": "Cianwood City",
+      "it": "Cianwood City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 47",
+      "en": "Route 47",
+      "fr": "Route 47",
+      "es": "Ruta 47",
+      "it": "Percorso 47"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Klippenhöhle",
+      "en": "Cliff Cave",
+      "fr": "Grotte Falaise",
+      "es": "Cliff Cave",
+      "it": "Cliff Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Route 48",
+      "en": "Route 48",
+      "fr": "Route 48",
+      "es": "Ruta 48",
+      "it": "Percorso 48"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Safari-Zone",
+      "en": "Safari Zone",
+      "fr": "Parc Safari",
+      "es": "Zona Safari",
+      "it": "Zona Safari"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Route 42",
+      "en": "Route 42",
+      "fr": "Route 42",
+      "es": "Ruta 42",
+      "it": "Percorso 42"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Kesselberg",
+      "en": "Mt. Mortar",
+      "fr": "Mont Creuset",
+      "es": "Mt. Mortar",
+      "it": "Mt. Mortar"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Rocket-Versteck",
+      "en": "Rocket Hideout",
+      "fr": "Rocket Hideout",
+      "es": "Rocket Hideout",
+      "it": "Rocket Hideout"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "See des Zorns",
+      "en": "Lake of Rage",
+      "fr": "Lac Colère",
+      "es": "Lake of Rage",
+      "it": "Lake of Rage"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Route 43",
+      "en": "Route 43",
+      "fr": "Route 43",
+      "es": "Ruta 43",
+      "it": "Percorso 43"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Mahogany Town",
+      "en": "Mahogany Town",
+      "fr": "Mahogany Town",
+      "es": "Mahogany Town",
+      "it": "Mahogany Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Route 44",
+      "en": "Route 44",
+      "fr": "Route 44",
+      "es": "Ruta 44",
+      "it": "Percorso 44"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Eispfad",
+      "en": "Ice Path",
+      "fr": "Route de Glace",
+      "es": "Ice Path",
+      "it": "Ice Path"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Ebenholz City",
+      "en": "Blackthorn City",
+      "fr": "Ebènelle",
+      "es": "Blackthorn City",
+      "it": "Blackthorn City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Drachenhöhle",
+      "en": "Dragon's Den",
+      "fr": "Antre du Dragon",
+      "es": "Dragon's Den",
+      "it": "Dragon's Den"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Route 45",
+      "en": "Route 45",
+      "fr": "Route 45",
+      "es": "Ruta 45",
+      "it": "Percorso 45"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Route 27",
+      "en": "Route 27",
+      "fr": "Route 27",
+      "es": "Ruta 27",
+      "it": "Percorso 27"
+    },
+    "type": "route"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Tohjo-Fälle",
+      "en": "Tohjo Falls",
+      "fr": "Chutes Tohjo",
+      "es": "Tohjo Falls",
+      "it": "Tohjo Falls"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Route 26",
+      "en": "Route 26",
+      "fr": "Route 26",
+      "es": "Ruta 26",
+      "it": "Percorso 26"
+    },
+    "type": "route"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Indigo Plateau",
+      "en": "Indigo Plateau",
+      "fr": "Plateau Indigo",
+      "es": "Indigo Plateau",
+      "it": "Indigo Plateau"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Vermillion City",
+      "en": "Vermillion City",
+      "fr": "Vermillion City",
+      "es": "Vermillion City",
+      "it": "Vermillion City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Ruta 6",
+      "it": "Percorso 6"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Saffronia City",
+      "en": "Saffron City",
+      "fr": "Safrania",
+      "es": "Ciudad Azafrán",
+      "it": "Zafferanopoli"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Prismania City",
+      "en": "Celadon City",
+      "fr": "Céladopole",
+      "es": "Ciudad Azulona",
+      "it": "Azzurropoli"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Ruta 16",
+      "it": "Percorso 16"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Ruta 17",
+      "it": "Percorso 17"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Route 18",
+      "en": "Route 18",
+      "fr": "Route 18",
+      "es": "Ruta 18",
+      "it": "Percorso 18"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Fuchsania City",
+      "en": "Fuschia City",
+      "fr": "Fuschia City",
+      "es": "Fuschia City",
+      "it": "Fuschia City"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Ruta 10",
+      "it": "Percorso 10"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Kraftwerk",
+      "en": "Power Plant",
+      "fr": "Centrale",
+      "es": "Central Energía",
+      "it": "Centrale Elettrica"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Route 24",
+      "en": "Route 24",
+      "fr": "Route 24",
+      "es": "Ruta 24",
+      "it": "Percorso 24"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Route 25",
+      "en": "Route 25",
+      "fr": "Route 25",
+      "es": "Ruta 25",
+      "it": "Percorso 25"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Azuria City",
+      "en": "Cerulean City",
+      "fr": "Azuria",
+      "es": "Ciudad Celeste",
+      "it": "Celestopoli"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Felstunnel",
+      "en": "Rock Tunnel",
+      "fr": "Grotte",
+      "es": "Túnel Roca",
+      "it": "Tunnel Roccioso"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Fuchsia City",
+      "en": "Fuchsia City",
+      "fr": "Fuchsia City",
+      "es": "Fuchsia City",
+      "it": "Fuchsia City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Digda-Höhle",
+      "en": "Diglett's Cave",
+      "fr": "Cave Taupiqueur",
+      "es": "Cueva Diglett",
+      "it": "Grotta di Diglett"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Marmoria City",
+      "en": "Pewter City",
+      "fr": "Argenta",
+      "es": "Ciudad Plateada",
+      "it": "Plumbeopoli"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Mondberg",
+      "en": "Mt. Moon",
+      "fr": "Mont Sélénite",
+      "es": "Monte Luna",
+      "it": "Monte Luna"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Vertania-Wald",
+      "en": "Viridian Forest",
+      "fr": "Forêt de Jade",
+      "es": "Bosque Verde",
+      "it": "Bosco Smeraldo"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Vertania City",
+      "en": "Viridian City",
+      "fr": "Jadielle",
+      "es": "Ciudad Verde",
+      "it": "Smeraldopoli"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 87,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Alabastia",
+      "en": "Pallet Town",
+      "fr": "Bourg Palette",
+      "es": "Pueblo Paleta",
+      "it": "Biancavilla"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Route 21",
+      "en": "Route 21",
+      "fr": "Chenal 21",
+      "es": "Ruta 21",
+      "it": "Percorso 21"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 90,
+    "names": {
+      "de": "Zinnoberinsel",
+      "en": "Cinnabar Island",
+      "fr": "Cramois'Ile",
+      "es": "Isla Canela",
+      "it": "Cinabropoli"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Route 20",
+      "en": "Route 20",
+      "fr": "Chenal 20",
+      "es": "Ruta 20",
+      "it": "Percorso 20"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Chenal 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Ruta 22",
+      "it": "Percorso 22"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Route 28",
+      "en": "Route 28",
+      "fr": "Route 28",
+      "es": "Ruta 28",
+      "it": "Percorso 28"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 95,
+    "names": {
+      "de": "Silberberg",
+      "en": "Mt. Silver",
+      "fr": "Mont Argenté",
+      "es": "Mt. Silver",
+      "it": "Mt. Silver"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 96,
+    "names": {
+      "de": "Geheimdungeon",
+      "en": "Cerulean Cave",
+      "fr": "Caverne Azurée",
+      "es": "Cueva Celeste",
+      "it": "Grotta Celeste"
+    },
+    "type": "route",
+    "postgame": true
+  }
+]

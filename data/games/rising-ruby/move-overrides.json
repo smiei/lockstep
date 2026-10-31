@@ -1,0 +1,60 @@
+{
+  "ancient-power": {
+    "power": 80
+  },
+  "chatter": {
+    "power": 90
+  },
+  "cut": {
+    "type": "grass",
+    "power": 70
+  },
+  "disarming-voice": {
+    "power": 60
+  },
+  "draining-kiss": {
+    "power": 75
+  },
+  "fairy-wind": {
+    "power": 50
+  },
+  "fly": {
+    "power": 100
+  },
+  "grass-pledge": {
+    "power": 85
+  },
+  "mystical-fire": {
+    "power": 80
+  },
+  "needle-arm": {
+    "power": 80
+  },
+  "night-daze": {
+    "power": 90
+  },
+  "pound": {
+    "power": 50
+  },
+  "power-gem": {
+    "power": 90
+  },
+  "relic-song": {
+    "power": 90
+  },
+  "rock-smash": {
+    "power": 65
+  },
+  "scratch": {
+    "power": 50
+  },
+  "steamroller": {
+    "power": 85
+  },
+  "strength": {
+    "power": 100
+  },
+  "water-pledge": {
+    "power": 85
+  }
+}
