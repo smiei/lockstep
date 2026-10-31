@@ -26,6 +26,7 @@ import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { getGameSummaries } from "@/lib/data";
 import { uiScaleBootScript } from "@/lib/uiScale";
 import { shellColorBootScript } from "@/lib/shellColor";
+import { runtimeConfigFromEnv, runtimeConfigScript } from "@/lib/runtimeConfig";
 import "./globals.css";
 
 // The interface face and the label face of the collection world (DESIGN.md):
@@ -83,6 +84,9 @@ export default async function RootLayout({
   const runs = await listRunsForHeader();
   const caps = await listCapSummaries(runs);
   const games = getGameSummaries();
+  // DEFAULT_SHELL_COLOR / DEFAULT_LANGUAGE from the container, read per
+  // request (see runtimeConfig.ts) - every content page is dynamic.
+  const runtimeConfig = runtimeConfigFromEnv();
 
   return (
     <html
@@ -120,6 +124,9 @@ export default async function RootLayout({
             page renders at 100% and then jumps to the chosen size on
             hydration. React 19 does not hoist inline scripts, so both of these
             run here, in place, ahead of the content. */}
+        {/* The server's defaults first: the shell-colour boot script and the
+            language fallback read them. */}
+        <script dangerouslySetInnerHTML={{ __html: runtimeConfigScript(runtimeConfig) }} />
         <script dangerouslySetInnerHTML={{ __html: uiScaleBootScript() }} />
         {/* Same for the shell colour (data-shell on <html>). */}
         <script dangerouslySetInnerHTML={{ __html: shellColorBootScript() }} />

@@ -20,7 +20,16 @@
 // the public Docker image. That separation is the point: the published image
 // must stay free of third-party artwork, exactly like the trainer sprites.
 //
-// Run manually: node scripts/generate-icons.mjs [--source <file>] [--force]
+// SERVER DEFAULT SHELL COLOUR
+// With DEFAULT_SHELL_COLOR=red|blue|yellow in the environment the logo is
+// recoloured before rendering: the tile takes the shell colour and the label
+// and dots its ink, exactly the swap the side rail does live per device
+// (HeaderTitle). Only the original logo's own colours are swapped, so a
+// private logo built on them follows too and anything else stays as drawn.
+// `--manifest` (container start only) also points the manifest's
+// theme/background colour at it; a build never rewrites the tracked file.
+//
+// Run manually: node scripts/generate-icons.mjs [--source <file>] [--force] [--manifest]
 import { mkdir, stat, writeFile, readFile, copyFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
@@ -33,6 +42,7 @@ const outDir = path.join(rootDir, "public", "icons");
 
 const args = process.argv.slice(2);
 const force = args.includes("--force");
+const patchManifest = args.includes("--manifest");
 const sourceArg = args.indexOf("--source");
 
 // A private override is usually a bitmap - most logos are, and tracing one to
@@ -50,16 +60,51 @@ function resolveSource(dir) {
   return path.join(dir, "icon.svg"); // reported as missing further down
 }
 
+// The image carries the repo's own logo as branding-default/ (the runner
+// stage has no branding/; /app/branding is the private mount), so a colour
+// change works without any mount.
+const brandingSource = resolveSource(path.join(rootDir, "branding"));
 const sourceFile =
   sourceArg !== -1 && args[sourceArg + 1]
     ? path.resolve(args[sourceArg + 1])
-    : resolveSource(path.join(rootDir, "branding"));
+    : existsSync(brandingSource)
+      ? brandingSource
+      : resolveSource(path.join(rootDir, "branding-default"));
 const sourceIsRaster = RASTER_EXTS.has(path.extname(sourceFile).toLowerCase());
 
+// The original logo's colours and what each shell colour turns them into:
+// tile -> --shell, label -> --shell-ink-muted, dots -> --shell-ink. Keep in
+// step with SHELL_HEX (src/lib/shellColor.ts) and globals.css; the shell
+// colour test checks the tile values.
+const LOGO_TILE = "#0f3d30";
+const LOGO_LABEL = "#dcebe1";
+const LOGO_DOTS = "#ffffff";
+const SHELL_RECOLOR = {
+  green: { tile: "#0f3d30", label: "#dcebe1", dots: "#ffffff" },
+  red: { tile: "#b8101b", label: "#ffe3e3", dots: "#ffffff" },
+  blue: { tile: "#1e3a8a", label: "#dde6fb", dots: "#ffffff" },
+  yellow: { tile: "#ffcb05", label: "#3d3300", dots: "#1a1a12" },
+};
+const shellColor = (process.env.DEFAULT_SHELL_COLOR || "").trim().toLowerCase();
+const recolor = SHELL_RECOLOR[shellColor] && shellColor !== "green" ? SHELL_RECOLOR[shellColor] : null;
+
+function hexToRgb(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255, alpha: 1 };
+}
+
+function recolorSvg(text, colors) {
+  const swap = { [LOGO_TILE]: colors.tile, [LOGO_LABEL]: colors.label, [LOGO_DOTS]: colors.dots, "#fff": colors.dots };
+  return text.replace(/(fill|stroke)="(#[0-9a-fA-F]{3,6})"/g, (match, attr, value) => {
+    const next = swap[value.toLowerCase()];
+    return next ? `${attr}="${next}"` : match;
+  });
+}
+
 // Opaque backdrop for the variants that must not be transparent: the shell
-// green (--shell in globals.css), which is also the repo icon's own tile and
-// the manifest's background_color, so the maskable crop shows no seam.
-const DARK = { r: 15, g: 61, b: 48, alpha: 1 };
+// colour (--shell in globals.css), which is also the logo's own tile and the
+// manifest's background_color, so the maskable crop shows no seam.
+const DARK = hexToRgb(recolor ? recolor.tile : LOGO_TILE);
 const CLEAR = { r: 0, g: 0, b: 0, alpha: 0 };
 
 // `scale` = how much of the canvas the motif fills.
@@ -82,8 +127,11 @@ const TARGETS = [
 ];
 
 // layout.tsx links /icons/icon.svg for the browser tab, so this file must
-// always exist whatever the source format was.
+// always exist whatever the source format was. logo.svg is the same drawing
+// WITHOUT the server colour: the side rail recolours it live per device
+// (HeaderTitle), which needs the original colours to find.
 const SVG_COPY = "icon.svg";
+const SVG_MASTER = "logo.svg";
 
 // Artwork with its own background (the common case for a bitmap logo) needs
 // that same colour behind the maskable inset, or Android's crop reveals a hard
@@ -120,7 +168,7 @@ async function sampleBackdrop(buffer) {
 
 async function isUpToDate() {
   const source = await stat(sourceFile);
-  for (const name of [...TARGETS.map((t) => t.file), SVG_COPY]) {
+  for (const name of [...TARGETS.map((t) => t.file), SVG_COPY, SVG_MASTER]) {
     const file = path.join(outDir, name);
     if (!existsSync(file)) return false;
     if ((await stat(file)).mtimeMs < source.mtimeMs) return false;
@@ -153,9 +201,10 @@ async function render(input, target, backdrop) {
 // the 192px render in a minimal SVG so /icons/icon.svg always resolves - an
 // external href would not load here, since a favicon is rendered in a
 // restricted context that blocks outside references.
-async function writeSvgCopy() {
+async function writeSvgCopy(svgText) {
   if (!sourceIsRaster) {
-    await copyFile(sourceFile, path.join(outDir, SVG_COPY));
+    await copyFile(sourceFile, path.join(outDir, SVG_MASTER));
+    await writeFile(path.join(outDir, SVG_COPY), svgText, "utf-8");
     return;
   }
   const png = await readFile(path.join(outDir, "icon-192.png"));
@@ -165,6 +214,16 @@ async function writeSvgCopy() {
     png.toString("base64") +
     '"/></svg>\n';
   await writeFile(path.join(outDir, SVG_COPY), svg, "utf-8");
+  await writeFile(path.join(outDir, SVG_MASTER), svg, "utf-8");
+}
+
+async function writeManifestColor() {
+  if (!patchManifest || !recolor) return;
+  const file = path.join(rootDir, "public", "manifest.webmanifest");
+  const manifest = JSON.parse(await readFile(file, "utf-8"));
+  manifest.theme_color = recolor.tile;
+  manifest.background_color = recolor.tile;
+  await writeFile(file, JSON.stringify(manifest, null, 2) + "\n", "utf-8");
 }
 
 async function main() {
@@ -185,18 +244,22 @@ async function main() {
     return;
   }
   await mkdir(outDir, { recursive: true });
-  const input = await readFile(sourceFile);
+  const original = await readFile(sourceFile);
+  const svgText = sourceIsRaster ? null : recolor ? recolorSvg(original.toString("utf-8"), recolor) : original.toString("utf-8");
+  const input = svgText === null ? original : Buffer.from(svgText, "utf-8");
   const backdrop = sourceIsRaster ? await sampleBackdrop(input) : null;
   for (const target of TARGETS) {
     const png = await render(input, target, backdrop);
     await writeFile(path.join(outDir, target.file), png);
   }
-  await writeSvgCopy();
+  await writeSvgCopy(svgText);
+  await writeManifestColor();
   const backdropNote = backdrop
     ? " (backdrop rgb(" + backdrop.r + "," + backdrop.g + "," + backdrop.b + ") sampled)"
     : "";
+  const colorNote = recolor ? " in " + shellColor : "";
   console.log(
-    "icons: " + (TARGETS.length + 1) + " files from " + sourceFile + backdropNote,
+    "icons: " + (TARGETS.length + 2) + " files from " + sourceFile + colorNote + backdropNote,
   );
 }
 

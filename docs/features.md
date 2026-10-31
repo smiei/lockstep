@@ -139,6 +139,11 @@ On top of the toggles:
 - **Export:** the current run or all runs as a file.
 - **Import:** adds the runs it contains without ever overwriting existing ones.
 
+## Appearance
+
+- **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in the gear menu. The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
+- **Light and dark** follow the device until switched by hand. Switching back to the device's own mode follows the device again.
+
 ## Languages
 
-The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu.
+The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.
