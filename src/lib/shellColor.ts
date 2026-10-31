@@ -37,12 +37,18 @@ export function applyShellColor(root: { setAttribute(n: string, v: string): void
 // Runs before first paint (layout.tsx), so the page does not flash green
 // before switching. Stringified into the document: ES5-safe, self-contained,
 // and it swallows everything - blocked storage must still render the page.
+// The device's own choice (green included) wins; without one, the server's
+// DEFAULT_SHELL_COLOR (window.__LOCKSTEP_CONFIG__, see runtimeConfig.ts).
 export function shellColorBootScript(): string {
   return (
-    "(function(){try{var v=JSON.parse(localStorage.getItem(" +
+    "(function(){try{var a=" +
+    JSON.stringify(SHELL_COLORS) +
+    ";var v=null;try{v=JSON.parse(localStorage.getItem(" +
     JSON.stringify(SHELL_COLOR_KEY) +
-    "));var s=" +
-    JSON.stringify(SHELL_COLORS.filter((c) => c !== SHELL_COLOR_DEFAULT)) +
-    ';if(s.indexOf(v)>=0)document.documentElement.setAttribute("data-shell",v)}catch(e){}})();'
+    "))}catch(e){}" +
+    'if(a.indexOf(v)<0){var c=typeof window!=="undefined"&&window.__LOCKSTEP_CONFIG__;v=c&&c.shellColor}' +
+    "if(v&&v!==" +
+    JSON.stringify(SHELL_COLOR_DEFAULT) +
+    '&&a.indexOf(v)>=0)document.documentElement.setAttribute("data-shell",v)}catch(e){}})();'
   );
 }

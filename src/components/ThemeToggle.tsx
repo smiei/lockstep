@@ -26,7 +26,7 @@ function MoonIcon({ className }: { className?: string }) {
 }
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme, systemTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { lang } = useLanguage();
   const t = translations[lang].theme;
@@ -40,7 +40,13 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      // Switching to what the device itself uses stores "system" rather than
+      // the scheme, so the app follows the device again from then on. Storing
+      // "light"/"dark" every time meant one click pinned it forever.
+      onClick={() => {
+        const next = isDark ? "light" : "dark";
+        setTheme(next === systemTheme ? "system" : next);
+      }}
       aria-label={mounted ? (isDark ? t.toLight : t.toDark) : t.toggleNeutral}
       className="flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-muted transition-colors hover:bg-hover hover:text-ink disabled:cursor-not-allowed disabled:opacity-50"
     >

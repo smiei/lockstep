@@ -24,6 +24,8 @@ services:
       - "3000:3000"
     environment:
       - DATABASE_URL=file:/app/db/nuzlocke.db
+      # - DEFAULT_SHELL_COLOR=blue                  # optional: green (default), red, blue or yellow
+      # - DEFAULT_LANGUAGE=en                       # optional: de, en, fr, es or it
     volumes:
       - db:/app/db                                  # your runs
       - sprites:/app/public/pokemon-sprites         # downloaded once, kept across updates
@@ -81,7 +83,19 @@ Everything else is optional and usually best left out:
 >
 > Mount only the subfolders above.
 
-The only required environment variable is `DATABASE_URL=file:/app/db/nuzlocke.db`. The app listens on port `3000` inside the container.
+### Environment variables
+
+| Variable | Purpose |
+| --- | --- |
+| `DATABASE_URL` | **Required.** `file:/app/db/nuzlocke.db` |
+| `DEFAULT_SHELL_COLOR` | Optional. The colour every device starts with: `green` (default), `red`, `blue` or `yellow`. The browser-tab icon, the home-screen icon and the installed app's splash screen and status bar take this colour too. Anyone can still pick their own colour in the gear menu, which is kept per device. |
+| `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with German as the last fallback. A language picked in the gear menu always wins. |
+
+Light and dark mode follow the device until someone switches them by hand. Switching back to the mode the device itself uses makes the app follow the device again.
+
+On Unraid, add each optional variable under **Add another Path, Port, Variable, Label or Device** → Config Type **Variable**: for example key `DEFAULT_SHELL_COLOR`, value `blue`.
+
+The app listens on port `3000` inside the container.
 
 ### Image tags
 
@@ -172,3 +186,13 @@ Put your own square PNGs into `public/trainers/`. With Docker, mount a folder at
 ## Custom app icon (optional)
 
 Mount a folder containing `icon.svg` (or `icon.png` / `.jpg` / `.webp`) at `/app/branding`. The container then replaces the app icon, home-screen icon and browser-tab icon with yours on start. The published image always ships the project's own icon.
+
+The project logo follows the shell colour:
+- the icons follow `DEFAULT_SHELL_COLOR`;
+- the logo in the side rail follows each device's own choice.
+
+An SVG logo of your own follows along wherever it uses the project logo's colours: tile `#0f3d30`, label `#dcebe1`, dots `#ffffff`. Any other colour in it stays as drawn.
+
+**Icon for the Unraid Docker page:** in the container's **Advanced View**, set **Icon URL** to `http://<server-ip>:<port>/icons/icon-512.png`, which is the app's own icon, your logo included.
+- Use the LAN address, because Unraid fetches the picture itself. Behind a login such as Cloudflare Access it would get the login page.
+- Unraid caches the icon. Append `?v=2` after changing the logo.

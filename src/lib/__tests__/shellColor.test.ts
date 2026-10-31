@@ -23,10 +23,11 @@ function fakeRoot() {
   };
 }
 
-function runBoot(stored: string | null) {
+function runBoot(stored: string | null, serverDefault?: string) {
   const root = fakeRoot();
   const localStorage = { getItem: (key: string) => (key === SHELL_COLOR_KEY ? stored : null) };
-  new Function("localStorage", "document", shellColorBootScript())(localStorage, { documentElement: root });
+  const window = serverDefault ? { __LOCKSTEP_CONFIG__: { shellColor: serverDefault, lang: null } } : {};
+  new Function("localStorage", "document", "window", shellColorBootScript())(localStorage, { documentElement: root }, window);
   return root.attrs;
 }
 
@@ -40,6 +41,23 @@ describe("shellColorBootScript", () => {
     expect(runBoot(JSON.stringify("purple"))).toEqual({});
     expect(runBoot("not json")).toEqual({});
     expect(runBoot(null)).toEqual({});
+  });
+
+  it("falls back to the server's DEFAULT_SHELL_COLOR, but a device's own choice wins", () => {
+    expect(runBoot(null, "blue")).toEqual({ "data-shell": "blue" });
+    expect(runBoot("not json", "yellow")).toEqual({ "data-shell": "yellow" });
+    // An explicit green on this device beats a blue server default.
+    expect(runBoot(JSON.stringify("green"), "blue")).toEqual({});
+    expect(runBoot(JSON.stringify("red"), "blue")).toEqual({ "data-shell": "red" });
+  });
+});
+
+describe("scripts/generate-icons.mjs", () => {
+  it("recolours the icon tile to each shell's own colour", () => {
+    const script = readFileSync(path.join(process.cwd(), "scripts/generate-icons.mjs"), "utf-8");
+    for (const color of SHELL_COLORS) {
+      expect(script).toContain(`${color}: { tile: "${SHELL_HEX[color]}"`);
+    }
   });
 });
 
