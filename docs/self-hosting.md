@@ -15,7 +15,7 @@ The tracker is one small web server with a SQLite database. Run it wherever suit
 The Windows app is the same server with Node.js built in, the way Jellyfin's Windows server works: it runs in the background with an icon in the system tray, and you use Lockstep in the browser.
 
 1. Download **`Lockstep-Setup-<version>.exe`** from the [latest release](https://github.com/smiei/lockstep/releases/latest) and run it. It installs for your user only, into `%LOCALAPPDATA%\Programs\Lockstep`, without admin rights. Prefer no installer? Unpack **`Lockstep-<version>-windows-x64.zip`** anywhere and start `Lockstep.exe`.
-2. The installer is not code-signed, so Windows SmartScreen may say "Windows protected your PC" the first time: click **More info → Run anyway**.
+2. The installer is not code-signed yet. Browsers judge downloads by the publisher's reputation, so Firefox or Chrome may block it as "may contain a virus or malware" or "not commonly downloaded" - a false alarm for a new, unsigned program; choose **Allow download** / **Keep**. Then Windows SmartScreen may say "Windows protected your PC" the first time: click **More info → Run anyway**. Every release is built from this repository's source by GitHub Actions ([windows.yml](../.github/workflows/windows.yml)), so you can check what went into it.
 3. Lockstep starts in the tray and opens your browser at `http://localhost:3000`. The first start downloads the Pokémon sprites, badges and trainer pictures, which takes a few minutes; the tray icon's tooltip says so meanwhile.
 
 **The tray menu:**
