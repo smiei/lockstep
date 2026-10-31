@@ -1,0 +1,118 @@
+{
+  "bind": {
+    "power": 20
+  },
+  "comet-punch": {
+    "power": 20
+  },
+  "cotton-spore": {
+    "power": 10,
+    "damageClass": "special"
+  },
+  "crabhammer": {
+    "power": 100
+  },
+  "crush-claw": {
+    "power": 95
+  },
+  "cut": {
+    "type": "bug",
+    "power": 80
+  },
+  "dig": {
+    "power": 10
+  },
+  "doom-desire": {
+    "power": 180
+  },
+  "double-kick": {
+    "power": 35
+  },
+  "double-slap": {
+    "power": 20
+  },
+  "dragon-breath": {
+    "power": 95
+  },
+  "dragon-claw": {
+    "power": 70
+  },
+  "explosion": {
+    "power": 255
+  },
+  "flash": {
+    "type": "electric",
+    "power": 10
+  },
+  "fly": {
+    "power": 80
+  },
+  "giga-drain": {
+    "power": 95
+  },
+  "glare": {
+    "type": "dark",
+    "power": 10,
+    "damageClass": "special"
+  },
+  "growl": {
+    "type": "dark",
+    "power": 10,
+    "damageClass": "special"
+  },
+  "hyper-beam": {
+    "power": 180
+  },
+  "leech-life": {
+    "power": 60
+  },
+  "leer": {
+    "type": "ghost",
+    "power": 10,
+    "damageClass": "special"
+  },
+  "pin-missile": {
+    "power": 30
+  },
+  "razor-wind": {
+    "power": 150
+  },
+  "sand-attack": {
+    "power": 10
+  },
+  "self-destruct": {
+    "power": 200
+  },
+  "screech": {
+    "type": "steel",
+    "power": 10,
+    "damageClass": "special"
+  },
+  "shadow-ball": {
+    "power": 95
+  },
+  "slam": {
+    "power": 120
+  },
+  "string-shot": {
+    "power": 10,
+    "damageClass": "special"
+  },
+  "submission": {
+    "power": 100
+  },
+  "swift": {
+    "power": 50
+  },
+  "tail-whip": {
+    "type": "fighting",
+    "power": 10,
+    "damageClass": "special"
+  },
+  "twineedle": {
+    "power": 35
+  },
+  "wrap": {
+    "power": 20
+  }
+}

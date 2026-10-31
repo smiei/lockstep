@@ -16,6 +16,7 @@ import {
   getEffectiveness,
   getCatchRates,
   getMoves,
+  getMoveOverrides,
   getSpeciesData,
   getSpeciesList,
   type GameInfo,
@@ -138,8 +139,26 @@ export function getCatchRatesForGame(game: GameInfo): CatchRateEntry[] {
   return merged;
 }
 
+// A ROM hack's move changes (move-overrides.json) win over the shared table.
+// The changed move's era history (`past`) is dropped: it describes the real
+// games and would otherwise roll the hack's new power or type back.
 export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
-  return getMoves(lang, dataGeneration(game));
+  const table = getMoves(lang, dataGeneration(game));
+  const overrides = getMoveOverrides(game.id);
+  if (!overrides) return table;
+  const out: MovesTable = { ...table };
+  for (const [name, change] of Object.entries(overrides)) {
+    const move = out[name];
+    if (!move) continue;
+    out[name] = {
+      ...move,
+      ...(change.type ? { type: change.type } : {}),
+      ...(change.power !== undefined ? { power: change.power } : {}),
+      ...(change.damageClass ? { damageClass: change.damageClass, damaging: change.damageClass !== "status" } : {}),
+      past: undefined,
+    };
+  }
+  return out;
 }
 
 export function getAttackTypesForGame(game: GameInfo): string[] {

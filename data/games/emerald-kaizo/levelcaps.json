@@ -1,0 +1,753 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Red",
+      "en": "Red",
+      "fr": "Red",
+      "es": "Red",
+      "it": "Red"
+    },
+    "location": {
+      "de": "Route 104 (North)",
+      "en": "Route 104 (North)",
+      "fr": "Route 104 (North)",
+      "es": "Route 104 (North)",
+      "it": "Route 104 (North)"
+    },
+    "badge": null,
+    "max_level": 9
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Brandan (optional)",
+      "en": "Brandan (optional)",
+      "fr": "Brandan (optional)",
+      "es": "Brandan (optional)",
+      "it": "Brandan (optional)"
+    },
+    "location": {
+      "de": "Rustboro City",
+      "en": "Rustboro City",
+      "fr": "Rustboro City",
+      "es": "Rustboro City",
+      "it": "Rustboro City"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "May (optional)",
+      "en": "May (optional)",
+      "fr": "May (optional)",
+      "es": "May (optional)",
+      "it": "May (optional)"
+    },
+    "location": {
+      "de": "Rustboro City",
+      "en": "Rustboro City",
+      "fr": "Rustboro City",
+      "es": "Rustboro City",
+      "it": "Rustboro City"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Felizia",
+      "en": "Roxanne",
+      "fr": "Roxanne",
+      "es": "Petra",
+      "it": "Roxanne"
+    },
+    "location": {
+      "de": "Metarost City",
+      "en": "Rustboro City",
+      "fr": "Mérouville",
+      "es": "Ciudad Férrica",
+      "it": "Ferrugipoli"
+    },
+    "badge": {
+      "de": "Steinorden",
+      "en": "Stone Badge",
+      "fr": "Badge Roc",
+      "es": "Medalla Piedra",
+      "it": "Medaglia Roccia"
+    },
+    "max_level": 15
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Magma Admin Tabitha",
+      "en": "Magma Admin Tabitha",
+      "fr": "Magma Admin Tabitha",
+      "es": "Magma Admin Tabitha",
+      "it": "Magma Admin Tabitha"
+    },
+    "location": {
+      "de": "Mt. Chimney",
+      "en": "Mt. Chimney",
+      "fr": "Mt. Chimney",
+      "es": "Mt. Chimney",
+      "it": "Mt. Chimney"
+    },
+    "badge": null,
+    "max_level": 38
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Magma Leader Maxie",
+      "en": "Magma Leader Maxie",
+      "fr": "Magma Leader Maxie",
+      "es": "Magma Leader Maxie",
+      "it": "Magma Leader Maxie"
+    },
+    "location": {
+      "de": "Mt. Chimney",
+      "en": "Mt. Chimney",
+      "fr": "Mt. Chimney",
+      "es": "Mt. Chimney",
+      "it": "Mt. Chimney"
+    },
+    "badge": null,
+    "max_level": 39
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Kamillo",
+      "en": "Brawly",
+      "fr": "Bastien",
+      "es": "Marcial",
+      "it": "Brawly"
+    },
+    "location": {
+      "de": "Faustauhaven",
+      "en": "Dewford Town",
+      "fr": "Myokara",
+      "es": "Pueblo Azuliza",
+      "it": "Bluruvia"
+    },
+    "badge": {
+      "de": "Faustorden",
+      "en": "Knuckle Badge",
+      "fr": "Badge Poing",
+      "es": "Medalla Puño",
+      "it": "Medaglia Pugno"
+    },
+    "max_level": 19
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Heiko",
+      "en": "Wally",
+      "fr": "Timmy",
+      "es": "Blasco",
+      "it": "Wally"
+    },
+    "location": {
+      "de": "Mauville City",
+      "en": "Mauville City",
+      "fr": "Mauville City",
+      "es": "Mauville City",
+      "it": "Mauville City"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Walter",
+      "en": "Wattson",
+      "fr": "Voltère",
+      "es": "Erico",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Malvenfroh City",
+      "en": "Mauville City",
+      "fr": "Lavandia",
+      "es": "Ciudad Malvalona",
+      "it": "Ciclamipoli"
+    },
+    "badge": {
+      "de": "Dynamoorden",
+      "en": "Dynamo Badge",
+      "fr": "Badge Dynamo",
+      "es": "Medalla Dinamo",
+      "it": "Medaglia Dinamo"
+    },
+    "max_level": 29
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "Route 110",
+      "en": "Route 110",
+      "fr": "Route 110",
+      "es": "Route 110",
+      "it": "Route 110"
+    },
+    "badge": null,
+    "max_level": 26
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "May",
+      "en": "May",
+      "fr": "May",
+      "es": "May",
+      "it": "May"
+    },
+    "location": {
+      "de": "Route 110",
+      "en": "Route 110",
+      "fr": "Route 110",
+      "es": "Route 110",
+      "it": "Route 110"
+    },
+    "badge": null,
+    "max_level": 26
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Red",
+      "en": "Red",
+      "fr": "Red",
+      "es": "Red",
+      "it": "Red"
+    },
+    "location": {
+      "de": "Route 113",
+      "en": "Route 113",
+      "fr": "Route 113",
+      "es": "Route 113",
+      "it": "Route 113"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Flavia",
+      "en": "Flannery",
+      "fr": "Adriane",
+      "es": "Candela",
+      "it": "Flannery"
+    },
+    "location": {
+      "de": "Bad Lavastadt",
+      "en": "Lavaridge Town",
+      "fr": "Vermilava",
+      "es": "Pueblo Lavacalda",
+      "it": "Cuordilava"
+    },
+    "badge": {
+      "de": "Hitzeorden",
+      "en": "Heat Badge",
+      "fr": "Badge Chaleur",
+      "es": "Medalla Calor",
+      "it": "Medaglia Calore"
+    },
+    "max_level": 42
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Norman",
+      "en": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "location": {
+      "de": "Blütenburg City",
+      "en": "Petalburg City",
+      "fr": "Clémenti-Ville",
+      "es": "Ciudad Petalia",
+      "it": "Petalipoli"
+    },
+    "badge": {
+      "de": "Balanceorden",
+      "en": "Balance Badge",
+      "fr": "Badge Équilibre",
+      "es": "Medalla Equilibrio",
+      "it": "Medaglia Equilibrio"
+    },
+    "max_level": 48
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Aqua Admin Shelly",
+      "en": "Aqua Admin Shelly",
+      "fr": "Aqua Admin Shelly",
+      "es": "Aqua Admin Shelly",
+      "it": "Aqua Admin Shelly"
+    },
+    "location": {
+      "de": "Weather Institute",
+      "en": "Weather Institute",
+      "fr": "Weather Institute",
+      "es": "Weather Institute",
+      "it": "Weather Institute"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "Weather Institute",
+      "en": "Weather Institute",
+      "fr": "Weather Institute",
+      "es": "Weather Institute",
+      "it": "Weather Institute"
+    },
+    "badge": null,
+    "max_level": 50
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "May",
+      "en": "May",
+      "fr": "May",
+      "es": "May",
+      "it": "May"
+    },
+    "location": {
+      "de": "Weather Institute",
+      "en": "Weather Institute",
+      "fr": "Weather Institute",
+      "es": "Weather Institute",
+      "it": "Weather Institute"
+    },
+    "badge": null,
+    "max_level": 50
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Wibke",
+      "en": "Winona",
+      "fr": "Alizée",
+      "es": "Alana",
+      "it": "Winona"
+    },
+    "location": {
+      "de": "Baumhausen City",
+      "en": "Fortree City",
+      "fr": "Cimetronelle",
+      "es": "Ciudad Arborada",
+      "it": "Forestopoli"
+    },
+    "badge": {
+      "de": "Federorden",
+      "en": "Feather Badge",
+      "fr": "Badge Plume",
+      "es": "Medalla Pluma",
+      "it": "Medaglia Piuma"
+    },
+    "max_level": 55
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Brendan",
+      "en": "Brendan",
+      "fr": "Brendan",
+      "es": "Brendan",
+      "it": "Brendan"
+    },
+    "location": {
+      "de": "Lilycove City",
+      "en": "Lilycove City",
+      "fr": "Lilycove City",
+      "es": "Lilycove City",
+      "it": "Lilycove City"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "May",
+      "en": "May",
+      "fr": "May",
+      "es": "May",
+      "it": "May"
+    },
+    "location": {
+      "de": "Lilycove City",
+      "en": "Lilycove City",
+      "fr": "Lilycove City",
+      "es": "Lilycove City",
+      "it": "Lilycove City"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Aqua Admin Matt",
+      "en": "Aqua Admin Matt",
+      "fr": "Aqua Admin Matt",
+      "es": "Aqua Admin Matt",
+      "it": "Aqua Admin Matt"
+    },
+    "location": {
+      "de": "Mt. Pyre",
+      "en": "Mt. Pyre",
+      "fr": "Mt. Pyre",
+      "es": "Mt. Pyre",
+      "it": "Mt. Pyre"
+    },
+    "badge": null,
+    "max_level": 58
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Magma Admin Courtney",
+      "en": "Magma Admin Courtney",
+      "fr": "Magma Admin Courtney",
+      "es": "Magma Admin Courtney",
+      "it": "Magma Admin Courtney"
+    },
+    "location": {
+      "de": "Magma Hideout",
+      "en": "Magma Hideout",
+      "fr": "Magma Hideout",
+      "es": "Magma Hideout",
+      "it": "Magma Hideout"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Magma Leader Maxie",
+      "en": "Magma Leader Maxie",
+      "fr": "Magma Leader Maxie",
+      "es": "Magma Leader Maxie",
+      "it": "Magma Leader Maxie"
+    },
+    "location": {
+      "de": "Magma Hideout",
+      "en": "Magma Hideout",
+      "fr": "Magma Hideout",
+      "es": "Magma Hideout",
+      "it": "Magma Hideout"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Aqua Admin Matt",
+      "en": "Aqua Admin Matt",
+      "fr": "Aqua Admin Matt",
+      "es": "Aqua Admin Matt",
+      "it": "Aqua Admin Matt"
+    },
+    "location": {
+      "de": "Aqua Hideout",
+      "en": "Aqua Hideout",
+      "fr": "Aqua Hideout",
+      "es": "Aqua Hideout",
+      "it": "Aqua Hideout"
+    },
+    "badge": null,
+    "max_level": 67
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Ben & Svenja",
+      "en": "Tate & Liza",
+      "fr": "Lévy & Tatia",
+      "es": "Vito & Leti",
+      "it": "Tate & Liza"
+    },
+    "location": {
+      "de": "Moosbach City",
+      "en": "Mossdeep City",
+      "fr": "Algatia",
+      "es": "Ciudad Algaria",
+      "it": "Verdeazzupoli"
+    },
+    "badge": {
+      "de": "Psychoorden",
+      "en": "Mind Badge",
+      "fr": "Badge Esprit",
+      "es": "Medalla Mente",
+      "it": "Medaglia Mente"
+    },
+    "max_level": 70
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Magma Admin Courtney",
+      "en": "Magma Admin Courtney",
+      "fr": "Magma Admin Courtney",
+      "es": "Magma Admin Courtney",
+      "it": "Magma Admin Courtney"
+    },
+    "location": {
+      "de": "Mossdeep Space Center",
+      "en": "Mossdeep Space Center",
+      "fr": "Mossdeep Space Center",
+      "es": "Mossdeep Space Center",
+      "it": "Mossdeep Space Center"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Magma Leader Maxie & Admin Tabitha",
+      "en": "Magma Leader Maxie & Admin Tabitha",
+      "fr": "Magma Leader Maxie & Admin Tabitha",
+      "es": "Magma Leader Maxie & Admin Tabitha",
+      "it": "Magma Leader Maxie & Admin Tabitha"
+    },
+    "location": {
+      "de": "Mossdeep Space Center",
+      "en": "Mossdeep Space Center",
+      "fr": "Mossdeep Space Center",
+      "es": "Mossdeep Space Center",
+      "it": "Mossdeep Space Center"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Aqua Admin Shelly",
+      "en": "Aqua Admin Shelly",
+      "fr": "Aqua Admin Shelly",
+      "es": "Aqua Admin Shelly",
+      "it": "Aqua Admin Shelly"
+    },
+    "location": {
+      "de": "Seafloor Cavern",
+      "en": "Seafloor Cavern",
+      "fr": "Seafloor Cavern",
+      "es": "Seafloor Cavern",
+      "it": "Seafloor Cavern"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Aqua Leader Archie",
+      "en": "Aqua Leader Archie",
+      "fr": "Aqua Leader Archie",
+      "es": "Aqua Leader Archie",
+      "it": "Aqua Leader Archie"
+    },
+    "location": {
+      "de": "Seafloor Cavern",
+      "en": "Seafloor Cavern",
+      "fr": "Seafloor Cavern",
+      "es": "Seafloor Cavern",
+      "it": "Seafloor Cavern"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Wassili",
+      "en": "Wallace",
+      "fr": "Marc",
+      "es": "Plubio",
+      "it": "Wallace"
+    },
+    "location": {
+      "de": "Sootopolis Gym",
+      "en": "Sootopolis Gym",
+      "fr": "Sootopolis Gym",
+      "es": "Sootopolis Gym",
+      "it": "Sootopolis Gym"
+    },
+    "badge": null,
+    "max_level": 77
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Juan",
+      "en": "Juan",
+      "fr": "Juan",
+      "es": "Galano",
+      "it": "Juan"
+    },
+    "location": {
+      "de": "Xeneroville",
+      "en": "Sootopolis City",
+      "fr": "Atalanopolis",
+      "es": "Arrecípolis",
+      "it": "Ceneride"
+    },
+    "badge": {
+      "de": "Regenorden",
+      "en": "Rain Badge",
+      "fr": "Badge Pluie",
+      "es": "Medalla Lluvia",
+      "it": "Medaglia Pioggia"
+    },
+    "max_level": 77
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Heiko",
+      "en": "Wally",
+      "fr": "Timmy",
+      "es": "Blasco",
+      "it": "Wally"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 88
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Ulrich",
+      "en": "Sidney",
+      "fr": "Damien",
+      "es": "Sixto",
+      "it": "Sidney"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Antonia",
+      "en": "Phoebe",
+      "fr": "Spectra",
+      "es": "Fátima",
+      "it": "Phoebe"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Frosina",
+      "en": "Glacia",
+      "fr": "Glacia",
+      "es": "Nívea",
+      "it": "Glacia"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Dragan",
+      "en": "Drake",
+      "fr": "Aragon",
+      "es": "Dracón",
+      "it": "Drake"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Troy Trumm",
+      "en": "Steven",
+      "fr": "Steven",
+      "es": "Steven",
+      "it": "Steven"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 100
+  }
+]

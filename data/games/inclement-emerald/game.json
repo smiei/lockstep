@@ -1,0 +1,21 @@
+{
+  "id": "inclement-emerald",
+  "sort": 37,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dataGeneration": 7,
+  "dexLimit": 800,
+  "spriteSet": "emerald",
+  "versionGroup": "emerald",
+  "trainerSet": "emerald",
+  "speciesData": "inclement-emerald",
+  "names": {
+    "de": "Inclement Emerald",
+    "en": "Inclement Emerald",
+    "fr": "Inclement Emerald",
+    "es": "Inclement Emerald",
+    "it": "Inclement Emerald"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (incem)"
+}

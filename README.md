@@ -143,6 +143,7 @@ npm start
 | 4 | Platinum, HeartGold, SoulSilver | checked |
 | 5 | Black, White | unverified |
 | Fan game | Pokémon Infinite Fusion (Classic and Remix), with fusions and the game's own data | unverified |
+| ROM hacks | Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, New Generations, with each hack's own stats, types and moves | unverified |
 
 "Route data" is the list and order of routes plus the place names. **Checked** packs were compared against the game. **Unverified** ones may contain mistakes, and the app says so when you pick one. Corrections are welcome as an issue.
 
@@ -181,6 +182,7 @@ This project stands on the work of others. Thank you!
 - **[Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18)** — the game's own stats, moves, trainer levels and capture code. Fusion sprites come from its sprite community.
 - **[Pokémon League Badges](https://github.com/SteGriff/pokemon-badges)** by Stephen Griffiths — the badge icons (CC BY 3.0, cropped from the sheet).
 - **[PokéWiki](https://www.pokewiki.de/)**, **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics and level caps.
+- **[nuzlocke.app](https://github.com/domtronn/nuzlocke.app)** (fork [Bassel-T/nuzlocke.app](https://github.com/Bassel-T/nuzlocke.app)) — the ROM-hack route lists, boss teams and the hacks' stat, type and move changes (BSD 3-Clause).
 - **[Pokémon Showdown](https://pokemonshowdown.com/)** — the boss trainer pictures, downloaded on first start.
 - Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Familjen Grotesk](https://fonts.google.com/specimen/Familjen+Grotesk) and [Red Hat Mono](https://fonts.google.com/specimen/Red+Hat+Mono) fonts.
 

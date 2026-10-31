@@ -109,6 +109,14 @@ Evolutions a hack or randomizer changes, e.g. trade evolutions turned into level
 - **`category`:** one of `impossible` (trade evolutions replaced), `easier` (lowered levels) or `timeBased` (day/night conditions dropped). Each has a switch in the Rules tab.
 - **`method.kind`:** `level` (`level`), `item` (`item`), `levelHeld` (`item`), `levelWith` (`name`), `levelMove` (`move`), `levelParty` (`species`), `levelLocation` (`location`), `happiness`, `trade`, `shed`, `beauty` or `other`. The field in brackets is required for that kind.
 
+### ROM hacks: their own stats, types and moves
+
+The built-in ROM-hack packs carry two more files:
+- `data/shared/<id>-species.json`, referenced from `game.json` as `"speciesData"`, holds the Pokémon whose stats or types the hack changes;
+- `move-overrides.json` holds the moves whose power, type or category it changes.
+
+They are generated from nuzlocke.app's data by `node scripts/import-nuzlocke-app.mjs`, and changed evolutions and catch rates are not part of that source. Packs you import or contribute cannot carry species data yet; open an issue if your hack needs it.
+
 ## Writing a pack as a text list
 
 You don't have to write JSON by hand. A plain text list works too; see [`docs/examples/game-pack-example.txt`](examples/game-pack-example.txt):

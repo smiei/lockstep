@@ -1,0 +1,21 @@
+{
+  "id": "renegade-platinum",
+  "sort": 30,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 4,
+  "dataGeneration": 6,
+  "dexLimit": 721,
+  "spriteSet": "platinum",
+  "versionGroup": "platinum",
+  "trainerSet": "platinum",
+  "speciesData": "renegade-platinum",
+  "names": {
+    "de": "Renegade Platinum",
+    "en": "Renegade Platinum",
+    "fr": "Renegade Platinum",
+    "es": "Renegade Platinum",
+    "it": "Renegade Platinum"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (renplat)"
+}

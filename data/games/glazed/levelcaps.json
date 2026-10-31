@@ -1,0 +1,1541 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "OceanView Power Plant",
+      "en": "OceanView Power Plant",
+      "fr": "OceanView Power Plant",
+      "es": "OceanView Power Plant",
+      "it": "OceanView Power Plant"
+    },
+    "badge": null,
+    "max_level": 14
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Sparky",
+      "en": "Sparky",
+      "fr": "Sparky",
+      "es": "Sparky",
+      "it": "Sparky"
+    },
+    "location": {
+      "de": "Oceanview City Gym",
+      "en": "Oceanview City Gym",
+      "fr": "Oceanview City Gym",
+      "es": "Oceanview City Gym",
+      "it": "Oceanview City Gym"
+    },
+    "badge": null,
+    "max_level": 15
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Terry",
+      "en": "Terry",
+      "fr": "Terry",
+      "es": "Terry",
+      "it": "Terry"
+    },
+    "location": {
+      "de": "Serenity Isle Gym",
+      "en": "Serenity Isle Gym",
+      "fr": "Serenity Isle Gym",
+      "es": "Serenity Isle Gym",
+      "it": "Serenity Isle Gym"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Fusion Boss Michael",
+      "en": "Fusion Boss Michael",
+      "fr": "Fusion Boss Michael",
+      "es": "Fusion Boss Michael",
+      "it": "Fusion Boss Michael"
+    },
+    "location": {
+      "de": "Haunted Rock",
+      "en": "Haunted Rock",
+      "fr": "Haunted Rock",
+      "es": "Haunted Rock",
+      "it": "Haunted Rock"
+    },
+    "badge": null,
+    "max_level": 25
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Seaspray Town",
+      "en": "Seaspray Town",
+      "fr": "Seaspray Town",
+      "es": "Seaspray Town",
+      "it": "Seaspray Town"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Percy",
+      "en": "Percy",
+      "fr": "Percy",
+      "es": "Percy",
+      "it": "Percy"
+    },
+    "location": {
+      "de": "Geminite Village",
+      "en": "Geminite Village",
+      "fr": "Geminite Village",
+      "es": "Geminite Village",
+      "it": "Geminite Village"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Cato",
+      "en": "Cato",
+      "fr": "Cato",
+      "es": "Cato",
+      "it": "Cato"
+    },
+    "location": {
+      "de": "Seaspray Town Gym",
+      "en": "Seaspray Town Gym",
+      "fr": "Seaspray Town Gym",
+      "es": "Seaspray Town Gym",
+      "it": "Seaspray Town Gym"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Flo",
+      "en": "Flo",
+      "fr": "Flo",
+      "es": "Flo",
+      "it": "Flo"
+    },
+    "location": {
+      "de": "Seaspray Town Gym",
+      "en": "Seaspray Town Gym",
+      "fr": "Seaspray Town Gym",
+      "es": "Seaspray Town Gym",
+      "it": "Seaspray Town Gym"
+    },
+    "badge": null,
+    "max_level": 31
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Lief",
+      "en": "Lief",
+      "fr": "Lief",
+      "es": "Lief",
+      "it": "Lief"
+    },
+    "location": {
+      "de": "Stormy City Gym",
+      "en": "Stormy City Gym",
+      "fr": "Stormy City Gym",
+      "es": "Stormy City Gym",
+      "it": "Stormy City Gym"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Team Fusion Henri",
+      "en": "Team Fusion Henri",
+      "fr": "Team Fusion Henri",
+      "es": "Team Fusion Henri",
+      "it": "Team Fusion Henri"
+    },
+    "location": {
+      "de": "Trainer Isle",
+      "en": "Trainer Isle",
+      "fr": "Trainer Isle",
+      "es": "Trainer Isle",
+      "it": "Trainer Isle"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Percy",
+      "en": "Percy",
+      "fr": "Percy",
+      "es": "Percy",
+      "it": "Percy"
+    },
+    "location": {
+      "de": "Northcoast Town Gym",
+      "en": "Northcoast Town Gym",
+      "fr": "Northcoast Town Gym",
+      "es": "Northcoast Town Gym",
+      "it": "Northcoast Town Gym"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Irene",
+      "en": "Irene",
+      "fr": "Irene",
+      "es": "Irene",
+      "it": "Irene"
+    },
+    "location": {
+      "de": "Northcoast Town Gym",
+      "en": "Northcoast Town Gym",
+      "fr": "Northcoast Town Gym",
+      "es": "Northcoast Town Gym",
+      "it": "Northcoast Town Gym"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Tunod Safari Zone",
+      "en": "Tunod Safari Zone",
+      "fr": "Tunod Safari Zone",
+      "es": "Tunod Safari Zone",
+      "it": "Tunod Safari Zone"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Cato",
+      "en": "Cato",
+      "fr": "Cato",
+      "es": "Cato",
+      "it": "Cato"
+    },
+    "location": {
+      "de": "Southerly City",
+      "en": "Southerly City",
+      "fr": "Southerly City",
+      "es": "Southerly City",
+      "it": "Southerly City"
+    },
+    "badge": null,
+    "max_level": 35
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Fusion Boss Michael",
+      "en": "Fusion Boss Michael",
+      "fr": "Fusion Boss Michael",
+      "es": "Fusion Boss Michael",
+      "it": "Fusion Boss Michael"
+    },
+    "location": {
+      "de": "Temporal Tower",
+      "en": "Temporal Tower",
+      "fr": "Temporal Tower",
+      "es": "Temporal Tower",
+      "it": "Temporal Tower"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Ernest",
+      "en": "Ernest",
+      "fr": "Ernest",
+      "es": "Ernest",
+      "it": "Ernest"
+    },
+    "location": {
+      "de": "Southerly City Gym",
+      "en": "Southerly City Gym",
+      "fr": "Southerly City Gym",
+      "es": "Southerly City Gym",
+      "it": "Southerly City Gym"
+    },
+    "badge": null,
+    "max_level": 39
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Nicole",
+      "en": "Nicole",
+      "fr": "Nicole",
+      "es": "Nicole",
+      "it": "Nicole"
+    },
+    "location": {
+      "de": "Palmtree Resort Gym",
+      "en": "Palmtree Resort Gym",
+      "fr": "Palmtree Resort Gym",
+      "es": "Palmtree Resort Gym",
+      "it": "Palmtree Resort Gym"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Fusion Boss Regina",
+      "en": "Fusion Boss Regina",
+      "fr": "Fusion Boss Regina",
+      "es": "Fusion Boss Regina",
+      "it": "Fusion Boss Regina"
+    },
+    "location": {
+      "de": "Fusion Labs",
+      "en": "Fusion Labs",
+      "fr": "Fusion Labs",
+      "es": "Fusion Labs",
+      "it": "Fusion Labs"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Fusion Boss Michael",
+      "en": "Fusion Boss Michael",
+      "fr": "Fusion Boss Michael",
+      "es": "Fusion Boss Michael",
+      "it": "Fusion Boss Michael"
+    },
+    "location": {
+      "de": "Fusion Labs",
+      "en": "Fusion Labs",
+      "fr": "Fusion Labs",
+      "es": "Fusion Labs",
+      "it": "Fusion Labs"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Cameron (optional)",
+      "en": "Cameron (optional)",
+      "fr": "Cameron (optional)",
+      "es": "Cameron (optional)",
+      "it": "Cameron (optional)"
+    },
+    "location": {
+      "de": "Cameron's Dojo",
+      "en": "Cameron's Dojo",
+      "fr": "Cameron's Dojo",
+      "es": "Cameron's Dojo",
+      "it": "Cameron's Dojo"
+    },
+    "badge": null,
+    "max_level": 50
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Percy",
+      "en": "Percy",
+      "fr": "Percy",
+      "es": "Percy",
+      "it": "Percy"
+    },
+    "location": {
+      "de": "Darkwood Town",
+      "en": "Darkwood Town",
+      "fr": "Darkwood Town",
+      "es": "Darkwood Town",
+      "it": "Darkwood Town"
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Tyson",
+      "en": "Tyson",
+      "fr": "Tyson",
+      "es": "Tyson",
+      "it": "Tyson"
+    },
+    "location": {
+      "de": "Darkwood Town Gym",
+      "en": "Darkwood Town Gym",
+      "fr": "Darkwood Town Gym",
+      "es": "Darkwood Town Gym",
+      "it": "Darkwood Town Gym"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Soheal",
+      "en": "Soheal",
+      "fr": "Soheal",
+      "es": "Soheal",
+      "it": "Soheal"
+    },
+    "location": {
+      "de": "Soheal's Strait",
+      "en": "Soheal's Strait",
+      "fr": "Soheal's Strait",
+      "es": "Soheal's Strait",
+      "it": "Soheal's Strait"
+    },
+    "badge": null,
+    "max_level": 50
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Path of Victory",
+      "en": "Path of Victory",
+      "fr": "Path of Victory",
+      "es": "Path of Victory",
+      "it": "Path of Victory"
+    },
+    "badge": null,
+    "max_level": 44
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Lucbui",
+      "en": "Lucbui",
+      "fr": "Lucbui",
+      "es": "Lucbui",
+      "it": "Lucbui"
+    },
+    "location": {
+      "de": "Path of Victory",
+      "en": "Path of Victory",
+      "fr": "Path of Victory",
+      "es": "Path of Victory",
+      "it": "Path of Victory"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Cato",
+      "en": "Cato",
+      "fr": "Cato",
+      "es": "Cato",
+      "it": "Cato"
+    },
+    "location": {
+      "de": "Tunod League",
+      "en": "Tunod League",
+      "fr": "Tunod League",
+      "es": "Tunod League",
+      "it": "Tunod League"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Rosaline",
+      "en": "Rosaline",
+      "fr": "Rosaline",
+      "es": "Rosaline",
+      "it": "Rosaline"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Magnus",
+      "en": "Magnus",
+      "fr": "Magnus",
+      "es": "Magnus",
+      "it": "Magnus"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Tanya",
+      "en": "Tanya",
+      "fr": "Tanya",
+      "es": "Tanya",
+      "it": "Tanya"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 52
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Gray",
+      "en": "Gray",
+      "fr": "Gray",
+      "es": "Gray",
+      "it": "Gray"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Blake",
+      "en": "Blake",
+      "fr": "Blake",
+      "es": "Blake",
+      "it": "Blake"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Fusion Boss Rgina",
+      "en": "Fusion Boss Rgina",
+      "fr": "Fusion Boss Rgina",
+      "es": "Fusion Boss Rgina",
+      "it": "Fusion Boss Rgina"
+    },
+    "location": {
+      "de": "Ruins of Alph",
+      "en": "Ruins of Alph",
+      "fr": "Ruins of Alph",
+      "es": "Ruins of Alph",
+      "it": "Ruins of Alph"
+    },
+    "badge": null,
+    "max_level": 52
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Cato",
+      "en": "Cato",
+      "fr": "Cato",
+      "es": "Cato",
+      "it": "Cato"
+    },
+    "location": {
+      "de": "Ruins of Alph",
+      "en": "Ruins of Alph",
+      "fr": "Ruins of Alph",
+      "es": "Ruins of Alph",
+      "it": "Ruins of Alph"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Falkner",
+      "en": "Falkner",
+      "fr": "Falkner",
+      "es": "Falkner",
+      "it": "Falkner"
+    },
+    "location": {
+      "de": "Violet City Gym",
+      "en": "Violet City Gym",
+      "fr": "Violet City Gym",
+      "es": "Violet City Gym",
+      "it": "Violet City Gym"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "morty",
+      "en": "morty",
+      "fr": "morty",
+      "es": "morty",
+      "it": "morty"
+    },
+    "location": {
+      "de": "Ecruteak City Gym",
+      "en": "Ecruteak City Gym",
+      "fr": "Ecruteak City Gym",
+      "es": "Ecruteak City Gym",
+      "it": "Ecruteak City Gym"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Route 39",
+      "en": "Route 39",
+      "fr": "Route 39",
+      "es": "Route 39",
+      "it": "Route 39"
+    },
+    "badge": null,
+    "max_level": 44
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Jasmine",
+      "en": "Jasmine",
+      "fr": "Jasmine",
+      "es": "Jasmine",
+      "it": "Jasmine"
+    },
+    "location": {
+      "de": "Olivine City Gym",
+      "en": "Olivine City Gym",
+      "fr": "Olivine City Gym",
+      "es": "Olivine City Gym",
+      "it": "Olivine City Gym"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Fusion Boss Regina",
+      "en": "Fusion Boss Regina",
+      "fr": "Fusion Boss Regina",
+      "es": "Fusion Boss Regina",
+      "it": "Fusion Boss Regina"
+    },
+    "location": {
+      "de": "Ilex Forst",
+      "en": "Ilex Forst",
+      "fr": "Ilex Forst",
+      "es": "Ilex Forst",
+      "it": "Ilex Forst"
+    },
+    "badge": null,
+    "max_level": 61
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Bugsy",
+      "en": "Bugsy",
+      "fr": "Bugsy",
+      "es": "Bugsy",
+      "it": "Bugsy"
+    },
+    "location": {
+      "de": "Azalea Town Gym",
+      "en": "Azalea Town Gym",
+      "fr": "Azalea Town Gym",
+      "es": "Azalea Town Gym",
+      "it": "Azalea Town Gym"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Simon",
+      "en": "Simon",
+      "fr": "Simon",
+      "es": "Simon",
+      "it": "Simon"
+    },
+    "location": {
+      "de": "Goldenrod City Gym",
+      "en": "Goldenrod City Gym",
+      "fr": "Goldenrod City Gym",
+      "es": "Goldenrod City Gym",
+      "it": "Goldenrod City Gym"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Alpha Lader Pius & Alpha Sexton",
+      "en": "Alpha Lader Pius & Alpha Sexton",
+      "fr": "Alpha Lader Pius & Alpha Sexton",
+      "es": "Alpha Lader Pius & Alpha Sexton",
+      "it": "Alpha Lader Pius & Alpha Sexton"
+    },
+    "location": {
+      "de": "Church of Alph",
+      "en": "Church of Alph",
+      "fr": "Church of Alph",
+      "es": "Church of Alph",
+      "it": "Church of Alph"
+    },
+    "badge": null,
+    "max_level": 64
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Brian",
+      "en": "Brian",
+      "fr": "Brian",
+      "es": "Brian",
+      "it": "Brian"
+    },
+    "location": {
+      "de": "Whitewood City Gym",
+      "en": "Whitewood City Gym",
+      "fr": "Whitewood City Gym",
+      "es": "Whitewood City Gym",
+      "it": "Whitewood City Gym"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Lucbui",
+      "en": "Lucbui",
+      "fr": "Lucbui",
+      "es": "Lucbui",
+      "it": "Lucbui"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Flo",
+      "en": "Flo",
+      "fr": "Flo",
+      "es": "Flo",
+      "it": "Flo"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Irene",
+      "en": "Irene",
+      "fr": "Irene",
+      "es": "Irene",
+      "it": "Irene"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Ernest",
+      "en": "Ernest",
+      "fr": "Ernest",
+      "es": "Ernest",
+      "it": "Ernest"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Alexa",
+      "en": "Alexa",
+      "fr": "Alexa",
+      "es": "Alexa",
+      "it": "Alexa"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 69
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Sparky",
+      "en": "Sparky",
+      "fr": "Sparky",
+      "es": "Sparky",
+      "it": "Sparky"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Lief",
+      "en": "Lief",
+      "fr": "Lief",
+      "es": "Lief",
+      "it": "Lief"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Nicole",
+      "en": "Nicole",
+      "fr": "Nicole",
+      "es": "Nicole",
+      "it": "Nicole"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Tyson",
+      "en": "Tyson",
+      "fr": "Tyson",
+      "es": "Tyson",
+      "it": "Tyson"
+    },
+    "location": {
+      "de": "Cianwood Dojo",
+      "en": "Cianwood Dojo",
+      "fr": "Cianwood Dojo",
+      "es": "Cianwood Dojo",
+      "it": "Cianwood Dojo"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Evergreen Town",
+      "en": "Evergreen Town",
+      "fr": "Evergreen Town",
+      "es": "Evergreen Town",
+      "it": "Evergreen Town"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Silver",
+      "en": "Silver",
+      "fr": "Silver",
+      "es": "Silver",
+      "it": "Silver"
+    },
+    "location": {
+      "de": "Evergreen Town Gym",
+      "en": "Evergreen Town Gym",
+      "fr": "Evergreen Town Gym",
+      "es": "Evergreen Town Gym",
+      "it": "Evergreen Town Gym"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Fusion Boss Regina",
+      "en": "Fusion Boss Regina",
+      "fr": "Fusion Boss Regina",
+      "es": "Fusion Boss Regina",
+      "it": "Fusion Boss Regina"
+    },
+    "location": {
+      "de": "Bell Tower Rooftop",
+      "en": "Bell Tower Rooftop",
+      "fr": "Bell Tower Rooftop",
+      "es": "Bell Tower Rooftop",
+      "it": "Bell Tower Rooftop"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Clair",
+      "en": "Clair",
+      "fr": "Clair",
+      "es": "Clair",
+      "it": "Clair"
+    },
+    "location": {
+      "de": "Blackthorn City Gym",
+      "en": "Blackthorn City Gym",
+      "fr": "Blackthorn City Gym",
+      "es": "Blackthorn City Gym",
+      "it": "Blackthorn City Gym"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Johto Victory Road",
+      "en": "Johto Victory Road",
+      "fr": "Johto Victory Road",
+      "es": "Johto Victory Road",
+      "it": "Johto Victory Road"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Cato",
+      "en": "Cato",
+      "fr": "Cato",
+      "es": "Cato",
+      "it": "Cato"
+    },
+    "location": {
+      "de": "Johto League",
+      "en": "Johto League",
+      "fr": "Johto League",
+      "es": "Johto League",
+      "it": "Johto League"
+    },
+    "badge": null,
+    "max_level": 71
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Ivan",
+      "en": "Ivan",
+      "fr": "Ivan",
+      "es": "Ivan",
+      "it": "Ivan"
+    },
+    "location": {
+      "de": "Johto League",
+      "en": "Johto League",
+      "fr": "Johto League",
+      "es": "Johto League",
+      "it": "Johto League"
+    },
+    "badge": null,
+    "max_level": 79
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Whitney",
+      "en": "Whitney",
+      "fr": "Whitney",
+      "es": "Whitney",
+      "it": "Whitney"
+    },
+    "location": {
+      "de": "Johto League",
+      "en": "Johto League",
+      "fr": "Johto League",
+      "es": "Johto League",
+      "it": "Johto League"
+    },
+    "badge": null,
+    "max_level": 80
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Powell",
+      "en": "Powell",
+      "fr": "Powell",
+      "es": "Powell",
+      "it": "Powell"
+    },
+    "location": {
+      "de": "Johto League",
+      "en": "Johto League",
+      "fr": "Johto League",
+      "es": "Johto League",
+      "it": "Johto League"
+    },
+    "badge": null,
+    "max_level": 82
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Eusine",
+      "en": "Eusine",
+      "fr": "Eusine",
+      "es": "Eusine",
+      "it": "Eusine"
+    },
+    "location": {
+      "de": "Johto League",
+      "en": "Johto League",
+      "fr": "Johto League",
+      "es": "Johto League",
+      "it": "Johto League"
+    },
+    "badge": null,
+    "max_level": 83
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Kris",
+      "en": "Kris",
+      "fr": "Kris",
+      "es": "Kris",
+      "it": "Kris"
+    },
+    "location": {
+      "de": "Johto League Champion",
+      "en": "Johto League Champion",
+      "fr": "Johto League Champion",
+      "es": "Johto League Champion",
+      "it": "Johto League Champion"
+    },
+    "badge": null,
+    "max_level": 85
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Olcan Isle",
+      "en": "Olcan Isle",
+      "fr": "Olcan Isle",
+      "es": "Olcan Isle",
+      "it": "Olcan Isle"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Tye",
+      "en": "Tye",
+      "fr": "Tye",
+      "es": "Tye",
+      "it": "Tye"
+    },
+    "location": {
+      "de": "Nitro Isle",
+      "en": "Nitro Isle",
+      "fr": "Nitro Isle",
+      "es": "Nitro Isle",
+      "it": "Nitro Isle"
+    },
+    "badge": null,
+    "max_level": 76
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Walter",
+      "en": "Wattson",
+      "fr": "Voltère",
+      "es": "Erico",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Nitor Isle",
+      "en": "Nitor Isle",
+      "fr": "Nitor Isle",
+      "es": "Nitor Isle",
+      "it": "Nitor Isle"
+    },
+    "badge": null,
+    "max_level": 78
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Thor",
+      "en": "Thor",
+      "fr": "Thor",
+      "es": "Thor",
+      "it": "Thor"
+    },
+    "location": {
+      "de": "Nitro Isle Gym",
+      "en": "Nitro Isle Gym",
+      "fr": "Nitro Isle Gym",
+      "es": "Nitro Isle Gym",
+      "it": "Nitro Isle Gym"
+    },
+    "badge": null,
+    "max_level": 82
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Ricky",
+      "en": "Ricky",
+      "fr": "Ricky",
+      "es": "Ricky",
+      "it": "Ricky"
+    },
+    "location": {
+      "de": "Kolo Isle Gym",
+      "en": "Kolo Isle Gym",
+      "fr": "Kolo Isle Gym",
+      "es": "Kolo Isle Gym",
+      "it": "Kolo Isle Gym"
+    },
+    "badge": null,
+    "max_level": 82
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Tye",
+      "en": "Tye",
+      "fr": "Tye",
+      "es": "Tye",
+      "it": "Tye"
+    },
+    "location": {
+      "de": "Alpha Isle",
+      "en": "Alpha Isle",
+      "fr": "Alpha Isle",
+      "es": "Alpha Isle",
+      "it": "Alpha Isle"
+    },
+    "badge": null,
+    "max_level": 80
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Gym Guardian Will",
+      "en": "Gym Guardian Will",
+      "fr": "Gym Guardian Will",
+      "es": "Gym Guardian Will",
+      "it": "Gym Guardian Will"
+    },
+    "location": {
+      "de": "Alpha Isle",
+      "en": "Alpha Isle",
+      "fr": "Alpha Isle",
+      "es": "Alpha Isle",
+      "it": "Alpha Isle"
+    },
+    "badge": null,
+    "max_level": 78
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Sora",
+      "en": "Sora",
+      "fr": "Sora",
+      "es": "Sora",
+      "it": "Sora"
+    },
+    "location": {
+      "de": "Alpha Isle Gym",
+      "en": "Alpha Isle Gym",
+      "fr": "Alpha Isle Gym",
+      "es": "Alpha Isle Gym",
+      "it": "Alpha Isle Gym"
+    },
+    "badge": null,
+    "max_level": 84
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Fusion Boss Regina",
+      "en": "Fusion Boss Regina",
+      "fr": "Fusion Boss Regina",
+      "es": "Fusion Boss Regina",
+      "it": "Fusion Boss Regina"
+    },
+    "location": {
+      "de": "Mt. Frozon",
+      "en": "Mt. Frozon",
+      "fr": "Mt. Frozon",
+      "es": "Mt. Frozon",
+      "it": "Mt. Frozon"
+    },
+    "badge": null,
+    "max_level": 81
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "PokeFan X",
+      "en": "PokeFan X",
+      "fr": "PokeFan X",
+      "es": "PokeFan X",
+      "it": "PokeFan X"
+    },
+    "location": {
+      "de": "Mt. Frozon",
+      "en": "Mt. Frozon",
+      "fr": "Mt. Frozon",
+      "es": "Mt. Frozon",
+      "it": "Mt. Frozon"
+    },
+    "badge": null,
+    "max_level": 82
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Makunouchi",
+      "en": "Makunouchi",
+      "fr": "Makunouchi",
+      "es": "Makunouchi",
+      "it": "Makunouchi"
+    },
+    "location": {
+      "de": "Reign Isle Gym",
+      "en": "Reign Isle Gym",
+      "fr": "Reign Isle Gym",
+      "es": "Reign Isle Gym",
+      "it": "Reign Isle Gym"
+    },
+    "badge": null,
+    "max_level": 87
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Alpha Sexton",
+      "en": "Alpha Sexton",
+      "fr": "Alpha Sexton",
+      "es": "Alpha Sexton",
+      "it": "Alpha Sexton"
+    },
+    "location": {
+      "de": "Peaks of Alpha",
+      "en": "Peaks of Alpha",
+      "fr": "Peaks of Alpha",
+      "es": "Peaks of Alpha",
+      "it": "Peaks of Alpha"
+    },
+    "badge": null,
+    "max_level": 83
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Alpha Sexton",
+      "en": "Alpha Sexton",
+      "fr": "Alpha Sexton",
+      "es": "Alpha Sexton",
+      "it": "Alpha Sexton"
+    },
+    "location": {
+      "de": "Peaks of Alpha",
+      "en": "Peaks of Alpha",
+      "fr": "Peaks of Alpha",
+      "es": "Peaks of Alpha",
+      "it": "Peaks of Alpha"
+    },
+    "badge": null,
+    "max_level": 81
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Alpha Leader Pius",
+      "en": "Alpha Leader Pius",
+      "fr": "Alpha Leader Pius",
+      "es": "Alpha Leader Pius",
+      "it": "Alpha Leader Pius"
+    },
+    "location": {
+      "de": "Peaks of Alpha",
+      "en": "Peaks of Alpha",
+      "fr": "Peaks of Alpha",
+      "es": "Peaks of Alpha",
+      "it": "Peaks of Alpha"
+    },
+    "badge": null,
+    "max_level": 83
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Fusion Boss Regina",
+      "en": "Fusion Boss Regina",
+      "fr": "Fusion Boss Regina",
+      "es": "Fusion Boss Regina",
+      "it": "Fusion Boss Regina"
+    },
+    "location": {
+      "de": "Peaks of Alpha",
+      "en": "Peaks of Alpha",
+      "fr": "Peaks of Alpha",
+      "es": "Peaks of Alpha",
+      "it": "Peaks of Alpha"
+    },
+    "badge": null,
+    "max_level": 83
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Tye",
+      "en": "Tye",
+      "fr": "Tye",
+      "es": "Tye",
+      "it": "Tye"
+    },
+    "location": {
+      "de": "Rankor Stadium",
+      "en": "Rankor Stadium",
+      "fr": "Rankor Stadium",
+      "es": "Rankor Stadium",
+      "it": "Rankor Stadium"
+    },
+    "badge": null,
+    "max_level": 86
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Chelle",
+      "en": "Chelle",
+      "fr": "Chelle",
+      "es": "Chelle",
+      "it": "Chelle"
+    },
+    "location": {
+      "de": "Rankor Stadium",
+      "en": "Rankor Stadium",
+      "fr": "Rankor Stadium",
+      "es": "Rankor Stadium",
+      "it": "Rankor Stadium"
+    },
+    "badge": null,
+    "max_level": 87
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Soul",
+      "en": "Soul",
+      "fr": "Soul",
+      "es": "Soul",
+      "it": "Soul"
+    },
+    "location": {
+      "de": "Rankor Championship Battle",
+      "en": "Rankor Championship Battle",
+      "fr": "Rankor Championship Battle",
+      "es": "Rankor Championship Battle",
+      "it": "Rankor Championship Battle"
+    },
+    "badge": null,
+    "max_level": 94
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Pokemon Trainer Red",
+      "en": "Pokemon Trainer Red",
+      "fr": "Pokemon Trainer Red",
+      "es": "Pokemon Trainer Red",
+      "it": "Pokemon Trainer Red"
+    },
+    "location": {
+      "de": "Mt. Silver",
+      "en": "Mt. Silver",
+      "fr": "Mt. Silver",
+      "es": "Mt. Silver",
+      "it": "Mt. Silver"
+    },
+    "badge": null,
+    "max_level": 100
+  }
+]

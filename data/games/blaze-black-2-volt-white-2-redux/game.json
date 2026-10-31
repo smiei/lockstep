@@ -1,0 +1,21 @@
+{
+  "id": "blaze-black-2-volt-white-2-redux",
+  "sort": 35,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 5,
+  "dataGeneration": 6,
+  "dexLimit": 721,
+  "spriteSet": "black-white",
+  "versionGroup": "black-white",
+  "trainerSet": "black-white",
+  "speciesData": "blaze-black-2-volt-white-2-redux",
+  "names": {
+    "de": "Blaze Black 2 / Volt White 2 Redux",
+    "en": "Blaze Black 2 / Volt White 2 Redux",
+    "fr": "Blaze Black 2 / Volt White 2 Redux",
+    "es": "Blaze Black 2 / Volt White 2 Redux",
+    "it": "Blaze Black 2 / Volt White 2 Redux"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (blazevolt2)"
+}

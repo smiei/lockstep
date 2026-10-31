@@ -132,3 +132,33 @@ describe("npm run pack -- from-text", () => {
     expect(validateBundle(JSON.parse(out), ctx).filter((issue) => issue.level === "error")).toEqual([]);
   });
 });
+
+describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
+  const moves = read(path.join(root, "data", "moves.json")) as Record<string, unknown>;
+  const ids = new Set(pokemon.map((p) => p.id));
+  for (const id of readdirSync(gamesDir)) {
+    const dir = path.join(gamesDir, id);
+    const game = read(path.join(dir, "game.json"));
+    const overrides = path.join(dir, "move-overrides.json");
+    if (existsSync(overrides)) {
+      it(`${id}: move overrides name real moves with sane values`, () => {
+        for (const [name, change] of Object.entries(read(overrides) as Record<string, Record<string, unknown>>)) {
+          expect(moves[name], name).toBeDefined();
+          if (change.power !== undefined) expect(Number.isInteger(change.power) && (change.power as number) >= 0, name).toBe(true);
+          if (change.damageClass !== undefined) expect(["physical", "special", "status"]).toContain(change.damageClass);
+        }
+      });
+    }
+    if (game.speciesData) {
+      it(`${id}: species data exists and covers known Pokemon`, () => {
+        const file = path.join(root, "data", "shared", `${game.speciesData}-species.json`);
+        expect(existsSync(file)).toBe(true);
+        for (const entry of read(file).species as { id: number; types: string[]; stats: Record<string, number> }[]) {
+          expect(ids.has(entry.id), String(entry.id)).toBe(true);
+          expect(entry.types.length).toBeGreaterThan(0);
+          expect(entry.stats.Summe).toBeGreaterThan(0);
+        }
+      });
+    }
+  }
+});

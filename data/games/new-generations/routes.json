@@ -1,0 +1,519 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Inicial",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Vertania City",
+      "en": "Viridian City",
+      "fr": "Jadielle",
+      "es": "Ciudad Verde",
+      "it": "Smeraldopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Viridan Forest",
+      "en": "Viridan Forest",
+      "fr": "Viridan Forest",
+      "es": "Viridan Forest",
+      "it": "Viridan Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Ruta 22",
+      "it": "Percorso 22"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Pewter City",
+      "en": "Pewter City",
+      "fr": "Pewter City",
+      "es": "Pewter City",
+      "it": "Pewter City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Mondberg",
+      "en": "Mt. Moon",
+      "fr": "Mont Sélénite",
+      "es": "Monte Luna",
+      "it": "Monte Luna"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Azuria City",
+      "en": "Cerulean City",
+      "fr": "Azuria",
+      "es": "Ciudad Celeste",
+      "it": "Celestopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Route 24",
+      "en": "Route 24",
+      "fr": "Route 24",
+      "es": "Ruta 24",
+      "it": "Percorso 24"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Route 25",
+      "en": "Route 25",
+      "fr": "Route 25",
+      "es": "Ruta 25",
+      "it": "Percorso 25"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Ruta 6",
+      "it": "Percorso 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Orania City",
+      "en": "Vermilion City",
+      "fr": "Carmin sur Mer",
+      "es": "Ciudad Carmín",
+      "it": "Aranciopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Long Cave",
+      "en": "Long Cave",
+      "fr": "Long Cave",
+      "es": "Long Cave",
+      "it": "Long Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Ruta 10",
+      "it": "Percorso 10"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Kraftwerk",
+      "en": "Power Plant",
+      "fr": "Centrale",
+      "es": "Central Energía",
+      "it": "Centrale Elettrica"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Felstunnel",
+      "en": "Rock Tunnel",
+      "fr": "Grotte",
+      "es": "Túnel Roca",
+      "it": "Tunnel Roccioso"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Lavender Town",
+      "en": "Lavender Town",
+      "fr": "Lavender Town",
+      "es": "Lavender Town",
+      "it": "Lavender Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Gift House",
+      "en": "Gift House",
+      "fr": "Gift House",
+      "es": "Gift House",
+      "it": "Gift House"
+    },
+    "type": "static"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Prismania City",
+      "en": "Celadon City",
+      "fr": "Céladopole",
+      "es": "Ciudad Azulona",
+      "it": "Azzurropoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Pokémon-Turm",
+      "en": "Pokémon Tower",
+      "fr": "Tour Pokémon",
+      "es": "Torre Pokémon",
+      "it": "Torre Pokémon"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Fuchsania City",
+      "en": "Fuchsia City",
+      "fr": "Parmanie",
+      "es": "Ciudad Fucsia",
+      "it": "Fucsiapoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Safari-Zone",
+      "en": "Safari Zone",
+      "fr": "Parc Safari",
+      "es": "Zona Safari",
+      "it": "Zona Safari"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Saffron City",
+      "en": "Saffron City",
+      "fr": "Saffron City",
+      "es": "Saffron City",
+      "it": "Saffron City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Ruta 16",
+      "it": "Percorso 16"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Ruta 17",
+      "it": "Percorso 17"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Route 18",
+      "en": "Route 18",
+      "fr": "Route 18",
+      "es": "Ruta 18",
+      "it": "Percorso 18"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Chenal 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Route 20",
+      "en": "Route 20",
+      "fr": "Chenal 20",
+      "es": "Ruta 20",
+      "it": "Percorso 20"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Route 21",
+      "en": "Route 21",
+      "fr": "Chenal 21",
+      "es": "Ruta 21",
+      "it": "Percorso 21"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Seafom Islands",
+      "en": "Seafom Islands",
+      "fr": "Seafom Islands",
+      "es": "Seafom Islands",
+      "it": "Seafom Islands"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Pokémon-Villa",
+      "en": "Pokémon Mansion",
+      "fr": "Manoir Pokémon",
+      "es": "Mansión Pokémon",
+      "it": "Villa Pokémon"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Zinnoberinsel",
+      "en": "Cinnabar Island",
+      "fr": "Cramois'Ile",
+      "es": "Isla Canela",
+      "it": "Cinabropoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Route 23",
+      "en": "Route 23",
+      "fr": "Route 23",
+      "es": "Ruta 23",
+      "it": "Percorso 23"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Indigo Plateau",
+      "en": "Indigo Plateau",
+      "fr": "Indigo Plateau",
+      "es": "Indigo Plateau",
+      "it": "Indigo Plateau"
+    },
+    "type": "route"
+  }
+]

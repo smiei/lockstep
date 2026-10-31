@@ -1,0 +1,918 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Hugh",
+      "en": "Hugh",
+      "fr": "Hugh",
+      "es": "Hugh",
+      "it": "Hugh"
+    },
+    "location": {
+      "de": "Aspertia City",
+      "en": "Aspertia City",
+      "fr": "Aspertia City",
+      "es": "Aspertia City",
+      "it": "Aspertia City"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Hugh",
+      "en": "Hugh",
+      "fr": "Hugh",
+      "es": "Hugh",
+      "it": "Hugh"
+    },
+    "location": {
+      "de": "Floccesy Ranch",
+      "en": "Floccesy Ranch",
+      "fr": "Floccesy Ranch",
+      "es": "Floccesy Ranch",
+      "it": "Floccesy Ranch"
+    },
+    "badge": null,
+    "max_level": 10
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Roxanne",
+      "en": "Roxanne",
+      "fr": "Roxanne",
+      "es": "Roxanne",
+      "it": "Roxanne"
+    },
+    "location": {
+      "de": "Aspertia City Trainer School",
+      "en": "Aspertia City Trainer School",
+      "fr": "Aspertia City Trainer School",
+      "es": "Aspertia City Trainer School",
+      "it": "Aspertia City Trainer School"
+    },
+    "badge": null,
+    "max_level": 11
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Cheren",
+      "en": "Cheren",
+      "fr": "Cheren",
+      "es": "Cheren",
+      "it": "Cheren"
+    },
+    "location": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "badge": null,
+    "max_level": 13
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Brawly",
+      "en": "Brawly",
+      "fr": "Brawly",
+      "es": "Brawly",
+      "it": "Brawly"
+    },
+    "location": {
+      "de": "Virbank City",
+      "en": "Virbank City",
+      "fr": "Virbank City",
+      "es": "Virbank City",
+      "it": "Virbank City"
+    },
+    "badge": null,
+    "max_level": 18
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Roxie",
+      "en": "Roxie",
+      "fr": "Roxie",
+      "es": "Roxie",
+      "it": "Roxie"
+    },
+    "location": {
+      "de": "Virbank City Gym",
+      "en": "Virbank City Gym",
+      "fr": "Virbank City Gym",
+      "es": "Virbank City Gym",
+      "it": "Virbank City Gym"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Sandro",
+      "en": "Brycen",
+      "fr": "Brycen",
+      "es": "Brycen",
+      "it": "Brycen"
+    },
+    "location": {
+      "de": "Nevaio City",
+      "en": "Icirrus City",
+      "fr": "Flocombe",
+      "es": "Icirrus City",
+      "it": "Icirrus City"
+    },
+    "badge": {
+      "de": "Frost-Orden",
+      "en": "Freeze Badge",
+      "fr": "Freeze Badge",
+      "es": "Freeze Badge",
+      "it": "Freeze Badge"
+    },
+    "max_level": 20
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Wattson",
+      "en": "Wattson",
+      "fr": "Wattson",
+      "es": "Wattson",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Café Sonata",
+      "en": "Café Sonata",
+      "fr": "Café Sonata",
+      "es": "Café Sonata",
+      "it": "Café Sonata"
+    },
+    "badge": null,
+    "max_level": 26
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Artie",
+      "en": "Burgh",
+      "fr": "Burgh",
+      "es": "Burgh",
+      "it": "Burgh"
+    },
+    "location": {
+      "de": "Stratos City",
+      "en": "Castelia City",
+      "fr": "Volucité",
+      "es": "Castelia City",
+      "it": "Castelia City"
+    },
+    "badge": {
+      "de": "Insekt-Orden",
+      "en": "Insect Badge",
+      "fr": "Insect Badge",
+      "es": "Insect Badge",
+      "it": "Insect Badge"
+    },
+    "max_level": 27
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Colress",
+      "en": "Colress",
+      "fr": "Colress",
+      "es": "Colress",
+      "it": "Colress"
+    },
+    "location": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Route 4",
+      "it": "Route 4"
+    },
+    "badge": null,
+    "max_level": 28
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Aloe",
+      "en": "Lenora",
+      "fr": "Lenora",
+      "es": "Lenora",
+      "it": "Lenora"
+    },
+    "location": {
+      "de": "Septerna City",
+      "en": "Nacrene City",
+      "fr": "Maillard",
+      "es": "Nacrene City",
+      "it": "Nacrene City"
+    },
+    "badge": {
+      "de": "Basis-Orden",
+      "en": "Basic Badge",
+      "fr": "Basic Badge",
+      "es": "Basic Badge",
+      "it": "Basic Badge"
+    },
+    "max_level": 30
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Ingo & Emmet",
+      "en": "Ingo & Emmet",
+      "fr": "Ingo & Emmet",
+      "es": "Ingo & Emmet",
+      "it": "Ingo & Emmet"
+    },
+    "location": {
+      "de": "Nimbasa Subway",
+      "en": "Nimbasa Subway",
+      "fr": "Nimbasa Subway",
+      "es": "Nimbasa Subway",
+      "it": "Nimbasa Subway"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Nate & Rosa",
+      "en": "Nate & Rosa",
+      "fr": "Nate & Rosa",
+      "es": "Nate & Rosa",
+      "it": "Nate & Rosa"
+    },
+    "location": {
+      "de": "Nimbasa Subway",
+      "en": "Nimbasa Subway",
+      "fr": "Nimbasa Subway",
+      "es": "Nimbasa Subway",
+      "it": "Nimbasa Subway"
+    },
+    "badge": null,
+    "max_level": 31
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Flannery",
+      "en": "Flannery",
+      "fr": "Flannery",
+      "es": "Flannery",
+      "it": "Flannery"
+    },
+    "location": {
+      "de": "Big Stadium",
+      "en": "Big Stadium",
+      "fr": "Big Stadium",
+      "es": "Big Stadium",
+      "it": "Big Stadium"
+    },
+    "badge": null,
+    "max_level": 35
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Kamilla",
+      "en": "Elesa",
+      "fr": "Elesa",
+      "es": "Elesa",
+      "it": "Elesa"
+    },
+    "location": {
+      "de": "Rayono City",
+      "en": "Nimbasa City",
+      "fr": "Méanville",
+      "es": "Nimbasa City",
+      "it": "Nimbasa City"
+    },
+    "badge": {
+      "de": "Blitz-Orden",
+      "en": "Bolt Badge",
+      "fr": "Bolt Badge",
+      "es": "Bolt Badge",
+      "it": "Bolt Badge"
+    },
+    "max_level": 36
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Charles",
+      "en": "Charles",
+      "fr": "Charles",
+      "es": "Charles",
+      "it": "Charles"
+    },
+    "location": {
+      "de": "Nimbasa City",
+      "en": "Nimbasa City",
+      "fr": "Nimbasa City",
+      "es": "Nimbasa City",
+      "it": "Nimbasa City"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Rood",
+      "en": "Rood",
+      "fr": "Rood",
+      "es": "Rood",
+      "it": "Rood"
+    },
+    "location": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Route 6",
+      "it": "Route 6"
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Norman",
+      "en": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "location": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Route 6",
+      "it": "Route 6"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Turner",
+      "en": "Clay",
+      "fr": "Clay",
+      "es": "Clay",
+      "it": "Clay"
+    },
+    "location": {
+      "de": "Marea City",
+      "en": "Driftveil City",
+      "fr": "Port Yoneuve",
+      "es": "Driftveil City",
+      "it": "Driftveil City"
+    },
+    "badge": {
+      "de": "Beben-Orden",
+      "en": "Quake Badge",
+      "fr": "Quake Badge",
+      "es": "Quake Badge",
+      "it": "Quake Badge"
+    },
+    "max_level": 43
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Hugh",
+      "en": "Hugh",
+      "fr": "Hugh",
+      "es": "Hugh",
+      "it": "Hugh"
+    },
+    "location": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Route 6",
+      "it": "Route 6"
+    },
+    "badge": null,
+    "max_level": 47
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Colress",
+      "en": "Colress",
+      "fr": "Colress",
+      "es": "Colress",
+      "it": "Colress"
+    },
+    "location": {
+      "de": "Twist Mountain",
+      "en": "Twist Mountain",
+      "fr": "Twist Mountain",
+      "es": "Twist Mountain",
+      "it": "Twist Mountain"
+    },
+    "badge": null,
+    "max_level": 52
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Juan",
+      "en": "Juan",
+      "fr": "Juan",
+      "es": "Juan",
+      "it": "Juan"
+    },
+    "location": {
+      "de": "Mistralton City",
+      "en": "Mistralton City",
+      "fr": "Mistralton City",
+      "es": "Mistralton City",
+      "it": "Mistralton City"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Géraldine",
+      "en": "Skyla",
+      "fr": "Skyla",
+      "es": "Skyla",
+      "it": "Skyla"
+    },
+    "location": {
+      "de": "Panaero City",
+      "en": "Mistralton City",
+      "fr": "Parsemille",
+      "es": "Mistralton City",
+      "it": "Mistralton City"
+    },
+    "badge": {
+      "de": "Jet-Orden",
+      "en": "Jet Badge",
+      "fr": "Jet Badge",
+      "es": "Jet Badge",
+      "it": "Jet Badge"
+    },
+    "max_level": 52
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Bel",
+      "en": "Bianca",
+      "fr": "Bianca",
+      "es": "Bianca",
+      "it": "Bianca"
+    },
+    "location": {
+      "de": "Reversal Mountain",
+      "en": "Reversal Mountain",
+      "fr": "Reversal Mountain",
+      "es": "Reversal Mountain",
+      "it": "Reversal Mountain"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Hugh",
+      "en": "Hugh",
+      "fr": "Hugh",
+      "es": "Hugh",
+      "it": "Hugh"
+    },
+    "location": {
+      "de": "Undella Town",
+      "en": "Undella Town",
+      "fr": "Undella Town",
+      "es": "Undella Town",
+      "it": "Undella Town"
+    },
+    "badge": null,
+    "max_level": 54
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Zinzolin & Grunt",
+      "en": "Zinzolin & Grunt",
+      "fr": "Zinzolin & Grunt",
+      "es": "Zinzolin & Grunt",
+      "it": "Zinzolin & Grunt"
+    },
+    "location": {
+      "de": "Lacunosa Town",
+      "en": "Lacunosa Town",
+      "fr": "Lacunosa Town",
+      "es": "Lacunosa Town",
+      "it": "Lacunosa Town"
+    },
+    "badge": null,
+    "max_level": 56
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Benga",
+      "en": "Benga",
+      "fr": "Benga",
+      "es": "Benga",
+      "it": "Benga"
+    },
+    "location": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Route 12",
+      "it": "Route 12"
+    },
+    "badge": null,
+    "max_level": 56
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Winona",
+      "en": "Winona",
+      "fr": "Winona",
+      "es": "Winona",
+      "it": "Winona"
+    },
+    "location": {
+      "de": "Opelucid City",
+      "en": "Opelucid City",
+      "fr": "Opelucid City",
+      "es": "Opelucid City",
+      "it": "Opelucid City"
+    },
+    "badge": null,
+    "max_level": 59
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Lysander",
+      "en": "Drayden",
+      "fr": "Drayden",
+      "es": "Drayden",
+      "it": "Drayden"
+    },
+    "location": {
+      "de": "Twindrake City",
+      "en": "Opelucid City",
+      "fr": "Janusia",
+      "es": "Opelucid City",
+      "it": "Opelucid City"
+    },
+    "badge": {
+      "de": "Legenden-Orden",
+      "en": "Legend Badge",
+      "fr": "Legend Badge",
+      "es": "Legend Badge",
+      "it": "Legend Badge"
+    },
+    "max_level": 61
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Zinzolin & Grunt",
+      "en": "Zinzolin & Grunt",
+      "fr": "Zinzolin & Grunt",
+      "es": "Zinzolin & Grunt",
+      "it": "Zinzolin & Grunt"
+    },
+    "location": {
+      "de": "Opelucid City",
+      "en": "Opelucid City",
+      "fr": "Opelucid City",
+      "es": "Opelucid City",
+      "it": "Opelucid City"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Tate & Liza",
+      "en": "Tate & Liza",
+      "fr": "Tate & Liza",
+      "es": "Tate & Liza",
+      "it": "Tate & Liza"
+    },
+    "location": {
+      "de": "Humilau City",
+      "en": "Humilau City",
+      "fr": "Humilau City",
+      "es": "Humilau City",
+      "it": "Humilau City"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Marlon",
+      "en": "Marlon",
+      "fr": "Marlon",
+      "es": "Marlon",
+      "it": "Marlon"
+    },
+    "location": {
+      "de": "Humilau City Gym",
+      "en": "Humilau City Gym",
+      "fr": "Humilau City Gym",
+      "es": "Humilau City Gym",
+      "it": "Humilau City Gym"
+    },
+    "badge": null,
+    "max_level": 64
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Zinzolin & grunt",
+      "en": "Zinzolin & grunt",
+      "fr": "Zinzolin & grunt",
+      "es": "Zinzolin & grunt",
+      "it": "Zinzolin & grunt"
+    },
+    "location": {
+      "de": "Containment Room",
+      "en": "Containment Room",
+      "fr": "Containment Room",
+      "es": "Containment Room",
+      "it": "Containment Room"
+    },
+    "badge": null,
+    "max_level": 64
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Zinzolin",
+      "en": "Zinzolin",
+      "fr": "Zinzolin",
+      "es": "Zinzolin",
+      "it": "Zinzolin"
+    },
+    "location": {
+      "de": "Plasma Frigate",
+      "en": "Plasma Frigate",
+      "fr": "Plasma Frigate",
+      "es": "Plasma Frigate",
+      "it": "Plasma Frigate"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Colress",
+      "en": "Colress",
+      "fr": "Colress",
+      "es": "Colress",
+      "it": "Colress"
+    },
+    "location": {
+      "de": "Plasma Frigate",
+      "en": "Plasma Frigate",
+      "fr": "Plasma Frigate",
+      "es": "Plasma Frigate",
+      "it": "Plasma Frigate"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "G-Cis",
+      "en": "Ghetsis",
+      "fr": "Ghetsis",
+      "es": "Ghetsis",
+      "it": "Ghetsis"
+    },
+    "location": {
+      "de": "Giant Chasm",
+      "en": "Giant Chasm",
+      "fr": "Giant Chasm",
+      "es": "Giant Chasm",
+      "it": "Giant Chasm"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Hail Trainer Caroll",
+      "en": "Hail Trainer Caroll",
+      "fr": "Hail Trainer Caroll",
+      "es": "Hail Trainer Caroll",
+      "it": "Hail Trainer Caroll"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Sun Trainer Elmer",
+      "en": "Sun Trainer Elmer",
+      "fr": "Sun Trainer Elmer",
+      "es": "Sun Trainer Elmer",
+      "it": "Sun Trainer Elmer"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Rain Trainer Porta",
+      "en": "Rain Trainer Porta",
+      "fr": "Rain Trainer Porta",
+      "es": "Rain Trainer Porta",
+      "it": "Rain Trainer Porta"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Sand Trainer Sterling",
+      "en": "Sand Trainer Sterling",
+      "fr": "Sand Trainer Sterling",
+      "es": "Sand Trainer Sterling",
+      "it": "Sand Trainer Sterling"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Hugh",
+      "en": "Hugh",
+      "fr": "Hugh",
+      "es": "Hugh",
+      "it": "Hugh"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Anissa",
+      "en": "Shauntal",
+      "fr": "Shauntal",
+      "es": "Shauntal",
+      "it": "Shauntal"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Astor",
+      "en": "Grimsley",
+      "fr": "Grimsley",
+      "es": "Grimsley",
+      "it": "Grimsley"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Kattlea",
+      "en": "Caitlin",
+      "fr": "Caitlin",
+      "es": "Caitlin",
+      "it": "Caitlin"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Eugen",
+      "en": "Marshal",
+      "fr": "Marshal",
+      "es": "Marshal",
+      "it": "Marshal"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Iris",
+      "en": "Iris",
+      "fr": "Iris",
+      "es": "Iris",
+      "it": "Iris"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 75
+  }
+]

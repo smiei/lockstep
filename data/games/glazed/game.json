@@ -1,0 +1,20 @@
+{
+  "id": "glazed",
+  "sort": 40,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dataGeneration": 6,
+  "dexLimit": 721,
+  "spriteSet": "emerald",
+  "versionGroup": "emerald",
+  "trainerSet": "emerald",
+  "names": {
+    "de": "Glazed",
+    "en": "Glazed",
+    "fr": "Glazed",
+    "es": "Glazed",
+    "it": "Glazed"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (glazed)"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "storm-silver",
+  "sort": 32,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 4,
+  "dexLimit": 493,
+  "spriteSet": "heartgold-soulsilver",
+  "versionGroup": "heartgold-soulsilver",
+  "trainerSet": "heartgold-soulsilver",
+  "speciesData": "storm-silver",
+  "names": {
+    "de": "Storm Silver",
+    "en": "Storm Silver",
+    "fr": "Storm Silver",
+    "es": "Storm Silver",
+    "it": "Storm Silver"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (stormsilv)"
+}

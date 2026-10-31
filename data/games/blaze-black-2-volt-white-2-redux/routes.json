@@ -1,0 +1,707 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Aspertia City",
+      "en": "Aspertia City",
+      "fr": "Aspertia City",
+      "es": "Aspertia City",
+      "it": "Aspertia City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Route 19",
+      "es": "Route 19",
+      "it": "Route 19"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Floccesy Town",
+      "en": "Floccesy Town",
+      "fr": "Floccesy Town",
+      "es": "Floccesy Town",
+      "it": "Floccesy Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 20",
+      "en": "Route 20",
+      "fr": "Route 20",
+      "es": "Route 20",
+      "it": "Route 20"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Floccesy Ranch",
+      "en": "Floccesy Ranch",
+      "fr": "Floccesy Ranch",
+      "es": "Floccesy Ranch",
+      "it": "Floccesy Ranch"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Virbank City",
+      "en": "Virbank City",
+      "fr": "Virbank City",
+      "es": "Virbank City",
+      "it": "Virbank City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Virbank Complex",
+      "en": "Virbank Complex",
+      "fr": "Virbank Complex",
+      "es": "Virbank Complex",
+      "it": "Virbank Complex"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Stratos City",
+      "en": "Castelia City",
+      "fr": "Volucité",
+      "es": "Castelia City",
+      "it": "Castelia City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Castelia Sewers",
+      "en": "Castelia Sewers",
+      "fr": "Castelia Sewers",
+      "es": "Castelia Sewers",
+      "it": "Castelia Sewers"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Relic Passage",
+      "en": "Relic Passage",
+      "fr": "Relic Passage",
+      "es": "Relic Passage",
+      "it": "Relic Passage"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Wüstenresort",
+      "en": "Desert Resort",
+      "fr": "Désert Délassant",
+      "es": "Desert Resort",
+      "it": "Desert Resort"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Alter Palast",
+      "en": "Relic Castle",
+      "fr": "Château Enfoui",
+      "es": "Relic Castle",
+      "it": "Relic Castle"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Anville Town",
+      "en": "Anville Town",
+      "fr": "Anville Town",
+      "es": "Anville Town",
+      "it": "Anville Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Ruta 16",
+      "it": "Percorso 16"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Hain der Täuschung",
+      "en": "Lostlorn Forest",
+      "fr": "Bois des Illusions",
+      "es": "Lostlorn Forest",
+      "it": "Lostlorn Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Marea-Zugbrücke",
+      "en": "Driftveil Drawbridge",
+      "fr": "Pont Yoneuve",
+      "es": "Driftveil Drawbridge",
+      "it": "Driftveil Drawbridge"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Marea City",
+      "en": "Driftveil City",
+      "fr": "Port Yoneuve",
+      "es": "Driftveil City",
+      "it": "Driftveil City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Ruta 6",
+      "it": "Percorso 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Clay Tunnel",
+      "en": "Clay Tunnel",
+      "fr": "Clay Tunnel",
+      "es": "Clay Tunnel",
+      "it": "Clay Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Panaero-Höhle",
+      "en": "Mistralton Cave",
+      "fr": "Grotte Parsemille",
+      "es": "Mistralton Cave",
+      "it": "Mistralton Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Elektrolithhöhle",
+      "en": "Chargestone Cave",
+      "fr": "Grotte Électrolithe",
+      "es": "Chargestone Cave",
+      "it": "Chargestone Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Turm des Himmels",
+      "en": "Celestial Tower",
+      "fr": "Tour des Cieux",
+      "es": "Celestial Tower",
+      "it": "Celestial Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Reversal Mountain",
+      "en": "Reversal Mountain",
+      "fr": "Reversal Mountain",
+      "es": "Reversal Mountain",
+      "it": "Reversal Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Strange House",
+      "en": "Strange House",
+      "fr": "Strange House",
+      "es": "Strange House",
+      "it": "Strange House"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Ondula",
+      "en": "Undella Town",
+      "fr": "Vaguelone",
+      "es": "Undella Town",
+      "it": "Undella Town"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Bucht von Ondula",
+      "en": "Undella Bay",
+      "fr": "Baie Vaguelone",
+      "es": "Undella Bay",
+      "it": "Undella Bay"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Schrein der Ernte",
+      "en": "Abundant Shrine",
+      "fr": "Autel Abondance",
+      "es": "Abundant Shrine",
+      "it": "Abundant Shrine"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Seaside Cave",
+      "en": "Seaside Cave",
+      "fr": "Seaside Cave",
+      "es": "Seaside Cave",
+      "it": "Seaside Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Dorfbrücke",
+      "en": "Village Bridge",
+      "fr": "Pont du Hameau",
+      "es": "Village Bridge",
+      "it": "Village Bridge"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Route 21",
+      "en": "Route 21",
+      "fr": "Route 21",
+      "es": "Route 21",
+      "it": "Route 21"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Humilau City",
+      "en": "Humilau City",
+      "fr": "Humilau City",
+      "es": "Humilau City",
+      "it": "Humilau City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Route 22",
+      "it": "Route 22"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Team Plasma Safehouse",
+      "en": "Team Plasma Safehouse",
+      "fr": "Team Plasma Safehouse",
+      "es": "Team Plasma Safehouse",
+      "it": "Team Plasma Safehouse"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Giants Chasm",
+      "en": "Giants Chasm",
+      "fr": "Giants Chasm",
+      "es": "Giants Chasm",
+      "it": "Giants Chasm"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Route 23",
+      "en": "Route 23",
+      "fr": "Route 23",
+      "es": "Route 23",
+      "it": "Route 23"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Moor von Nevaio",
+      "en": "Moor of Icirrus",
+      "fr": "Tourbière Flocombe",
+      "es": "Moor of Icirrus",
+      "it": "Moor of Icirrus"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Nevaio City",
+      "en": "Icirrus City",
+      "fr": "Flocombe",
+      "es": "Icirrus City",
+      "it": "Icirrus City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Drachenstiege",
+      "en": "Dragonspiral Tower",
+      "fr": "Tour Dragospire",
+      "es": "Dragonspiral Tower",
+      "it": "Dragonspiral Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Wendelberg",
+      "en": "Twist Mountain",
+      "fr": "Mont Foré",
+      "es": "Twist Mountain",
+      "it": "Twist Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Underground Ruins",
+      "en": "Underground Ruins",
+      "fr": "Underground Ruins",
+      "es": "Underground Ruins",
+      "it": "Underground Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Marvellous Bridge",
+      "en": "Marvellous Bridge",
+      "fr": "Marvellous Bridge",
+      "es": "Marvellous Bridge",
+      "it": "Marvellous Bridge"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Ewigenwald",
+      "en": "Pinwheel Forest",
+      "fr": "Forêt d'Empoigne",
+      "es": "Pinwheel Forest",
+      "it": "Pinwheel Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Grundwassersenke",
+      "en": "Wellspring Cave",
+      "fr": "Veine Souterraine",
+      "es": "Wellspring Cave",
+      "it": "Wellspring Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Striation City",
+      "en": "Striation City",
+      "fr": "Striation City",
+      "es": "Striation City",
+      "it": "Striation City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Traumbrache",
+      "en": "Dreamyard",
+      "fr": "Vestiges du Rêve",
+      "es": "Dreamyard",
+      "it": "Dreamyard"
+    },
+    "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Ruta 17",
+      "it": "Percorso 17"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Route 18",
+      "en": "Route 18",
+      "fr": "Route 18",
+      "es": "Ruta 18",
+      "it": "Percorso 18"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "P2-Labor",
+      "en": "P2 Laboratory",
+      "fr": "Labo P2",
+      "es": "P2 Laboratory",
+      "it": "P2 Laboratory"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Nature Preserve",
+      "en": "Nature Preserve",
+      "fr": "Nature Preserve",
+      "es": "Nature Preserve",
+      "it": "Nature Preserve"
+    },
+    "type": "route"
+  }
+]

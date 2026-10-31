@@ -1,0 +1,20 @@
+{
+  "id": "new-generations",
+  "sort": 41,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dexLimit": 386,
+  "spriteSet": "emerald",
+  "versionGroup": "firered-leafgreen",
+  "trainerSet": "firered",
+  "speciesData": "new-generations",
+  "names": {
+    "de": "New Generations",
+    "en": "New Generations",
+    "fr": "New Generations",
+    "es": "New Generations",
+    "it": "New Generations"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (newgen)"
+}

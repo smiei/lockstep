@@ -1,0 +1,20 @@
+{
+  "id": "sacred-gold",
+  "sort": 31,
+  "kind": "romhack",
+  "dataStatus": "unverified",
+  "generation": 4,
+  "dexLimit": 493,
+  "spriteSet": "heartgold-soulsilver",
+  "versionGroup": "heartgold-soulsilver",
+  "trainerSet": "heartgold-soulsilver",
+  "speciesData": "sacred-gold",
+  "names": {
+    "de": "Sacred Gold",
+    "en": "Sacred Gold",
+    "fr": "Sacred Gold",
+    "es": "Sacred Gold",
+    "it": "Sacred Gold"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (sacredgold)"
+}

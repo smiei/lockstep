@@ -1,0 +1,1133 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Barry",
+      "en": "Barry",
+      "fr": "Barry",
+      "es": "Barry",
+      "it": "Barry"
+    },
+    "location": {
+      "de": "Route 201",
+      "en": "Route 201",
+      "fr": "Route 201",
+      "es": "Route 201",
+      "it": "Route 201"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Barry",
+      "en": "Barry",
+      "fr": "Barry",
+      "es": "Barry",
+      "it": "Barry"
+    },
+    "location": {
+      "de": "Route 203",
+      "en": "Route 203",
+      "fr": "Route 203",
+      "es": "Route 203",
+      "it": "Route 203"
+    },
+    "badge": null,
+    "max_level": 11
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Veit",
+      "en": "Roark",
+      "fr": "Pierrick",
+      "es": "Roco",
+      "it": "Roark"
+    },
+    "location": {
+      "de": "Erzelingen",
+      "en": "Oreburgh City",
+      "fr": "Charbourg",
+      "es": "Oreburgh City",
+      "it": "Oreburgh City"
+    },
+    "badge": {
+      "de": "Kohleorden",
+      "en": "Coal Badge",
+      "fr": "Badge Charbon",
+      "es": "Medalla Lignito",
+      "it": "Medaglia Carbone"
+    },
+    "max_level": 16
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Mars",
+      "en": "Mars",
+      "fr": "Mars",
+      "es": "Mars",
+      "it": "Mars"
+    },
+    "location": {
+      "de": "Valley Windoworks",
+      "en": "Valley Windoworks",
+      "fr": "Valley Windoworks",
+      "es": "Valley Windoworks",
+      "it": "Valley Windoworks"
+    },
+    "badge": null,
+    "max_level": 19
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Cheryl",
+      "en": "Cheryl",
+      "fr": "Cheryl",
+      "es": "Cheryl",
+      "it": "Cheryl"
+    },
+    "location": {
+      "de": "Eterna Forest",
+      "en": "Eterna Forest",
+      "fr": "Eterna Forest",
+      "es": "Eterna Forest",
+      "it": "Eterna Forest"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Silvana",
+      "en": "Gardenia",
+      "fr": "Flo",
+      "es": "Gardenia",
+      "it": "Gardenia"
+    },
+    "location": {
+      "de": "Ewigenau",
+      "en": "Eterna City",
+      "fr": "Vestigion",
+      "es": "Eterna City",
+      "it": "Eterna City"
+    },
+    "badge": {
+      "de": "Waldorden",
+      "en": "Forest Badge",
+      "fr": "Badge Forêt",
+      "es": "Medalla Bosque",
+      "it": "Medaglia Foresta"
+    },
+    "max_level": 26
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Jupiter",
+      "en": "Jupiter",
+      "fr": "Jupiter",
+      "es": "Jupiter",
+      "it": "Jupiter"
+    },
+    "location": {
+      "de": "Eterna Building",
+      "en": "Eterna Building",
+      "fr": "Eterna Building",
+      "es": "Eterna Building",
+      "it": "Eterna Building"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Lucas",
+      "en": "Lucas",
+      "fr": "Lucas",
+      "es": "Lucas",
+      "it": "Lucas"
+    },
+    "location": {
+      "de": "Route 207",
+      "en": "Route 207",
+      "fr": "Route 207",
+      "es": "Route 207",
+      "it": "Route 207"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Dawn",
+      "en": "Dawn",
+      "fr": "Dawn",
+      "es": "Dawn",
+      "it": "Dawn"
+    },
+    "location": {
+      "de": "Route 207",
+      "en": "Route 207",
+      "fr": "Route 207",
+      "es": "Route 207",
+      "it": "Route 207"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Mira",
+      "en": "Mira",
+      "fr": "Mira",
+      "es": "Mira",
+      "it": "Mira"
+    },
+    "location": {
+      "de": "Wayward Cave",
+      "en": "Wayward Cave",
+      "fr": "Wayward Cave",
+      "es": "Wayward Cave",
+      "it": "Wayward Cave"
+    },
+    "badge": null,
+    "max_level": 28
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Herbaro",
+      "en": "Aaron",
+      "fr": "Aaron",
+      "es": "Alecrán",
+      "it": "Aaron"
+    },
+    "location": {
+      "de": "Route 208",
+      "en": "Route 208",
+      "fr": "Route 208",
+      "es": "Route 208",
+      "it": "Route 208"
+    },
+    "badge": null,
+    "max_level": 32
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Lamina",
+      "en": "Fantina",
+      "fr": "Kiméra",
+      "es": "Fantina",
+      "it": "Fantina"
+    },
+    "location": {
+      "de": "Herzhofen",
+      "en": "Hearthome City",
+      "fr": "Unionpolis",
+      "es": "Hearthome City",
+      "it": "Hearthome City"
+    },
+    "badge": {
+      "de": "Reliktorden",
+      "en": "Relic Badge",
+      "fr": "Badge Relique",
+      "es": "Medalla Reliquia",
+      "it": "Medaglia Reliquia"
+    },
+    "max_level": 33
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Barry",
+      "en": "Barry",
+      "fr": "Barry",
+      "es": "Barry",
+      "it": "Barry"
+    },
+    "location": {
+      "de": "Hearthome City",
+      "en": "Hearthome City",
+      "fr": "Hearthome City",
+      "es": "Hearthome City",
+      "it": "Hearthome City"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Saturn & Gentleman Backlot",
+      "en": "Saturn & Gentleman Backlot",
+      "fr": "Saturn & Gentleman Backlot",
+      "es": "Saturn & Gentleman Backlot",
+      "it": "Saturn & Gentleman Backlot"
+    },
+    "location": {
+      "de": "Route 212",
+      "en": "Route 212",
+      "fr": "Route 212",
+      "es": "Route 212",
+      "it": "Route 212"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Hilda",
+      "en": "Maylene",
+      "fr": "Mélina",
+      "es": "Brega",
+      "it": "Maylene"
+    },
+    "location": {
+      "de": "Schleiede",
+      "en": "Veilstone City",
+      "fr": "Voilaroc",
+      "es": "Veilstone City",
+      "it": "Veilstone City"
+    },
+    "badge": {
+      "de": "Bergorden",
+      "en": "Cobble Badge",
+      "fr": "Badge Galet",
+      "es": "Medalla Adoquín",
+      "it": "Medaglia Ciottolo"
+    },
+    "max_level": 39
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Dawn",
+      "en": "Dawn",
+      "fr": "Dawn",
+      "es": "Dawn",
+      "it": "Dawn"
+    },
+    "location": {
+      "de": "Route 210",
+      "en": "Route 210",
+      "fr": "Route 210",
+      "es": "Route 210",
+      "it": "Route 210"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Lucas",
+      "en": "Lucas",
+      "fr": "Lucas",
+      "es": "Lucas",
+      "it": "Lucas"
+    },
+    "location": {
+      "de": "Route 210",
+      "en": "Route 210",
+      "fr": "Route 210",
+      "es": "Route 210",
+      "it": "Route 210"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Barry",
+      "en": "Barry",
+      "fr": "Barry",
+      "es": "Barry",
+      "it": "Barry"
+    },
+    "location": {
+      "de": "Pastoria City",
+      "en": "Pastoria City",
+      "fr": "Pastoria City",
+      "es": "Pastoria City",
+      "it": "Pastoria City"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Marinus",
+      "en": "Crasher Wake",
+      "fr": "Lovis",
+      "es": "Mananti",
+      "it": "Crasher Wake"
+    },
+    "location": {
+      "de": "Weideburg",
+      "en": "Pastoria City",
+      "fr": "Verchamps",
+      "es": "Pastoria City",
+      "it": "Pastoria City"
+    },
+    "badge": {
+      "de": "Fennorden",
+      "en": "Fen Badge",
+      "fr": "Badge Fange",
+      "es": "Medalla Ciénaga",
+      "it": "Medaglia Palude"
+    },
+    "max_level": 44
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Zyrus",
+      "en": "Cyrus",
+      "fr": "Hélio",
+      "es": "Helio",
+      "it": "Cyrus"
+    },
+    "location": {
+      "de": "Celestic Town",
+      "en": "Celestic Town",
+      "fr": "Celestic Town",
+      "es": "Celestic Town",
+      "it": "Celestic Town"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Castle Valet Darach",
+      "en": "Castle Valet Darach",
+      "fr": "Castle Valet Darach",
+      "es": "Castle Valet Darach",
+      "it": "Castle Valet Darach"
+    },
+    "location": {
+      "de": "Pal Park",
+      "en": "Pal Park",
+      "fr": "Pal Park",
+      "es": "Pal Park",
+      "it": "Pal Park"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Barry",
+      "en": "Barry",
+      "fr": "Barry",
+      "es": "Barry",
+      "it": "Barry"
+    },
+    "location": {
+      "de": "Canalave City",
+      "en": "Canalave City",
+      "fr": "Canalave City",
+      "es": "Canalave City",
+      "it": "Canalave City"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Riley",
+      "en": "Riley",
+      "fr": "Riley",
+      "es": "Riley",
+      "it": "Riley"
+    },
+    "location": {
+      "de": "Iron Island",
+      "en": "Iron Island",
+      "fr": "Iron Island",
+      "es": "Iron Island",
+      "it": "Iron Island"
+    },
+    "badge": null,
+    "max_level": 50
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Adam",
+      "en": "Byron",
+      "fr": "Charles",
+      "es": "Acerón",
+      "it": "Byron"
+    },
+    "location": {
+      "de": "Fleetburg",
+      "en": "Canalave City",
+      "fr": "Joliberges",
+      "es": "Canalave City",
+      "it": "Canalave City"
+    },
+    "badge": {
+      "de": "Minenorden",
+      "en": "Mine Badge",
+      "fr": "Badge Mine",
+      "es": "Medalla Mina",
+      "it": "Medaglia Miniera"
+    },
+    "max_level": 53
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Saturn",
+      "en": "Saturn",
+      "fr": "Saturn",
+      "es": "Saturn",
+      "it": "Saturn"
+    },
+    "location": {
+      "de": "Valor Cavern",
+      "en": "Valor Cavern",
+      "fr": "Valor Cavern",
+      "es": "Valor Cavern",
+      "it": "Valor Cavern"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Mars",
+      "en": "Mars",
+      "fr": "Mars",
+      "es": "Mars",
+      "it": "Mars"
+    },
+    "location": {
+      "de": "Lake Verity",
+      "en": "Lake Verity",
+      "fr": "Lake Verity",
+      "es": "Lake Verity",
+      "it": "Lake Verity"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Frida",
+      "en": "Candice",
+      "fr": "Gladys",
+      "es": "Inverna",
+      "it": "Candice"
+    },
+    "location": {
+      "de": "Blizzach",
+      "en": "Snowpoint City",
+      "fr": "Frimapic",
+      "es": "Snowpoint City",
+      "it": "Snowpoint City"
+    },
+    "badge": {
+      "de": "Firnorden",
+      "en": "Icicle Badge",
+      "fr": "Badge Glaçon",
+      "es": "Medalla Carámbano",
+      "it": "Medaglia Ghiacciolo"
+    },
+    "max_level": 56
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Zyrus",
+      "en": "Cyrus",
+      "fr": "Hélio",
+      "es": "Helio",
+      "it": "Cyrus"
+    },
+    "location": {
+      "de": "Galactic HQ",
+      "en": "Galactic HQ",
+      "fr": "Galactic HQ",
+      "es": "Galactic HQ",
+      "it": "Galactic HQ"
+    },
+    "badge": null,
+    "max_level": 58
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Saturn",
+      "en": "Saturn",
+      "fr": "Saturn",
+      "es": "Saturn",
+      "it": "Saturn"
+    },
+    "location": {
+      "de": "Galactic HQ",
+      "en": "Galactic HQ",
+      "fr": "Galactic HQ",
+      "es": "Galactic HQ",
+      "it": "Galactic HQ"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Mars & Jupiter",
+      "en": "Mars & Jupiter",
+      "fr": "Mars & Jupiter",
+      "es": "Mars & Jupiter",
+      "it": "Mars & Jupiter"
+    },
+    "location": {
+      "de": "Spear Pillar",
+      "en": "Spear Pillar",
+      "fr": "Spear Pillar",
+      "es": "Spear Pillar",
+      "it": "Spear Pillar"
+    },
+    "badge": null,
+    "max_level": 58
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Zyrus",
+      "en": "Cyrus",
+      "fr": "Hélio",
+      "es": "Helio",
+      "it": "Cyrus"
+    },
+    "location": {
+      "de": "Distortion World",
+      "en": "Distortion World",
+      "fr": "Distortion World",
+      "es": "Distortion World",
+      "it": "Distortion World"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Zyrus",
+      "en": "Cyrus",
+      "fr": "Hélio",
+      "es": "Helio",
+      "it": "Cyrus"
+    },
+    "location": {
+      "de": "Distortion World",
+      "en": "Distortion World",
+      "fr": "Distortion World",
+      "es": "Distortion World",
+      "it": "Distortion World"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Arcade Star Dahlia",
+      "en": "Arcade Star Dahlia",
+      "fr": "Arcade Star Dahlia",
+      "es": "Arcade Star Dahlia",
+      "it": "Arcade Star Dahlia"
+    },
+    "location": {
+      "de": "Sunyshore City",
+      "en": "Sunyshore City",
+      "fr": "Sunyshore City",
+      "es": "Sunyshore City",
+      "it": "Sunyshore City"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Volkner",
+      "en": "Volkner",
+      "fr": "Tanguy",
+      "es": "Lectro",
+      "it": "Volkner"
+    },
+    "location": {
+      "de": "Sonnewik",
+      "en": "Sunyshore City",
+      "fr": "Rivamar",
+      "es": "Sunyshore City",
+      "it": "Sunyshore City"
+    },
+    "badge": {
+      "de": "Lichtorden",
+      "en": "Beacon Badge",
+      "fr": "Badge Phare",
+      "es": "Medalla Faro",
+      "it": "Medaglia Faro"
+    },
+    "max_level": 62
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Lucas",
+      "en": "Lucas",
+      "fr": "Lucas",
+      "es": "Lucas",
+      "it": "Lucas"
+    },
+    "location": {
+      "de": "Route 224",
+      "en": "Route 224",
+      "fr": "Route 224",
+      "es": "Route 224",
+      "it": "Route 224"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Dawn",
+      "en": "Dawn",
+      "fr": "Dawn",
+      "es": "Dawn",
+      "it": "Dawn"
+    },
+    "location": {
+      "de": "Route 224",
+      "en": "Route 224",
+      "fr": "Route 224",
+      "es": "Route 224",
+      "it": "Route 224"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Barry",
+      "en": "Barry",
+      "fr": "Barry",
+      "es": "Barry",
+      "it": "Barry"
+    },
+    "location": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "badge": null,
+    "max_level": 71
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Aaron (Team A)",
+      "en": "Aaron (Team A)",
+      "fr": "Aaron (Team A)",
+      "es": "Aaron (Team A)",
+      "it": "Aaron (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Aaron (Team B)",
+      "en": "Aaron (Team B)",
+      "fr": "Aaron (Team B)",
+      "es": "Aaron (Team B)",
+      "it": "Aaron (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Aaron (Team C)",
+      "en": "Aaron (Team C)",
+      "fr": "Aaron (Team C)",
+      "es": "Aaron (Team C)",
+      "it": "Aaron (Team C)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Aaron (Team D)",
+      "en": "Aaron (Team D)",
+      "fr": "Aaron (Team D)",
+      "es": "Aaron (Team D)",
+      "it": "Aaron (Team D)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 72
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Bertha (Team A)",
+      "en": "Bertha (Team A)",
+      "fr": "Bertha (Team A)",
+      "es": "Bertha (Team A)",
+      "it": "Bertha (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Bertha (Team B)",
+      "en": "Bertha (Team B)",
+      "fr": "Bertha (Team B)",
+      "es": "Bertha (Team B)",
+      "it": "Bertha (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Bertha (Team C)",
+      "en": "Bertha (Team C)",
+      "fr": "Bertha (Team C)",
+      "es": "Bertha (Team C)",
+      "it": "Bertha (Team C)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Bertha (Team D)",
+      "en": "Bertha (Team D)",
+      "fr": "Bertha (Team D)",
+      "es": "Bertha (Team D)",
+      "it": "Bertha (Team D)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 73
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Flint (Team A)",
+      "en": "Flint (Team A)",
+      "fr": "Flint (Team A)",
+      "es": "Flint (Team A)",
+      "it": "Flint (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Flint (Team B)",
+      "en": "Flint (Team B)",
+      "fr": "Flint (Team B)",
+      "es": "Flint (Team B)",
+      "it": "Flint (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Flint (Team C)",
+      "en": "Flint (Team C)",
+      "fr": "Flint (Team C)",
+      "es": "Flint (Team C)",
+      "it": "Flint (Team C)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Flint (Team D)",
+      "en": "Flint (Team D)",
+      "fr": "Flint (Team D)",
+      "es": "Flint (Team D)",
+      "it": "Flint (Team D)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 74
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Lucian (Team A)",
+      "en": "Lucian (Team A)",
+      "fr": "Lucian (Team A)",
+      "es": "Lucian (Team A)",
+      "it": "Lucian (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Lucian (Team B)",
+      "en": "Lucian (Team B)",
+      "fr": "Lucian (Team B)",
+      "es": "Lucian (Team B)",
+      "it": "Lucian (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Lucian (Team C)",
+      "en": "Lucian (Team C)",
+      "fr": "Lucian (Team C)",
+      "es": "Lucian (Team C)",
+      "it": "Lucian (Team C)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Lucian (Team D)",
+      "en": "Lucian (Team D)",
+      "fr": "Lucian (Team D)",
+      "es": "Lucian (Team D)",
+      "it": "Lucian (Team D)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 75
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Cynthia (Team A)",
+      "en": "Cynthia (Team A)",
+      "fr": "Cynthia (Team A)",
+      "es": "Cynthia (Team A)",
+      "it": "Cynthia (Team A)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 78
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Cynthia (Team B)",
+      "en": "Cynthia (Team B)",
+      "fr": "Cynthia (Team B)",
+      "es": "Cynthia (Team B)",
+      "it": "Cynthia (Team B)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 78
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Cynthia (Team C)",
+      "en": "Cynthia (Team C)",
+      "fr": "Cynthia (Team C)",
+      "es": "Cynthia (Team C)",
+      "it": "Cynthia (Team C)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 78
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Cynthia (Team D)",
+      "en": "Cynthia (Team D)",
+      "fr": "Cynthia (Team D)",
+      "es": "Cynthia (Team D)",
+      "it": "Cynthia (Team D)"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 78
+  }
+]
