@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The Windows app build (scripts/build-windows.mjs): a copy of the app
+    // plus its node_modules.
+    "dist/**",
     // Local reference clone (see .gitignore) - a separate Next.js project
     // with its own lint baseline, not part of this app.
     "fboschinfinite-fusion-nuzlocke/**",

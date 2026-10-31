@@ -4,10 +4,42 @@
 
 The tracker is one small web server with a SQLite database. Run it wherever suits you, then open it from any browser on your network. Your phone, a friend's laptop and the PC next to the game can all have the same run open; changes show up on every device live.
 
+- [Windows app](#windows-app) — one download for a Windows PC, runs in the system tray
 - [Docker](#docker) — recommended for home servers (Unraid, Synology, a Raspberry Pi, any Linux box)
 - [Pinokio](#pinokio) — one click on Windows, macOS or Linux
 - [Without Docker](#without-docker) — plain Node.js
 - [Updating](#updating) · [Backups](#backups) · [HTTPS and installing the app](#https-and-installing-the-app) · [Trainer pictures](#trainer-pictures) · [Custom app icon](#custom-app-icon-optional)
+
+## Windows app
+
+The Windows app is the same server with Node.js built in, the way Jellyfin's Windows server works: it runs in the background with an icon in the system tray, and you use Lockstep in the browser.
+
+1. Download **`Lockstep-Setup-<version>.exe`** from the [latest release](https://github.com/smiei/lockstep/releases/latest) and run it. It installs for your user only, into `%LOCALAPPDATA%\Programs\Lockstep`, without admin rights. Prefer no installer? Unpack **`Lockstep-<version>-windows-x64.zip`** anywhere and start `Lockstep.exe`.
+2. The installer is not code-signed, so Windows SmartScreen may say "Windows protected your PC" the first time: click **More info → Run anyway**.
+3. Lockstep starts in the tray and opens your browser at `http://localhost:3000`. The first start downloads the Pokémon sprites, badges and trainer pictures, which takes a few minutes; the tray icon's tooltip says so meanwhile.
+
+**The tray menu:**
+- **Open Lockstep**, also by double-clicking the icon.
+- **Address for other devices**: the address phones and friends' laptops on the same network use, for example `http://192.168.1.20:3000`. Click it to copy it. When the Windows firewall asks on the first start, allow access for private networks, or other devices cannot connect.
+- **Open data folder** and **Open log**.
+- **Start with Windows**: starts Lockstep when you sign in.
+- **Restart server** and **Quit**.
+- When a newer release is out, an **Update available** entry opens its download page.
+
+**Your data** lives in `%LOCALAPPDATA%\Lockstep`, separate from the program:
+
+| File | What it is |
+| --- | --- |
+| `nuzlocke.db` | All your runs. Copy it to back up (with Lockstep quit), or use the backup export in the app. |
+| `custom-games\` | Game packs you imported. |
+| `settings.json` | `{"port": 3000}`. Lockstep picks the next free port when 3000 is taken and remembers it; change it here and restart. |
+| `logs\server.log` | What the server printed, for troubleshooting. |
+
+**Updating:** run the new setup over the old one. Your data and the downloaded images stay. Uninstalling removes the program and the downloaded images, never your data.
+
+**Moving from Docker or another install:** quit Lockstep, copy your `nuzlocke.db` into `%LOCALAPPDATA%\Lockstep` (replacing the empty one) and start it again. The database is migrated on start.
+
+**Installing the app on a phone** needs HTTPS, as with every other way of running Lockstep; see [HTTPS and installing the app](#https-and-installing-the-app). Over plain `http://` on the home network it works in the phone's browser.
 
 ## Docker
 

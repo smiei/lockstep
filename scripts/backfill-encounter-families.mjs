@@ -58,9 +58,11 @@ async function main() {
   const file = path.join(os.tmpdir(), `nuzlocke-familyid-${process.pid}.sql`);
   await writeFile(file, sql, "utf-8");
   try {
-    await run("npx", ["prisma", "db", "execute", "--file", file, "--schema", "prisma/schema.prisma"], {
+    // The CLI's own entry point with this very node, not `npx`: the Windows
+    // app ships node.exe without npm.
+    const prismaCli = path.join(rootDir, "node_modules", "prisma", "build", "index.js");
+    await run(process.execPath, [prismaCli, "db", "execute", "--file", file, "--schema", "prisma/schema.prisma"], {
       cwd: rootDir,
-      shell: process.platform === "win32",
     });
     console.log(`backfill: Encounter.familyId re-synced against ${pairs.length} species`);
   } finally {

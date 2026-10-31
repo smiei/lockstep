@@ -39,6 +39,7 @@ Then open [http://localhost:3000](http://localhost:3000). For checking a product
 | `npm run generate:if-species` / `npm run generate:if-moves` | Regenerate Infinite Fusion's species table and move data from the game's own data files. |
 | `npm run generate:trainer-sprites` | Regenerates `data/trainer-sprite-sources.json`, the map of boss trainers to Pokémon Showdown pictures that the trainer download (and the public deployment) use. Needs the network, about 2 minutes. |
 | `npm run lint` | ESLint. |
+| `npm run build:windows` | Windows only: builds the Windows app into `dist/` (tray program, bundled Node.js, the app; a zip, plus the installer when [Inno Setup](https://jrsoftware.org/isinfo.php) is installed). Set `APP_VERSION` to override the version. |
 | `npm test` | Unit tests for the pure logic, plus a guard test that checks the UI conventions in the source tree. |
 
 All generated data is committed. The generators only need re-running when the underlying data changes.
@@ -83,6 +84,12 @@ Publishing the release starts [`.github/workflows/docker.yml`](../.github/workfl
 From the Actions tab, **Run workflow** builds without publishing. With **push** ticked and a **tag** given, it rebuilds an existing release; `latest` then only moves when **latest** is ticked as well.
 
 The workflow needs no secrets: it pushes with the workflow's own token. A newly created package starts private; set it to public once in its package settings.
+
+The same release also starts [`.github/workflows/windows.yml`](../.github/workflows/windows.yml), which builds the Windows app and attaches `Lockstep-Setup-<version>.exe` and `Lockstep-<version>-windows-x64.zip` to the release. **Run workflow** without **upload** keeps both as a workflow artifact for testing.
+
+### Dependency updates
+
+[Dependabot](../.github/dependabot.yml) opens pull requests every Monday: npm minor and patch updates grouped into one, major versions one at a time, GitHub Actions grouped, and the Docker base image monthly. Security fixes arrive at once. [CI](../.github/workflows/ci.yml) runs the tests, lint and a production build on every pull request; merge an update once it is green. Major versions usually need code changes and a look by hand.
 
 The build passes the version as `APP_VERSION`, which is what the gear menu shows on a Docker install. A non-Docker install takes it from `package.json`.
 
