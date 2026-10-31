@@ -30,6 +30,14 @@ async function main() {
   const pokemon = JSON.parse(
     await readFile(path.join(rootDir, "data", "pokemon.json"), "utf-8"),
   );
+  // ROM hacks' own Pokémon (scripts/import-nuzlocke-app.mjs) carry families too.
+  try {
+    pokemon.push(
+      ...JSON.parse(await readFile(path.join(rootDir, "data", "fakemon.json"), "utf-8")).fakemon,
+    );
+  } catch {
+    // No fakemon file.
+  }
 
   // pokemonId -> family, for species AND formes (a forme shares its species').
   const pairs = pokemon

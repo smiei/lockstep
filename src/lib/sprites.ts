@@ -28,8 +28,11 @@ const IF_BALL_FILES = spriteSources.infiniteFusionBalls as Record<string, string
 const TRAINER_SPRITES = trainerSources.map as Record<string, string>;
 
 // Forme ids (Deoxys' formes, Rotom's appliances, ...) start here - see
-// src/lib/forms.ts.
+// src/lib/forms.ts. A ROM hack's own Pokémon (data/fakemon.json) start at
+// 20001 and have no sprite anywhere we may load from: PokemonSprite shows its
+// placeholder straight away instead of requesting a sure 404.
 const FORME_ID_THRESHOLD = 10001;
+const FAKEMON_ID_THRESHOLD = 20001;
 
 // Every URL worth trying for this Pokémon's battle sprite, most preferred
 // first. Locally there is exactly one (a missing file 404s, same as always).
@@ -44,6 +47,7 @@ const FORME_ID_THRESHOLD = 10001;
 // already saved those into the set's own folder; hotlinked, a species past
 // the range goes straight there and a forme gets it as the last candidate.
 export function getPokemonSpriteUrls(pokemonId: number, spriteSet: string = DEFAULT_SPRITE_SET): string[] {
+  if (pokemonId >= FAKEMON_ID_THRESHOLD) return [];
   if (!IS_PUBLIC_INSTANCE) return [`/pokemon-sprites/${spriteSet}/${pokemonId}.png`];
 
   const config = SPRITE_SETS[spriteSet] ?? SPRITE_SETS[DEFAULT_SPRITE_SET];

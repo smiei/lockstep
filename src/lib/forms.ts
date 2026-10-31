@@ -16,6 +16,13 @@ export function baseSpeciesId(pokemon: Pokemon): number {
   return pokemon.baseId ?? pokemon.id;
 }
 
+// The national-dex number to print: the species' for a forme, none for a
+// ROM hack's own new Pokémon (ids 20001+, data/fakemon.json).
+export function dexNumber(pokemon: Pokemon): number | null {
+  const id = baseSpeciesId(pokemon);
+  return id >= 20001 ? null : id;
+}
+
 // Which id to read species-keyed move data under. Deoxys, Wormadam and
 // Shaymin genuinely learn DIFFERENT moves per forme, so a forme's own rows
 // win when they exist; Rotom/Castform/Giratina share their species' movepool
