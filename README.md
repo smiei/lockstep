@@ -26,6 +26,18 @@ A **Nuzlocke** lets you catch only the first Pokémon in each area, and a fainte
 
 </details>
 
+## Contents
+
+- [What sets it apart](#what-sets-it-apart)
+- [Screenshots](#screenshots)
+- [Quick start](#quick-start): Docker, Pinokio, or Node.js
+- [Pokémon Infinite Fusion](#pokémon-infinite-fusion)
+- [Supported games](#supported-games)
+- [Documentation](#documentation)
+- [Version history](#version-history)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 ## What sets it apart
 
 You know the rules. This is what the tracker handles so you don't have to.
@@ -58,7 +70,7 @@ You know the rules. This is what the tracker handles so you don't have to.
 - **Base-stat totals** now and fully evolved, with a note when an evolution is possible within the cap.
 
 ### And also
-- **[Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18)** (Classic and Remix): fusions are one battle unit, and a fused catch locks both families.
+- **[Pokémon Infinite Fusion](#pokémon-infinite-fusion)** (Classic and Remix): fusions are one battle unit, and a fused catch locks both families.
 - **Custom routes** for areas a game pack doesn't list.
 - **Free-team mode** for runs that aren't Nuzlockes.
 - **Blind flight**, which hides every calculated hint, optionally locked on for the whole run.
@@ -135,6 +147,20 @@ npm start
 
 **→ [Self-hosting guide](docs/self-hosting.md):** volumes, updating, backups, HTTPS for installing the app on a phone, trainer pictures, and a custom app icon.
 
+## Pokémon Infinite Fusion
+
+Lockstep tracks [Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18) runs, Classic and Remix, fusions included.
+
+<!-- B4b: IF screenshots (release-assets/v5.0/if-team.png, if-card.png, if-wild-fusion.png) go here once uploaded -->
+
+- **Fuse on the Team tab:** two of a player's catches become one battle unit. Swap head and body, or split them again.
+- **Real fusion values:** name, types and base stats are worked out from the pair the way the game does it. The sprite is the community's hand-drawn fusion art, or the generated one where nobody has drawn it yet.
+- **Wild fusions:** a catch can already be a fusion ("Caught as a fusion" on the Encounter tab), or every catch is, with the randomizer rule "Fuse everything".
+- **SoulLink with fusions:** a pairing stays tied to its routes, so a death takes everything linked to it, across fusions. A fused catch locks both families for the Species Clause; you can switch that off.
+- **The game's own data:** stats, types, catch rates, moves, TM compatibility, the trainers' level caps, and the capture formula with all 40 of the game's balls.
+
+Details: [features](docs/features.md#pokémon-infinite-fusion).
+
 ## Supported games
 
 | Generation | Games | Route data |
@@ -144,7 +170,7 @@ npm start
 | 3 | FireRed / LeafGreen, Emerald | checked |
 | 4 | Platinum, HeartGold, SoulSilver | checked |
 | 5 | Black, White | unverified |
-| Fan game | Pokémon Infinite Fusion (Classic and Remix), with fusions and the game's own data | unverified |
+| Fan game | [Pokémon Infinite Fusion](#pokémon-infinite-fusion) (Classic and Remix), with fusions and the game's own data | unverified |
 | ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald, Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms | unverified |
 
 "Route data" is the list and order of routes plus the place names. **Checked** packs were compared against the game. **Unverified** ones may contain mistakes, and the app says so when you pick one. Corrections are welcome as an issue.
