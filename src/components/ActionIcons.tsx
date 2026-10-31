@@ -83,3 +83,13 @@ export function SparkleIcon({ className }: { className?: string }) {
     </LineIcon>
   );
 }
+
+// The start page (the run collection): a house.
+export function HomeIcon({ className }: { className?: string }) {
+  return (
+    <LineIcon className={className}>
+      <path d="M4 11l8-6.5 8 6.5" />
+      <path d="M6 9.5V19a1 1 0 0 0 1 1h3.5v-5.5h3V20H17a1 1 0 0 0 1-1V9.5" />
+    </LineIcon>
+  );
+}

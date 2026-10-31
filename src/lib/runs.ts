@@ -48,8 +48,9 @@ function resolved(run: Run, canonical: boolean): ResolvedRun {
 // gets them without an extra query.
 //
 // A private instance falls back as far as it can: the key, then a bare
-// numeric id (links bookmarked before keys existed), then the oldest run, and
-// it self-heals an empty database. It never returns null.
+// numeric id (links bookmarked before keys existed), then the run changed
+// last. With no run at all it returns null and the page shows the start
+// page's welcome (RunLanding).
 //
 // A public instance only ever opens a run somebody holds the key to: the one
 // in the URL, else the most recent one this browser has visited (the
@@ -76,17 +77,20 @@ export async function resolveRunId(rawRun: string | undefined): Promise<Resolved
     if (byId) return resolved(byId, false);
   }
 
-  const fallback = await prisma.run.findFirst({ orderBy: { createdAt: "asc" } });
-  if (fallback) return resolved(fallback, false);
-
-  return resolved(await prisma.run.create({ data: { name: "Run 1" } }), false);
+  // No run named: the one played last (the installed app starts here). With
+  // no run at all the page shows the start page's welcome (RunLanding) -
+  // nothing is created behind the user's back.
+  const fallback = await prisma.run.findFirst({ orderBy: { changedAt: "desc" } });
+  return fallback ? resolved(fallback, false) : null;
 }
 
-// The run switcher's list. A private instance lists every run; a public one
-// only the runs this browser has visited, most recent first.
+// The run switcher's list. A private instance lists every run, played-last
+// first - the first entry is what pickActiveRun shows without ?run=, so it
+// must be the run resolveRunId opens then; a public one only the runs this
+// browser has visited, most recent first.
 export async function listRunsForHeader(): Promise<Run[]> {
   if (!IS_PUBLIC_INSTANCE) {
-    return prisma.run.findMany({ orderBy: { createdAt: "asc" } });
+    return prisma.run.findMany({ orderBy: { changedAt: "desc" } });
   }
   const visited = parseVisitedRuns((await cookies()).get(VISITED_RUNS_COOKIE)?.value);
   if (visited.length === 0) return [];

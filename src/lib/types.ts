@@ -129,3 +129,24 @@ export type FusableEncounter = {
   routeName: string;
   pokemonName: string;
 };
+
+// One run on the start page (src/lib/runHome.ts builds them server-side).
+export type RunHomeCard = {
+  accessKey: string;
+  name: string;
+  gameId: string;
+  spriteSet: string;
+  mode: RunMode;
+  // The players' own names, "" where none was set - one per player.
+  players: string[];
+  // ISO time of the last change (Run.changedAt); the list is sorted by it.
+  changedAt: string;
+  routesDone: number;
+  routesTotal: number;
+  badges: number;
+  badgesTotal: number;
+  nextCap: RunCapSummary["next"];
+  deaths: number;
+  // The first player's living team in slot order; a fusion carries its body.
+  team: { pokemonId: number; bodyId: number | null }[];
+};
