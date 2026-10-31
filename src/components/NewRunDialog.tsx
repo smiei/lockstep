@@ -12,6 +12,7 @@ import { Modal } from "@/components/ui/Modal";
 import { MAX_SOULLINK_PLAYERS, MIN_SOULLINK_PLAYERS } from "@/lib/players";
 import { UnverifiedDataNote } from "@/components/UnverifiedDataNote";
 import { isCustomPackId } from "@/lib/gamePack";
+import { CustomGameControls } from "@/components/CustomGameControls";
 
 const PLAYER_COUNTS = Array.from(
   { length: MAX_SOULLINK_PLAYERS - MIN_SOULLINK_PLAYERS + 1 },
@@ -147,6 +148,13 @@ export function NewRunDialog({
         {games.find((game) => game.id === gameId)?.unverified && (
           <UnverifiedDataNote lang={lang} className="mt-2" />
         )}
+        <CustomGameControls
+          lang={lang}
+          gameId={gameId}
+          disabled={pending}
+          onImported={setGameId}
+          onRemoved={() => setGameId(games.find((game) => !isCustomPackId(game.id))?.id ?? "")}
+        />
       </div>
 
       {/* Mode is fixed at creation, so it is a two-way choice rather than a
