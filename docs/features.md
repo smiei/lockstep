@@ -148,7 +148,7 @@ On top of the toggles:
 
 ## Languages
 
-The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu.
+The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu, and a fresh install also offers it on the welcome page, each language named in its own words.
 
 German and English are reviewed by hand. French, Spanish and Italian are **machine-translated**, the interface as well as the place and route names, and may contain mistakes. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI.
 

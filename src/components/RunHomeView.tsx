@@ -21,6 +21,7 @@ import { PokemonSprite } from "@/components/PokemonSprite";
 import { ProgressBar } from "@/components/ProgressBar";
 import { SpriteSetProvider } from "@/components/SpriteSetProvider";
 import { useBackupImport } from "@/components/useBackupImport";
+import { LanguagePicker } from "@/components/LanguagePicker";
 
 const TEAM_SLOTS = 6;
 
@@ -138,6 +139,7 @@ function Welcome({ lang, actions }: { lang: Lang; actions: React.ReactNode }) {
       </ol>
       {actions}
       <p className="mt-4 text-sm text-ink-muted">{t.home.welcomeImport}</p>
+      <LanguagePicker variant="names" className="mt-8" />
       {IS_PUBLIC_INSTANCE && (
         <>
           <p className="mt-4 text-sm text-ink-muted">{t.landing.hint}</p>
