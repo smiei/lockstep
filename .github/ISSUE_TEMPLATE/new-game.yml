@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         A game pack is small: the routes in play order and the boss fights with their level caps. No encounter tables are needed.
-        See [docs/game-packs.md](https://github.com/smiei/nuzlocke_tracker/blob/master/docs/game-packs.md). With a plain text list you can build the pack yourself (`npm run pack -- from-text`).
+        See [docs/game-packs.md](https://github.com/smiei/lockstep/blob/master/docs/game-packs.md). With a plain text list you can build the pack yourself (`npm run pack -- from-text`).
   - type: input
     id: game
     attributes:

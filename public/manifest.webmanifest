@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Lockstep – Nuzlocke & SoulLink Tracker",
+  "name": "Lockstep – SoulLink & Nuzlocke tracker",
   "short_name": "Lockstep",
-  "description": "Pokémon Nuzlocke and SoulLink tracker",
+  "description": "Pokémon SoulLink and Nuzlocke tracker",
   "lang": "de",
   "dir": "ltr",
   "start_url": "/tracker",

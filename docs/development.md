@@ -78,7 +78,7 @@ Each release:
 2. Add a row to the version table in the README.
 3. Commit, push, and publish a GitHub release tagged `vMAJOR.MINOR`.
 
-Publishing the release starts [`.github/workflows/docker.yml`](../.github/workflows/docker.yml). It builds the image for `linux/amd64` and `linux/arm64` and pushes it to Docker Hub (`gloryy/nuzlocke-tracker`) and the GitHub Container Registry (`ghcr.io/smiei/nuzlocke-tracker`), each as `MAJOR.MINOR` and `latest`. A release marked as a pre-release gets only its version tag.
+Publishing the release starts [`.github/workflows/docker.yml`](../.github/workflows/docker.yml). It builds the image for `linux/amd64` and `linux/arm64` and pushes it to Docker Hub (`gloryy/lockstep`) and the GitHub Container Registry (`ghcr.io/smiei/lockstep`), each as `MAJOR.MINOR` and `latest`. A release marked as a pre-release gets only its version tag.
 
 From the Actions tab, **Run workflow** builds without publishing. With **push** ticked and a **tag** given, it rebuilds an existing release; `latest` then only moves when **latest** is ticked as well.
 
@@ -89,5 +89,5 @@ The build passes the version as `APP_VERSION`, which is what the gear menu shows
 A manual build is still possible for one platform:
 
 ```bash
-docker build --build-arg APP_VERSION=<MAJOR.MINOR> -t gloryy/nuzlocke-tracker:<MAJOR.MINOR> .
+docker build --build-arg APP_VERSION=<MAJOR.MINOR> -t gloryy/lockstep:<MAJOR.MINOR> .
 ```

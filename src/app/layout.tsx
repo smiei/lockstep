@@ -46,8 +46,8 @@ const redHatMono = Red_Hat_Mono({
 export const metadata: Metadata = {
   // Each tab sets its own title (src/lib/pageMetadata.ts); the template adds
   // the app name, the default covers pages that set none.
-  title: { template: "%s · Lockstep", default: "Lockstep – Nuzlocke & SoulLink Tracker" },
-  description: "Pokémon Nuzlocke and SoulLink tracker",
+  title: { template: "%s · Lockstep", default: "Lockstep – SoulLink & Nuzlocke tracker" },
+  description: "Pokémon SoulLink and Nuzlocke tracker",
   applicationName: "Lockstep",
   // Home-screen label on iOS; it truncates around 12 characters, so the full
   // title would be cut mid-word.

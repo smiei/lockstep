@@ -11,15 +11,15 @@ The tracker is one small web server with a SQLite database. Run it wherever suit
 
 ## Docker
 
-The image is [`gloryy/nuzlocke-tracker`](https://hub.docker.com/r/gloryy/nuzlocke-tracker) on Docker Hub. The same image is also published as `ghcr.io/smiei/nuzlocke-tracker` on GitHub's registry.
+The image is [`gloryy/lockstep`](https://hub.docker.com/r/gloryy/lockstep) on Docker Hub. The same image is also published as `ghcr.io/smiei/lockstep` on GitHub's registry.
 
 It is built for `amd64` and `arm64`, so it runs on ordinary PCs and servers as well as on a Raspberry Pi 4 or 5 with a 64-bit OS, ARM-based NAS units and Apple Silicon Macs.
 
 ```yaml
 # compose.yaml
 services:
-  nuzlocke-tracker:
-    image: gloryy/nuzlocke-tracker:latest
+  lockstep:
+    image: gloryy/lockstep:latest
     ports:
       - "3000:3000"
     environment:
@@ -53,10 +53,10 @@ On the first start the container downloads the Pokémon sprites and badge icons,
 **Without Compose:**
 
 ```bash
-docker run -d --name nuzlocke-tracker -p 3000:3000 \
+docker run -d --name lockstep -p 3000:3000 \
   -e DATABASE_URL=file:/app/db/nuzlocke.db \
   -v nuzlocke-db:/app/db -v nuzlocke-sprites:/app/public/pokemon-sprites \
-  --restart unless-stopped gloryy/nuzlocke-tracker:latest
+  --restart unless-stopped gloryy/lockstep:latest
 ```
 
 ### Volumes (e.g. Unraid)
@@ -105,29 +105,33 @@ The app listens on port `3000` inside the container.
 Tags follow `MAJOR.MINOR`. `latest` always points at the newest release, and every release is also pushed under its own version, so a rollback is a one-word edit:
 
 ```
-gloryy/nuzlocke-tracker:latest   →   gloryy/nuzlocke-tracker:3.0
+gloryy/lockstep:latest   →   gloryy/lockstep:5.0
 ```
+
+### Moving from the old image name
+
+Up to 4.3 the app was called SoulLink Nuzlocke Tracker and the image `gloryy/nuzlocke-tracker` (`ghcr.io/smiei/nuzlocke-tracker`). From 5.0 on only `gloryy/lockstep` gets new releases. To switch, change the image name and keep everything else - volumes, `DATABASE_URL`, ports. Your runs stay where they are, and the database is migrated on the first start. The old image stays available for rollbacks to 4.3 and earlier.
 
 ## Pinokio
 
 [Pinokio](https://pinokio.co/) installs and starts apps with one click and brings its own Node.js and Git.
 
 1. Install Pinokio. On its first start, pick a short home folder without spaces, such as `C:\pinokio`.
-2. On the **Explore** page, paste `https://github.com/smiei/nuzlocke-tracker-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**. Older versions call this **Download from URL** on the **Discover** page.
+2. On the **Explore** page, paste `https://github.com/smiei/lockstep-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**. Older versions call this **Download from URL** on the **Discover** page.
 3. Click **Install**. If Pinokio asks to install **Coding (Essential)** (Git and Node.js), confirm it.
 4. Click **Start**, then **Open Tracker**.
 
 Not **Ask → Download → Import task**: that imports a Pinokio *task*, which is something different from an app.
 
-Your runs are stored in the launcher's `data/nuzlocke.db`, outside the app folder, so Pinokio's **Update** and **Reset** never touch them. Details are in the [launcher's README](https://github.com/smiei/nuzlocke-tracker-pinokio).
+Your runs are stored in the launcher's `data/nuzlocke.db`, outside the app folder, so Pinokio's **Update** and **Reset** never touch them. Details are in the [launcher's README](https://github.com/smiei/lockstep-pinokio).
 
 ## Without Docker
 
 Requirements: [Node.js](https://nodejs.org/) 20.9 or newer (the current LTS is fine) and [Git](https://git-scm.com/).
 
 ```bash
-git clone https://github.com/smiei/nuzlocke_tracker.git
-cd nuzlocke_tracker
+git clone https://github.com/smiei/lockstep.git
+cd lockstep
 npm install
 npm run setup
 npm start
@@ -145,7 +149,7 @@ It is safe to run again at any time.
 
 Other ports: `npm start -- -p 4000`. To keep the tracker running after you close the terminal, use a process manager such as [pm2](https://pm2.keymetrics.io/) (`pm2 start npm --name nuzlocke -- start`) or a system service.
 
-> **Windows:** keep the folder path short (for example `C:\nuzlocke_tracker`). The build writes some long file names, and a very deep folder can hit Windows' 260-character path limit.
+> **Windows:** keep the folder path short (for example `C:\lockstep`). The build writes some long file names, and a very deep folder can hit Windows' 260-character path limit.
 
 ## Updating
 
