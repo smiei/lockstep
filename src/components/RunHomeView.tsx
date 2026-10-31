@@ -124,9 +124,11 @@ export function RunHomeView({
 function Welcome({ lang, actions }: { lang: Lang; actions: React.ReactNode }) {
   const t = translations[lang];
   return (
-    <div className="mx-auto max-w-2xl">
-      <PageHeader title={t.home.welcomeTitle} description={t.home.welcomeText} />
-      <ol className="specimen-label mb-6 space-y-1 px-3 py-2 font-mono text-sm text-ink">
+    // A fresh install has nothing else to show: the welcome sits in the
+    // middle of the page, horizontally and vertically.
+    <div className="mx-auto flex min-h-[70dvh] max-w-2xl flex-col items-center justify-center text-center">
+      <PageHeader title={t.home.welcomeTitle} description={t.home.welcomeText} align="center" />
+      <ol className="specimen-label mb-6 space-y-1 px-3 py-2 text-left font-mono text-sm text-ink">
         {t.home.steps.map((step, i) => (
           <li key={step} className="flex gap-3">
             <span className="font-semibold">{String(i + 1).padStart(2, "0")}</span>
