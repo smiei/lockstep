@@ -1,0 +1,96 @@
+# Builds the Windows app (scripts/build-windows.mjs): Lockstep-Setup-<v>.exe and
+# Lockstep-<v>-windows-x64.zip, a tray program that runs the server with a
+# bundled Node.js.
+#
+# - Publishing a GitHub release tagged vMAJOR.MINOR attaches both files to it.
+# - "Run workflow" builds the selected branch (or `tag`) and keeps the files as
+#   a workflow artifact - a test run. With `upload` ticked and a `tag` given it
+#   attaches them to that existing release instead.
+#
+# Needs no secrets: the workflow's own token uploads release assets.
+name: Windows app
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to build, e.g. v5.0 (empty: the selected branch)"
+        required: false
+        default: ""
+      upload:
+        description: "Attach the files to that release (needs a tag)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: windows-app
+  cancel-in-progress: false
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - name: Work out version
+        id: meta
+        shell: bash
+        env:
+          EVENT: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          INPUT_TAG: ${{ inputs.tag }}
+          INPUT_UPLOAD: ${{ inputs.upload }}
+        run: |
+          if [ "$EVENT" = "release" ]; then tag="$RELEASE_TAG"; upload=true
+          else tag="$INPUT_TAG"; upload="$INPUT_UPLOAD"; fi
+          if [ -n "$tag" ]; then
+            if ! [[ "$tag" =~ ^v[0-9]+\.[0-9]+$ ]]; then echo "::error::Tag must look like v5.0, got '$tag'"; exit 1; fi
+            version="${tag#v}"
+          else
+            version=""; upload=false
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "upload=$upload" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ steps.meta.outputs.tag || github.ref }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe")) { choco install innosetup --no-progress -y }
+
+      - run: npm ci
+
+      - name: Build
+        env:
+          APP_VERSION: ${{ steps.meta.outputs.version }}
+        run: npm run build:windows
+
+      - name: Attach to the release
+        if: steps.meta.outputs.upload == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ steps.meta.outputs.tag }}" dist/Lockstep-Setup-*.exe dist/Lockstep-*-windows-x64.zip --clobber --repo "$GITHUB_REPOSITORY"
+
+      - name: Keep as artifact
+        if: steps.meta.outputs.upload != 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: lockstep-windows
+          path: |
+            dist/Lockstep-Setup-*.exe
+            dist/Lockstep-*-windows-x64.zip
+          retention-days: 14

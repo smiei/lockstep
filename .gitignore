@@ -19,6 +19,8 @@
 
 # production
 /build
+# Windows app build output (scripts/build-windows.mjs)
+/dist/
 
 # misc
 .DS_Store

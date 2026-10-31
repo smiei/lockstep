@@ -131,6 +131,17 @@ All four were consulted for facts (names, numbers); no text or images were copie
 | Infinite Fusion sprite community | Fusion sprites | Loaded by the browser straight from the community's sprite server, never stored | Credited in the app's menu during an Infinite Fusion run |
 | [Pokémon Showdown](https://play.pokemonshowdown.com/) | Boss trainer pictures | Self-hosted: downloaded once by `scripts/download-trainers.mjs` onto the user's own machine (never into the repo or image, never over the user's own files, off with `TRAINER_SPRITES=off`). Public instance: linked after the visitor agrees | © Nintendo / Creatures Inc. / GAME FREAK inc. / The Pokémon Company; hosted by Pokémon Showdown |
 
+## Bundled with the Windows app
+
+| Component | Used for | License |
+| --- | --- | --- |
+| [Node.js](https://nodejs.org/) (`node
+ode.exe`) | Runs the server | MIT, plus the licenses of the components Node.js bundles; the full text ships as `node\LICENSE` |
+| [Inno Setup](https://jrsoftware.org/isinfo.php) | Builds the installer (not part of the installed files) | Inno Setup License |
+
+The npm packages under `app
+ode_modules` are the same runtime dependencies the Docker image ships; their licenses come with each package (see below).
+
 ## Font
 
 [Familjen Grotesk](https://github.com/Familjen-Sthlm/Familjen-Grotesk) by Familjen STHLM and [Red Hat Mono](https://github.com/RedHatOfficial/RedHatFont) by Red Hat, both under the SIL Open Font License 1.1. Loaded through `next/font` at build time.
