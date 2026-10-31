@@ -37,6 +37,7 @@ Then open [http://localhost:3000](http://localhost:3000). For checking a product
 | `npm run generate:names` | Regenerates the localized names in `data/pokemon.json` and every pack's `routes.json` / `levelcaps.json` from PokéAPI plus curated tables. German and English values are never overwritten. |
 | `npm run generate:learnsets` | Regenerates the move data from PokéAPI: `data/learnsets/<versionGroup>.json`, `data/movesets/<versionGroup>.json`, `data/tm-compat/<versionGroup>.json` and `data/moves.json`. |
 | `npm run generate:if-species` / `npm run generate:if-moves` | Regenerate Infinite Fusion's species table and move data from the game's own data files. |
+| `npm run generate:trainer-readme` | Rewrites `public/trainers/README.txt`, the list of trainer pictures each game folder expects, marking those without an automatic picture. Run after level caps or the sprite map change. |
 | `npm run generate:trainer-sprites` | Regenerates `data/trainer-sprite-sources.json`, the map of boss trainers to Pokémon Showdown pictures that the trainer download (and the public deployment) use. Needs the network, about 2 minutes. |
 | `npm run lint` | ESLint. |
 | `npm run build:windows` | Windows only: builds the Windows app into `dist/` (tray program, bundled Node.js, the app; a zip, plus the installer when [Inno Setup](https://jrsoftware.org/isinfo.php) is installed). Set `APP_VERSION` to override the version. |
