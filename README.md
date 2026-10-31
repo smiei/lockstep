@@ -104,14 +104,16 @@ services:
     volumes:
       - db:/app/db
       - sprites:/app/public/pokemon-sprites
+      - trainers:/app/public/trainers
     restart: unless-stopped
 
 volumes:
   db:
   sprites:
+  trainers:
 ```
 
-Save that as `compose.yaml` and run `docker compose up -d`. The first start downloads the Pokémon sprites, which takes a few minutes.
+Save that as `compose.yaml` and run `docker compose up -d`. The first start downloads the Pokémon sprites and trainer pictures, which takes a few minutes.
 
 ### Pinokio (one click, Windows / macOS / Linux)
 
@@ -177,7 +179,7 @@ This project stands on the work of others. Thank you!
 - **[Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18)** — the game's own stats, moves, trainer levels and capture code. Fusion sprites come from its sprite community.
 - **[Pokémon League Badges](https://github.com/SteGriff/pokemon-badges)** by Stephen Griffiths — the badge icons (CC BY 3.0, cropped from the sheet).
 - **[PokéWiki](https://www.pokewiki.de/)**, **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics and level caps.
-- **[Pokémon Showdown](https://pokemonshowdown.com/)** — trainer sprites for the optional public deployment.
+- **[Pokémon Showdown](https://pokemonshowdown.com/)** — the boss trainer pictures, downloaded on first start.
 - Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Familjen Grotesk](https://fonts.google.com/specimen/Familjen+Grotesk) and [Red Hat Mono](https://fonts.google.com/specimen/Red+Hat+Mono) fonts.
 
 Licenses and attributions in full: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
@@ -192,4 +194,4 @@ The source code is released under the [MIT License](LICENSE). Data and artwork f
 > - Pokémon sprites are downloaded from PokéAPI when the app is set up.
 > - Infinite Fusion's ball icons come from the game's public repository at container start.
 > - Fusion sprites are loaded by the browser straight from the Infinite Fusion community's sprite server and never stored.
-> - Trainer pictures are provided by the user.
+> - Trainer pictures are downloaded from Pokémon Showdown when the app is set up, unless you bring your own.
