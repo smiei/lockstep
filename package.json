@@ -31,6 +31,7 @@
     "download:sprites": "node scripts/download-sprites.mjs",
     "download:catchrates": "node scripts/download-catchrates.mjs",
     "download:badges": "node scripts/download-badges.mjs",
+    "download:trainers": "node scripts/download-trainers.mjs",
     "migrate:turso": "node scripts/migrate-turso.mjs"
   },
   "dependencies": {

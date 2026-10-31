@@ -7,7 +7,7 @@ The tracker is one small web server with a SQLite database. Run it wherever suit
 - [Docker](#docker) — recommended for home servers (Unraid, Synology, a Raspberry Pi, any Linux box)
 - [Pinokio](#pinokio) — one click on Windows, macOS or Linux
 - [Without Docker](#without-docker) — plain Node.js
-- [Updating](#updating) · [Backups](#backups) · [HTTPS and installing the app](#https-and-installing-the-app) · [Trainer pictures](#trainer-pictures-optional) · [Custom app icon](#custom-app-icon-optional)
+- [Updating](#updating) · [Backups](#backups) · [HTTPS and installing the app](#https-and-installing-the-app) · [Trainer pictures](#trainer-pictures) · [Custom app icon](#custom-app-icon-optional)
 
 ## Docker
 
@@ -31,12 +31,13 @@ services:
       - sprites:/app/public/pokemon-sprites         # downloaded once, kept across updates
       - balls:/app/public/ball-sprites
       - badges:/app/public/badges
-      # - ./trainers:/app/public/trainers:ro        # optional, see "Trainer pictures"
+      - trainers:/app/public/trainers               # trainer pictures, see "Trainer pictures"
     restart: unless-stopped
 
 volumes:
   db:
   sprites:
+  trainers:
   balls:
   badges:
 ```
@@ -60,13 +61,13 @@ docker run -d --name nuzlocke-tracker -p 3000:3000 \
 
 ### Volumes (e.g. Unraid)
 
-Most setups need **two** mounts, or three if you have your own trainer pictures:
+Most setups need these three mounts:
 
 | Container path | Purpose |
 | --- | --- |
 | `/app/db` | SQLite database. **Required**, because this is your data. |
 | `/app/public/pokemon-sprites` | Pokémon sprites, one subfolder per sprite set. **Recommended:** without it, every new container (each image update) downloads them again, which takes a few minutes. |
-| `/app/public/trainers` | Your own trainer pictures. Only if you use them (see below). |
+| `/app/public/trainers` | Trainer pictures. **Recommended:** downloaded on the first start and kept across updates; also where your own pictures go (see below). |
 
 Everything else is optional and usually best left out:
 
@@ -89,6 +90,7 @@ Everything else is optional and usually best left out:
 | --- | --- |
 | `DATABASE_URL` | **Required.** `file:/app/db/nuzlocke.db` |
 | `DEFAULT_SHELL_COLOR` | Optional. The colour every device starts with: `green` (default), `red`, `blue` or `yellow`. The browser-tab icon, the home-screen icon and the installed app's splash screen and status bar take this colour too. Anyone can still pick their own colour in the gear menu, which is kept per device. |
+| `TRAINER_SPRITES` | Optional. `off` skips the trainer-picture download (see [Trainer pictures](#trainer-pictures)). |
 | `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with German as the last fallback. A language picked in the gear menu always wins. |
 
 Light and dark mode follow the device until someone switches them by hand. Switching back to the mode the device itself uses makes the app follow the device again.
@@ -177,11 +179,13 @@ The tracker works over plain `http://` on your network. Browsers only offer **In
 
 **Cloudflare Access:** if you protect the tracker with it, add **Bypass** rules for `/manifest.webmanifest`, `/icons/*` and `/sw.js`. Phones fetch those without your login cookie, and installing fails otherwise.
 
-## Trainer pictures (optional)
+## Trainer pictures
 
-The Journey tab can show a picture for every boss trainer. There is no freely licensed source for them, so none are included; without one, an initial-letter placeholder is shown.
+The Journey tab shows a picture for every boss trainer. On the first start (Docker, Pinokio or `npm run setup`) the app downloads them from [Pokémon Showdown](https://play.pokemonshowdown.com/) into `public/trainers/`. Only missing files are fetched, so later starts cost nothing. The pictures are © Nintendo / GAME FREAK / The Pokémon Company and never enter the repository or the Docker image. Emerald's rival has none, because it depends on the player's gender.
 
-Put your own square PNGs into `public/trainers/`. With Docker, mount a folder at `/app/public/trainers`. File names and folder layout are explained in [`public/trainers/README.txt`](../public/trainers/README.txt).
+**Your own pictures always win.** Put square PNGs into `public/trainers/`; with Docker, that is the folder mounted at `/app/public/trainers`. A file of yours is never overwritten, and a trainer with a picture of yours in the shared root folder gets nothing downloaded for any game. File names and folder layout are explained in [`public/trainers/README.txt`](../public/trainers/README.txt).
+
+To skip the download entirely, set `TRAINER_SPRITES=off`. A read-only mount also leaves the folder alone. Without a picture, a trainer shows an initial-letter placeholder.
 
 ## Custom app icon (optional)
 

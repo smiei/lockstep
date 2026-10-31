@@ -21,6 +21,12 @@ node scripts/download-sprites.mjs || echo "WARNING: sprite download failed; miss
 echo "Checking badge icons (downloads only what's missing)..."
 node scripts/download-badges.mjs || echo "WARNING: badge download failed; badges will be missing until the next container start."
 
+# Boss trainer pictures from Pokémon Showdown (scripts/download-trainers.mjs):
+# only what is missing, never over the user's own files, off with
+# TRAINER_SPRITES=off, and a read-only trainers mount is simply left alone.
+echo "Checking trainer pictures (downloads only what's missing)..."
+node scripts/download-trainers.mjs || echo "WARNING: some trainer pictures failed to download; they show an initial letter until the next container start."
+
 # Run migrations (as root - may CREATE the db file on a fresh volume)
 # Private branding override. The image ships the repo's own icon (two rings);
 # mounting a folder onto /app/branding that contains an icon.png (or .svg/.jpg/

@@ -87,7 +87,7 @@ All four were consulted for facts (names, numbers); no text or images were copie
 | [PokeAPI/sprites](https://github.com/PokeAPI/sprites) | Pokémon and Poké Ball sprites | Downloaded by `scripts/download-sprites.mjs` on first start (self-hosted) or linked directly (public instance, only after the visitor agrees) | Repository CC0 1.0; *"All image contents within are Copyright The Pokémon Company."* |
 | [SteGriff/pokemon-badges](https://github.com/SteGriff/pokemon-badges) | Gym badge icons | Downloaded by `scripts/download-badges.mjs`, which **crops the individual badges out of the project's composite sheet** (`badges.png`) | "Pokémon League Badges" by Stephen Griffiths, 2011, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Changed: cropped into one image per badge. |
 | Infinite Fusion sprite community | Fusion sprites | Loaded by the browser straight from the community's sprite server, never stored | Credited in the app's menu during an Infinite Fusion run |
-| [Pokémon Showdown](https://play.pokemonshowdown.com/) | Boss trainer pictures | Public instance only, linked after the visitor agrees; a self-hosted instance uses the user's own files | © their respective owners |
+| [Pokémon Showdown](https://play.pokemonshowdown.com/) | Boss trainer pictures | Self-hosted: downloaded once by `scripts/download-trainers.mjs` onto the user's own machine (never into the repo or image, never over the user's own files, off with `TRAINER_SPRITES=off`). Public instance: linked after the visitor agrees | © Nintendo / Creatures Inc. / GAME FREAK inc. / The Pokémon Company; hosted by Pokémon Showdown |
 
 ## Font
 

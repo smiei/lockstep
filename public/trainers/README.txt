@@ -1,10 +1,20 @@
 TRAINER AVATARS  (Reise / Journey page)
 =======================================
 
-User-provided PNGs shown next to each trainer. A missing file just shows an
-initial-letter placeholder - never an error. These are NOT in the repo or the
-Docker image (copyrighted art): mount THIS folder as /app/public/trainers and
-drop your files in. Recommended size >=80x80px, square (shown as a circle).
+PNGs shown next to each trainer. A missing file just shows an initial-letter
+placeholder - never an error. These are NOT in the repo or the Docker image
+(copyrighted art).
+
+AUTOMATIC: on first start (Docker / Pinokio / `npm run setup`) the app
+downloads every mapped trainer from Pokemon Showdown into the per-game
+folders below (scripts/download-trainers.mjs, map in
+data/trainer-sprite-sources.json). Only missing files are fetched; set
+TRAINER_SPRITES=off to skip it.
+
+YOUR OWN PICTURES ALWAYS WIN: a file you put here is never overwritten, and a
+trainer that has a file of yours in this ROOT gets nothing downloaded for any
+game. With Docker, mount THIS folder as /app/public/trainers. Recommended
+size >=80x80px, square (shown as a circle).
 
 LOOKUP ORDER for each trainer:
   1. /trainers/<trainerSet>/<slug>.png    game-specific (checked FIRST)
