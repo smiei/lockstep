@@ -18,6 +18,7 @@
     "prebuild": "npm run generate:icons",
     "build": "next build",
     "build:public": "node scripts/build-public.mjs",
+    "build:windows": "node scripts/build-windows.mjs",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
