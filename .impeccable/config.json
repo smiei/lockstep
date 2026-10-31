@@ -11,6 +11,24 @@
         ],
         "createdAt": "2026-10-28T20:20:33.668Z",
         "reason": "agent triage: the 2px underline is the phone tab strip's active marker; from lg the link is lg:border-b-0 lg:rounded-md, so the border and the radius never apply at the same time"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "segoe ui variable text",
+        "files": [
+          "windows/wait.html"
+        ],
+        "createdAt": "2026-10-31T19:00:00.000Z",
+        "reason": "agent triage: the Windows app's waiting page is a local file opened before the server runs, so it cannot load the app's web fonts; it uses Windows system fonts on purpose"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "cascadia mono",
+        "files": [
+          "windows/wait.html"
+        ],
+        "createdAt": "2026-10-31T19:00:00.000Z",
+        "reason": "agent triage: same offline waiting page; Windows' system monospace stands in for Red Hat Mono"
       }
     ]
   }

@@ -16,7 +16,7 @@ The Windows app is the same server with Node.js built in, the way Jellyfin's Win
 
 1. Download **`Lockstep-Setup-<version>.exe`** from the [latest release](https://github.com/smiei/lockstep/releases/latest) and run it. It installs for your user only, into `%LOCALAPPDATA%\Programs\Lockstep`, without admin rights. Prefer no installer? Unpack **`Lockstep-<version>-windows-x64.zip`** anywhere and start `Lockstep.exe`.
 2. The installer is not code-signed yet. Browsers judge downloads by the publisher's reputation, so Firefox or Chrome may block it as "may contain a virus or malware" or "not commonly downloaded" - a false alarm for a new, unsigned program; choose **Allow download** / **Keep**. Then Windows SmartScreen may say "Windows protected your PC" the first time: click **More info → Run anyway**. Every release is built from this repository's source by GitHub Actions ([windows.yml](../.github/workflows/windows.yml)), so you can check what went into it.
-3. Lockstep starts in the tray and opens your browser at `http://localhost:3000`. The first start downloads the Pokémon sprites, badges and trainer pictures, which takes a few minutes; the tray icon's tooltip says so meanwhile.
+3. Lockstep starts in the tray and opens a waiting page in your browser right away. The first start downloads the Pokémon sprites, badges and trainer pictures, which takes a few minutes; the page shows the steps and switches to `http://localhost:3000` by itself. Close the tab whenever you like - Lockstep keeps running in the tray, and **Open Lockstep** brings it back.
 
 **The tray menu:**
 - **Open Lockstep**, also by double-clicking the icon.

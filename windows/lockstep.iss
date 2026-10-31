@@ -42,6 +42,15 @@ Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
 Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "it"; MessagesFile: "compiler:Languages\Italian.isl"
 
+[Messages]
+; The last page says what happens next: the tray program starts and opens a
+; waiting page in the browser while the first start downloads the images.
+en.FinishedLabel=Lockstep starts now and opens in your browser. The first start downloads the Pokémon pictures, which takes a few minutes; afterwards Lockstep lives in the notification area.
+de.FinishedLabel=Lockstep startet jetzt und öffnet sich im Browser. Der erste Start lädt die Pokémon-Bilder, das dauert ein paar Minuten; danach findest du Lockstep im Infobereich.
+fr.FinishedLabel=Lockstep démarre maintenant et s'ouvre dans ton navigateur. Le premier démarrage télécharge les images des Pokémon, cela prend quelques minutes ; ensuite, Lockstep se trouve dans la zone de notification.
+es.FinishedLabel=Lockstep se inicia ahora y se abre en tu navegador. El primer inicio descarga las imágenes de los Pokémon y tarda unos minutos; después, Lockstep está en el área de notificación.
+it.FinishedLabel=Lockstep si avvia ora e si apre nel browser. Il primo avvio scarica le immagini dei Pokémon e richiede qualche minuto; poi Lockstep resta nell'area di notifica.
+
 [CustomMessages]
 en.DataNote=Your runs are kept in %LOCALAPPDATA%\Lockstep and are not removed.
 de.DataNote=Deine Runs liegen in %LOCALAPPDATA%\Lockstep und werden nicht entfernt.
