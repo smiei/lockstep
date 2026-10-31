@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/eb3b31c4-d025-4314-a770-a94d2cad7e81" alt="Lockstep, the SoulLink &amp; Nuzlocke tracker: Gen 1-5, many ROM hacks, Infinite Fusion, 2-4 players or solo, 5 languages, free and self-hosted" width="100%">
-</p>
-
 <h1 align="center">Lockstep</h1>
 
 <p align="center"><strong>SoulLink &amp; Nuzlocke tracker</strong></p>
