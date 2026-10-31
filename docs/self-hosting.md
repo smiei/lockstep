@@ -119,7 +119,7 @@ Up to 4.3 the app was called SoulLink Nuzlocke Tracker and the image `gloryy/nuz
 1. Install Pinokio. On its first start, pick a short home folder without spaces, such as `C:\pinokio`.
 2. On the **Explore** page, paste `https://github.com/smiei/lockstep-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**. Older versions call this **Download from URL** on the **Discover** page.
 3. Click **Install**. If Pinokio asks to install **Coding (Essential)** (Git and Node.js), confirm it.
-4. Click **Start**, then **Open Tracker**.
+4. Click **Start**, then **Open Lockstep**.
 
 Not **Ask → Download → Import task**: that imports a Pinokio *task*, which is something different from an app.
 

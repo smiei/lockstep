@@ -37,7 +37,7 @@ Then open [http://localhost:3000](http://localhost:3000). For checking a product
 | `npm run generate:names` | Regenerates the localized names in `data/pokemon.json` and every pack's `routes.json` / `levelcaps.json` from PokéAPI plus curated tables. German and English values are never overwritten. |
 | `npm run generate:learnsets` | Regenerates the move data from PokéAPI: `data/learnsets/<versionGroup>.json`, `data/movesets/<versionGroup>.json`, `data/tm-compat/<versionGroup>.json` and `data/moves.json`. |
 | `npm run generate:if-species` / `npm run generate:if-moves` | Regenerate Infinite Fusion's species table and move data from the game's own data files. |
-| `npm run generate:trainer-sprites` | Regenerates `data/trainer-sprite-sources.json` for the public deployment. |
+| `npm run generate:trainer-sprites` | Regenerates `data/trainer-sprite-sources.json`, the map of boss trainers to Pokémon Showdown pictures that the trainer download (and the public deployment) use. Needs the network, about 2 minutes. |
 | `npm run lint` | ESLint. |
 | `npm test` | Unit tests for the pure logic, plus a guard test that checks the UI conventions in the source tree. |
 
