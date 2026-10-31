@@ -19,6 +19,7 @@ import {
   getMoveOverrides,
   getSpeciesData,
   getSpeciesList,
+  getFakemon,
   type GameInfo,
   type Pokemon,
   type CatchRateEntry,
@@ -43,8 +44,16 @@ export function getDataGenerationForGame(game: GameInfo): number {
 
 const dataGeneration = getDataGenerationForGame;
 
-// Forme entries reuse PokeAPI's pokemon ids, which start here (src/lib/forms.ts).
+// Forme entries reuse PokeAPI's pokemon ids, which start here (src/lib/forms.ts);
+// a hack's own Pokémon (data/fakemon.json) start at FAKEMON_ID_START.
 const FORME_ID_START = 10001;
+const FAKEMON_ID_START = 20001;
+
+// The pack's own Pokémon (data/fakemon.json): catchable like any species, and
+// the variants among them (Seviian Doduo) also a forme to switch into.
+function packFakemon(game: GameInfo): Pokemon[] {
+  return getFakemon().filter((p) => p.pack === game.id);
+}
 
 function speciesAllowlist(game: GameInfo): Set<number> | undefined {
   if (!game.species) return undefined;
@@ -105,9 +114,11 @@ export function getPokemonListForGame(game: GameInfo): Pokemon[] {
     : getPokemonList(game.dexLimit, generation);
   // GameInfo.regionalForms: Alolan Vulpix & co. are caught on routes, so they
   // are entries of their own here (after the species, ids 10001+).
-  const list = game.regionalForms
-    ? [...species, ...getPokemonFormsForGame(game).filter((p) => p.regional)]
-    : species;
+  const list = [
+    ...species,
+    ...(game.regionalForms ? getPokemonFormsForGame(game).filter((p) => p.regional && p.id < FAKEMON_ID_START) : []),
+    ...packFakemon(game),
+  ];
   return game.nameLang || game.speciesData ? list.map((p) => forGame(game, p)) : list;
 }
 
@@ -125,7 +136,7 @@ export function getPokemonFormsForGame(game: GameInfo): Pokemon[] {
     ? getPokemonList(undefined, generation).filter(
         (p) => p.baseId !== undefined && p.since === undefined && allowed.has(p.baseId),
       )
-    : getPokemonForms(game.dexLimit, generation);
+    : [...getPokemonForms(game.dexLimit, generation), ...packFakemon(game).filter((p) => p.baseId !== undefined)];
   return game.nameLang || game.speciesData ? forms.map((p) => forGame(game, p)) : forms;
 }
 
@@ -134,7 +145,12 @@ export function getEffectivenessForGame(game: GameInfo): EffectivenessTable {
 }
 
 export function getCatchRatesForGame(game: GameInfo): CatchRateEntry[] {
-  const rates = getCatchRates(dataGeneration(game));
+  const rates = [
+    ...getCatchRates(dataGeneration(game)),
+    ...getFakemon()
+      .filter((p) => p.pack === game.id)
+      .map((p) => ({ id: p.id, catch_rate: p.catchRate })),
+  ];
   const own = speciesData(game);
   if (!own) return rates;
   // The game's own rates win, and a species this app has no rate for at all
@@ -183,6 +199,7 @@ export function getAttackTypesForGame(game: GameInfo): string[] {
 // is what lets Alolan Vulpix evolve into Alolan Ninetales (form-evolutions.json)
 // only where Alolan forms exist.
 export function isInDex(game: GameInfo, id: number): boolean {
+  if (id >= FAKEMON_ID_START) return packFakemon(game).some((p) => p.id === id);
   if (id >= FORME_ID_START) return getPokemonFormsForGame(game).some((p) => p.id === id);
   const allowed = speciesAllowlist(game);
   return allowed ? allowed.has(id) : id <= game.dexLimit;

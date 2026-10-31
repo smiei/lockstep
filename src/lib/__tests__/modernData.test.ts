@@ -1,8 +1,8 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, it, expect } from "vitest";
-import { getEvolutionById, getEvolutions, getMoveset, getMoves, type GameInfo, type Pokemon } from "@/lib/data";
-import { getPokemonFormsForGame, getPokemonListForGame, isInDex } from "@/lib/gameData";
+import { getEvolutionById, getEvolutions, getMoveset, getMoves, getPokemonById, type GameInfo, type Pokemon } from "@/lib/data";
+import { getCatchRatesForGame, getPokemonFormsForGame, getPokemonListForGame, isInDex } from "@/lib/gameData";
 import { formatEvolutionMethod } from "@/lib/evolutionMethods";
 import { LANGS } from "@/lib/i18n/dictionary";
 
@@ -118,6 +118,50 @@ describe("evolution labels", () => {
         expect(formatEvolutionMethod(method, lang), `${entry.id} ${lang}`).not.toContain(slug);
       }
     }
+  });
+});
+
+describe("fakemon.json (a ROM hack's own Pokémon)", () => {
+  const fakemon = (
+    JSON.parse(readFileSync(path.join(process.cwd(), "data", "fakemon.json"), "utf-8")) as {
+      fakemon: (Pokemon & { pack: string; alias: string; catchRate: number; evolvesTo?: number[] })[];
+    }
+  ).fakemon;
+  const blazingEmerald = readGame("blazing-emerald");
+
+  it("has unique ids from 20001 on, each in an existing pack", () => {
+    const ids = fakemon.map((f) => f.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const f of fakemon) {
+      expect(f.id).toBeGreaterThanOrEqual(20001);
+      expect(readGame(f.pack).id).toBe(f.pack);
+      if (f.baseId !== undefined) expect(byId.get(f.baseId), f.alias).toBeDefined();
+      for (const to of f.evolvesTo ?? []) expect(fakemon.some((t) => t.id === to) || byId.has(to), `${f.alias} -> ${to}`).toBe(true);
+    }
+  });
+
+  it("leaves battle states out", () => {
+    expect(fakemon.some((f) => /-mega|-school$/.test(f.alias))).toBe(false);
+  });
+
+  it("belong only to their pack", () => {
+    const sevii = fakemon.find((f) => f.alias === "doduo-sevii")!;
+    expect(sevii).toMatchObject({ baseId: 84, regional: true });
+    expect(getPokemonListForGame(radicalRed).some((p) => p.id === sevii.id)).toBe(true);
+    expect(getPokemonFormsForGame(radicalRed).some((p) => p.id === sevii.id)).toBe(true);
+    expect(getPokemonListForGame(blazingEmerald).some((p) => p.id === sevii.id)).toBe(false);
+    expect(isInDex(radicalRed, sevii.id)).toBe(true);
+    expect(isInDex(blazingEmerald, sevii.id)).toBe(false);
+    expect(getPokemonListForGame(fireRed).some((p) => p.id >= 20001)).toBe(false);
+  });
+
+  it("resolve by id, evolve within their line and get a catch rate", () => {
+    const oreon = fakemon.find((f) => f.alias === "oreon")!;
+    expect(getPokemonById(oreon.id)?.family_id).toBe(133);
+    const venonat = fakemon.find((f) => f.alias === "venonat-hoenn")!;
+    expect(getEvolutionById(venonat.id)?.evolvesTo).toEqual(venonat.evolvesTo);
+    expect(getEvolutionById(venonat.evolvesTo![0])?.evolvesFrom).toBe(venonat.id);
+    expect(getCatchRatesForGame(blazingEmerald).find((r) => r.id === oreon.id)?.catch_rate).toBe(oreon.catchRate);
   });
 });
 

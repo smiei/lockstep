@@ -21,6 +21,13 @@
 // - patches.json: stats and types -> species data (merged onto this app's own
 //   values, era-adjusted with pokemon-history for the pack's data generation);
 //   move power/type/category -> move-overrides.json.
+// - patches.json "fakemon": Pokémon only the hack has (Radical Red's Sevii
+//   forms, Blazing Emerald's Hoenn forms and new species, Redux's robots) ->
+//   data/fakemon.json, one shared file with stable ids from 20001 on (kept by
+//   pack + alias across reruns, since runs store them). A variant of a real
+//   species is a forme of it (baseId); its family and catch rate follow the
+//   species it descends from. Battle states (Megas, Wishiwashi's school) are
+//   left out like everywhere else. No sprites: nothing hosts them openly.
 // Not in the source and therefore not generated: changed evolutions and catch
 // rates. Every generated pack is "unverified".
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
@@ -104,7 +111,66 @@ const SLUG_ALIASES = {
 // whose stats would overwrite the species'. A forme only the hack has (Radical
 // Red's "-sevii", Blazing Emerald's "-hoenn") resolves to nothing - it is not
 // in this app's data. `exact` tells a direct hit from a cosmetic fallback.
-const BATTLE_STATE = /-(mega|mega-x|mega-y|gmax|primal|totem|eternamax)$|-totem-/;
+const BATTLE_STATE = /-(mega|mega-x|mega-y|gmax|primal|totem|eternamax|school)$|-totem-/;
+
+const FAKEMON_FILE = path.join(dataDir, "fakemon.json");
+const FAKEMON_FIRST_ID = 20001;
+// Forme labels of the hacks' own regions, like PokeAPI's "Alola-Form".
+const REGION_LABELS = {
+  sevii: { de: "Sevii-Form", en: "Seviian Form", fr: "Forme de Sevii", es: "Forma de Sevii", it: "Forma di Sevii" },
+  hoenn: { de: "Hoenn-Form", en: "Hoennian Form", fr: "Forme de Hoenn", es: "Forma de Hoenn", it: "Forma di Hoenn" },
+};
+const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
+
+// One hack's fakemon as pokemon.json-shaped entries (see the header).
+function buildFakemon(hack, source, { resolve, species, catchRates, idOf }) {
+  const statsOf = (base) => {
+    const stats = {};
+    for (const [k, v] of Object.entries(STAT_KEYS)) stats[v] = Number(base[k]);
+    stats.Summe = Object.values(STAT_KEYS).reduce((sum, k) => sum + stats[k], 0);
+    return stats;
+  };
+  const entries = Object.values(source)
+    .filter((f) => !BATTLE_STATE.test(f.alias))
+    .map((f) => {
+      const cut = f.alias.lastIndexOf("-");
+      const base = cut > 0 ? species.get(f.alias.slice(0, cut)) : undefined;
+      const suffix = cut > 0 ? f.alias.slice(cut + 1) : "";
+      const label = /^[A-Z][a-z]+-[a-z]/.test(f.label) ? f.label.split("-").map(capitalize).join(" ") : f.label;
+      return { f, base, suffix, label, id: idOf(hack.id, f.alias) };
+    });
+  const byAlias = new Map(entries.map((e) => [e.f.alias, e]));
+  // The real species a fakemon descends from: its base, else its evolution
+  // line's root (the source misspells a few, e.g. "venonant").
+  const ancestor = (e) => e.base ?? resolve(e.f.evoline)?.pokemon;
+  return entries.map((e) => {
+    const { f, base, suffix, label, id } = e;
+    const from = ancestor(e) ?? (byAlias.get(f.evoline) !== e ? ancestor(byAlias.get(f.evoline) ?? e) : undefined);
+    const familyRoot = from ? undefined : byAlias.get(f.evoline);
+    const evolvesTo = (f.evos ?? [])
+      .map((alias) => byAlias.get(alias)?.id ?? resolve(alias)?.pokemon?.id)
+      .filter((target) => target !== undefined);
+    return {
+      id,
+      pack: hack.id,
+      alias: f.alias,
+      names: base ? base.names : allLangs(label),
+      types: f.types,
+      family_id: from?.family_id ?? familyRoot?.id ?? id,
+      stats: statsOf(f.baseStats),
+      legendary: from?.legendary ?? false,
+      catchRate: (from && catchRates.get(from.baseId ?? from.id)) ?? 45,
+      ...(base
+        ? {
+            baseId: base.id,
+            formNames: REGION_LABELS[suffix] ?? allLangs(label === base.names.en ? capitalize(suffix) : label),
+            ...(REGION_LABELS[suffix] ? { regional: true } : {}),
+          }
+        : {}),
+      ...(evolvesTo.length ? { evolvesTo } : {}),
+    };
+  });
+}
 
 async function slugResolver(pokemon) {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000");
@@ -154,6 +220,21 @@ async function main() {
   const history = await readJson(path.join(dataDir, "pokemon-history.json"));
   const moves = await readJson(path.join(dataDir, "moves.json"));
   const resolve = await slugResolver(pokemon);
+  const speciesBySlug = new Map(pokemon.filter((p) => p.baseId === undefined).map((p) => [slug(p.names.en), p]));
+  // Fakemon ids are permanent: an alias keeps the id it got first.
+  let fakemon = [];
+  try {
+    fakemon = (await readJson(FAKEMON_FILE)).fakemon;
+  } catch {
+    // First run.
+  }
+  const fakemonIds = new Map(fakemon.map((f) => [`${f.pack}/${f.alias}`, f.id]));
+  let nextFakemonId = Math.max(FAKEMON_FIRST_ID - 1, ...fakemon.map((f) => f.id)) + 1;
+  const idOf = (pack, alias) => {
+    const k = `${pack}/${alias}`;
+    if (!fakemonIds.has(k)) fakemonIds.set(k, nextFakemonId++);
+    return fakemonIds.get(k);
+  };
   const maxDex = Math.max(...pokemon.filter((p) => p.baseId === undefined).map((p) => p.id));
 
   for (const hack of hacks) {
@@ -252,9 +333,14 @@ async function main() {
       if (Object.keys(out).length) moveOverrides[name] = out;
     }
 
+    // The hack's own Pokémon.
+    const own = buildFakemon(hack, patch.fakemon ?? {}, { resolve, species: speciesBySlug, catchRates, idOf });
+    fakemon = [...fakemon.filter((f) => f.pack !== hack.id), ...own];
+    const ownByAlias = new Map(own.map((f) => [f.alias, f]));
+
     // Encounters: whether regional forms are caught here, and what is unknown.
     const encounterSlugs = new Set(entries.flatMap((e) => e.encounters ?? []));
-    const encountered = [...encounterSlugs].map((name) => [name, resolve(name)?.pokemon]);
+    const encountered = [...encounterSlugs].map((name) => [name, ownByAlias.get(slug(name)) ?? resolve(name)?.pokemon]);
     const regionalForms = encountered.some(([, p]) => p?.regional);
     const unknown = encountered.filter(([, p]) => !p).map(([name]) => name);
 
@@ -296,10 +382,25 @@ async function main() {
       `${hack.id}: ${routes.length} routes (${matchedRoutes} named from ${hack.base}), ${levelcaps.length} bosses, ` +
         `${species.length} species changed, ${Object.keys(moveOverrides).length} moves changed` +
         (regionalForms ? ", regional forms" : "") +
-        (unknown.length ? `
-  ${unknown.length} of ${encounterSlugs.size} encounters unknown: ${unknown.join(" ")}` : ""),
+        (own.length ? `, ${own.length} own Pokémon` : "") +
+        (unknown.length ? `\n  ${unknown.length} of ${encounterSlugs.size} encounters unknown: ${unknown.join(" ")}` : ""),
     );
   }
+
+  fakemon.sort((a, b) => a.id - b.id);
+  await writeFile(
+    FAKEMON_FILE,
+    JSON.stringify(
+      {
+        "//": "Pokémon only a ROM hack has, per pack (`pack`). Generated by scripts/import-nuzlocke-app.mjs from nuzlocke.app's patches.json; ids are permanent (runs store them). Read by data.ts (getFakemon).",
+        source: `${SOURCE_REPO}@${SOURCE_COMMIT}`,
+        fakemon,
+      },
+      null,
+      2,
+    ) + "\n",
+  );
+  console.log(`fakemon.json: ${fakemon.length} Pokémon`);
 }
 
 main().catch((err) => {

@@ -12,7 +12,13 @@ import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { getTypesForGeneration } from "@/lib/effectiveness";
 import { computePokemonRanks, rankForSumme } from "@/lib/ranking";
-import { baseSpeciesId, displayNameWithForm, formLabel, formsOfSpecies, movepoolId } from "@/lib/forms";
+import { baseSpeciesId, dexNumber, displayNameWithForm, formLabel, formsOfSpecies, movepoolId } from "@/lib/forms";
+
+// "025", or "—" for a ROM hack's own new Pokémon.
+const dexLabel = (pokemon: Pokemon) => {
+  const n = dexNumber(pokemon);
+  return n === null ? "—" : String(n).padStart(3, "0");
+};
 import { computeFusionStats, computeFusionTypes } from "@/lib/fusion";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
@@ -302,8 +308,8 @@ export function PokemonDetailModal({
                 strong
                 left={`${td.dexNo} ${
                   body
-                    ? `${String(baseSpeciesId(pokemon)).padStart(3, "0")}/${String(baseSpeciesId(body)).padStart(3, "0")}`
-                    : String(baseSpeciesId(pokemon)).padStart(3, "0")
+                    ? `${dexLabel(pokemon)}/${dexLabel(body)}`
+                    : dexLabel(pokemon)
                 }`}
                 right={`${td.rank} ${fusion ? "—" : `#${rank}`}`}
               />
