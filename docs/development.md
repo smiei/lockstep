@@ -89,7 +89,7 @@ The same release also starts [`.github/workflows/windows.yml`](../.github/workfl
 
 ### Dependency updates
 
-[Dependabot](../.github/dependabot.yml) opens pull requests every Monday: npm minor and patch updates grouped into one, major versions one at a time, GitHub Actions grouped, and the Docker base image monthly. Security fixes arrive at once. [CI](../.github/workflows/ci.yml) runs the tests, lint and a production build on every pull request; merge an update once it is green. Major versions usually need code changes and a look by hand.
+[Dependabot](../.github/dependabot.yml) opens pull requests every Monday: npm minor and patch updates grouped into one, GitHub Actions grouped, and the Docker base image monthly. Major versions are ignored and planned by hand. Security fixes arrive at once. [CI](../.github/workflows/ci.yml) runs the tests, lint and a production build on every pull request; merge an update once it is green. Major versions usually need code changes and a look by hand.
 
 The build passes the version as `APP_VERSION`, which is what the gear menu shows on a Docker install. A non-Docker install takes it from `package.json`.
 
