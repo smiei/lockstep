@@ -16,7 +16,10 @@ services:
       - ./public/pokemon-sprites:/app/public/pokemon-sprites
       - ./public/ball-sprites:/app/public/ball-sprites
       - ./public/badges:/app/public/badges
-      - ./public/trainers:/app/public/trainers:ro
+      # Writable on purpose: the entrypoint downloads missing trainer pictures
+      # from Showdown into it (scripts/download-trainers.mjs). Your own files
+      # here are never overwritten.
+      - ./public/trainers:/app/public/trainers
       # Optional: drop an icon.svg in here to replace the app icon on your own
       # instance. Gitignored and dockerignored, so it never reaches the repo
       # or the published image.
