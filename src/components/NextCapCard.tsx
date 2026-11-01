@@ -62,8 +62,18 @@ export function NextCapCard({
             <span className="truncate text-base font-bold text-ink">
               {localizeName(summary.next.names, lang)}
             </span>
-            <span className="font-mono text-3xl font-semibold leading-none tabular-nums text-ink">
-              {summary.next.level}
+            {/* The cap, then the team's level under it (cap - 2), as in the
+                Overview's run sheet. */}
+            <span
+              className="shrink-0 font-mono leading-none tabular-nums"
+              title={translations[lang].overview.sheetTeamUpTo(summary.next.level - 2)}
+            >
+              <span className="text-3xl font-semibold text-ink">{summary.next.level}</span>
+              <span className="text-lg text-ink-muted" aria-hidden="true">
+                {" / "}
+                {summary.next.level - 2}
+              </span>
+              <span className="sr-only">{`, ${translations[lang].overview.sheetTeamUpTo(summary.next.level - 2)}`}</span>
             </span>
           </span>
           <span className="block truncate text-xs text-ink-muted">
