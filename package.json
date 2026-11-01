@@ -1,6 +1,6 @@
 {
   "name": "lockstep",
-  "version": "5.2.0",
+  "version": "5.3.0",
   "private": true,
   "description": "Self-hosted Pokémon Nuzlocke and SoulLink tracker for 1-4 players.",
   "license": "MIT",
@@ -34,6 +34,7 @@
     "download:catchrates": "node scripts/download-catchrates.mjs",
     "download:badges": "node scripts/download-badges.mjs",
     "download:trainers": "node scripts/download-trainers.mjs",
+    "download:covers": "node scripts/download-covers.mjs",
     "validate:packs": "vitest run src/lib/__tests__/gamePacks.test.ts",
     "pack": "node scripts/pack-tool.mjs",
     "migrate:turso": "node scripts/migrate-turso.mjs"
