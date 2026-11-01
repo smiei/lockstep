@@ -287,9 +287,6 @@ namespace LockstepTray
             env["PORT"] = port.ToString();
             env["NODE_ENV"] = "production";
             env["NEXT_TELEMETRY_DISABLED"] = "1";
-            // Prisma looks for its engine where the client was GENERATED (the
-            // build machine's folder) and gives up; point it at our copy.
-            env["PRISMA_QUERY_ENGINE_LIBRARY"] = Path.Combine(appDir, "src", "generated", "prisma", "query_engine-windows.dll.node");
             env["PATH"] = Path.GetDirectoryName(nodeExe) + ";" + env["PATH"];
             var p = new Process();
             p.StartInfo = psi;

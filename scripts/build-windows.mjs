@@ -10,7 +10,7 @@
 // downloaded on the user's machine at first start (scripts/prepare-runtime.mjs).
 //
 // Runs on Windows only (csc.exe from .NET Framework compiles the tray program,
-// and Prisma generates the Windows query engine). Used locally and by
+// and better-sqlite3 ships a Windows binary). Used locally and by
 // .github/workflows/windows.yml.
 // Run: npm run build:windows   (APP_VERSION=5.0 overrides the version)
 import { spawnSync } from "node:child_process";
@@ -59,7 +59,7 @@ function run(command, args, options = {}) {
 const prisma = (args, env) =>
   run(process.execPath, [path.join("node_modules", "prisma", "build", "index.js"), ...args], { cwd: root, env: { ...process.env, ...env } });
 
-// 1. Prisma client (Windows engine) and the production build, against a
+// 1. Prisma client and the production build, against a
 //    throwaway database: the build needs DATABASE_URL and the real schema, as
 //    in the Dockerfile's builder stage.
 const buildDb = path.join(os.tmpdir(), `lockstep-build-${process.pid}.db`);
@@ -109,12 +109,16 @@ if (existsSync(linkRoot)) {
     }
   }
 }
-run("npm", ["ci", "--omit=dev", "--no-audit", "--no-fund"], { cwd: appDir });
+// better-sqlite3 downloads a prebuilt .node for the Node it is installed with;
+// npm_config_target makes that the BUNDLED Node, not whatever runs this script
+// (checked against the bundled node.exe below).
+run("npm", ["ci", "--omit=dev", "--no-audit", "--no-fund"], { cwd: appDir, env: { ...process.env, npm_config_target: NODE_VERSION } });
 
 // Prune what `next start` and the Prisma CLI never load - roughly a third of
 // the download: source maps, Next's SWC compiler (only `next build` uses it),
-// Next's bundled docs, and Prisma's WASM engines for other databases.
-const OTHER_DBS = /^query_(compiler|engine)_bg\.(cockroachdb|mysql|postgresql|sqlserver)\./;
+// Next's bundled docs, Prisma's WASM query compilers for other databases, and
+// better-sqlite3's SQLite sources (only its compiled .node is loaded).
+const OTHER_DBS = /^query_(compiler|engine)(_fast|_small)?_bg\.(cockroachdb|mysql|postgresql|sqlserver)\./;
 async function prune(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
@@ -127,6 +131,7 @@ await prune(modules);
 for (const dir of await readdir(path.join(modules, "@next"))) {
   if (dir.startsWith("swc-")) await rm(path.join(modules, "@next", dir), { recursive: true });
 }
+for (const dir of ["deps", "src"]) await rm(path.join(modules, "better-sqlite3", dir), { recursive: true, force: true });
 for (const { link, target } of links) {
   await cp(path.join(appDir, target), path.join(appDir, link), { recursive: true });
 }
@@ -157,6 +162,12 @@ const extract = path.join(cacheDir, nodeName);
 if (!existsSync(extract)) run(tar, ["-xf", nodeZip, "-C", cacheDir]);
 await mkdir(path.join(stage, "node"), { recursive: true });
 for (const file of ["node.exe", "LICENSE"]) await copyFile(path.join(extract, file), path.join(stage, "node", file));
+
+// The native database driver must load in the BUNDLED Node (same ABI as the one
+// that installed it), or every page of the finished app answers 500.
+const smoke = spawnSync(path.join(stage, "node", "node.exe"), ["-e", "new (require('better-sqlite3'))(':memory:').prepare('select 1').get()"], { cwd: appDir });
+if (smoke.status !== 0) throw new Error(`better-sqlite3 does not load in the bundled Node ${NODE_VERSION}: ${smoke.stderr}`);
+console.log("better-sqlite3 loads in the bundled Node.");
 
 // 4. The icon (the project's own logo) and the tray program.
 const SIZES = [16, 24, 32, 48, 64, 128, 256];
