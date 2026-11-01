@@ -32,11 +32,16 @@ const allGames = readdirSync(path.join(root, "data", "games"), { withFileTypes: 
 // dataGeneration, so they're excluded from this file's scope on purpose (see
 // infiniteFusionPacks.test.ts for their own pins).
 // Official games only: ROM hacks (kind "romhack") carry their own species and
-// move changes on purpose and are checked by gamePacks.test.ts instead.
-const games = allGames.filter((g) => !g.id.startsWith("infinite-fusion") && (g.kind ?? "official") === "official");
+// move changes on purpose and are checked by gamePacks.test.ts instead. And
+// only up to Gen 5: these pins are the pre-Gen-6 rules (no Fairy, Steel
+// resisting Ghost and Dark, the old Rayquaza rate); Gen 6+ packs have their own
+// pins in modernGames.test.ts.
+const games = allGames.filter(
+  (g) => !g.id.startsWith("infinite-fusion") && (g.kind ?? "official") === "official" && g.generation <= 5,
+);
 
 describe("game data regression (pre Infinite Fusion refactor)", () => {
-  it("covers exactly the nine pre-Infinite-Fusion games this pins - a tenth pack changes this test's scope", () => {
+  it("covers exactly the official Gen 1-5 games this pins - another one changes this test's scope", () => {
     expect(games.map((g) => g.id).sort()).toEqual(
       [
         "red-blue",
@@ -48,6 +53,10 @@ describe("game data regression (pre Infinite Fusion refactor)", () => {
         "soulsilver",
         "black",
         "white",
+        "ruby",
+        "sapphire",
+        "diamond-pearl",
+        "black-2-white-2",
       ].sort(),
     );
   });

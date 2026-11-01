@@ -1,0 +1,19 @@
+{
+  "id": "brilliant-diamond-shining-pearl",
+  "sort": 25,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 8,
+  "dexLimit": 493,
+  "spriteSet": "modern",
+  "versionGroup": "brilliant-diamond-and-shining-pearl",
+  "trainerSet": "brilliant-diamond-shining-pearl",
+  "names": {
+    "de": "Strahlender Diamant / Leuchtende Perle",
+    "en": "Brilliant Diamond / Shining Pearl",
+    "fr": "Diamant Étincelant / Perle Scintillante",
+    "es": "Diamante Brillante / Perla Reluciente",
+    "it": "Diamante Lucente / Perla Splendente"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (bd)"
+}

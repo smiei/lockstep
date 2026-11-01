@@ -1,0 +1,20 @@
+{
+  "id": "sword",
+  "sort": 23,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 8,
+  "dexLimit": 898,
+  "spriteSet": "modern",
+  "versionGroup": "sword-shield",
+  "trainerSet": "sword-shield",
+  "regionalForms": true,
+  "names": {
+    "de": "Schwert",
+    "en": "Sword",
+    "fr": "Épée",
+    "es": "Espada",
+    "it": "Spada"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (sw)"
+}

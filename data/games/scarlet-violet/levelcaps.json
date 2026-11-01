@@ -1,0 +1,610 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Nemila",
+      "en": "Nemona",
+      "fr": "Menzi",
+      "es": "Mencía",
+      "it": "Nemi"
+    },
+    "location": {
+      "de": "Cucharico-Pfad",
+      "en": "Poco Path",
+      "fr": "Route de Cuchalaga",
+      "es": "Poco Path",
+      "it": "Poco Path"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Nemila",
+      "en": "Nemona",
+      "fr": "Menzi",
+      "es": "Mencía",
+      "it": "Nemi"
+    },
+    "location": {
+      "de": "Mesalona City",
+      "en": "Mesagoza",
+      "fr": "Mesaledo",
+      "es": "Mesagoza",
+      "it": "Mesagoza"
+    },
+    "badge": null,
+    "max_level": 9
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Ronah",
+      "en": "Katy",
+      "fr": "Éra",
+      "es": "Araceli",
+      "it": "Aceria"
+    },
+    "location": {
+      "de": "Moldrid",
+      "en": "Cortondo",
+      "fr": "Sevaro",
+      "es": "Cortondo",
+      "it": "Cortondo"
+    },
+    "badge": null,
+    "max_level": 15
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Stony Cliff Titan",
+      "en": "Stony Cliff Titan",
+      "fr": "Stony Cliff Titan",
+      "es": "Stony Cliff Titan",
+      "it": "Stony Cliff Titan"
+    },
+    "location": {
+      "de": "Südliche Zone 3",
+      "en": "South Province (Area Three)",
+      "fr": "Zone Sud n° 3",
+      "es": "South Province (Area Three)",
+      "it": "South Province (Area Three)"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Colzo",
+      "en": "Brassius",
+      "fr": "Colza",
+      "es": "Brais",
+      "it": "Brassius"
+    },
+    "location": {
+      "de": "Bolardin",
+      "en": "Artazon",
+      "fr": "Cuencia",
+      "es": "Artazon",
+      "it": "Artazon"
+    },
+    "badge": null,
+    "max_level": 17
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Open Sky Titan",
+      "en": "Open Sky Titan",
+      "fr": "Open Sky Titan",
+      "es": "Open Sky Titan",
+      "it": "Open Sky Titan"
+    },
+    "location": {
+      "de": "Westliche Zone 1",
+      "en": "West Province (Area One)",
+      "fr": "Zone Ouest n° 1",
+      "es": "West Province (Area One)",
+      "it": "West Province (Area One)"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Pinio",
+      "en": "Giacomo",
+      "fr": "Brome",
+      "es": "Anán",
+      "it": "Romelio"
+    },
+    "location": {
+      "de": "Team Star Dark",
+      "en": "Team Star Dark",
+      "fr": "Team Star Dark",
+      "es": "Team Star Dark",
+      "it": "Team Star Dark"
+    },
+    "badge": null,
+    "max_level": 21
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Nemila",
+      "en": "Nemona",
+      "fr": "Menzi",
+      "es": "Mencía",
+      "it": "Nemi"
+    },
+    "location": {
+      "de": "Fermanca City",
+      "en": "Levincia",
+      "fr": "Levalendura",
+      "es": "Levincia",
+      "it": "Levincia"
+    },
+    "badge": null,
+    "max_level": 22
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Enigmara",
+      "en": "Iono",
+      "fr": "Mashynn",
+      "es": "e-Nigma",
+      "it": "Kissara"
+    },
+    "location": {
+      "de": "Fermanca City",
+      "en": "Levincia",
+      "fr": "Levalendura",
+      "es": "Levincia",
+      "it": "Levincia"
+    },
+    "badge": null,
+    "max_level": 24
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Irsa",
+      "en": "Mela",
+      "fr": "Meloco",
+      "es": "Melo",
+      "it": "Pruna"
+    },
+    "location": {
+      "de": "Team Star Fire",
+      "en": "Team Star Fire",
+      "fr": "Team Star Fire",
+      "es": "Team Star Fire",
+      "it": "Team Star Fire"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Lurking Steel Titan",
+      "en": "Lurking Steel Titan",
+      "fr": "Lurking Steel Titan",
+      "es": "Lurking Steel Titan",
+      "it": "Lurking Steel Titan"
+    },
+    "location": {
+      "de": "Östliche Zone 3",
+      "en": "East Province (Area Three)",
+      "fr": "Zone Est n° 3",
+      "es": "East Province (Area Three)",
+      "it": "East Province (Area Three)"
+    },
+    "badge": null,
+    "max_level": 29
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Kombu",
+      "en": "Kofu",
+      "fr": "Kombu",
+      "es": "Fuco",
+      "it": "Algaro"
+    },
+    "location": {
+      "de": "Garrafosa City",
+      "en": "Cascarrafa",
+      "fr": "Jarramanca",
+      "es": "Cascarrafa",
+      "it": "Cascarrafa"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Shugi",
+      "en": "Atticus",
+      "fr": "Erio",
+      "es": "Henzo",
+      "it": "Henzo"
+    },
+    "location": {
+      "de": "Team Star Poison",
+      "en": "Team Star Poison",
+      "fr": "Team Star Poison",
+      "es": "Team Star Poison",
+      "it": "Team Star Poison"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Nemila",
+      "en": "Nemona",
+      "fr": "Menzi",
+      "es": "Mencía",
+      "it": "Nemi"
+    },
+    "location": {
+      "de": "Mesclarra",
+      "en": "Medali",
+      "fr": "Mezclamora",
+      "es": "Medali",
+      "it": "Medali"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Aoki",
+      "en": "Larry",
+      "fr": "Okuba",
+      "es": "Laureano",
+      "it": "Ubaldo"
+    },
+    "location": {
+      "de": "Mesclarra",
+      "en": "Medali",
+      "fr": "Mezclamora",
+      "es": "Medali",
+      "it": "Medali"
+    },
+    "badge": null,
+    "max_level": 36
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Etta",
+      "en": "Ryme",
+      "fr": "Laïm",
+      "es": "Lima",
+      "it": "Lima"
+    },
+    "location": {
+      "de": "Frigomonta",
+      "en": "Montenevera",
+      "fr": "Frigao",
+      "es": "Montenevera",
+      "it": "Montenevera"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Quaking Earth Titan",
+      "en": "Quaking Earth Titan",
+      "fr": "Quaking Earth Titan",
+      "es": "Quaking Earth Titan",
+      "it": "Quaking Earth Titan"
+    },
+    "location": {
+      "de": "Brutzelwüste",
+      "en": "Asado Desert",
+      "fr": "Désert Rôtissable",
+      "es": "Asado Desert",
+      "it": "Asado Desert"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Nemila",
+      "en": "Nemona",
+      "fr": "Menzi",
+      "es": "Mencía",
+      "it": "Nemi"
+    },
+    "location": {
+      "de": "Asarilla",
+      "en": "Alfornada",
+      "fr": "Alforneira",
+      "es": "Alfornada",
+      "it": "Alfornada"
+    },
+    "badge": null,
+    "max_level": 43
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Tulia",
+      "en": "Tulip",
+      "fr": "Tully",
+      "es": "Tuli",
+      "it": "Tulipa"
+    },
+    "location": {
+      "de": "Asarilla",
+      "en": "Alfornada",
+      "fr": "Alforneira",
+      "es": "Alfornada",
+      "it": "Alfornada"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Grusha",
+      "en": "Grusha",
+      "fr": "Grusha",
+      "es": "Grusha",
+      "it": "Grusha"
+    },
+    "location": {
+      "de": "Glaseado City",
+      "en": "Glaseado City",
+      "fr": "Glaseado City",
+      "es": "Glaseado City",
+      "it": "Glaseado City"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Otis",
+      "en": "Ortega",
+      "fr": "Ortiga",
+      "es": "Gus",
+      "it": "Ortiz"
+    },
+    "location": {
+      "de": "Team Star Fairy",
+      "en": "Team Star Fairy",
+      "fr": "Team Star Fairy",
+      "es": "Team Star Fairy",
+      "it": "Team Star Fairy"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "False Dragon Titan",
+      "en": "False Dragon Titan",
+      "fr": "False Dragon Titan",
+      "es": "False Dragon Titan",
+      "it": "False Dragon Titan"
+    },
+    "location": {
+      "de": "Caldero-See",
+      "en": "Casseroya Lake",
+      "fr": "Lac Asrol",
+      "es": "Casseroya Lake",
+      "it": "Casseroya Lake"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Rioba",
+      "en": "Eri",
+      "fr": "Nèflie",
+      "es": "Erin",
+      "it": "Nespera"
+    },
+    "location": {
+      "de": "Team Star Fighting",
+      "en": "Team Star Fighting",
+      "fr": "Team Star Fighting",
+      "es": "Team Star Fighting",
+      "it": "Team Star Fighting"
+    },
+    "badge": null,
+    "max_level": 56
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Cay",
+      "en": "Rika",
+      "fr": "Cayenn",
+      "es": "Cayena",
+      "it": "Capsi"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 58
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Poppy",
+      "en": "Poppy",
+      "fr": "Popi",
+      "es": "Pola",
+      "it": "Verina"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 58
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Aoki",
+      "en": "Larry",
+      "fr": "Okuba",
+      "es": "Laureano",
+      "it": "Ubaldo"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Sinius",
+      "en": "Hassel",
+      "fr": "Hassa",
+      "es": "Hesperio",
+      "it": "Oranzio"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 61
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Sagaria",
+      "en": "Geeta",
+      "fr": "Alisma",
+      "es": "Ságita",
+      "it": "Alisma"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Pepper",
+      "en": "Arven",
+      "fr": "Pepper",
+      "es": "Damián",
+      "it": "Pepe"
+    },
+    "location": {
+      "de": "Poco Path Lighthouse",
+      "en": "Poco Path Lighthouse",
+      "fr": "Poco Path Lighthouse",
+      "es": "Poco Path Lighthouse",
+      "it": "Poco Path Lighthouse"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Clavel",
+      "en": "Clive",
+      "fr": "Clavel",
+      "es": "Clavel",
+      "it": "Clavel"
+    },
+    "location": {
+      "de": "Mesalona City",
+      "en": "Mesagoza",
+      "fr": "Mesaledo",
+      "es": "Mesagoza",
+      "it": "Mesagoza"
+    },
+    "badge": null,
+    "max_level": 61
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Cosima",
+      "en": "Penny",
+      "fr": "Pania",
+      "es": "Noa",
+      "it": "Penny"
+    },
+    "location": {
+      "de": "Mesalona City",
+      "en": "Mesagoza",
+      "fr": "Mesaledo",
+      "es": "Mesagoza",
+      "it": "Mesagoza"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Nemila",
+      "en": "Nemona",
+      "fr": "Menzi",
+      "es": "Mencía",
+      "it": "Nemi"
+    },
+    "location": {
+      "de": "Mesalona City",
+      "en": "Mesagoza",
+      "fr": "Mesaledo",
+      "es": "Mesagoza",
+      "it": "Mesagoza"
+    },
+    "badge": null,
+    "max_level": 66
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "id": "alpha-sapphire",
+  "sort": 18,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 6,
+  "dexLimit": 721,
+  "spriteSet": "modern",
+  "versionGroup": "omega-ruby-alpha-sapphire",
+  "trainerSet": "omega-ruby-alpha-sapphire",
+  "names": {
+    "de": "Alpha Saphir",
+    "en": "Alpha Sapphire",
+    "fr": "Saphir Alpha",
+    "es": "Zafiro Alfa",
+    "it": "Zaffiro Alpha"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (as)"
+}

@@ -1,0 +1,4972 @@
+{
+  "source": "https://pokeapi.co/api/v2/region/<region> -> location names",
+  "generatedAt": "2026-10-31T23:41:36.925Z",
+  "regions": {
+    "kanto": {
+      "Altering Cave": {
+        "fr": "Grotte Métamo",
+        "de": "Wandelhöhle",
+        "en": "Altering Cave"
+      },
+      "Berry Forest": {
+        "fr": "Bois Baies",
+        "de": "Beerenforst",
+        "en": "Berry Forest"
+      },
+      "Birth Island": {
+        "fr": "Île Aurore",
+        "de": "Entstehungsinsel",
+        "en": "Birth Island"
+      },
+      "Bond Bridge": {
+        "fr": "Pont du Lien",
+        "de": "Bundbrücke",
+        "en": "Bond Bridge"
+      },
+      "Canyon Entrance": {
+        "fr": "Entrée du Canyon",
+        "de": "Schluchteingang",
+        "en": "Canyon Entrance"
+      },
+      "Cape Brink": {
+        "fr": "Cap Falaise",
+        "de": "Kap Kante",
+        "en": "Cape Brink"
+      },
+      "Celadon City": {
+        "fr": "Céladopole",
+        "de": "Prismania City",
+        "en": "Celadon City"
+      },
+      "Cerulean Cave": {
+        "fr": "Caverne Azurée",
+        "de": "Azuria-Höhle",
+        "en": "Cerulean Cave"
+      },
+      "Cerulean City": {
+        "fr": "Azuria",
+        "de": "Azuria City",
+        "en": "Cerulean City"
+      },
+      "Cinnabar Island": {
+        "fr": "Cramois'Ile",
+        "de": "Zinnoberinsel",
+        "en": "Cinnabar Island"
+      },
+      "Diglett's Cave": {
+        "fr": "Cave TAUPIQUEUR",
+        "de": "Digda-Höhle",
+        "en": "Diglett's Cave"
+      },
+      "Dilford Chamber": {
+        "fr": "Chambre Jonquatre",
+        "de": "Vierzisse-Kammer",
+        "en": "Dilford Chamber"
+      },
+      "Five Island": {
+        "fr": "Ile 5",
+        "de": "Eiland Fünf",
+        "en": "Five Island"
+      },
+      "Five Isle Meadow": {
+        "fr": "Pré Ile 5",
+        "de": "Eiland 5-Weide",
+        "en": "Five Isle Meadow"
+      },
+      "Four Island": {
+        "fr": "Ile 4",
+        "de": "Eiland Vier",
+        "en": "Four Island"
+      },
+      "Fuchsia City": {
+        "fr": "Parmanie",
+        "de": "Fuchsania City",
+        "en": "Fuchsia City"
+      },
+      "Green Path": {
+        "fr": "Chemin Vert",
+        "de": "Grüner Pfad",
+        "en": "Green Path"
+      },
+      "Icefall Cave": {
+        "fr": "Grotte de Glace",
+        "de": "Eiskaskadenhöhle",
+        "en": "Icefall Cave"
+      },
+      "Indigo Plateau": {
+        "fr": "Plateau Indigo",
+        "de": "Indigo-Plateau",
+        "en": "Indigo Plateau"
+      },
+      "Kanto Power Plant": {
+        "fr": "Centrale",
+        "de": "Kraftwerk",
+        "en": "Kanto Power Plant"
+      },
+      "Kanto Underground Path": {
+        "en": "Kanto Underground Path"
+      },
+      "Kindle Road": {
+        "fr": "Route Tison",
+        "de": "Glühweg",
+        "en": "Kindle Road"
+      },
+      "Lavender Town": {
+        "fr": "Lavanville",
+        "de": "Lavandia",
+        "en": "Lavender Town"
+      },
+      "Liptoo Chamber": {
+        "fr": "Chambre Deulipe",
+        "de": "Pezwulp-Kammer",
+        "en": "Liptoo Chamber"
+      },
+      "Lost Cave": {
+        "fr": "Grotte Perdue",
+        "de": "Verlorene Höhle",
+        "en": "Lost Cave"
+      },
+      "Memorial Pillar": {
+        "fr": "Mémorial",
+        "de": "Gedenksäule",
+        "en": "Memorial Pillar"
+      },
+      "Monean Chamber": {
+        "fr": "Chambre Anemune",
+        "de": "Einamon-Kammer",
+        "en": "Monean Chamber"
+      },
+      "Mt. Ember": {
+        "fr": "Mont Braise",
+        "de": "Glutberg",
+        "en": "Mt. Ember"
+      },
+      "Mt. Moon": {
+        "fr": "Mont Sélénite",
+        "de": "Mondberg",
+        "en": "Mt. Moon"
+      },
+      "Navel Rock": {
+        "fr": "Roc Nombri",
+        "de": "Nabelfels",
+        "en": "Navel Rock"
+      },
+      "One Island": {
+        "fr": "Ile 1",
+        "de": "Eiland Eins",
+        "en": "One Island"
+      },
+      "Outcast Island": {
+        "fr": "Ile du Lointain",
+        "de": "Fern-Eiland",
+        "en": "Outcast Island"
+      },
+      "Pallet Town": {
+        "fr": "Bourg Palette",
+        "de": "Alabastia",
+        "en": "Pallet Town"
+      },
+      "Pattern Bush": {
+        "fr": "Forbuissons",
+        "de": "Musterbuschwald",
+        "en": "Pattern Bush"
+      },
+      "Pewter City": {
+        "fr": "Argenta",
+        "de": "Marmoria City",
+        "en": "Pewter City"
+      },
+      "Pokémon Mansion": {
+        "fr": "Manoir Pokémon",
+        "de": "Pokémon-Villa",
+        "en": "Pokémon Mansion"
+      },
+      "Pokémon Tower": {
+        "fr": "Tour Pokémon",
+        "de": "Pokémon-Turm",
+        "en": "Pokémon Tower"
+      },
+      "Resort Gorgeous": {
+        "fr": "Camp de Vacances",
+        "de": "Ferienparadies",
+        "en": "Resort Gorgeous"
+      },
+      "Rixy Chamber": {
+        "fr": "Chambre Irix",
+        "de": "Lilechs-Kammer",
+        "en": "Rixy Chamber"
+      },
+      "Roaming Kanto": {
+        "fr": "Sillonnant Kanto",
+        "de": "Wandert durch Kanto",
+        "en": "Roaming Kanto"
+      },
+      "Rock Tunnel": {
+        "fr": "Grotte",
+        "de": "Felstunnel",
+        "en": "Rock Tunnel"
+      },
+      "Route 1": {
+        "fr": "Route 1",
+        "de": "Route 1",
+        "en": "Route 1"
+      },
+      "Route 10": {
+        "fr": "Route 10",
+        "de": "Route 10",
+        "en": "Route 10"
+      },
+      "Route 11": {
+        "fr": "Route 11",
+        "de": "Route 11",
+        "en": "Route 11"
+      },
+      "Route 12": {
+        "fr": "Route 12",
+        "de": "Route 12",
+        "en": "Route 12"
+      },
+      "Route 13": {
+        "fr": "Route 13",
+        "de": "Route 13",
+        "en": "Route 13"
+      },
+      "Route 14": {
+        "fr": "Route 14",
+        "de": "Route 14",
+        "en": "Route 14"
+      },
+      "Route 15": {
+        "fr": "Route 15",
+        "de": "Route 15",
+        "en": "Route 15"
+      },
+      "Route 16": {
+        "fr": "Route 16",
+        "de": "Route 16",
+        "en": "Route 16"
+      },
+      "Route 17": {
+        "fr": "Route 17",
+        "de": "Route 17",
+        "en": "Route 17"
+      },
+      "Route 18": {
+        "fr": "Route 18",
+        "de": "Route 18",
+        "en": "Route 18"
+      },
+      "Route 2": {
+        "fr": "Route 2",
+        "de": "Route 2",
+        "en": "Route 2"
+      },
+      "Route 22": {
+        "fr": "Route 22",
+        "de": "Route 22",
+        "en": "Route 22"
+      },
+      "Route 23": {
+        "fr": "Route 23",
+        "de": "Route 23",
+        "en": "Route 23"
+      },
+      "Route 24": {
+        "fr": "Route 24",
+        "de": "Route 24",
+        "en": "Route 24"
+      },
+      "Route 25": {
+        "fr": "Route 25",
+        "de": "Route 25",
+        "en": "Route 25"
+      },
+      "Route 26": {
+        "fr": "Route 26",
+        "de": "Route 26",
+        "en": "Route 26"
+      },
+      "Route 27": {
+        "fr": "Route 27",
+        "de": "Route 27",
+        "en": "Route 27"
+      },
+      "Route 28": {
+        "fr": "Route 28",
+        "de": "Route 28",
+        "en": "Route 28"
+      },
+      "Route 3": {
+        "fr": "Route 3",
+        "de": "Route 3",
+        "en": "Route 3"
+      },
+      "Route 4": {
+        "fr": "Route 4",
+        "de": "Route 4",
+        "en": "Route 4"
+      },
+      "Route 5": {
+        "fr": "Route 5",
+        "de": "Route 5",
+        "en": "Route 5"
+      },
+      "Route 6": {
+        "fr": "Route 6",
+        "de": "Route 6",
+        "en": "Route 6"
+      },
+      "Route 7": {
+        "fr": "Route 7",
+        "de": "Route 7",
+        "en": "Route 7"
+      },
+      "Route 8": {
+        "fr": "Route 8",
+        "de": "Route 8",
+        "en": "Route 8"
+      },
+      "Route 9": {
+        "fr": "Route 9",
+        "de": "Route 9",
+        "en": "Route 9"
+      },
+      "Ruin Valley": {
+        "fr": "Vallée Ruine",
+        "de": "Ruinental",
+        "en": "Ruin Valley"
+      },
+      "S.S. Anne": {
+        "fr": "L'Océane",
+        "de": "MS Anne",
+        "en": "S.S. Anne"
+      },
+      "Safari Zone": {
+        "fr": "Parc Safari",
+        "de": "Safari-Zone",
+        "en": "Safari Zone"
+      },
+      "Saffron City": {
+        "fr": "Safrania",
+        "de": "Saffronia City",
+        "en": "Saffron City"
+      },
+      "Scufib Chamber": {
+        "fr": "Chambre Hibicinq",
+        "de": "Fünibisku-Kammer",
+        "en": "Scufib Chamber"
+      },
+      "Sea Route 19": {
+        "fr": "Chenal 19",
+        "de": "Route 19",
+        "en": "Sea Route 19"
+      },
+      "Sea Route 20": {
+        "fr": "Chenal 20",
+        "de": "Route 20",
+        "en": "Sea Route 20"
+      },
+      "Sea Route 21": {
+        "fr": "Chenal 21",
+        "de": "Route 21",
+        "en": "Sea Route 21"
+      },
+      "Seafoam Islands": {
+        "fr": "Iles Ecume",
+        "de": "Seeschauminseln",
+        "en": "Seafoam Islands"
+      },
+      "Sevault Canyon": {
+        "fr": "Canyon Sesor",
+        "de": "7-Schatzschlucht",
+        "en": "Sevault Canyon"
+      },
+      "Seven Island": {
+        "fr": "Île 7",
+        "de": "Eiland Sieben",
+        "en": "Seven Island"
+      },
+      "Six Island": {
+        "fr": "Île 6",
+        "de": "Eiland Sechs",
+        "en": "Six Island"
+      },
+      "Tanoby Ruins": {
+        "fr": "Ruines Tanoby",
+        "de": "Tanibo-Ruinen",
+        "en": "Tanoby Ruins"
+      },
+      "Three Island": {
+        "fr": "Île 3",
+        "de": "Eiland Drei",
+        "en": "Three Island"
+      },
+      "Three Isle Path": {
+        "fr": "Route Île 3",
+        "de": "Tri-Eiland-Pfad",
+        "en": "Three Isle Path"
+      },
+      "Three Isle Port": {
+        "fr": "Port Ile 3",
+        "de": "Tri-Eiland Hafen",
+        "en": "Three Isle Port"
+      },
+      "Trainer Tower": {
+        "fr": "Tour Dresseurs",
+        "de": "Trainerturm",
+        "en": "Trainer Tower"
+      },
+      "Treasure Beach": {
+        "fr": "Plage Trésor",
+        "de": "Schatzgestade",
+        "en": "Treasure Beach"
+      },
+      "Two Island": {
+        "fr": "Île 2",
+        "de": "Eiland Zwei",
+        "en": "Two Island"
+      },
+      "Vermilion City": {
+        "fr": "Carmin sur Mer",
+        "de": "Orania City",
+        "en": "Vermilion City"
+      },
+      "Viapos Chamber": {
+        "fr": "Chambre Poinsept",
+        "de": "Sieborbia-Kammer",
+        "en": "Viapos Chamber"
+      },
+      "Victory Road": {
+        "fr": "Route Victoire",
+        "de": "Siegesstraße",
+        "en": "Victory Road"
+      },
+      "Viridian City": {
+        "fr": "Jadielle",
+        "de": "Vertania City",
+        "en": "Viridian City"
+      },
+      "Viridian Forest": {
+        "fr": "Forêt de Jade",
+        "de": "Vertania-Wald",
+        "en": "Viridian Forest"
+      },
+      "Water Labyrinth": {
+        "fr": "Labyrinthe d'O",
+        "de": "Wasserirrgarten",
+        "en": "Water Labyrinth"
+      },
+      "Water Path": {
+        "fr": "Agualcanal",
+        "de": "Wasserweg",
+        "en": "Water Path"
+      },
+      "Weepth Chamber": {
+        "fr": "Chambre Prois",
+        "de": "Dreiecke-Kammer",
+        "en": "Weepth Chamber"
+      }
+    },
+    "johto": {
+      "Azalea Town": {
+        "fr": "Ecorcia",
+        "de": "Azalea City",
+        "en": "Azalea Town"
+      },
+      "Bell Tower": {
+        "fr": "Tour Carillon",
+        "de": "Glockenturm",
+        "en": "Bell Tower"
+      },
+      "Bellchime Trail": {
+        "fr": "Sentier Carillon",
+        "de": "Glockenklangpfad",
+        "en": "Bellchime Trail"
+      },
+      "Blackthorn City": {
+        "fr": "Ebènelle",
+        "de": "Ebenholz City",
+        "en": "Blackthorn City"
+      },
+      "Burned Tower": {
+        "fr": "Tour Cendrée",
+        "de": "Turmruine",
+        "en": "Burned Tower"
+      },
+      "Cherrygrove City": {
+        "fr": "Ville Griotte",
+        "de": "Rosalia City",
+        "en": "Cherrygrove City"
+      },
+      "Cianwood City": {
+        "fr": "Irisia",
+        "de": "Anemonia City",
+        "en": "Cianwood City"
+      },
+      "Cliff Cave": {
+        "fr": "Grotte Falaise",
+        "de": "Felsschlundhöhle",
+        "en": "Cliff Cave"
+      },
+      "Cliff Edge Gate": {
+        "fr": "Portail Falaise",
+        "de": "Felsklippentor",
+        "en": "Cliff Edge Gate"
+      },
+      "Dark Cave": {
+        "fr": "Antre Noir",
+        "de": "Dunkelhöhle",
+        "en": "Dark Cave"
+      },
+      "Dragon's Den": {
+        "fr": "Antre du Dragon",
+        "de": "Drachenhöhle",
+        "en": "Dragon's Den"
+      },
+      "Ecruteak City": {
+        "fr": "Rosalia",
+        "de": "Teak City",
+        "en": "Ecruteak City"
+      },
+      "Embedded Tower": {
+        "fr": "Tour Enfouie",
+        "de": "Felsenherzturm",
+        "en": "Embedded Tower"
+      },
+      "Frontier Access": {
+        "fr": "Atrium Combat",
+        "de": "Kampfzonenzugang",
+        "en": "Frontier Access"
+      },
+      "Goldenrod City": {
+        "fr": "Doublonville",
+        "de": "Dukatia City",
+        "en": "Goldenrod City"
+      },
+      "Goldenrod Tunnel": {
+        "fr": "Doublon-Tunnel",
+        "de": "Dukatia-Passage",
+        "en": "Goldenrod Tunnel"
+      },
+      "Ice Path": {
+        "fr": "Route de Glace",
+        "de": "Eispfad",
+        "en": "Ice Path"
+      },
+      "Ilex Forest": {
+        "fr": "Bois aux Chênes",
+        "de": "Steineichenwald",
+        "en": "Ilex Forest"
+      },
+      "Johto Safari Zone": {
+        "fr": "Parc Safari",
+        "de": "Safari-Zone (Johto)",
+        "en": "Johto Safari Zone"
+      },
+      "Lake of Rage": {
+        "fr": "Lac Colère",
+        "de": "See des Zorns",
+        "en": "Lake of Rage"
+      },
+      "Lighthouse": {
+        "fr": "Phare",
+        "de": "Leuchtturm",
+        "en": "Lighthouse"
+      },
+      "Mahogany Town": {
+        "fr": "Acajou",
+        "de": "Mahagonia City",
+        "en": "Mahogany Town"
+      },
+      "Mt. Mortar": {
+        "fr": "Mont Creuset",
+        "de": "Kesselberg",
+        "en": "Mt. Mortar"
+      },
+      "Mt. Silver": {
+        "fr": "Mont Argenté",
+        "de": "Silberberg",
+        "en": "Mt. Silver"
+      },
+      "Mt. Silver Cave": {
+        "fr": "Grotte Argentée",
+        "de": "Silberberg (Höhle)",
+        "en": "Mt. Silver Cave"
+      },
+      "National Park": {
+        "fr": "Parc Naturel",
+        "de": "Nationalpark",
+        "en": "National Park"
+      },
+      "New Bark Town": {
+        "fr": "Bourg Geon",
+        "de": "Neuborkia",
+        "en": "New Bark Town"
+      },
+      "Olivine City": {
+        "fr": "Oliville",
+        "de": "Oliviana City",
+        "en": "Olivine City"
+      },
+      "Pokéathlon Dome": {
+        "fr": "Dôme Pokéathlon",
+        "de": "Pokéathlon",
+        "en": "Pokéathlon Dome"
+      },
+      "Pokéwalker": {
+        "fr": "Pokéwalker",
+        "de": "Pokéwalker",
+        "en": "Pokéwalker"
+      },
+      "Radio Tower": {
+        "fr": "Tour Radio",
+        "de": "Radio-Turm",
+        "en": "Radio Tower"
+      },
+      "Roaming Johto": {
+        "fr": "Sillonnant Johto",
+        "de": "Wandert durch Johto",
+        "en": "Roaming Johto"
+      },
+      "Route 29": {
+        "fr": "Route 29",
+        "de": "Route 29",
+        "en": "Route 29"
+      },
+      "Route 30": {
+        "fr": "Route 30",
+        "de": "Route 30",
+        "en": "Route 30"
+      },
+      "Route 31": {
+        "fr": "Route 31",
+        "de": "Route 31",
+        "en": "Route 31"
+      },
+      "Route 32": {
+        "fr": "Route 32",
+        "de": "Route 32",
+        "en": "Route 32"
+      },
+      "Route 33": {
+        "fr": "Route 33",
+        "de": "Route 33",
+        "en": "Route 33"
+      },
+      "Route 34": {
+        "fr": "Route 34",
+        "de": "Route 34",
+        "en": "Route 34"
+      },
+      "Route 35": {
+        "fr": "Route 35",
+        "de": "Route 35",
+        "en": "Route 35"
+      },
+      "Route 36": {
+        "fr": "Route 36",
+        "de": "Route 36",
+        "en": "Route 36"
+      },
+      "Route 37": {
+        "fr": "Route 37",
+        "de": "Route 37",
+        "en": "Route 37"
+      },
+      "Route 38": {
+        "fr": "Route 38",
+        "de": "Route 38",
+        "en": "Route 38"
+      },
+      "Route 39": {
+        "fr": "Route 39",
+        "de": "Route 39",
+        "en": "Route 39"
+      },
+      "Route 42": {
+        "fr": "Route 42",
+        "de": "Route 42",
+        "en": "Route 42"
+      },
+      "Route 43": {
+        "fr": "Route 43",
+        "de": "Route 43",
+        "en": "Route 43"
+      },
+      "Route 44": {
+        "fr": "Route 44",
+        "de": "Route 44",
+        "en": "Route 44"
+      },
+      "Route 45": {
+        "fr": "Route 45",
+        "de": "Route 45",
+        "en": "Route 45"
+      },
+      "Route 46": {
+        "fr": "Route 46",
+        "de": "Route 46",
+        "en": "Route 46"
+      },
+      "Route 47": {
+        "fr": "Route 47",
+        "de": "Route 47",
+        "en": "Route 47"
+      },
+      "Route 48": {
+        "fr": "Route 48",
+        "de": "Route 48",
+        "en": "Route 48"
+      },
+      "Ruins of Alph": {
+        "fr": "Ruines d'Alpha",
+        "de": "Alph-Ruinen",
+        "en": "Ruins of Alph"
+      },
+      "S.S. Aqua": {
+        "fr": "Aquaria",
+        "de": "M.S. Aqua",
+        "en": "S.S. Aqua"
+      },
+      "Safari Zone Gate": {
+        "fr": "Portail Safari",
+        "de": "Safari-Eingang",
+        "en": "Safari Zone Gate"
+      },
+      "Sea Route 40": {
+        "fr": "Chenal 40",
+        "de": "Route 40",
+        "en": "Sea Route 40"
+      },
+      "Sea Route 41": {
+        "fr": "Chenal 41",
+        "de": "Route 41",
+        "en": "Sea Route 41"
+      },
+      "Sinjoh Ruins": {
+        "fr": "Ruines Sinjoh",
+        "de": "Sinjoh-Ruinen",
+        "en": "Sinjoh Ruins"
+      },
+      "Slowpoke Well": {
+        "fr": "Puits RAMOLOSS",
+        "de": "Flegmon-Brunnen",
+        "en": "Slowpoke Well"
+      },
+      "Sprout Tower": {
+        "fr": "Tour CHETIFLOR",
+        "de": "Knofensa-Turm",
+        "en": "Sprout Tower"
+      },
+      "Team Rocket HQ": {
+        "fr": "Repaire Rocket d'Acajou",
+        "de": "Team Rocket-Hauptquartier",
+        "en": "Team Rocket HQ"
+      },
+      "Tohjo Falls": {
+        "fr": "Chutes Tohjo",
+        "de": "Tohjo-Fälle",
+        "en": "Tohjo Falls"
+      },
+      "Union Cave": {
+        "fr": "Caves Jumelles",
+        "de": "Einheitstunnel",
+        "en": "Union Cave"
+      },
+      "Unknown; all bugs": {
+        "fr": "Inconnu; que des insectes",
+        "de": "Unbekannt; nur Käfer",
+        "en": "Unknown; all bugs"
+      },
+      "Unknown; all Poliwag": {
+        "fr": "Inconnu; que des Ptitard",
+        "de": "Unbekannt; nur Quapsel",
+        "en": "Unknown; all Poliwag"
+      },
+      "Unknown; all Rattata": {
+        "fr": "Inconnu; que des Rattata",
+        "de": "Unbekannt; nur Rattfratz",
+        "en": "Unknown; all Rattata"
+      },
+      "Violet City": {
+        "fr": "Mauville",
+        "de": "Viola City",
+        "en": "Violet City"
+      },
+      "Whirl Islands": {
+        "fr": "Tourb'Iles",
+        "de": "Strudelinseln",
+        "en": "Whirl Islands"
+      }
+    },
+    "hoenn": {
+      "???": {
+        "fr": "???",
+        "de": "???",
+        "es": "(?)",
+        "it": "???",
+        "en": "???"
+      },
+      "Abandoned Ship": {
+        "fr": "Épave",
+        "de": "Schiffswrack",
+        "en": "Abandoned Ship"
+      },
+      "Altering Cave": {
+        "fr": "Grotte Métamo",
+        "de": "Wandelhöhle",
+        "en": "Altering Cave"
+      },
+      "Ancient Tomb": {
+        "fr": "Tombeau Antique",
+        "de": "Grabmal",
+        "es": "Tumba Antigua",
+        "it": "Tomba Antica",
+        "en": "Ancient Tomb"
+      },
+      "Artisan Cave": {
+        "fr": "Grotte Atelier",
+        "de": "Höhlenatelier",
+        "en": "Artisan Cave"
+      },
+      "Battle Resort": {
+        "fr": "Atoll de Combat",
+        "de": "Kampfresort",
+        "es": "Resort Batalla",
+        "it": "Resort Lotta",
+        "en": "Battle Resort"
+      },
+      "Battle Tower": {
+        "fr": "Tour de Combat",
+        "de": "Duellturm",
+        "en": "Battle Tower"
+      },
+      "Cave of Origin": {
+        "fr": "Grotte Origine",
+        "de": "Urzeithöhle",
+        "es": "Cueva Ancestral",
+        "it": "Grotta dei Tempi",
+        "en": "Cave of Origin"
+      },
+      "Crescent Isle": {
+        "fr": "Île de l’Arc",
+        "de": "Sichelinsel",
+        "es": "Isla Creciente",
+        "it": "Isola Arcodiluna",
+        "en": "Crescent Isle"
+      },
+      "Desert Ruins": {
+        "fr": "Ruines Désert",
+        "de": "Wüstenruine",
+        "es": "Ruinas del Desierto",
+        "it": "Rovine Sabbiose",
+        "en": "Desert Ruins"
+      },
+      "Desert Underpass": {
+        "fr": "Voie du Désert",
+        "de": "Wüstentunnel",
+        "en": "Desert Underpass"
+      },
+      "Dewford Town": {
+        "fr": "Myokara",
+        "de": "Faustauhaven",
+        "es": "Pueblo Azuliza",
+        "it": "Bluruvia",
+        "en": "Dewford Town"
+      },
+      "Ever Grande City": {
+        "fr": "Éternara",
+        "de": "Prachtpolis City",
+        "es": "Ciudad Colosalia",
+        "it": "Iridopoli",
+        "en": "Ever Grande City"
+      },
+      "Fabled Cave": {
+        "fr": "Grotte Évanescente",
+        "de": "Rätselhafte Höhle",
+        "es": "Cueva Incierta",
+        "it": "Grotta Sfuggente",
+        "en": "Fabled Cave"
+      },
+      "Fallarbor Town": {
+        "fr": "Autéquia",
+        "de": "Laubwechselfeld",
+        "es": "Pueblo Pardal",
+        "it": "Brunifoglia",
+        "en": "Fallarbor Town"
+      },
+      "Faraway Island": {
+        "fr": "Île lointaine",
+        "de": "Ferneiland",
+        "en": "Faraway Island"
+      },
+      "Fiery Path": {
+        "fr": "Chemin Ardent",
+        "de": "Feuriger Pfad",
+        "es": "Senda Ígnea",
+        "it": "Cammino Ardente",
+        "en": "Fiery Path"
+      },
+      "Fortree City": {
+        "fr": "Cimetronelle",
+        "de": "Baumhausen City",
+        "es": "Ciudad Arborada",
+        "it": "Forestopoli",
+        "en": "Fortree City"
+      },
+      "Gnarled Den": {
+        "fr": "Gouffre Informe",
+        "de": "Höhle der Spaltung",
+        "es": "Boquete Irregular",
+        "it": "Fossa Informe",
+        "en": "Gnarled Den"
+      },
+      "Granite Cave": {
+        "fr": "Grotte Granite",
+        "de": "Granithöhle",
+        "es": "Cueva Granito",
+        "it": "Grotta Pietrosa",
+        "en": "Granite Cave"
+      },
+      "Hoenn Battle Frontier": {
+        "fr": "Zone de Combat",
+        "de": "Kampfzone (Hoenn)",
+        "en": "Hoenn Battle Frontier"
+      },
+      "Island Cave": {
+        "fr": "Grotte de l’Îlot",
+        "de": "Inselhöhle",
+        "es": "Cueva Insular",
+        "it": "Grotta Insulare",
+        "en": "Island Cave"
+      },
+      "Jagged Pass": {
+        "fr": "Sentier Sinuroc",
+        "de": "Steilpass",
+        "es": "Desfiladero",
+        "it": "Passo Selvaggio",
+        "en": "Jagged Pass"
+      },
+      "Lavaridge Town": {
+        "fr": "Vermilava",
+        "de": "Bad Lavastadt",
+        "es": "Pueblo Lavacalda",
+        "it": "Cuordilava",
+        "en": "Lavaridge Town"
+      },
+      "Lilycove City": {
+        "fr": "Nénucrique",
+        "de": "Seegrasulb City",
+        "es": "Ciudad Calagua",
+        "it": "Porto Alghepoli",
+        "en": "Lilycove City"
+      },
+      "Littleroot Town": {
+        "fr": "Bourg-en-Vol",
+        "de": "Wurzelheim",
+        "es": "Villa Raíz",
+        "it": "Albanova",
+        "en": "Littleroot Town"
+      },
+      "Magma Hideout": {
+        "fr": "Planque Magma",
+        "de": "Team Magmas Versteck",
+        "en": "Magma Hideout"
+      },
+      "Marine Cave": {
+        "fr": "Grotte Marine",
+        "de": "Ozeanhöhle",
+        "en": "Marine Cave"
+      },
+      "Mauville City": {
+        "fr": "Lavandia",
+        "de": "Malvenfroh City",
+        "es": "Ciudad Malvalona",
+        "it": "Ciclamipoli",
+        "en": "Mauville City"
+      },
+      "Meteor Falls": {
+        "fr": "Site Météore",
+        "de": "Meteorfälle",
+        "es": "Cascada Meteoro",
+        "it": "Cascate Meteora",
+        "en": "Meteor Falls"
+      },
+      "Mirage Cave": {
+        "fr": "Grotte Mirage",
+        "de": "Wunderhöhle",
+        "es": "Cueva Espejismo",
+        "it": "Grotta Miraggio",
+        "en": "Mirage Cave"
+      },
+      "Mirage Forest": {
+        "fr": "Forêt Mirage",
+        "de": "Wunderwald",
+        "es": "Bosque Espejismo",
+        "it": "Selva Miraggio",
+        "en": "Mirage Forest"
+      },
+      "Mirage Island": {
+        "fr": "Île Mirage",
+        "de": "Wundereiland",
+        "es": "Isla Espejismo",
+        "it": "Isola Miraggio",
+        "en": "Mirage Island"
+      },
+      "Mirage Mountain": {
+        "fr": "Mont Mirage",
+        "de": "Wunderberg",
+        "es": "Monte Espejismo",
+        "it": "Monte Miraggio",
+        "en": "Mirage Mountain"
+      },
+      "Mirage Tower": {
+        "fr": "Tour Mirage",
+        "de": "Wunderturm",
+        "en": "Mirage Tower"
+      },
+      "Mossdeep City": {
+        "fr": "Algatia",
+        "de": "Moosbach City",
+        "es": "Ciudad Algaria",
+        "it": "Verdeazzupoli",
+        "en": "Mossdeep City"
+      },
+      "Mossdeep Space Center": {
+        "fr": "Centre Spatial d'Algatia",
+        "de": "Moosbach City Raumfahrtzentrum",
+        "en": "Mossdeep Space Center"
+      },
+      "Mt. Chimney": {
+        "fr": "Mont Chimnée",
+        "de": "Schlotberg",
+        "es": "Monte Cenizo",
+        "it": "Monte Camino",
+        "en": "Mt. Chimney"
+      },
+      "Mt. Pyre": {
+        "fr": "Mont Mémoria",
+        "de": "Pyroberg",
+        "es": "Monte Pírico",
+        "it": "Monte Pira",
+        "en": "Mt. Pyre"
+      },
+      "Nameless Cavern": {
+        "fr": "Grotte Oubliée",
+        "de": "Unerforschte Höhle",
+        "es": "Cueva Ignota",
+        "it": "Caverna Ignota",
+        "en": "Nameless Cavern"
+      },
+      "New Mauville": {
+        "fr": "New Lavandia",
+        "de": "Neu Malvenfroh",
+        "es": "Malvalanova",
+        "it": "Ciclanova",
+        "en": "New Mauville"
+      },
+      "Oldale Town": {
+        "fr": "Rosyères",
+        "de": "Rosaltstadt",
+        "es": "Pueblo Escaso",
+        "it": "Solarosa",
+        "en": "Oldale Town"
+      },
+      "Pacifidlog Town": {
+        "fr": "Pacifiville",
+        "de": "Floßbrunn",
+        "es": "Pueblo Oromar",
+        "it": "Orocea",
+        "en": "Pacifidlog Town"
+      },
+      "Pathless Plain": {
+        "fr": "Plaine Sans Nom",
+        "de": "Namenlose Ebene",
+        "es": "Llanura Sinnombre",
+        "it": "Piana Senza Nome",
+        "en": "Pathless Plain"
+      },
+      "Petalburg City": {
+        "fr": "Clémenti-Ville",
+        "de": "Blütenburg City",
+        "es": "Ciudad Petalia",
+        "it": "Petalipoli",
+        "en": "Petalburg City"
+      },
+      "Petalburg Woods": {
+        "fr": "Bois Clémenti",
+        "de": "Blütenburgwald",
+        "es": "Bosque Petalia",
+        "it": "Bosco Petalo",
+        "en": "Petalburg Woods"
+      },
+      "Pokémon League": {
+        "fr": "Ligue Pokémon",
+        "de": "Pokémon Liga",
+        "es": "Liga Pokémon",
+        "it": "Lega Pokémon",
+        "en": "Pokémon League"
+      },
+      "Roaming Hoenn": {
+        "fr": "Sillonnant Hoenn",
+        "de": "Wandert durch Hoenn",
+        "en": "Roaming Hoenn"
+      },
+      "Route 101": {
+        "fr": "Route 101",
+        "de": "Route 101",
+        "es": "Ruta 101",
+        "it": "Percorso 101",
+        "en": "Route 101"
+      },
+      "Route 102": {
+        "fr": "Route 102",
+        "de": "Route 102",
+        "es": "Ruta 102",
+        "it": "Percorso 102",
+        "en": "Route 102"
+      },
+      "Route 103": {
+        "fr": "Route 103",
+        "de": "Route 103",
+        "es": "Ruta 103",
+        "it": "Percorso 103",
+        "en": "Route 103"
+      },
+      "Route 104": {
+        "fr": "Route 104",
+        "de": "Route 104",
+        "es": "Ruta 104",
+        "it": "Percorso 104",
+        "en": "Route 104"
+      },
+      "Route 105": {
+        "fr": "Chenal 105",
+        "de": "Route 105",
+        "es": "Ruta 105",
+        "it": "Percorso 105",
+        "en": "Route 105"
+      },
+      "Route 106": {
+        "fr": "Chenal 106",
+        "de": "Route 106",
+        "es": "Ruta 106",
+        "it": "Percorso 106",
+        "en": "Route 106"
+      },
+      "Route 107": {
+        "fr": "Chenal 107",
+        "de": "Route 107",
+        "es": "Ruta 107",
+        "it": "Percorso 107",
+        "en": "Route 107"
+      },
+      "Route 108": {
+        "fr": "Chenal 108",
+        "de": "Route 108",
+        "es": "Ruta 108",
+        "it": "Percorso 108",
+        "en": "Route 108"
+      },
+      "Route 109": {
+        "fr": "Chenal 109",
+        "de": "Route 109",
+        "es": "Ruta 109",
+        "it": "Percorso 109",
+        "en": "Route 109"
+      },
+      "Route 110": {
+        "fr": "Route 110",
+        "de": "Route 110",
+        "es": "Ruta 110",
+        "it": "Percorso 110",
+        "en": "Route 110"
+      },
+      "Route 111": {
+        "fr": "Route 111",
+        "de": "Route 111",
+        "es": "Ruta 111",
+        "it": "Percorso 111",
+        "en": "Route 111"
+      },
+      "Route 112": {
+        "fr": "Route 112",
+        "de": "Route 112",
+        "es": "Ruta 112",
+        "it": "Percorso 112",
+        "en": "Route 112"
+      },
+      "Route 113": {
+        "fr": "Route 113",
+        "de": "Route 113",
+        "es": "Ruta 113",
+        "it": "Percorso 113",
+        "en": "Route 113"
+      },
+      "Route 114": {
+        "fr": "Route 114",
+        "de": "Route 114",
+        "es": "Ruta 114",
+        "it": "Percorso 114",
+        "en": "Route 114"
+      },
+      "Route 115": {
+        "fr": "Route 115",
+        "de": "Route 115",
+        "es": "Ruta 115",
+        "it": "Percorso 115",
+        "en": "Route 115"
+      },
+      "Route 116": {
+        "fr": "Route 116",
+        "de": "Route 116",
+        "es": "Ruta 116",
+        "it": "Percorso 116",
+        "en": "Route 116"
+      },
+      "Route 117": {
+        "fr": "Route 117",
+        "de": "Route 117",
+        "es": "Ruta 117",
+        "it": "Percorso 117",
+        "en": "Route 117"
+      },
+      "Route 118": {
+        "fr": "Route 118",
+        "de": "Route 118",
+        "es": "Ruta 118",
+        "it": "Percorso 118",
+        "en": "Route 118"
+      },
+      "Route 119": {
+        "fr": "Route 119",
+        "de": "Route 119",
+        "es": "Ruta 119",
+        "it": "Percorso 119",
+        "en": "Route 119"
+      },
+      "Route 120": {
+        "fr": "Route 120",
+        "de": "Route 120",
+        "es": "Ruta 120",
+        "it": "Percorso 120",
+        "en": "Route 120"
+      },
+      "Route 121": {
+        "fr": "Route 121",
+        "de": "Route 121",
+        "es": "Ruta 121",
+        "it": "Percorso 121",
+        "en": "Route 121"
+      },
+      "Route 122": {
+        "fr": "Chenal 122",
+        "de": "Route 122",
+        "es": "Ruta 122",
+        "it": "Percorso 122",
+        "en": "Route 122"
+      },
+      "Route 123": {
+        "fr": "Route 123",
+        "de": "Route 123",
+        "es": "Ruta 123",
+        "it": "Percorso 123",
+        "en": "Route 123"
+      },
+      "Route 124": {
+        "fr": "Chenal 124",
+        "de": "Route 124",
+        "es": "Ruta 124",
+        "it": "Percorso 124",
+        "en": "Route 124"
+      },
+      "Route 125": {
+        "fr": "Chenal 125",
+        "de": "Route 125",
+        "es": "Ruta 125",
+        "it": "Percorso 125",
+        "en": "Route 125"
+      },
+      "Route 126": {
+        "fr": "Chenal 126",
+        "de": "Route 126",
+        "es": "Ruta 126",
+        "it": "Percorso 126",
+        "en": "Route 126"
+      },
+      "Route 127": {
+        "fr": "Chenal 127",
+        "de": "Route 127",
+        "es": "Ruta 127",
+        "it": "Percorso 127",
+        "en": "Route 127"
+      },
+      "Route 128": {
+        "fr": "Chenal 128",
+        "de": "Route 128",
+        "es": "Ruta 128",
+        "it": "Percorso 128",
+        "en": "Route 128"
+      },
+      "Route 129": {
+        "fr": "Chenal 129",
+        "de": "Route 129",
+        "es": "Ruta 129",
+        "it": "Percorso 129",
+        "en": "Route 129"
+      },
+      "Route 130": {
+        "fr": "Chenal 130",
+        "de": "Route 130",
+        "es": "Ruta 130",
+        "it": "Percorso 130",
+        "en": "Route 130"
+      },
+      "Route 131": {
+        "fr": "Chenal 131",
+        "de": "Route 131",
+        "es": "Ruta 131",
+        "it": "Percorso 131",
+        "en": "Route 131"
+      },
+      "Route 132": {
+        "fr": "Chenal 132",
+        "de": "Route 132",
+        "es": "Ruta 132",
+        "it": "Percorso 132",
+        "en": "Route 132"
+      },
+      "Route 133": {
+        "fr": "Chenal 133",
+        "de": "Route 133",
+        "es": "Ruta 133",
+        "it": "Percorso 133",
+        "en": "Route 133"
+      },
+      "Route 134": {
+        "fr": "Chenal 134",
+        "de": "Route 134",
+        "es": "Ruta 134",
+        "it": "Percorso 134",
+        "en": "Route 134"
+      },
+      "Rustboro City": {
+        "fr": "Mérouville",
+        "de": "Metarost City",
+        "es": "Ciudad Férrica",
+        "it": "Ferrugipoli",
+        "en": "Rustboro City"
+      },
+      "Rusturf Tunnel": {
+        "fr": "Tunnel Mérazon",
+        "de": "Metaflurtunnel",
+        "es": "Túnel Fervergal",
+        "it": "Tunnel Menferro",
+        "en": "Rusturf Tunnel"
+      },
+      "S.S. Tidal": {
+        "fr": "Le Marina",
+        "de": "MS Tide",
+        "es": "S.S. Marea",
+        "it": "Motonave Marea",
+        "en": "S.S. Tidal"
+      },
+      "Safari Zone": {
+        "fr": "Parc Safari",
+        "de": "Safari-Zone",
+        "es": "Zona Safari",
+        "it": "Zona Safari",
+        "en": "Safari Zone"
+      },
+      "Scorched Slab": {
+        "fr": "Grotte Zénith",
+        "de": "Sonnengrotte",
+        "es": "Gruta Solar",
+        "it": "Grottino Solare",
+        "en": "Scorched Slab"
+      },
+      "Sea Mauville": {
+        "fr": "Lavandia Sea",
+        "de": "Seewoge Malvenfroh",
+        "es": "Malvamar",
+        "it": "Ciclamare",
+        "en": "Sea Mauville"
+      },
+      "Seafloor Cavern": {
+        "fr": "Caverne Fondmer",
+        "de": "Tiefseehöhle",
+        "es": "Caverna Abisal",
+        "it": "Antro Abissale",
+        "en": "Seafloor Cavern"
+      },
+      "Sealed Chamber": {
+        "fr": "Sanctuaire",
+        "de": "Siegelkammer",
+        "es": "Cámara Sellada",
+        "it": "Sala Incisa",
+        "en": "Sealed Chamber"
+      },
+      "Secret Base": {
+        "fr": "Base Secrète",
+        "de": "Geheimbasis",
+        "es": "Base Secreta",
+        "it": "Base Segreta",
+        "en": "Secret Base"
+      },
+      "Secret Islet": {
+        "fr": "Îlot Secret",
+        "de": "Geheiminsel",
+        "es": "Islote Secreto",
+        "it": "Isolotto Segreto",
+        "en": "Secret Islet"
+      },
+      "Secret Meadow": {
+        "fr": "Champ Fleuri Secret",
+        "de": "Geheime Blumenwiese",
+        "es": "Prado Secreto",
+        "it": "Valle Segreta",
+        "en": "Secret Meadow"
+      },
+      "Secret Shore": {
+        "fr": "Plage Secrète",
+        "de": "Geheime Küste",
+        "es": "Costa Secreta",
+        "it": "Baia Segreta",
+        "en": "Secret Shore"
+      },
+      "Shoal Cave": {
+        "fr": "Grotte Tréfonds",
+        "de": "Küstenhöhle",
+        "es": "Cueva Cardumen",
+        "it": "Grotta Ondosa",
+        "en": "Shoal Cave"
+      },
+      "Sky Pillar": {
+        "fr": "Pilier Céleste",
+        "de": "Himmelturm",
+        "es": "Pilar Celeste",
+        "it": "Torre dei Cieli",
+        "en": "Sky Pillar"
+      },
+      "Slateport City": {
+        "fr": "Poivressel",
+        "de": "Graphitport City",
+        "es": "Ciudad Portual",
+        "it": "Porto Selcepoli",
+        "en": "Slateport City"
+      },
+      "Soaring in the sky": {
+        "fr": "Grand Ciel",
+        "de": "Luftraum",
+        "es": "Firmamento",
+        "it": "Ipersfera",
+        "en": "Soaring in the sky"
+      },
+      "Sootopolis City": {
+        "fr": "Atalanopolis",
+        "de": "Xeneroville",
+        "es": "Arrecípolis",
+        "it": "Ceneride",
+        "en": "Sootopolis City"
+      },
+      "Southern Island": {
+        "fr": "Île du Sud",
+        "de": "Insel im Süden",
+        "es": "Isla del Sur",
+        "it": "Isola Remota",
+        "en": "Southern Island"
+      },
+      "Team Aqua Hideout": {
+        "fr": "Planque Aqua",
+        "de": "Team Aquas Versteck",
+        "es": "Guarida Aqua",
+        "it": "Rifugio Idro",
+        "en": "Team Aqua Hideout"
+      },
+      "Team Magma Hideout": {
+        "fr": "Planque Magma",
+        "de": "Team Magmas Versteck",
+        "es": "Guarida Magma",
+        "it": "Rifugio Magma",
+        "en": "Team Magma Hideout"
+      },
+      "Terra Cave": {
+        "fr": "Grotte Terra",
+        "de": "Terrahöhle",
+        "en": "Terra Cave"
+      },
+      "Trackless Forest": {
+        "fr": "Forêt Impénétrable",
+        "de": "Wilder Wald",
+        "es": "Bosque Virgen",
+        "it": "Foresta Vergine",
+        "en": "Trackless Forest"
+      },
+      "Underwater": {
+        "fr": "Fond marin",
+        "de": "Unterwasser",
+        "en": "Underwater"
+      },
+      "Verdanturf Town": {
+        "fr": "Vergazon",
+        "de": "Wiesenflur",
+        "es": "Pueblo Verdegal",
+        "it": "Mentania",
+        "en": "Verdanturf Town"
+      },
+      "Victory Road": {
+        "fr": "Route Victoire",
+        "de": "Siegesstraße",
+        "es": "Calle Victoria",
+        "it": "Via Vittoria",
+        "en": "Victory Road"
+      }
+    },
+    "sinnoh": {
+      "Acuity Cavern": {
+        "fr": "Caverne Savoir",
+        "de": "Stärkegrötte",
+        "en": "Acuity Cavern"
+      },
+      "Acuity Lakefront": {
+        "fr": "Rive Lac Savoir",
+        "de": "Stärkeufer",
+        "en": "Acuity Lakefront"
+      },
+      "Amity Square": {
+        "fr": "Square Paisible",
+        "de": "Platz der Treue",
+        "en": "Amity Square"
+      },
+      "Battle Arcade": {
+        "fr": "Arcade de Combat",
+        "de": "Kampfarkaden",
+        "en": "Battle Arcade"
+      },
+      "Battle Castle": {
+        "fr": "Castel de Combat",
+        "de": "Kampfpalais",
+        "en": "Battle Castle"
+      },
+      "Battle Factory": {
+        "fr": "Usine de Combat",
+        "de": "Kampffabrik",
+        "en": "Battle Factory"
+      },
+      "Battle Frontier": {
+        "fr": "Zone de Combat",
+        "de": "Kampfzone",
+        "en": "Battle Frontier"
+      },
+      "Battle Hall": {
+        "fr": "Scène de Combat",
+        "de": "Kampfsaal",
+        "en": "Battle Hall"
+      },
+      "Battle Park": {
+        "fr": "Parc des Combats",
+        "de": "Duellpark",
+        "en": "Battle Park"
+      },
+      "Battle Tower": {
+        "fr": "Tour de Combat",
+        "de": "Duellturm",
+        "en": "Battle Tower"
+      },
+      "Battleground": {
+        "fr": "Café Combats",
+        "de": "Duellareal",
+        "en": "Battleground"
+      },
+      "Café": {
+        "fr": "Café",
+        "de": "Café",
+        "en": "Café"
+      },
+      "Canalave City": {
+        "fr": "Joliberges",
+        "de": "Fleetburg",
+        "en": "Canalave City"
+      },
+      "Canalave Library": {
+        "fr": "Bibl. Joliberges",
+        "de": "Fleetburg-Bibliothek",
+        "en": "Canalave Library"
+      },
+      "Celestic Town": {
+        "fr": "Célestia",
+        "de": "Elyses",
+        "en": "Celestic Town"
+      },
+      "Contest Hall": {
+        "fr": "Salle Concours",
+        "de": "Wettbewerbshalle",
+        "en": "Contest Hall"
+      },
+      "Cycle Shop": {
+        "fr": "Boutique de Vélo",
+        "de": "Fahrradladen",
+        "en": "Cycle Shop"
+      },
+      "Distortion World": {
+        "fr": "Monde Distorsion",
+        "de": "Zerrwelt",
+        "en": "Distortion World"
+      },
+      "Eterna City": {
+        "fr": "Vestigion",
+        "de": "Ewigenau",
+        "en": "Eterna City"
+      },
+      "Eterna Forest": {
+        "fr": "Forêt Vestigion",
+        "de": "Ewigwald",
+        "en": "Eterna Forest"
+      },
+      "Fight Area": {
+        "fr": "Aire de Combat",
+        "de": "Kampfareal",
+        "en": "Fight Area"
+      },
+      "Floaroma Meadow": {
+        "fr": "Pré Floraville",
+        "de": "Auen von Flori",
+        "en": "Floaroma Meadow"
+      },
+      "Floaroma Town": {
+        "fr": "Floraville",
+        "de": "Flori",
+        "en": "Floaroma Town"
+      },
+      "Flower Paradise": {
+        "fr": "Paradis Fleuri",
+        "de": "Blumenparadies",
+        "en": "Flower Paradise"
+      },
+      "Flower Shop": {
+        "fr": "Fleuriste",
+        "de": "Blumenladen",
+        "en": "Flower Shop"
+      },
+      "Footstep House": {
+        "fr": "Abri Petitpas",
+        "de": "Schrittritt-Haus",
+        "en": "Footstep House"
+      },
+      "Foreign Building": {
+        "fr": "Bâtiment Etrange",
+        "de": "Begegnungsstätte",
+        "en": "Foreign Building"
+      },
+      "Fuego Ironworks": {
+        "fr": "Forge Fuego",
+        "de": "Feurio-Hütte",
+        "en": "Fuego Ironworks"
+      },
+      "Fullmoon Island": {
+        "fr": "Ile Pleine Lune",
+        "de": "Vollmondinsel",
+        "en": "Fullmoon Island"
+      },
+      "Galactic HQ": {
+        "fr": "QG Galaxie",
+        "de": "Team Galaktik Zentrale",
+        "en": "Galactic HQ"
+      },
+      "Game Corner": {
+        "fr": "Casino",
+        "de": "Spielhalle",
+        "en": "Game Corner"
+      },
+      "Global Terminal": {
+        "fr": "Terminal Mondial",
+        "de": "Globale Wundertausch-Station",
+        "en": "Global Terminal"
+      },
+      "Grand Lake": {
+        "fr": "Grand Lac",
+        "de": "Großer See",
+        "en": "Grand Lake"
+      },
+      "Great Marsh": {
+        "fr": "Grand Marais",
+        "de": "Großmoor",
+        "en": "Great Marsh"
+      },
+      "GTS": {
+        "fr": "GTS",
+        "de": "Global Trade System",
+        "en": "GTS"
+      },
+      "Hall of Origin": {
+        "fr": "Salle Originelle",
+        "de": "Halle des Beginns",
+        "en": "Hall of Origin"
+      },
+      "Hearthome City": {
+        "fr": "Unionpolis",
+        "de": "Herzhofen",
+        "en": "Hearthome City"
+      },
+      "Iceberg Ruins": {
+        "fr": "Ruines Iceberg",
+        "de": "Eisberg-Ruinen",
+        "en": "Iceberg Ruins"
+      },
+      "Iron Island": {
+        "fr": "Ile de Fer",
+        "de": "Eiseninsel",
+        "en": "Iron Island"
+      },
+      "Iron Ruins": {
+        "fr": "Ruines de Fer",
+        "de": "Eisen-Ruinen",
+        "en": "Iron Ruins"
+      },
+      "Jubilife City": {
+        "fr": "Féli-Cité",
+        "de": "Jubelstadt",
+        "en": "Jubilife City"
+      },
+      "Jubilife TV": {
+        "fr": "Féli-Télé",
+        "de": "Jubelstadt TV",
+        "en": "Jubilife TV"
+      },
+      "Lake Acuity": {
+        "fr": "Lac Savoir",
+        "de": "See der Stärke",
+        "en": "Lake Acuity"
+      },
+      "Lake Valor": {
+        "fr": "Lac Courage",
+        "de": "See der Kühnheit",
+        "en": "Lake Valor"
+      },
+      "Lake Verity": {
+        "fr": "Lac Vérité",
+        "de": "See der Wahrheit",
+        "en": "Lake Verity"
+      },
+      "Lost Tower": {
+        "fr": "Tour Perdue",
+        "de": "Turm der Ruhenden",
+        "en": "Lost Tower"
+      },
+      "Maniac Tunnel": {
+        "fr": "Tunnel Runiem.",
+        "de": "Maniac-Tunnel",
+        "en": "Maniac Tunnel"
+      },
+      "Mining Museum": {
+        "fr": "Musée Minier",
+        "de": "Bergbau-Museum",
+        "en": "Mining Museum"
+      },
+      "Mt. Coronet": {
+        "fr": "Mont Couronné",
+        "de": "Kraterberg",
+        "en": "Mt. Coronet"
+      },
+      "Newmoon Island": {
+        "fr": "Ile Nouvellelune",
+        "de": "Neumondinsel",
+        "en": "Newmoon Island"
+      },
+      "Old Chateau": {
+        "fr": "Vieux Château",
+        "de": "Alte Villa",
+        "en": "Old Chateau"
+      },
+      "Oreburgh City": {
+        "fr": "Charbourg",
+        "de": "Erzelingen",
+        "en": "Oreburgh City"
+      },
+      "Oreburgh Gate": {
+        "fr": "Entrée Charbourg",
+        "de": "Erzelingen-Tor",
+        "en": "Oreburgh Gate"
+      },
+      "Oreburgh Mine": {
+        "fr": "Mine Charbourg",
+        "de": "Erzelingen-Mine",
+        "en": "Oreburgh Mine"
+      },
+      "Pal Park": {
+        "fr": "Parc des Amis",
+        "de": "Park der Freunde",
+        "en": "Pal Park"
+      },
+      "Pastoria City": {
+        "fr": "Verchamps",
+        "de": "Weideburg",
+        "en": "Pastoria City"
+      },
+      "Poffin House": {
+        "fr": "Poffinerie",
+        "de": "Knursperei",
+        "en": "Poffin House"
+      },
+      "Pokémon Day Care": {
+        "fr": "Pension Pokémon",
+        "de": "Pokémon-Pension",
+        "en": "Pokémon Day Care"
+      },
+      "Pokémon League": {
+        "fr": "Ligue Pokémon",
+        "de": "Pokémon-Liga",
+        "en": "Pokémon League"
+      },
+      "Pokétch Co.": {
+        "fr": "Pokémontre S.A.",
+        "de": "Pokétch-Gesellschaft",
+        "en": "Pokétch Co."
+      },
+      "Ravaged Path": {
+        "fr": "Chemin Rocheux",
+        "de": "Verwüsteter Pfad",
+        "en": "Ravaged Path"
+      },
+      "Resort Area": {
+        "fr": "Aire de Détente",
+        "de": "Erholungsareal",
+        "en": "Resort Area"
+      },
+      "Restaurant": {
+        "fr": "Restaurant",
+        "de": "Restaurant",
+        "en": "Restaurant"
+      },
+      "Roaming Sinnoh": {
+        "fr": "Sillonnant Sinnoh",
+        "de": "Wandert durch Sinnoh",
+        "en": "Roaming Sinnoh"
+      },
+      "Rock Peak Ruins": {
+        "fr": "Ruines Pic Roche",
+        "de": "Gipfelruinen",
+        "en": "Rock Peak Ruins"
+      },
+      "ROTOM's Room": {
+        "fr": "Salle MOTISMA",
+        "de": "Rotoms-Zimmer",
+        "en": "ROTOM's Room"
+      },
+      "Route 201": {
+        "fr": "Route 201",
+        "de": "Route 201",
+        "en": "Route 201"
+      },
+      "Route 202": {
+        "fr": "Route 202",
+        "de": "Route 202",
+        "en": "Route 202"
+      },
+      "Route 203": {
+        "fr": "Route 203",
+        "de": "Route 203",
+        "en": "Route 203"
+      },
+      "Route 204": {
+        "fr": "Route 204",
+        "de": "Route 204",
+        "en": "Route 204"
+      },
+      "Route 205": {
+        "fr": "Route 205",
+        "de": "Route 205",
+        "en": "Route 205"
+      },
+      "Route 206": {
+        "fr": "Route 206",
+        "de": "Route 206",
+        "en": "Route 206"
+      },
+      "Route 207": {
+        "fr": "Route 207",
+        "de": "Route 207",
+        "en": "Route 207"
+      },
+      "Route 208": {
+        "fr": "Route 208",
+        "de": "Route 208",
+        "en": "Route 208"
+      },
+      "Route 209": {
+        "fr": "Route 209",
+        "de": "Route 209",
+        "en": "Route 209"
+      },
+      "Route 210": {
+        "fr": "Route 210",
+        "de": "Route 210",
+        "en": "Route 210"
+      },
+      "Route 211": {
+        "fr": "Route 211",
+        "de": "Route 211",
+        "en": "Route 211"
+      },
+      "Route 212": {
+        "fr": "Route 212",
+        "de": "Route 212",
+        "en": "Route 212"
+      },
+      "Route 213": {
+        "fr": "Route 213",
+        "de": "Route 213",
+        "en": "Route 213"
+      },
+      "Route 214": {
+        "fr": "Route 214",
+        "de": "Route 214",
+        "en": "Route 214"
+      },
+      "Route 215": {
+        "fr": "Route 215",
+        "de": "Route 215",
+        "en": "Route 215"
+      },
+      "Route 216": {
+        "fr": "Route 216",
+        "de": "Route 216",
+        "en": "Route 216"
+      },
+      "Route 217": {
+        "fr": "Route 217",
+        "de": "Route 217",
+        "en": "Route 217"
+      },
+      "Route 218": {
+        "fr": "Route 218",
+        "de": "Route 218",
+        "en": "Route 218"
+      },
+      "Route 219": {
+        "fr": "Route 219",
+        "de": "Route 219",
+        "en": "Route 219"
+      },
+      "Route 221": {
+        "fr": "Route 221",
+        "de": "Route 221",
+        "en": "Route 221"
+      },
+      "Route 222": {
+        "fr": "Route 222",
+        "de": "Route 222",
+        "en": "Route 222"
+      },
+      "Route 224": {
+        "fr": "Route 224",
+        "de": "Route 224",
+        "en": "Route 224"
+      },
+      "Route 225": {
+        "fr": "Route 225",
+        "de": "Route 225",
+        "en": "Route 225"
+      },
+      "Route 227": {
+        "fr": "Route 227",
+        "de": "Route 227",
+        "en": "Route 227"
+      },
+      "Route 228": {
+        "fr": "Route 228",
+        "de": "Route 228",
+        "en": "Route 228"
+      },
+      "Route 229": {
+        "fr": "Route 229",
+        "de": "Route 229",
+        "en": "Route 229"
+      },
+      "Ruin Maniac Cave": {
+        "fr": "Grotte Ruinem.",
+        "de": "Maniac-Tunnel",
+        "en": "Ruin Maniac Cave"
+      },
+      "Sandgem Town": {
+        "fr": "Littorella",
+        "de": "Sandgemme",
+        "en": "Sandgem Town"
+      },
+      "Sea Route 220": {
+        "fr": "Chenal 220",
+        "de": "Route 220",
+        "en": "Sea Route 220"
+      },
+      "Sea Route 223": {
+        "fr": "Chenal 223",
+        "de": "Route 223",
+        "en": "Sea Route 223"
+      },
+      "Sea Route 226": {
+        "fr": "Chenal 226",
+        "de": "Route 226",
+        "en": "Sea Route 226"
+      },
+      "Sea Route 230": {
+        "fr": "Chenal 230",
+        "de": "Route 230",
+        "en": "Sea Route 230"
+      },
+      "Seabreak Path": {
+        "fr": "Passage Marin",
+        "de": "Buhnenpfad",
+        "en": "Seabreak Path"
+      },
+      "Sendoff Spring": {
+        "fr": "Source Adieu",
+        "de": "Scheidequelle",
+        "en": "Sendoff Spring"
+      },
+      "Snowpoint City": {
+        "fr": "Frimapic",
+        "de": "Blizzach",
+        "en": "Snowpoint City"
+      },
+      "Snowpoint Temple": {
+        "fr": "Temple Frimapic",
+        "de": "Blizzach-Tempel",
+        "en": "Snowpoint Temple"
+      },
+      "Solaceon Ruins": {
+        "fr": "Ruines Bonville",
+        "de": "Trostu-Ruinen",
+        "en": "Solaceon Ruins"
+      },
+      "Solaceon Town": {
+        "fr": "Bonville",
+        "de": "Trostu",
+        "en": "Solaceon Town"
+      },
+      "Spear Pillar": {
+        "fr": "Colonnes Lances",
+        "de": "Speersäule",
+        "en": "Spear Pillar"
+      },
+      "Spring Path": {
+        "fr": "Chemin Source",
+        "de": "Quellenpfad",
+        "en": "Spring Path"
+      },
+      "Stark Mountain": {
+        "fr": "Mont Abrupt",
+        "de": "Kahlberg",
+        "en": "Stark Mountain"
+      },
+      "Sunyshore City": {
+        "fr": "Rivamar",
+        "de": "Sonnewik",
+        "en": "Sunyshore City"
+      },
+      "Sunyshore Market": {
+        "fr": "Marché Rivamar",
+        "de": "Sonnewik-Markt",
+        "en": "Sunyshore Market"
+      },
+      "Survival Area": {
+        "fr": "Aire de Survie",
+        "de": "Überlebensareal",
+        "en": "Survival Area"
+      },
+      "T.G. Eterna Bldg": {
+        "fr": "Team G Vestigion",
+        "de": "Galaktik-Gebäude von Ewigenau",
+        "en": "T.G. Eterna Bldg"
+      },
+      "Trainers’ School": {
+        "fr": "Ecole Dresseurs",
+        "de": "Trainerschule",
+        "en": "Trainers’ School"
+      },
+      "Trophy Garden": {
+        "fr": "Jardin Trophée",
+        "de": "Pokémon-Landgut",
+        "en": "Trophy Garden"
+      },
+      "Turnback Cave": {
+        "fr": "Grotte Retour",
+        "de": "Höhle der Umkehr",
+        "en": "Turnback Cave"
+      },
+      "Twinleaf Town": {
+        "fr": "Bonaugure",
+        "de": "Zweiblattdorf",
+        "en": "Twinleaf Town"
+      },
+      "Valley Windworks": {
+        "fr": "Les Eoliennes",
+        "de": "Windkraftwerk",
+        "en": "Valley Windworks"
+      },
+      "Valor Cavern": {
+        "fr": "Caverne Courage",
+        "de": "Kühnheitsgrotte",
+        "en": "Valor Cavern"
+      },
+      "Valor Lakefront": {
+        "fr": "Rive Lac Courage",
+        "de": "Kühnheitsufer",
+        "en": "Valor Lakefront"
+      },
+      "Veilstone City": {
+        "fr": "Voilaroc",
+        "de": "Schleiede",
+        "en": "Veilstone City"
+      },
+      "Veilstone Store": {
+        "fr": "C. Com. Voilaroc",
+        "de": "Schleiede-Kaufhaus",
+        "en": "Veilstone Store"
+      },
+      "Verity Cavern": {
+        "fr": "Caverne Vérité",
+        "de": "Wahrheitsgrotte",
+        "en": "Verity Cavern"
+      },
+      "Verity Lakefront": {
+        "fr": "Rive Lac Vérité",
+        "de": "Wahrheitsufer",
+        "en": "Verity Lakefront"
+      },
+      "Victory Road": {
+        "fr": "Route Victoire",
+        "de": "Siegesstraße",
+        "en": "Victory Road"
+      },
+      "Villa": {
+        "fr": "Villa",
+        "de": "Villa",
+        "en": "Villa"
+      },
+      "Vista Lighthouse": {
+        "fr": "Phare Panorama",
+        "de": "Leuchtturm",
+        "en": "Vista Lighthouse"
+      },
+      "Wayward Cave": {
+        "fr": "Grotte Revèche",
+        "de": "Bizarre Höhle",
+        "en": "Wayward Cave"
+      }
+    },
+    "unova": {
+      "Abundant Shrine": {
+        "fr": "Autel Abondance",
+        "de": "Schrein der Ernte",
+        "en": "Abundant Shrine"
+      },
+      "Abyssal Ruins": {
+        "fr": "Ruines des Abysses",
+        "de": "Unterwasserruine",
+        "en": "Abyssal Ruins"
+      },
+      "Accumula Gate": {
+        "fr": "Porte Arabelle",
+        "de": "Gavina-Tor",
+        "en": "Accumula Gate"
+      },
+      "Accumula Town": {
+        "fr": "Arabelle",
+        "de": "Gavina",
+        "en": "Accumula Town"
+      },
+      "Anville Town": {
+        "fr": "Rotombourg",
+        "de": "Ferrula",
+        "en": "Anville Town"
+      },
+      "Aspertia City": {
+        "fr": "Pavonnay",
+        "de": "Eventura City",
+        "en": "Aspertia City"
+      },
+      "Aspertia Gate": {
+        "fr": "Porte Pavonnay",
+        "de": "Eventura-Tor",
+        "en": "Aspertia Gate"
+      },
+      "Battle Subway": {
+        "fr": "Métro de Combat",
+        "de": "Kampfmetro",
+        "en": "Battle Subway"
+      },
+      "Black City": {
+        "fr": "Ville Noire",
+        "de": "Schwarze Stadt",
+        "en": "Black City"
+      },
+      "Black Gate": {
+        "fr": "Porte Noire",
+        "de": "Schwarzes Tor",
+        "en": "Black Gate"
+      },
+      "Black Tower": {
+        "fr": "Gratte-Ciel Noir",
+        "de": "Schwarzes Hochhaus",
+        "en": "Black Tower"
+      },
+      "Bridge Gate": {
+        "fr": "Porte de Pont",
+        "de": "Brückentor",
+        "en": "Bridge Gate"
+      },
+      "Castelia City": {
+        "fr": "Volucité",
+        "de": "Stratos City",
+        "en": "Castelia City"
+      },
+      "Castelia Gate": {
+        "fr": "Porte Volucité",
+        "de": "Stratos-Tor",
+        "en": "Castelia Gate"
+      },
+      "Castelia Sewers": {
+        "fr": "Égouts de Volucité",
+        "de": "Stratos-Kanalisation",
+        "en": "Castelia Sewers"
+      },
+      "Cave of Being": {
+        "fr": "Caverne des Esprits",
+        "de": "Beschwörungshöhle",
+        "en": "Cave of Being"
+      },
+      "Celestial Tower": {
+        "fr": "Tour des Cieux",
+        "de": "Turm des Himmels",
+        "en": "Celestial Tower"
+      },
+      "Challenger's Cave": {
+        "fr": "Antre d'Entraînement",
+        "de": "Höhle der Schulung",
+        "en": "Challenger's Cave"
+      },
+      "Chargestone Cave": {
+        "fr": "Grotte Électrolithe",
+        "de": "Elektrolithhöhle",
+        "en": "Chargestone Cave"
+      },
+      "Clay Tunnel": {
+        "fr": "Route Bardane",
+        "de": "Turner-Pfad",
+        "en": "Clay Tunnel"
+      },
+      "Cold Storage": {
+        "fr": "Hangar Frigorifique",
+        "de": "Tiefkühlcontainer",
+        "en": "Cold Storage"
+      },
+      "Desert Resort": {
+        "fr": "Désert Délassant",
+        "de": "Wüstenresort",
+        "en": "Desert Resort"
+      },
+      "Dragonspiral Tower": {
+        "fr": "Tour Dragospire",
+        "de": "Drachenstiege",
+        "en": "Dragonspiral Tower"
+      },
+      "Dreamyard": {
+        "fr": "Vestiges du Rêve",
+        "de": "Traumbrache",
+        "en": "Dreamyard"
+      },
+      "Driftveil City": {
+        "fr": "Port Yoneuve",
+        "de": "Marea City",
+        "en": "Driftveil City"
+      },
+      "Driftveil Drawbridge": {
+        "fr": "Pont Yoneuve",
+        "de": "Marea-Zugbrücke",
+        "en": "Driftveil Drawbridge"
+      },
+      "Entralink": {
+        "fr": "Heylink",
+        "de": "Kontaktebene",
+        "en": "Entralink"
+      },
+      "Entree Forest": {
+        "fr": "Forêt du Heylink",
+        "de": "Kontaktebenenhain",
+        "en": "Entree Forest"
+      },
+      "Faraway place": {
+        "fr": "Endroit Lointain",
+        "de": "Entfernter Ort",
+        "en": "Faraway place"
+      },
+      "Floccesy Ranch": {
+        "fr": "Ranch d'Amaillide",
+        "de": "Dausing-Hof",
+        "en": "Floccesy Ranch"
+      },
+      "Floccesy Town": {
+        "fr": "Amaillide",
+        "de": "Dausing",
+        "en": "Floccesy Town"
+      },
+      "Gear Station": {
+        "fr": "Engrenage du Métro",
+        "de": "Kampfmetro",
+        "en": "Gear Station"
+      },
+      "Giant Chasm": {
+        "fr": "Grotte Cyclopéenne",
+        "de": "Riesengrotte",
+        "en": "Giant Chasm"
+      },
+      "Glacier Room": {
+        "fr": "Salle Iceberg",
+        "de": "Eisbergkammer",
+        "en": "Glacier Room"
+      },
+      "Guidance Chamber": {
+        "fr": "Espace Guide",
+        "de": "Kammer der Weisung",
+        "en": "Guidance Chamber"
+      },
+      "Hidden Grotto": {
+        "fr": "Trouée Cachée",
+        "de": "Versteckte Lichtung",
+        "en": "Hidden Grotto"
+      },
+      "Humilau City": {
+        "fr": "Papeloa",
+        "de": "Abidaya City",
+        "en": "Humilau City"
+      },
+      "Icirrus City": {
+        "fr": "Flocombe",
+        "de": "Nevaio City",
+        "en": "Icirrus City"
+      },
+      "Iron Room": {
+        "fr": "Salle Fer",
+        "de": "Eisenkammer",
+        "en": "Iron Room"
+      },
+      "Join Avenue": {
+        "fr": "Galerie Concorde",
+        "de": "Einklangspassage",
+        "en": "Join Avenue"
+      },
+      "Lacunosa Town": {
+        "fr": "Entrelasque",
+        "de": "Tessera",
+        "en": "Lacunosa Town"
+      },
+      "Lentimas Town": {
+        "fr": "Arpentières",
+        "de": "Monsentiero",
+        "en": "Lentimas Town"
+      },
+      "Liberty Garden": {
+        "fr": "Île Liberté",
+        "de": "Freiheitsgarten",
+        "en": "Liberty Garden"
+      },
+      "Lostlorn Forest": {
+        "fr": "Bois des Illusions",
+        "de": "Hain der Täuschung",
+        "en": "Lostlorn Forest"
+      },
+      "Marine Tube": {
+        "fr": "Aquatube",
+        "de": "Unterseetunnel",
+        "en": "Marine Tube"
+      },
+      "Marvelous Bridge": {
+        "fr": "Pont de l'Inconnu",
+        "de": "Wunderbrücke",
+        "en": "Marvelous Bridge"
+      },
+      "Medal Secretariat": {
+        "fr": "Bureau des Médailles",
+        "de": "Medaillenamt",
+        "en": "Medal Secretariat"
+      },
+      "Mistralton Cave": {
+        "fr": "Grotte Parsemille",
+        "de": "Panaero-Höhle",
+        "en": "Mistralton Cave"
+      },
+      "Mistralton City": {
+        "fr": "Parsemille",
+        "de": "Panaero City",
+        "en": "Mistralton City"
+      },
+      "Moor of Icirrus": {
+        "fr": "Tourbière Flocombe",
+        "de": "Moor von Nevaio",
+        "en": "Moor of Icirrus"
+      },
+      "Musical Theater": {
+        "fr": "Music-Hall",
+        "de": "Musiktheater",
+        "en": "Musical Theater"
+      },
+      "Mystery Zone": {
+        "fr": "Endroit Mystérieux",
+        "de": "Mysteriöse Zone",
+        "en": "Mystery Zone"
+      },
+      "N's Castle": {
+        "fr": "Palais de N",
+        "de": "Schloss von N",
+        "en": "N's Castle"
+      },
+      "Nacrene City": {
+        "fr": "Maillard",
+        "de": "Septerna City",
+        "en": "Nacrene City"
+      },
+      "Nacrene Gate": {
+        "fr": "Porte Maillard",
+        "de": "Septerna-Tor",
+        "en": "Nacrene Gate"
+      },
+      "Nature Sanctuary": {
+        "fr": "Réserve Naturelle",
+        "de": "Naturschutzgebiet",
+        "en": "Nature Sanctuary"
+      },
+      "Nimbasa City": {
+        "fr": "Méanville",
+        "de": "Rayono City",
+        "en": "Nimbasa City"
+      },
+      "Nimbasa Gate": {
+        "fr": "Porte Méanville",
+        "de": "Rayono-Tor",
+        "en": "Nimbasa Gate"
+      },
+      "Nuvema Town": {
+        "fr": "Renouet",
+        "de": "Avenitia",
+        "en": "Nuvema Town"
+      },
+      "Opelucid City": {
+        "fr": "Janusia",
+        "de": "Twindrake City",
+        "en": "Opelucid City"
+      },
+      "Opelucid Gate": {
+        "fr": "Porte Janusia",
+        "de": "Twindrake-Tor",
+        "en": "Opelucid Gate"
+      },
+      "P2 Laboratory": {
+        "fr": "Labo P2",
+        "de": "P2-Labor",
+        "en": "P2 Laboratory"
+      },
+      "Pinwheel Forest": {
+        "fr": "Forêt d'Empoigne",
+        "de": "Ewigenwald",
+        "en": "Pinwheel Forest"
+      },
+      "Plasma Frigate": {
+        "fr": "Frégate Plasma",
+        "de": "Plasma-Fregatte",
+        "en": "Plasma Frigate"
+      },
+      "Pledge Grove": {
+        "fr": "Bois du Serment",
+        "de": "Schwurhain",
+        "en": "Pledge Grove"
+      },
+      "Poké Transfer Lab": {
+        "fr": "Laboratoire Fret",
+        "de": "Porterlabor",
+        "en": "Poké Transfer Lab"
+      },
+      "Pokémon League": {
+        "fr": "Ligue Pokémon",
+        "de": "Pokémon-Liga",
+        "en": "Pokémon League"
+      },
+      "PokéStar Studios": {
+        "fr": "Pokéwood",
+        "de": "Pokéwood",
+        "en": "PokéStar Studios"
+      },
+      "Relic Castle": {
+        "fr": "Château Enfoui",
+        "de": "Alter Palast",
+        "en": "Relic Castle"
+      },
+      "Relic Passage": {
+        "fr": "Chemin Enfoui",
+        "de": "Alter Fluchtweg",
+        "en": "Relic Passage"
+      },
+      "Reversal Mountain": {
+        "fr": "Mont Renenvers",
+        "de": "Janusberg",
+        "en": "Reversal Mountain"
+      },
+      "Rocky Mountain Room": {
+        "fr": "Salle Pic Rocheux",
+        "de": "Steingipfelkammer",
+        "en": "Rocky Mountain Room"
+      },
+      "Route 1": {
+        "fr": "Route 1",
+        "de": "Route 1",
+        "en": "Route 1"
+      },
+      "Route 10": {
+        "fr": "Route 10",
+        "de": "Route 10",
+        "en": "Route 10"
+      },
+      "Route 11": {
+        "fr": "Route 11",
+        "de": "Route 11",
+        "en": "Route 11"
+      },
+      "Route 12": {
+        "fr": "Route 12",
+        "de": "Route 12",
+        "en": "Route 12"
+      },
+      "Route 13": {
+        "fr": "Route 13",
+        "de": "Route 13",
+        "en": "Route 13"
+      },
+      "Route 14": {
+        "fr": "Route 14",
+        "de": "Route 14",
+        "en": "Route 14"
+      },
+      "Route 15": {
+        "fr": "Route 15",
+        "de": "Route 15",
+        "en": "Route 15"
+      },
+      "Route 16": {
+        "fr": "Route 16",
+        "de": "Route 16",
+        "en": "Route 16"
+      },
+      "Route 17": {
+        "fr": "Chenal 17",
+        "de": "Route 17",
+        "en": "Route 17"
+      },
+      "Route 18": {
+        "fr": "Route 18",
+        "de": "Route 18",
+        "en": "Route 18"
+      },
+      "Route 19": {
+        "fr": "Route 19",
+        "de": "Route 19",
+        "en": "Route 19"
+      },
+      "Route 2": {
+        "fr": "Route 2",
+        "de": "Route 2",
+        "en": "Route 2"
+      },
+      "Route 20": {
+        "fr": "Route 20",
+        "de": "Route 20",
+        "en": "Route 20"
+      },
+      "Route 21": {
+        "fr": "Chenal 21",
+        "de": "Route 21",
+        "en": "Route 21"
+      },
+      "Route 22": {
+        "fr": "Route 22",
+        "de": "Route 22",
+        "en": "Route 22"
+      },
+      "Route 23": {
+        "fr": "Route 23",
+        "de": "Route 23",
+        "en": "Route 23"
+      },
+      "Route 3": {
+        "fr": "Route 3",
+        "de": "Route 3",
+        "en": "Route 3"
+      },
+      "Route 4": {
+        "fr": "Route 4",
+        "de": "Route 4",
+        "en": "Route 4"
+      },
+      "Route 5": {
+        "fr": "Route 5",
+        "de": "Route 5",
+        "en": "Route 5"
+      },
+      "Route 6": {
+        "fr": "Route 6",
+        "de": "Route 6",
+        "en": "Route 6"
+      },
+      "Route 7": {
+        "fr": "Route 7",
+        "de": "Route 7",
+        "en": "Route 7"
+      },
+      "Route 8": {
+        "fr": "Route 8",
+        "de": "Route 8",
+        "en": "Route 8"
+      },
+      "Route 9": {
+        "fr": "Route 9",
+        "de": "Route 9",
+        "en": "Route 9"
+      },
+      "Route Gate": {
+        "fr": "Porte de Route",
+        "de": "Route Gate",
+        "en": "Route Gate"
+      },
+      "Royal Unova": {
+        "fr": "L'Étoile d'Unys",
+        "de": "MS Einall Royal",
+        "en": "Royal Unova"
+      },
+      "Rumination Field": {
+        "fr": "Clairière Réflexion",
+        "de": "Feld der Besinnung",
+        "en": "Rumination Field"
+      },
+      "Seaside Cave": {
+        "fr": "Grotte Littorale",
+        "de": "Strandgrotte",
+        "en": "Seaside Cave"
+      },
+      "Shopping Mall": {
+        "fr": "Centre Commercial",
+        "de": "Kaufhaus 9",
+        "en": "Shopping Mall"
+      },
+      "Skyarrow Bridge": {
+        "fr": "Pont Sagiciel",
+        "de": "Himmelspfeilbrücke",
+        "en": "Skyarrow Bridge"
+      },
+      "Strange House": {
+        "fr": "Manoir de l'Étrange",
+        "de": "Bizarro-Haus",
+        "en": "Strange House"
+      },
+      "Striaton City": {
+        "fr": "Ogoesse",
+        "de": "Orion City",
+        "en": "Striaton City"
+      },
+      "Trial Chamber": {
+        "fr": "Salle Épreuve",
+        "de": "Kammer der Prüfung",
+        "en": "Trial Chamber"
+      },
+      "Tubeline Bridge": {
+        "fr": "Pont Ferroviaire",
+        "de": "Zylinderbrücke",
+        "en": "Tubeline Bridge"
+      },
+      "Twist Mountain": {
+        "fr": "Mont Foré",
+        "de": "Wendelberg",
+        "en": "Twist Mountain"
+      },
+      "Undella Bay": {
+        "fr": "Baie Vaguelone",
+        "de": "Bucht von Ondula",
+        "en": "Undella Bay"
+      },
+      "Undella Gate": {
+        "fr": "Porte Vaguelone",
+        "de": "Ondula-Tor",
+        "en": "Undella Gate"
+      },
+      "Undella Town": {
+        "fr": "Vaguelone",
+        "de": "Ondula",
+        "en": "Undella Town"
+      },
+      "Underground Ruins": {
+        "fr": "Ruines Enfouies",
+        "de": "Unterirdische Ruine",
+        "en": "Underground Ruins"
+      },
+      "Unity Tower": {
+        "fr": "Tour Union",
+        "de": "Turm der Einheit",
+        "en": "Unity Tower"
+      },
+      "Unova (Roaming)": {
+        "fr": "Unys (Sillonnant)",
+        "de": "Einall (wandernd)",
+        "en": "Unova (Roaming)"
+      },
+      "Victory Road": {
+        "fr": "Route Victoire",
+        "de": "Siegesstraße",
+        "en": "Victory Road"
+      },
+      "Village Bridge": {
+        "fr": "Pont du Hameau",
+        "de": "Dorfbrücke",
+        "en": "Village Bridge"
+      },
+      "Virbank City": {
+        "fr": "Ondes-sur-Mer",
+        "de": "Vapydro City",
+        "en": "Virbank City"
+      },
+      "Virbank Complex": {
+        "fr": "Z.I. d'Ondes-sur-Mer",
+        "de": "Vapydro-Werke",
+        "en": "Virbank Complex"
+      },
+      "Virbank Gate": {
+        "fr": "Porte Ondes-sur-Mer",
+        "de": "Vapydro-Tor",
+        "en": "Virbank Gate"
+      },
+      "Wellspring Cave": {
+        "fr": "Veine Souterraine",
+        "de": "Grundwassersenke",
+        "en": "Wellspring Cave"
+      },
+      "White Forest": {
+        "fr": "Forêt Blanche",
+        "de": "Weißer Wald",
+        "en": "White Forest"
+      },
+      "White Gate": {
+        "fr": "Porte Blanche",
+        "de": "Weißes Tor",
+        "en": "White Gate"
+      },
+      "White Treehollow": {
+        "fr": "Arbre Creux Blanc",
+        "de": "Weiße Baumhöhle",
+        "en": "White Treehollow"
+      }
+    },
+    "kalos": {
+      "Ambrette Aquarium": {
+        "fr": "Aquarium R. s/Gliffe",
+        "de": "Petrophia-Aquarium",
+        "es": "Acuario Petroglifo",
+        "it": "Acquario",
+        "en": "Ambrette Aquarium"
+      },
+      "Ambrette Gate": {
+        "fr": "Porte de R. s/Gliffe",
+        "de": "Petrophia-Tor",
+        "es": "Acceso a Petroglifo",
+        "it": "Varco Petroglifari",
+        "en": "Ambrette Gate"
+      },
+      "Ambrette Town": {
+        "fr": "Roche-sur-Gliffe",
+        "de": "Petrophia",
+        "es": "Pueblo Petroglifo",
+        "it": "Petroglifari",
+        "en": "Ambrette Town"
+      },
+      "Anistar City": {
+        "fr": "Flusselles",
+        "de": "Fluxia City",
+        "es": "Ciudad Fluxus",
+        "it": "Fluxopoli",
+        "en": "Anistar City"
+      },
+      "Anistar Gate": {
+        "fr": "Porte de Flusselles",
+        "de": "Fluxia-Tor",
+        "es": "Acceso a Fluxus",
+        "it": "Varco Fluxopoli",
+        "en": "Anistar Gate"
+      },
+      "Aquacorde Town": {
+        "fr": "Quarellis",
+        "de": "Aquarellia",
+        "es": "Pueblo Acuarela",
+        "it": "Rio Acquerello",
+        "en": "Aquacorde Town"
+      },
+      "Avance Trail": {
+        "fr": "Chemin Progrès",
+        "de": "Progrès-Weg",
+        "es": "Vía del Avance",
+        "it": "Via Progresso",
+        "en": "Avance Trail"
+      },
+      "Azure Bay": {
+        "fr": "Baie Azur",
+        "de": "Azurbucht",
+        "es": "Bahía Azul",
+        "it": "Baia Azzurra",
+        "en": "Azure Bay"
+      },
+      "Battle Chateau": {
+        "fr": "Château de Combat",
+        "de": "Kampfschloss",
+        "es": "Bastión Batalla",
+        "it": "Castello Lotta",
+        "en": "Battle Chateau"
+      },
+      "Battle Maison": {
+        "fr": "Maison de Combat",
+        "de": "Kampfhaus",
+        "es": "Mansión Batalla",
+        "it": "Villa Lotta",
+        "en": "Battle Maison"
+      },
+      "Blazing Chamber": {
+        "fr": "Chambre du Brasier",
+        "de": "Flammen-Saal",
+        "es": "Sala de las Llamas",
+        "it": "Sala delle Fiamme",
+        "en": "Blazing Chamber"
+      },
+      "Brun Way": {
+        "fr": "Chemin Brun",
+        "de": "Brun-Weg",
+        "es": "Sendero Hojarasca",
+        "it": "Via Fogliebrune",
+        "en": "Brun Way"
+      },
+      "Camphrier Town": {
+        "fr": "Fort-Vanitas",
+        "de": "Vanitéa",
+        "es": "Pueblo Vánitas",
+        "it": "Castel Vanità",
+        "en": "Camphrier Town"
+      },
+      "Chamber of Emptiness": {
+        "fr": "Chambre Néant",
+        "de": "Kammer der Leere",
+        "es": "Estancia Vacua",
+        "it": "Stanza Vacua",
+        "en": "Chamber of Emptiness"
+      },
+      "Connecting Cave": {
+        "fr": "Cave Connecterre",
+        "de": "Geolinkhöhle",
+        "es": "Gruta Tierraunida",
+        "it": "Grotta Trait d’Union",
+        "en": "Connecting Cave"
+      },
+      "Coumarine City": {
+        "fr": "Port Tempères",
+        "de": "Tempera City",
+        "es": "Ciudad Témpera",
+        "it": "Temperopoli",
+        "en": "Coumarine City"
+      },
+      "Coumarine Gate": {
+        "fr": "Porte de P. Tempères",
+        "de": "Tempera-Tor",
+        "es": "Acceso a Témpera",
+        "it": "Varco Temperopoli",
+        "en": "Coumarine Gate"
+      },
+      "Couriway Gate": {
+        "fr": "Porte de Mozheim",
+        "de": "Mosaia-Tor",
+        "es": "Acceso a Mosaico",
+        "it": "Varco Ponte Mosaico",
+        "en": "Couriway Gate"
+      },
+      "Couriway Town": {
+        "fr": "Mozheim",
+        "de": "Mosaia",
+        "es": "Pueblo Mosaico",
+        "it": "Ponte Mosaico",
+        "en": "Couriway Town"
+      },
+      "Cyllage City": {
+        "fr": "Relifac-le-Haut",
+        "de": "Relievera City",
+        "es": "Ciudad Relieve",
+        "it": "Altoripoli",
+        "en": "Cyllage City"
+      },
+      "Dendemille Gate": {
+        "fr": "Porte de La Frescale",
+        "de": "Frescora-Tor",
+        "es": "Acceso a Fresco",
+        "it": "Varco Frescovilla",
+        "en": "Dendemille Gate"
+      },
+      "Dendemille Town": {
+        "fr": "La Frescale",
+        "de": "Frescora",
+        "es": "Pueblo Fresco",
+        "it": "Frescovilla",
+        "en": "Dendemille Town"
+      },
+      "Dernière Way": {
+        "fr": "Chemin Final",
+        "de": "Dernier-Weg",
+        "es": "Vía Ultimia",
+        "it": "Via Ultima",
+        "en": "Dernière Way"
+      },
+      "Détourner Way": {
+        "fr": "Chemin Détour",
+        "de": "Détourné-Weg",
+        "es": "Vía Desvío",
+        "it": "Via Detour",
+        "en": "Détourner Way"
+      },
+      "Dragonmark Chamber": {
+        "fr": "Chambre de la Guivre",
+        "de": "Draco-Saal",
+        "es": "Sala del Draco",
+        "it": "Sala del Dragone",
+        "en": "Dragonmark Chamber"
+      },
+      "Flood Chamber": {
+        "fr": "Chambre du Barrage",
+        "de": "Schleusen-Saal",
+        "es": "Sala de la Esclusa",
+        "it": "Sala delle Chiuse",
+        "en": "Flood Chamber"
+      },
+      "Fourrage Road": {
+        "fr": "Chemin Fourrage",
+        "de": "Fourrage-Weg",
+        "es": "Vereda del Heno",
+        "it": "Via dei Pascoli",
+        "en": "Fourrage Road"
+      },
+      "Friend Safari": {
+        "fr": "Safari des Amis",
+        "de": "Kontaktsafari",
+        "es": "Safari Amistad",
+        "it": "Safari Amici",
+        "en": "Friend Safari"
+      },
+      "Frost Cavern": {
+        "fr": "Caverne Gelée",
+        "de": "Frosthöhle",
+        "es": "Gruta Helada",
+        "it": "Caverna Gelata",
+        "en": "Frost Cavern"
+      },
+      "Geosenge Town": {
+        "fr": "Cromlac’h",
+        "de": "Cromlexia",
+        "es": "Pueblo Crómlech",
+        "it": "Cromleburgo",
+        "en": "Geosenge Town"
+      },
+      "Glittering Cave": {
+        "fr": "Grotte Étincelante",
+        "de": "Leuchthöhle",
+        "es": "Cueva Brillante",
+        "it": "Grotta dei Bagliori",
+        "en": "Glittering Cave"
+      },
+      "Grande Vallée Way": {
+        "fr": "Chemin du Val",
+        "de": "Vallée-Large-Weg",
+        "es": "Senda del Gran Valle",
+        "it": "Via Valle Larga",
+        "en": "Grande Vallée Way"
+      },
+      "Ironworks Chamber": {
+        "fr": "Chambre de l’Alliage",
+        "de": "Rüstungs-Saal",
+        "es": "Sala del Metal",
+        "it": "Sala del Metallo",
+        "en": "Ironworks Chamber"
+      },
+      "Kalos (Roaming)": {
+        "fr": "Kalos (Sillonnant)",
+        "de": "Kalos (wandernd)",
+        "en": "Kalos (Roaming)"
+      },
+      "Kalos Power Plant": {
+        "fr": "Centrale de Kalos",
+        "de": "Kalos-Kraftwerk",
+        "es": "Central de Kalos",
+        "it": "Centrale di Kalos",
+        "en": "Kalos Power Plant"
+      },
+      "Kiloude City": {
+        "fr": "Batisques",
+        "de": "Batika City",
+        "es": "Ciudad Batik",
+        "it": "Batikopoli",
+        "en": "Kiloude City"
+      },
+      "Kiloude Station": {
+        "fr": "Gare de Batisques",
+        "de": "Bahnhof von Batika",
+        "es": "Estación Batik",
+        "it": "Stazione Batikopoli",
+        "en": "Kiloude Station"
+      },
+      "Laverre City": {
+        "fr": "Romant-sous-Bois",
+        "de": "Romantia City",
+        "es": "Ciudad Romantis",
+        "it": "Romantopoli",
+        "en": "Laverre City"
+      },
+      "Laverre Gate": {
+        "fr": "Porte de Romant",
+        "de": "Romantia-Tor",
+        "es": "Acceso a Romantis",
+        "it": "Varco Romantopoli",
+        "en": "Laverre Gate"
+      },
+      "Laverre Nature Trail": {
+        "fr": "Laie Romant-ss-Bois",
+        "de": "Romantia-Waldweg",
+        "es": "Arboleda Romantis",
+        "it": "Sentiero Romantopoli",
+        "en": "Laverre Nature Trail"
+      },
+      "Lost Hotel": {
+        "fr": "Hôtel Désolation",
+        "de": "Hotelruine",
+        "es": "Hotel Desolación",
+        "it": "Albergo Diroccato",
+        "en": "Lost Hotel"
+      },
+      "Lumiose Badlands": {
+        "fr": "Steppe d’Illumis",
+        "de": "Illumina-Steppe",
+        "es": "Páramo de Luminalia",
+        "it": "Landa di Luminopoli",
+        "en": "Lumiose Badlands"
+      },
+      "Lumiose City": {
+        "fr": "Illumis",
+        "de": "Illumina City",
+        "es": "Ciudad Luminalia",
+        "it": "Luminopoli",
+        "en": "Lumiose City"
+      },
+      "Lumiose Gate": {
+        "fr": "Porte d’Illumis",
+        "de": "Illumina-Tor",
+        "es": "Acceso a Luminalia",
+        "it": "Varco Luminopoli",
+        "en": "Lumiose Gate"
+      },
+      "Lumiose Station": {
+        "fr": "Gare d’Illumis",
+        "de": "Bahnhof von Illumina",
+        "es": "Estación Luminalia",
+        "it": "Stazione Luminopoli",
+        "en": "Lumiose Station"
+      },
+      "Lysandre Labs": {
+        "fr": "Labos Lysandre",
+        "de": "Labor von Flordelis",
+        "es": "Laboratorios Lysson",
+        "it": "Laboratori Elisio",
+        "en": "Lysandre Labs"
+      },
+      "Mamoswine Road": {
+        "fr": "Route Mammochon",
+        "de": "Mamutel-Weg",
+        "es": "Sendero Mamoswine",
+        "it": "Passo Mamoswine",
+        "en": "Mamoswine Road"
+      },
+      "Mélancolie Path": {
+        "fr": "Chemin Tristesse",
+        "de": "Tristesse-Weg",
+        "es": "Senda Melancolía",
+        "it": "Via Malinconia",
+        "en": "Mélancolie Path"
+      },
+      "Menhir Trail": {
+        "fr": "Route Menhir",
+        "de": "Menhir-Weg",
+        "es": "Camino Menhires",
+        "it": "Strada dei Menhir",
+        "en": "Menhir Trail"
+      },
+      "Miroir Way": {
+        "fr": "Chemin Miroir",
+        "de": "Miroir-Weg",
+        "es": "Senda Reflejos",
+        "it": "Via dei Riflessi",
+        "en": "Miroir Way"
+      },
+      "Muraille Coast": {
+        "fr": "Falaise Muraille",
+        "de": "Muraille-Küstenpfad",
+        "es": "Muralla Costera",
+        "it": "Muraglia Costiera",
+        "en": "Muraille Coast"
+      },
+      "Ouvert Way": {
+        "fr": "Chemin Ouvert",
+        "de": "Ouvert-Weg",
+        "es": "Senda Despejada",
+        "it": "Via Aperta",
+        "en": "Ouvert Way"
+      },
+      "Palais Lane": {
+        "fr": "Allée du Palais",
+        "de": "Palais-Allee",
+        "es": "Alameda del Palacio",
+        "it": "Boulevard Palazzo",
+        "en": "Palais Lane"
+      },
+      "Parfum Palace": {
+        "fr": "Palais Chaydeuvre",
+        "de": "Magnum-Opus-Palast",
+        "es": "Palacio Cénit",
+        "it": "Reggia Aurea",
+        "en": "Parfum Palace"
+      },
+      "Parterre Way": {
+        "fr": "Route Fleurie",
+        "de": "Parterre-Weg",
+        "es": "Senda del Parterre",
+        "it": "Viale Parterre",
+        "en": "Parterre Way"
+      },
+      "Poké Ball Factory": {
+        "fr": "Usine de Poké Balls",
+        "de": "Pokéball-Fabrik",
+        "es": "Fábrica Poké Balls",
+        "it": "Fabbrica Poké Ball",
+        "en": "Poké Ball Factory"
+      },
+      "Pokémon League": {
+        "fr": "Ligue Pokémon",
+        "de": "Pokémon Liga",
+        "es": "Liga Pokémon",
+        "it": "Lega Pokémon",
+        "en": "Pokémon League"
+      },
+      "Pokémon League Gate": {
+        "fr": "Porte de la Ligue",
+        "de": "Tor zur Pokémon Liga",
+        "es": "Acceso Liga Pokémon",
+        "it": "Varco Lega Pokémon",
+        "en": "Pokémon League Gate"
+      },
+      "Pokémon Village": {
+        "fr": "Village Pokémon",
+        "de": "Pokémon-Dorf",
+        "es": "Villa Pokémon",
+        "it": "Valle dei Pokémon",
+        "en": "Pokémon Village"
+      },
+      "Prism Tower": {
+        "fr": "Tour Prismatique",
+        "de": "Prismaturm",
+        "es": "Torre Prisma",
+        "it": "Torre Prisma",
+        "en": "Prism Tower"
+      },
+      "Radiant Chamber": {
+        "fr": "Chambre de l’Éclat",
+        "de": "Licht-Saal",
+        "es": "Sala de la Luz",
+        "it": "Sala della Luce",
+        "en": "Radiant Chamber"
+      },
+      "Reflection Cave": {
+        "fr": "Grotte Miroitante",
+        "de": "Spiegelhöhle",
+        "es": "Cueva Reflejos",
+        "it": "Grotta dei Riflessi",
+        "en": "Reflection Cave"
+      },
+      "Rivière Walk": {
+        "fr": "Chemin des Berges",
+        "de": "Rivière-Promenade",
+        "es": "Paseo de la Ribera",
+        "it": "Via Fiume",
+        "en": "Rivière Walk"
+      },
+      "Route 1": {
+        "fr": "Route 1",
+        "de": "Route 1",
+        "es": "Ruta 1",
+        "it": "Percorso 1",
+        "en": "Route 1"
+      },
+      "Route 10": {
+        "fr": "Route 10",
+        "de": "Route 10",
+        "es": "Ruta 10",
+        "it": "Percorso 10",
+        "en": "Route 10"
+      },
+      "Route 11": {
+        "fr": "Route 11",
+        "de": "Route 11",
+        "es": "Ruta 11",
+        "it": "Percorso 11",
+        "en": "Route 11"
+      },
+      "Route 12": {
+        "fr": "Route 12",
+        "de": "Route 12",
+        "es": "Ruta 12",
+        "it": "Percorso 12",
+        "en": "Route 12"
+      },
+      "Route 13": {
+        "fr": "Route 13",
+        "de": "Route 13",
+        "es": "Ruta 13",
+        "it": "Percorso 13",
+        "en": "Route 13"
+      },
+      "Route 14": {
+        "fr": "Route 14",
+        "de": "Route 14",
+        "es": "Ruta 14",
+        "it": "Percorso 14",
+        "en": "Route 14"
+      },
+      "Route 15": {
+        "fr": "Route 15",
+        "de": "Route 15",
+        "es": "Ruta 15",
+        "it": "Percorso 15",
+        "en": "Route 15"
+      },
+      "Route 16": {
+        "fr": "Route 16",
+        "de": "Route 16",
+        "es": "Ruta 16",
+        "it": "Percorso 16",
+        "en": "Route 16"
+      },
+      "Route 17": {
+        "fr": "Route 17",
+        "de": "Route 17",
+        "es": "Ruta 17",
+        "it": "Percorso 17",
+        "en": "Route 17"
+      },
+      "Route 18": {
+        "fr": "Route 18",
+        "de": "Route 18",
+        "es": "Ruta 18",
+        "it": "Percorso 18",
+        "en": "Route 18"
+      },
+      "Route 19": {
+        "fr": "Route 19",
+        "de": "Route 19",
+        "es": "Ruta 19",
+        "it": "Percorso 19",
+        "en": "Route 19"
+      },
+      "Route 2": {
+        "fr": "Route 2",
+        "de": "Route 2",
+        "es": "Ruta 2",
+        "it": "Percorso 2",
+        "en": "Route 2"
+      },
+      "Route 20": {
+        "fr": "Route 20",
+        "de": "Route 20",
+        "es": "Ruta 20",
+        "it": "Percorso 20",
+        "en": "Route 20"
+      },
+      "Route 21": {
+        "fr": "Route 21",
+        "de": "Route 21",
+        "es": "Ruta 21",
+        "it": "Percorso 21",
+        "en": "Route 21"
+      },
+      "Route 22": {
+        "fr": "Route 22",
+        "de": "Route 22",
+        "es": "Ruta 22",
+        "it": "Percorso 22",
+        "en": "Route 22"
+      },
+      "Route 3": {
+        "fr": "Route 3",
+        "de": "Route 3",
+        "es": "Ruta 3",
+        "it": "Percorso 3",
+        "en": "Route 3"
+      },
+      "Route 4": {
+        "fr": "Route 4",
+        "de": "Route 4",
+        "es": "Ruta 4",
+        "it": "Percorso 4",
+        "en": "Route 4"
+      },
+      "Route 5": {
+        "fr": "Route 5",
+        "de": "Route 5",
+        "es": "Ruta 5",
+        "it": "Percorso 5",
+        "en": "Route 5"
+      },
+      "Route 6": {
+        "fr": "Route 6",
+        "de": "Route 6",
+        "es": "Ruta 6",
+        "it": "Percorso 6",
+        "en": "Route 6"
+      },
+      "Route 7": {
+        "fr": "Route 7",
+        "de": "Route 7",
+        "es": "Ruta 7",
+        "it": "Percorso 7",
+        "en": "Route 7"
+      },
+      "Route 8": {
+        "fr": "Route 8",
+        "de": "Route 8",
+        "es": "Ruta 8",
+        "it": "Percorso 8",
+        "en": "Route 8"
+      },
+      "Route 9": {
+        "fr": "Route 9",
+        "de": "Route 9",
+        "es": "Ruta 9",
+        "it": "Percorso 9",
+        "en": "Route 9"
+      },
+      "Santalune City": {
+        "fr": "Neuvartault",
+        "de": "Nouvaria City",
+        "es": "Ciudad Novarte",
+        "it": "Novartopoli",
+        "en": "Santalune City"
+      },
+      "Santalune Forest": {
+        "fr": "Forêt de Neuvartault",
+        "de": "Nouvaria-Wald",
+        "es": "Bosque de Novarte",
+        "it": "Bosco Novartopoli",
+        "en": "Santalune Forest"
+      },
+      "Sea Spirit’s Den": {
+        "fr": "Antre Néréen",
+        "de": "Meerestitanenhöhle",
+        "es": "Cueva Talasia",
+        "it": "Antro Talassico",
+        "en": "Sea Spirit’s Den"
+      },
+      "Shabboneau Castle": {
+        "fr": "Fort de Vanitas",
+        "de": "Château Tristesse",
+        "es": "Castillo Caduco",
+        "it": "Maniero Sottotono",
+        "en": "Shabboneau Castle"
+      },
+      "Shalour City": {
+        "fr": "Yantreizh",
+        "de": "Yantara City",
+        "es": "Ciudad Yantra",
+        "it": "Yantaropoli",
+        "en": "Shalour City"
+      },
+      "Shalour Gate": {
+        "fr": "Porte de Yantreizh",
+        "de": "Yantara-Tor",
+        "es": "Acceso a Yantra",
+        "it": "Varco Yantaropoli",
+        "en": "Shalour Gate"
+      },
+      "Snowbelle City": {
+        "fr": "Auffrac-les-Congères",
+        "de": "Fractalia City",
+        "es": "Ciudad Fractal",
+        "it": "Fractalopoli",
+        "en": "Snowbelle City"
+      },
+      "Snowbelle Gate": {
+        "fr": "Porte d’Auffrac",
+        "de": "Fractalia-Tor",
+        "es": "Acceso a Fractal",
+        "it": "Varco Fractalopoli",
+        "en": "Snowbelle Gate"
+      },
+      "Spikes Passage": {
+        "fr": "Piste Piquante",
+        "de": "Rihorn-Pass",
+        "es": "Paso de Rhyhorn",
+        "it": "Sentiero Punzoni",
+        "en": "Spikes Passage"
+      },
+      "Team Flare Secret HQ": {
+        "fr": "Repaire Team Flare",
+        "de": "Flare-Geheimbasis",
+        "es": "Guarida Team Flare",
+        "it": "Covo del Team Flare",
+        "en": "Team Flare Secret HQ"
+      },
+      "Terminus Cave": {
+        "fr": "Grotte Coda",
+        "de": "Omega-Höhle",
+        "es": "Cueva Desenlace",
+        "it": "Grotta Climax",
+        "en": "Terminus Cave"
+      },
+      "Tower of Mastery": {
+        "fr": "Tour Maîtrise",
+        "de": "Turm der Erkenntnis",
+        "es": "Torre Maestra",
+        "it": "Torre Maestra",
+        "en": "Tower of Mastery"
+      },
+      "Unknown Dungeon": {
+        "fr": "Grotte Inconnue",
+        "de": "Geheimdungeon",
+        "es": "Mazmorra Rara",
+        "it": "Grotta Ignota",
+        "en": "Unknown Dungeon"
+      },
+      "Vallée Étroite Way": {
+        "fr": "Chemin des Gorges",
+        "de": "Vallée-Étroite-Weg",
+        "es": "Senda Valle Angosto",
+        "it": "Via Valle Stretta",
+        "en": "Vallée Étroite Way"
+      },
+      "Vaniville Pathway": {
+        "fr": "Sentier Croquis",
+        "de": "Escissia-Pfad",
+        "es": "Sendero Boceto",
+        "it": "Vicolo Bozzetto",
+        "en": "Vaniville Pathway"
+      },
+      "Vaniville Town": {
+        "fr": "Bourg Croquis",
+        "de": "Escissia",
+        "es": "Pueblo Boceto",
+        "it": "Borgo Bozzetto",
+        "en": "Vaniville Town"
+      },
+      "Versant Road": {
+        "fr": "Chemin du Versant",
+        "de": "Coteau-Weg",
+        "es": "Vía Repecho",
+        "it": "Via Versante",
+        "en": "Versant Road"
+      },
+      "Victory Road": {
+        "fr": "Route Victoire",
+        "de": "Siegesstraße",
+        "es": "Calle Victoria",
+        "it": "Via Vittoria",
+        "en": "Victory Road"
+      },
+      "Winding Woods": {
+        "fr": "Bois du Dédale",
+        "de": "Irrwald",
+        "es": "Bosque Errantes",
+        "it": "Bosco Passoperso",
+        "en": "Winding Woods"
+      },
+      "Zubat Roost": {
+        "fr": "Antre Nosferapti",
+        "de": "Zubat-Nest",
+        "es": "Escondrijo Zubat",
+        "it": "Tana degli Zubat",
+        "en": "Zubat Roost"
+      }
+    },
+    "alola": {
+      "Aether Paradise": {
+        "fr": "Paradis Æther",
+        "de": "Æther-Paradies",
+        "es": "Paraíso Æther",
+        "it": "Æther Paradise",
+        "en": "Aether Paradise"
+      },
+      "Akala Meadow": {
+        "fr": "Jardin d’Akala",
+        "de": "Akala-Blumenmeer",
+        "es": "Jardines de Akala",
+        "it": "Prato Akala",
+        "en": "Akala Meadow"
+      },
+      "Akala Outskirts": {
+        "fr": "Côte Reculée d’Akala",
+        "de": "Akala-Küstenstreifen",
+        "es": "Afueras de Akala",
+        "it": "Punta Akala",
+        "en": "Akala Outskirts"
+      },
+      "Alola Berry Fields": {
+        "fr": "Champ de Baies d'Alola",
+        "de": "Alola-Beerenfelder",
+        "es": "Huerto de Bayas de Alola",
+        "it": "Orto delle Bacche di Alola",
+        "en": "Alola Berry Fields"
+      },
+      "Altar of the Moone": {
+        "fr": "Autel de la Lune",
+        "de": "Mondscheiben-Podium",
+        "es": "Altar de la Luna",
+        "it": "Altare Lunare",
+        "en": "Altar of the Moone"
+      },
+      "Altar of the Sunne": {
+        "fr": "Autel du Soleil",
+        "de": "Sonnenkreis-Podium",
+        "es": "Altar del Sol",
+        "it": "Altare Solare",
+        "en": "Altar of the Sunne"
+      },
+      "Ancient Poni Path": {
+        "fr": "Vieille Route",
+        "de": "Alter Pfad von Poni",
+        "es": "Antiguo Paso de Poni",
+        "it": "Via Antica di Poni",
+        "en": "Ancient Poni Path"
+      },
+      "Battle Royal Dome": {
+        "fr": "Dôme Royal",
+        "de": "Dome Royale",
+        "es": "Estadio Royale",
+        "it": "Stadio Royale",
+        "en": "Battle Royal Dome"
+      },
+      "Battle Tree": {
+        "fr": "Arbre de Combat",
+        "de": "Kampfbaum",
+        "es": "Árbol de Combate",
+        "it": "Albero della Lotta",
+        "en": "Battle Tree"
+      },
+      "Blush Mountain": {
+        "fr": "Mont Ardent",
+        "de": "Glühberg",
+        "es": "Monte Rubor",
+        "it": "Monte Tepore",
+        "en": "Blush Mountain"
+      },
+      "Brooklet Hill": {
+        "fr": "Colline Clapotis",
+        "de": "Plätscherhügel",
+        "es": "Colina Saltagua",
+        "it": "Collina Scrosciante",
+        "en": "Brooklet Hill"
+      },
+      "Diglett’s Tunnel": {
+        "fr": "Tunnel Taupiqueur",
+        "de": "Digda-Tunnel",
+        "es": "Túnel Diglett",
+        "it": "Tunnel Diglett",
+        "en": "Diglett’s Tunnel"
+      },
+      "Dividing Peak Tunnel": {
+        "fr": "Tunnel Perce-Mont",
+        "de": "Spaltberg-Tunnel",
+        "en": "Dividing Peak Tunnel"
+      },
+      "Exeggutor Island": {
+        "fr": "Île Noadkoko",
+        "de": "Kokowei-Eiland",
+        "es": "Isla Exeggutor",
+        "it": "Isola Exeggutor",
+        "en": "Exeggutor Island"
+      },
+      "Haina Desert": {
+        "fr": "Désert Haina",
+        "de": "Haina-Wüste",
+        "es": "Desierto de Haina",
+        "it": "Deserto Haina",
+        "en": "Haina Desert"
+      },
+      "Hano Beach": {
+        "fr": "Plage Hano-Hano",
+        "de": "Hanohano-Strand",
+        "es": "Playa de Hanohano",
+        "it": "Spiaggia Hanu Hanu",
+        "en": "Hano Beach"
+      },
+      "Hano Grand Resort": {
+        "fr": "Club Hano-Hano",
+        "de": "Hanohano-Resort",
+        "es": "Resort Hanohano",
+        "it": "Resort Hanu Hanu",
+        "en": "Hano Grand Resort"
+      },
+      "Hau’oli Cemetery": {
+        "fr": "Cimetière d’Ekaeka",
+        "de": "Hauholi-Friedhof",
+        "es": "Cementerio de Hauoli",
+        "it": "Cimitero di Hau’oli",
+        "en": "Hau’oli Cemetery"
+      },
+      "Hau'oli City": {
+        "fr": "Ekaeka",
+        "de": "Hauholi City",
+        "en": "Hau'oli City"
+      },
+      "Hau’oli City": {
+        "fr": "Ekaeka",
+        "de": "Hauholi City",
+        "es": "Ciudad Hauoli",
+        "it": "Hau’oli",
+        "en": "Hau’oli City"
+      },
+      "Heahea Beach": {
+        "fr": "Plage d'Ho'ohale",
+        "de": "Kantai-Strand",
+        "en": "Heahea Beach"
+      },
+      "Heahea City": {
+        "fr": "Ho’ohale",
+        "de": "Kantai City",
+        "es": "Ciudad Kantai",
+        "it": "Kantai",
+        "en": "Heahea City"
+      },
+      "Hokulani Observatory": {
+        "fr": "Observatoire",
+        "de": "Hokulani-Sternwarte",
+        "es": "Observ. de Hokulani",
+        "it": "Osservatorio",
+        "en": "Hokulani Observatory"
+      },
+      "Iki Town": {
+        "fr": "Lili’i",
+        "de": "Lili’i",
+        "es": "Pueblo Lilii",
+        "it": "Lili",
+        "en": "Iki Town"
+      },
+      "Kala’e Bay": {
+        "fr": "Baie de Kala’e",
+        "de": "Kala’e-Bucht",
+        "es": "Bahía Kalae",
+        "it": "Baia Kala’e",
+        "en": "Kala’e Bay"
+      },
+      "Konikoni City": {
+        "fr": "Konikoni",
+        "de": "Konikoni City",
+        "es": "Ciudad Konikoni",
+        "it": "Konikoni",
+        "en": "Konikoni City"
+      },
+      "Lake of the Moone": {
+        "fr": "Lac du Halo Lunaire",
+        "de": "Mondscheiben-See",
+        "es": "Lago Coroluna",
+        "it": "Lago Lunare",
+        "en": "Lake of the Moone"
+      },
+      "Lake of the Sunne": {
+        "fr": "Lac du Halo Solaire",
+        "de": "Sonnenkreis-See",
+        "es": "Lago Corosol",
+        "it": "Lago Solare",
+        "en": "Lake of the Sunne"
+      },
+      "Lush Jungle": {
+        "fr": "Jungle Sombrefeuille",
+        "de": "Schattendschungel",
+        "es": "Jungla Umbría",
+        "it": "Giungla Ombrosa",
+        "en": "Lush Jungle"
+      },
+      "Mahalo Trail": {
+        "fr": "Sentier de Mahalo",
+        "de": "Mahalo-Bergpfad",
+        "es": "Senda Mahalo",
+        "it": "Sentiero Mahalo",
+        "en": "Mahalo Trail"
+      },
+      "Malie City": {
+        "fr": "Malié",
+        "de": "Malihe City",
+        "es": "Ciudad Malíe",
+        "it": "Malie",
+        "en": "Malie City"
+      },
+      "Malie Garden": {
+        "fr": "Parc de Malié",
+        "de": "Malihe-Ziergarten",
+        "es": "Parque de Malíe",
+        "it": "Giardino di Malie",
+        "en": "Malie Garden"
+      },
+      "Melemele Meadow": {
+        "fr": "Jardin de Mele-Mele",
+        "de": "Mele-Mele-Blumenmeer",
+        "es": "Jardines de Melemele",
+        "it": "Prato Mele Mele",
+        "en": "Melemele Meadow"
+      },
+      "Melemele Sea": {
+        "fr": "Mer de Mele-Mele",
+        "de": "Meer von Mele-Mele",
+        "es": "Mar de Melemele",
+        "it": "Mare di Mele Mele",
+        "en": "Melemele Sea"
+      },
+      "Memorial Hill": {
+        "fr": "Colline Memento",
+        "de": "Hügel des Gedenkens",
+        "es": "Colina del Recuerdo",
+        "it": "Colle della Memoria",
+        "en": "Memorial Hill"
+      },
+      "Mount Hokulani": {
+        "fr": "Mont Hokulani",
+        "de": "Hokulani-Berg",
+        "es": "Pico Hokulani",
+        "it": "Picco Hokulani",
+        "en": "Mount Hokulani"
+      },
+      "Mount Lanakila": {
+        "fr": "Mont Lanakila",
+        "de": "Mount Lanakila",
+        "es": "Monte Lanakila",
+        "it": "Monte Lanakila",
+        "en": "Mount Lanakila"
+      },
+      "Paniola Ranch": {
+        "fr": "Ranch Ohana",
+        "de": "Ohana-Farm",
+        "es": "Rancho Ohana",
+        "it": "Fattoria Ohana",
+        "en": "Paniola Ranch"
+      },
+      "Paniola Town": {
+        "fr": "Ohana",
+        "de": "Ohana",
+        "es": "Pueblo Ohana",
+        "it": "Ohana",
+        "en": "Paniola Town"
+      },
+      "Po Town": {
+        "fr": "Kokohio",
+        "de": "Po’u",
+        "es": "Pueblo Po",
+        "it": "Poh",
+        "en": "Po Town"
+      },
+      "Poké Pelago": {
+        "fr": "Poké Loisir",
+        "de": "Pokémon-Resort",
+        "en": "Poké Pelago"
+      },
+      "Pokémon League": {
+        "fr": "Ligue Pokémon",
+        "de": "Pokémon-Liga",
+        "es": "Liga Pokémon",
+        "it": "Lega Pokémon",
+        "en": "Pokémon League"
+      },
+      "Poni Breaker Coast": {
+        "fr": "Récif de Poni",
+        "de": "Felsenküste von Poni",
+        "es": "Arrecife de Poni",
+        "it": "Scogliera di Poni",
+        "en": "Poni Breaker Coast"
+      },
+      "Poni Coast": {
+        "fr": "Côte de Poni",
+        "de": "Küste von Poni",
+        "es": "Costa de Poni",
+        "it": "Costa di Poni",
+        "en": "Poni Coast"
+      },
+      "Poni Gauntlet": {
+        "fr": "Chemin du Défi",
+        "de": "Beschwerlicher Pfad",
+        "es": "Pendiente de Poni",
+        "it": "Erta di Poni",
+        "en": "Poni Gauntlet"
+      },
+      "Poni Grove": {
+        "fr": "Forêt de Poni",
+        "de": "Wald von Poni",
+        "es": "Bosque de Poni",
+        "it": "Foresta di Poni",
+        "en": "Poni Grove"
+      },
+      "Poni Meadow": {
+        "fr": "Jardin de Poni",
+        "de": "Poni-Blumenmeer",
+        "es": "Jardines de Poni",
+        "it": "Prato Poni",
+        "en": "Poni Meadow"
+      },
+      "Poni Plains": {
+        "fr": "Plaine de Poni",
+        "de": "Ebene von Poni",
+        "es": "Llanura de Poni",
+        "it": "Prateria di Poni",
+        "en": "Poni Plains"
+      },
+      "Poni Wilds": {
+        "fr": "Prairie de Poni",
+        "de": "Wildnis von Poni",
+        "es": "Prado de Poni",
+        "it": "Piana di Poni",
+        "en": "Poni Wilds"
+      },
+      "Resolution Cave": {
+        "fr": "Caverne Coda",
+        "de": "Finalhöhle",
+        "es": "Gruta Desenlace",
+        "it": "Caverna Climax",
+        "en": "Resolution Cave"
+      },
+      "Route 1": {
+        "fr": "Route 1",
+        "de": "Route 1",
+        "es": "Ruta 1",
+        "it": "Percorso 1",
+        "en": "Route 1"
+      },
+      "Route 10": {
+        "fr": "Route 10",
+        "de": "Route 10",
+        "es": "Ruta 10",
+        "it": "Percorso 10",
+        "en": "Route 10"
+      },
+      "Route 11": {
+        "fr": "Route 11",
+        "de": "Route 11",
+        "es": "Ruta 11",
+        "it": "Percorso 11",
+        "en": "Route 11"
+      },
+      "Route 12": {
+        "fr": "Route 12",
+        "de": "Route 12",
+        "es": "Ruta 12",
+        "it": "Percorso 12",
+        "en": "Route 12"
+      },
+      "Route 13": {
+        "fr": "Route 13",
+        "de": "Route 13",
+        "es": "Ruta 13",
+        "it": "Percorso 13",
+        "en": "Route 13"
+      },
+      "Route 14": {
+        "fr": "Route 14",
+        "de": "Route 14",
+        "es": "Ruta 14",
+        "it": "Percorso 14",
+        "en": "Route 14"
+      },
+      "Route 15": {
+        "fr": "Route 15",
+        "de": "Route 15 (Wasserweg)",
+        "es": "Ruta 15",
+        "it": "Percorso 15",
+        "en": "Route 15"
+      },
+      "Route 16": {
+        "fr": "Route 16",
+        "de": "Route 16",
+        "es": "Ruta 16",
+        "it": "Percorso 16",
+        "en": "Route 16"
+      },
+      "Route 17": {
+        "fr": "Route 17",
+        "de": "Route 17",
+        "es": "Ruta 17",
+        "it": "Percorso 17",
+        "en": "Route 17"
+      },
+      "Route 2": {
+        "fr": "Route 2",
+        "de": "Route 2",
+        "es": "Ruta 2",
+        "it": "Percorso 2",
+        "en": "Route 2"
+      },
+      "Route 3": {
+        "fr": "Route 3",
+        "de": "Route 3",
+        "es": "Ruta 3",
+        "it": "Percorso 3",
+        "en": "Route 3"
+      },
+      "Route 4": {
+        "fr": "Route 4",
+        "de": "Route 4",
+        "es": "Ruta 4",
+        "it": "Percorso 4",
+        "en": "Route 4"
+      },
+      "Route 5": {
+        "fr": "Route 5",
+        "de": "Route 5",
+        "es": "Ruta 5",
+        "it": "Percorso 5",
+        "en": "Route 5"
+      },
+      "Route 6": {
+        "fr": "Route 6",
+        "de": "Route 6",
+        "es": "Ruta 6",
+        "it": "Percorso 6",
+        "en": "Route 6"
+      },
+      "Route 7": {
+        "fr": "Route 7",
+        "de": "Route 7",
+        "es": "Ruta 7",
+        "it": "Percorso 7",
+        "en": "Route 7"
+      },
+      "Route 8": {
+        "fr": "Route 8",
+        "de": "Route 8",
+        "es": "Ruta 8",
+        "it": "Percorso 8",
+        "en": "Route 8"
+      },
+      "Route 9": {
+        "fr": "Route 9",
+        "de": "Route 9",
+        "es": "Ruta 9",
+        "it": "Percorso 9",
+        "en": "Route 9"
+      },
+      "Royal Avenue": {
+        "fr": "Rue du Dôme Royal",
+        "de": "Avenue Royale",
+        "es": "Avenida Royale",
+        "it": "Viale Royale",
+        "en": "Royal Avenue"
+      },
+      "Ruins of Abundance": {
+        "fr": "Ruines de l’Essor",
+        "de": "Ruinen des Gedeihens",
+        "es": "Ruinas de la Cosecha",
+        "it": "Tempio del Raccolto",
+        "en": "Ruins of Abundance"
+      },
+      "Ruins of Conflict": {
+        "fr": "Ruines du Conflit",
+        "de": "Ruinen des Krieges",
+        "es": "Ruinas de la Guerra",
+        "it": "Tempio del Conflitto",
+        "en": "Ruins of Conflict"
+      },
+      "Ruins of Hope": {
+        "fr": "Ruines de l’Au-Delà",
+        "de": "Ruinen der Heimkehr",
+        "es": "Ruinas del Tránsito",
+        "it": "Tempio del Passaggio",
+        "en": "Ruins of Hope"
+      },
+      "Ruins of Life": {
+        "fr": "Ruines de l’Éveil",
+        "de": "Ruinen des Lebens",
+        "es": "Ruinas de la Vida",
+        "it": "Tempio della Vita",
+        "en": "Ruins of Life"
+      },
+      "Sandy Cave": {
+        "fr": "Grotte de la Plage",
+        "de": "Sandhöhle",
+        "en": "Sandy Cave"
+      },
+      "Seafolk Village": {
+        "fr": "Village Flottant",
+        "de": "Dorf des Seevolkes",
+        "es": "Aldea Marina",
+        "it": "Villaggio del Mare",
+        "en": "Seafolk Village"
+      },
+      "Seaward Cave": {
+        "fr": "Grotte Verlamer",
+        "de": "Meereshöhle",
+        "es": "Gruta Unemar",
+        "it": "Grotta Pratomare",
+        "en": "Seaward Cave"
+      },
+      "Secluded Shore": {
+        "fr": "Côte Sauvage",
+        "de": "Küste von Ula-Ula",
+        "es": "Playa Menor",
+        "it": "Lido di Ula Ula",
+        "en": "Secluded Shore"
+      },
+      "Shady House": {
+        "fr": "Manoir Chelou",
+        "de": "Lottervilla",
+        "es": "Mansión Misteriosa",
+        "it": "Villa Losca",
+        "en": "Shady House"
+      },
+      "Tapu Village": {
+        "fr": "Village Toko",
+        "de": "Dorf der Kapu",
+        "es": "Aldea Tapu",
+        "it": "Villaggio Tapu",
+        "en": "Tapu Village"
+      },
+      "Team Rocket's Castle": {
+        "fr": "Château Rocket",
+        "de": "Rocket-Schloss",
+        "en": "Team Rocket's Castle"
+      },
+      "Ten Carat Hill": {
+        "fr": "Colline Dicarat",
+        "de": "Tenkarat-Hügel",
+        "es": "Colina Dequilate",
+        "it": "Collina Diecicarati",
+        "en": "Ten Carat Hill"
+      },
+      "Thrifty Megamart": {
+        "fr": "Bradley Prix",
+        "de": "Schnäppchenparadies",
+        "es": "Súper Ultraganga",
+        "it": "Supermarket Affaroni",
+        "en": "Thrifty Megamart"
+      },
+      "Ula'ula Beach": {
+        "fr": "Plage d'Ula-Ula",
+        "de": "Strand von Ula-Ula",
+        "en": "Ula'ula Beach"
+      },
+      "Ula’ula Meadow": {
+        "fr": "Jardin d’Ula-Ula",
+        "de": "Ula-Ula-Blumenmeer",
+        "es": "Jardines de Ula-Ula",
+        "it": "Prato Ula Ula",
+        "en": "Ula’ula Meadow"
+      },
+      "Ultra Megalopolis": {
+        "fr": "Ultra-Mégalopole",
+        "de": "Ultrametropolis",
+        "en": "Ultra Megalopolis"
+      },
+      "Ultra Space": {
+        "fr": "Ultra-Dimension",
+        "de": "Ultradimension",
+        "es": "Ultraespacio",
+        "it": "Ultramondo",
+        "en": "Ultra Space"
+      },
+      "Ultra Space Wilds": {
+        "fr": "Ultra-Dimension Zéro",
+        "de": "Ultradimension Zero",
+        "en": "Ultra Space Wilds"
+      },
+      "Vast Poni Canyon": {
+        "fr": "Grand Canyon de Poni",
+        "de": "Canyon von Poni",
+        "es": "Cañón de Poni",
+        "it": "Canyon di Poni",
+        "en": "Vast Poni Canyon"
+      },
+      "Verdant Cavern": {
+        "fr": "Grotte Verdoyante",
+        "de": "Vegetationshöhle",
+        "es": "Cueva Sotobosque",
+        "it": "Grotta Sottobosco",
+        "en": "Verdant Cavern"
+      },
+      "Wela Volcano Park": {
+        "fr": "Parc Volcanique",
+        "de": "Wela-Vulkanpark",
+        "es": "Área Volcánica Wela",
+        "it": "Parco Vulcano Wela",
+        "en": "Wela Volcano Park"
+      }
+    },
+    "galar": {
+      "Axew's Eye": {
+        "fr": "Œil du Lac",
+        "de": "Milza-See (Auge)",
+        "en": "Axew's Eye"
+      },
+      "Ballimere Lake": {
+        "fr": "Lac Poké Ball",
+        "de": "Ballsee-Ufer",
+        "en": "Ballimere Lake"
+      },
+      "Ballonlea": {
+        "fr": "Corrifey",
+        "de": "Fairballey",
+        "en": "Ballonlea"
+      },
+      "Battle Tower": {
+        "fr": "Tour de Combat",
+        "de": "Duellturm",
+        "en": "Battle Tower"
+      },
+      "Brawlers' Cave": {
+        "fr": "Grotte du Pugilat",
+        "de": "Kämpfergrotte",
+        "en": "Brawlers' Cave"
+      },
+      "Bridge Field": {
+        "fr": "Prairie Entre-Ponts",
+        "de": "Brückental",
+        "en": "Bridge Field"
+      },
+      "Challenge Beach": {
+        "fr": "Plage de l'Épreuve",
+        "de": "Strand der Prüfung",
+        "en": "Challenge Beach"
+      },
+      "Challenge Road": {
+        "fr": "Route de l'Épreuve",
+        "de": "Pfad der Prüfung",
+        "en": "Challenge Road"
+      },
+      "Circhester": {
+        "fr": "Ludester",
+        "de": "Circhester",
+        "en": "Circhester"
+      },
+      "Courageous Cavern": {
+        "fr": "Caverne Pugnacité",
+        "de": "Tapferkeitshöhle",
+        "en": "Courageous Cavern"
+      },
+      "Crown Shrine": {
+        "fr": "Temple Couronne",
+        "de": "Kronentempel",
+        "en": "Crown Shrine"
+      },
+      "Dappled Grove": {
+        "fr": "Bois de Clairjour",
+        "de": "Wipfelscheinwald",
+        "en": "Dappled Grove"
+      },
+      "Dusty Bowl": {
+        "fr": "Fosse des Sables",
+        "de": "Sandsturmkessel",
+        "en": "Dusty Bowl"
+      },
+      "Dyna Tree Hill": {
+        "fr": "Butte du Dynarbre",
+        "de": "Hügel des Dyna-Baums",
+        "en": "Dyna Tree Hill"
+      },
+      "East Lake Axewell": {
+        "fr": "Lac Coupenotte Est",
+        "de": "Milza-See (Osten)",
+        "en": "East Lake Axewell"
+      },
+      "Energy Plant": {
+        "en": "Energy Plant"
+      },
+      "Fields of Honor": {
+        "fr": "Plaine Salutation",
+        "de": "Grußgefilde",
+        "en": "Fields of Honor"
+      },
+      "Forest of Focus": {
+        "fr": "Forêt Flexion",
+        "de": "Fokusforst",
+        "en": "Forest of Focus"
+      },
+      "Freezington": {
+        "fr": "Hameau Gelé",
+        "de": "Freezedale",
+        "en": "Freezington"
+      },
+      "Frigid Sea": {
+        "fr": "Mer Banquise",
+        "de": "Schollenmeer",
+        "en": "Frigid Sea"
+      },
+      "Frostpoint Field": {
+        "fr": "Plaine Granfroy",
+        "de": "Frostfeld",
+        "en": "Frostpoint Field"
+      },
+      "Galar Mine": {
+        "fr": "Mine de Galar",
+        "de": "Galar-Mine",
+        "en": "Galar Mine"
+      },
+      "Galar Mine No. 2": {
+        "fr": "Mine de Galar n° 2",
+        "de": "Galar-Mine 2",
+        "en": "Galar Mine No. 2"
+      },
+      "Giant's Bed": {
+        "fr": "Repos du Géant",
+        "de": "Bett des Giganten",
+        "en": "Giant's Bed"
+      },
+      "Giant's Cap": {
+        "fr": "Coiffe du Géant",
+        "de": "Hut des Giganten",
+        "en": "Giant's Cap"
+      },
+      "Giant's Foot": {
+        "fr": "Empreinte du Géant",
+        "de": "Sohle des Giganten",
+        "en": "Giant's Foot"
+      },
+      "Giant's Mirror": {
+        "fr": "Miroir du Géant",
+        "de": "Spiegel des Giganten",
+        "en": "Giant's Mirror"
+      },
+      "Giant's Seat": {
+        "fr": "Siège du Géant",
+        "de": "Sitz des Giganten",
+        "en": "Giant's Seat"
+      },
+      "Glimwood Tangle": {
+        "fr": "Forêt de Lumirinth",
+        "de": "Wirrschein-Wald",
+        "en": "Glimwood Tangle"
+      },
+      "Hammerlocke": {
+        "fr": "Kickenham",
+        "de": "Claw City",
+        "en": "Hammerlocke"
+      },
+      "Hammerlocke Hills": {
+        "fr": "Plateau de Kickenham",
+        "de": "Claw-Plateau",
+        "en": "Hammerlocke Hills"
+      },
+      "Honeycalm Island": {
+        "fr": "Îlot Calméole",
+        "de": "Wabeninsel",
+        "en": "Honeycalm Island"
+      },
+      "Honeycalm Sea": {
+        "fr": "Mer Calméole",
+        "de": "Wabenmeer",
+        "en": "Honeycalm Sea"
+      },
+      "Hulbury": {
+        "fr": "Skifford",
+        "de": "Keelton",
+        "en": "Hulbury"
+      },
+      "Iceberg Ruins": {
+        "fr": "Ruines Iceberg",
+        "de": "Eisberg-Ruinen",
+        "en": "Iceberg Ruins"
+      },
+      "Insular Sea": {
+        "fr": "Mer Isol'Îlots",
+        "de": "Fernarchipel",
+        "en": "Insular Sea"
+      },
+      "Iron Ruins": {
+        "fr": "Ruines de Fer",
+        "de": "Eisen-Ruinen",
+        "en": "Iron Ruins"
+      },
+      "Lake of Outrage": {
+        "fr": "Lac Ouragan",
+        "de": "Wutanfall-See",
+        "en": "Lake of Outrage"
+      },
+      "Lakeside Cave": {
+        "fr": "Grotte du Lac",
+        "de": "Ballsee-Höhle",
+        "en": "Lakeside Cave"
+      },
+      "Loop Lagoon": {
+        "fr": "Lagune Circulaire",
+        "de": "Ringbucht",
+        "en": "Loop Lagoon"
+      },
+      "Master Dojo": {
+        "fr": "Dojo de la Maîtrise",
+        "de": "Master-Dojo",
+        "en": "Master Dojo"
+      },
+      "Max Dens in the Galar Wild Area": {
+        "en": "Max Dens in the Galar Wild Area"
+      },
+      "Max Lair": {
+        "fr": "Grand Antre Dynamax",
+        "de": "Dyna-Riesennest",
+        "en": "Max Lair"
+      },
+      "Meetup Spot": {
+        "en": "Meetup Spot"
+      },
+      "Motostoke": {
+        "fr": "Motorby",
+        "de": "Engine City",
+        "en": "Motostoke"
+      },
+      "Motostoke Outskirts": {
+        "fr": "Abords de Motorby",
+        "de": "Engine-Ortsrand",
+        "en": "Motostoke Outskirts"
+      },
+      "Motostoke Riverbank": {
+        "fr": "Berges de Motorby",
+        "de": "Engine-Flussufer",
+        "en": "Motostoke Riverbank"
+      },
+      "North Lake Miloch": {
+        "fr": "Lac Milobellus Nord",
+        "de": "Milotic-See (Norden)",
+        "en": "North Lake Miloch"
+      },
+      "Old Cemetery": {
+        "fr": "Cimetière Ancien",
+        "de": "Uralter Friedhof",
+        "en": "Old Cemetery"
+      },
+      "Path to the Peak": {
+        "fr": "Sentier Blanche-Cime",
+        "de": "Schneegipfelpfad",
+        "en": "Path to the Peak"
+      },
+      "Postwick": {
+        "fr": "Paddoxton",
+        "de": "Furlongham",
+        "en": "Postwick"
+      },
+      "Potbottom Desert": {
+        "fr": "Sables de Kudsac",
+        "de": "Wüstensenke",
+        "en": "Potbottom Desert"
+      },
+      "Random caves across the Isle of Armor": {
+        "en": "Random caves across the Isle of Armor"
+      },
+      "Roaming Galar Wild Areas": {
+        "en": "Roaming Galar Wild Areas"
+      },
+      "Roaming the Crown Tundra": {
+        "en": "Roaming the Crown Tundra"
+      },
+      "Roaming the Isle of Armor": {
+        "en": "Roaming the Isle of Armor"
+      },
+      "Roaring-Sea Caves": {
+        "fr": "Cavernes Gronde-Mer",
+        "de": "Rauschende Höhlen",
+        "en": "Roaring-Sea Caves"
+      },
+      "Rock Peak Ruins": {
+        "fr": "Ruines Pic Roche",
+        "de": "Gipfelruinen",
+        "en": "Rock Peak Ruins"
+      },
+      "Rolling Fields": {
+        "fr": "Plaine Verdoyante",
+        "de": "Wonnewiesen",
+        "en": "Rolling Fields"
+      },
+      "Route 1": {
+        "fr": "Route 1",
+        "de": "Route 1",
+        "en": "Route 1"
+      },
+      "Route 10": {
+        "fr": "Route 10",
+        "de": "Route 10",
+        "en": "Route 10"
+      },
+      "Route 2": {
+        "fr": "Route 2",
+        "de": "Route 2",
+        "en": "Route 2"
+      },
+      "Route 3": {
+        "fr": "Route 3",
+        "de": "Route 3",
+        "en": "Route 3"
+      },
+      "Route 4": {
+        "fr": "Route 4",
+        "de": "Route 4",
+        "en": "Route 4"
+      },
+      "Route 5": {
+        "fr": "Route 5",
+        "de": "Route 5",
+        "en": "Route 5"
+      },
+      "Route 6": {
+        "fr": "Route 6",
+        "de": "Route 6",
+        "en": "Route 6"
+      },
+      "Route 7": {
+        "fr": "Route 7",
+        "de": "Route 7",
+        "en": "Route 7"
+      },
+      "Route 8": {
+        "fr": "Route 8",
+        "de": "Route 8",
+        "en": "Route 8"
+      },
+      "Route 9": {
+        "fr": "Route 9",
+        "de": "Route 9",
+        "en": "Route 9"
+      },
+      "Slippery Slope": {
+        "fr": "Plateau Beau-Gant",
+        "de": "Schlitterfeld",
+        "en": "Slippery Slope"
+      },
+      "Slumbering Weald": {
+        "fr": "Forêt de Sleepwood",
+        "de": "Schlummerwald",
+        "en": "Slumbering Weald"
+      },
+      "Snowslide Slope": {
+        "fr": "Pente Enneigée",
+        "de": "Schneeschlucht",
+        "en": "Snowslide Slope"
+      },
+      "Soothing Wetlands": {
+        "fr": "Lande Boldair",
+        "de": "Balsamsumpf",
+        "en": "Soothing Wetlands"
+      },
+      "South Lake Miloch": {
+        "fr": "Lac Milobellus Sud",
+        "de": "Milotic-See (Süden)",
+        "en": "South Lake Miloch"
+      },
+      "Spikemuth": {
+        "fr": "Smashings",
+        "de": "Spikeford",
+        "en": "Spikemuth"
+      },
+      "Split-Decision Ruins": {
+        "fr": "Ruines du Choix",
+        "de": "Zwiespaltruinen",
+        "en": "Split-Decision Ruins"
+      },
+      "Stepping-Stone Sea": {
+        "fr": "Mer Align'Îlots",
+        "de": "Inselkettenmeer",
+        "en": "Stepping-Stone Sea"
+      },
+      "Stony Wilderness": {
+        "fr": "Plaine Rocheuse",
+        "de": "Megalithen-Ebene",
+        "en": "Stony Wilderness"
+      },
+      "Stow-on-Side": {
+        "fr": "Old Chister",
+        "de": "Passbeck",
+        "en": "Stow-on-Side"
+      },
+      "Three-Point Pass": {
+        "fr": "Croisée Trois-Voies",
+        "de": "Dreiwegpass",
+        "en": "Three-Point Pass"
+      },
+      "Tower of Darkness": {
+        "fr": "Tour des Ténèbres",
+        "de": "Turm des Unlichts",
+        "en": "Tower of Darkness"
+      },
+      "Tower of Waters": {
+        "fr": "Tour de l'Eau",
+        "de": "Turm des Wassers",
+        "en": "Tower of Waters"
+      },
+      "Training Lowlands": {
+        "fr": "Plaine des Efforts",
+        "de": "Fleißebene",
+        "en": "Training Lowlands"
+      },
+      "Tunnel to the Top": {
+        "fr": "Galeries Monte-Pic",
+        "de": "Aufstiegstunnel",
+        "en": "Tunnel to the Top"
+      },
+      "Turffield": {
+        "fr": "Greenbury",
+        "de": "Turffield",
+        "en": "Turffield"
+      },
+      "Warm-Up Tunnel": {
+        "fr": "Voie des Étirements",
+        "de": "Aufwärmtunnel",
+        "en": "Warm-Up Tunnel"
+      },
+      "Watchtower Ruins": {
+        "fr": "Tour en ruines",
+        "de": "Wachturmruine",
+        "en": "Watchtower Ruins"
+      },
+      "Wedgehurst": {
+        "fr": "Brasswick",
+        "de": "Brassbury",
+        "en": "Wedgehurst"
+      },
+      "West Lake Axewell": {
+        "fr": "Lac Coupenotte Ouest",
+        "de": "Milza-See (Westen)",
+        "en": "West Lake Axewell"
+      },
+      "Workout Sea": {
+        "fr": "Mer Eau-Hisse",
+        "de": "Fitnessmeer",
+        "en": "Workout Sea"
+      },
+      "Wyndon": {
+        "fr": "Winscor",
+        "de": "Score City",
+        "en": "Wyndon"
+      }
+    },
+    "paldea": {
+      "Alfornada": {
+        "fr": "Alforneira",
+        "de": "Asarilla",
+        "en": "Alfornada"
+      },
+      "Alfornada Cavern": {
+        "fr": "Grotte d'Alforneira",
+        "de": "Asarilla-Grotte",
+        "en": "Alfornada Cavern"
+      },
+      "Apple Hills": {
+        "fr": "Coteau Pommes",
+        "de": "Apfelhügel",
+        "en": "Apple Hills"
+      },
+      "Area Zero": {
+        "fr": "Zone Zéro",
+        "de": "Zone Null",
+        "en": "Area Zero"
+      },
+      "Artazon": {
+        "fr": "Cuencia",
+        "de": "Bolardin",
+        "en": "Artazon"
+      },
+      "Asado Desert": {
+        "fr": "Désert Rôtissable",
+        "de": "Brutzelwüste",
+        "en": "Asado Desert"
+      },
+      "Cabo Poco": {
+        "fr": "Cuchalaga",
+        "de": "Cucharico",
+        "en": "Cabo Poco"
+      },
+      "Canyon Biome": {
+        "fr": "Zone Canyon",
+        "de": "Canyon-Areal",
+        "en": "Canyon Biome"
+      },
+      "Canyon Plaza": {
+        "fr": "Poste Canyon",
+        "de": "Canyon-Platz",
+        "en": "Canyon Plaza"
+      },
+      "Caph Squad's Base": {
+        "fr": "Repaire du Groupe Caph",
+        "de": "Versteck der Caph-Bamde",
+        "en": "Caph Squad's Base"
+      },
+      "Cascarrafa": {
+        "fr": "Jarramanca",
+        "de": "Garrafosa City",
+        "en": "Cascarrafa"
+      },
+      "Casseroya Lake": {
+        "fr": "Lac Asrol",
+        "de": "Caldero-See",
+        "en": "Casseroya Lake"
+      },
+      "Central Plaza": {
+        "fr": "Poste Central",
+        "de": "Zentralplatz",
+        "en": "Central Plaza"
+      },
+      "Chargestone Cavern": {
+        "fr": "Caverne Électrolithe",
+        "de": "Elektrolithgrotte",
+        "en": "Chargestone Cavern"
+      },
+      "Chilling Waterhead": {
+        "fr": "Grotte Douche Froide",
+        "de": "Kaltwasserkarst",
+        "en": "Chilling Waterhead"
+      },
+      "Coastal Biome": {
+        "fr": "Zone Côtière",
+        "de": "Küsten-Areal",
+        "en": "Coastal Biome"
+      },
+      "Coastal Plaza": {
+        "fr": "Poste Côtier",
+        "de": "Küsten-Platz",
+        "en": "Coastal Plaza"
+      },
+      "Cortondo": {
+        "fr": "Sevaro",
+        "de": "Moldrid",
+        "en": "Cortondo"
+      },
+      "Crystal Pool": {
+        "fr": "Lac Cristallin",
+        "de": "Kristallsee",
+        "en": "Crystal Pool"
+      },
+      "Dalizapa Passage": {
+        "fr": "Tunnel Mezcla-Pincho",
+        "de": "Mesclores-Passage",
+        "en": "Dalizapa Passage"
+      },
+      "Dreaded Den": {
+        "fr": "Antre Interdit",
+        "de": "Schreckenshöhle",
+        "en": "Dreaded Den"
+      },
+      "East Paldean Sea": {
+        "fr": "Mer de l'Est de Paldea",
+        "de": "Östliches Meer von Paldea",
+        "en": "East Paldean Sea"
+      },
+      "East Province (Area One)": {
+        "fr": "Zone Est n° 1",
+        "de": "Östliche Zone 1",
+        "en": "East Province (Area One)"
+      },
+      "East Province (Area Three)": {
+        "fr": "Zone Est n° 3",
+        "de": "Östliche Zone 3",
+        "en": "East Province (Area Three)"
+      },
+      "East Province (Area Two)": {
+        "fr": "Zone Est n° 2",
+        "de": "Östliche Zone 2",
+        "en": "East Province (Area Two)"
+      },
+      "Fellhorn Gorge": {
+        "fr": "Gorge de la Corne",
+        "de": "Hornschlucht",
+        "en": "Fellhorn Gorge"
+      },
+      "Firescourge Shrine": {
+        "fr": "Sanctuaire du Feu Ravageur",
+        "de": "Schrein der finsteren Flamme",
+        "en": "Firescourge Shrine"
+      },
+      "Glaseado Mountain": {
+        "fr": "Mont Nappé",
+        "de": "Montanata",
+        "en": "Glaseado Mountain"
+      },
+      "Grasswither Shrine": {
+        "fr": "Sanctuaire du Bois Mourant",
+        "de": "Schrein des modrigen Holzes",
+        "en": "Grasswither Shrine"
+      },
+      "Groundblight Shrine": {
+        "fr": "Sanctuaire du Sol Corrompu",
+        "de": "Schrein der unreinen Erde",
+        "en": "Groundblight Shrine"
+      },
+      "Icerend Shrine": {
+        "fr": "Sanctuaire du Froid Cruel",
+        "de": "Schrein des entzweiten Eises",
+        "en": "Icerend Shrine"
+      },
+      "Infernal Pass": {
+        "fr": "Val Infernal",
+        "de": "Infernopass",
+        "en": "Infernal Pass"
+      },
+      "Inlet Grotto": {
+        "fr": "Caverne de la Crique",
+        "de": "Meeresbuchthöhle",
+        "en": "Inlet Grotto"
+      },
+      "Kitakami Hall": {
+        "fr": "Septemplion",
+        "de": "Kitakami-Kulturzentrum",
+        "en": "Kitakami Hall"
+      },
+      "Kitakami Road": {
+        "fr": "Route de Septentria",
+        "de": "Kitakami-Straße",
+        "en": "Kitakami Road"
+      },
+      "Kitakami Wilds": {
+        "fr": "Terres Vierges de Septentria",
+        "de": "Wildnis von Kitakami",
+        "en": "Kitakami Wilds"
+      },
+      "League Club Room": {
+        "fr": "Club de la Ligue",
+        "de": "Liga-AG Raum",
+        "en": "League Club Room"
+      },
+      "Levincia": {
+        "fr": "Levalendura",
+        "de": "Fermanca City",
+        "en": "Levincia"
+      },
+      "Los Platos": {
+        "fr": "Plato Real",
+        "de": "Pratolido",
+        "en": "Los Platos"
+      },
+      "Loyalty Plaza": {
+        "fr": "Parc Adorami",
+        "de": "Gefährten-Platz",
+        "en": "Loyalty Plaza"
+      },
+      "Medali": {
+        "fr": "Mezclamora",
+        "de": "Mesclarra",
+        "en": "Medali"
+      },
+      "Mesagoza": {
+        "fr": "Mesaledo",
+        "de": "Mesalona City",
+        "en": "Mesagoza"
+      },
+      "Montenevera": {
+        "fr": "Frigao",
+        "de": "Frigomonta",
+        "en": "Montenevera"
+      },
+      "Mossfell Confluence": {
+        "fr": "Rives du Confluent",
+        "de": "Mündungsufer",
+        "en": "Mossfell Confluence"
+      },
+      "Mossui Town": {
+        "fr": "Jaderaude",
+        "de": "Midoriya",
+        "en": "Mossui Town"
+      },
+      "Naranja Academy": {
+        "fr": "Académie Orange",
+        "de": "Orangen-Akademie",
+        "en": "Naranja Academy"
+      },
+      "Navi Squad's Base": {
+        "fr": "Repaire du Groupe Tsih",
+        "de": "Versteck der Tsih-Bande",
+        "en": "Navi Squad's Base"
+      },
+      "North Paldean Sea": {
+        "fr": "Mer du Nord de Paldea",
+        "de": "Nördliches Meer von Paldea",
+        "en": "North Paldean Sea"
+      },
+      "North Province (Area One)": {
+        "fr": "Zone Nord n° 1",
+        "de": "Nördliche Zone 1",
+        "en": "North Province (Area One)"
+      },
+      "North Province (Area Three)": {
+        "fr": "Zone Nord n° 3",
+        "de": "Nördliche Zone 3",
+        "en": "North Province (Area Three)"
+      },
+      "North Province (Area Two)": {
+        "fr": "Zone Nord n° 2",
+        "de": "Nördliche Zone 2",
+        "en": "North Province (Area Two)"
+      },
+      "Oni Mountain": {
+        "fr": "Mont Strueux",
+        "de": "Oniyama",
+        "en": "Oni Mountain"
+      },
+      "Oni's Maw": {
+        "fr": "Gueule du Monstre",
+        "de": "Rachen des Oni",
+        "en": "Oni's Maw"
+      },
+      "Paradise Barrens": {
+        "fr": "Lande de la Quiétude",
+        "de": "Paradiesebene",
+        "en": "Paradise Barrens"
+      },
+      "Poco Path": {
+        "fr": "Route de Cuchalaga",
+        "de": "Cucharico-Pfad",
+        "en": "Poco Path"
+      },
+      "Pokémon League": {
+        "fr": "Ligue Pokémon",
+        "de": "Pokémon-Liga",
+        "en": "Pokémon League"
+      },
+      "Polar Biome": {
+        "fr": "Zone Polaire",
+        "de": "Polar-Areal",
+        "en": "Polar Biome"
+      },
+      "Polar Plaza": {
+        "fr": "Poste Polaire",
+        "de": "Polar-Platz",
+        "en": "Polar Plaza"
+      },
+      "Porto Marinada": {
+        "fr": "Porto Marinada",
+        "de": "Puerto Marinedo",
+        "en": "Porto Marinada"
+      },
+      "Reveler's Road": {
+        "fr": "Sentier de la Liesse",
+        "de": "Pfad des Tanzes",
+        "en": "Reveler's Road"
+      },
+      "Ruchbah Squad's Base": {
+        "fr": "Repaire du Groupe Ruchbah",
+        "de": "Versteck der Rukbat-Bande",
+        "en": "Ruchbah Squad's Base"
+      },
+      "Savanna Biome": {
+        "fr": "Zone Savane",
+        "de": "Savannen-Areal",
+        "en": "Savanna Biome"
+      },
+      "Savanna Plaza": {
+        "fr": "Poste Savane",
+        "de": "Savannen-Platz",
+        "en": "Savanna Plaza"
+      },
+      "Schedar Squad's Base": {
+        "fr": "Repaire du Groupe Schedar",
+        "de": "Versteck der Schedir-Bande",
+        "en": "Schedar Squad's Base"
+      },
+      "Segin Squad's Base": {
+        "fr": "Repaire du Groupe Segin",
+        "de": "Versteck der Segin-Bande",
+        "en": "Segin Squad's Base"
+      },
+      "Socarrat Trail": {
+        "fr": "Forêt Toastée",
+        "de": "Knusperwaldweg",
+        "en": "Socarrat Trail"
+      },
+      "South Paldean Sea": {
+        "fr": "Mer du Sud de Paldea",
+        "de": "Südliches Meer von Paldea",
+        "en": "South Paldean Sea"
+      },
+      "South Province (Area Five)": {
+        "fr": "Zone Sud n° 5",
+        "de": "Südliche Zone 5",
+        "en": "South Province (Area Five)"
+      },
+      "South Province (Area Four)": {
+        "fr": "Zone Sud n° 4",
+        "de": "Südliche Zone 4",
+        "en": "South Province (Area Four)"
+      },
+      "South Province (Area One)": {
+        "fr": "Zone Sud n° 1",
+        "de": "Südliche Zone 1",
+        "en": "South Province (Area One)"
+      },
+      "South Province (Area Six)": {
+        "fr": "Zone Sud n°6",
+        "de": "Südliche Zone 6",
+        "en": "South Province (Area Six)"
+      },
+      "South Province (Area Three)": {
+        "fr": "Zone Sud n° 3",
+        "de": "Südliche Zone 3",
+        "en": "South Province (Area Three)"
+      },
+      "South Province (Area Two)": {
+        "fr": "Zone Sud n° 2",
+        "de": "Südliche Zone 2",
+        "en": "South Province (Area Two)"
+      },
+      "Tagtree Thicket": {
+        "fr": "Bosquet Tagué",
+        "de": "Schmierhain",
+        "en": "Tagtree Thicket"
+      },
+      "Timeless Woods": {
+        "fr": "Forêt Ternelle",
+        "de": "Immerwald",
+        "en": "Timeless Woods"
+      },
+      "Torchlit Labyrinth": {
+        "fr": "Dédale des Torches",
+        "de": "Fackellabyrinth",
+        "en": "Torchlit Labyrinth"
+      },
+      "Uva Academy": {
+        "fr": "Académie Raisin",
+        "de": "Trauben-Akademie",
+        "en": "Uva Academy"
+      },
+      "West Paldean Sea": {
+        "fr": "Mer de l'Ouest de Paldea",
+        "de": "Westliches Meer von Paldea",
+        "en": "West Paldean Sea"
+      },
+      "West Province (Area One)": {
+        "fr": "Zone Ouest n° 1",
+        "de": "Westliche Zone 1",
+        "en": "West Province (Area One)"
+      },
+      "West Province (Area Three)": {
+        "fr": "Zone Ouest n° 3",
+        "de": "Westliche Zone 3",
+        "en": "West Province (Area Three)"
+      },
+      "West Province (Area Two)": {
+        "fr": "Zone Ouest n° 2",
+        "de": "Westliche Zone 2",
+        "en": "West Province (Area Two)"
+      },
+      "Wistful Fields": {
+        "fr": "Plaine des Glycines",
+        "de": "Wisterienfelder",
+        "en": "Wistful Fields"
+      },
+      "Zapapico": {
+        "fr": "Pinchoria",
+        "de": "Pinchores",
+        "en": "Zapapico"
+      },
+      "Zero Lab": {
+        "fr": "Laboratoire Zéro",
+        "de": "Labor Null",
+        "en": "Zero Lab"
+      }
+    }
+  }
+}

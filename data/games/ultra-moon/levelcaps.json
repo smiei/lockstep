@@ -1,0 +1,1028 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Tali",
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "location": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Tali",
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "location": {
+      "de": "Iki Town Festival",
+      "en": "Iki Town Festival",
+      "fr": "Iki Town Festival",
+      "es": "Iki Town Festival",
+      "it": "Iki Town Festival"
+    },
+    "badge": null,
+    "max_level": 7
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Elima",
+      "en": "Ilima",
+      "fr": "Althéo",
+      "es": "Liam",
+      "it": "Liam"
+    },
+    "location": {
+      "de": "Hauholi City",
+      "en": "Hau’oli City",
+      "fr": "Ekaeka",
+      "es": "Ciudad Hauoli",
+      "it": "Hau’oli"
+    },
+    "badge": null,
+    "max_level": 11
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Prüfung von Elima",
+      "en": "Ilima's Trial",
+      "fr": "Épreuve de Althéo",
+      "es": "Prueba de Liam",
+      "it": "Prova di Liam"
+    },
+    "location": {
+      "de": "Totem trial",
+      "en": "Totem trial",
+      "fr": "Totem trial",
+      "es": "Totem trial",
+      "it": "Totem trial"
+    },
+    "badge": null,
+    "max_level": 12
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Mirin",
+      "en": "Soliera",
+      "fr": "Solie",
+      "es": "Miria",
+      "it": "Mirin"
+    },
+    "location": {
+      "de": "Meereshöhle",
+      "en": "Seaward Cave",
+      "fr": "Grotte Verlamer",
+      "es": "Gruta Unemar",
+      "it": "Grotta Pratomare"
+    },
+    "badge": null,
+    "max_level": 13
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Tali",
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "location": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "badge": null,
+    "max_level": 13
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Hala",
+      "en": "Island Kahuna Hala",
+      "fr": "Pectorius",
+      "es": "Kaudan",
+      "it": "Hala"
+    },
+    "location": {
+      "de": "Lili’i",
+      "en": "Iki Town",
+      "fr": "Lili’i",
+      "es": "Pueblo Lilii",
+      "it": "Lili"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Dexio",
+      "en": "Dexio",
+      "fr": "Dexio",
+      "es": "Dexio",
+      "it": "Dexio"
+    },
+    "location": {
+      "de": "Kantai City",
+      "en": "Heahea City",
+      "fr": "Ho’ohale",
+      "es": "Ciudad Kantai",
+      "it": "Kantai"
+    },
+    "badge": null,
+    "max_level": 15
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Tali",
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "location": {
+      "de": "Ohana",
+      "en": "Paniola Town",
+      "fr": "Ohana",
+      "es": "Pueblo Ohana",
+      "it": "Ohana"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Gladio",
+      "en": "Gladion",
+      "fr": "Gladio",
+      "es": "Gladio",
+      "it": "Iridio"
+    },
+    "location": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "badge": null,
+    "max_level": 18
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Prüfung von Tracy",
+      "en": "Lana's Trial",
+      "fr": "Épreuve de Néphie",
+      "es": "Prueba de Nereida",
+      "it": "Prova di Suiren"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Mirin",
+      "en": "Soliera",
+      "fr": "Solie",
+      "es": "Miria",
+      "it": "Mirin"
+    },
+    "location": {
+      "de": "Ohana-Farm",
+      "en": "Paniola Ranch",
+      "fr": "Ranch Ohana",
+      "es": "Rancho Ohana",
+      "it": "Fattoria Ohana"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Prüfung von Kiawe",
+      "en": "Kiawe's Trial",
+      "fr": "Épreuve de Kiawe",
+      "es": "Prueba de Kiawe",
+      "it": "Prova di Kawe"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 22
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Prüfung von Maho",
+      "en": "Mallow's Trial",
+      "fr": "Épreuve de Barbara",
+      "es": "Prueba de Lulú",
+      "it": "Prova di Ibis"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 24
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Fran",
+      "en": "Plumeria",
+      "fr": "Apocyne",
+      "es": "Francine",
+      "it": "Plumeria"
+    },
+    "location": {
+      "de": "Akala-Küstenstreifen",
+      "en": "Akala Outskirts",
+      "fr": "Côte Reculée d’Akala",
+      "es": "Afueras de Akala",
+      "it": "Punta Akala"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Mayla",
+      "en": "Island Kahuna Olivia",
+      "fr": "Alyxia",
+      "es": "Mayla",
+      "it": "Alyxia"
+    },
+    "location": {
+      "de": "Ruinen des Lebens",
+      "en": "Ruins of Life",
+      "fr": "Ruines de l’Éveil",
+      "es": "Ruinas de la Vida",
+      "it": "Tempio della Vita"
+    },
+    "badge": null,
+    "max_level": 28
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Tali",
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "location": {
+      "de": "Malihe City",
+      "en": "Malie City",
+      "fr": "Malié",
+      "es": "Ciudad Malíe",
+      "it": "Malie"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Ryuki",
+      "en": "Ryuki",
+      "fr": "Solane",
+      "es": "Olano",
+      "it": "Morel"
+    },
+    "location": {
+      "de": "Malie City Kantonian Gym",
+      "en": "Malie City Kantonian Gym",
+      "fr": "Malie City Kantonian Gym",
+      "es": "Malie City Kantonian Gym",
+      "it": "Malie City Kantonian Gym"
+    },
+    "badge": null,
+    "max_level": 29
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Sophocles' Trial",
+      "en": "Sophocles' Trial",
+      "fr": "Sophocles' Trial",
+      "es": "Sophocles' Trial",
+      "it": "Sophocles' Trial"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Bromley",
+      "en": "Guzma",
+      "fr": "Guzma",
+      "es": "Guzmán",
+      "it": "Guzman"
+    },
+    "location": {
+      "de": "Malihe-Ziergarten",
+      "en": "Malie Garden",
+      "fr": "Parc de Malié",
+      "es": "Parque de Malíe",
+      "it": "Giardino di Malie"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Prüfung von Lola",
+      "en": "Acerola's Trial",
+      "fr": "Épreuve de Margie",
+      "es": "Prueba de Zarala",
+      "it": "Prova di Malpi"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 35
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Fran",
+      "en": "Plumeria",
+      "fr": "Apocyne",
+      "es": "Francine",
+      "it": "Plumeria"
+    },
+    "location": {
+      "de": "Route 15 (Wasserweg)",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "badge": null,
+    "max_level": 38
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Bromley",
+      "en": "Guzma",
+      "fr": "Guzma",
+      "es": "Guzmán",
+      "it": "Guzman"
+    },
+    "location": {
+      "de": "Lottervilla",
+      "en": "Shady House",
+      "fr": "Manoir Chelou",
+      "es": "Mansión Misteriosa",
+      "it": "Villa Losca"
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Gladio",
+      "en": "Gladion",
+      "fr": "Gladio",
+      "es": "Gladio",
+      "it": "Iridio"
+    },
+    "location": {
+      "de": "Aether House",
+      "en": "Aether House",
+      "fr": "Aether House",
+      "es": "Aether House",
+      "it": "Aether House"
+    },
+    "badge": null,
+    "max_level": 43
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Yasu",
+      "en": "Island Kahuna Nanu",
+      "fr": "Danh",
+      "es": "Denio",
+      "it": "Augusto"
+    },
+    "location": {
+      "de": "Malihe City",
+      "en": "Malie City",
+      "fr": "Malié",
+      "es": "Ciudad Malíe",
+      "it": "Malie"
+    },
+    "badge": null,
+    "max_level": 44
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Fabian",
+      "en": "Faba",
+      "fr": "Saubohne",
+      "es": "Fabio",
+      "it": "Vicio"
+    },
+    "location": {
+      "de": "Æther-Paradies",
+      "en": "Aether Paradise",
+      "fr": "Paradis Æther",
+      "es": "Paraíso Æther",
+      "it": "Æther Paradise"
+    },
+    "badge": null,
+    "max_level": 43
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Fabian & Angestellter",
+      "en": "Faba & Employee",
+      "fr": "Saubohne & Employé",
+      "es": "Fabio & Empleado",
+      "it": "Vicio & Impiegato"
+    },
+    "location": {
+      "de": "Æther-Paradies",
+      "en": "Aether Paradise",
+      "fr": "Paradis Æther",
+      "es": "Paraíso Æther",
+      "it": "Æther Paradise"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Bromley",
+      "en": "Guzma",
+      "fr": "Guzma",
+      "es": "Guzmán",
+      "it": "Guzman"
+    },
+    "location": {
+      "de": "Æther-Paradies",
+      "en": "Aether Paradise",
+      "fr": "Paradis Æther",
+      "es": "Paraíso Æther",
+      "it": "Æther Paradise"
+    },
+    "badge": null,
+    "max_level": 45
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Mirin",
+      "en": "Soliera",
+      "fr": "Solie",
+      "es": "Miria",
+      "it": "Mirin"
+    },
+    "location": {
+      "de": "Æther-Paradies",
+      "en": "Aether Paradise",
+      "fr": "Paradis Æther",
+      "es": "Paraíso Æther",
+      "it": "Æther Paradise"
+    },
+    "badge": null,
+    "max_level": 47
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Samantha",
+      "en": "Lusamine",
+      "fr": "Elsa-Mina",
+      "es": "Samina",
+      "it": "Samina"
+    },
+    "location": {
+      "de": "Æther-Paradies",
+      "en": "Aether Paradise",
+      "fr": "Paradis Æther",
+      "es": "Paraíso Æther",
+      "it": "Æther Paradise"
+    },
+    "badge": null,
+    "max_level": 47
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Mirin",
+      "en": "Soliera",
+      "fr": "Solie",
+      "es": "Miria",
+      "it": "Mirin"
+    },
+    "location": {
+      "de": "Canyon von Poni",
+      "en": "Vast Poni Canyon",
+      "fr": "Grand Canyon de Poni",
+      "es": "Cañón de Poni",
+      "it": "Canyon di Poni"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Kommo-o's Trial",
+      "en": "Kommo-o's Trial",
+      "fr": "Kommo-o's Trial",
+      "es": "Kommo-o's Trial",
+      "it": "Kommo-o's Trial"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Necrozma",
+      "en": "Necrozma",
+      "fr": "Necrozma",
+      "es": "Necrozma",
+      "it": "Necrozma"
+    },
+    "location": {
+      "de": "Megalopolis",
+      "en": "Megalopolis",
+      "fr": "Megalopolis",
+      "es": "Megalopolis",
+      "it": "Megalopolis"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Matsurika",
+      "en": "Captain Mina",
+      "fr": "Oléa",
+      "es": "Rika",
+      "it": "Rika"
+    },
+    "location": {
+      "de": "Dorf des Seevolkes",
+      "en": "Seafolk Village",
+      "fr": "Village Flottant",
+      "es": "Aldea Marina",
+      "it": "Villaggio del Mare"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Elima",
+      "en": "Captain Ilima",
+      "fr": "Althéo",
+      "es": "Liam",
+      "it": "Liam"
+    },
+    "location": {
+      "de": "Hau'oli Cemetry",
+      "en": "Hau'oli Cemetry",
+      "fr": "Hau'oli Cemetry",
+      "es": "Hau'oli Cemetry",
+      "it": "Hau'oli Cemetry"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Maho",
+      "en": "Captain Mallow",
+      "fr": "Barbara",
+      "es": "Lulú",
+      "it": "Ibis"
+    },
+    "location": {
+      "de": "Schattendschungel",
+      "en": "Lush Jungle",
+      "fr": "Jungle Sombrefeuille",
+      "es": "Jungla Umbría",
+      "it": "Giungla Ombrosa"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Kiawe",
+      "en": "Captain Kiawe",
+      "fr": "Kiawe",
+      "es": "Kiawe",
+      "it": "Kawe"
+    },
+    "location": {
+      "de": "Wela-Vulkanpark",
+      "en": "Wela Volcano Park",
+      "fr": "Parc Volcanique",
+      "es": "Área Volcánica Wela",
+      "it": "Parco Vulcano Wela"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Chrys",
+      "en": "Captain Sophocles",
+      "fr": "Chrys",
+      "es": "Chris",
+      "it": "Chrys"
+    },
+    "location": {
+      "de": "Hokulani-Sternwarte",
+      "en": "Hokulani Observatory",
+      "fr": "Observatoire",
+      "es": "Observ. de Hokulani",
+      "it": "Osservatorio"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Yasu",
+      "en": "Island Kahuna Nanu",
+      "fr": "Danh",
+      "es": "Denio",
+      "it": "Augusto"
+    },
+    "location": {
+      "de": "Aether House",
+      "en": "Aether House",
+      "fr": "Aether House",
+      "es": "Aether House",
+      "it": "Aether House"
+    },
+    "badge": null,
+    "max_level": 52
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Prüfung von Matsurika",
+      "en": "Mina's Trial",
+      "fr": "Épreuve de Oléa",
+      "es": "Prueba de Rika",
+      "it": "Prova di Rika"
+    },
+    "location": {
+      "de": "Totem Trial",
+      "en": "Totem Trial",
+      "fr": "Totem Trial",
+      "es": "Totem Trial",
+      "it": "Totem Trial"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Hapu’u",
+      "en": "Island Kahuna Hapu",
+      "fr": "Paulie",
+      "es": "Hela",
+      "it": "Hapi"
+    },
+    "location": {
+      "de": "Kokowei-Eiland",
+      "en": "Exeggutor Island",
+      "fr": "Île Noadkoko",
+      "es": "Isla Exeggutor",
+      "it": "Isola Exeggutor"
+    },
+    "badge": null,
+    "max_level": 54
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Gladio",
+      "en": "Gladion",
+      "fr": "Gladio",
+      "es": "Gladio",
+      "it": "Iridio"
+    },
+    "location": {
+      "de": "Mount Lanakila",
+      "en": "Mount Lanakila",
+      "fr": "Mont Lanakila",
+      "es": "Monte Lanakila",
+      "it": "Monte Lanakila"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Marlon",
+      "en": "Molayne",
+      "fr": "Molène",
+      "es": "Lario",
+      "it": "Tapso"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Mayla",
+      "en": "Olivia",
+      "fr": "Alyxia",
+      "es": "Mayla",
+      "it": "Alyxia"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Lola",
+      "en": "Acerola",
+      "fr": "Margie",
+      "es": "Zarala",
+      "it": "Malpi"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Kahili",
+      "en": "Kahili",
+      "fr": "Kahili",
+      "es": "Kahili",
+      "it": "Kahili"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Tali",
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Fabian & Angestellter",
+      "en": "Faba & Employee",
+      "fr": "Saubohne & Employé",
+      "es": "Fabio & Empleado",
+      "it": "Vicio & Impiegato"
+    },
+    "location": {
+      "de": "Æther-Paradies",
+      "en": "Aether Paradise",
+      "fr": "Paradis Æther",
+      "es": "Paraíso Æther",
+      "it": "Æther Paradise"
+    },
+    "badge": null,
+    "max_level": 63
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Marc",
+      "en": "Maxie",
+      "fr": "Max",
+      "es": "Magno",
+      "it": "Max"
+    },
+    "location": {
+      "de": "Rocket-Schloss",
+      "en": "Team Rocket's Castle",
+      "fr": "Château Rocket",
+      "es": "Team Rocket's Castle",
+      "it": "Team Rocket's Castle"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Adrian",
+      "en": "Archie",
+      "fr": "Arthur",
+      "es": "Aquiles",
+      "it": "Ivan"
+    },
+    "location": {
+      "de": "Rocket-Schloss",
+      "en": "Team Rocket's Castle",
+      "fr": "Château Rocket",
+      "es": "Team Rocket's Castle",
+      "it": "Team Rocket's Castle"
+    },
+    "badge": null,
+    "max_level": 66
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Zyrus",
+      "en": "Cyrus",
+      "fr": "Hélio",
+      "es": "Helio",
+      "it": "Cyrus"
+    },
+    "location": {
+      "de": "Rocket-Schloss",
+      "en": "Team Rocket's Castle",
+      "fr": "Château Rocket",
+      "es": "Team Rocket's Castle",
+      "it": "Team Rocket's Castle"
+    },
+    "badge": null,
+    "max_level": 67
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Flordelis",
+      "en": "Lysandre",
+      "fr": "Lysandre",
+      "es": "Lysson",
+      "it": "Elisio"
+    },
+    "location": {
+      "de": "Rocket-Schloss",
+      "en": "Team Rocket's Castle",
+      "fr": "Château Rocket",
+      "es": "Team Rocket's Castle",
+      "it": "Team Rocket's Castle"
+    },
+    "badge": null,
+    "max_level": 67
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "G-Cis",
+      "en": "Ghetsis",
+      "fr": "Ghetis",
+      "es": "Ghechis",
+      "it": "Ghecis"
+    },
+    "location": {
+      "de": "Rocket-Schloss",
+      "en": "Team Rocket's Castle",
+      "fr": "Château Rocket",
+      "es": "Team Rocket's Castle",
+      "it": "Team Rocket's Castle"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Giovanni",
+      "en": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "location": {
+      "de": "Rocket-Schloss",
+      "en": "Team Rocket's Castle",
+      "fr": "Château Rocket",
+      "es": "Team Rocket's Castle",
+      "it": "Team Rocket's Castle"
+    },
+    "badge": null,
+    "max_level": 70
+  }
+]

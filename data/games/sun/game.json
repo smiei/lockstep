@@ -1,0 +1,20 @@
+{
+  "id": "sun",
+  "sort": 19,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 7,
+  "dexLimit": 802,
+  "spriteSet": "modern",
+  "versionGroup": "sun-moon",
+  "trainerSet": "sun-moon",
+  "regionalForms": true,
+  "names": {
+    "de": "Sonne",
+    "en": "Sun",
+    "fr": "Soleil",
+    "es": "Sol",
+    "it": "Sole"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (sun)"
+}

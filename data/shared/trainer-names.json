@@ -1,0 +1,1018 @@
+{
+  "source": "Bulbapedia character pages, Names table (https://bulbapedia.bulbagarden.net)",
+  "generatedAt": "2026-10-31T23:59:29.219Z",
+  "names": {
+    "Aarune": {
+      "de": "Johnson",
+      "es": "Perico",
+      "fr": "Millepertuis",
+      "it": "Iperio"
+    },
+    "Acerola": {
+      "de": "Lola",
+      "es": "Zarala",
+      "fr": "Margie",
+      "it": "Malpi"
+    },
+    "Agatha": {
+      "fr": "Agatha",
+      "es": "Agatha",
+      "it": "Agatha",
+      "de": "Agathe"
+    },
+    "Alexa": {
+      "de": "Alba",
+      "fr": "Alexia",
+      "es": "Alexia",
+      "it": "Alexia"
+    },
+    "Aliana": {
+      "de": "Aliana",
+      "es": "Amapola",
+      "fr": "Ancolie",
+      "it": "Akebia"
+    },
+    "Allister": {
+      "de": "Nio",
+      "fr": "Alistair",
+      "es": "Alistair",
+      "it": "Onion"
+    },
+    "Aqua Admin Matt": {
+      "de": "Wolfgang",
+      "es": "Matías{{sup/3|RS}}{{sup/6|ORAS}} Tolo{{sup/3|E}}",
+      "fr": "Matthieu",
+      "it": "Alan"
+    },
+    "Arcade Star Dahlia": {
+      "de": "Dahlia",
+      "fr": "Dahlia",
+      "es": "Delila",
+      "it": "Dalia"
+    },
+    "Archer": {
+      "it": "Archer",
+      "de": "Atlas",
+      "es": "Atlas",
+      "fr": "Amos"
+    },
+    "Archie": {
+      "de": "Adrian",
+      "es": "Aquiles",
+      "fr": "Arthur",
+      "it": "Ivan"
+    },
+    "Ariana": {
+      "de": "Athena",
+      "es": "Atenea",
+      "fr": "Ariane",
+      "it": "Atena"
+    },
+    "Arven": {
+      "de": "Pepper",
+      "fr": "Pepper",
+      "es": "Damián",
+      "it": "Pepe"
+    },
+    "Atticus": {
+      "de": "Shugi",
+      "es": "Henzo",
+      "it": "Henzo",
+      "fr": "Erio"
+    },
+    "Avery": {
+      "de": "Saverio",
+      "es": "Dreo",
+      "fr": "Saturnin",
+      "it": "Savory"
+    },
+    "Bea": {
+      "de": "Saida",
+      "es": "Judith",
+      "fr": "Faïza",
+      "it": "Fabia"
+    },
+    "Bede": {
+      "de": "Betys",
+      "es": "Berto",
+      "fr": "Travis",
+      "it": "Beet"
+    },
+    "Benga": {
+      "de": "Magno",
+      "es": "Guayo",
+      "fr": "Guajava",
+      "it": "Fedio"
+    },
+    "Blaine": {
+      "es": "Blaine",
+      "it": "Blaine",
+      "de": "Pyro",
+      "fr": "Auguste"
+    },
+    "Brassius": {
+      "it": "Brassius",
+      "de": "Colzo",
+      "es": "Brais",
+      "fr": "Colza"
+    },
+    "Brawly": {
+      "de": "Kamillo",
+      "es": "Marcial",
+      "fr": "Bastien",
+      "it": "Rudi"
+    },
+    "Brendan": {
+      "de": "Brix",
+      "es": "Bruno",
+      "fr": "Brice",
+      "it": "Brendon"
+    },
+    "Brock": {
+      "es": "Brock",
+      "it": "Brock",
+      "de": "Rocko",
+      "fr": "Pierre"
+    },
+    "Bruno": {
+      "de": "Bruno",
+      "es": "Bruno",
+      "it": "Bruno",
+      "fr": "Aldo"
+    },
+    "Bryony": {
+      "de": "Begonia",
+      "es": "Begonia",
+      "fr": "Brasénie",
+      "it": "Bromelia"
+    },
+    "Bugsy": {
+      "de": "Kai",
+      "es": "Antón",
+      "fr": "Hector",
+      "it": "Raffaello"
+    },
+    "Castle Valet Darach": {
+      "de": "Perenus",
+      "es": "Kokuran",
+      "fr": "Parsley",
+      "it": "Paride"
+    },
+    "Celosia": {
+      "de": "Calluna",
+      "es": "Caléndula",
+      "fr": "Cyane",
+      "it": "Cytisia"
+    },
+    "Charles": {
+      "de": "Charles",
+      "it": "Charles",
+      "fr": "Raphaël",
+      "es": "Carlos"
+    },
+    "Cheren": {
+      "de": "Cheren",
+      "es": "Cheren",
+      "fr": "Tcheren",
+      "it": "Komor"
+    },
+    "Cheryl": {
+      "de": "Raissa",
+      "es": "Malta",
+      "fr": "Sara",
+      "it": "Demetra"
+    },
+    "Chuck": {
+      "de": "Hartwig",
+      "es": "Aníbal",
+      "fr": "Chuck",
+      "it": "Furio"
+    },
+    "Clair": {
+      "de": "Sandra",
+      "fr": "Sandra",
+      "it": "Sandra",
+      "es": "Débora"
+    },
+    "Clemont": {
+      "de": "Citro",
+      "fr": "Lem",
+      "es": "Lem",
+      "it": "Lem"
+    },
+    "Clive": {
+      "de": "Clavel",
+      "fr": "Clavel",
+      "es": "Clavel",
+      "it": "Clavel"
+    },
+    "Colress": {
+      "de": "Achromas",
+      "es": "Acromo",
+      "fr": "Nikolaï",
+      "it": "Acromio"
+    },
+    "Courtney": {
+      "de": "Jördis",
+      "es": "Carola",
+      "fr": "Courtney",
+      "it": "Rossella"
+    },
+    "Cynthia": {
+      "de": "Cynthia",
+      "fr": "Cynthia",
+      "es": "Cintia",
+      "it": "Camilla"
+    },
+    "Cyrus": {
+      "it": "Cyrus",
+      "de": "Zyrus",
+      "es": "Helio",
+      "fr": "Hélio"
+    },
+    "Dexio": {
+      "de": "Dexio",
+      "fr": "Dexio",
+      "es": "Dexio",
+      "it": "Dexio"
+    },
+    "Diantha": {
+      "de": "Diantha",
+      "es": "Diantha",
+      "it": "Diantha",
+      "fr": "Dianthéa"
+    },
+    "Drasna": {
+      "de": "Dracena",
+      "es": "Drácena",
+      "fr": "Dracéna",
+      "it": "Lilia"
+    },
+    "Dulse": {
+      "de": "Darus",
+      "it": "Darus",
+      "es": "Darius",
+      "fr": "Rhody"
+    },
+    "Emmet": {
+      "de": "Her",
+      "es": "Caril",
+      "fr": "Chamsin",
+      "it": "Torn"
+    },
+    "Eri": {
+      "de": "Rioba",
+      "es": "Erin",
+      "fr": "Nèflie",
+      "it": "Nespera"
+    },
+    "Erika": {
+      "de": "Erika",
+      "fr": "Erika",
+      "es": "Erika",
+      "it": "Erika"
+    },
+    "Eusine": {
+      "es": "Eusine",
+      "de": "Eusin",
+      "fr": "Eusine",
+      "it": "Eugenius"
+    },
+    "Faba": {
+      "de": "Fabian",
+      "es": "Fabio",
+      "fr": "Saubohne",
+      "it": "Vicio"
+    },
+    "Falkner": {
+      "de": "Falk",
+      "es": "Pegaso",
+      "fr": "Albert",
+      "it": "Valerio"
+    },
+    "Flannery": {
+      "de": "Flavia",
+      "es": "Candela",
+      "fr": "Adriane",
+      "it": "Fiammetta"
+    },
+    "Gary": {
+      "es": "Gary Oak",
+      "it": "Gary Oak",
+      "de": "Gary Eich",
+      "fr": "Régis Chen"
+    },
+    "Geeta": {
+      "de": "Sagaria",
+      "es": "Ságita",
+      "fr": "Alisma",
+      "it": "Alisma"
+    },
+    "Ghetsis": {
+      "de": "G-Cis",
+      "fr": "Ghetis",
+      "es": "Ghechis",
+      "it": "Ghecis"
+    },
+    "Giacomo": {
+      "de": "Pinio",
+      "es": "Anán",
+      "fr": "Brome",
+      "it": "Romelio"
+    },
+    "Giovanni": {
+      "de": "Giovanni",
+      "fr": "Giovanni",
+      "es": "Giovanni",
+      "it": "Giovanni"
+    },
+    "Gladion": {
+      "de": "Gladio",
+      "fr": "Gladio",
+      "es": "Gladio",
+      "it": "Iridio"
+    },
+    "Gordie": {
+      "de": "Mac",
+      "es": "Morris",
+      "fr": "Chaz",
+      "it": "Milo"
+    },
+    "Grant": {
+      "de": "Lino",
+      "fr": "Lino",
+      "es": "Lino",
+      "it": "Lino"
+    },
+    "Grusha": {
+      "de": "Grusha",
+      "fr": "Grusha",
+      "es": "Grusha",
+      "it": "Grusha"
+    },
+    "Guzma": {
+      "fr": "Guzma",
+      "de": "Bromley",
+      "es": "Guzmán",
+      "it": "Guzman"
+    },
+    "Hala": {
+      "de": "Hala",
+      "it": "Hala",
+      "es": "Kaudan",
+      "fr": "Pectorius"
+    },
+    "Hapu": {
+      "de": "Hapu’u",
+      "es": "Hela",
+      "fr": "Paulie",
+      "it": "Hapi"
+    },
+    "Hassel": {
+      "de": "Sinius",
+      "es": "Hesperio",
+      "fr": "Hassa",
+      "it": "Oranzio"
+    },
+    "Hau": {
+      "it": "Hau",
+      "de": "Tali",
+      "es": "Tilo",
+      "fr": "Tili"
+    },
+    "Hop": {
+      "de": "Hop",
+      "it": "Hop",
+      "es": "Paul",
+      "fr": "Nabil"
+    },
+    "Hugh": {
+      "de": "Matisse",
+      "es": "Matís",
+      "fr": "Matis",
+      "it": "Toni"
+    },
+    "Ilima": {
+      "de": "Elima",
+      "es": "Liam",
+      "it": "Liam",
+      "fr": "Althéo"
+    },
+    "Ingo": {
+      "de": "Hin",
+      "es": "Fero",
+      "fr": "Chammal",
+      "it": "Andy"
+    },
+    "Iono": {
+      "de": "Enigmara",
+      "es": "e-Nigma",
+      "fr": "Mashynn",
+      "it": "Kissara"
+    },
+    "Iris": {
+      "fr": "Iris",
+      "es": "Iris",
+      "it": "Iris",
+      "de": "Lilia"
+    },
+    "Ivan": {
+      "de": "Ivan",
+      "it": "Ivan"
+    },
+    "Jasmine": {
+      "fr": "Jasmine",
+      "it": "Jasmine",
+      "de": "Jasmin",
+      "es": "Yasmina"
+    },
+    "Juan": {
+      "de": "Juan",
+      "fr": "Juan",
+      "es": "Galano",
+      "it": "Rodolfo"
+    },
+    "Jupiter": {
+      "de": "Jupiter",
+      "fr": "Jupiter",
+      "es": "Ceres",
+      "it": "Giovia"
+    },
+    "Kabu": {
+      "de": "Kabu",
+      "fr": "Kabu",
+      "it": "Kabu",
+      "es": "Naboru"
+    },
+    "Kahili": {
+      "de": "Kahili",
+      "fr": "Kahili",
+      "es": "Kahili",
+      "it": "Kahili"
+    },
+    "Katy": {
+      "de": "Ronah",
+      "es": "Araceli",
+      "fr": "Éra",
+      "it": "Aceria"
+    },
+    "Kiawe": {
+      "de": "Kiawe",
+      "fr": "Kiawe",
+      "es": "Kiawe",
+      "it": "Kawe"
+    },
+    "Klara": {
+      "de": "Sophora",
+      "fr": "Sophora",
+      "es": "Sófora",
+      "it": "Sofora"
+    },
+    "Kofu": {
+      "de": "Kombu",
+      "fr": "Kombu",
+      "es": "Fuco",
+      "it": "Algaro"
+    },
+    "Koga": {
+      "de": "Koga",
+      "fr": "Koga",
+      "es": "Koga",
+      "it": "Koga"
+    },
+    "Korrina": {
+      "de": "Connie",
+      "es": "Corelia",
+      "fr": "Cornélia",
+      "it": "Ornella"
+    },
+    "Kris": {
+      "de": "Krista",
+      "es": "Cristi",
+      "fr": "Christy",
+      "it": "Kristy"
+    },
+    "Kukui": {
+      "de": "Professor Kukui",
+      "it": "Professor Kukui",
+      "es": "Profesor Kukui",
+      "fr": "Professeur Euphorbe"
+    },
+    "Kurt": {
+      "de": "Kurt",
+      "es": "César",
+      "fr": "Fargas",
+      "it": "Franz"
+    },
+    "Lana": {
+      "de": "Tracy",
+      "es": "Nereida",
+      "fr": "Néphie",
+      "it": "Suiren"
+    },
+    "Lance": {
+      "es": "Lance",
+      "it": "Lance",
+      "de": "Siegfried",
+      "fr": "Peter"
+    },
+    "Larry": {
+      "de": "Aoki",
+      "es": "Laureano",
+      "fr": "Okuba",
+      "it": "Ubaldo"
+    },
+    "Leon": {
+      "de": "Delion",
+      "es": "Lionel",
+      "fr": "Tarak",
+      "it": "Dandel"
+    },
+    "Lorelei": {
+      "de": "Lorelei",
+      "es": "Lorelei",
+      "it": "Lorelei",
+      "fr": "Olga"
+    },
+    "Lt. Surge": {
+      "de": "Major Bob",
+      "fr": "Major Bob",
+      "es": "Teniente Surge Lt. Surge",
+      "it": "Lt. Surge"
+    },
+    "Lucas": {
+      "it": "Lucas",
+      "de": "Lucius",
+      "es": "León",
+      "fr": "Louka"
+    },
+    "Lucian": {
+      "de": "Lucian",
+      "es": "Delos",
+      "fr": "Lucio",
+      "it": "Luciano"
+    },
+    "Lusamine": {
+      "de": "Samantha",
+      "es": "Samina",
+      "it": "Samina",
+      "fr": "Elsa-Mina"
+    },
+    "Lysandre": {
+      "fr": "Lysandre",
+      "de": "Flordelis",
+      "es": "Lysson",
+      "it": "Elisio"
+    },
+    "Mable": {
+      "de": "Magnolia",
+      "es": "Melia",
+      "fr": "Myosotis",
+      "it": "Martynia"
+    },
+    "Magma Admin Courtney": {
+      "de": "Jördis",
+      "es": "Carola",
+      "fr": "Courtney",
+      "it": "Rossella"
+    },
+    "Magnus": {
+      "de": "Faustus",
+      "es": "Sansón",
+      "fr": "Alcide",
+      "it": "Sansone"
+    },
+    "Mallow": {
+      "de": "Maho",
+      "es": "Lulú",
+      "fr": "Barbara",
+      "it": "Ibis"
+    },
+    "Malva": {
+      "fr": "Malva",
+      "es": "Malva",
+      "it": "Malva",
+      "de": "Pachira"
+    },
+    "Marlon": {
+      "de": "Benson",
+      "es": "Ciprián",
+      "fr": "Amana",
+      "it": "Ciprian"
+    },
+    "Marnie": {
+      "de": "Mary",
+      "it": "Mary",
+      "es": "Roxy",
+      "fr": "Rosemary"
+    },
+    "Mars": {
+      "de": "Mars",
+      "fr": "Mars",
+      "es": "Venus",
+      "it": "Martes"
+    },
+    "Matt": {
+      "de": "Wolfgang",
+      "es": "Matías{{sup/3|RS}}{{sup/6|ORAS}} Tolo{{sup/3|E}}",
+      "fr": "Matthieu",
+      "it": "Alan"
+    },
+    "Maxie": {
+      "de": "Marc",
+      "es": "Magno",
+      "fr": "Max",
+      "it": "Max"
+    },
+    "May": {
+      "de": "Maike",
+      "es": "Aura",
+      "fr": "Flora",
+      "it": "Vera"
+    },
+    "Mela": {
+      "de": "Irsa",
+      "es": "Melo",
+      "fr": "Meloco",
+      "it": "Pruna"
+    },
+    "Melony": {
+      "de": "Mel",
+      "es": "Mel",
+      "fr": "Lona",
+      "it": "Melania"
+    },
+    "Milo": {
+      "de": "Yarro",
+      "es": "Percy",
+      "fr": "Percy",
+      "it": "Yarrow"
+    },
+    "Mina": {
+      "de": "Matsurika",
+      "es": "Rika",
+      "it": "Rika",
+      "fr": "Oléa"
+    },
+    "Mira": {
+      "de": "Orisa",
+      "es": "Maiza",
+      "fr": "Maïté",
+      "it": "Matilde"
+    },
+    "Misty": {
+      "de": "Misty",
+      "es": "Misty",
+      "it": "Misty",
+      "fr": "Ondine"
+    },
+    "Molayne": {
+      "de": "Marlon",
+      "es": "Lario",
+      "fr": "Molène",
+      "it": "Tapso"
+    },
+    "morty": {
+      "de": "Jens",
+      "es": "Morti",
+      "fr": "Mortimer",
+      "it": "Angelo"
+    },
+    "Morty": {
+      "de": "Jens",
+      "es": "Morti",
+      "fr": "Mortimer",
+      "it": "Angelo"
+    },
+    "Mustard": {
+      "it": "Mustard",
+      "de": "Mastrich",
+      "es": "Mostaz",
+      "fr": "Mustar"
+    },
+    "N": {
+      "de": "N",
+      "fr": "N",
+      "es": "N",
+      "it": "N"
+    },
+    "Nanu": {
+      "de": "Yasu",
+      "es": "Denio",
+      "fr": "Danh",
+      "it": "Augusto"
+    },
+    "Nate": {
+      "de": "Tony",
+      "es": "Rizzo",
+      "fr": "Mélis",
+      "it": "Sanzo"
+    },
+    "Nemona": {
+      "de": "Nemila",
+      "es": "Mencía",
+      "fr": "Menzi",
+      "it": "Nemi"
+    },
+    "Nessa": {
+      "de": "Kate",
+      "es": "Cathy",
+      "fr": "Donna",
+      "it": "Azzurra"
+    },
+    "Norman": {
+      "de": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "Oleana": {
+      "de": "Olivia",
+      "es": "Olivia",
+      "fr": "Liv",
+      "it": "Olive"
+    },
+    "Olivia": {
+      "de": "Mayla",
+      "es": "Mayla",
+      "fr": "Alyxia",
+      "it": "Alyxia"
+    },
+    "Olympia": {
+      "de": "Astrid",
+      "es": "Ástrid",
+      "fr": "Astera",
+      "it": "Astra"
+    },
+    "Opal": {
+      "de": "Papella",
+      "fr": "Sally",
+      "es": "Sally",
+      "it": "Poppy"
+    },
+    "Ortega": {
+      "de": "Otis",
+      "es": "Gus",
+      "fr": "Ortiga",
+      "it": "Ortiz"
+    },
+    "Penny": {
+      "it": "Penny",
+      "de": "Cosima",
+      "es": "Noa",
+      "fr": "Pania"
+    },
+    "Peony": {
+      "de": "Peony",
+      "es": "Peony",
+      "it": "Peony",
+      "fr": "Dhilan"
+    },
+    "Percy": {
+      "de": "Percy",
+      "fr": "Tim",
+      "it": "Pino",
+      "es": "Fernando"
+    },
+    "Piers": {
+      "de": "Nezz",
+      "es": "Nerio",
+      "fr": "Peterson",
+      "it": "Ginepro"
+    },
+    "Plumeria": {
+      "it": "Plumeria",
+      "de": "Fran",
+      "es": "Francine",
+      "fr": "Apocyne"
+    },
+    "Pokemon Trainer Red": {
+      "fr": "Red",
+      "de": "Rot",
+      "es": "Rojo",
+      "it": "Rosso"
+    },
+    "Poppy": {
+      "de": "Poppy",
+      "es": "Pola",
+      "fr": "Popi",
+      "it": "Verina"
+    },
+    "Pryce": {
+      "de": "Norbert",
+      "es": "Fredo",
+      "fr": "Frédo",
+      "it": "Alfredo"
+    },
+    "Raihan": {
+      "de": "Roy",
+      "fr": "Roy",
+      "es": "Roy",
+      "it": "Laburno"
+    },
+    "Ramos": {
+      "de": "Amaro",
+      "fr": "Amaro",
+      "es": "Amaro",
+      "it": "Amur"
+    },
+    "Rika": {
+      "de": "Cay",
+      "es": "Cayena",
+      "fr": "Cayenn",
+      "it": "Capsi"
+    },
+    "Riley": {
+      "de": "Urs",
+      "es": "Quinoa",
+      "fr": "Armand",
+      "it": "Marisio"
+    },
+    "Rood": {
+      "de": "Rubius",
+      "es": "Ruga",
+      "fr": "Carmine",
+      "it": "Ross"
+    },
+    "Rosa": {
+      "de": "Rosy",
+      "es": "Nanci",
+      "fr": "Écho",
+      "it": "Rina"
+    },
+    "Rose": {
+      "de": "Rose",
+      "es": "Rose",
+      "it": "Rose",
+      "fr": "Shehroz"
+    },
+    "Roxanne": {
+      "de": "Felizia",
+      "fr": "Roxanne",
+      "es": "Petra",
+      "it": "Petra"
+    },
+    "Roxie": {
+      "de": "Mica",
+      "es": "Hiedra",
+      "fr": "Strykna",
+      "it": "Velia"
+    },
+    "Ryme": {
+      "de": "Etta",
+      "es": "Lima",
+      "it": "Lima",
+      "fr": "Laïm"
+    },
+    "Ryuki": {
+      "de": "Ryuki",
+      "es": "Olano",
+      "fr": "Solane",
+      "it": "Morel"
+    },
+    "Sabrina": {
+      "de": "Sabrina",
+      "es": "Sabrina",
+      "it": "Sabrina",
+      "fr": "Morgane"
+    },
+    "Saturn": {
+      "de": "Saturn",
+      "es": "Saturno",
+      "it": "Saturno",
+      "fr": "Saturne"
+    },
+    "Shauna": {
+      "de": "Sannah",
+      "fr": "Sannah",
+      "es": "Xana",
+      "it": "Shana"
+    },
+    "Shelly": {
+      "de": "Kordula",
+      "es": "Silvina",
+      "fr": "Sarah",
+      "it": "Ada"
+    },
+    "Siebold": {
+      "de": "Narcisse",
+      "fr": "Narcisse",
+      "es": "Narciso",
+      "it": "Narciso"
+    },
+    "Sina": {
+      "de": "Sina",
+      "fr": "Sina",
+      "es": "Sina",
+      "it": "Sina"
+    },
+    "Soliera": {
+      "de": "Mirin",
+      "it": "Mirin",
+      "es": "Miria",
+      "fr": "Solie"
+    },
+    "Sophocles": {
+      "de": "Chrys",
+      "fr": "Chrys",
+      "it": "Chrys",
+      "es": "Chris"
+    },
+    "Sycamore": {
+      "de": "Professor Platan",
+      "it": "Professor Platan",
+      "es": "Profesor Ciprés",
+      "fr": "Professeur Platane"
+    },
+    "Tabitha": {
+      "de": "Kalle",
+      "es": "Tatiano",
+      "fr": "Kelvin",
+      "it": "Ottavio"
+    },
+    "Tate": {
+      "de": "Ben",
+      "es": "Vito",
+      "fr": "Lévy",
+      "it": "Tell"
+    },
+    "Tierno": {
+      "de": "Tierno",
+      "fr": "Tierno",
+      "it": "Tierno",
+      "es": "Beni"
+    },
+    "Trevor": {
+      "de": "Trovato",
+      "fr": "Trovato",
+      "es": "Trovato",
+      "it": "Trovato"
+    },
+    "Tulip": {
+      "de": "Tulia",
+      "es": "Tuli",
+      "fr": "Tully",
+      "it": "Tulipa"
+    },
+    "Viola": {
+      "de": "Viola",
+      "es": "Violeta",
+      "fr": "Violette",
+      "it": "Violetta"
+    },
+    "Volkner": {
+      "de": "Volkner",
+      "es": "Lectro",
+      "fr": "Tanguy",
+      "it": "Corrado"
+    },
+    "Wallace": {
+      "de": "Wassili",
+      "es": "Plubio",
+      "fr": "Marc",
+      "it": "Adriano"
+    },
+    "Wattson": {
+      "de": "Walter",
+      "it": "Walter",
+      "es": "Erico",
+      "fr": "Voltere"
+    },
+    "Whitney": {
+      "de": "Bianka",
+      "es": "Blanca",
+      "fr": "Blanche",
+      "it": "Chiara"
+    },
+    "Wikstrom": {
+      "de": "Thymelot",
+      "es": "Tileo",
+      "fr": "Thyméo",
+      "it": "Timeus"
+    },
+    "Winona": {
+      "de": "Wibke",
+      "es": "Alana",
+      "fr": "Alizée",
+      "it": "Alice"
+    },
+    "Wulfric": {
+      "de": "Galantho",
+      "es": "Édel",
+      "fr": "Urup",
+      "it": "Edel"
+    },
+    "Xerosic": {
+      "de": "Xeros",
+      "es": "Xero",
+      "fr": "Xanthin",
+      "it": "Xante"
+    },
+    "Zinzolin": {
+      "de": "Violaceus",
+      "es": "Menek",
+      "fr": "Lilien",
+      "it": "Violante"
+    }
+  }
+}

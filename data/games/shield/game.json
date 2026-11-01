@@ -1,0 +1,20 @@
+{
+  "id": "shield",
+  "sort": 24,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 8,
+  "dexLimit": 898,
+  "spriteSet": "modern",
+  "versionGroup": "sword-shield",
+  "trainerSet": "sword-shield",
+  "regionalForms": true,
+  "names": {
+    "de": "Schild",
+    "en": "Shield",
+    "fr": "Bouclier",
+    "es": "Escudo",
+    "it": "Scudo"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (sh)"
+}

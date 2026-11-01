@@ -1,0 +1,19 @@
+{
+  "id": "ruby",
+  "sort": 12,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dexLimit": 386,
+  "spriteSet": "emerald",
+  "versionGroup": "ruby-sapphire",
+  "trainerSet": "emerald",
+  "names": {
+    "de": "Rubin",
+    "en": "Ruby",
+    "fr": "Rubis",
+    "es": "Rubí",
+    "it": "Rubino"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (ruby)"
+}

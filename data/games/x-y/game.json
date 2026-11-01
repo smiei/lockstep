@@ -1,0 +1,19 @@
+{
+  "id": "x-y",
+  "sort": 16,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 6,
+  "dexLimit": 721,
+  "spriteSet": "modern",
+  "versionGroup": "x-y",
+  "trainerSet": "x-y",
+  "names": {
+    "de": "X / Y",
+    "en": "X / Y",
+    "fr": "X / Y",
+    "es": "X / Y",
+    "it": "X / Y"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (x)"
+}
