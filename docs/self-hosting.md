@@ -163,7 +163,7 @@ Your runs are stored in the launcher's `data/nuzlocke.db`, outside the app folde
 
 ## Without Docker
 
-Requirements: [Node.js](https://nodejs.org/) 20.9 or newer (the current LTS is fine) and [Git](https://git-scm.com/).
+Requirements: [Node.js](https://nodejs.org/) 20.19 or newer (the current LTS is fine) and [Git](https://git-scm.com/).
 
 ```bash
 git clone https://github.com/smiei/lockstep.git

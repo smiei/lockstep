@@ -61,7 +61,7 @@ async function main() {
     // The CLI's own entry point with this very node, not `npx`: the Windows
     // app ships node.exe without npm.
     const prismaCli = path.join(rootDir, "node_modules", "prisma", "build", "index.js");
-    await run(process.execPath, [prismaCli, "db", "execute", "--file", file, "--schema", "prisma/schema.prisma"], {
+    await run(process.execPath, [prismaCli, "db", "execute", "--file", file], {
       cwd: rootDir,
     });
     console.log(`backfill: Encounter.familyId re-synced against ${pairs.length} species`);

@@ -58,9 +58,12 @@ COPY --from=builder /app/scripts ./scripts
 # the entrypoint treats that path as "a private logo is mounted".
 COPY --from=builder /app/branding/icon.svg ./branding-default/icon.svg
 RUN mkdir -p /app/public/pokemon-sprites /app/public/ball-sprites /app/public/trainers /app/public/badges /app/public/covers
-# The generated Prisma client (incl. the native query engine binary for this
-# platform) lives outside node_modules; Next's build doesn't bundle it, so it
-# must be copied explicitly or the client can't find its query engine.
+# The generated Prisma client (TypeScript, no engine binary since Prisma 7)
+# lives outside node_modules; Next's build doesn't bundle it, so it must be
+# copied explicitly. The database driver is better-sqlite3 (native), installed
+# by the `npm ci` above from its prebuilt linuxmusl binary (amd64 and arm64
+# both exist for Node 24); no compiler is needed in this stage unless a future
+# Node ABI has no prebuild yet (then add python3 make g++ to the stage).
 COPY --from=builder /app/src/generated ./src/generated
 COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/prisma.config.ts ./prisma.config.ts

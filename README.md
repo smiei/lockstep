@@ -166,7 +166,7 @@ Save that as `compose.yaml` and run `docker compose up -d`. The first start down
 2. On the **Explore** page, paste `https://github.com/smiei/lockstep-pinokio` into the **GitHub or Hugging Face URL** field and click **Go**.
 3. Click **Install**, then **Start**.
 
-### Without Docker (Node.js 20.9+)
+### Without Docker (Node.js 20.19+)
 
 ```bash
 git clone https://github.com/smiei/lockstep.git

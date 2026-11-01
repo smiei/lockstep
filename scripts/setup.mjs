@@ -5,8 +5,8 @@
 // sprites a new game pack needs and rebuilds.
 //
 // Steps, in order:
-// 1. Node version check - Next 16 needs Node 20.9 or newer, and the error it
-//    gives on an older one does not say so.
+// 1. Node version check - Prisma 7 needs Node 20.19 or newer (Next 16 alone:
+//    20.9), and the error it gives on an older one does not say so.
 // 2. .env from .env.example when there is none and no DATABASE_URL is set in
 //    the environment (a launcher such as Pinokio passes its own, pointing at a
 //    database outside the app folder). The default puts the database at
@@ -30,8 +30,8 @@ const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
 
 const [major, minor] = process.versions.node.split(".").map(Number);
-if (major < 20 || (major === 20 && minor < 9)) {
-  console.error(`Node.js ${process.versions.node} is too old. Install Node.js 20.9 or newer (the current LTS is fine): https://nodejs.org/`);
+if (major < 20 || (major === 20 && minor < 19)) {
+  console.error(`Node.js ${process.versions.node} is too old. Install Node.js 20.19 or newer (the current LTS is fine): https://nodejs.org/`);
   process.exit(1);
 }
 

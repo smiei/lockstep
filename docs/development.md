@@ -6,7 +6,7 @@
 
 - Next.js 16 (App Router) and TypeScript
 - Tailwind CSS v4
-- Prisma 6 with SQLite (a hosted libSQL database for the optional public deployment)
+- Prisma 7 with SQLite (better-sqlite3 driver adapter) (a hosted libSQL database for the optional public deployment)
 - Vitest and ESLint
 - Docker for the published image
 
