@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (radred)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-10-31T10:22:20.234Z",
+  "generatedAt": "2026-11-01T01:16:31.844Z",
   "species": [
     {
       "id": 12,
@@ -3153,6 +3153,25 @@
       },
       "catchRate": 45,
       "weight": 117
+    },
+    {
+      "id": 866,
+      "name": "Mr. Rime",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "stats": {
+        "KP": 80,
+        "Ang.": 65,
+        "Vert.": 75,
+        "Sp.-A.": 110,
+        "Sp.-V.": 90,
+        "Init.": 100,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 58.2
     },
     {
       "id": 870,

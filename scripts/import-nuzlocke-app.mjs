@@ -152,6 +152,10 @@ const SLUG_ALIASES = {
   "pikachu-rockstar": "pikachu-rock-star",
   typenull: "type-null",
   mrmime: "mr-mime",
+  // Typos in the source.
+  "mewoth-alola": "meowth-alola",
+  magnemtic: "magnemite",
+  pelliper: "pelipper",
 };
 
 // Source slug -> this app's id: a species, or a forme (Alolan Vulpix is
@@ -255,9 +259,18 @@ async function slugResolver(pokemon) {
   const pokeApiIds = new Map((await res.json()).results.map((r) => [r.name, Number(r.url.split("/").at(-2))]));
   const ours = new Map(pokemon.map((p) => [p.id, p]));
   const species = new Map(pokemon.filter((p) => p.baseId === undefined).map((p) => [slug(p.names.en), p]));
+  // The source often drops a name's hyphens ("jangmoo", "tapukoko", "hooh"),
+  // so a slug that misses is compared once more without any.
+  const compact = (text) => text.replace(/-/g, "");
+  const speciesCompact = new Map([...species].map(([s, p]) => [compact(s), p]));
+  const pokeApiCompact = new Map([...pokeApiIds.keys()].map((name) => [compact(name), name]));
   return (name) => {
-    const s = SLUG_ALIASES[slug(name)] ?? slug(name);
+    let s = SLUG_ALIASES[slug(name)] ?? slug(name);
     if (species.has(s)) return { pokemon: species.get(s), exact: true };
+    if (!pokeApiIds.has(s)) {
+      if (speciesCompact.has(compact(s))) return { pokemon: speciesCompact.get(compact(s)), exact: true };
+      s = pokeApiCompact.get(compact(s)) ?? s;
+    }
     const id = pokeApiIds.get(s);
     if (id === undefined) return undefined;
     if (ours.has(id)) return { pokemon: ours.get(id), exact: true };
@@ -301,6 +314,8 @@ async function main() {
   // Bosses no base pack names: their people's names from Bulbapedia
   // (generate-trainer-names.mjs), put together per trainer-name-parts.mjs.
   const trainerNames = (await readJson(path.join(dataDir, "shared", "trainer-names.json"))).names;
+  // Badges no base pack has (generate-badge-names.mjs), by region and leader.
+  const badgeNames = (await readJson(path.join(dataDir, "shared", "badge-names.json"))).regions;
 
   const [sourceRoutes, sourceLeague, sourcePatches] = await Promise.all(["routes", "league", "patches"].map(fetchJson));
   const pokemon = await readJson(path.join(dataDir, "pokemon.json"));
@@ -378,7 +393,12 @@ async function main() {
       const inE4 = firstE4 >= 0 && i >= firstE4 && i < e4End;
       const cap = {
         id: i + 1,
-        names: match ? match.names : (composeBossName(gym.boss || gym.name, trainerNames) ?? allLangs(gym.boss || gym.name)),
+        // The official characters' names (trainer-names.json) only for the
+        // official games: a hack's own "Percy" is not Black/White's.
+        names: match
+          ? match.names
+          : ((hack.kind === "official" ? composeBossName(gym.boss || gym.name, trainerNames) : null) ??
+            allLangs(gym.boss || gym.name)),
         // A base-game place is only borrowed for a gym leader, and never the
         // base game's "Elite Four" outside the block (Wallace leads a gym in
         // Ruby/Sapphire but is Emerald's Champion).
@@ -387,7 +407,10 @@ async function main() {
           : match && gym.group === "gym-leader" && match.location.en !== "Elite Four"
             ? match.location
             : placeNames(gym.name),
-        badge: gym.group === "gym-leader" && match?.badge && !inE4 ? match.badge : null,
+        badge:
+          gym.group === "gym-leader" && !inE4
+            ? (match?.badge ?? badgeNames[hack.region]?.[(gym.boss ?? "").trim()] ?? null)
+            : null,
         max_level: highestLevel(league[gym.value]),
       };
       if (match?.sprite) cap.sprite = match.sprite;

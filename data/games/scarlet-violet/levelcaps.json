@@ -53,7 +53,13 @@
       "es": "Cortondo",
       "it": "Cortondo"
     },
-    "badge": null,
+    "badge": {
+      "de": "Käfer-Arenaorden",
+      "en": "Gym Badge (Bug)",
+      "fr": "Badge d’Arène Insecte",
+      "es": "Medalla de Gimnasio Bicho",
+      "it": "Medaglia Palestra Coleottero"
+    },
     "max_level": 15
   },
   {
@@ -91,7 +97,13 @@
       "es": "Artazon",
       "it": "Artazon"
     },
-    "badge": null,
+    "badge": {
+      "de": "Pflanzen-Arenaorden",
+      "en": "Gym Badge (Grass)",
+      "fr": "Badge d’Arène Plante",
+      "es": "Medalla de Gimnasio Planta",
+      "it": "Medaglia Palestra Erba"
+    },
     "max_level": 17
   },
   {
@@ -167,7 +179,13 @@
       "es": "Levincia",
       "it": "Levincia"
     },
-    "badge": null,
+    "badge": {
+      "de": "Elektro-Arenaorden",
+      "en": "Gym Badge (Electric)",
+      "fr": "Badge d’Arène Électrik",
+      "es": "Medalla de Gimnasio Eléctrico",
+      "it": "Medaglia Palestra Elettro"
+    },
     "max_level": 24
   },
   {
@@ -224,7 +242,13 @@
       "es": "Cascarrafa",
       "it": "Cascarrafa"
     },
-    "badge": null,
+    "badge": {
+      "de": "Wasser-Arenaorden",
+      "en": "Gym Badge (Water)",
+      "fr": "Badge d’Arène Eau",
+      "es": "Medalla de Gimnasio Agua",
+      "it": "Medaglia Palestra Acqua"
+    },
     "max_level": 30
   },
   {
@@ -281,7 +305,13 @@
       "es": "Medali",
       "it": "Medali"
     },
-    "badge": null,
+    "badge": {
+      "de": "Normal-Arenaorden",
+      "en": "Gym Badge (Normal)",
+      "fr": "Badge d’Arène Normal",
+      "es": "Medalla de Gimnasio Normal",
+      "it": "Medaglia Palestra Normale"
+    },
     "max_level": 36
   },
   {
@@ -300,7 +330,13 @@
       "es": "Montenevera",
       "it": "Montenevera"
     },
-    "badge": null,
+    "badge": {
+      "de": "Geister-Arenaorden",
+      "en": "Gym Badge (Ghost)",
+      "fr": "Badge d’Arène Spectre",
+      "es": "Medalla de Gimnasio Fantasma",
+      "it": "Medaglia Palestra Spettro"
+    },
     "max_level": 42
   },
   {
@@ -357,7 +393,13 @@
       "es": "Alfornada",
       "it": "Alfornada"
     },
-    "badge": null,
+    "badge": {
+      "de": "Psycho-Arenaorden",
+      "en": "Gym Badge (Psychic)",
+      "fr": "Badge d’Arène Psy",
+      "es": "Medalla de Gimnasio Psíquico",
+      "it": "Medaglia Palestra Psico"
+    },
     "max_level": 45
   },
   {
@@ -376,7 +418,13 @@
       "es": "Glaseado City",
       "it": "Glaseado City"
     },
-    "badge": null,
+    "badge": {
+      "de": "Eis-Arenaorden",
+      "en": "Gym Badge (Ice)",
+      "fr": "Badge d’Arène Glace",
+      "es": "Medalla de Gimnasio Hielo",
+      "it": "Medaglia Palestra Ghiaccio"
+    },
     "max_level": 48
   },
   {

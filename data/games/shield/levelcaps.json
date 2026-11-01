@@ -91,7 +91,13 @@
       "es": "Turffield",
       "it": "Turffield"
     },
-    "badge": null,
+    "badge": {
+      "de": "Pflanzen-Orden",
+      "en": "Grass Badge",
+      "fr": "Badge Plante",
+      "es": "Medalla Planta",
+      "it": "Medaglia Erba"
+    },
     "max_level": 20
   },
   {
@@ -129,7 +135,13 @@
       "es": "Hulbury",
       "it": "Hulbury"
     },
-    "badge": null,
+    "badge": {
+      "de": "Wasser-Orden",
+      "en": "Water Badge",
+      "fr": "Badge Eau",
+      "es": "Medalla Agua",
+      "it": "Medaglia Acqua"
+    },
     "max_level": 24
   },
   {
@@ -186,7 +198,13 @@
       "es": "Motostoke",
       "it": "Motostoke"
     },
-    "badge": null,
+    "badge": {
+      "de": "Feuer-Orden",
+      "en": "Fire Badge",
+      "fr": "Badge Feu",
+      "es": "Medalla Fuego",
+      "it": "Medaglia Fuoco"
+    },
     "max_level": 27
   },
   {
@@ -224,7 +242,13 @@
       "es": "Stow-on-Side",
       "it": "Stow-on-Side"
     },
-    "badge": null,
+    "badge": {
+      "de": "Geister-Orden",
+      "en": "Ghost Badge",
+      "fr": "Badge Spectre",
+      "es": "Medalla Fantasma",
+      "it": "Medaglia Spettro"
+    },
     "max_level": 36
   },
   {
@@ -262,7 +286,13 @@
       "es": "Ballonlea",
       "it": "Ballonlea"
     },
-    "badge": null,
+    "badge": {
+      "de": "Feen-Orden",
+      "en": "Fairy Badge",
+      "fr": "Badge Fée",
+      "es": "Medalla Hada",
+      "it": "Medaglia Folletto"
+    },
     "max_level": 38
   },
   {
@@ -319,7 +349,13 @@
       "es": "Circhester",
       "it": "Circhester"
     },
-    "badge": null,
+    "badge": {
+      "de": "Eis-Orden",
+      "en": "Ice Badge",
+      "fr": "Badge Glace",
+      "es": "Medalla Hielo",
+      "it": "Medaglia Ghiaccio"
+    },
     "max_level": 42
   },
   {
@@ -357,7 +393,13 @@
       "es": "Spikemouth Gym",
       "it": "Spikemouth Gym"
     },
-    "badge": null,
+    "badge": {
+      "de": "Unlicht-Orden",
+      "en": "Dark Badge",
+      "fr": "Badge Ténèbres",
+      "es": "Medalla Siniestro",
+      "it": "Medaglia Buio"
+    },
     "max_level": 46
   },
   {
@@ -376,7 +418,13 @@
       "es": "Hammerlock Gym",
       "it": "Hammerlock Gym"
     },
-    "badge": null,
+    "badge": {
+      "de": "Drachen-Orden",
+      "en": "Dragon Badge",
+      "fr": "Badge Dragon",
+      "es": "Medalla Dragón",
+      "it": "Medaglia Drago"
+    },
     "max_level": 48
   },
   {

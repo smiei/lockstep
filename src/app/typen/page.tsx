@@ -2,6 +2,7 @@ import {
   getEvolutionById,
   getEvolutions,
   getGameOrDefault,
+  getLevelCaps,
   getLearnset,
   getMoveTypeHistory,
   getMoveset,
@@ -81,6 +82,20 @@ export default async function AnalyzePage({
   );
 
   const encounters = await prisma.encounter.findMany({ where: { runId } });
+
+  // Gym badges the run holds (Gen 8/9's catch formula reads them): the
+  // defeated level caps that award one, as on the Overview's badge row.
+  const defeatedCapIds = new Set(
+    (
+      await prisma.levelCapProgress.findMany({
+        where: { runId, defeated: true },
+        select: { levelCapId: true },
+      })
+    ).map((row) => row.levelCapId),
+  );
+  const badgesEarned = getLevelCaps(gameId).filter(
+    (cap) => cap.badge !== null && defeatedCapIds.has(cap.id),
+  ).length;
 
   // Species Clause (src/lib/speciesClause.ts) - the calculator only warns,
   // never blocks. The picker belongs to no player, so it marks what nobody may
@@ -215,6 +230,7 @@ export default async function AnalyzePage({
             // deliberately NOT dataGeneration - see CatchRateView's use of it.
             generation={game.generation}
             versionGroup={game.versionGroup}
+            badgesEarned={badgesEarned}
             effectiveness={effectiveness}
             attackTypes={attackTypes}
             catchRates={catchRates}

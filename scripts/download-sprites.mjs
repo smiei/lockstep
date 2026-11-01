@@ -81,6 +81,7 @@ const BALLS = [
   "heavy",
   "sport",
   "cherish",
+  "beast",
 ];
 
 // Pokémon Infinite Fusion's own balls have no PokeAPI sprite: their icons come

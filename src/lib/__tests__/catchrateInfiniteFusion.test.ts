@@ -47,9 +47,10 @@ describe("Infinite Fusion ball list", () => {
 });
 
 describe("Infinite Fusion capture formula", () => {
-  it("makes four shake checks, not Gen 5's three", () => {
+  it("shakes like Gen 6 (exponent 3/16, four checks)", () => {
     expect(throwBall({}).chance).toBeCloseTo(0.1194376, 6);
-    expect(computeCatchChance(5, base).chance).toBeCloseTo(0.2031682, 6);
+    // Rate 45 at full HP floors to exactly 15 there, so nothing separates the two.
+    expect(throwBall({}).chance).toBeCloseTo(computeCatchChance(6, base).chance, 9);
   });
 
   it("guarantees the Master Ball and applies the sleep bonus", () => {

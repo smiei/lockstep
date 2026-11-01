@@ -7,6 +7,9 @@
 //                rand(0..255) < value. Only sleep/freeze give a bonus (+10).
 // Gen 3/4:       a = hpFactor * rate * ballMod * statusMod; a >= 255 is a
 //                guaranteed catch, otherwise the shake-check formula applies.
+// Gen 5-9:       the same modified rate plus Gen 8/9's level factors, with a
+//                shake formula that comes to about (a/255)^0.75 - see
+//                computeModern.
 
 export type BallId =
   | "poke"
@@ -52,7 +55,9 @@ export type BallId =
   | "status"
   | "candy"
   | "rocket"
-  | "fusion";
+  | "fusion"
+  // Gen 7 onward: x5 against Ultra Beasts, x0.1 against anything else.
+  | "beast";
 
 export type StatusId = "none" | "sleep" | "freeze" | "paralysis" | "poison" | "burn";
 
@@ -124,6 +129,43 @@ const BALLS_GEN5: BallId[] = [
   "heal",
   "dream",
 ];
+
+// Kalos and Hoenn's remakes: the Gen 5 balls without the Dream Ball, which
+// these games do not hand out.
+const BALLS_GEN6: BallId[] = BALLS_GEN5.filter((ball) => ball !== "dream");
+
+// Alola brings back the Apricorn balls (one of each, plus the Heavy Ball) and
+// adds the Beast Ball for the Ultra Beasts.
+const BALLS_GEN7: BallId[] = [
+  ...BALLS_GEN6,
+  "level",
+  "lure",
+  "moon",
+  "friend",
+  "love",
+  "fast",
+  "heavy",
+  "beast",
+];
+
+// Sword/Shield and Scarlet/Violet: the Ball Guy and the picnic baskets add
+// the Dream, Safari and Sport Balls, all three now without a bonus of their
+// own (the Dream Ball works on sleeping targets only).
+const BALLS_GEN8: BallId[] = [...BALLS_GEN7, "dream", "safari", "sport"];
+
+// Brilliant Diamond/Shining Pearl follow Diamond/Pearl's item list (Safari
+// Balls in the Great Marsh, no Apricorns) on top of Gen 8's capture code.
+const BALLS_BDSP: BallId[] = [...BALLS_GEN4, "heal"];
+const BDSP_VERSION_GROUP = "brilliant-diamond-and-shining-pearl";
+
+// Nihilego to Guzzlord, then Poipole to Blacephalon (Necrozma, 800, is not
+// one). Every ball but the Beast Ball and the Master Ball drops to x0.1
+// against them from Gen 7 on.
+const ULTRA_BEAST_IDS = new Set([793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]);
+
+export function isUltraBeast(speciesId: number): boolean {
+  return ULTRA_BEAST_IDS.has(speciesId);
+}
 
 // HeartGold/SoulSilver are the only Gen 4 games with Apricorn balls (Kurt) and
 // the Sport Ball, so the Gen 4 list alone is not enough - the caller passes the
@@ -199,7 +241,11 @@ export function getBallIdsForGeneration(generation: number, versionGroup?: strin
   if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return BALLS_INFINITE_FUSION;
   if (generation === 1) return BALLS_GEN1;
   if (generation === 2) return BALLS_GEN2;
-  if (generation >= 5) return BALLS_GEN5;
+  if (versionGroup === BDSP_VERSION_GROUP) return BALLS_BDSP;
+  if (generation >= 8) return BALLS_GEN8;
+  if (generation === 7) return BALLS_GEN7;
+  if (generation === 6) return BALLS_GEN6;
+  if (generation === 5) return BALLS_GEN5;
   if (generation === 4) {
     return versionGroup === "heartgold-soulsilver"
       ? BALLS_GEN4_HGSS
@@ -248,10 +294,12 @@ export function levelBallMultiplier(ownLevel: number | undefined, wildLevel: num
   return 1;
 }
 
-export function ballHasCondition(ball: BallId, versionGroup?: string): boolean {
-  return versionGroup === INFINITE_FUSION_VERSION_GROUP
-    ? CONDITIONAL_BALLS_INFINITE_FUSION.has(ball)
-    : CONDITIONAL_BALLS.has(ball);
+// From Gen 7 on the Fast Ball reads the target's base Speed, which the
+// calculator knows, so it needs no checkbox there either.
+export function ballHasCondition(ball: BallId, versionGroup?: string, generation?: number): boolean {
+  if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return CONDITIONAL_BALLS_INFINITE_FUSION.has(ball);
+  if (ball === "fast" && (generation ?? 0) >= 7) return false;
+  return CONDITIONAL_BALLS.has(ball);
 }
 
 const STATUS_MULTIPLIERS: Record<StatusId, number> = {
@@ -273,25 +321,6 @@ const STATUS_MULTIPLIERS_GEN5: Record<StatusId, number> = {
 // Gen 3/4 ball multipliers (situational balls assume their condition holds -
 // noted in the UI). Gen 4 additions: Quick ×4 on the first turn, Dusk ×3.5
 // (night/cave assumed).
-// Gen 5 changed two of the Gen 4 numbers and added two balls; everything else
-// carries over, so this only overrides what differs.
-function ballMultiplierGen5(
-  ball: BallId,
-  ctx: { types: string[]; level: number; ownLevel?: number; turn: number },
-): number {
-  switch (ball) {
-    case "quick":
-      return ctx.turn === 1 ? 5 : 1;
-    case "dusk":
-      return 3.5;
-    // heal and premier are cosmetic; dream is handled as a guaranteed catch.
-    case "heal":
-      return 1;
-    default:
-      return ballMultiplierGen34(ball, ctx);
-  }
-}
-
 function ballMultiplierGen34(
   ball: BallId,
   ctx: { types: string[]; level: number; ownLevel?: number; turn: number },
@@ -370,6 +399,15 @@ export function heavyBallModifier(weightKg: number | undefined): number {
   return 40;
 }
 
+// Gen 7 onward: new brackets with a neutral step, topping out at +30.
+export function heavyBallModifierGen7(weightKg: number | undefined): number {
+  if (weightKg === undefined) return 0;
+  if (weightKg < 100) return -20;
+  if (weightKg < 200) return 0;
+  if (weightKg < 300) return 20;
+  return 30;
+}
+
 export function effectiveBaseRate(input: CatchInput): number {
   if (input.ball !== "heavy") return input.baseRate;
   return Math.min(255, Math.max(1, input.baseRate + heavyBallModifier(input.weight)));
@@ -399,6 +437,11 @@ export type CatchInput = {
   // registered as caught, which scales that chance.
   lastBall?: boolean;
   dexOwned?: number;
+  // Gen 7 onward: the target is an Ultra Beast (see isUltraBeast).
+  ultraBeast?: boolean;
+  // Gen 8/9: gym badges you hold (Sword/Shield's and BDSP's difficulty
+  // factor, Scarlet/Violet's obedience penalty).
+  badges?: number;
 };
 
 export type CatchResult = {
@@ -407,6 +450,13 @@ export type CatchResult = {
   // Preformatted factors for the details line ("×2", "+10", ...).
   ballText: string;
   statusText: string;
+  // Gen 8/9 only, when they are not ×1: the low-level bonus and the
+  // badge-related penalty.
+  levelText?: string;
+  penaltyText?: string;
+  // Sword/Shield: the target is above the level your badges let you catch,
+  // so no ball can be thrown (chance 0); the number is that limit.
+  throwLimit?: number;
 };
 
 function computeGen1(input: CatchInput): CatchResult {
@@ -491,38 +541,165 @@ function computeGen34(input: CatchInput): CatchResult {
   return { guaranteed: false, chance, ballText, statusText };
 }
 
-// Gen 5 keeps Gen 3/4's modified catch rate but changes what happens after:
-// the shake probability uses the exponent 3/16 instead of 1/4, and only THREE
-// shake checks are made instead of four - which together make Gen 5 noticeably
-// more generous at the same catch rate.
-function computeGen5(input: CatchInput): CatchResult {
-  const hpFrac = Math.min(100, Math.max(1, input.hpPercent)) / 100;
-  const conditionOff = ballHasCondition(input.ball) && input.conditionMet === false;
-  const ballBonus = conditionOff
-    ? 1
-    : ballMultiplierGen5(input.ball, {
-        types: input.types,
-        level: input.level,
-        ownLevel: input.ownLevel,
-        turn: input.turn,
-      });
-  const statusBonus = STATUS_MULTIPLIERS_GEN5[input.status];
-  const ballText = `×${ballBonus}`;
-  const statusText = `×${statusBonus}`;
+// ---------------------------------------------------------------------------
+// Gen 5 to 9 (Bulbapedia, "Catch rate" and the single balls' pages). The
+// modified rate keeps Gen 3/4's shape, now in steps of 1/4096 (not modelled -
+// it moves the result by hundredths of a percent), with sleep/freeze at ×2.5.
+// What follows it changed twice, but to the same result:
+//   Gen 5:   b = 65536 · (a/255)^(1/4), THREE shake checks;
+//   Gen 6+:  b = 65536 · (a/255)^(3/16), four shake checks;
+// both come to about (a/255)^0.75 - more generous than Gen 3/4's a/255.
+// Gen 8 adds a bonus against low-level targets and Sword/Shield's (and
+// BDSP's) difficulty factor; Gen 9 changes the bonus and swaps the difficulty
+// factor for an obedience penalty. Critical captures (which need the dex's
+// caught count) are left out, as in Gen 3/4.
+// ---------------------------------------------------------------------------
 
-  // The Dream Ball never fails in Gen 5 (its 4x nerf came later).
-  if (input.ball === "master" || input.ball === "dream") {
+const ONE_TENTH = 410 / 4096;
+
+// Gen 5's own Nest Ball steps are rounded down to 1/4096; from Gen 6 the bonus
+// stops below level 30 instead of at 31.
+function nestBallMultiplier(generation: number, level: number): number {
+  if (generation >= 6 && level >= 30) return 1;
+  return Math.max(1, Math.floor(((41 - level) * 4096) / 10) / 4096);
+}
+
+function ballMultiplierModern(
+  ball: BallId,
+  input: CatchInput,
+  generation: number,
+  versionGroup: string | undefined,
+): number {
+  if (generation >= 7 && input.ultraBeast) return ball === "beast" ? 5 : ONE_TENTH;
+  const conditionOff = ballHasCondition(ball, versionGroup, generation) && input.conditionMet === false;
+  if (conditionOff) return 1;
+  const waterOrBug = input.types.includes("water") || input.types.includes("bug");
+  switch (ball) {
+    case "great":
+      return 1.5;
+    case "ultra":
+      return 2;
+    // Only Brilliant Diamond/Shining Pearl's Great Marsh keeps the old bonus.
+    case "safari":
+      return generation < 8 || versionGroup === BDSP_VERSION_GROUP ? 1.5 : 1;
+    case "sport":
+      return generation < 8 ? 1.5 : 1;
+    case "net":
+      return waterOrBug ? (generation >= 7 ? 3.5 : 3) : 1;
+    case "nest":
+      return nestBallMultiplier(generation, input.level);
+    case "dive":
+      return 3.5;
+    case "repeat":
+      return generation >= 7 ? 3.5 : 3;
+    case "timer":
+      // The game's turn counter is 0 on the first turn.
+      return Math.min(4, 1 + ((input.turn - 1) * 1229) / 4096);
+    case "quick":
+      return input.turn === 1 ? 5 : 1;
+    case "dusk":
+      return generation >= 7 ? 3 : 3.5;
+    case "level":
+      return levelBallMultiplier(input.ownLevel, input.level);
+    case "lure":
+      return generation === 7 ? 5 : 4;
+    case "moon":
+      return 4;
+    case "love":
+      return 8;
+    case "fast":
+      return (input.baseSpeed ?? 0) >= 100 ? 4 : 1;
+    // Gen 5's is a guaranteed catch (handled by the caller).
+    case "dream":
+      return input.status === "sleep" ? 4 : 1;
+    case "beast":
+      return ONE_TENTH;
+    // poke, luxury, premier, heal, friend; heavy shifts the rate instead.
+    default:
+      return 1;
+  }
+}
+
+// The Heavy Ball's Gen 7 rate: Sun/Moon let a result of 0 or less stand
+// (the ball cannot catch at all), Ultra Sun/Ultra Moon onward lift it to 1.
+function modernBaseRate(input: CatchInput, generation: number, versionGroup: string | undefined): number {
+  if (input.ball !== "heavy" || generation < 7) return input.baseRate;
+  const rate = Math.min(255, input.baseRate + heavyBallModifierGen7(input.weight));
+  if (rate > 0) return rate;
+  return versionGroup === "sun-moon" ? 0 : 1;
+}
+
+// Gen 8: (30 - level)/10 below level 20. Gen 9: (36 - 2·level)/10 below
+// level 13 only.
+function levelBonus(generation: number, level: number): number {
+  if (generation === 8) return Math.max((30 - level) / 10, 1);
+  if (generation >= 9) return level < 13 ? Math.max((36 - 2 * level) / 10, 1) : 1;
+  return 1;
+}
+
+// Level 20 without a badge, 5 more per badge, no limit with all eight: up to
+// where Scarlet/Violet's Pokémon obey you, and where Sword/Shield let you
+// throw a ball at all.
+function badgeLevelLimit(badges: number): number {
+  return badges >= 8 ? 100 : 20 + 5 * badges;
+}
+
+// Gen 8: without the eighth badge, ×0.1 against a target above your active
+// Pokémon's level. Gen 9: ×0.8 for every badge it would take for the target to
+// obey you, once it is more than 5 levels above that limit.
+function badgePenalty(generation: number, input: CatchInput): number {
+  const badges = Math.min(8, Math.max(0, input.badges ?? 8));
+  if (generation === 8) {
+    return badges < 8 && input.ownLevel !== undefined && input.level > input.ownLevel ? ONE_TENTH : 1;
+  }
+  if (generation >= 9) {
+    if (input.level <= badgeLevelLimit(badges) + 5) return 1;
+    let needed = 1;
+    while (badges + needed < 8 && badgeLevelLimit(badges + needed) < input.level) needed++;
+    return Math.pow(0.8, needed);
+  }
+  return 1;
+}
+
+function computeModern(generation: number, input: CatchInput, versionGroup: string | undefined): CatchResult {
+  const hpFrac = Math.min(100, Math.max(1, input.hpPercent)) / 100;
+  const ballBonus = ballMultiplierModern(input.ball, input, generation, versionGroup);
+  const statusBonus = STATUS_MULTIPLIERS_GEN5[input.status];
+  const level = levelBonus(generation, input.level);
+  const penalty = badgePenalty(generation, input);
+  const ballText = multiplierText(ballBonus);
+  const statusText = `×${statusBonus}`;
+  const extra = {
+    ...(level !== 1 ? { levelText: multiplierText(level) } : {}),
+    ...(penalty !== 1 ? { penaltyText: multiplierText(penalty) } : {}),
+  };
+
+  // Sword/Shield refuse the throw outright, Master Ball included ("It won't
+  // let its guard down!").
+  if (versionGroup === "sword-shield") {
+    const limit = badgeLevelLimit(Math.min(8, Math.max(0, input.badges ?? 8)));
+    if (input.level > limit) return { guaranteed: false, chance: 0, ballText, statusText, throwLimit: limit };
+  }
+
+  // The Dream Ball never fails in Gen 5 (its ×4 against sleepers came in Gen 8).
+  if (input.ball === "master" || (input.ball === "dream" && generation === 5)) {
     return { guaranteed: true, chance: 1, ballText: "×1", statusText };
   }
 
-  const a = Math.max(1, ((3 - 2 * hpFrac) / 3) * effectiveBaseRate(input) * ballBonus * statusBonus);
+  const rate = modernBaseRate(input, generation, versionGroup);
+  if (rate === 0) return { guaranteed: false, chance: 0, ballText, statusText, ...extra };
+
+  // Counted in 1/4096 steps from Gen 5, so no floor of 1 as in Gen 3/4.
+  const a = ((3 - 2 * hpFrac) / 3) * rate * ballBonus * statusBonus * level * penalty;
   if (a >= 255) {
-    return { guaranteed: true, chance: 1, ballText, statusText };
+    return { guaranteed: true, chance: 1, ballText, statusText, ...extra };
   }
 
-  const b = Math.min(65535, Math.floor(65536 / Math.pow(255 / a, 3 / 16)));
-  const chance = Math.pow(b / 65536, 3);
-  return { guaranteed: false, chance, ballText, statusText };
+  const chance =
+    generation === 5
+      ? Math.pow(Math.floor(65536 * Math.pow(a / 255, 1 / 4)) / 65536, 3)
+      : Math.pow(Math.floor(65536 * Math.pow(a / 255, 3 / 16)) / 65536, 4);
+  return { guaranteed: false, chance, ballText, statusText, ...extra };
 }
 
 // ---------------------------------------------------------------------------
@@ -533,7 +710,7 @@ function computeGen5(input: CatchInput): CatchResult {
 // game's own balls (052_AddOns/New Balls.rb, which also REPLACES the Dream
 // Ball's handler - it loads later). It is none of the real generations:
 //   - the modified rate is floored after the status bonus, then the shake
-//     value uses Gen 5's exponent 3/16 but makes FOUR checks, not three;
+//     value uses Gen 6's formula (exponent 3/16, four checks);
 //   - NEW_POKE_BALL_CATCH_RATES is off (MECHANICS_GENERATION = 5), so Net,
 //     Repeat and Lure are ×3, Dusk ×3.5, and the Heavy Ball uses the old
 //     weight brackets with no neutral step;
@@ -686,8 +863,8 @@ function computeInfiniteFusion(input: CatchInput): CatchResult {
   };
 }
 
-// `versionGroup` only matters for Infinite Fusion, whose capture code is its
-// own rather than a generation's.
+// `versionGroup` picks Infinite Fusion's own capture code, and within a
+// generation the games that differ (Sun/Moon's Heavy Ball, BDSP's Safari Ball).
 export function computeCatchChance(
   generation: number,
   input: CatchInput,
@@ -696,6 +873,6 @@ export function computeCatchChance(
   if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return computeInfiniteFusion(input);
   if (generation === 1) return computeGen1(input);
   if (generation === 2) return computeGen2(input);
-  if (generation >= 5) return computeGen5(input);
+  if (generation >= 5) return computeModern(generation, input, versionGroup);
   return computeGen34(input);
 }
