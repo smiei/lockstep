@@ -1,0 +1,743 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Sannah",
+      "en": "Shauna",
+      "fr": "Sannah",
+      "es": "Xana",
+      "it": "Shana"
+    },
+    "location": {
+      "de": "Aquarellia",
+      "en": "Aquacorde Town",
+      "fr": "Quarellis",
+      "es": "Pueblo Acuarela",
+      "it": "Rio Acquerello"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Viola",
+      "en": "Viola",
+      "fr": "Violette",
+      "es": "Violeta",
+      "it": "Violetta"
+    },
+    "location": {
+      "de": "Nouvaria City",
+      "en": "Santalune City",
+      "fr": "Neuvartault",
+      "es": "Ciudad Novarte",
+      "it": "Novartopoli"
+    },
+    "badge": null,
+    "max_level": 12
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Professor Platan",
+      "en": "Sycamore",
+      "fr": "Professeur Platane",
+      "es": "Profesor Ciprés",
+      "it": "Professor Platan"
+    },
+    "location": {
+      "de": "Pokémon Lab",
+      "en": "Pokémon Lab",
+      "fr": "Pokémon Lab",
+      "es": "Pokémon Lab",
+      "it": "Pokémon Lab"
+    },
+    "badge": null,
+    "max_level": 10
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Tierno",
+      "en": "Tierno",
+      "fr": "Tierno",
+      "es": "Beni",
+      "it": "Tierno"
+    },
+    "location": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "badge": null,
+    "max_level": 12
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Trovato & Tierno",
+      "en": "Trevor & Tierno",
+      "fr": "Trovato & Tierno",
+      "es": "Trovato & Beni",
+      "it": "Trovato & Tierno"
+    },
+    "location": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Lino",
+      "en": "Grant",
+      "fr": "Lino",
+      "es": "Lino",
+      "it": "Lino"
+    },
+    "location": {
+      "de": "Relievera City",
+      "en": "Cyllage City",
+      "fr": "Relifac-le-Haut",
+      "es": "Ciudad Relieve",
+      "it": "Altoripoli"
+    },
+    "badge": null,
+    "max_level": 25
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Connie",
+      "en": "Korrina",
+      "fr": "Cornélia",
+      "es": "Corelia",
+      "it": "Ornella"
+    },
+    "location": {
+      "de": "Cromlexia",
+      "en": "Geosenge Town",
+      "fr": "Cromlac’h",
+      "es": "Pueblo Crómlech",
+      "it": "Cromleburgo"
+    },
+    "badge": null,
+    "max_level": 25
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Turm der Erkenntnis",
+      "en": "Tower of Mastery",
+      "fr": "Tour Maîtrise",
+      "es": "Torre Maestra",
+      "it": "Torre Maestra"
+    },
+    "badge": null,
+    "max_level": 30
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Connie",
+      "en": "Korrina",
+      "fr": "Cornélia",
+      "es": "Corelia",
+      "it": "Ornella"
+    },
+    "location": {
+      "de": "Yantara City",
+      "en": "Shalour City",
+      "fr": "Yantreizh",
+      "es": "Ciudad Yantra",
+      "it": "Yantaropoli"
+    },
+    "badge": null,
+    "max_level": 32
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Connie",
+      "en": "Korrina",
+      "fr": "Cornélia",
+      "es": "Corelia",
+      "it": "Ornella"
+    },
+    "location": {
+      "de": "Turm der Erkenntnis",
+      "en": "Tower of Mastery",
+      "fr": "Tour Maîtrise",
+      "es": "Torre Maestra",
+      "it": "Torre Maestra"
+    },
+    "badge": null,
+    "max_level": 25
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Coumarine Pokémon Center",
+      "en": "Coumarine Pokémon Center",
+      "fr": "Coumarine Pokémon Center",
+      "es": "Coumarine Pokémon Center",
+      "it": "Coumarine Pokémon Center"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Amaro",
+      "en": "Ramos",
+      "fr": "Amaro",
+      "es": "Amaro",
+      "it": "Amur"
+    },
+    "location": {
+      "de": "Tempera City",
+      "en": "Coumarine City",
+      "fr": "Port Tempères",
+      "es": "Ciudad Témpera",
+      "it": "Temperopoli"
+    },
+    "badge": null,
+    "max_level": 34
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Aliana",
+      "en": "Aliana",
+      "fr": "Ancolie",
+      "es": "Amapola",
+      "it": "Akebia"
+    },
+    "location": {
+      "de": "Power Plant",
+      "en": "Power Plant",
+      "fr": "Power Plant",
+      "es": "Power Plant",
+      "it": "Power Plant"
+    },
+    "badge": null,
+    "max_level": 38
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Citro",
+      "en": "Clemont",
+      "fr": "Lem",
+      "es": "Lem",
+      "it": "Lem"
+    },
+    "location": {
+      "de": "Illumina City",
+      "en": "Lumiose City",
+      "fr": "Illumis",
+      "es": "Ciudad Luminalia",
+      "it": "Luminopoli"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Valeria",
+      "en": "Valeria",
+      "fr": "Valeria",
+      "es": "Valeria",
+      "it": "Valeria"
+    },
+    "location": {
+      "de": "Romantia City",
+      "en": "Laverre City",
+      "fr": "Romant-sous-Bois",
+      "es": "Ciudad Romantis",
+      "it": "Romantopoli"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Calluna & Begonia",
+      "en": "Celosia & Bryony",
+      "fr": "Cyane & Brasénie",
+      "es": "Caléndula & Begonia",
+      "it": "Cytisia & Bromelia"
+    },
+    "location": {
+      "de": "Pokéball-Fabrik",
+      "en": "Poké Ball Factory",
+      "fr": "Usine de Poké Balls",
+      "es": "Fábrica Poké Balls",
+      "it": "Fabbrica Poké Ball"
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Magnolia",
+      "en": "Mable",
+      "fr": "Myosotis",
+      "es": "Melia",
+      "it": "Martynia"
+    },
+    "location": {
+      "de": "Frosthöhle",
+      "en": "Frost Cavern",
+      "fr": "Caverne Gelée",
+      "es": "Gruta Helada",
+      "it": "Caverna Gelata"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Fluxia City",
+      "en": "Anistar City",
+      "fr": "Flusselles",
+      "es": "Ciudad Fluxus",
+      "it": "Fluxopoli"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Astrid",
+      "en": "Olympia",
+      "fr": "Astera",
+      "es": "Ástrid",
+      "it": "Astra"
+    },
+    "location": {
+      "de": "Fluxia City",
+      "en": "Anistar City",
+      "fr": "Flusselles",
+      "es": "Ciudad Fluxus",
+      "it": "Fluxopoli"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Flordelis",
+      "en": "Lysandre",
+      "fr": "Lysandre",
+      "es": "Lysson",
+      "it": "Elisio"
+    },
+    "location": {
+      "de": "Labor von Flordelis",
+      "en": "Lysandre Labs",
+      "fr": "Labos Lysandre",
+      "es": "Laboratorios Lysson",
+      "it": "Laboratori Elisio"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Aliana",
+      "en": "Aliana",
+      "fr": "Ancolie",
+      "es": "Amapola",
+      "it": "Akebia"
+    },
+    "location": {
+      "de": "Labor von Flordelis",
+      "en": "Lysandre Labs",
+      "fr": "Labos Lysandre",
+      "es": "Laboratorios Lysson",
+      "it": "Laboratori Elisio"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Calluna",
+      "en": "Celosia",
+      "fr": "Cyane",
+      "es": "Caléndula",
+      "it": "Cytisia"
+    },
+    "location": {
+      "de": "Labor von Flordelis",
+      "en": "Lysandre Labs",
+      "fr": "Labos Lysandre",
+      "es": "Laboratorios Lysson",
+      "it": "Laboratori Elisio"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Begonia",
+      "en": "Bryony",
+      "fr": "Brasénie",
+      "es": "Begonia",
+      "it": "Bromelia"
+    },
+    "location": {
+      "de": "Labor von Flordelis",
+      "en": "Lysandre Labs",
+      "fr": "Labos Lysandre",
+      "es": "Laboratorios Lysson",
+      "it": "Laboratori Elisio"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Magnolia",
+      "en": "Mable",
+      "fr": "Myosotis",
+      "es": "Melia",
+      "it": "Martynia"
+    },
+    "location": {
+      "de": "Labor von Flordelis",
+      "en": "Lysandre Labs",
+      "fr": "Labos Lysandre",
+      "es": "Laboratorios Lysson",
+      "it": "Laboratori Elisio"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Xeros",
+      "en": "Xerosic",
+      "fr": "Xanthin",
+      "es": "Xero",
+      "it": "Xante"
+    },
+    "location": {
+      "de": "Labor von Flordelis",
+      "en": "Lysandre Labs",
+      "fr": "Labos Lysandre",
+      "es": "Laboratorios Lysson",
+      "it": "Laboratori Elisio"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Flordelis",
+      "en": "Lysandre",
+      "fr": "Lysandre",
+      "es": "Lysson",
+      "it": "Elisio"
+    },
+    "location": {
+      "de": "Flare-Geheimbasis",
+      "en": "Team Flare Secret HQ",
+      "fr": "Repaire Team Flare",
+      "es": "Guarida Team Flare",
+      "it": "Covo del Team Flare"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Flordelis",
+      "en": "Lysandre",
+      "fr": "Lysandre",
+      "es": "Lysson",
+      "it": "Elisio"
+    },
+    "location": {
+      "de": "Flare-Geheimbasis",
+      "en": "Team Flare Secret HQ",
+      "fr": "Repaire Team Flare",
+      "es": "Guarida Team Flare",
+      "it": "Covo del Team Flare"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Professor Platan",
+      "en": "Sycamore",
+      "fr": "Professeur Platane",
+      "es": "Profesor Ciprés",
+      "it": "Professor Platan"
+    },
+    "location": {
+      "de": "Couriway Town Sycamore Battle",
+      "en": "Couriway Town Sycamore Battle",
+      "fr": "Couriway Town Sycamore Battle",
+      "es": "Couriway Town Sycamore Battle",
+      "it": "Couriway Town Sycamore Battle"
+    },
+    "badge": null,
+    "max_level": 50
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Sannah",
+      "en": "Shauna",
+      "fr": "Sannah",
+      "es": "Xana",
+      "it": "Shana"
+    },
+    "location": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Route 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Tierno",
+      "en": "Tierno",
+      "fr": "Tierno",
+      "es": "Beni",
+      "it": "Tierno"
+    },
+    "location": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Route 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "badge": null,
+    "max_level": 52
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Trovato",
+      "en": "Trevor",
+      "fr": "Trovato",
+      "es": "Trovato",
+      "it": "Trovato"
+    },
+    "location": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Route 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "badge": null,
+    "max_level": 51
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Galantho",
+      "en": "Wulfric",
+      "fr": "Urup",
+      "es": "Édel",
+      "it": "Edel"
+    },
+    "location": {
+      "de": "Fractalia City",
+      "en": "Snowbelle City",
+      "fr": "Auffrac-les-Congères",
+      "es": "Ciudad Fractal",
+      "it": "Fractalopoli"
+    },
+    "badge": null,
+    "max_level": 59
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "badge": null,
+    "max_level": 61
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Pachira",
+      "en": "Malva",
+      "fr": "Malva",
+      "es": "Malva",
+      "it": "Malva"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Narcisse",
+      "en": "Siebold",
+      "fr": "Narcisse",
+      "es": "Narciso",
+      "it": "Narciso"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Thymelot",
+      "en": "Wikstrom",
+      "fr": "Thyméo",
+      "es": "Tileo",
+      "it": "Timeus"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Dracena",
+      "en": "Drasna",
+      "fr": "Dracéna",
+      "es": "Drácena",
+      "it": "Lilia"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Diantha",
+      "en": "Diantha",
+      "fr": "Dianthéa",
+      "es": "Diantha",
+      "it": "Diantha"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 68
+  }
+]

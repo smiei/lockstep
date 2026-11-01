@@ -36,13 +36,21 @@ So: put a file in the flat ROOT to use it for ALL games; put one in a
 trainerSet SUBFOLDERS (one per base game; ROM hacks share their base game's
 folder, so a picture there serves all of them):
   firered/                FireRed / LeafGreen, New Generations, Radical Red
-  emerald/                Emerald, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, Run & Bun, Blazing Emerald
+  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, Run & Bun, Blazing Emerald
   red-blue/               Red / Blue / Yellow
   gold-silver/            Gold / Silver / Crystal
-  platinum/               Platinum, Renegade Platinum
+  platinum/               Platinum, Diamond / Pearl, Renegade Platinum
   heartgold-soulsilver/   HeartGold, SoulSilver, Sacred Gold, Storm Silver
   black-white/            Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux
   infinite-fusion/        Pokémon Infinite Fusion (Classic), Pokémon Infinite Fusion (Remix)
+  black-2-white-2/        Black 2 / White 2
+  x-y/                    X / Y
+  omega-ruby-alpha-sapphire/Omega Ruby, Alpha Sapphire
+  sun-moon/               Sun, Moon
+  ultra-sun-ultra-moon/   Ultra Sun, Ultra Moon
+  sword-shield/           Sword, Shield
+  brilliant-diamond-shining-pearl/Brilliant Diamond / Shining Pearl
+  scarlet-violet/         Scarlet / Violet
   unbound/                Unbound
 
 NOTE ON THE RIVAL: every game calls its rival "Rivale" -> slug "rivale", but
@@ -54,7 +62,7 @@ games: one file in the root is enough, unless you want generation-accurate art
 - then drop a per-game copy in that game folder.
 
 BY FOLDER - the games using it, then every trainer in journey order
-(285 distinct slugs, 79 entries marked * without an automatic picture).
+(407 distinct slugs, 122 entries marked * without an automatic picture).
 A name listed under several folders can live once in the root instead.
 
   FireRed / LeafGreen, New Generations, Radical Red  ->  firered/   (59)
@@ -118,7 +126,7 @@ A name listed under several folders can live once in the root instead.
     erika-rematch.png           Erika Rematch
     admin-ariana.png            Admin Ariana
 
-  Emerald, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (96)
+  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (98)
     rivale.png                  Rivale (Rival)   *
     felizia.png                 Felizia (Roxanne)
     kamillo.png                 Kamillo (Brawly)
@@ -141,6 +149,8 @@ A name listed under several folders can live once in the root instead.
     dragan.png                  Dragan (Drake)
     wassili.png                 Wassili (Wallace)
     troy-trumm.png              Troy Trumm (Steven)
+    maike.png                   Maike (May)
+    jordis.png                  Jördis (Courtney)
     red.png                     Red
     brandan-optional.png        Brandan (optional)
     may-optional.png            May (optional)
@@ -257,7 +267,7 @@ A name listed under several folders can live once in the root instead.
     blau.png                    Blau (Blue)
     rot.png                     Rot (Red)
 
-  Platinum, Renegade Platinum  ->  platinum/   (48)
+  Platinum, Diamond / Pearl, Renegade Platinum  ->  platinum/   (48)
     rivale.png                  Rivale (Rival)
     veit.png                    Veit (Roark)
     mars.png                    Mars
@@ -412,6 +422,223 @@ A name listed under several folders can live once in the root instead.
     agatha.png                  Agatha
     lance.png                   Lance
     champ.png                   Champion
+
+  Black 2 / White 2  ->  black-2-white-2/   (20)
+    matisse.png                 Matisse (Hugh)
+    cheren.png                  Cheren
+    mica.png                    Mica (Roxie)
+    artie.png                   Artie (Burgh)
+    achromas.png                Achromas (Colress)
+    hin-her.png                 Hin & Her (Ingo & Emmet)
+    kamilla.png                 Kamilla (Elesa)
+    turner.png                  Turner (Clay)
+    geraldine.png               Géraldine (Skyla)
+    violaceus-rupel.png         Violaceus & Rüpel (Zinzolin & Grunt)
+    lysander.png                Lysander (Drayden)
+    violaceus.png               Violaceus (Zinzolin)
+    shadow.png                  Shadow   *
+    benson.png                  Benson (Marlon)
+    g-cis.png                   G-Cis (Ghetsis)
+    anissa.png                  Anissa (Shauntal)
+    astor.png                   Astor (Grimsley)
+    kattlea.png                 Kattlea (Caitlin)
+    eugen.png                   Eugen (Marshal)
+    lilia.png                   Lilia (Iris)
+
+  X / Y  ->  x-y/   (26)
+    sannah.png                  Sannah (Shauna)
+    viola.png                   Viola
+    professor-platan.png        Professor Platan (Sycamore)
+    tierno.png                  Tierno
+    trovato-tierno.png          Trovato & Tierno (Trevor & Tierno)
+    lino.png                    Lino (Grant)
+    connie.png                  Connie (Korrina)
+    serena.png                  Serena
+    amaro.png                   Amaro (Ramos)
+    aliana.png                  Aliana   *
+    citro.png                   Citro (Clemont)
+    valeria.png                 Valeria   *
+    calluna-begonia.png         Calluna & Begonia (Celosia & Bryony)   *
+    magnolia.png                Magnolia (Mable)
+    astrid.png                  Astrid (Olympia)
+    flordelis.png               Flordelis (Lysandre)
+    calluna.png                 Calluna (Celosia)   *
+    begonia.png                 Begonia (Bryony)
+    xeros.png                   Xeros (Xerosic)
+    trovato.png                 Trovato (Trevor)
+    galantho.png                Galantho (Wulfric)
+    pachira.png                 Pachira (Malva)
+    narcisse.png                Narcisse (Siebold)
+    thymelot.png                Thymelot (Wikstrom)
+    dracena.png                 Dracena (Drasna)
+    diantha.png                 Diantha
+
+  Omega Ruby, Alpha Sapphire  ->  omega-ruby-alpha-sapphire/   (26)
+    rivale.png                  Rivale (Rival)   *
+    felizia.png                 Felizia (Roxanne)
+    kamillo.png                 Kamillo (Brawly)
+    heiko.png                   Heiko (Wally)
+    walter.png                  Walter (Wattson)
+    kalle-rupel.png             Kalle & Rüpel (Tabitha & Grunt)
+    kalle.png                   Kalle (Tabitha)
+    maxie.png                   Maxie
+    flavia.png                  Flavia (Flannery)
+    norman.png                  Norman
+    jordis-rupel.png            Jördis & Rüpel (Courtney & Grunt)
+    johnson.png                 Johnson (Aarune)
+    wibke.png                   Wibke (Winona)
+    jordis.png                  Jördis (Courtney)
+    ben-svenja.png              Ben & Svenja (Tate & Liza)
+    wassili.png                 Wassili (Wallace)
+    ulrich.png                  Ulrich (Sidney)
+    antonia.png                 Antonia (Phoebe)
+    frosina.png                 Frosina (Glacia)
+    dragan.png                  Dragan (Drake)
+    troy-trumm.png              Troy Trumm (Steven)
+    kordula-rupel.png           Kordula & Rüpel (Shelly & Grunt)
+    kordula.png                 Kordula (Shelly)
+    archie.png                  Archie
+    wolfgang-rupel.png          Wolfgang & Rüpel (Matt & Grunt)
+    wolfgang.png                Wolfgang (Matt)
+
+  Sun, Moon  ->  sun-moon/   (25)
+    tali.png                    Tali (Hau)
+    elima.png                   Elima (Ilima)
+    prufung-von-elima.png       Prüfung von Elima (Ilima's trial)   *
+    hala.png                    Hala
+    dexio.png                   Dexio
+    gladio.png                  Gladio (Gladion)
+    prufung-von-tracy.png       Prüfung von Tracy (Lana's trial)   *
+    prufung-von-kiawe.png       Prüfung von Kiawe (Kiawe's trial)   *
+    prufung-von-maho.png        Prüfung von Maho (Mallow's trial)   *
+    fran.png                    Fran (Plumeria)
+    mayla.png                   Mayla (Island Kahuna Olivia)   *
+    marlon.png                  Marlon (Molayne)
+    sophocles-trial.png         Sophocles' trial   *
+    bromley.png                 Bromley (Guzma)
+    prufung-von-lola.png        Prüfung von Lola (Acerola's Trial)   *
+    yasu.png                    Yasu (Island Kahuna Nanu)   *
+    fabian.png                  Fabian (Faba)
+    fabian-angestellter.png     Fabian & Angestellter (Faba & Employee)
+    samantha.png                Samantha (Lusamine)
+    hapu-u.png                  Hapu’u (Island Kahuna Hapu)   *
+    kommo-o-s-trial.png         Kommo-o's Trial   *
+    lola.png                    Lola (Acerola)
+    kahili.png                  Kahili
+    professor-kukui.png         Professor Kukui (Kukui)
+    sina.png                    Sina
+
+  Ultra Sun, Ultra Moon  ->  ultra-sun-ultra-moon/   (39)
+    tali.png                    Tali (Hau)
+    elima.png                   Elima (Ilima)
+    prufung-von-elima.png       Prüfung von Elima (Ilima's Trial)   *
+    darus.png                   Darus (Dulse)
+    hala.png                    Hala (Island Kahuna Hala)   *
+    dexio.png                   Dexio
+    gladio.png                  Gladio (Gladion)
+    prufung-von-tracy.png       Prüfung von Tracy (Lana's Trial)   *
+    paniola-ranch.png           Paniola Ranch   *
+    prufung-von-kiawe.png       Prüfung von Kiawe (Kiawe's Trial)   *
+    prufung-von-maho.png        Prüfung von Maho (Mallow's Trial)   *
+    fran.png                    Fran (Plumeria)
+    mayla.png                   Mayla (Island Kahuna Olivia)   *
+    ryuki.png                   Ryuki
+    sophocles-trial.png         Sophocles' Trial   *
+    bromley.png                 Bromley (Guzma)
+    prufung-von-lola.png        Prüfung von Lola (Acerola's Trial)   *
+    yasu.png                    Yasu (Island Kahuna Nanu)   *
+    fabian.png                  Fabian (Faba)
+    fabian-angestellter.png     Fabian & Angestellter (Faba & Employee)
+    samantha.png                Samantha (Lusamine)
+    kommo-o-s-trial.png         Kommo-o's Trial   *
+    necrozma.png                Necrozma   *
+    matsurika.png               Matsurika (Captain Mina)   *
+    maho.png                    Maho (Captain Mallow)   *
+    kiawe.png                   Kiawe (Captain Kiawe)   *
+    chrys.png                   Chrys (Captain Sophocles)   *
+    prufung-von-matsurika.png   Prüfung von Matsurika (Mina's Trial)   *
+    hapu-u.png                  Hapu’u (Island Kahuna Hapu)   *
+    marlon.png                  Marlon (Molayne)
+    lola.png                    Lola (Acerola)
+    kahili.png                  Kahili
+    marc.png                    Marc (Maxie)
+    adrian.png                  Adrian (Archie)
+    zyrus.png                   Zyrus (Cyrus)
+    flordelis.png               Flordelis (Lysandre)
+    g-cis.png                   G-Cis (Ghetsis)
+    giovanni.png                Giovanni
+    mirin.png                   Mirin (Soliera)
+
+  Sword, Shield  ->  sword-shield/   (20)
+    hop.png                     Hop
+    betys.png                   Betys (Bede)
+    yarro.png                   Yarro (Milo)
+    kate.png                    Kate (Nessa)
+    mary.png                    Mary (Marnie)
+    kabu.png                    Kabu
+    saida.png                   Saida (Bea)
+    papella.png                 Papella (Opal)
+    mac.png                     Mac (Gordie)
+    nezz.png                    Nezz (Piers)
+    roy.png                     Roy (Raihan)
+    olivia.png                  Olivia (Oleana)
+    rose.png                    Rose
+    delion.png                  Delion (Champion Leon)   *
+    sophora.png                 Sophora (Klara)
+    mastrich.png                Mastrich (Mustard)
+    peony.png                   Peony
+    nio.png                     Nio (Allister)
+    mel.png                     Mel (Melony)
+    saverio.png                 Saverio (Avery)
+
+  Brilliant Diamond / Shining Pearl  ->  brilliant-diamond-shining-pearl/   (19)
+    barry.png                   Barry
+    veit.png                    Veit (Roark)
+    mars.png                    Mars
+    silvana.png                 Silvana (Gardenia)
+    jupiter.png                 Jupiter
+    hilda.png                   Hilda (Maylene)
+    marinus.png                 Marinus (Crasher Wake)
+    lamina.png                  Lamina (Fantina)
+    adam.png                    Adam (Byron)
+    saturn.png                  Saturn
+    frida.png                   Frida (Candice)
+    zyrus.png                   Zyrus (Cyrus)
+    mars-jupiter.png            Mars & Jupiter
+    volkner.png                 Volkner
+    herbaro.png                 Herbaro (Aaron)
+    teresa.png                  Teresa (Bertha)
+    ignaz.png                   Ignaz (Flint)
+    lucian.png                  Lucian
+    cynthia.png                 Cynthia
+
+  Scarlet / Violet  ->  scarlet-violet/   (26)
+    nemila.png                  Nemila (Nemona)   *
+    ronah.png                   Ronah (Katy)
+    stony-cliff-titan.png       Stony Cliff Titan   *
+    colzo.png                   Colzo (Brassius)
+    open-sky-titan.png          Open Sky Titan   *
+    pinio.png                   Pinio (Giacomo)
+    enigmara.png                Enigmara (Iono)
+    irsa.png                    Irsa (Mela)
+    lurking-steel-titan.png     Lurking Steel Titan   *
+    kombu.png                   Kombu (Kofu)
+    shugi.png                   Shugi (Atticus)
+    aoki.png                    Aoki (Larry)
+    etta.png                    Etta (Ryme)
+    quaking-earth-titan.png     Quaking Earth Titan   *
+    tulia.png                   Tulia (Tulip)
+    grusha.png                  Grusha
+    otis.png                    Otis (Ortega)
+    false-dragon-titan.png      False Dragon Titan   *
+    rioba.png                   Rioba (Eri)
+    cay.png                     Cay (Rika)
+    poppy.png                   Poppy
+    sinius.png                  Sinius (Hassel)
+    sagaria.png                 Sagaria (Geeta)
+    pepper.png                  Pepper (Arven)   *
+    clavel.png                  Clavel (Clive)   *
+    cosima.png                  Cosima (Penny)
 
   Unbound  ->  unbound/   (25)
     rival-axelrod.png           Rival Axelrod   *

@@ -1,0 +1,19 @@
+{
+  "id": "omega-ruby",
+  "sort": 17,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 6,
+  "dexLimit": 721,
+  "spriteSet": "modern",
+  "versionGroup": "omega-ruby-alpha-sapphire",
+  "trainerSet": "omega-ruby-alpha-sapphire",
+  "names": {
+    "de": "Omega Rubin",
+    "en": "Omega Ruby",
+    "fr": "Rubis Oméga",
+    "es": "Rubí Omega",
+    "it": "Rubino Omega"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (or)"
+}

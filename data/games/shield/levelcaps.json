@@ -1,0 +1,686 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Hop's House",
+      "en": "Hop's House",
+      "fr": "Hop's House",
+      "es": "Hop's House",
+      "it": "Hop's House"
+    },
+    "badge": null,
+    "max_level": 5
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Route 2",
+      "it": "Route 2"
+    },
+    "badge": null,
+    "max_level": 8
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Engine City",
+      "en": "Motostoke",
+      "fr": "Motorby",
+      "es": "Motostoke",
+      "it": "Motostoke"
+    },
+    "badge": null,
+    "max_level": 14
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Betys",
+      "en": "Bede",
+      "fr": "Travis",
+      "es": "Berto",
+      "it": "Beet"
+    },
+    "location": {
+      "de": "Galar Mine Exit",
+      "en": "Galar Mine Exit",
+      "fr": "Galar Mine Exit",
+      "es": "Galar Mine Exit",
+      "it": "Galar Mine Exit"
+    },
+    "badge": null,
+    "max_level": 16
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Yarro",
+      "en": "Milo",
+      "fr": "Percy",
+      "es": "Percy",
+      "it": "Yarrow"
+    },
+    "location": {
+      "de": "Turffield",
+      "en": "Turffield",
+      "fr": "Greenbury",
+      "es": "Turffield",
+      "it": "Turffield"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Route 5",
+      "it": "Route 5"
+    },
+    "badge": null,
+    "max_level": 21
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Kate",
+      "en": "Nessa",
+      "fr": "Donna",
+      "es": "Cathy",
+      "it": "Azzurra"
+    },
+    "location": {
+      "de": "Keelton",
+      "en": "Hulbury",
+      "fr": "Skifford",
+      "es": "Hulbury",
+      "it": "Hulbury"
+    },
+    "badge": null,
+    "max_level": 24
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Betys",
+      "en": "Bede",
+      "fr": "Travis",
+      "es": "Berto",
+      "it": "Beet"
+    },
+    "location": {
+      "de": "Galar Mine No.2 Exit",
+      "en": "Galar Mine No.2 Exit",
+      "fr": "Galar Mine No.2 Exit",
+      "es": "Galar Mine No.2 Exit",
+      "it": "Galar Mine No.2 Exit"
+    },
+    "badge": null,
+    "max_level": 23
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Mary",
+      "en": "Marnie",
+      "fr": "Rosemary",
+      "es": "Roxy",
+      "it": "Mary"
+    },
+    "location": {
+      "de": "Budew Drop Inn",
+      "en": "Budew Drop Inn",
+      "fr": "Budew Drop Inn",
+      "es": "Budew Drop Inn",
+      "it": "Budew Drop Inn"
+    },
+    "badge": null,
+    "max_level": 26
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Kabu",
+      "en": "Kabu",
+      "fr": "Kabu",
+      "es": "Naboru",
+      "it": "Kabu"
+    },
+    "location": {
+      "de": "Engine City",
+      "en": "Motostoke",
+      "fr": "Motorby",
+      "es": "Motostoke",
+      "it": "Motostoke"
+    },
+    "badge": null,
+    "max_level": 27
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Route 6",
+      "it": "Route 6"
+    },
+    "badge": null,
+    "max_level": 33
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Nio",
+      "en": "Allister",
+      "fr": "Alistair",
+      "es": "Alistair",
+      "it": "Onion"
+    },
+    "location": {
+      "de": "Passbeck",
+      "en": "Stow-on-Side",
+      "fr": "Old Chister",
+      "es": "Stow-on-Side",
+      "it": "Stow-on-Side"
+    },
+    "badge": null,
+    "max_level": 36
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Betys",
+      "en": "Bede",
+      "fr": "Travis",
+      "es": "Berto",
+      "it": "Beet"
+    },
+    "location": {
+      "de": "Stow-on-Side Monument",
+      "en": "Stow-on-Side Monument",
+      "fr": "Stow-on-Side Monument",
+      "es": "Stow-on-Side Monument",
+      "it": "Stow-on-Side Monument"
+    },
+    "badge": null,
+    "max_level": 35
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Papella",
+      "en": "Opal",
+      "fr": "Sally",
+      "es": "Sally",
+      "it": "Poppy"
+    },
+    "location": {
+      "de": "Fairballey",
+      "en": "Ballonlea",
+      "fr": "Corrifey",
+      "es": "Ballonlea",
+      "it": "Ballonlea"
+    },
+    "badge": null,
+    "max_level": 38
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Route 7",
+      "it": "Route 7"
+    },
+    "badge": null,
+    "max_level": 37
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Route 8",
+      "it": "Route 8"
+    },
+    "badge": null,
+    "max_level": 41
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Mel",
+      "en": "Melony",
+      "fr": "Lona",
+      "es": "Mel",
+      "it": "Melania"
+    },
+    "location": {
+      "de": "Circhester",
+      "en": "Circhester",
+      "fr": "Ludester",
+      "es": "Circhester",
+      "it": "Circhester"
+    },
+    "badge": null,
+    "max_level": 42
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Mary",
+      "en": "Marnie",
+      "fr": "Rosemary",
+      "es": "Roxy",
+      "it": "Mary"
+    },
+    "location": {
+      "de": "Outer Spikemouth",
+      "en": "Outer Spikemouth",
+      "fr": "Outer Spikemouth",
+      "es": "Outer Spikemouth",
+      "it": "Outer Spikemouth"
+    },
+    "badge": null,
+    "max_level": 44
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Nezz",
+      "en": "Piers",
+      "fr": "Peterson",
+      "es": "Nerio",
+      "it": "Ginepro"
+    },
+    "location": {
+      "de": "Spikemouth Gym",
+      "en": "Spikemouth Gym",
+      "fr": "Spikemouth Gym",
+      "es": "Spikemouth Gym",
+      "it": "Spikemouth Gym"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Roy",
+      "en": "Raihan",
+      "fr": "Roy",
+      "es": "Roy",
+      "it": "Laburno"
+    },
+    "location": {
+      "de": "Hammerlock Gym",
+      "en": "Hammerlock Gym",
+      "fr": "Hammerlock Gym",
+      "es": "Hammerlock Gym",
+      "it": "Hammerlock Gym"
+    },
+    "badge": null,
+    "max_level": 48
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Mary",
+      "en": "Marnie",
+      "fr": "Rosemary",
+      "es": "Roxy",
+      "it": "Mary"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Hop",
+      "en": "Hop",
+      "fr": "Nabil",
+      "es": "Paul",
+      "it": "Hop"
+    },
+    "location": {
+      "de": "Top 4",
+      "en": "Elite Four",
+      "fr": "Conseil 4",
+      "es": "Alto Mando",
+      "it": "Superquattro"
+    },
+    "badge": null,
+    "max_level": 49
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Olivia",
+      "en": "Oleana",
+      "fr": "Liv",
+      "es": "Olivia",
+      "it": "Olive"
+    },
+    "location": {
+      "de": "Rose Tower",
+      "en": "Rose Tower",
+      "fr": "Rose Tower",
+      "es": "Rose Tower",
+      "it": "Rose Tower"
+    },
+    "badge": null,
+    "max_level": 52
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Betys",
+      "en": "Bede",
+      "fr": "Travis",
+      "es": "Berto",
+      "it": "Beet"
+    },
+    "location": {
+      "de": "Wyndon Championship Match",
+      "en": "Wyndon Championship Match",
+      "fr": "Wyndon Championship Match",
+      "es": "Wyndon Championship Match",
+      "it": "Wyndon Championship Match"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Kate",
+      "en": "Nessa",
+      "fr": "Donna",
+      "es": "Cathy",
+      "it": "Azzurra"
+    },
+    "location": {
+      "de": "Wyndon Championship Match",
+      "en": "Wyndon Championship Match",
+      "fr": "Wyndon Championship Match",
+      "es": "Wyndon Championship Match",
+      "it": "Wyndon Championship Match"
+    },
+    "badge": null,
+    "max_level": 53
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Nio",
+      "en": "Allister",
+      "fr": "Alistair",
+      "es": "Alistair",
+      "it": "Onion"
+    },
+    "location": {
+      "de": "Wyndon Championship Match",
+      "en": "Wyndon Championship Match",
+      "fr": "Wyndon Championship Match",
+      "es": "Wyndon Championship Match",
+      "it": "Wyndon Championship Match"
+    },
+    "badge": null,
+    "max_level": 54
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Roy",
+      "en": "Raihan",
+      "fr": "Roy",
+      "es": "Roy",
+      "it": "Laburno"
+    },
+    "location": {
+      "de": "Wyndon Championship Match",
+      "en": "Wyndon Championship Match",
+      "fr": "Wyndon Championship Match",
+      "es": "Wyndon Championship Match",
+      "it": "Wyndon Championship Match"
+    },
+    "badge": null,
+    "max_level": 55
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Rose",
+      "en": "Rose",
+      "fr": "Shehroz",
+      "es": "Rose",
+      "it": "Rose"
+    },
+    "location": {
+      "de": "Energy Plant",
+      "en": "Energy Plant",
+      "fr": "Energy Plant",
+      "es": "Energy Plant",
+      "it": "Energy Plant"
+    },
+    "badge": null,
+    "max_level": 57
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Delion",
+      "en": "Champion Leon",
+      "fr": "Tarak",
+      "es": "Lionel",
+      "it": "Dandel"
+    },
+    "location": {
+      "de": "Wyndon Championship Final",
+      "en": "Wyndon Championship Final",
+      "fr": "Wyndon Championship Final",
+      "es": "Wyndon Championship Final",
+      "it": "Wyndon Championship Final"
+    },
+    "badge": null,
+    "max_level": 65
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Saverio",
+      "en": "Avery",
+      "fr": "Saturnin",
+      "es": "Dreo",
+      "it": "Savory"
+    },
+    "location": {
+      "de": "Grußgefilde",
+      "en": "Fields of Honor",
+      "fr": "Plaine Salutation",
+      "es": "Fields of Honor",
+      "it": "Fields of Honor"
+    },
+    "badge": null,
+    "max_level": 60
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Mastrich",
+      "en": "Mustard",
+      "fr": "Mustar",
+      "es": "Mostaz",
+      "it": "Mustard"
+    },
+    "location": {
+      "de": "Master-Dojo",
+      "en": "Master Dojo",
+      "fr": "Dojo de la Maîtrise",
+      "es": "Master Dojo",
+      "it": "Master Dojo"
+    },
+    "badge": null,
+    "max_level": 61
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Saverio",
+      "en": "Avery",
+      "fr": "Saturnin",
+      "es": "Dreo",
+      "it": "Savory"
+    },
+    "location": {
+      "de": "Aufwärmtunnel",
+      "en": "Warm-Up Tunnel",
+      "fr": "Voie des Étirements",
+      "es": "Warm-Up Tunnel",
+      "it": "Warm-Up Tunnel"
+    },
+    "badge": null,
+    "max_level": 62
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Saverio",
+      "en": "Avery",
+      "fr": "Saturnin",
+      "es": "Dreo",
+      "it": "Savory"
+    },
+    "location": {
+      "de": "Battle Court",
+      "en": "Battle Court",
+      "fr": "Battle Court",
+      "es": "Battle Court",
+      "it": "Battle Court"
+    },
+    "badge": null,
+    "max_level": 67
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Mastrich",
+      "en": "Master Mustard",
+      "fr": "Mustar",
+      "es": "Mostaz",
+      "it": "Mustard"
+    },
+    "location": {
+      "de": "Battle Court",
+      "en": "Battle Court",
+      "fr": "Battle Court",
+      "es": "Battle Court",
+      "it": "Battle Court"
+    },
+    "badge": null,
+    "max_level": 80
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Peony",
+      "en": "Peony",
+      "fr": "Dhilan",
+      "es": "Peony",
+      "it": "Peony"
+    },
+    "location": {
+      "de": "Slippery Slope Ambush",
+      "en": "Slippery Slope Ambush",
+      "fr": "Slippery Slope Ambush",
+      "es": "Slippery Slope Ambush",
+      "it": "Slippery Slope Ambush"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Peony",
+      "en": "Peony",
+      "fr": "Dhilan",
+      "es": "Peony",
+      "it": "Peony"
+    },
+    "location": {
+      "de": "Dyna-Riesennest",
+      "en": "Max Lair",
+      "fr": "Grand Antre Dynamax",
+      "es": "Max Lair",
+      "it": "Max Lair"
+    },
+    "badge": null,
+    "max_level": 74
+  }
+]

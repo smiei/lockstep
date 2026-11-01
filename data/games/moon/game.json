@@ -1,0 +1,20 @@
+{
+  "id": "moon",
+  "sort": 20,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 7,
+  "dexLimit": 802,
+  "spriteSet": "modern",
+  "versionGroup": "sun-moon",
+  "trainerSet": "sun-moon",
+  "regionalForms": true,
+  "names": {
+    "de": "Mond",
+    "en": "Moon",
+    "fr": "Lune",
+    "es": "Luna",
+    "it": "Luna"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (moon)"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "sapphire",
+  "sort": 13,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 3,
+  "dexLimit": 386,
+  "spriteSet": "emerald",
+  "versionGroup": "ruby-sapphire",
+  "trainerSet": "emerald",
+  "names": {
+    "de": "Saphir",
+    "en": "Sapphire",
+    "fr": "Saphir",
+    "es": "Zafiro",
+    "it": "Zaffiro"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (saph)"
+}

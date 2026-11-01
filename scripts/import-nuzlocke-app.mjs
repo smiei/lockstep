@@ -33,6 +33,7 @@
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { composeBossName } from "./trainer-name-parts.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -72,6 +73,55 @@ const HACKS = [
   { id: "run-and-bun", src: "emrunbun", base: "emerald", name: "Run & Bun", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 44 },
   { id: "blazing-emerald", src: "blazingem", base: "emerald", name: "Blazing Emerald", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 45 },
 ];
+
+// Official games nuzlocke.app covers and this app had no pack for. Same route
+// and boss mapping as the hacks, without patches. A pair whose route and boss
+// lists are identical in the source shares one pack (X/Y); a pair that
+// differs gets one each (Sword's and Shield's gym leaders differ). `base`
+// lends names, places, badges and trainer pictures where the game revisits a
+// region we have (ORAS -> Emerald); everything else is named from PokeAPI's
+// locations (data/shared/location-names.json, `region`). `dexLimit` is the
+// game's national dex reach; `regionalForms` makes Alolan & co. catchable.
+const GAME_NAMES = {
+  ruby: { de: "Rubin", en: "Ruby", fr: "Rubis", es: "Rubí", it: "Rubino" },
+  sapphire: { de: "Saphir", en: "Sapphire", fr: "Saphir", es: "Zafiro", it: "Zaffiro" },
+  "diamond-pearl": { de: "Diamant / Perl", en: "Diamond / Pearl", fr: "Diamant / Perle", es: "Diamante / Perla", it: "Diamante / Perla" },
+  "black-2-white-2": { de: "Schwarz 2 / Weiß 2", en: "Black 2 / White 2", fr: "Noire 2 / Blanche 2", es: "Negro 2 / Blanco 2", it: "Nero 2 / Bianco 2" },
+  "x-y": { de: "X / Y", en: "X / Y", fr: "X / Y", es: "X / Y", it: "X / Y" },
+  "omega-ruby": { de: "Omega Rubin", en: "Omega Ruby", fr: "Rubis Oméga", es: "Rubí Omega", it: "Rubino Omega" },
+  "alpha-sapphire": { de: "Alpha Saphir", en: "Alpha Sapphire", fr: "Saphir Alpha", es: "Zafiro Alfa", it: "Zaffiro Alpha" },
+  sun: { de: "Sonne", en: "Sun", fr: "Soleil", es: "Sol", it: "Sole" },
+  moon: { de: "Mond", en: "Moon", fr: "Lune", es: "Luna", it: "Luna" },
+  "ultra-sun": { de: "Ultrasonne", en: "Ultra Sun", fr: "Ultra-Soleil", es: "Ultrasol", it: "Ultrasole" },
+  "ultra-moon": { de: "Ultramond", en: "Ultra Moon", fr: "Ultra-Lune", es: "Ultraluna", it: "Ultraluna" },
+  sword: { de: "Schwert", en: "Sword", fr: "Épée", es: "Espada", it: "Spada" },
+  shield: { de: "Schild", en: "Shield", fr: "Bouclier", es: "Escudo", it: "Scudo" },
+  "brilliant-diamond-shining-pearl": {
+    de: "Strahlender Diamant / Leuchtende Perle",
+    en: "Brilliant Diamond / Shining Pearl",
+    fr: "Diamant Étincelant / Perle Scintillante",
+    es: "Diamante Brillante / Perla Reluciente",
+    it: "Diamante Lucente / Perla Splendente",
+  },
+  "scarlet-violet": { de: "Karmesin / Purpur", en: "Scarlet / Violet", fr: "Écarlate / Violet", es: "Escarlata / Púrpura", it: "Scarlatto / Violetto" },
+};
+const OFFICIAL = [
+  { id: "ruby", src: "ruby", league: "rs", base: "emerald", region: "hoenn", generation: 3, dexLimit: 386, spriteSet: "emerald", versionGroup: "ruby-sapphire", sort: 12 },
+  { id: "sapphire", src: "saph", league: "rs", base: "emerald", region: "hoenn", generation: 3, dexLimit: 386, spriteSet: "emerald", versionGroup: "ruby-sapphire", sort: 13 },
+  { id: "diamond-pearl", src: "d", league: "dp", base: "platinum", region: "sinnoh", generation: 4, dexLimit: 493, spriteSet: "platinum", versionGroup: "diamond-pearl", sort: 14 },
+  { id: "black-2-white-2", src: "bl2n", league: "b2w2", base: "black", trainerSet: "black-2-white-2", region: "unova", generation: 5, dexLimit: 649, spriteSet: "black-white", versionGroup: "black-2-white-2", sort: 15 },
+  { id: "x-y", src: "x", league: "xy", region: "kalos", generation: 6, dexLimit: 721, spriteSet: "modern", versionGroup: "x-y", sort: 16 },
+  { id: "omega-ruby", src: "or", league: "oras", base: "emerald", trainerSet: "omega-ruby-alpha-sapphire", region: "hoenn", generation: 6, dexLimit: 721, spriteSet: "modern", versionGroup: "omega-ruby-alpha-sapphire", sort: 17 },
+  { id: "alpha-sapphire", src: "as", league: "oras", base: "emerald", trainerSet: "omega-ruby-alpha-sapphire", region: "hoenn", generation: 6, dexLimit: 721, spriteSet: "modern", versionGroup: "omega-ruby-alpha-sapphire", sort: 18 },
+  { id: "sun", src: "sun", league: "sm", trainerSet: "sun-moon", region: "alola", generation: 7, dexLimit: 802, regionalForms: true, spriteSet: "modern", versionGroup: "sun-moon", sort: 19 },
+  { id: "moon", src: "moon", league: "sm", trainerSet: "sun-moon", region: "alola", generation: 7, dexLimit: 802, regionalForms: true, spriteSet: "modern", versionGroup: "sun-moon", sort: 20 },
+  { id: "ultra-sun", src: "usun", league: "usum", trainerSet: "ultra-sun-ultra-moon", region: "alola", generation: 7, dexLimit: 807, regionalForms: true, spriteSet: "modern", versionGroup: "ultra-sun-ultra-moon", sort: 21 },
+  { id: "ultra-moon", src: "umoon", league: "usum", trainerSet: "ultra-sun-ultra-moon", region: "alola", generation: 7, dexLimit: 807, regionalForms: true, spriteSet: "modern", versionGroup: "ultra-sun-ultra-moon", sort: 22 },
+  { id: "sword", src: "sw", league: "swsh", trainerSet: "sword-shield", region: "galar", generation: 8, dexLimit: 898, regionalForms: true, spriteSet: "modern", versionGroup: "sword-shield", sort: 23 },
+  { id: "shield", src: "sh", league: "swsh", trainerSet: "sword-shield", region: "galar", generation: 8, dexLimit: 898, regionalForms: true, spriteSet: "modern", versionGroup: "sword-shield", sort: 24 },
+  { id: "brilliant-diamond-shining-pearl", src: "bd", league: "bdsp", base: "platinum", trainerSet: "brilliant-diamond-shining-pearl", region: "sinnoh", generation: 8, dexLimit: 493, spriteSet: "modern", versionGroup: "brilliant-diamond-and-shining-pearl", sort: 25 },
+  { id: "scarlet-violet", src: "sc", league: "sv", trainerSet: "scarlet-violet", region: "paldea", generation: 9, dexLimit: 1025, regionalForms: true, spriteSet: "modern", versionGroup: "scarlet-violet", sort: 26 },
+].map((game) => ({ ...game, kind: "official", dataGeneration: game.generation, names: GAME_NAMES[game.id] }));
 
 const STAT_KEYS = { hp: "KP", atk: "Ang.", def: "Vert.", spa: "Sp.-A.", spd: "Sp.-V.", spe: "Init." };
 const LANGS = ["de", "en", "fr", "es", "it"];
@@ -121,6 +171,33 @@ const REGION_LABELS = {
   hoenn: { de: "Hoenn-Form", en: "Hoennian Form", fr: "Forme de Hoenn", es: "Forma de Hoenn", it: "Forma di Hoenn" },
 };
 const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
+
+// How the source spells a place where PokeAPI spells it otherwise: typos,
+// Paldea's shortened areas ("South Province (A1)" = "... (Area One)"), a
+// leading "The", and one mountain split in two where PokeAPI has it once.
+const PLACE_ALIASES = {
+  "dalizapa passagea": "Dalizapa Passage",
+  "tagree thicket": "Tagtree Thicket",
+  "glaseado mountain south": "Glaseado Mountain",
+  "glaseado mountain north": "Glaseado Mountain",
+  "thrify megamart": "Thrifty Megamart",
+  "digletts tunnel": "Diglett’s Tunnel",
+  "berry fields": "Alola Berry Fields",
+  "tower of mystery": "Tower of Mastery",
+  "santlune": "Santalune City",
+  "aquacode town": "Aquacorde Town",
+  "turfield": "Turffield",
+  "weat province a1": "West Province (Area One)",
+};
+const AREA_WORDS = ["One", "Two", "Three", "Four", "Five", "Six"];
+function placeKey(name) {
+  // A gym is named after its town, which is what the older packs show there.
+  const town = name.replace(/\s+Gym$/i, "");
+  const alias = PLACE_ALIASES[key(town)];
+  if (alias) return alias;
+  if (town !== name) return placeKey(town);
+  return name.replace(/^The\s+/i, "").replace(/\(A([1-6])\)/, (_, n) => `(Area ${AREA_WORDS[n - 1]})`);
+}
 
 // One hack's fakemon as pokemon.json-shaped entries (see the header).
 function buildFakemon(hack, source, { resolve, species, catchRates, idOf }) {
@@ -210,9 +287,20 @@ function highestLevel(boss) {
 }
 
 async function main() {
+  // `node scripts/import-nuzlocke-app.mjs` = every hack and official game;
+  // a pack id = just that one; `hacks` / `official` = one of the two lists.
   const only = process.argv[2];
-  const hacks = only ? HACKS.filter((h) => h.id === only) : HACKS;
-  if (hacks.length === 0) throw new Error(`unknown hack "${only}"`);
+  const all = [...HACKS.map((h) => ({ ...h, kind: "romhack" })), ...OFFICIAL];
+  const hacks =
+    only === "hacks" ? all.filter((g) => g.kind === "romhack")
+    : only === "official" ? all.filter((g) => g.kind === "official")
+    : only ? all.filter((g) => g.id === only)
+    : all;
+  if (hacks.length === 0) throw new Error(`unknown pack "${only}"`);
+  const locationNames = (await readJson(path.join(dataDir, "shared", "location-names.json"))).regions;
+  // Bosses no base pack names: their people's names from Bulbapedia
+  // (generate-trainer-names.mjs), put together per trainer-name-parts.mjs.
+  const trainerNames = (await readJson(path.join(dataDir, "shared", "trainer-names.json"))).names;
 
   const [sourceRoutes, sourceLeague, sourcePatches] = await Promise.all(["routes", "league", "patches"].map(fetchJson));
   const pokemon = await readJson(path.join(dataDir, "pokemon.json"));
@@ -238,14 +326,30 @@ async function main() {
   const maxDex = Math.max(...pokemon.filter((p) => p.baseId === undefined).map((p) => p.id));
 
   for (const hack of hacks) {
-    const base = path.join(dataDir, "games", hack.base);
-    const baseGame = await readJson(path.join(base, "game.json"));
-    const baseRoutes = await readJson(path.join(base, "routes.json"));
-    const baseCaps = await readJson(path.join(base, "levelcaps.json"));
+    const base = hack.base ? path.join(dataDir, "games", hack.base) : null;
+    const baseGame = base ? await readJson(path.join(base, "game.json")) : null;
+    const baseRoutes = base ? await readJson(path.join(base, "routes.json")) : [];
+    const baseCaps = base ? await readJson(path.join(base, "levelcaps.json")) : [];
     const routeByName = new Map(baseRoutes.map((r) => [key(r.names.en), r]));
+    // A place no pack of ours has: its PokeAPI name in every language it has.
+    const places = new Map(Object.entries(locationNames[hack.region] ?? {}).map(([en, names]) => [key(en), names]));
+    // Towns are "Cyllage City" in one source and "Cyllage" in the other.
+    const placeNames = (name) => {
+      const base = placeKey(name);
+      const bare = base.replace(/\s+(City|Town)$/i, "");
+      for (const candidate of [base, bare, `${bare} City`, `${bare} Town`]) {
+        const found = places.get(key(candidate));
+        // A language PokeAPI lacks shows the English name, as it would anyway.
+        if (found) return Object.fromEntries(LANGS.map((lang) => [lang, found[lang] ?? found.en]));
+      }
+      return allLangs(name);
+    };
     const capByName = new Map();
     for (const cap of baseCaps) if (!capByName.has(key(cap.names.en))) capByName.set(key(cap.names.en), cap);
-    const e4Base = baseCaps.find((cap) => cap.location.en === "Elite Four")?.location ?? allLangs("Elite Four");
+    // The Elite Four block's place, as every existing pack writes it.
+    const e4Base = baseCaps.find((cap) => cap.location.en === "Elite Four")?.location ?? {
+      de: "Top 4", en: "Elite Four", fr: "Conseil 4", es: "Alto Mando", it: "Superquattro",
+    };
 
     const entries = sourceRoutes[hack.routes ?? hack.src];
     const league = sourceLeague[hack.league ?? hack.src] ?? {};
@@ -257,7 +361,7 @@ async function main() {
       const match = routeByName.get(key(entry.name));
       const route = {
         id: routes.length + 1,
-        names: match ? match.names : allLangs(entry.name),
+        names: match ? match.names : placeNames(entry.name),
         type: match?.type ?? (/^(starter|gift|fossil)/i.test(entry.name) ? "static" : "route"),
       };
       if (match?.postgame) route.postgame = true;
@@ -274,7 +378,7 @@ async function main() {
       const inE4 = firstE4 >= 0 && i >= firstE4 && i < e4End;
       const cap = {
         id: i + 1,
-        names: match ? match.names : allLangs(gym.boss || gym.name),
+        names: match ? match.names : (composeBossName(gym.boss || gym.name, trainerNames) ?? allLangs(gym.boss || gym.name)),
         // A base-game place is only borrowed for a gym leader, and never the
         // base game's "Elite Four" outside the block (Wallace leads a gym in
         // Ruby/Sapphire but is Emerald's Champion).
@@ -282,7 +386,7 @@ async function main() {
           ? e4Base
           : match && gym.group === "gym-leader" && match.location.en !== "Elite Four"
             ? match.location
-            : allLangs(gym.name),
+            : placeNames(gym.name),
         badge: gym.group === "gym-leader" && match?.badge && !inE4 ? match.badge : null,
         max_level: highestLevel(league[gym.value]),
       };
@@ -291,7 +395,8 @@ async function main() {
     });
 
     // Species and moves from the hack's patches ---------------------------------
-    const patch = sourcePatches[hack.patch ?? hack.src] ?? {};
+    // (none for an official game - its data is this app's own)
+    const patch = hack.kind === "romhack" ? (sourcePatches[hack.patch ?? hack.src] ?? {}) : {};
     const species = [];
     // Direct hits first, so a cosmetic fallback (meowstic-female -> Meowstic)
     // never replaces the species' own entry; one entry per id.
@@ -348,17 +453,17 @@ async function main() {
     const game = {
       id: hack.id,
       sort: hack.sort,
-      kind: "romhack",
+      kind: hack.kind,
       dataStatus: "unverified",
       generation: hack.generation,
       ...(hack.dataGeneration !== hack.generation ? { dataGeneration: hack.dataGeneration } : {}),
-      dexLimit: Math.min(GEN_MAX_ID[hack.dataGeneration], maxDex),
+      dexLimit: Math.min(hack.dexLimit ?? GEN_MAX_ID[hack.dataGeneration], maxDex),
       spriteSet: hack.spriteSet,
       versionGroup: hack.versionGroup,
-      trainerSet: hack.trainerSet ?? baseGame.trainerSet ?? baseGame.id,
+      trainerSet: hack.trainerSet ?? baseGame?.trainerSet ?? baseGame?.id ?? hack.id,
       ...(species.length ? { speciesData: hack.id } : {}),
-      ...(regionalForms ? { regionalForms: true } : {}),
-      names: allLangs(hack.name),
+      ...(regionalForms || hack.regionalForms ? { regionalForms: true } : {}),
+      names: hack.names ?? allLangs(hack.name),
       source: `${SOURCE_REPO}@${SOURCE_COMMIT.slice(0, 7)} (${hack.src})`,
     };
 
@@ -377,9 +482,10 @@ async function main() {
         json({ source: `${SOURCE_REPO}@${SOURCE_COMMIT} patches.json (${hack.patch ?? hack.src})`, sourceVersion: SOURCE_COMMIT.slice(0, 7), generatedAt: new Date().toISOString(), species }),
       );
     }
-    const matchedRoutes = routes.filter((r) => r.names.de !== r.names.en || routeByName.has(key(r.names.en))).length;
+    const named = routes.filter((r) => r.names.de !== r.names.en || routeByName.has(key(r.names.en)) || places.has(key(r.names.en))).length;
+    const namedBosses = levelcaps.filter((c) => c.names.de !== c.names.en).length;
     console.log(
-      `${hack.id}: ${routes.length} routes (${matchedRoutes} named from ${hack.base}), ${levelcaps.length} bosses, ` +
+      `${hack.id}: ${routes.length} routes (${named} localized), ${levelcaps.length} bosses (${namedBosses} localized), ` +
         `${species.length} species changed, ${Object.keys(moveOverrides).length} moves changed` +
         (regionalForms ? ", regional forms" : "") +
         (own.length ? `, ${own.length} own Pokémon` : "") +

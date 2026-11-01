@@ -1,0 +1,794 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Hau'oli Outskirts",
+      "en": "Hau'oli Outskirts",
+      "fr": "Hau'oli Outskirts",
+      "es": "Hau'oli Outskirts",
+      "it": "Hau'oli Outskirts"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Trainer's School",
+      "en": "Trainer's School",
+      "fr": "Trainer's School",
+      "es": "Trainer's School",
+      "it": "Trainer's School"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Hauholi City",
+      "en": "Hau’oli City",
+      "fr": "Ekaeka",
+      "es": "Ciudad Hauoli",
+      "it": "Hau’oli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Hauholi-Friedhof",
+      "en": "Hau’oli Cemetery",
+      "fr": "Cimetière d’Ekaeka",
+      "es": "Cementerio de Hauoli",
+      "it": "Cimitero di Hau’oli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Alola-Beerenfelder",
+      "en": "Alola Berry Fields",
+      "fr": "Champ de Baies d'Alola",
+      "es": "Huerto de Bayas de Alola",
+      "it": "Orto delle Bacche di Alola"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Vegetationshöhle",
+      "en": "Verdant Cavern",
+      "fr": "Grotte Verdoyante",
+      "es": "Cueva Sotobosque",
+      "it": "Grotta Sottobosco"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Mele-Mele-Blumenmeer",
+      "en": "Melemele Meadow",
+      "fr": "Jardin de Mele-Mele",
+      "es": "Jardines de Melemele",
+      "it": "Prato Mele Mele"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Meereshöhle",
+      "en": "Seaward Cave",
+      "fr": "Grotte Verlamer",
+      "es": "Gruta Unemar",
+      "it": "Grotta Pratomare"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Kala’e-Bucht",
+      "en": "Kala’e Bay",
+      "fr": "Baie de Kala’e",
+      "es": "Bahía Kalae",
+      "it": "Baia Kala’e"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Tenkarat-Hügel",
+      "en": "Ten Carat Hill",
+      "fr": "Colline Dicarat",
+      "es": "Colina Dequilate",
+      "it": "Collina Diecicarati"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Ohana",
+      "en": "Paniola Town",
+      "fr": "Ohana",
+      "es": "Pueblo Ohana",
+      "it": "Ohana"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Ohana-Farm",
+      "en": "Paniola Ranch",
+      "fr": "Ranch Ohana",
+      "es": "Rancho Ohana",
+      "it": "Fattoria Ohana"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Plätscherhügel",
+      "en": "Brooklet Hill",
+      "fr": "Colline Clapotis",
+      "es": "Colina Saltagua",
+      "it": "Collina Scrosciante"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Ruta 6",
+      "it": "Percorso 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Avenue Royale",
+      "en": "Royal Avenue",
+      "fr": "Rue du Dôme Royal",
+      "es": "Avenida Royale",
+      "it": "Viale Royale"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Wela-Vulkanpark",
+      "en": "Wela Volcano Park",
+      "fr": "Parc Volcanique",
+      "es": "Área Volcánica Wela",
+      "it": "Parco Vulcano Wela"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Meer von Mele-Mele",
+      "en": "Melemele Sea",
+      "fr": "Mer de Mele-Mele",
+      "es": "Mar de Melemele",
+      "it": "Mare di Mele Mele"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Spaltberg-Tunnel",
+      "en": "Dividing Peak Tunnel",
+      "fr": "Tunnel Perce-Mont",
+      "es": "Dividing Peak Tunnel",
+      "it": "Dividing Peak Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Fossil Restoration Center",
+      "en": "Fossil Restoration Center",
+      "fr": "Fossil Restoration Center",
+      "es": "Fossil Restoration Center",
+      "it": "Fossil Restoration Center"
+    },
+    "type": "static"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Schattendschungel",
+      "en": "Lush Jungle",
+      "fr": "Jungle Sombrefeuille",
+      "es": "Jungla Umbría",
+      "it": "Giungla Ombrosa"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Digda-Tunnel",
+      "en": "Diglett’s Tunnel",
+      "fr": "Tunnel Taupiqueur",
+      "es": "Túnel Diglett",
+      "it": "Tunnel Diglett"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Konikoni City",
+      "en": "Konikoni City",
+      "fr": "Konikoni",
+      "es": "Ciudad Konikoni",
+      "it": "Konikoni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Hügel des Gedenkens",
+      "en": "Memorial Hill",
+      "fr": "Colline Memento",
+      "es": "Colina del Recuerdo",
+      "it": "Colle della Memoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Akala-Küstenstreifen",
+      "en": "Akala Outskirts",
+      "fr": "Côte Reculée d’Akala",
+      "es": "Afueras de Akala",
+      "it": "Punta Akala"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Hanohano-Strand",
+      "en": "Hano Beach",
+      "fr": "Plage Hano-Hano",
+      "es": "Playa de Hanohano",
+      "it": "Spiaggia Hanu Hanu"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Malihe City",
+      "en": "Malie City",
+      "fr": "Malié",
+      "es": "Ciudad Malíe",
+      "it": "Malie"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Malihe-Ziergarten",
+      "en": "Malie Garden",
+      "fr": "Parc de Malié",
+      "es": "Parque de Malíe",
+      "it": "Giardino di Malie"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Ruta 10",
+      "it": "Percorso 10"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Hokulani-Berg",
+      "en": "Mount Hokulani",
+      "fr": "Mont Hokulani",
+      "es": "Pico Hokulani",
+      "it": "Picco Hokulani"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Glühberg",
+      "en": "Blush Mountain",
+      "fr": "Mont Ardent",
+      "es": "Monte Rubor",
+      "it": "Monte Tepore"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Strand von Ula-Ula",
+      "en": "Ula'ula Beach",
+      "fr": "Plage d'Ula-Ula",
+      "es": "Ula'ula Beach",
+      "it": "Ula'ula Beach"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Dorf der Kapu",
+      "en": "Tapu Village",
+      "fr": "Village Toko",
+      "es": "Aldea Tapu",
+      "it": "Villaggio Tapu"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Route 15 (Wasserweg)",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Aether House",
+      "en": "Aether House",
+      "fr": "Aether House",
+      "es": "Aether House",
+      "it": "Aether House"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Schnäppchenparadies",
+      "en": "Thrifty Megamart",
+      "fr": "Bradley Prix",
+      "es": "Súper Ultraganga",
+      "it": "Supermarket Affaroni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Haina-Wüste",
+      "en": "Haina Desert",
+      "fr": "Désert Haina",
+      "es": "Desierto de Haina",
+      "it": "Deserto Haina"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Ruta 16",
+      "it": "Percorso 16"
+    },
+    "type": "route"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Ula-Ula-Blumenmeer",
+      "en": "Ula’ula Meadow",
+      "fr": "Jardin d’Ula-Ula",
+      "es": "Jardines de Ula-Ula",
+      "it": "Prato Ula Ula"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Mondscheiben-See",
+      "en": "Lake of the Moone",
+      "fr": "Lac du Halo Lunaire",
+      "es": "Lago Coroluna",
+      "it": "Lago Lunare"
+    },
+    "type": "route"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Ruta 17",
+      "it": "Percorso 17"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Dorf des Seevolkes",
+      "en": "Seafolk Village",
+      "fr": "Village Flottant",
+      "es": "Aldea Marina",
+      "it": "Villaggio del Mare"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Wildnis von Poni",
+      "en": "Poni Wilds",
+      "fr": "Prairie de Poni",
+      "es": "Prado de Poni",
+      "it": "Piana di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Alter Pfad von Poni",
+      "en": "Ancient Poni Path",
+      "fr": "Vieille Route",
+      "es": "Antiguo Paso de Poni",
+      "it": "Via Antica di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Felsenküste von Poni",
+      "en": "Poni Breaker Coast",
+      "fr": "Récif de Poni",
+      "es": "Arrecife de Poni",
+      "it": "Scogliera di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Canyon von Poni",
+      "en": "Vast Poni Canyon",
+      "fr": "Grand Canyon de Poni",
+      "es": "Cañón de Poni",
+      "it": "Canyon di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Megalopolis",
+      "en": "Megalopolis",
+      "fr": "Megalopolis",
+      "es": "Megalopolis",
+      "it": "Megalopolis"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Kokowei-Eiland",
+      "en": "Exeggutor Island",
+      "fr": "Île Noadkoko",
+      "es": "Isla Exeggutor",
+      "it": "Isola Exeggutor"
+    },
+    "type": "route"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Mount Lanakila",
+      "en": "Mount Lanakila",
+      "fr": "Mont Lanakila",
+      "es": "Monte Lanakila",
+      "it": "Monte Lanakila"
+    },
+    "type": "route"
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Mahalo-Bergpfad",
+      "en": "Mahalo Trail",
+      "fr": "Sentier de Mahalo",
+      "es": "Senda Mahalo",
+      "it": "Sentiero Mahalo"
+    },
+    "type": "route"
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Wald von Poni",
+      "en": "Poni Grove",
+      "fr": "Forêt de Poni",
+      "es": "Bosque de Poni",
+      "it": "Foresta di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Ebene von Poni",
+      "en": "Poni Plains",
+      "fr": "Plaine de Poni",
+      "es": "Llanura de Poni",
+      "it": "Prateria di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Poni-Blumenmeer",
+      "en": "Poni Meadow",
+      "fr": "Jardin de Poni",
+      "es": "Jardines de Poni",
+      "it": "Prato Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Finalhöhle",
+      "en": "Resolution Cave",
+      "fr": "Caverne Coda",
+      "es": "Gruta Desenlace",
+      "it": "Caverna Climax"
+    },
+    "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Küste von Poni",
+      "en": "Poni Coast",
+      "fr": "Côte de Poni",
+      "es": "Costa de Poni",
+      "it": "Costa di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Beschwerlicher Pfad",
+      "en": "Poni Gauntlet",
+      "fr": "Chemin du Défi",
+      "es": "Pendiente de Poni",
+      "it": "Erta di Poni"
+    },
+    "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Ruinen des Krieges",
+      "en": "Ruins of Conflict",
+      "fr": "Ruines du Conflit",
+      "es": "Ruinas de la Guerra",
+      "it": "Tempio del Conflitto"
+    },
+    "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Ruinen des Lebens",
+      "en": "Ruins of Life",
+      "fr": "Ruines de l’Éveil",
+      "es": "Ruinas de la Vida",
+      "it": "Tempio della Vita"
+    },
+    "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Ruinen des Gedeihens",
+      "en": "Ruins of Abundance",
+      "fr": "Ruines de l’Essor",
+      "es": "Ruinas de la Cosecha",
+      "it": "Tempio del Raccolto"
+    },
+    "type": "route"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Ruinen der Heimkehr",
+      "en": "Ruins of Hope",
+      "fr": "Ruines de l’Au-Delà",
+      "es": "Ruinas del Tránsito",
+      "it": "Tempio del Passaggio"
+    },
+    "type": "route"
+  }
+]

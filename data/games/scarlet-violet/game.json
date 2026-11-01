@@ -1,0 +1,20 @@
+{
+  "id": "scarlet-violet",
+  "sort": 26,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 9,
+  "dexLimit": 1025,
+  "spriteSet": "modern",
+  "versionGroup": "scarlet-violet",
+  "trainerSet": "scarlet-violet",
+  "regionalForms": true,
+  "names": {
+    "de": "Karmesin / Purpur",
+    "en": "Scarlet / Violet",
+    "fr": "Écarlate / Violet",
+    "es": "Escarlata / Púrpura",
+    "it": "Scarlatto / Violetto"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (sc)"
+}

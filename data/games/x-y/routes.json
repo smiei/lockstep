@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Nouvaria-Wald",
+      "en": "Santalune Forest",
+      "fr": "Forêt de Neuvartault",
+      "es": "Bosque de Novarte",
+      "it": "Bosco Novartopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Ruta 22",
+      "it": "Percorso 22"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Illumina City",
+      "en": "Lumiose City",
+      "fr": "Illumis",
+      "es": "Ciudad Luminalia",
+      "it": "Luminopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Ruta 6",
+      "it": "Percorso 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Magnum-Opus-Palast",
+      "en": "Parfum Palace",
+      "fr": "Palais Chaydeuvre",
+      "es": "Palacio Cénit",
+      "it": "Reggia Aurea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Ruta 7",
+      "it": "Percorso 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Geolinkhöhle",
+      "en": "Connecting Cave",
+      "fr": "Cave Connecterre",
+      "es": "Gruta Tierraunida",
+      "it": "Grotta Trait d’Union"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Petrophia",
+      "en": "Ambrette Town",
+      "fr": "Roche-sur-Gliffe",
+      "es": "Pueblo Petroglifo",
+      "it": "Petroglifari"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Leuchthöhle",
+      "en": "Glittering Cave",
+      "fr": "Grotte Étincelante",
+      "es": "Cueva Brillante",
+      "it": "Grotta dei Bagliori"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Relievera City",
+      "en": "Cyllage City",
+      "fr": "Relifac-le-Haut",
+      "es": "Ciudad Relieve",
+      "it": "Altoripoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Ruta 10",
+      "it": "Percorso 10"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Spiegelhöhle",
+      "en": "Reflection Cave",
+      "fr": "Grotte Miroitante",
+      "es": "Cueva Reflejos",
+      "it": "Grotta dei Riflessi"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Yantara City",
+      "en": "Shalour City",
+      "fr": "Yantreizh",
+      "es": "Ciudad Yantra",
+      "it": "Yantaropoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Turm der Erkenntnis",
+      "en": "Tower of Mastery",
+      "fr": "Tour Maîtrise",
+      "es": "Torre Maestra",
+      "it": "Torre Maestra"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Azurbucht",
+      "en": "Azure Bay",
+      "fr": "Baie Azur",
+      "es": "Bahía Azul",
+      "it": "Baia Azzurra"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Romantia City",
+      "en": "Laverre City",
+      "fr": "Romant-sous-Bois",
+      "es": "Ciudad Romantis",
+      "it": "Romantopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Hotelruine",
+      "en": "Lost Hotel",
+      "fr": "Hôtel Désolation",
+      "es": "Hotel Desolación",
+      "it": "Albergo Diroccato"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Ruta 16",
+      "it": "Percorso 16"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Frosthöhle",
+      "en": "Frost Cavern",
+      "fr": "Caverne Gelée",
+      "es": "Gruta Helada",
+      "it": "Caverna Gelata"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Ruta 17",
+      "it": "Percorso 17"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Flare-Geheimbasis",
+      "en": "Team Flare Secret HQ",
+      "fr": "Repaire Team Flare",
+      "es": "Guarida Team Flare",
+      "it": "Covo del Team Flare"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Route 18",
+      "en": "Route 18",
+      "fr": "Route 18",
+      "es": "Ruta 18",
+      "it": "Percorso 18"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Mosaia",
+      "en": "Couriway Town",
+      "fr": "Mozheim",
+      "es": "Pueblo Mosaico",
+      "it": "Ponte Mosaico"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Route 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Route 20",
+      "en": "Route 20",
+      "fr": "Route 20",
+      "es": "Ruta 20",
+      "it": "Percorso 20"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Pokémon-Dorf",
+      "en": "Pokémon Village",
+      "fr": "Village Pokémon",
+      "es": "Villa Pokémon",
+      "it": "Valle dei Pokémon"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Route 21",
+      "en": "Route 21",
+      "fr": "Route 21",
+      "es": "Ruta 21",
+      "it": "Percorso 21"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Siegesstraße",
+      "en": "Victory Road",
+      "fr": "Route Victoire",
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Omega-Höhle",
+      "en": "Terminus Cave",
+      "fr": "Grotte Coda",
+      "es": "Cueva Desenlace",
+      "it": "Grotta Climax"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Meerestitanenhöhle",
+      "en": "Sea Spirit’s Den",
+      "fr": "Antre Néréen",
+      "es": "Cueva Talasia",
+      "it": "Antro Talassico"
+    },
+    "type": "route"
+  }
+]

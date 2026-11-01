@@ -1,0 +1,19 @@
+{
+  "id": "diamond-pearl",
+  "sort": 14,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 4,
+  "dexLimit": 493,
+  "spriteSet": "platinum",
+  "versionGroup": "diamond-pearl",
+  "trainerSet": "platinum",
+  "names": {
+    "de": "Diamant / Perl",
+    "en": "Diamond / Pearl",
+    "fr": "Diamant / Perle",
+    "es": "Diamante / Perla",
+    "it": "Diamante / Perla"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (d)"
+}

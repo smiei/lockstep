@@ -1,0 +1,20 @@
+{
+  "id": "ultra-moon",
+  "sort": 22,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 7,
+  "dexLimit": 807,
+  "spriteSet": "modern",
+  "versionGroup": "ultra-sun-ultra-moon",
+  "trainerSet": "ultra-sun-ultra-moon",
+  "regionalForms": true,
+  "names": {
+    "de": "Ultramond",
+    "en": "Ultra Moon",
+    "fr": "Ultra-Lune",
+    "es": "Ultraluna",
+    "it": "Ultraluna"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (umoon)"
+}

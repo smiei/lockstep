@@ -1,0 +1,794 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Schlummerwald",
+      "en": "Slumbering Weald",
+      "fr": "Forêt de Sleepwood",
+      "es": "Slumbering Weald",
+      "it": "Slumbering Weald"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Route 1",
+      "it": "Route 1"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Brassbury",
+      "en": "Wedgehurst",
+      "fr": "Brasswick",
+      "es": "Wedgehurst",
+      "it": "Wedgehurst"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Route 2",
+      "it": "Route 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Wonnewiesen",
+      "en": "Rolling Fields",
+      "fr": "Plaine Verdoyante",
+      "es": "Rolling Fields",
+      "it": "Rolling Fields"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Wipfelscheinwald",
+      "en": "Dappled Grove",
+      "fr": "Bois de Clairjour",
+      "es": "Dappled Grove",
+      "it": "Dappled Grove"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Milza-See (Westen)",
+      "en": "West Lake Axewell",
+      "fr": "Lac Coupenotte Ouest",
+      "es": "West Lake Axewell",
+      "it": "West Lake Axewell"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Wachturmruine",
+      "en": "Watchtower Ruins",
+      "fr": "Tour en ruines",
+      "es": "Watchtower Ruins",
+      "it": "Watchtower Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Milza-See (Osten)",
+      "en": "East Lake Axewell",
+      "fr": "Lac Coupenotte Est",
+      "es": "East Lake Axewell",
+      "it": "East Lake Axewell"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Milotic-See (Süden)",
+      "en": "South Lake Miloch",
+      "fr": "Lac Milobellus Sud",
+      "es": "South Lake Miloch",
+      "it": "South Lake Miloch"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Sitz des Giganten",
+      "en": "Giant's Seat",
+      "fr": "Siège du Géant",
+      "es": "Giant's Seat",
+      "it": "Giant's Seat"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Milotic-See (Norden)",
+      "en": "North Lake Miloch",
+      "fr": "Lac Milobellus Nord",
+      "es": "North Lake Miloch",
+      "it": "North Lake Miloch"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Engine City",
+      "en": "Motostoke",
+      "fr": "Motorby",
+      "es": "Motostoke",
+      "it": "Motostoke"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Route 3",
+      "it": "Route 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Galar-Mine",
+      "en": "Galar Mine",
+      "fr": "Mine de Galar",
+      "es": "Galar Mine",
+      "it": "Galar Mine"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Route 4",
+      "it": "Route 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Route 5",
+      "it": "Route 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Keelton",
+      "en": "Hulbury",
+      "fr": "Skifford",
+      "es": "Hulbury",
+      "it": "Hulbury"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Galar-Mine 2",
+      "en": "Galar Mine No. 2",
+      "fr": "Mine de Galar n° 2",
+      "es": "Galar Mine No. 2",
+      "it": "Galar Mine No. 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Engine-Ortsrand",
+      "en": "Motostoke Outskirts",
+      "fr": "Abords de Motorby",
+      "es": "Motostoke Outskirts",
+      "it": "Motostoke Outskirts"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Motostoke Stadium",
+      "en": "Motostoke Stadium",
+      "fr": "Motostoke Stadium",
+      "es": "Motostoke Stadium",
+      "it": "Motostoke Stadium"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Engine-Flussufer",
+      "en": "Motostoke Riverbank",
+      "fr": "Berges de Motorby",
+      "es": "Motostoke Riverbank",
+      "it": "Motostoke Riverbank"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Brückental",
+      "en": "Bridge Field",
+      "fr": "Prairie Entre-Ponts",
+      "es": "Bridge Field",
+      "it": "Bridge Field"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Megalithen-Ebene",
+      "en": "Stony Wilderness",
+      "fr": "Plaine Rocheuse",
+      "es": "Stony Wilderness",
+      "it": "Stony Wilderness"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Spiegel des Giganten",
+      "en": "Giant's Mirror",
+      "fr": "Miroir du Géant",
+      "es": "Giant's Mirror",
+      "it": "Giant's Mirror"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Sandsturmkessel",
+      "en": "Dusty Bowl",
+      "fr": "Fosse des Sables",
+      "es": "Dusty Bowl",
+      "it": "Dusty Bowl"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Hut des Giganten",
+      "en": "Giant's Cap",
+      "fr": "Coiffe du Géant",
+      "es": "Giant's Cap",
+      "it": "Giant's Cap"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Claw-Plateau",
+      "en": "Hammerlocke Hills",
+      "fr": "Plateau de Kickenham",
+      "es": "Hammerlocke Hills",
+      "it": "Hammerlocke Hills"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Wutanfall-See",
+      "en": "Lake of Outrage",
+      "fr": "Lac Ouragan",
+      "es": "Lake of Outrage",
+      "it": "Lake of Outrage"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Route 6",
+      "it": "Route 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Wirrschein-Wald",
+      "en": "Glimwood Tangle",
+      "fr": "Forêt de Lumirinth",
+      "es": "Glimwood Tangle",
+      "it": "Glimwood Tangle"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Route 7",
+      "it": "Route 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Route 8",
+      "it": "Route 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Route 9",
+      "it": "Route 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Route 10",
+      "it": "Route 10"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Milza-See (Auge)",
+      "en": "Axew's Eye",
+      "fr": "Œil du Lac",
+      "es": "Axew's Eye",
+      "it": "Axew's Eye"
+    },
+    "type": "route"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Grußgefilde",
+      "en": "Fields of Honor",
+      "fr": "Plaine Salutation",
+      "es": "Fields of Honor",
+      "it": "Fields of Honor"
+    },
+    "type": "route"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Balsamsumpf",
+      "en": "Soothing Wetlands",
+      "fr": "Lande Boldair",
+      "es": "Soothing Wetlands",
+      "it": "Soothing Wetlands"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Fokusforst",
+      "en": "Forest of Focus",
+      "fr": "Forêt Flexion",
+      "es": "Forest of Focus",
+      "it": "Forest of Focus"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Strand der Prüfung",
+      "en": "Challenge Beach",
+      "fr": "Plage de l'Épreuve",
+      "es": "Challenge Beach",
+      "it": "Challenge Beach"
+    },
+    "type": "route"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Kämpfergrotte",
+      "en": "Brawlers' Cave",
+      "fr": "Grotte du Pugilat",
+      "es": "Brawlers' Cave",
+      "it": "Brawlers' Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Pfad der Prüfung",
+      "en": "Challenge Road",
+      "fr": "Route de l'Épreuve",
+      "es": "Challenge Road",
+      "it": "Challenge Road"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Tapferkeitshöhle",
+      "en": "Courageous Cavern",
+      "fr": "Caverne Pugnacité",
+      "es": "Courageous Cavern",
+      "it": "Courageous Cavern"
+    },
+    "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Ringbucht",
+      "en": "Loop Lagoon",
+      "fr": "Lagune Circulaire",
+      "es": "Loop Lagoon",
+      "it": "Loop Lagoon"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Fleißebene",
+      "en": "Training Lowlands",
+      "fr": "Plaine des Efforts",
+      "es": "Training Lowlands",
+      "it": "Training Lowlands"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Aufwärmtunnel",
+      "en": "Warm-Up Tunnel",
+      "fr": "Voie des Étirements",
+      "es": "Warm-Up Tunnel",
+      "it": "Warm-Up Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Wüstensenke",
+      "en": "Potbottom Desert",
+      "fr": "Sables de Kudsac",
+      "es": "Potbottom Desert",
+      "it": "Potbottom Desert"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Fitnessmeer",
+      "en": "Workout Sea",
+      "fr": "Mer Eau-Hisse",
+      "es": "Workout Sea",
+      "it": "Workout Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Inselkettenmeer",
+      "en": "Stepping-Stone Sea",
+      "fr": "Mer Align'Îlots",
+      "es": "Stepping-Stone Sea",
+      "it": "Stepping-Stone Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Fernarchipel",
+      "en": "Insular Sea",
+      "fr": "Mer Isol'Îlots",
+      "es": "Insular Sea",
+      "it": "Insular Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Wabenmeer",
+      "en": "Honeycalm Sea",
+      "fr": "Mer Calméole",
+      "es": "Honeycalm Sea",
+      "it": "Honeycalm Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Wabeninsel",
+      "en": "Honeycalm Island",
+      "fr": "Îlot Calméole",
+      "es": "Honeycalm Island",
+      "it": "Honeycalm Island"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Schlitterfeld",
+      "en": "Slippery Slope",
+      "fr": "Plateau Beau-Gant",
+      "es": "Slippery Slope",
+      "it": "Slippery Slope"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Freezedale",
+      "en": "Freezington",
+      "fr": "Hameau Gelé",
+      "es": "Freezington",
+      "it": "Freezington"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Frostfeld",
+      "en": "Frostpoint Field",
+      "fr": "Plaine Granfroy",
+      "es": "Frostpoint Field",
+      "it": "Frostpoint Field"
+    },
+    "type": "route"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Bett des Giganten",
+      "en": "Giant's Bed",
+      "fr": "Repos du Géant",
+      "es": "Giant's Bed",
+      "it": "Giant's Bed"
+    },
+    "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Uralter Friedhof",
+      "en": "Old Cemetery",
+      "fr": "Cimetière Ancien",
+      "es": "Old Cemetery",
+      "it": "Old Cemetery"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Schneeschlucht",
+      "en": "Snowslide Slope",
+      "fr": "Pente Enneigée",
+      "es": "Snowslide Slope",
+      "it": "Snowslide Slope"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Aufstiegstunnel",
+      "en": "Tunnel to the Top",
+      "fr": "Galeries Monte-Pic",
+      "es": "Tunnel to the Top",
+      "it": "Tunnel to the Top"
+    },
+    "type": "route"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Schneegipfelpfad",
+      "en": "Path to the Peak",
+      "fr": "Sentier Blanche-Cime",
+      "es": "Path to the Peak",
+      "it": "Path to the Peak"
+    },
+    "type": "route"
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Kronentempel",
+      "en": "Crown Shrine",
+      "fr": "Temple Couronne",
+      "es": "Crown Shrine",
+      "it": "Crown Shrine"
+    },
+    "type": "route"
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Sohle des Giganten",
+      "en": "Giant's Foot",
+      "fr": "Empreinte du Géant",
+      "es": "Giant's Foot",
+      "it": "Giant's Foot"
+    },
+    "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Rauschende Höhlen",
+      "en": "Roaring-Sea Caves",
+      "fr": "Cavernes Gronde-Mer",
+      "es": "Roaring-Sea Caves",
+      "it": "Roaring-Sea Caves"
+    },
+    "type": "route"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Frigrid Sea",
+      "en": "Frigrid Sea",
+      "fr": "Frigrid Sea",
+      "es": "Frigrid Sea",
+      "it": "Frigrid Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Dreiwegpass",
+      "en": "Three-Point Pass",
+      "fr": "Croisée Trois-Voies",
+      "es": "Three-Point Pass",
+      "it": "Three-Point Pass"
+    },
+    "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Ballsee-Ufer",
+      "en": "Ballimere Lake",
+      "fr": "Lac Poké Ball",
+      "es": "Ballimere Lake",
+      "it": "Ballimere Lake"
+    },
+    "type": "route"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Ballsee-Höhle",
+      "en": "Lakeside Cave",
+      "fr": "Grotte du Lac",
+      "es": "Lakeside Cave",
+      "it": "Lakeside Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Gipfelruinen",
+      "en": "Rock Peak Ruins",
+      "fr": "Ruines Pic Roche",
+      "es": "Rock Peak Ruins",
+      "it": "Rock Peak Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Eisberg-Ruinen",
+      "en": "Iceberg Ruins",
+      "fr": "Ruines Iceberg",
+      "es": "Iceberg Ruins",
+      "it": "Iceberg Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Eisen-Ruinen",
+      "en": "Iron Ruins",
+      "fr": "Ruines de Fer",
+      "es": "Iron Ruins",
+      "it": "Iron Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Zwiespaltruinen",
+      "en": "Split-Decision Ruins",
+      "fr": "Ruines du Choix",
+      "es": "Split-Decision Ruins",
+      "it": "Split-Decision Ruins"
+    },
+    "type": "route"
+  }
+]

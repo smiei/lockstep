@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Cucharico-Pfad",
+      "en": "Poco Path",
+      "fr": "Route de Cuchalaga",
+      "es": "Poco Path",
+      "it": "Poco Path"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Südliche Zone 1",
+      "en": "South Province (Area One)",
+      "fr": "Zone Sud n° 1",
+      "es": "South Province (Area One)",
+      "it": "South Province (Area One)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Meeresbuchthöhle",
+      "en": "Inlet Grotto",
+      "fr": "Caverne de la Crique",
+      "es": "Inlet Grotto",
+      "it": "Inlet Grotto"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Südliche Zone 4",
+      "en": "South Province (Area Four)",
+      "fr": "Zone Sud n° 4",
+      "es": "South Province (Area Four)",
+      "it": "South Province (Area Four)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Südliche Zone 2",
+      "en": "South Province (Area Two)",
+      "fr": "Zone Sud n° 2",
+      "es": "South Province (Area Two)",
+      "it": "South Province (Area Two)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Südliche Zone 5",
+      "en": "South Province (Area Five)",
+      "fr": "Zone Sud n° 5",
+      "es": "South Province (Area Five)",
+      "it": "South Province (Area Five)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Östliche Zone 1",
+      "en": "East Province (Area One)",
+      "fr": "Zone Est n° 1",
+      "es": "East Province (Area One)",
+      "it": "East Province (Area One)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Südliche Zone 3",
+      "en": "South Province (Area Three)",
+      "fr": "Zone Sud n° 3",
+      "es": "South Province (Area Three)",
+      "it": "South Province (Area Three)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Westliche Zone 1",
+      "en": "West Province (Area One)",
+      "fr": "Zone Ouest n° 1",
+      "es": "West Province (Area One)",
+      "it": "West Province (Area One)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Östliche Zone 2",
+      "en": "East Province (Area Two)",
+      "fr": "Zone Est n° 2",
+      "es": "East Province (Area Two)",
+      "it": "East Province (Area Two)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Östliche Zone 3",
+      "en": "East Province (Area Three)",
+      "fr": "Zone Est n° 3",
+      "es": "East Province (Area Three)",
+      "it": "East Province (Area Three)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Westliche Zone 2",
+      "en": "West Province (Area Two)",
+      "fr": "Zone Ouest n° 2",
+      "es": "West Province (Area Two)",
+      "it": "West Province (Area Two)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Westliche Zone 3",
+      "en": "West Province (Area Three)",
+      "fr": "Zone Ouest n° 3",
+      "es": "West Province (Area Three)",
+      "it": "West Province (Area Three)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Montanata",
+      "en": "Glaseado Mountain",
+      "fr": "Mont Nappé",
+      "es": "Glaseado Mountain",
+      "it": "Glaseado Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Mesclores-Passage",
+      "en": "Dalizapa Passage",
+      "fr": "Tunnel Mezcla-Pincho",
+      "es": "Dalizapa Passage",
+      "it": "Dalizapa Passage"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Schmierhain",
+      "en": "Tagtree Thicket",
+      "fr": "Bosquet Tagué",
+      "es": "Tagtree Thicket",
+      "it": "Tagtree Thicket"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Montanata",
+      "en": "Glaseado Mountain",
+      "fr": "Mont Nappé",
+      "es": "Glaseado Mountain",
+      "it": "Glaseado Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Südliche Zone 6",
+      "en": "South Province (Area Six)",
+      "fr": "Zone Sud n°6",
+      "es": "South Province (Area Six)",
+      "it": "South Province (Area Six)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Brutzelwüste",
+      "en": "Asado Desert",
+      "fr": "Désert Rôtissable",
+      "es": "Asado Desert",
+      "it": "Asado Desert"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Asarilla-Grotte",
+      "en": "Alfornada Cavern",
+      "fr": "Grotte d'Alforneira",
+      "es": "Alfornada Cavern",
+      "it": "Alfornada Cavern"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Nördliche Zone 3",
+      "en": "North Province (Area Three)",
+      "fr": "Zone Nord n° 3",
+      "es": "North Province (Area Three)",
+      "it": "North Province (Area Three)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Caldero-See",
+      "en": "Casseroya Lake",
+      "fr": "Lac Asrol",
+      "es": "Casseroya Lake",
+      "it": "Casseroya Lake"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Nördliche Zone 1",
+      "en": "North Province (Area One)",
+      "fr": "Zone Nord n° 1",
+      "es": "North Province (Area One)",
+      "it": "North Province (Area One)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Nördliche Zone 2",
+      "en": "North Province (Area Two)",
+      "fr": "Zone Nord n° 2",
+      "es": "North Province (Area Two)",
+      "it": "North Province (Area Two)"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Westliches Meer von Paldea",
+      "en": "West Paldean Sea",
+      "fr": "Mer de l'Ouest de Paldea",
+      "es": "West Paldean Sea",
+      "it": "West Paldean Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Südliches Meer von Paldea",
+      "en": "South Paldean Sea",
+      "fr": "Mer du Sud de Paldea",
+      "es": "South Paldean Sea",
+      "it": "South Paldean Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Östliches Meer von Paldea",
+      "en": "East Paldean Sea",
+      "fr": "Mer de l'Est de Paldea",
+      "es": "East Paldean Sea",
+      "it": "East Paldean Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Nördliches Meer von Paldea",
+      "en": "North Paldean Sea",
+      "fr": "Mer du Nord de Paldea",
+      "es": "North Paldean Sea",
+      "it": "North Paldean Sea"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Knusperwaldweg",
+      "en": "Socarrat Trail",
+      "fr": "Forêt Toastée",
+      "es": "Socarrat Trail",
+      "it": "Socarrat Trail"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Zone Null",
+      "en": "Area Zero",
+      "fr": "Zone Zéro",
+      "es": "Area Zero",
+      "it": "Area Zero"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Pokémon-Liga",
+      "en": "Pokémon League",
+      "fr": "Ligue Pokémon",
+      "es": "Pokémon League",
+      "it": "Pokémon League"
+    },
+    "type": "route"
+  }
+]

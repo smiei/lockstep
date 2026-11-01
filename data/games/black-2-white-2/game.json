@@ -1,0 +1,19 @@
+{
+  "id": "black-2-white-2",
+  "sort": 15,
+  "kind": "official",
+  "dataStatus": "unverified",
+  "generation": 5,
+  "dexLimit": 649,
+  "spriteSet": "black-white",
+  "versionGroup": "black-2-white-2",
+  "trainerSet": "black-2-white-2",
+  "names": {
+    "de": "Schwarz 2 / Weiß 2",
+    "en": "Black 2 / White 2",
+    "fr": "Noire 2 / Blanche 2",
+    "es": "Negro 2 / Blanco 2",
+    "it": "Nero 2 / Bianco 2"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (bl2n)"
+}
