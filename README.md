@@ -56,7 +56,7 @@ You know the rules. This is what the tracker handles so you don't have to.
 
 ### Accurate to the generation you're playing
 - **The type chart, base stats, catch rates and move names your game actually had:** Gen 1's single Special, no Fairy type before Gen 6, pre-buff stats, old move names.
-- **Catch rates** use that generation's formula and ball list, Apricorn Balls included.
+- **Catch rates** use that generation's formula and ball list, Apricorn Balls included, up to Sword/Shield's and Scarlet/Violet's level and badge rules.
 - **Evolution overrides** for randomizers and ROM hacks: impossible, easier or time-based evolutions.
 
 ### Planning the next fight
@@ -183,8 +183,14 @@ npm start
 | 1 | Red / Blue / Yellow | unverified |
 | 2 | Gold / Silver / Crystal | unverified |
 | 3 | FireRed / LeafGreen, Emerald | checked |
+| 3 | Ruby, Sapphire | unverified |
 | 4 | Platinum, HeartGold, SoulSilver | checked |
-| 5 | Black, White | unverified |
+| 4 | Diamond / Pearl | unverified |
+| 5 | Black, White, Black 2 / White 2 | unverified |
+| 6 | X / Y, Omega Ruby, Alpha Sapphire | unverified |
+| 7 | Sun, Moon, Ultra Sun, Ultra Moon | unverified |
+| 8 | Sword, Shield, Brilliant Diamond / Shining Pearl (no TM list: the data source has none for it) | unverified |
+| 9 | Scarlet / Violet | unverified |
 | Fan game | [Pokémon Infinite Fusion](#pokémon-infinite-fusion) (Classic and Remix), with fusions and the game's own data | unverified |
 | ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald, Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms | unverified |
 
@@ -217,6 +223,7 @@ Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and eve
 | `4.3` | Server defaults for the colour (`DEFAULT_SHELL_COLOR`, icons included) and the browser language (`DEFAULT_LANGUAGE`); the installed app follows the phone's language. The side-rail logo takes the shell colour, the run list reaches past the rail, the dark-mode button can return to following the device, and "Lock blind flight" got its name. |
 | `5.0` | The app is now called **Lockstep**, and so are the repository (`smiei/lockstep`) and the image, which is published on GitHub's registry only (`ghcr.io/smiei/lockstep`). A Windows app: one installer, runs in the system tray. 16 ROM hacks (Radical Red, Unbound, Run & Bun, Renegade Platinum, and more) with their own stats, types and moves; Pokémon data up to Gen 9 with regional forms; a hack's own Pokémon as placeholders. Import your own game pack in the app, or contribute one. A start page with every run as a card. Boss-trainer pictures download by themselves. Notes on machine-translated languages and unverified game data. Backup format v5. |
 | `5.1` | The Encounter tab tells open and finished routes apart at a glance, in dark mode too (a coloured or dashed frame and an outcome badge per route). 66 more boss-trainer pictures for the ROM hacks, and a complete list of the pictures each game expects. A ROM hack's own forms (Sevii, Hoenn) show their species' sprite, marked as a placeholder. Updated dependencies. |
+| `5.2` | 15 more official games: Ruby and Sapphire, Diamond and Pearl, Black 2 and White 2, and every main game from X and Y to Scarlet and Violet, with place, boss and badge names in all five languages. The catch calculator knows Gen 6 to 9: new balls (Beast Ball), the changed ball bonuses, and Sword/Shield's and Scarlet/Violet's level and badge rules; the Gen 5 formula is corrected. Fixed: 18 Pokémon re-typed to Fairy in Gen 6 (Clefairy, Gardevoir, Mawile, ...) lacked the Fairy type in every game and ROM hack with Gen 6+ data. |
 
 ## Acknowledgements
 
