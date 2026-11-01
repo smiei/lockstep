@@ -1,0 +1,233 @@
+{
+  "source": "PokéWiki badge pages, \"In anderen Sprachen\" table (https://www.pokewiki.de)",
+  "generatedAt": "2026-11-01T01:15:07.292Z",
+  "regions": {
+    "hoenn": {
+      "Wallace": {
+        "de": "Schauerorden",
+        "en": "Rain Badge",
+        "fr": "Badge Pluie",
+        "es": "Medalla Lluvia",
+        "it": "Medaglia Pioggia"
+      }
+    },
+    "unova": {
+      "Cheren": {
+        "de": "Grundorden",
+        "en": "Basic Badge",
+        "fr": "Badge Basique",
+        "es": "Medalla Base",
+        "it": "Medaglia Base"
+      },
+      "Roxie": {
+        "de": "Giftorden",
+        "en": "Toxic Badge",
+        "fr": "Badge Toxique",
+        "es": "Medalla Ponzoña",
+        "it": "Medaglia Arsenico"
+      },
+      "Marlon": {
+        "de": "Wellenorden",
+        "en": "Wave Badge",
+        "fr": "Badge Vague",
+        "es": "Medalla Ola",
+        "it": "Medaglia Onda"
+      }
+    },
+    "kalos": {
+      "Viola": {
+        "de": "Krabbelorden",
+        "en": "Bug Badge",
+        "fr": "Badge Coléoptère",
+        "es": "Medalla Insecto",
+        "it": "Medaglia Insetto"
+      },
+      "Grant": {
+        "de": "Wallorden",
+        "en": "Cliff Badge",
+        "fr": "Badge Mur",
+        "es": "Medalla Muro",
+        "it": "Medaglia Rupe"
+      },
+      "Korrina": {
+        "de": "Rauforden",
+        "en": "Rumble Badge",
+        "fr": "Badge Lutte",
+        "es": "Medalla Lid",
+        "it": "Medaglia Lotta"
+      },
+      "Ramos": {
+        "de": "Blattorden",
+        "en": "Plant Badge",
+        "fr": "Badge Végétal",
+        "es": "Medalla Hoja",
+        "it": "Medaglia Pianta"
+      },
+      "Clemont": {
+        "de": "Ampere-Orden",
+        "en": "Voltage Badge",
+        "fr": "Badge Tension",
+        "es": "Medalla Voltaje",
+        "it": "Medaglia Voltaggio"
+      },
+      "Valerie": {
+        "de": "Feenorden",
+        "en": "Fairy Badge",
+        "fr": "Badge Nymphe",
+        "es": "Medalla Hada",
+        "it": "Medaglia Folletto"
+      },
+      "Valeria": {
+        "de": "Feenorden",
+        "en": "Fairy Badge",
+        "fr": "Badge Nymphe",
+        "es": "Medalla Hada",
+        "it": "Medaglia Folletto"
+      },
+      "Olympia": {
+        "de": "Psi-Orden",
+        "en": "Psychic Badge",
+        "fr": "Badge Psychisme",
+        "es": "Medalla Psique",
+        "it": "Medaglia Psico"
+      },
+      "Wulfric": {
+        "de": "Eisbergorden",
+        "en": "Iceberg Badge",
+        "fr": "Badge Iceberg",
+        "es": "Medalla Iceberg",
+        "it": "Medaglia Iceberg"
+      }
+    },
+    "galar": {
+      "Milo": {
+        "de": "Pflanzen-Orden",
+        "en": "Grass Badge",
+        "fr": "Badge Plante",
+        "es": "Medalla Planta",
+        "it": "Medaglia Erba"
+      },
+      "Nessa": {
+        "de": "Wasser-Orden",
+        "en": "Water Badge",
+        "fr": "Badge Eau",
+        "es": "Medalla Agua",
+        "it": "Medaglia Acqua"
+      },
+      "Kabu": {
+        "de": "Feuer-Orden",
+        "en": "Fire Badge",
+        "fr": "Badge Feu",
+        "es": "Medalla Fuego",
+        "it": "Medaglia Fuoco"
+      },
+      "Bea": {
+        "de": "Kampf-Orden",
+        "en": "Fighting Badge",
+        "fr": "Badge Combat",
+        "es": "Medalla Lucha",
+        "it": "Medaglia Lotta"
+      },
+      "Allister": {
+        "de": "Geister-Orden",
+        "en": "Ghost Badge",
+        "fr": "Badge Spectre",
+        "es": "Medalla Fantasma",
+        "it": "Medaglia Spettro"
+      },
+      "Opal": {
+        "de": "Feen-Orden",
+        "en": "Fairy Badge",
+        "fr": "Badge Fée",
+        "es": "Medalla Hada",
+        "it": "Medaglia Folletto"
+      },
+      "Gordie": {
+        "de": "Gesteins-Orden",
+        "en": "Rock Badge",
+        "fr": "Badge Roche",
+        "es": "Medalla Roca",
+        "it": "Medaglia Roccia"
+      },
+      "Melony": {
+        "de": "Eis-Orden",
+        "en": "Ice Badge",
+        "fr": "Badge Glace",
+        "es": "Medalla Hielo",
+        "it": "Medaglia Ghiaccio"
+      },
+      "Piers": {
+        "de": "Unlicht-Orden",
+        "en": "Dark Badge",
+        "fr": "Badge Ténèbres",
+        "es": "Medalla Siniestro",
+        "it": "Medaglia Buio"
+      },
+      "Raihan": {
+        "de": "Drachen-Orden",
+        "en": "Dragon Badge",
+        "fr": "Badge Dragon",
+        "es": "Medalla Dragón",
+        "it": "Medaglia Drago"
+      }
+    },
+    "paldea": {
+      "Katy": {
+        "de": "Käfer-Arenaorden",
+        "en": "Gym Badge (Bug)",
+        "fr": "Badge d’Arène Insecte",
+        "es": "Medalla de Gimnasio Bicho",
+        "it": "Medaglia Palestra Coleottero"
+      },
+      "Brassius": {
+        "de": "Pflanzen-Arenaorden",
+        "en": "Gym Badge (Grass)",
+        "fr": "Badge d’Arène Plante",
+        "es": "Medalla de Gimnasio Planta",
+        "it": "Medaglia Palestra Erba"
+      },
+      "Iono": {
+        "de": "Elektro-Arenaorden",
+        "en": "Gym Badge (Electric)",
+        "fr": "Badge d’Arène Électrik",
+        "es": "Medalla de Gimnasio Eléctrico",
+        "it": "Medaglia Palestra Elettro"
+      },
+      "Kofu": {
+        "de": "Wasser-Arenaorden",
+        "en": "Gym Badge (Water)",
+        "fr": "Badge d’Arène Eau",
+        "es": "Medalla de Gimnasio Agua",
+        "it": "Medaglia Palestra Acqua"
+      },
+      "Larry": {
+        "de": "Normal-Arenaorden",
+        "en": "Gym Badge (Normal)",
+        "fr": "Badge d’Arène Normal",
+        "es": "Medalla de Gimnasio Normal",
+        "it": "Medaglia Palestra Normale"
+      },
+      "Ryme": {
+        "de": "Geister-Arenaorden",
+        "en": "Gym Badge (Ghost)",
+        "fr": "Badge d’Arène Spectre",
+        "es": "Medalla de Gimnasio Fantasma",
+        "it": "Medaglia Palestra Spettro"
+      },
+      "Tulip": {
+        "de": "Psycho-Arenaorden",
+        "en": "Gym Badge (Psychic)",
+        "fr": "Badge d’Arène Psy",
+        "es": "Medalla de Gimnasio Psíquico",
+        "it": "Medaglia Palestra Psico"
+      },
+      "Grusha": {
+        "de": "Eis-Arenaorden",
+        "en": "Gym Badge (Ice)",
+        "fr": "Badge d’Arène Glace",
+        "es": "Medalla de Gimnasio Hielo",
+        "it": "Medaglia Palestra Ghiaccio"
+      }
+    }
+  }
+}

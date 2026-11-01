@@ -3,7 +3,7 @@ import { computeCatchChance } from "@/lib/catchrate";
 
 // The seven species whose catch rate Omega Ruby/Alpha Sapphire changed. PokeAPI
 // serves the post-ORAS numbers, so data/catchrate-history.json restores the
-// values that applied through Gen 5 - the only era this app covers. These
+// values that applied through Gen 5 (the Gen 6+ packs take PokeAPI's). These
 // assertions pin the resulting probabilities, which is what the Wild view shows.
 const shared = {
   hpPercent: 100,
@@ -35,7 +35,9 @@ describe("catch chance for the ORAS-adjusted legendaries", () => {
   });
 
   it("still applies the Gen 5 formula for Black/White", () => {
-    // Same rate, but Gen 5's three shake checks make it markedly kinder.
+    // Same rate, but from Gen 5 the chance is about (a/255)^0.75, not a/255:
+    // markedly kinder (Bulbapedia: 11.94% for rate 45 at full HP).
+    expect(pct(45, 5)).toBe(11.94);
     expect(pct(45, 5)).toBeGreaterThan(pct(45, 4));
   });
 });

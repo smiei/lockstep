@@ -8,6 +8,7 @@ import type { Pokemon } from "@/lib/data";
 import type { BallId, StatusId } from "@/lib/catchrate";
 import {
   ballHasCondition,
+  isUltraBeast,
   getBallIdsForGeneration,
   INFINITE_FUSION_VERSION_GROUP,
   STATUS_IDS,
@@ -139,6 +140,8 @@ export type CatchSharedProps = {
   generation: number;
   // Which Gen 4 game: only HeartGold/SoulSilver sell the Apricorn balls.
   versionGroup: string;
+  // Gym badges the run holds - the default for Gen 8/9's badge field.
+  badgesEarned: number;
   openSlots: OpenSlot[];
   effectiveness: EffectivenessTable;
   attackTypes: string[];
@@ -160,6 +163,9 @@ export type CatchBodyState = {
   // the Pokédex's caught count (0 / 301 / 451 / 601 - the game's brackets).
   lastBall?: boolean;
   dexOwned?: number;
+  // Gen 8/9: badges held, when set by hand on this card; otherwise the run's
+  // own count (badgesEarned) applies.
+  badges?: number;
   status: StatusId;
   turn: number;
   conditionMet: boolean;
@@ -299,7 +305,7 @@ export function CatchCardBody({
   state: CatchBodyState;
   onChange: (patch: Partial<CatchBodyState>) => void;
 }) {
-  const { runKey, players, pokemonList, catchRates, lockedFamilies, lockedFamiliesByPlayer, generation, versionGroup, openSlots, effectiveness, attackTypes, settings } =
+  const { runKey, players, pokemonList, catchRates, lockedFamilies, lockedFamiliesByPlayer, generation, versionGroup, badgesEarned, openSlots, effectiveness, attackTypes, settings } =
     shared;
   const router = useRouter();
   const { lang } = useLanguage();
@@ -318,8 +324,12 @@ export function CatchCardBody({
     hp: `${fieldId}-hp`,
     level: `${fieldId}-level`,
     ownLevel: `${fieldId}-own-level`,
+    badges: `${fieldId}-badges`,
     turn: `${fieldId}-turn`,
   };
+  // Gen 8/9 read the wild level for every ball, Sword/Shield/BDSP also your
+  // own Pokémon's level and your badges, Scarlet/Violet the badges.
+  const levelMatters = generation >= 8 && !isInfiniteFusion;
 
   const { ball, hpPercent, level, status, turn, conditionMet } = state;
   const [caughtMsg, setCaughtMsg] = useState<string | null>(null);
@@ -329,6 +339,8 @@ export function CatchCardBody({
   const lastBall = state.lastBall ?? false;
   const dexOwned = state.dexOwned ?? 0;
   const ownLevelInput = useClampedIntInput(ownLevel, 1, 100, 50, (n) => onChange({ ownLevel: n }));
+  const badges = state.badges ?? badgesEarned;
+  const badgesInput = useClampedIntInput(badges, 0, 8, badgesEarned, (n) => onChange({ badges: n }));
   const turnInput = useClampedIntInput(turn, 1, 99, 1, (n) => onChange({ turn: n }));
 
   const selected = pokemonList.find((p) => p.id === selectedId) ?? null;
@@ -389,18 +401,26 @@ export function CatchCardBody({
             baseSpeed,
             lastBall: isInfiniteFusion && lastBall,
             dexOwned,
+            ultraBeast: !body && isUltraBeast(baseSpeciesId(selected)),
+            badges,
           },
           versionGroup,
         )
       : null;
 
   // Infinite Fusion's own code differs from the real games for several balls,
-  // so its notes win where it has one.
-  const ballNote =
-    (isInfiniteFusion
-      ? (t.ballNotesInfiniteFusion as Partial<Record<BallId, string>>)[ball]
-      : undefined) ?? (t.ballNotes as Partial<Record<BallId, string>>)[ball];
-  const hasCondition = ballHasCondition(ball, versionGroup);
+  // and so do the later generations: the newest note that applies wins.
+  type Notes = Partial<Record<BallId, string>>;
+  const noteSets: Notes[] = isInfiniteFusion
+    ? [t.ballNotesInfiniteFusion, t.ballNotes]
+    : [
+        ...(generation >= 8 ? [t.ballNotesGen8] : []),
+        ...(generation >= 7 ? [t.ballNotesGen7] : []),
+        ...(generation >= 5 ? [t.ballNotesGen5] : []),
+        t.ballNotes,
+      ];
+  const ballNote = noteSets.map((notes) => notes[ball]).find(Boolean);
+  const hasCondition = ballHasCondition(ball, versionGroup, generation);
 
   function handleQuickCatch(
     routeId: number,
@@ -509,7 +529,7 @@ export function CatchCardBody({
           </div>
         </div>
 
-        {(ball === "nest" || ball === "level") && (
+        {(ball === "nest" || ball === "level" || levelMatters) && (
           <div className="col-span-2 sm:col-span-1">
             <label className={labelClass} htmlFor={ids.level}>
               {t.levelLabel}
@@ -535,12 +555,31 @@ export function CatchCardBody({
           </div>
         )}
 
-        {ball === "level" && (
+        {(ball === "level" || (levelMatters && generation === 8 && badges < 8)) && (
           <div className="col-span-2 sm:col-span-1">
             <label className={labelClass} htmlFor={ids.ownLevel}>
               {t.ownLevelLabel}
             </label>
             <input id={ids.ownLevel} type="text" inputMode="numeric" {...ownLevelInput} className={inputClass} />
+          </div>
+        )}
+
+        {levelMatters && (
+          <div className="col-span-2 sm:col-span-1">
+            <label className={labelClass} htmlFor={ids.badges}>
+              {t.badgesLabel}
+            </label>
+            <input
+              id={ids.badges}
+              type="text"
+              inputMode="numeric"
+              {...badgesInput}
+              aria-describedby={`${ids.badges}-hint`}
+              className={inputClass}
+            />
+            <p id={`${ids.badges}-hint`} className="mt-1 text-xs text-ink-subtle">
+              {generation === 8 ? t.badgesHintGen8 : t.badgesHintGen9}
+            </p>
           </div>
         )}
 
@@ -656,10 +695,20 @@ export function CatchCardBody({
                 <div className="text-sm text-ink-muted">
                   {result.guaranteed
                     ? t.guaranteed
-                    : `${t.resultLabel} · ${t.avgThrows((1 / result.chance).toFixed(1))}`}
+                    : result.throwLimit !== undefined
+                      ? t.throwLimit(result.throwLimit)
+                      : result.chance === 0
+                        ? t.cannotCatch
+                        : `${t.resultLabel} · ${t.avgThrows((1 / result.chance).toFixed(1))}`}
                 </div>
                 <div className="mt-1 text-xs text-ink-subtle">
-                  {t.details(baseRate ?? 0, result.ballText, result.statusText)}
+                  {[
+                    t.details(baseRate ?? 0, result.ballText, result.statusText),
+                    result.levelText && t.detailsLevel(result.levelText),
+                    result.penaltyText && t.detailsPenalty(result.penaltyText),
+                  ]
+                    .filter(Boolean)
+                    .join(" · ")}
                 </div>
               </div>
             </div>

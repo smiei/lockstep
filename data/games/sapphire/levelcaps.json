@@ -399,7 +399,13 @@
       "es": "Arrecípolis",
       "it": "Ceneride"
     },
-    "badge": null,
+    "badge": {
+      "de": "Schauerorden",
+      "en": "Rain Badge",
+      "fr": "Badge Pluie",
+      "es": "Medalla Lluvia",
+      "it": "Medaglia Pioggia"
+    },
     "max_level": 43
   },
   {

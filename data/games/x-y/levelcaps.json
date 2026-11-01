@@ -34,7 +34,13 @@
       "es": "Ciudad Novarte",
       "it": "Novartopoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Krabbelorden",
+      "en": "Bug Badge",
+      "fr": "Badge Coléoptère",
+      "es": "Medalla Insecto",
+      "it": "Medaglia Insetto"
+    },
     "max_level": 12
   },
   {
@@ -110,7 +116,13 @@
       "es": "Ciudad Relieve",
       "it": "Altoripoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Wallorden",
+      "en": "Cliff Badge",
+      "fr": "Badge Mur",
+      "es": "Medalla Muro",
+      "it": "Medaglia Rupe"
+    },
     "max_level": 25
   },
   {
@@ -167,7 +179,13 @@
       "es": "Ciudad Yantra",
       "it": "Yantaropoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Rauforden",
+      "en": "Rumble Badge",
+      "fr": "Badge Lutte",
+      "es": "Medalla Lid",
+      "it": "Medaglia Lotta"
+    },
     "max_level": 32
   },
   {
@@ -224,7 +242,13 @@
       "es": "Ciudad Témpera",
       "it": "Temperopoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Blattorden",
+      "en": "Plant Badge",
+      "fr": "Badge Végétal",
+      "es": "Medalla Hoja",
+      "it": "Medaglia Pianta"
+    },
     "max_level": 34
   },
   {
@@ -262,7 +286,13 @@
       "es": "Ciudad Luminalia",
       "it": "Luminopoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Ampere-Orden",
+      "en": "Voltage Badge",
+      "fr": "Badge Tension",
+      "es": "Medalla Voltaje",
+      "it": "Medaglia Voltaggio"
+    },
     "max_level": 37
   },
   {
@@ -300,7 +330,13 @@
       "es": "Ciudad Romantis",
       "it": "Romantopoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Feenorden",
+      "en": "Fairy Badge",
+      "fr": "Badge Nymphe",
+      "es": "Medalla Hada",
+      "it": "Medaglia Folletto"
+    },
     "max_level": 42
   },
   {
@@ -376,7 +412,13 @@
       "es": "Ciudad Fluxus",
       "it": "Fluxopoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Psi-Orden",
+      "en": "Psychic Badge",
+      "fr": "Badge Psychisme",
+      "es": "Medalla Psique",
+      "it": "Medaglia Psico"
+    },
     "max_level": 48
   },
   {
@@ -623,7 +665,13 @@
       "es": "Ciudad Fractal",
       "it": "Fractalopoli"
     },
-    "badge": null,
+    "badge": {
+      "de": "Eisbergorden",
+      "en": "Iceberg Badge",
+      "fr": "Badge Iceberg",
+      "es": "Medalla Iceberg",
+      "it": "Medaglia Iceberg"
+    },
     "max_level": 59
   },
   {

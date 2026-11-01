@@ -53,7 +53,13 @@
       "es": "Ruta 2",
       "it": "Percorso 2"
     },
-    "badge": null,
+    "badge": {
+      "de": "Grundorden",
+      "en": "Basic Badge",
+      "fr": "Badge Basique",
+      "es": "Medalla Base",
+      "it": "Medaglia Base"
+    },
     "max_level": 13
   },
   {
@@ -72,7 +78,13 @@
       "es": "Virbank City",
       "it": "Virbank City"
     },
-    "badge": null,
+    "badge": {
+      "de": "Giftorden",
+      "en": "Toxic Badge",
+      "fr": "Badge Toxique",
+      "es": "Medalla Ponzoña",
+      "it": "Medaglia Arsenico"
+    },
     "max_level": 18
   },
   {
@@ -387,7 +399,13 @@
       "es": "Humilau City",
       "it": "Humilau City"
     },
-    "badge": null,
+    "badge": {
+      "de": "Wellenorden",
+      "en": "Wave Badge",
+      "fr": "Badge Vague",
+      "es": "Medalla Ola",
+      "it": "Medaglia Onda"
+    },
     "max_level": 51
   },
   {
