@@ -45,11 +45,11 @@ function deviceLang(): Lang | null {
 // No choice stored on this device. A browser tab follows the server's
 // DEFAULT_LANGUAGE, then the device (the same order getLang uses on the
 // server, so both halves of a page agree); the installed app follows the
-// device first.
+// device first. A device in none of the five languages gets English.
 function fallbackLang(): Lang {
   const configured = clientRuntimeConfig().lang;
-  if (isInstalledApp()) return deviceLang() ?? configured ?? "de";
-  return configured ?? deviceLang() ?? "de";
+  if (isInstalledApp()) return deviceLang() ?? configured ?? "en";
+  return configured ?? deviceLang() ?? "en";
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {

@@ -9,7 +9,8 @@ import { parseAcceptLanguage, pickLang, runtimeConfigFromEnv } from "@/lib/runti
 // or the pokedex/typen pages, or they'd lose static prerendering.
 //
 // Order: the device's own choice (cookie) -> the server's DEFAULT_LANGUAGE ->
-// the browser's languages (Accept-Language) -> German. An installed app sets
+// the browser's languages (Accept-Language) -> English (a browser in none of
+// the five languages is more likely to read English than German). An installed app sets
 // the cookie to the device language on its first start (LanguageProvider),
 // because a request cannot tell the app from a browser tab.
 export async function getLang(): Promise<Lang> {
@@ -19,5 +20,5 @@ export async function getLang(): Promise<Lang> {
   const configured = runtimeConfigFromEnv().lang;
   if (configured) return configured;
   const accept = (await headers()).get("accept-language");
-  return pickLang(parseAcceptLanguage(accept)) ?? "de";
+  return pickLang(parseAcceptLanguage(accept)) ?? "en";
 }
