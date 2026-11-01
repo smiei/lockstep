@@ -4,8 +4,9 @@ import path from "node:path";
 // the Docker image's Alpine at all - even though Docker never uses it.
 import { PrismaLibSql } from "@prisma/adapter-libsql/web";
 // A SQLite file is opened by better-sqlite3 (native), through the same adapter
-// interface: Prisma 7 has no query engine of its own any more.
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+// interface: Prisma 7 has no query engine of its own any more. Only its type
+// is imported here; the module itself is required where a file is opened.
+import type { PrismaBetterSqlite3 as PrismaBetterSqlite3Type } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "@/generated/prisma/client";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 
@@ -52,6 +53,13 @@ function createClient(): PrismaClient {
     );
     return new PrismaClient({ adapter });
   }
+  // Required here, not imported at the top: the adapter loads better-sqlite3's
+  // native binding at import time, and a public instance (Turso above) must
+  // never depend on a native module it does not use.
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { PrismaBetterSqlite3 } = require("@prisma/adapter-better-sqlite3") as {
+    PrismaBetterSqlite3: typeof PrismaBetterSqlite3Type;
+  };
   const adapter = new PrismaBetterSqlite3(
     { url: resolveDatabaseUrl() },
     { timestampFormat: "unixepoch-ms" },
