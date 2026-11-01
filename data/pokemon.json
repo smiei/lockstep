@@ -874,7 +874,7 @@
       "it": "Clefairy"
     },
     "types": [
-      "normal"
+      "fairy"
     ],
     "family_id": 173,
     "stats": {
@@ -899,7 +899,7 @@
       "it": "Clefable"
     },
     "types": [
-      "normal"
+      "fairy"
     ],
     "family_id": 173,
     "stats": {
@@ -974,7 +974,8 @@
       "it": "Jigglypuff"
     },
     "types": [
-      "normal"
+      "normal",
+      "fairy"
     ],
     "family_id": 174,
     "stats": {
@@ -999,7 +1000,8 @@
       "it": "Wigglytuff"
     },
     "types": [
-      "normal"
+      "normal",
+      "fairy"
     ],
     "family_id": 174,
     "stats": {
@@ -3085,7 +3087,8 @@
       "it": "Mr. Mime"
     },
     "types": [
-      "psychic"
+      "psychic",
+      "fairy"
     ],
     "family_id": 439,
     "stats": {
@@ -4382,7 +4385,7 @@
       "it": "Cleffa"
     },
     "types": [
-      "normal"
+      "fairy"
     ],
     "family_id": 173,
     "stats": {
@@ -4407,7 +4410,8 @@
       "it": "Igglybuff"
     },
     "types": [
-      "normal"
+      "normal",
+      "fairy"
     ],
     "family_id": 174,
     "stats": {
@@ -4432,7 +4436,7 @@
       "it": "Togepi"
     },
     "types": [
-      "normal"
+      "fairy"
     ],
     "family_id": 175,
     "stats": {
@@ -4457,6 +4461,7 @@
       "it": "Togetic"
     },
     "types": [
+      "fairy",
       "flying"
     ],
     "family_id": 175,
@@ -4634,7 +4639,8 @@
       "it": "Marill"
     },
     "types": [
-      "water"
+      "water",
+      "fairy"
     ],
     "family_id": 298,
     "stats": {
@@ -4659,7 +4665,8 @@
       "it": "Azumarill"
     },
     "types": [
-      "water"
+      "water",
+      "fairy"
     ],
     "family_id": 298,
     "stats": {
@@ -5296,7 +5303,7 @@
       "it": "Snubbull"
     },
     "types": [
-      "normal"
+      "fairy"
     ],
     "family_id": 209,
     "stats": {
@@ -5321,7 +5328,7 @@
       "it": "Granbull"
     },
     "types": [
-      "normal"
+      "fairy"
     ],
     "family_id": 209,
     "stats": {
@@ -7108,7 +7115,8 @@
       "it": "Ralts"
     },
     "types": [
-      "psychic"
+      "psychic",
+      "fairy"
     ],
     "family_id": 280,
     "stats": {
@@ -7133,7 +7141,8 @@
       "it": "Kirlia"
     },
     "types": [
-      "psychic"
+      "psychic",
+      "fairy"
     ],
     "family_id": 280,
     "stats": {
@@ -7158,7 +7167,8 @@
       "it": "Gardevoir"
     },
     "types": [
-      "psychic"
+      "psychic",
+      "fairy"
     ],
     "family_id": 280,
     "stats": {
@@ -7564,7 +7574,8 @@
       "it": "Azurill"
     },
     "types": [
-      "normal"
+      "normal",
+      "fairy"
     ],
     "family_id": 298,
     "stats": {
@@ -7690,7 +7701,8 @@
       "it": "Mawile"
     },
     "types": [
-      "steel"
+      "steel",
+      "fairy"
     ],
     "family_id": 303,
     "stats": {
