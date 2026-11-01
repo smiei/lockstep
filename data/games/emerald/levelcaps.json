@@ -76,7 +76,7 @@
     "location": {
       "de": "Faustauhaven",
       "en": "Dewford Town",
-      "fr": "Myokara",
+      "fr": "Village Myokara",
       "es": "Pueblo Azuliza",
       "it": "Bluruvia"
     },
@@ -163,7 +163,7 @@
       "it": "Tabitha"
     },
     "location": {
-      "de": "Schlackenberg",
+      "de": "Schlotberg",
       "en": "Mt. Chimney",
       "fr": "Mont Chimnée",
       "es": "Monte Cenizo",
@@ -234,9 +234,9 @@
     "location": {
       "de": "Klima-Institut",
       "en": "Weather Institute",
-      "fr": "Institut Météo",
+      "fr": "Centre Météo",
       "es": "Instituto Meteorológico",
-      "it": "Weather Institute"
+      "it": "Instituto Meteo"
     },
     "badge": null,
     "max_level": null
@@ -253,9 +253,9 @@
     "location": {
       "de": "Klima-Institut",
       "en": "Weather Institute",
-      "fr": "Institut Météo",
+      "fr": "Centre Météo",
       "es": "Instituto Meteorológico",
-      "it": "Weather Institute"
+      "it": "Instituto Meteo"
     },
     "badge": null,
     "max_level": null,
@@ -296,11 +296,11 @@
       "it": "Tabitha"
     },
     "location": {
-      "de": "Magma-Versteck",
+      "de": "Team Magmas Versteck",
       "en": "Magma Hideout",
       "fr": "Planque Magma",
       "es": "Guarida Magma",
-      "it": "Covo Magma"
+      "it": "Rifugio Magma"
     },
     "badge": null,
     "max_level": null
@@ -315,11 +315,11 @@
       "it": "Maxie"
     },
     "location": {
-      "de": "Magma-Versteck",
+      "de": "Team Magmas Versteck",
       "en": "Magma Hideout",
       "fr": "Planque Magma",
       "es": "Guarida Magma",
-      "it": "Covo Magma"
+      "it": "Rifugio Magma"
     },
     "badge": null,
     "max_level": null
@@ -354,11 +354,11 @@
       "it": "Matt"
     },
     "location": {
-      "de": "Aqua-Versteck",
+      "de": "Team Aquas Versteck",
       "en": "Aqua Hideout",
-      "fr": "Repaire Aqua",
+      "fr": "Planque Aqua",
       "es": "Guarida Aqua",
-      "it": "Covo Aqua"
+      "it": "Rifugio Idro"
     },
     "badge": null,
     "max_level": null
@@ -398,11 +398,11 @@
       "it": "Maxie & Tabitha"
     },
     "location": {
-      "de": "Raumfahrtzentrum von Moosbach",
+      "de": "Moosbach City Raumfahrtzentrum",
       "en": "Mossdeep Space Center",
       "fr": "Centre Spatial d'Algatia",
-      "es": "Mossdeep Space Center",
-      "it": "Mossdeep Space Center"
+      "es": "Centro Espacial de Algaria",
+      "it": "Centro Spaziale di Verdeazzupoli"
     },
     "badge": null,
     "max_level": null
@@ -499,7 +499,7 @@
       "it": "Sidney"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -518,7 +518,7 @@
       "it": "Phoebe"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -537,7 +537,7 @@
       "it": "Glacia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -556,7 +556,7 @@
       "it": "Drake"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -575,7 +575,7 @@
       "it": "Wallace"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

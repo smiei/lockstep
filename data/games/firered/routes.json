@@ -46,7 +46,7 @@
   {
     "id": 7,
     "names": {
-      "de": "Vertania Wald",
+      "de": "Vertania-Wald",
       "en": "Viridian Forest",
       "fr": "Forêt de Jade",
       "es": "Bosque Verde",
@@ -93,7 +93,7 @@
       "de": "Mondberg",
       "en": "Mt. Moon",
       "fr": "Mont Sélénite",
-      "es": "Monte Luna",
+      "es": "Mt. Moon",
       "it": "Monte Luna"
     },
     "type": "route"
@@ -171,7 +171,7 @@
       "en": "Diglett's Cave",
       "fr": "Cave Taupiqueur",
       "es": "Cueva Diglett",
-      "it": "Grotta di Diglett"
+      "it": "Grotta Diglett"
     },
     "type": "route"
   },
@@ -422,9 +422,9 @@
     "names": {
       "de": "Kampf-Dojo Saffronia City",
       "en": "Fighting Dojo Saffron City",
-      "fr": "Dojo Karaté Safrania",
-      "es": "Dojo Karate Ciudad Azafrán",
-      "it": "Dojo di Lotta Zafferanopoli"
+      "fr": "Dojo Safrania",
+      "es": "Dojo-Karate Ciudad Azafrán",
+      "it": "Dojo Karate Zafferanopoli"
     },
     "type": "static"
   },
@@ -442,7 +442,7 @@
   {
     "id": 37,
     "names": {
-      "de": "Route 19",
+      "de": "See-Route 19",
       "en": "Route 19",
       "fr": "Chenal 19",
       "es": "Ruta 19",
@@ -477,9 +477,9 @@
     "names": {
       "de": "Seeschauminseln",
       "en": "Seafoam Islands",
-      "fr": "Iles Ecume",
+      "fr": "Îles Écume",
       "es": "Islas Espuma",
-      "it": "Isole Schiuma"
+      "it": "Isole Spumarine"
     },
     "type": "route"
   },
@@ -488,9 +488,9 @@
     "names": {
       "de": "Arktos Seeschauminseln",
       "en": "Articuno Seafoam Islands",
-      "fr": "Artikodin Iles Ecume",
+      "fr": "Artikodin Îles Écume",
       "es": "Articuno Islas Espuma",
-      "it": "Articuno Isole Schiuma"
+      "it": "Articuno Isole Spumarine"
     },
     "type": "static"
   },
@@ -521,9 +521,9 @@
     "names": {
       "de": "Zinnoberinsel",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
+      "fr": "Cramois'île",
       "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "it": "Isola Cannella"
     },
     "type": "route"
   },
@@ -533,7 +533,7 @@
       "de": "Fossil Mondberg",
       "en": "Fossil Mt. Moon",
       "fr": "Fossile Mont Sélénite",
-      "es": "Fósil Monte Luna",
+      "es": "Fósil Mt. Moon",
       "it": "Fossile Monte Luna"
     },
     "type": "static"
@@ -545,14 +545,14 @@
       "en": "Old Amber Pewter City",
       "fr": "Vieil Ambre Argenta",
       "es": "Ámbar Viejo Ciudad Plateada",
-      "it": "Vecchia Ambra Plumbeopoli"
+      "it": "Ambra antica Plumbeopoli"
     },
     "type": "static"
   },
   {
     "id": 41,
     "names": {
-      "de": "Pokémon-Villa",
+      "de": "Pokémon-Haus",
       "en": "Pokémon Mansion",
       "fr": "Manoir Pokémon",
       "es": "Mansión Pokémon",
@@ -565,7 +565,7 @@
     "names": {
       "de": "Eiland Eins",
       "en": "One Island",
-      "fr": "Ile 1",
+      "fr": "Île 1",
       "es": "Isla Prima",
       "it": "Primisola"
     },
@@ -577,8 +577,8 @@
       "de": "Glühweg",
       "en": "Kindle Road",
       "fr": "Route Tison",
-      "es": "Kindle Road",
-      "it": "Kindle Road"
+      "es": "Camino Candente",
+      "it": "Via Vulcanica"
     },
     "type": "route"
   },
@@ -610,8 +610,8 @@
       "de": "Schatzgestade",
       "en": "Treasure Beach",
       "fr": "Plage Trésor",
-      "es": "Treasure Beach",
-      "it": "Treasure Beach"
+      "es": "Playa Tesoro",
+      "it": "Riva del Tesoro"
     },
     "type": "route"
   },
@@ -621,8 +621,8 @@
       "de": "Kap Kante",
       "en": "Cape Brink",
       "fr": "Cap Falaise",
-      "es": "Cape Brink",
-      "it": "Cape Brink"
+      "es": "Cabo Extremo",
+      "it": "Capo Estremo"
     },
     "type": "route"
   },
@@ -632,8 +632,8 @@
       "de": "Tri-Eiland-Pfad",
       "en": "Three Isle Path",
       "fr": "Route Île 3",
-      "es": "Three Isle Path",
-      "it": "Three Isle Path"
+      "es": "Vía Isla Tera",
+      "it": "Via Terzisola"
     },
     "type": "route"
   },
@@ -643,8 +643,8 @@
       "de": "Bundbrücke",
       "en": "Bond Bridge",
       "fr": "Pont du Lien",
-      "es": "Bond Bridge",
-      "it": "Bond Bridge"
+      "es": "Puente Unión",
+      "it": "Ponte Abbraccio"
     },
     "type": "route"
   },
@@ -655,7 +655,7 @@
       "en": "Berry Forest",
       "fr": "Bois Baies",
       "es": "Bosque Baya",
-      "it": "Berry Forest"
+      "it": "Bosco Baccoso"
     },
     "type": "route"
   },
@@ -666,7 +666,7 @@
       "en": "Hypno Berry Forest",
       "fr": "Hypnomade Bois Baies",
       "es": "Hypno Bosque Baya",
-      "it": "Hypno Berry Forest"
+      "it": "Hypno Bosco Baccoso"
     },
     "type": "static"
   },
@@ -697,8 +697,8 @@
     "names": {
       "de": "Eiland Vier",
       "en": "Four Island",
-      "fr": "Ile 4",
-      "es": "Isla Cuarta",
+      "fr": "Île 4",
+      "es": "Isla Quarta",
       "it": "Quartisola"
     },
     "type": "route",
@@ -710,8 +710,8 @@
       "de": "Eiskaskadenhöhle",
       "en": "Icefall Cave",
       "fr": "Grotte de Glace",
-      "es": "Icefall Cave",
-      "it": "Icefall Cave"
+      "es": "Cueva Glaciada",
+      "it": "Grotta Gelata"
     },
     "type": "route",
     "postgame": true
@@ -721,8 +721,8 @@
     "names": {
       "de": "Eiland Fünf",
       "en": "Five Island",
-      "fr": "Ile 5",
-      "es": "Isla Quinta",
+      "fr": "Île 5",
+      "es": "Isla Inta",
       "it": "Quintisola"
     },
     "type": "route",
@@ -734,8 +734,8 @@
       "de": "Wasserirrgarten",
       "en": "Water Labyrinth",
       "fr": "Labyrinthe d'O",
-      "es": "Water Labyrinth",
-      "it": "Water Labyrinth"
+      "es": "Aquarinto",
+      "it": "Labirinto Marino"
     },
     "type": "route",
     "postgame": true
@@ -745,9 +745,9 @@
     "names": {
       "de": "Togepi-Ei Wasserirrgarten",
       "en": "Togepi Egg Water Labyrinth",
-      "fr": "Œuf de Togepi Labyrinthe d'O",
-      "es": "Togepi Egg Water Labyrinth",
-      "it": "Togepi Egg Water Labyrinth"
+      "fr": "Œuf Togepi Labyrinthe d'O",
+      "es": "Huevo de Togepi Aquarinto",
+      "it": "Uovo di Togepi Labirinto Marino"
     },
     "type": "static",
     "postgame": true
@@ -758,8 +758,8 @@
       "de": "Ferienparadies",
       "en": "Resort Gorgeous",
       "fr": "Camp de Vacances",
-      "es": "Resort Gorgeous",
-      "it": "Resort Gorgeous"
+      "es": "Lugar de Recreo",
+      "it": "Perla dei Mari"
     },
     "type": "route",
     "postgame": true
@@ -771,7 +771,7 @@
       "en": "Lost Cave",
       "fr": "Grotte Perdue",
       "es": "Cueva Perdida",
-      "it": "Grotta Smarrita"
+      "it": "Grotta Sperduta"
     },
     "type": "route",
     "postgame": true
@@ -782,8 +782,8 @@
       "de": "Gedenksäule",
       "en": "Memorial Pillar",
       "fr": "Mémorial",
-      "es": "Memorial Pillar",
-      "it": "Memorial Pillar"
+      "es": "Pilar Recuerdo",
+      "it": "Colonna Rocciosa"
     },
     "type": "route",
     "postgame": true
@@ -794,7 +794,7 @@
       "de": "Eiland Sechs",
       "en": "Six Island",
       "fr": "Île 6",
-      "es": "Isla Sexta",
+      "es": "Isla Exta",
       "it": "Sestisola"
     },
     "type": "route",
@@ -806,8 +806,8 @@
       "de": "Wasserweg",
       "en": "Water Path",
       "fr": "Agualcanal",
-      "es": "Water Path",
-      "it": "Water Path"
+      "es": "Vía Acuática",
+      "it": "Via Marina"
     },
     "type": "route",
     "postgame": true
@@ -818,8 +818,8 @@
       "de": "Ruinental",
       "en": "Ruin Valley",
       "fr": "Vallée Ruine",
-      "es": "Ruin Valley",
-      "it": "Ruin Valley"
+      "es": "Valle Ruinas",
+      "it": "Valle Antica"
     },
     "type": "route",
     "postgame": true
@@ -830,8 +830,8 @@
       "de": "Grüner Pfad",
       "en": "Green Path",
       "fr": "Chemin Vert",
-      "es": "Green Path",
-      "it": "Green Path"
+      "es": "Vía Verde",
+      "it": "Via Verde"
     },
     "type": "route",
     "postgame": true
@@ -842,8 +842,8 @@
       "de": "Musterbuschwald",
       "en": "Pattern Bush",
       "fr": "Forbuissons",
-      "es": "Pattern Bush",
-      "it": "Pattern Bush"
+      "es": "Bosquejo",
+      "it": "Bosco Disegnato"
     },
     "type": "route",
     "postgame": true
@@ -854,8 +854,8 @@
       "de": "Wandelhöhle",
       "en": "Altering Cave",
       "fr": "Grotte Métamo",
-      "es": "Altering Cave",
-      "it": "Altering Cave"
+      "es": "Cueva Cambiante",
+      "it": "Grotta Mutevole"
     },
     "type": "route",
     "postgame": true
@@ -866,7 +866,7 @@
       "de": "Eiland Sieben",
       "en": "Seven Island",
       "fr": "Île 7",
-      "es": "Isla Séptima",
+      "es": "Isla Sétima",
       "it": "Settimisola"
     },
     "type": "route",
@@ -878,8 +878,8 @@
       "de": "Schluchteingang",
       "en": "Canyon Entrance",
       "fr": "Entrée du Canyon",
-      "es": "Canyon Entrance",
-      "it": "Canyon Entrance"
+      "es": "Entrada al Cañón",
+      "it": "Ingresso Canyon"
     },
     "type": "route",
     "postgame": true
@@ -887,11 +887,11 @@
   {
     "id": 82,
     "names": {
-      "de": "Siebenschatzschlucht",
+      "de": "7-Schatzschlucht",
       "en": "Sevault Canyon",
       "fr": "Canyon Sesor",
-      "es": "Sevault Canyon",
-      "it": "Sevault Canyon"
+      "es": "Cañón Sétano",
+      "it": "Canyon Seption"
     },
     "type": "route",
     "postgame": true
@@ -902,8 +902,8 @@
       "de": "Tanibo-Ruinen",
       "en": "Tanoby Ruins",
       "fr": "Ruines Tanoby",
-      "es": "Ruinas Tanoby",
-      "it": "Rovine Tanoby"
+      "es": "Ruinas Sete",
+      "it": "Rovine Florabeto"
     },
     "type": "route",
     "postgame": true

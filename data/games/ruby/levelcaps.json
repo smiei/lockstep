@@ -55,7 +55,7 @@
     "location": {
       "de": "Faustauhaven",
       "en": "Dewford Town",
-      "fr": "Myokara",
+      "fr": "Village Myokara",
       "es": "Pueblo Azuliza",
       "it": "Bluruvia"
     },
@@ -229,11 +229,11 @@
       "it": "Rossella"
     },
     "location": {
-      "de": "Weather Institute",
+      "de": "Klima-Institut",
       "en": "Weather Institute",
-      "fr": "Weather Institute",
-      "es": "Weather Institute",
-      "it": "Weather Institute"
+      "fr": "Centre Météo",
+      "es": "Instituto Meteorológico",
+      "it": "Instituto Meteo"
     },
     "badge": null,
     "max_level": 28
@@ -248,11 +248,11 @@
       "it": "Vera"
     },
     "location": {
-      "de": "Weather Institute",
+      "de": "Klima-Institut",
       "en": "Weather Institute",
-      "fr": "Weather Institute",
-      "es": "Weather Institute",
-      "it": "Weather Institute"
+      "fr": "Centre Météo",
+      "es": "Instituto Meteorológico",
+      "it": "Instituto Meteo"
     },
     "badge": null,
     "max_level": 31
@@ -437,7 +437,7 @@
       "it": "Sidney"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -456,7 +456,7 @@
       "it": "Phoebe"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -475,7 +475,7 @@
       "it": "Glacia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -494,7 +494,7 @@
       "it": "Drake"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -513,7 +513,7 @@
       "it": "Steven"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

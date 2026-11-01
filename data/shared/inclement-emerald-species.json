@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (incem)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-10-31T10:22:20.201Z",
+  "generatedAt": "2026-11-01T02:56:13.010Z",
   "species": [
     {
       "id": 12,
@@ -289,7 +289,8 @@
       "id": 39,
       "name": "Jigglypuff",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 105,
@@ -307,7 +308,8 @@
       "id": 40,
       "name": "Wigglytuff",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 120,
@@ -768,7 +770,8 @@
       "id": 122,
       "name": "Mr. Mime",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 40,
@@ -1665,7 +1668,8 @@
       "id": 282,
       "name": "Gardevoir",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 68,
@@ -1813,7 +1817,8 @@
       "id": 303,
       "name": "Mawile",
       "types": [
-        "steel"
+        "steel",
+        "fairy"
       ],
       "stats": {
         "KP": 70,

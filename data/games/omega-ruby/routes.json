@@ -112,7 +112,7 @@
   {
     "id": 11,
     "names": {
-      "de": "Metarost-Tunnel",
+      "de": "Metaflurtunnel",
       "en": "Rusturf Tunnel",
       "fr": "Tunnel Mérazon",
       "es": "Túnel Fervergal",
@@ -279,9 +279,9 @@
     "names": {
       "de": "Route 114",
       "en": "Route 114",
-      "fr": "Fossile Tour Mirage",
-      "es": "Route 114",
-      "it": "Route 114"
+      "fr": "Route 114",
+      "es": "Ruta 114",
+      "it": "Percorso 114"
     },
     "type": "route"
   },
@@ -378,9 +378,9 @@
     "names": {
       "de": "Route 120",
       "en": "Route 120",
-      "fr": "Œuf d'Okéoké Vermilava",
-      "es": "Huevo de Wynaut Pueblo Lavacalda",
-      "it": "Uovo di Wynaut Cuordilava"
+      "fr": "Route 120",
+      "es": "Ruta 120",
+      "it": "Percorso 120"
     },
     "type": "route"
   },
@@ -400,9 +400,9 @@
     "names": {
       "de": "Route 121",
       "en": "Route 121",
-      "fr": "Morphéo Institut Météo",
-      "es": "Castform Instituto Meteorológico",
-      "it": "Route 121"
+      "fr": "Route 121",
+      "es": "Ruta 121",
+      "it": "Percorso 121"
     },
     "type": "route"
   },
@@ -422,9 +422,9 @@
     "names": {
       "de": "Pyroberg",
       "en": "Mt. Pyre",
-      "fr": "Rayquaza Pilier Céleste",
-      "es": "Rayquaza Pilar Celeste",
-      "it": "Rayquaza Torre dei Cieli"
+      "fr": "Mont Mémoria",
+      "es": "Monte Pírico",
+      "it": "Monte Pira"
     },
     "type": "route"
   },
@@ -433,9 +433,9 @@
     "names": {
       "de": "Route 123",
       "en": "Route 123",
-      "fr": "Kecleon Route 120",
-      "es": "Kecleon Ruta 120",
-      "it": "Kecleon Percorso 120"
+      "fr": "Route 123",
+      "es": "Ruta 123",
+      "it": "Percorso 123"
     },
     "type": "route"
   },
@@ -455,9 +455,9 @@
     "names": {
       "de": "Seegrasulb City",
       "en": "Lilycove City",
-      "fr": "Registeel Tombeau Antique",
-      "es": "Registeel Tumba Antigua",
-      "it": "Registeel Tomba Antica"
+      "fr": "Nénucrique",
+      "es": "Ciudad Calagua",
+      "it": "Porto Alghepoli"
     },
     "type": "route"
   },
@@ -488,9 +488,9 @@
     "names": {
       "de": "Moosbach City",
       "en": "Mossdeep City",
-      "fr": "Terhal Algatia",
-      "es": "Beldum Ciudad Algaria",
-      "it": "Beldum Verdeazzupoli"
+      "fr": "Algatia",
+      "es": "Ciudad Algaria",
+      "it": "Verdeazzupoli"
     },
     "type": "route"
   },
@@ -510,9 +510,9 @@
     "names": {
       "de": "Küstenhöhle",
       "en": "Shoal Cave",
-      "fr": "Kyogre Grotte Marine",
-      "es": "Shoal Cave",
-      "it": "Shoal Cave"
+      "fr": "Grotte Tréfonds",
+      "es": "Cueva Cardumen",
+      "it": "Grotta Ondosa"
     },
     "type": "route"
   },
@@ -543,9 +543,9 @@
     "names": {
       "de": "Tiefseehöhle",
       "en": "Seafloor Cavern",
-      "fr": "Groudon Grotte Terra",
-      "es": "Seafloor Cavern",
-      "it": "Seafloor Cavern"
+      "fr": "Caverne Fondmer",
+      "es": "Caverna Abisal",
+      "it": "Antro Abissale"
     },
     "type": "route"
   },
@@ -585,11 +585,11 @@
   {
     "id": 54,
     "names": {
-      "de": "Soaring",
+      "de": "Flug",
       "en": "Soaring",
-      "fr": "Soaring",
-      "es": "Soaring",
-      "it": "Soaring"
+      "fr": "Vol",
+      "es": "Vuelo",
+      "it": "Volo"
     },
     "type": "route"
   },
@@ -609,9 +609,9 @@
     "names": {
       "de": "Route 130",
       "en": "Route 130",
-      "fr": "Électrode Repaire Aqua",
-      "es": "Electrode Guarida Aqua",
-      "it": "Electrode Covo Aqua"
+      "fr": "Chenal 130",
+      "es": "Ruta 130",
+      "it": "Percorso 130"
     },
     "type": "route"
   },
@@ -640,11 +640,11 @@
   {
     "id": 59,
     "names": {
-      "de": "Edge of space",
+      "de": "Rand des Weltalls",
       "en": "Edge of space",
-      "fr": "Edge of space",
-      "es": "Edge of space",
-      "it": "Edge of space"
+      "fr": "Bord de l'espace",
+      "es": "Borde del espacio",
+      "it": "Margine dello spazio"
     },
     "type": "route"
   },
@@ -664,9 +664,9 @@
     "names": {
       "de": "Wundereiland",
       "en": "Mirage Island",
-      "fr": "Mirage Island",
-      "es": "Mirage Island",
-      "it": "Mirage Island"
+      "fr": "Île Mirage",
+      "es": "Isla Espejismo",
+      "it": "Isola Miraggio"
     },
     "type": "route"
   },
@@ -741,7 +741,7 @@
     "names": {
       "de": "Prachtpolis City",
       "en": "Ever Grande City",
-      "fr": "Éternara",
+      "fr": "Eternara",
       "es": "Ciudad Colosalia",
       "it": "Iridopoli"
     },
@@ -763,9 +763,9 @@
     "names": {
       "de": "MS Tide",
       "en": "S.S. Tidal",
-      "fr": "S.S. Tidal",
-      "es": "S.S. Tidal",
-      "it": "S.S. Tidal"
+      "fr": "Le Marina",
+      "es": "S.S. Marea",
+      "it": "Motonave Marea"
     },
     "type": "route",
     "postgame": true
@@ -830,7 +830,7 @@
     "names": {
       "de": "Sichelinsel",
       "en": "Crescent Isle",
-      "fr": "Île de l’Arc",
+      "fr": "Île de l'Arc",
       "es": "Isla Creciente",
       "it": "Isola Arcodiluna"
     },

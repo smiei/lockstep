@@ -46,6 +46,8 @@ const GAME_KEYS = new Set([
   "id",
   "sort",
   "kind",
+  // Retired in 5.3 (the "data unverified" note); still accepted so packs
+  // made before validate.
   "dataStatus",
   "generation",
   "dataGeneration",
@@ -169,9 +171,6 @@ function checkGame(c: Collector, game: unknown, ctx: PackContext) {
   if (!isInt(game.sort)) c.error("game", "sort", "must be a whole number (position in the game list)");
   if (game.kind !== undefined && !(PACK_KINDS as readonly unknown[]).includes(game.kind)) {
     c.error("game", "kind", `must be one of ${PACK_KINDS.join(", ")}`);
-  }
-  if (game.dataStatus !== undefined && game.dataStatus !== "verified" && game.dataStatus !== "unverified") {
-    c.error("game", "dataStatus", "must be \"verified\" or \"unverified\"");
   }
   for (const key of ["generation", "dataGeneration"] as const) {
     const value = game[key];

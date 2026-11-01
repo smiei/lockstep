@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (radred)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-11-01T01:16:31.844Z",
+  "generatedAt": "2026-11-01T02:56:13.054Z",
   "species": [
     {
       "id": 12,
@@ -492,7 +492,8 @@
       "id": 122,
       "name": "Mr. Mime",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 50,

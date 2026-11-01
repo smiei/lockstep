@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Starter",
+      "es": "Inicial",
       "it": "Starter"
     },
     "type": "static"
@@ -127,7 +127,7 @@
       "en": "Connecting Cave",
       "fr": "Cave Connecterre",
       "es": "Gruta Tierraunida",
-      "it": "Grotta Trait d’Union"
+      "it": "Grotta Trait d'Union"
     },
     "type": "route"
   },

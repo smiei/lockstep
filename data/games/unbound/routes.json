@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Inicial",
+      "es": "Starter",
       "it": "Starter"
     },
     "type": "static"
@@ -16,8 +16,8 @@
       "de": "Route 1",
       "en": "Route 1",
       "fr": "Route 1",
-      "es": "Ruta 1",
-      "it": "Percorso 1"
+      "es": "Route 1",
+      "it": "Route 1"
     },
     "type": "route"
   },
@@ -49,8 +49,8 @@
       "de": "Route 2",
       "en": "Route 2",
       "fr": "Route 2",
-      "es": "Ruta 2",
-      "it": "Percorso 2"
+      "es": "Route 2",
+      "it": "Route 2"
     },
     "type": "route"
   },
@@ -71,8 +71,8 @@
       "de": "Route 3",
       "en": "Route 3",
       "fr": "Route 3",
-      "es": "Ruta 3",
-      "it": "Percorso 3"
+      "es": "Route 3",
+      "it": "Route 3"
     },
     "type": "route"
   },
@@ -93,8 +93,8 @@
       "de": "Route 4",
       "en": "Route 4",
       "fr": "Route 4",
-      "es": "Ruta 4",
-      "it": "Percorso 4"
+      "es": "Route 4",
+      "it": "Route 4"
     },
     "type": "route"
   },
@@ -126,8 +126,8 @@
       "de": "Route 5",
       "en": "Route 5",
       "fr": "Route 5",
-      "es": "Ruta 5",
-      "it": "Percorso 5"
+      "es": "Route 5",
+      "it": "Route 5"
     },
     "type": "route"
   },
@@ -170,8 +170,8 @@
       "de": "Route 6",
       "en": "Route 6",
       "fr": "Route 6",
-      "es": "Ruta 6",
-      "it": "Percorso 6"
+      "es": "Route 6",
+      "it": "Route 6"
     },
     "type": "route"
   },
@@ -181,8 +181,8 @@
       "de": "Route 7",
       "en": "Route 7",
       "fr": "Route 7",
-      "es": "Ruta 7",
-      "it": "Percorso 7"
+      "es": "Route 7",
+      "it": "Route 7"
     },
     "type": "route"
   },
@@ -203,8 +203,8 @@
       "de": "Route 8",
       "en": "Route 8",
       "fr": "Route 8",
-      "es": "Ruta 8",
-      "it": "Percorso 8"
+      "es": "Route 8",
+      "it": "Route 8"
     },
     "type": "route"
   },
@@ -247,8 +247,8 @@
       "de": "Route 11",
       "en": "Route 11",
       "fr": "Route 11",
-      "es": "Ruta 11",
-      "it": "Percorso 11"
+      "es": "Route 11",
+      "it": "Route 11"
     },
     "type": "route"
   },
@@ -269,8 +269,8 @@
       "de": "Route 10",
       "en": "Route 10",
       "fr": "Route 10",
-      "es": "Ruta 10",
-      "it": "Percorso 10"
+      "es": "Route 10",
+      "it": "Route 10"
     },
     "type": "route"
   },
@@ -291,8 +291,8 @@
       "de": "Route 9",
       "en": "Route 9",
       "fr": "Route 9",
-      "es": "Ruta 9",
-      "it": "Percorso 9"
+      "es": "Route 9",
+      "it": "Route 9"
     },
     "type": "route"
   },
@@ -335,8 +335,8 @@
       "de": "Route 12",
       "en": "Route 12",
       "fr": "Route 12",
-      "es": "Ruta 12",
-      "it": "Percorso 12"
+      "es": "Route 12",
+      "it": "Route 12"
     },
     "type": "route"
   },
@@ -368,8 +368,8 @@
       "de": "Route 15",
       "en": "Route 15",
       "fr": "Route 15",
-      "es": "Ruta 15",
-      "it": "Percorso 15"
+      "es": "Route 15",
+      "it": "Route 15"
     },
     "type": "route"
   },
@@ -379,8 +379,8 @@
       "de": "Route 13",
       "en": "Route 13",
       "fr": "Route 13",
-      "es": "Ruta 13",
-      "it": "Percorso 13"
+      "es": "Route 13",
+      "it": "Route 13"
     },
     "type": "route"
   },
@@ -390,8 +390,8 @@
       "de": "Route 14",
       "en": "Route 14",
       "fr": "Route 14",
-      "es": "Ruta 14",
-      "it": "Percorso 14"
+      "es": "Route 14",
+      "it": "Route 14"
     },
     "type": "route"
   },
@@ -467,8 +467,8 @@
       "de": "Route 16",
       "en": "Route 16",
       "fr": "Route 16",
-      "es": "Ruta 16",
-      "it": "Percorso 16"
+      "es": "Route 16",
+      "it": "Route 16"
     },
     "type": "route"
   },
@@ -530,11 +530,11 @@
   {
     "id": 49,
     "names": {
-      "de": "Safari-Zone",
+      "de": "Safari Zone",
       "en": "Safari Zone",
-      "fr": "Parc Safari",
-      "es": "Zona Safari",
-      "it": "Zona Safari"
+      "fr": "Safari Zone",
+      "es": "Safari Zone",
+      "it": "Safari Zone"
     },
     "type": "route"
   },
@@ -599,19 +599,19 @@
       "de": "Route 18",
       "en": "Route 18",
       "fr": "Route 18",
-      "es": "Ruta 18",
-      "it": "Percorso 18"
+      "es": "Route 18",
+      "it": "Route 18"
     },
     "type": "route"
   },
   {
     "id": 56,
     "names": {
-      "de": "Siegesstraße",
+      "de": "Victory Road",
       "en": "Victory Road",
-      "fr": "Route Victoire",
-      "es": "Calle Victoria",
-      "it": "Via Vittoria"
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
     },
     "type": "route"
   },

@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Inicial",
+      "es": "Starter",
       "it": "Starter"
     },
     "type": "static"
@@ -13,9 +13,9 @@
   {
     "id": 2,
     "names": {
-      "de": "Zweiblattdorf",
+      "de": "Twinleaf Town",
       "en": "Twinleaf Town",
-      "fr": "Bonaugure",
+      "fr": "Twinleaf Town",
       "es": "Twinleaf Town",
       "it": "Twinleaf Town"
     },
@@ -27,17 +27,17 @@
       "de": "Route 201",
       "en": "Route 201",
       "fr": "Route 201",
-      "es": "Ruta 201",
-      "it": "Percorso 201"
+      "es": "Route 201",
+      "it": "Route 201"
     },
     "type": "route"
   },
   {
     "id": 4,
     "names": {
-      "de": "See der Wahrheit",
+      "de": "Lake Verity",
       "en": "Lake Verity",
-      "fr": "Lac Vérité",
+      "fr": "Lake Verity",
       "es": "Lake Verity",
       "it": "Lake Verity"
     },
@@ -49,8 +49,8 @@
       "de": "Route 202",
       "en": "Route 202",
       "fr": "Route 202",
-      "es": "Ruta 202",
-      "it": "Percorso 202"
+      "es": "Route 202",
+      "it": "Route 202"
     },
     "type": "route"
   },
@@ -60,17 +60,17 @@
       "de": "Route 203",
       "en": "Route 203",
       "fr": "Route 203",
-      "es": "Ruta 203",
-      "it": "Percorso 203"
+      "es": "Route 203",
+      "it": "Route 203"
     },
     "type": "route"
   },
   {
     "id": 7,
     "names": {
-      "de": "Erzelingen-Tor",
+      "de": "Oreburgh Gate",
       "en": "Oreburgh Gate",
-      "fr": "Entrée Charbourg",
+      "fr": "Oreburgh Gate",
       "es": "Oreburgh Gate",
       "it": "Oreburgh Gate"
     },
@@ -79,9 +79,9 @@
   {
     "id": 8,
     "names": {
-      "de": "Erzelingen City",
+      "de": "Oreburgh City",
       "en": "Oreburgh City",
-      "fr": "Charbourg",
+      "fr": "Oreburgh City",
       "es": "Oreburgh City",
       "it": "Oreburgh City"
     },
@@ -90,9 +90,9 @@
   {
     "id": 9,
     "names": {
-      "de": "Erzelingen-Mine",
+      "de": "Oreburgh Mine",
       "en": "Oreburgh Mine",
-      "fr": "Fossile Charbourg",
+      "fr": "Oreburgh Mine",
       "es": "Oreburgh Mine",
       "it": "Oreburgh Mine"
     },
@@ -104,8 +104,8 @@
       "de": "Route 207",
       "en": "Route 207",
       "fr": "Route 207",
-      "es": "Ruta 207",
-      "it": "Percorso 207"
+      "es": "Route 207",
+      "it": "Route 207"
     },
     "type": "route"
   },
@@ -114,7 +114,7 @@
     "names": {
       "de": "Route 204",
       "en": "Route 204",
-      "fr": "Baudrive Les Eoliennes",
+      "fr": "Route 204",
       "es": "Route 204",
       "it": "Route 204"
     },
@@ -134,9 +134,9 @@
   {
     "id": 13,
     "names": {
-      "de": "Zerklüfteter Pfad",
+      "de": "Ravaged Path",
       "en": "Ravaged Path",
-      "fr": "Chemin Rocheux",
+      "fr": "Ravaged Path",
       "es": "Ravaged Path",
       "it": "Ravaged Path"
     },
@@ -156,9 +156,9 @@
   {
     "id": 15,
     "names": {
-      "de": "Auen von Flori",
+      "de": "Floaroma Meadow",
       "en": "Floaroma Meadow",
-      "fr": "Pré Floraville",
+      "fr": "Floaroma Meadow",
       "es": "Floaroma Meadow",
       "it": "Floaroma Meadow"
     },
@@ -169,7 +169,7 @@
     "names": {
       "de": "Route 205",
       "en": "Route 205",
-      "fr": "Motisma Vieux Château",
+      "fr": "Route 205",
       "es": "Route 205",
       "it": "Route 205"
     },
@@ -178,9 +178,9 @@
   {
     "id": 17,
     "names": {
-      "de": "Windkraftanlage",
+      "de": "Valley Windworks",
       "en": "Valley Windworks",
-      "fr": "Œuf de Togepi Vestigion",
+      "fr": "Valley Windworks",
       "es": "Valley Windworks",
       "it": "Valley Windworks"
     },
@@ -189,9 +189,9 @@
   {
     "id": 18,
     "names": {
-      "de": "Ewigwald",
+      "de": "Eterna Forest",
       "en": "Eterna Forest",
-      "fr": "Forêt Vestigion",
+      "fr": "Eterna Forest",
       "es": "Eterna Forest",
       "it": "Eterna Forest"
     },
@@ -211,9 +211,9 @@
   {
     "id": 20,
     "names": {
-      "de": "Ewigenau",
+      "de": "Eterna City",
       "en": "Eterna City",
-      "fr": "Évoli Unionpolis",
+      "fr": "Eterna City",
       "es": "Eterna City",
       "it": "Eterna City"
     },
@@ -235,18 +235,18 @@
     "names": {
       "de": "Route 206",
       "en": "Route 206",
-      "fr": "Spiritomb Route 209",
-      "es": "Spiritomb Ruta 209",
-      "it": "Spiritomb Percorso 209"
+      "fr": "Route 206",
+      "es": "Route 206",
+      "it": "Route 206"
     },
     "type": "route"
   },
   {
     "id": 23,
     "names": {
-      "de": "Bizarre Höhle",
+      "de": "Wayward Cave",
       "en": "Wayward Cave",
-      "fr": "Grotte Revèche",
+      "fr": "Wayward Cave",
       "es": "Wayward Cave",
       "it": "Wayward Cave"
     },
@@ -255,9 +255,9 @@
   {
     "id": 24,
     "names": {
-      "de": "Kraterberg",
+      "de": "Mt. Coronet",
       "en": "Mt. Coronet",
-      "fr": "Mont Couronné",
+      "fr": "Mt. Coronet",
       "es": "Mt. Coronet",
       "it": "Mt. Coronet"
     },
@@ -269,8 +269,8 @@
       "de": "Route 208",
       "en": "Route 208",
       "fr": "Route 208",
-      "es": "Ruta 208",
-      "it": "Percorso 208"
+      "es": "Route 208",
+      "it": "Route 208"
     },
     "type": "route"
   },
@@ -280,8 +280,8 @@
       "de": "Route 209",
       "en": "Route 209",
       "fr": "Route 209",
-      "es": "Ruta 209",
-      "it": "Percorso 209"
+      "es": "Route 209",
+      "it": "Route 209"
     },
     "type": "route"
   },
@@ -299,9 +299,9 @@
   {
     "id": 28,
     "names": {
-      "de": "Trostu-Ruinen",
+      "de": "Solaceon Ruins",
       "en": "Solaceon Ruins",
-      "fr": "Ruines Bonville",
+      "fr": "Solaceon Ruins",
       "es": "Solaceon Ruins",
       "it": "Solaceon Ruins"
     },
@@ -313,8 +313,8 @@
       "de": "Route 210",
       "en": "Route 210",
       "fr": "Route 210",
-      "es": "Ruta 210",
-      "it": "Percorso 210"
+      "es": "Route 210",
+      "it": "Route 210"
     },
     "type": "route"
   },
@@ -324,17 +324,17 @@
       "de": "Route 215",
       "en": "Route 215",
       "fr": "Route 215",
-      "es": "Ruta 215",
-      "it": "Percorso 215"
+      "es": "Route 215",
+      "it": "Route 215"
     },
     "type": "route"
   },
   {
     "id": 31,
     "names": {
-      "de": "Schleiede",
+      "de": "Veilstone City",
       "en": "Veilstone City",
-      "fr": "Voilaroc",
+      "fr": "Veilstone City",
       "es": "Veilstone City",
       "it": "Veilstone City"
     },
@@ -346,15 +346,15 @@
       "de": "Route 214",
       "en": "Route 214",
       "fr": "Route 214",
-      "es": "Ruta 214",
-      "it": "Percorso 214"
+      "es": "Route 214",
+      "it": "Route 214"
     },
     "type": "route"
   },
   {
     "id": 33,
     "names": {
-      "de": "Tunnel",
+      "de": "Ruin Maniac's Cave",
       "en": "Ruin Maniac's Cave",
       "fr": "Ruin Maniac's Cave",
       "es": "Ruin Maniac's Cave",
@@ -365,7 +365,7 @@
   {
     "id": 34,
     "names": {
-      "de": "Maniac-Tunnel",
+      "de": "Ruin Maniac's Tunnel",
       "en": "Ruin Maniac's Tunnel",
       "fr": "Ruin Maniac's Tunnel",
       "es": "Ruin Maniac's Tunnel",
@@ -376,9 +376,9 @@
   {
     "id": 35,
     "names": {
-      "de": "Kühnheitsufer",
+      "de": "Valor Lakefront",
       "en": "Valor Lakefront",
-      "fr": "Œuf de Riolu Ile de Fer",
+      "fr": "Valor Lakefront",
       "es": "Valor Lakefront",
       "it": "Valor Lakefront"
     },
@@ -389,7 +389,7 @@
     "names": {
       "de": "Pastoria City",
       "en": "Pastoria City",
-      "fr": "Verchamps",
+      "fr": "Pastoria City",
       "es": "Pastoria City",
       "it": "Pastoria City"
     },
@@ -398,9 +398,9 @@
   {
     "id": 37,
     "names": {
-      "de": "Großmoor",
+      "de": "Great Marsh",
       "en": "Great Marsh",
-      "fr": "Grand Marais",
+      "fr": "Great Marsh",
       "es": "Great Marsh",
       "it": "Great Marsh"
     },
@@ -412,8 +412,8 @@
       "de": "Route 212",
       "en": "Route 212",
       "fr": "Route 212",
-      "es": "Ruta 212",
-      "it": "Percorso 212"
+      "es": "Route 212",
+      "it": "Route 212"
     },
     "type": "route"
   },
@@ -423,17 +423,17 @@
       "de": "Route 213",
       "en": "Route 213",
       "fr": "Route 213",
-      "es": "Ruta 213",
-      "it": "Percorso 213"
+      "es": "Route 213",
+      "it": "Route 213"
     },
     "type": "route"
   },
   {
     "id": 40,
     "names": {
-      "de": "Elyses",
+      "de": "Celestic Town",
       "en": "Celestic Town",
-      "fr": "Célestia",
+      "fr": "Celestic Town",
       "es": "Celestic Town",
       "it": "Celestic Town"
     },
@@ -442,9 +442,9 @@
   {
     "id": 41,
     "names": {
-      "de": "Feuriohütte",
+      "de": "Fuego Ironworks",
       "en": "Fuego Ironworks",
-      "fr": "Créhelf Lac Savoir",
+      "fr": "Fuego Ironworks",
       "es": "Fuego Ironworks",
       "it": "Fuego Ironworks"
     },
@@ -455,7 +455,7 @@
     "names": {
       "de": "Route 219",
       "en": "Route 219",
-      "fr": "Créfadet Lac Courage",
+      "fr": "Route 219",
       "es": "Route 219",
       "it": "Route 219"
     },
@@ -466,9 +466,9 @@
     "names": {
       "de": "Route 220",
       "en": "Route 220",
-      "fr": "Créfollet (itinérant)",
-      "es": "Mesprit (errante)",
-      "it": "Mesprit (vagante)"
+      "fr": "Route 220",
+      "es": "Route 220",
+      "it": "Route 220"
     },
     "type": "route"
   },
@@ -477,7 +477,7 @@
     "names": {
       "de": "Route 221",
       "en": "Route 221",
-      "fr": "Giratina Monde Distorsion",
+      "fr": "Route 221",
       "es": "Route 221",
       "it": "Route 221"
     },
@@ -489,17 +489,17 @@
       "de": "Route 218",
       "en": "Route 218",
       "fr": "Route 218",
-      "es": "Ruta 218",
-      "it": "Percorso 218"
+      "es": "Route 218",
+      "it": "Route 218"
     },
     "type": "route"
   },
   {
     "id": 46,
     "names": {
-      "de": "Fleetburg",
+      "de": "Canalave City",
       "en": "Canalave City",
-      "fr": "Joliberges",
+      "fr": "Canalave City",
       "es": "Canalave City",
       "it": "Canalave City"
     },
@@ -508,9 +508,9 @@
   {
     "id": 47,
     "names": {
-      "de": "Eiseninsel",
+      "de": "Iron Island",
       "en": "Iron Island",
-      "fr": "Ile de Fer",
+      "fr": "Iron Island",
       "es": "Iron Island",
       "it": "Iron Island"
     },
@@ -522,8 +522,8 @@
       "de": "Route 211",
       "en": "Route 211",
       "fr": "Route 211",
-      "es": "Ruta 211",
-      "it": "Percorso 211"
+      "es": "Route 211",
+      "it": "Route 211"
     },
     "type": "route"
   },
@@ -533,8 +533,8 @@
       "de": "Route 216",
       "en": "Route 216",
       "fr": "Route 216",
-      "es": "Ruta 216",
-      "it": "Percorso 216"
+      "es": "Route 216",
+      "it": "Route 216"
     },
     "type": "route"
   },
@@ -544,17 +544,17 @@
       "de": "Route 217",
       "en": "Route 217",
       "fr": "Route 217",
-      "es": "Ruta 217",
-      "it": "Percorso 217"
+      "es": "Route 217",
+      "it": "Route 217"
     },
     "type": "route"
   },
   {
     "id": 51,
     "names": {
-      "de": "Stärkeufer",
+      "de": "Acuity Lakefront",
       "en": "Acuity Lakefront",
-      "fr": "Rive Lac Savoir",
+      "fr": "Acuity Lakefront",
       "es": "Acuity Lakefront",
       "it": "Acuity Lakefront"
     },
@@ -563,9 +563,9 @@
   {
     "id": 52,
     "names": {
-      "de": "See der Stärke",
+      "de": "Lake Acuity",
       "en": "Lake Acuity",
-      "fr": "Lac Savoir",
+      "fr": "Lake Acuity",
       "es": "Lake Acuity",
       "it": "Lake Acuity"
     },
@@ -574,9 +574,9 @@
   {
     "id": 53,
     "names": {
-      "de": "Blizzach-Tempel",
+      "de": "Snowpoint Temple",
       "en": "Snowpoint Temple",
-      "fr": "Temple Frimapic",
+      "fr": "Snowpoint Temple",
       "es": "Snowpoint Temple",
       "it": "Snowpoint Temple"
     },
@@ -589,17 +589,17 @@
       "de": "Route 222",
       "en": "Route 222",
       "fr": "Route 222",
-      "es": "Ruta 222",
-      "it": "Percorso 222"
+      "es": "Route 222",
+      "it": "Route 222"
     },
     "type": "route"
   },
   {
     "id": 55,
     "names": {
-      "de": "Sonnewik",
+      "de": "Sunyshore City",
       "en": "Sunyshore City",
-      "fr": "Rivamar",
+      "fr": "Sunyshore City",
       "es": "Sunyshore City",
       "it": "Sunyshore City"
     },
@@ -611,17 +611,17 @@
       "de": "Route 223",
       "en": "Route 223",
       "fr": "Route 223",
-      "es": "Ruta 223",
-      "it": "Percorso 223"
+      "es": "Route 223",
+      "it": "Route 223"
     },
     "type": "route"
   },
   {
     "id": 57,
     "names": {
-      "de": "Pokémon-Liga",
+      "de": "Pokémon League",
       "en": "Pokémon League",
-      "fr": "Ligue Pokémon",
+      "fr": "Pokémon League",
       "es": "Pokémon League",
       "it": "Pokémon League"
     },
@@ -633,8 +633,8 @@
       "de": "Route 224",
       "en": "Route 224",
       "fr": "Route 224",
-      "es": "Ruta 224",
-      "it": "Percorso 224"
+      "es": "Route 224",
+      "it": "Route 224"
     },
     "type": "route",
     "postgame": true
@@ -642,11 +642,11 @@
   {
     "id": 59,
     "names": {
-      "de": "Siegesstraße",
+      "de": "Victory Road",
       "en": "Victory Road",
-      "fr": "Route Victoire",
-      "es": "Calle Victoria",
-      "it": "Via Vittoria"
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
     },
     "type": "route"
   }

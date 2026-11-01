@@ -69,8 +69,8 @@
       "de": "Route 2",
       "en": "Route 2",
       "fr": "Route 2",
-      "es": "Ruta 2",
-      "it": "Percorso 2"
+      "es": "Route 2",
+      "it": "Route 2"
     },
     "badge": null,
     "max_level": 13
@@ -116,27 +116,28 @@
   {
     "id": 7,
     "names": {
-      "de": "Sandro",
+      "de": "Brycen",
       "en": "Brycen",
       "fr": "Brycen",
       "es": "Brycen",
       "it": "Brycen"
     },
     "location": {
-      "de": "Nevaio City",
+      "de": "Icirrus City",
       "en": "Icirrus City",
-      "fr": "Flocombe",
+      "fr": "Icirrus City",
       "es": "Icirrus City",
       "it": "Icirrus City"
     },
     "badge": {
-      "de": "Frost-Orden",
+      "de": "Freeze Badge",
       "en": "Freeze Badge",
       "fr": "Freeze Badge",
       "es": "Freeze Badge",
       "it": "Freeze Badge"
     },
-    "max_level": 20
+    "max_level": 20,
+    "sprite": "Sandro"
   },
   {
     "id": 8,
@@ -160,27 +161,28 @@
   {
     "id": 9,
     "names": {
-      "de": "Artie",
+      "de": "Burgh",
       "en": "Burgh",
       "fr": "Burgh",
       "es": "Burgh",
       "it": "Burgh"
     },
     "location": {
-      "de": "Stratos City",
+      "de": "Castelia City",
       "en": "Castelia City",
-      "fr": "Volucité",
+      "fr": "Castelia City",
       "es": "Castelia City",
       "it": "Castelia City"
     },
     "badge": {
-      "de": "Insekt-Orden",
+      "de": "Insect Badge",
       "en": "Insect Badge",
       "fr": "Insect Badge",
       "es": "Insect Badge",
       "it": "Insect Badge"
     },
-    "max_level": 27
+    "max_level": 27,
+    "sprite": "Artie"
   },
   {
     "id": 10,
@@ -204,27 +206,28 @@
   {
     "id": 11,
     "names": {
-      "de": "Aloe",
+      "de": "Lenora",
       "en": "Lenora",
       "fr": "Lenora",
       "es": "Lenora",
       "it": "Lenora"
     },
     "location": {
-      "de": "Septerna City",
+      "de": "Nacrene City",
       "en": "Nacrene City",
-      "fr": "Maillard",
+      "fr": "Nacrene City",
       "es": "Nacrene City",
       "it": "Nacrene City"
     },
     "badge": {
-      "de": "Basis-Orden",
+      "de": "Basic Badge",
       "en": "Basic Badge",
       "fr": "Basic Badge",
       "es": "Basic Badge",
       "it": "Basic Badge"
     },
-    "max_level": 30
+    "max_level": 30,
+    "sprite": "Aloe"
   },
   {
     "id": 12,
@@ -286,27 +289,28 @@
   {
     "id": 15,
     "names": {
-      "de": "Kamilla",
+      "de": "Elesa",
       "en": "Elesa",
       "fr": "Elesa",
       "es": "Elesa",
       "it": "Elesa"
     },
     "location": {
-      "de": "Rayono City",
+      "de": "Nimbasa City",
       "en": "Nimbasa City",
-      "fr": "Méanville",
+      "fr": "Nimbasa City",
       "es": "Nimbasa City",
       "it": "Nimbasa City"
     },
     "badge": {
-      "de": "Blitz-Orden",
+      "de": "Bolt Badge",
       "en": "Bolt Badge",
       "fr": "Bolt Badge",
       "es": "Bolt Badge",
       "it": "Bolt Badge"
     },
-    "max_level": 36
+    "max_level": 36,
+    "sprite": "Kamilla"
   },
   {
     "id": 16,
@@ -368,27 +372,28 @@
   {
     "id": 19,
     "names": {
-      "de": "Turner",
+      "de": "Clay",
       "en": "Clay",
       "fr": "Clay",
       "es": "Clay",
       "it": "Clay"
     },
     "location": {
-      "de": "Marea City",
+      "de": "Driftveil City",
       "en": "Driftveil City",
-      "fr": "Port Yoneuve",
+      "fr": "Driftveil City",
       "es": "Driftveil City",
       "it": "Driftveil City"
     },
     "badge": {
-      "de": "Beben-Orden",
+      "de": "Quake Badge",
       "en": "Quake Badge",
       "fr": "Quake Badge",
       "es": "Quake Badge",
       "it": "Quake Badge"
     },
-    "max_level": 43
+    "max_level": 43,
+    "sprite": "Turner"
   },
   {
     "id": 20,
@@ -450,32 +455,33 @@
   {
     "id": 23,
     "names": {
-      "de": "Géraldine",
+      "de": "Skyla",
       "en": "Skyla",
       "fr": "Skyla",
       "es": "Skyla",
       "it": "Skyla"
     },
     "location": {
-      "de": "Panaero City",
+      "de": "Mistralton City",
       "en": "Mistralton City",
-      "fr": "Parsemille",
+      "fr": "Mistralton City",
       "es": "Mistralton City",
       "it": "Mistralton City"
     },
     "badge": {
-      "de": "Jet-Orden",
+      "de": "Jet Badge",
       "en": "Jet Badge",
       "fr": "Jet Badge",
       "es": "Jet Badge",
       "it": "Jet Badge"
     },
-    "max_level": 52
+    "max_level": 52,
+    "sprite": "Géraldine"
   },
   {
     "id": 24,
     "names": {
-      "de": "Bel",
+      "de": "Bianca",
       "en": "Bianca",
       "fr": "Bianca",
       "es": "Bianca",
@@ -489,7 +495,8 @@
       "it": "Reversal Mountain"
     },
     "badge": null,
-    "max_level": 51
+    "max_level": 51,
+    "sprite": "Bel"
   },
   {
     "id": 25,
@@ -570,27 +577,28 @@
   {
     "id": 29,
     "names": {
-      "de": "Lysander",
+      "de": "Drayden",
       "en": "Drayden",
       "fr": "Drayden",
       "es": "Drayden",
       "it": "Drayden"
     },
     "location": {
-      "de": "Twindrake City",
+      "de": "Opelucid City",
       "en": "Opelucid City",
-      "fr": "Janusia",
+      "fr": "Opelucid City",
       "es": "Opelucid City",
       "it": "Opelucid City"
     },
     "badge": {
-      "de": "Legenden-Orden",
+      "de": "Legend Badge",
       "en": "Legend Badge",
       "fr": "Legend Badge",
       "es": "Legend Badge",
       "it": "Legend Badge"
     },
-    "max_level": 61
+    "max_level": 61,
+    "sprite": "Lysander"
   },
   {
     "id": 30,
@@ -709,7 +717,7 @@
   {
     "id": 36,
     "names": {
-      "de": "G-Cis",
+      "de": "Ghetsis",
       "en": "Ghetsis",
       "fr": "Ghetsis",
       "es": "Ghetsis",
@@ -723,7 +731,8 @@
       "it": "Giant Chasm"
     },
     "badge": null,
-    "max_level": 68
+    "max_level": 68,
+    "sprite": "G-Cis"
   },
   {
     "id": 37,
@@ -823,78 +832,82 @@
   {
     "id": 42,
     "names": {
-      "de": "Anissa",
+      "de": "Shauntal",
       "en": "Shauntal",
       "fr": "Shauntal",
       "es": "Shauntal",
       "it": "Shauntal"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 74
+    "max_level": 74,
+    "sprite": "Anissa"
   },
   {
     "id": 43,
     "names": {
-      "de": "Astor",
+      "de": "Grimsley",
       "en": "Grimsley",
       "fr": "Grimsley",
       "es": "Grimsley",
       "it": "Grimsley"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 74
+    "max_level": 74,
+    "sprite": "Astor"
   },
   {
     "id": 44,
     "names": {
-      "de": "Kattlea",
+      "de": "Caitlin",
       "en": "Caitlin",
       "fr": "Caitlin",
       "es": "Caitlin",
       "it": "Caitlin"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 74
+    "max_level": 74,
+    "sprite": "Kattlea"
   },
   {
     "id": 45,
     "names": {
-      "de": "Eugen",
+      "de": "Marshal",
       "en": "Marshal",
       "fr": "Marshal",
       "es": "Marshal",
       "it": "Marshal"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 74
+    "max_level": 74,
+    "sprite": "Eugen"
   },
   {
     "id": 46,
@@ -906,11 +919,11 @@
       "it": "Iris"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 75

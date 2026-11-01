@@ -16,7 +16,7 @@
       "de": "Wurzelheim",
       "en": "Littleroot Town",
       "fr": "Bourg-en-Vol",
-      "es": "Villa Raíz",
+      "es": "Villa Raiz",
       "it": "Albanova"
     },
     "type": "route"
@@ -112,7 +112,7 @@
   {
     "id": 11,
     "names": {
-      "de": "Metarost-Tunnel",
+      "de": "Metaflurtunnel",
       "en": "Rusturf Tunnel",
       "fr": "Tunnel Mérazon",
       "es": "Túnel Fervergal",
@@ -136,7 +136,7 @@
     "names": {
       "de": "Faustauhaven",
       "en": "Dewford Town",
-      "fr": "Myokara",
+      "fr": "Village Myokara",
       "es": "Pueblo Azuliza",
       "it": "Bluruvia"
     },
@@ -214,8 +214,8 @@
       "de": "Wandelhöhle",
       "en": "Altering Cave",
       "fr": "Grotte Métamo",
-      "es": "Altering Cave",
-      "it": "Altering Cave"
+      "es": "Cueva Cambiante",
+      "it": "Grotta Mutevole"
     },
     "type": "route",
     "postgame": true
@@ -269,20 +269,20 @@
     "names": {
       "de": "Route 114",
       "en": "Route 114",
-      "fr": "Fossile Tour Mirage",
-      "es": "Route 114",
-      "it": "Route 114"
+      "fr": "Route 114",
+      "es": "Ruta 114",
+      "it": "Percorso 114"
     },
     "type": "route"
   },
   {
     "id": 26,
     "names": {
-      "de": "Wüstenunterführung",
+      "de": "Wüstentunnel",
       "en": "Desert Underpass",
       "fr": "Voie du Désert",
-      "es": "Desert Underpass",
-      "it": "Desert Underpass"
+      "es": "Gruta Desértica",
+      "it": "Galleria Deserto"
     },
     "type": "route",
     "postgame": true
@@ -359,8 +359,8 @@
       "de": "Wunderturm",
       "en": "Mirage Tower",
       "fr": "Tour Mirage",
-      "es": "Mirage Tower",
-      "it": "Mirage Tower"
+      "es": "Torre Espejismo",
+      "it": "Torre Miraggio"
     },
     "type": "route"
   },
@@ -402,9 +402,9 @@
     "names": {
       "de": "Route 120",
       "en": "Route 120",
-      "fr": "Œuf d'Okéoké Vermilava",
-      "es": "Huevo de Wynaut Pueblo Lavacalda",
-      "it": "Uovo di Wynaut Cuordilava"
+      "fr": "Route 120",
+      "es": "Ruta 120",
+      "it": "Percorso 120"
     },
     "type": "route"
   },
@@ -413,9 +413,9 @@
     "names": {
       "de": "Route 121",
       "en": "Route 121",
-      "fr": "Morphéo Institut Météo",
-      "es": "Castform Instituto Meteorológico",
-      "it": "Route 121"
+      "fr": "Route 121",
+      "es": "Ruta 121",
+      "it": "Percorso 121"
     },
     "type": "route"
   },
@@ -446,9 +446,9 @@
     "names": {
       "de": "Pyroberg",
       "en": "Mt. Pyre",
-      "fr": "Rayquaza Pilier Céleste",
-      "es": "Rayquaza Pilar Celeste",
-      "it": "Rayquaza Torre dei Cieli"
+      "fr": "Mont Mémoria",
+      "es": "Monte Pírico",
+      "it": "Monte Pira"
     },
     "type": "route"
   },
@@ -457,9 +457,9 @@
     "names": {
       "de": "Route 123",
       "en": "Route 123",
-      "fr": "Kecleon Route 120",
-      "es": "Kecleon Ruta 120",
-      "it": "Kecleon Percorso 120"
+      "fr": "Route 123",
+      "es": "Ruta 123",
+      "it": "Percorso 123"
     },
     "type": "route"
   },
@@ -468,9 +468,9 @@
     "names": {
       "de": "Seegrasulb City",
       "en": "Lilycove City",
-      "fr": "Registeel Tombeau Antique",
-      "es": "Registeel Tumba Antigua",
-      "it": "Registeel Tomba Antica"
+      "fr": "Nénucrique",
+      "es": "Ciudad Calagua",
+      "it": "Porto Alghepoli"
     },
     "type": "route"
   },
@@ -490,9 +490,9 @@
     "names": {
       "de": "Moosbach City",
       "en": "Mossdeep City",
-      "fr": "Terhal Algatia",
-      "es": "Beldum Ciudad Algaria",
-      "it": "Beldum Verdeazzupoli"
+      "fr": "Algatia",
+      "es": "Ciudad Algaria",
+      "it": "Verdeazzupoli"
     },
     "type": "route"
   },
@@ -512,9 +512,9 @@
     "names": {
       "de": "Küstenhöhle",
       "en": "Shoal Cave",
-      "fr": "Kyogre Grotte Marine",
-      "es": "Shoal Cave",
-      "it": "Shoal Cave"
+      "fr": "Grotte Tréfonds",
+      "es": "Cueva Cardumen",
+      "it": "Grotta Ondosa"
     },
     "type": "route"
   },
@@ -545,9 +545,9 @@
     "names": {
       "de": "Tiefseehöhle",
       "en": "Seafloor Cavern",
-      "fr": "Groudon Grotte Terra",
-      "es": "Seafloor Cavern",
-      "it": "Seafloor Cavern"
+      "fr": "Caverne Fondmer",
+      "es": "Caverna Abisal",
+      "it": "Antro Abissale"
     },
     "type": "route"
   },
@@ -601,8 +601,8 @@
       "de": "Schiffswrack",
       "en": "Abandoned Ship",
       "fr": "Épave",
-      "es": "Barco Abandonado",
-      "it": "Abandoned Ship"
+      "es": "Nao Abandonada",
+      "it": "Vecchia Nave"
     },
     "type": "route"
   },
@@ -622,9 +622,9 @@
     "names": {
       "de": "Route 130",
       "en": "Route 130",
-      "fr": "Électrode Repaire Aqua",
-      "es": "Electrode Guarida Aqua",
-      "it": "Electrode Covo Aqua"
+      "fr": "Chenal 130",
+      "es": "Ruta 130",
+      "it": "Percorso 130"
     },
     "type": "route"
   },
@@ -633,9 +633,9 @@
     "names": {
       "de": "Wundereiland",
       "en": "Mirage Island",
-      "fr": "Mirage Island",
-      "es": "Mirage Island",
-      "it": "Mirage Island"
+      "fr": "Île Mirage",
+      "es": "Isla Espejismo",
+      "it": "Isola Miraggio"
     },
     "type": "route"
   },
@@ -653,7 +653,7 @@
   {
     "id": 60,
     "names": {
-      "de": "Floßbrunn",
+      "de": "Flossbrunn",
       "en": "Pacifidlog Town",
       "fr": "Pacifiville",
       "es": "Pueblo Oromar",
@@ -699,7 +699,7 @@
     "names": {
       "de": "Prachtpolis City",
       "en": "Ever Grande City",
-      "fr": "Éternara",
+      "fr": "Eternara",
       "es": "Ciudad Colosalia",
       "it": "Iridopoli"
     },
@@ -730,11 +730,11 @@
   {
     "id": 67,
     "names": {
-      "de": "Handwerkerhöhle",
+      "de": "Höhlenatelier",
       "en": "Artisan Cave",
       "fr": "Grotte Atelier",
-      "es": "Artisan Cave",
-      "it": "Artisan Cave"
+      "es": "Cueva Taller",
+      "it": "Grotta Artistica"
     },
     "type": "route",
     "postgame": true

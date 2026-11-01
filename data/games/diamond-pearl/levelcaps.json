@@ -12,8 +12,8 @@
       "de": "Route 203",
       "en": "Route 203",
       "fr": "Route 203",
-      "es": "Route 203",
-      "it": "Route 203"
+      "es": "Ruta 203",
+      "it": "Percorso 203"
     },
     "badge": null,
     "max_level": 9
@@ -31,8 +31,8 @@
       "de": "Erzelingen",
       "en": "Oreburgh City",
       "fr": "Charbourg",
-      "es": "Oreburgh City",
-      "it": "Oreburgh City"
+      "es": "Ciudad Pirita",
+      "it": "Mineropoli"
     },
     "badge": {
       "de": "Kohleorden",
@@ -53,11 +53,11 @@
       "it": "Mars"
     },
     "location": {
-      "de": "Valley Windoworks",
+      "de": "Windkraftwerk",
       "en": "Valley Windoworks",
-      "fr": "Valley Windoworks",
-      "es": "Valley Windoworks",
-      "it": "Valley Windoworks"
+      "fr": "Les Éoliennes",
+      "es": "Valle Eólico",
+      "it": "Impianto Turbine"
     },
     "badge": null,
     "max_level": 16
@@ -75,8 +75,8 @@
       "de": "Ewigenau",
       "en": "Eterna City",
       "fr": "Vestigion",
-      "es": "Eterna City",
-      "it": "Eterna City"
+      "es": "Ciudad Vetusta",
+      "it": "Evopoli"
     },
     "badge": {
       "de": "Waldorden",
@@ -97,11 +97,11 @@
       "it": "Jupiter"
     },
     "location": {
-      "de": "Eterna Building",
+      "de": "Team Galaktik-Gebäude Ewigenau",
       "en": "Eterna Building",
-      "fr": "Eterna Building",
-      "es": "Eterna Building",
-      "it": "Eterna Building"
+      "fr": "Bâtiment de Vestigion de la Team Galaxie",
+      "es": "Edificio del Equipo Galaxia en Ciudad Vetusta",
+      "it": "Edificio del Team Galassia di Evopoli"
     },
     "badge": null,
     "max_level": 20
@@ -119,8 +119,8 @@
       "de": "Herzhofen",
       "en": "Hearthome City",
       "fr": "Unionpolis",
-      "es": "Hearthome City",
-      "it": "Hearthome City"
+      "es": "Ciudad Corazón",
+      "it": "Cuoripoli"
     },
     "badge": null,
     "max_level": 21
@@ -138,8 +138,8 @@
       "de": "Schleiede",
       "en": "Veilstone City",
       "fr": "Voilaroc",
-      "es": "Veilstone City",
-      "it": "Veilstone City"
+      "es": "Ciudad Rocavelo",
+      "it": "Rupepoli"
     },
     "badge": {
       "de": "Bergorden",
@@ -163,8 +163,8 @@
       "de": "Weideburg",
       "en": "Pastoria City",
       "fr": "Verchamps",
-      "es": "Pastoria City",
-      "it": "Pastoria City"
+      "es": "Ciudad Pradera",
+      "it": "Pratopoli"
     },
     "badge": {
       "de": "Fennorden",
@@ -188,8 +188,8 @@
       "de": "Weideburg",
       "en": "Pastoria City",
       "fr": "Verchamps",
-      "es": "Pastoria City",
-      "it": "Pastoria City"
+      "es": "Ciudad Pradera",
+      "it": "Pratopoli"
     },
     "badge": null,
     "max_level": 28
@@ -207,8 +207,8 @@
       "de": "Herzhofen",
       "en": "Hearthome City",
       "fr": "Unionpolis",
-      "es": "Hearthome City",
-      "it": "Hearthome City"
+      "es": "Ciudad Corazón",
+      "it": "Cuoripoli"
     },
     "badge": {
       "de": "Reliktorden",
@@ -232,8 +232,8 @@
       "de": "Route 218",
       "en": "Route 218",
       "fr": "Route 218",
-      "es": "Route 218",
-      "it": "Route 218"
+      "es": "Ruta 218",
+      "it": "Percorso 218"
     },
     "badge": null,
     "max_level": 35
@@ -251,8 +251,8 @@
       "de": "Fleetburg",
       "en": "Canalave City",
       "fr": "Joliberges",
-      "es": "Canalave City",
-      "it": "Canalave City"
+      "es": "Ciudad Canal",
+      "it": "Canalipoli"
     },
     "badge": {
       "de": "Minenorden",
@@ -276,8 +276,8 @@
       "de": "Kühnheitsgrotte",
       "en": "Valor Cavern",
       "fr": "Caverne Courage",
-      "es": "Valor Cavern",
-      "it": "Valor Cavern"
+      "es": "Caverna Valor",
+      "it": "Grotta Valore"
     },
     "badge": null,
     "max_level": 37
@@ -295,8 +295,8 @@
       "de": "See der Wahrheit",
       "en": "Lake Verity",
       "fr": "Lac Vérité",
-      "es": "Lake Verity",
-      "it": "Lake Verity"
+      "es": "Lago Veraz",
+      "it": "Lago Verità"
     },
     "badge": null,
     "max_level": 39
@@ -314,8 +314,8 @@
       "de": "Blizzach",
       "en": "Snowpoint City",
       "fr": "Frimapic",
-      "es": "Snowpoint City",
-      "it": "Snowpoint City"
+      "es": "Ciudad Puntaneva",
+      "it": "Nevepoli"
     },
     "badge": {
       "de": "Firnorden",
@@ -336,11 +336,11 @@
       "it": "Cyrus"
     },
     "location": {
-      "de": "Team Galaktik Zentrale",
+      "de": "Galakti-Zentrale",
       "en": "Galactic HQ",
-      "fr": "QG Galaxie",
-      "es": "Galactic HQ",
-      "it": "Galactic HQ"
+      "fr": "Bâtiment Galaxie de Voilaroc",
+      "es": "Edificio del Equipo Galaxia en Ciudad Rocavelo",
+      "it": "Sede Galassia"
     },
     "badge": null,
     "max_level": 43
@@ -355,11 +355,11 @@
       "it": "Saturn"
     },
     "location": {
-      "de": "Team Galaktik Zentrale",
+      "de": "Galakti-Zentrale",
       "en": "Galactic HQ",
-      "fr": "QG Galaxie",
-      "es": "Galactic HQ",
-      "it": "Galactic HQ"
+      "fr": "Bâtiment Galaxie de Voilaroc",
+      "es": "Edificio del Equipo Galaxia en Ciudad Rocavelo",
+      "it": "Sede Galassia"
     },
     "badge": null,
     "max_level": 40
@@ -377,8 +377,8 @@
       "de": "Speersäule",
       "en": "Spear Pillar",
       "fr": "Colonnes Lances",
-      "es": "Spear Pillar",
-      "it": "Spear Pillar"
+      "es": "Columna Lanza",
+      "it": "Vetta Lancia"
     },
     "badge": null,
     "max_level": 46
@@ -396,8 +396,8 @@
       "de": "Speersäule",
       "en": "Spear Pillar",
       "fr": "Colonnes Lances",
-      "es": "Spear Pillar",
-      "it": "Spear Pillar"
+      "es": "Columna Lanza",
+      "it": "Vetta Lancia"
     },
     "badge": null,
     "max_level": 48
@@ -415,8 +415,8 @@
       "de": "Sonnewik",
       "en": "Sunyshore City",
       "fr": "Rivamar",
-      "es": "Sunyshore City",
-      "it": "Sunyshore City"
+      "es": "Ciudad Marina",
+      "it": "Arenipoli"
     },
     "badge": {
       "de": "Lichtorden",
@@ -440,8 +440,8 @@
       "de": "Siegesstraße",
       "en": "Victory Road",
       "fr": "Route Victoire",
-      "es": "Victory Road",
-      "it": "Victory Road"
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
     },
     "badge": null,
     "max_level": 53
@@ -456,7 +456,7 @@
       "it": "Aaron"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -475,7 +475,7 @@
       "it": "Bertha"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -494,7 +494,7 @@
       "it": "Flint"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -513,7 +513,7 @@
       "it": "Lucian"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -532,7 +532,7 @@
       "it": "Camilla"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

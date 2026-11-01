@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Starter",
+      "es": "Inicial",
       "it": "Starter"
     },
     "type": "static"
@@ -16,8 +16,8 @@
       "de": "Cucharico-Pfad",
       "en": "Poco Path",
       "fr": "Route de Cuchalaga",
-      "es": "Poco Path",
-      "it": "Poco Path"
+      "es": "Sendero de Cahíz",
+      "it": "Sentiero di Dosilla"
     },
     "type": "route"
   },
@@ -26,9 +26,9 @@
     "names": {
       "de": "Südliche Zone 1",
       "en": "South Province (Area One)",
-      "fr": "Zone Sud n° 1",
-      "es": "South Province (Area One)",
-      "it": "South Province (Area One)"
+      "fr": "Zone Sud nº 1",
+      "es": "Área 1 (Sur)",
+      "it": "Area 1 Sud"
     },
     "type": "route"
   },
@@ -38,8 +38,8 @@
       "de": "Meeresbuchthöhle",
       "en": "Inlet Grotto",
       "fr": "Caverne de la Crique",
-      "es": "Inlet Grotto",
-      "it": "Inlet Grotto"
+      "es": "Gruta Caleta",
+      "it": "Grotta della Baia"
     },
     "type": "route"
   },
@@ -48,9 +48,9 @@
     "names": {
       "de": "Südliche Zone 4",
       "en": "South Province (Area Four)",
-      "fr": "Zone Sud n° 4",
-      "es": "South Province (Area Four)",
-      "it": "South Province (Area Four)"
+      "fr": "Zone Sud nº 4",
+      "es": "Área 4 (Sur)",
+      "it": "Area 4 Sud"
     },
     "type": "route"
   },
@@ -59,9 +59,9 @@
     "names": {
       "de": "Südliche Zone 2",
       "en": "South Province (Area Two)",
-      "fr": "Zone Sud n° 2",
-      "es": "South Province (Area Two)",
-      "it": "South Province (Area Two)"
+      "fr": "Zone Sud nº 2",
+      "es": "Área 2 (Sur)",
+      "it": "Area 2 Sud"
     },
     "type": "route"
   },
@@ -70,9 +70,9 @@
     "names": {
       "de": "Südliche Zone 5",
       "en": "South Province (Area Five)",
-      "fr": "Zone Sud n° 5",
-      "es": "South Province (Area Five)",
-      "it": "South Province (Area Five)"
+      "fr": "Zone Sud nº 5",
+      "es": "Área 5 (Sur)",
+      "it": "Area 5 Sud"
     },
     "type": "route"
   },
@@ -81,9 +81,9 @@
     "names": {
       "de": "Östliche Zone 1",
       "en": "East Province (Area One)",
-      "fr": "Zone Est n° 1",
-      "es": "East Province (Area One)",
-      "it": "East Province (Area One)"
+      "fr": "Zone Est nº 1",
+      "es": "Área 1 (Este)",
+      "it": "Area 1 Est"
     },
     "type": "route"
   },
@@ -92,9 +92,9 @@
     "names": {
       "de": "Südliche Zone 3",
       "en": "South Province (Area Three)",
-      "fr": "Zone Sud n° 3",
-      "es": "South Province (Area Three)",
-      "it": "South Province (Area Three)"
+      "fr": "Zone Sud nº 3",
+      "es": "Área 3 (Sur)",
+      "it": "Area 3 Sud"
     },
     "type": "route"
   },
@@ -103,9 +103,9 @@
     "names": {
       "de": "Westliche Zone 1",
       "en": "West Province (Area One)",
-      "fr": "Zone Ouest n° 1",
-      "es": "West Province (Area One)",
-      "it": "West Province (Area One)"
+      "fr": "Zone Ouest nº 1",
+      "es": "Área 1 (Oeste)",
+      "it": "Area 1 Ovest"
     },
     "type": "route"
   },
@@ -114,9 +114,9 @@
     "names": {
       "de": "Östliche Zone 2",
       "en": "East Province (Area Two)",
-      "fr": "Zone Est n° 2",
-      "es": "East Province (Area Two)",
-      "it": "East Province (Area Two)"
+      "fr": "Zone Est nº 2",
+      "es": "Área 2 (Este)",
+      "it": "Area 2 Est"
     },
     "type": "route"
   },
@@ -125,9 +125,9 @@
     "names": {
       "de": "Östliche Zone 3",
       "en": "East Province (Area Three)",
-      "fr": "Zone Est n° 3",
-      "es": "East Province (Area Three)",
-      "it": "East Province (Area Three)"
+      "fr": "Zone Est nº 3",
+      "es": "Área 3 (Este)",
+      "it": "Area 3 Est"
     },
     "type": "route"
   },
@@ -136,9 +136,9 @@
     "names": {
       "de": "Westliche Zone 2",
       "en": "West Province (Area Two)",
-      "fr": "Zone Ouest n° 2",
-      "es": "West Province (Area Two)",
-      "it": "West Province (Area Two)"
+      "fr": "Zone Ouest nº 2",
+      "es": "Área 2 (Oeste)",
+      "it": "Area 2 Ovest"
     },
     "type": "route"
   },
@@ -147,9 +147,9 @@
     "names": {
       "de": "Westliche Zone 3",
       "en": "West Province (Area Three)",
-      "fr": "Zone Ouest n° 3",
-      "es": "West Province (Area Three)",
-      "it": "West Province (Area Three)"
+      "fr": "Zone Ouest nº 3",
+      "es": "Área 3 (Oeste)",
+      "it": "Area 3 Ovest"
     },
     "type": "route"
   },
@@ -159,8 +159,8 @@
       "de": "Montanata",
       "en": "Glaseado Mountain",
       "fr": "Mont Nappé",
-      "es": "Glaseado Mountain",
-      "it": "Glaseado Mountain"
+      "es": "Sierra Napada",
+      "it": "Sierra Napada"
     },
     "type": "route"
   },
@@ -170,8 +170,8 @@
       "de": "Mesclores-Passage",
       "en": "Dalizapa Passage",
       "fr": "Tunnel Mezcla-Pincho",
-      "es": "Dalizapa Passage",
-      "it": "Dalizapa Passage"
+      "es": "Gruta Vestura",
+      "it": "Passaggio Mescadia"
     },
     "type": "route"
   },
@@ -181,8 +181,8 @@
       "de": "Schmierhain",
       "en": "Tagtree Thicket",
       "fr": "Bosquet Tagué",
-      "es": "Tagtree Thicket",
-      "it": "Tagtree Thicket"
+      "es": "Bosquejada",
+      "it": "Boschetto dei Segni"
     },
     "type": "route"
   },
@@ -192,8 +192,8 @@
       "de": "Montanata",
       "en": "Glaseado Mountain",
       "fr": "Mont Nappé",
-      "es": "Glaseado Mountain",
-      "it": "Glaseado Mountain"
+      "es": "Sierra Napada",
+      "it": "Sierra Napada"
     },
     "type": "route"
   },
@@ -202,9 +202,9 @@
     "names": {
       "de": "Südliche Zone 6",
       "en": "South Province (Area Six)",
-      "fr": "Zone Sud n°6",
-      "es": "South Province (Area Six)",
-      "it": "South Province (Area Six)"
+      "fr": "Zone Sud nº 6",
+      "es": "Área 6 (Sur)",
+      "it": "Area 6 Sud"
     },
     "type": "route"
   },
@@ -214,8 +214,8 @@
       "de": "Brutzelwüste",
       "en": "Asado Desert",
       "fr": "Désert Rôtissable",
-      "es": "Asado Desert",
-      "it": "Asado Desert"
+      "es": "Desierto Rostiz",
+      "it": "Deserto Alasar"
     },
     "type": "route"
   },
@@ -224,9 +224,9 @@
     "names": {
       "de": "Asarilla-Grotte",
       "en": "Alfornada Cavern",
-      "fr": "Grotte d'Alforneira",
-      "es": "Alfornada Cavern",
-      "it": "Alfornada Cavern"
+      "fr": "Grotte d’Alforneira",
+      "es": "Sima de Alforno",
+      "it": "Caverna di Las Brasas"
     },
     "type": "route"
   },
@@ -235,9 +235,9 @@
     "names": {
       "de": "Nördliche Zone 3",
       "en": "North Province (Area Three)",
-      "fr": "Zone Nord n° 3",
-      "es": "North Province (Area Three)",
-      "it": "North Province (Area Three)"
+      "fr": "Zone Nord nº 3",
+      "es": "Área 3 (Norte)",
+      "it": "Area 3 Nord"
     },
     "type": "route"
   },
@@ -247,8 +247,8 @@
       "de": "Caldero-See",
       "en": "Casseroya Lake",
       "fr": "Lac Asrol",
-      "es": "Casseroya Lake",
-      "it": "Casseroya Lake"
+      "es": "Lago Cazola",
+      "it": "Lago Gran Caldero"
     },
     "type": "route"
   },
@@ -257,9 +257,9 @@
     "names": {
       "de": "Nördliche Zone 1",
       "en": "North Province (Area One)",
-      "fr": "Zone Nord n° 1",
-      "es": "North Province (Area One)",
-      "it": "North Province (Area One)"
+      "fr": "Zone Nord nº 1",
+      "es": "Área 1 (Norte)",
+      "it": "Area 1 Nord"
     },
     "type": "route"
   },
@@ -268,9 +268,9 @@
     "names": {
       "de": "Nördliche Zone 2",
       "en": "North Province (Area Two)",
-      "fr": "Zone Nord n° 2",
-      "es": "North Province (Area Two)",
-      "it": "North Province (Area Two)"
+      "fr": "Zone Nord nº 2",
+      "es": "Área 2 (Norte)",
+      "it": "Area 2 Nord"
     },
     "type": "route"
   },
@@ -279,9 +279,9 @@
     "names": {
       "de": "Westliches Meer von Paldea",
       "en": "West Paldean Sea",
-      "fr": "Mer de l'Ouest de Paldea",
-      "es": "West Paldean Sea",
-      "it": "West Paldean Sea"
+      "fr": "Mer de l’Ouest de Paldea",
+      "es": "Mar Occidental de Paldea",
+      "it": "Mare di Paldea (ovest)"
     },
     "type": "route"
   },
@@ -291,8 +291,8 @@
       "de": "Südliches Meer von Paldea",
       "en": "South Paldean Sea",
       "fr": "Mer du Sud de Paldea",
-      "es": "South Paldean Sea",
-      "it": "South Paldean Sea"
+      "es": "Mar Meridional de Paldea",
+      "it": "Mare di Paldea (sud)"
     },
     "type": "route"
   },
@@ -301,9 +301,9 @@
     "names": {
       "de": "Östliches Meer von Paldea",
       "en": "East Paldean Sea",
-      "fr": "Mer de l'Est de Paldea",
-      "es": "East Paldean Sea",
-      "it": "East Paldean Sea"
+      "fr": "Mer de l’Est de Paldea",
+      "es": "Mar Oriental de Paldea",
+      "it": "Mare di Paldea (est)"
     },
     "type": "route"
   },
@@ -313,8 +313,8 @@
       "de": "Nördliches Meer von Paldea",
       "en": "North Paldean Sea",
       "fr": "Mer du Nord de Paldea",
-      "es": "North Paldean Sea",
-      "it": "North Paldean Sea"
+      "es": "Mar Septentrional de Paldea",
+      "it": "Mare di Paldea (nord)"
     },
     "type": "route"
   },
@@ -324,8 +324,8 @@
       "de": "Knusperwaldweg",
       "en": "Socarrat Trail",
       "fr": "Forêt Toastée",
-      "es": "Socarrat Trail",
-      "it": "Socarrat Trail"
+      "es": "Alameda Socarrada",
+      "it": "Bosco Torrado"
     },
     "type": "route"
   },
@@ -335,7 +335,7 @@
       "de": "Zone Null",
       "en": "Area Zero",
       "fr": "Zone Zéro",
-      "es": "Area Zero",
+      "es": "Área Cero",
       "it": "Area Zero"
     },
     "type": "route"
@@ -346,8 +346,8 @@
       "de": "Pokémon-Liga",
       "en": "Pokémon League",
       "fr": "Ligue Pokémon",
-      "es": "Pokémon League",
-      "it": "Pokémon League"
+      "es": "Liga Pokémon",
+      "it": "Lega Pokémon"
     },
     "type": "route"
   }

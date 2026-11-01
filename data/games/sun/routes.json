@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Starter",
+      "es": "Inicial",
       "it": "Starter"
     },
     "type": "static"
@@ -13,11 +13,11 @@
   {
     "id": 2,
     "names": {
-      "de": "Hau'oli Outskirts",
+      "de": "Hauholi-Stadtrand",
       "en": "Hau'oli Outskirts",
-      "fr": "Hau'oli Outskirts",
-      "es": "Hau'oli Outskirts",
-      "it": "Hau'oli Outskirts"
+      "fr": "Abords d'Ekaeka",
+      "es": "Afueras de Hauoli",
+      "it": "Periferia di Hau'oli"
     },
     "type": "route"
   },
@@ -35,11 +35,11 @@
   {
     "id": 4,
     "names": {
-      "de": "Trainer's School",
+      "de": "Trainerschule",
       "en": "Trainer's School",
-      "fr": "Trainer's School",
-      "es": "Trainer's School",
-      "it": "Trainer's School"
+      "fr": "École de Dresseurs",
+      "es": "Escuela de entrenadores",
+      "it": "Scuola Allenatori"
     },
     "type": "route"
   },
@@ -50,7 +50,7 @@
       "en": "Hau’oli City",
       "fr": "Ekaeka",
       "es": "Ciudad Hauoli",
-      "it": "Hau’oli"
+      "it": "Hau'oli"
     },
     "type": "route"
   },
@@ -79,11 +79,11 @@
   {
     "id": 8,
     "names": {
-      "de": "Alola-Beerenfelder",
+      "de": "Beerenfelder",
       "en": "Alola Berry Fields",
-      "fr": "Champ de Baies d'Alola",
-      "es": "Huerto de Bayas de Alola",
-      "it": "Orto delle Bacche di Alola"
+      "fr": "Champ de Baies",
+      "es": "Huerto de Bayas",
+      "it": "Orto delle Bacche"
     },
     "type": "route"
   },
@@ -138,7 +138,7 @@
       "en": "Hau’oli City",
       "fr": "Ekaeka",
       "es": "Ciudad Hauoli",
-      "it": "Hau’oli"
+      "it": "Hau'oli"
     },
     "type": "route"
   },
@@ -247,7 +247,7 @@
       "de": "Wela-Vulkanpark",
       "en": "Wela Volcano Park",
       "fr": "Parc Volcanique",
-      "es": "Área Volcánica Wela",
+      "es": "Área Volcánica del Wela",
       "it": "Parco Vulcano Wela"
     },
     "type": "route"
@@ -277,11 +277,11 @@
   {
     "id": 26,
     "names": {
-      "de": "Fossil Restoration Center",
+      "de": "Fossilienlabor",
       "en": "Fossil Restoration Center",
-      "fr": "Fossil Restoration Center",
-      "es": "Fossil Restoration Center",
-      "it": "Fossil Restoration Center"
+      "fr": "Centre de restauration de fossiles",
+      "es": "Centro de restauración de fósiles",
+      "it": "Centro di ripristino dei fossili"
     },
     "type": "static"
   },
@@ -475,7 +475,7 @@
   {
     "id": 44,
     "names": {
-      "de": "Route 15 (Wasserweg)",
+      "de": "Route 15",
       "en": "Route 15",
       "fr": "Route 15",
       "es": "Ruta 15",
@@ -486,11 +486,11 @@
   {
     "id": 45,
     "names": {
-      "de": "Aether House",
+      "de": "Æther-Haus",
       "en": "Aether House",
-      "fr": "Aether House",
-      "es": "Aether House",
-      "it": "Aether House"
+      "fr": "Maison Æther",
+      "es": "Casa Æther",
+      "it": "Casa Æther"
     },
     "type": "route"
   },
@@ -508,11 +508,11 @@
   {
     "id": 47,
     "names": {
-      "de": "Schnäppchenparadies",
+      "de": "Schnäppchenparadies - Verlassener Laden",
       "en": "Thrifty Megamart",
-      "fr": "Bradley Prix",
-      "es": "Súper Ultraganga",
-      "it": "Supermarket Affaroni"
+      "fr": "Bradley Prix - Site désaffecté",
+      "es": "Supermercado Ultraganga - Supermercado abandonado",
+      "it": "Supermarket Affaroni - Edificio Abbandonato"
     },
     "type": "route"
   },

@@ -28,11 +28,11 @@
       "it": "Hau"
     },
     "location": {
-      "de": "Iki Town Festival",
+      "de": "Lili’i, Fest",
       "en": "Iki Town Festival",
-      "fr": "Iki Town Festival",
-      "es": "Iki Town Festival",
-      "it": "Iki Town Festival"
+      "fr": "Lili’i, fête",
+      "es": "Pueblo Lilii, festival",
+      "it": "Lili, festa"
     },
     "badge": null,
     "max_level": 7
@@ -47,11 +47,11 @@
       "it": "Liam"
     },
     "location": {
-      "de": "Hau'oli City Trial Captain",
+      "de": "Hauholi City, Captain",
       "en": "Hau'oli City Trial Captain",
-      "fr": "Hau'oli City Trial Captain",
-      "es": "Hau'oli City Trial Captain",
-      "it": "Hau'oli City Trial Captain"
+      "fr": "Ekaeka, Capitaine d'Épreuve",
+      "es": "Ciudad Hauoli, Capitán",
+      "it": "Hau'oli, Capitano"
     },
     "badge": null,
     "max_level": 10
@@ -66,11 +66,11 @@
       "it": "Prova di Liam"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 12
@@ -104,11 +104,11 @@
       "it": "Hala"
     },
     "location": {
-      "de": "Hala's Grand Trial",
+      "de": "Halas Große Prüfung",
       "en": "Hala's Grand Trial",
-      "fr": "Hala's Grand Trial",
-      "es": "Hala's Grand Trial",
-      "it": "Hala's Grand Trial"
+      "fr": "Grande Épreuve de Pectorius",
+      "es": "Gran Prueba de Kaudan",
+      "it": "Grande Prova di Hala"
     },
     "badge": null,
     "max_level": 15
@@ -161,11 +161,11 @@
       "it": "Iridio"
     },
     "location": {
-      "de": "Team skull",
+      "de": "Team Skull",
       "en": "Team skull",
-      "fr": "Team skull",
-      "es": "Team skull",
-      "it": "Team skull"
+      "fr": "Team Skull",
+      "es": "Team Skull",
+      "it": "Team Skull"
     },
     "badge": null,
     "max_level": 18
@@ -180,11 +180,11 @@
       "it": "Prova di Suiren"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 20
@@ -199,11 +199,11 @@
       "it": "Prova di Kawe"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 22
@@ -218,11 +218,11 @@
       "it": "Prova di Ibis"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 24
@@ -297,8 +297,8 @@
       "de": "Hokulani-Sternwarte",
       "en": "Hokulani Observatory",
       "fr": "Observatoire",
-      "es": "Observ. de Hokulani",
-      "it": "Osservatorio"
+      "es": "Observatorio de Hokulani",
+      "it": "Osservatorio Hokulani"
     },
     "badge": null,
     "max_level": 30
@@ -313,11 +313,11 @@
       "it": "Sophocles' trial"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 29
@@ -351,11 +351,11 @@
       "it": "Prova di Malpi"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 33
@@ -370,7 +370,7 @@
       "it": "Plumeria"
     },
     "location": {
-      "de": "Route 15 (Wasserweg)",
+      "de": "Route 15",
       "en": "Route 15",
       "fr": "Route 15",
       "es": "Ruta 15",
@@ -408,11 +408,11 @@
       "it": "Iridio"
     },
     "location": {
-      "de": "Aether house",
+      "de": "Æther-Haus",
       "en": "Aether house",
-      "fr": "Aether house",
-      "es": "Aether house",
-      "it": "Aether house"
+      "fr": "Maison Æther",
+      "es": "Casa Æther",
+      "it": "Casa Æther"
     },
     "badge": null,
     "max_level": 38
@@ -541,11 +541,11 @@
       "it": "Kommo-o's Trial"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 45
@@ -617,7 +617,7 @@
       "it": "Hala"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -636,7 +636,7 @@
       "it": "Alyxia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -655,7 +655,7 @@
       "it": "Malpi"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -674,7 +674,7 @@
       "it": "Kahili"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -693,7 +693,7 @@
       "it": "Professor Kukui"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

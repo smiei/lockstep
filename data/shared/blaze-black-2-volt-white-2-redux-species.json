@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (blazevolt2)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-10-31T03:38:12.576Z",
+  "generatedAt": "2026-11-01T02:56:12.992Z",
   "species": [
     {
       "id": 3,
@@ -285,7 +285,8 @@
       "id": 39,
       "name": "Jigglypuff",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 115,
@@ -303,7 +304,8 @@
       "id": 40,
       "name": "Wigglytuff",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 140,
@@ -598,7 +600,8 @@
       "id": 122,
       "name": "Mr. Mime",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 40,
@@ -987,7 +990,8 @@
       "id": 183,
       "name": "Marill",
       "types": [
-        "water"
+        "water",
+        "fairy"
       ],
       "stats": {
         "KP": 70,
@@ -1005,7 +1009,8 @@
       "id": 184,
       "name": "Azumarill",
       "types": [
-        "water"
+        "water",
+        "fairy"
       ],
       "stats": {
         "KP": 100,
@@ -1581,7 +1586,8 @@
       "id": 280,
       "name": "Ralts",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 28,
@@ -1599,7 +1605,8 @@
       "id": 281,
       "name": "Kirlia",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 38,
@@ -1691,7 +1698,8 @@
       "id": 298,
       "name": "Azurill",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 50,
@@ -1782,7 +1790,8 @@
       "id": 303,
       "name": "Mawile",
       "types": [
-        "steel"
+        "steel",
+        "fairy"
       ],
       "stats": {
         "KP": 50,

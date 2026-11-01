@@ -366,6 +366,10 @@ async function main() {
       de: "Top 4", en: "Elite Four", fr: "Conseil 4", es: "Alto Mando", it: "Superquattro",
     };
 
+    // ROM hacks exist in English only, so their places, bosses and badges keep
+    // the English names the player reads in the game, in every language.
+    const shown = (names) => (names && hack.kind === "romhack" ? allLangs(names.en) : names);
+
     const entries = sourceRoutes[hack.routes ?? hack.src];
     const league = sourceLeague[hack.league ?? hack.src] ?? {};
     if (!entries?.length) throw new Error(`${hack.id}: no routes under "${hack.routes ?? hack.src}"`);
@@ -376,7 +380,7 @@ async function main() {
       const match = routeByName.get(key(entry.name));
       const route = {
         id: routes.length + 1,
-        names: match ? match.names : placeNames(entry.name),
+        names: shown(match ? match.names : placeNames(entry.name)),
         type: match?.type ?? (/^(starter|gift|fossil)/i.test(entry.name) ? "static" : "route"),
       };
       if (match?.postgame) route.postgame = true;
@@ -395,25 +399,33 @@ async function main() {
         id: i + 1,
         // The official characters' names (trainer-names.json) only for the
         // official games: a hack's own "Percy" is not Black/White's.
-        names: match
-          ? match.names
-          : ((hack.kind === "official" ? composeBossName(gym.boss || gym.name, trainerNames) : null) ??
-            allLangs(gym.boss || gym.name)),
+        names: shown(
+          match
+            ? match.names
+            : ((hack.kind === "official" ? composeBossName(gym.boss || gym.name, trainerNames) : null) ??
+                allLangs(gym.boss || gym.name)),
+        ),
         // A base-game place is only borrowed for a gym leader, and never the
         // base game's "Elite Four" outside the block (Wallace leads a gym in
         // Ruby/Sapphire but is Emerald's Champion).
-        location: inE4
-          ? e4Base
-          : match && gym.group === "gym-leader" && match.location.en !== "Elite Four"
-            ? match.location
-            : placeNames(gym.name),
-        badge:
+        location: shown(
+          inE4
+            ? e4Base
+            : match && gym.group === "gym-leader" && match.location.en !== "Elite Four"
+              ? match.location
+              : placeNames(gym.name),
+        ),
+        badge: shown(
           gym.group === "gym-leader" && !inE4
             ? (match?.badge ?? badgeNames[hack.region]?.[(gym.boss ?? "").trim()] ?? null)
             : null,
+        ),
         max_level: highestLevel(league[gym.value]),
       };
-      if (match?.sprite) cap.sprite = match.sprite;
+      // The trainer picture is named after the base pack's German name
+      // (TrainerSprite: sprite ?? names.de), which a hack no longer shows.
+      const sprite = match ? (match.sprite ?? match.names.de) : null;
+      if (sprite && sprite !== cap.names.de) cap.sprite = sprite;
       return cap;
     });
 
@@ -477,7 +489,6 @@ async function main() {
       id: hack.id,
       sort: hack.sort,
       kind: hack.kind,
-      dataStatus: "unverified",
       generation: hack.generation,
       ...(hack.dataGeneration !== hack.generation ? { dataGeneration: hack.dataGeneration } : {}),
       dexLimit: Math.min(hack.dexLimit ?? GEN_MAX_ID[hack.dataGeneration], maxDex),

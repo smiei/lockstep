@@ -53,11 +53,11 @@
       "it": "Professor Platan"
     },
     "location": {
-      "de": "Pokémon Lab",
+      "de": "Pokémon Labor",
       "en": "Pokémon Lab",
-      "fr": "Pokémon Lab",
-      "es": "Pokémon Lab",
-      "it": "Pokémon Lab"
+      "fr": "Laboratoire Pokémon",
+      "es": "Laboratorio Pokémon",
+      "it": "Laboratorio Pokémon"
     },
     "badge": null,
     "max_level": 10
@@ -137,7 +137,7 @@
     "location": {
       "de": "Cromlexia",
       "en": "Geosenge Town",
-      "fr": "Cromlac’h",
+      "fr": "Cromlac'h",
       "es": "Pueblo Crómlech",
       "it": "Cromleburgo"
     },
@@ -217,11 +217,11 @@
       "it": "Serena"
     },
     "location": {
-      "de": "Coumarine Pokémon Center",
+      "de": "Tempera City, Pokémon-Center",
       "en": "Coumarine Pokémon Center",
-      "fr": "Coumarine Pokémon Center",
-      "es": "Coumarine Pokémon Center",
-      "it": "Coumarine Pokémon Center"
+      "fr": "Port Tempères, Centre Pokémon",
+      "es": "Ciudad Témpera, Centro Pokémon",
+      "it": "Temperopoli, Centro Pokémon"
     },
     "badge": null,
     "max_level": 33
@@ -261,11 +261,11 @@
       "it": "Akebia"
     },
     "location": {
-      "de": "Power Plant",
+      "de": "Kraftwerk",
       "en": "Power Plant",
-      "fr": "Power Plant",
-      "es": "Power Plant",
-      "it": "Power Plant"
+      "fr": "Centrale",
+      "es": "Central Energía",
+      "it": "Centrale Elettrica"
     },
     "badge": null,
     "max_level": 38
@@ -352,7 +352,7 @@
       "de": "Pokéball-Fabrik",
       "en": "Poké Ball Factory",
       "fr": "Usine de Poké Balls",
-      "es": "Fábrica Poké Balls",
+      "es": "Fábrica de Poké Balls",
       "it": "Fabbrica Poké Ball"
     },
     "badge": null,
@@ -583,11 +583,11 @@
       "it": "Professor Platan"
     },
     "location": {
-      "de": "Couriway Town Sycamore Battle",
+      "de": "Mosaia, Kampf gegen Professor Platan",
       "en": "Couriway Town Sycamore Battle",
-      "fr": "Couriway Town Sycamore Battle",
-      "es": "Couriway Town Sycamore Battle",
-      "it": "Couriway Town Sycamore Battle"
+      "fr": "Mozheim, combat contre le Professeur Platane",
+      "es": "Pueblo Mosaico, combate contra el Profesor Ciprés",
+      "it": "Ponte Mosaico, battaglia contro il Professor Platan"
     },
     "badge": null,
     "max_level": 50
@@ -703,7 +703,7 @@
       "it": "Malva"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -722,7 +722,7 @@
       "it": "Narciso"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -741,7 +741,7 @@
       "it": "Timeus"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -760,7 +760,7 @@
       "it": "Lilia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -779,7 +779,7 @@
       "it": "Diantha"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

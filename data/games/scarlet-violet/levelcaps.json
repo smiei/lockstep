@@ -12,8 +12,8 @@
       "de": "Cucharico-Pfad",
       "en": "Poco Path",
       "fr": "Route de Cuchalaga",
-      "es": "Poco Path",
-      "it": "Poco Path"
+      "es": "Sendero de Cahíz",
+      "it": "Sentiero di Dosilla"
     },
     "badge": null,
     "max_level": 5
@@ -31,8 +31,8 @@
       "de": "Mesalona City",
       "en": "Mesagoza",
       "fr": "Mesaledo",
-      "es": "Mesagoza",
-      "it": "Mesagoza"
+      "es": "Ciudad Meseta",
+      "it": "Mesapoli"
     },
     "badge": null,
     "max_level": 9
@@ -50,8 +50,8 @@
       "de": "Moldrid",
       "en": "Cortondo",
       "fr": "Sevaro",
-      "es": "Cortondo",
-      "it": "Cortondo"
+      "es": "Pueblo Pirotín",
+      "it": "Moldulcia"
     },
     "badge": {
       "de": "Käfer-Arenaorden",
@@ -74,9 +74,9 @@
     "location": {
       "de": "Südliche Zone 3",
       "en": "South Province (Area Three)",
-      "fr": "Zone Sud n° 3",
-      "es": "South Province (Area Three)",
-      "it": "South Province (Area Three)"
+      "fr": "Zone Sud nº 3",
+      "es": "Área 3 (Sur)",
+      "it": "Area 3 Sud"
     },
     "badge": null,
     "max_level": 16
@@ -94,8 +94,8 @@
       "de": "Bolardin",
       "en": "Artazon",
       "fr": "Cuencia",
-      "es": "Artazon",
-      "it": "Artazon"
+      "es": "Pueblo Altamía",
+      "it": "Los Tazones"
     },
     "badge": {
       "de": "Pflanzen-Arenaorden",
@@ -118,9 +118,9 @@
     "location": {
       "de": "Westliche Zone 1",
       "en": "West Province (Area One)",
-      "fr": "Zone Ouest n° 1",
-      "es": "West Province (Area One)",
-      "it": "West Province (Area One)"
+      "fr": "Zone Ouest nº 1",
+      "es": "Área 1 (Oeste)",
+      "it": "Area 1 Ovest"
     },
     "badge": null,
     "max_level": 20
@@ -135,11 +135,11 @@
       "it": "Romelio"
     },
     "location": {
-      "de": "Team Star Dark",
+      "de": "Team Star Unlicht",
       "en": "Team Star Dark",
-      "fr": "Team Star Dark",
-      "es": "Team Star Dark",
-      "it": "Team Star Dark"
+      "fr": "Team Star Ténèbres",
+      "es": "Team Star Siniestro",
+      "it": "Team Star Buio"
     },
     "badge": null,
     "max_level": 21
@@ -157,8 +157,8 @@
       "de": "Fermanca City",
       "en": "Levincia",
       "fr": "Levalendura",
-      "es": "Levincia",
-      "it": "Levincia"
+      "es": "Ciudad Leudal",
+      "it": "Leudapoli"
     },
     "badge": null,
     "max_level": 22
@@ -176,8 +176,8 @@
       "de": "Fermanca City",
       "en": "Levincia",
       "fr": "Levalendura",
-      "es": "Levincia",
-      "it": "Levincia"
+      "es": "Ciudad Leudal",
+      "it": "Leudapoli"
     },
     "badge": {
       "de": "Elektro-Arenaorden",
@@ -198,11 +198,11 @@
       "it": "Pruna"
     },
     "location": {
-      "de": "Team Star Fire",
+      "de": "Team Star Feuer",
       "en": "Team Star Fire",
-      "fr": "Team Star Fire",
-      "es": "Team Star Fire",
-      "it": "Team Star Fire"
+      "fr": "Team Star Feu",
+      "es": "Team Star Fuego",
+      "it": "Team Star Fuoco"
     },
     "badge": null,
     "max_level": 27
@@ -219,9 +219,9 @@
     "location": {
       "de": "Östliche Zone 3",
       "en": "East Province (Area Three)",
-      "fr": "Zone Est n° 3",
-      "es": "East Province (Area Three)",
-      "it": "East Province (Area Three)"
+      "fr": "Zone Est nº 3",
+      "es": "Área 3 (Este)",
+      "it": "Area 3 Est"
     },
     "badge": null,
     "max_level": 29
@@ -239,8 +239,8 @@
       "de": "Garrafosa City",
       "en": "Cascarrafa",
       "fr": "Jarramanca",
-      "es": "Cascarrafa",
-      "it": "Cascarrafa"
+      "es": "Ciudad Cántara",
+      "it": "Garrafopoli"
     },
     "badge": {
       "de": "Wasser-Arenaorden",
@@ -261,11 +261,11 @@
       "it": "Henzo"
     },
     "location": {
-      "de": "Team Star Poison",
+      "de": "Team Star Gift",
       "en": "Team Star Poison",
       "fr": "Team Star Poison",
-      "es": "Team Star Poison",
-      "it": "Team Star Poison"
+      "es": "Team Star Veneno",
+      "it": "Team Star Veleno"
     },
     "badge": null,
     "max_level": 33
@@ -283,8 +283,8 @@
       "de": "Mesclarra",
       "en": "Medali",
       "fr": "Mezclamora",
-      "es": "Medali",
-      "it": "Medali"
+      "es": "Pueblo Mestura",
+      "it": "Mesturia"
     },
     "badge": null,
     "max_level": 37
@@ -302,8 +302,8 @@
       "de": "Mesclarra",
       "en": "Medali",
       "fr": "Mezclamora",
-      "es": "Medali",
-      "it": "Medali"
+      "es": "Pueblo Mestura",
+      "it": "Mesturia"
     },
     "badge": {
       "de": "Normal-Arenaorden",
@@ -327,8 +327,8 @@
       "de": "Frigomonta",
       "en": "Montenevera",
       "fr": "Frigao",
-      "es": "Montenevera",
-      "it": "Montenevera"
+      "es": "Pueblo Hozkailu",
+      "it": "Neveria"
     },
     "badge": {
       "de": "Geister-Arenaorden",
@@ -352,8 +352,8 @@
       "de": "Brutzelwüste",
       "en": "Asado Desert",
       "fr": "Désert Rôtissable",
-      "es": "Asado Desert",
-      "it": "Asado Desert"
+      "es": "Desierto Rostiz",
+      "it": "Deserto Alasar"
     },
     "badge": null,
     "max_level": 45
@@ -371,8 +371,8 @@
       "de": "Asarilla",
       "en": "Alfornada",
       "fr": "Alforneira",
-      "es": "Alfornada",
-      "it": "Alfornada"
+      "es": "Pueblo Alforno",
+      "it": "Las Brasas"
     },
     "badge": null,
     "max_level": 43
@@ -390,8 +390,8 @@
       "de": "Asarilla",
       "en": "Alfornada",
       "fr": "Alforneira",
-      "es": "Alfornada",
-      "it": "Alfornada"
+      "es": "Pueblo Alforno",
+      "it": "Las Brasas"
     },
     "badge": {
       "de": "Psycho-Arenaorden",
@@ -412,11 +412,11 @@
       "it": "Grusha"
     },
     "location": {
-      "de": "Glaseado City",
+      "de": "Montanata",
       "en": "Glaseado City",
-      "fr": "Glaseado City",
-      "es": "Glaseado City",
-      "it": "Glaseado City"
+      "fr": "Mont Nappé",
+      "es": "Sierra Napada",
+      "it": "Sierra Napada"
     },
     "badge": {
       "de": "Eis-Arenaorden",
@@ -437,11 +437,11 @@
       "it": "Ortiz"
     },
     "location": {
-      "de": "Team Star Fairy",
+      "de": "Team Star Fee",
       "en": "Team Star Fairy",
-      "fr": "Team Star Fairy",
-      "es": "Team Star Fairy",
-      "it": "Team Star Fairy"
+      "fr": "Team Star Fée",
+      "es": "Team Star Hada",
+      "it": "Team Star Folletto"
     },
     "badge": null,
     "max_level": 51
@@ -459,8 +459,8 @@
       "de": "Caldero-See",
       "en": "Casseroya Lake",
       "fr": "Lac Asrol",
-      "es": "Casseroya Lake",
-      "it": "Casseroya Lake"
+      "es": "Lago Cazola",
+      "it": "Lago Gran Caldero"
     },
     "badge": null,
     "max_level": 57
@@ -475,11 +475,11 @@
       "it": "Nespera"
     },
     "location": {
-      "de": "Team Star Fighting",
+      "de": "Team Star Kampf",
       "en": "Team Star Fighting",
-      "fr": "Team Star Fighting",
-      "es": "Team Star Fighting",
-      "it": "Team Star Fighting"
+      "fr": "Team Star Combat",
+      "es": "Team Star Lucha",
+      "it": "Team Star Lotta"
     },
     "badge": null,
     "max_level": 56
@@ -494,7 +494,7 @@
       "it": "Capsi"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -513,7 +513,7 @@
       "it": "Verina"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -532,7 +532,7 @@
       "it": "Ubaldo"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -551,7 +551,7 @@
       "it": "Oranzio"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -570,7 +570,7 @@
       "it": "Alisma"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -589,11 +589,11 @@
       "it": "Pepe"
     },
     "location": {
-      "de": "Poco Path Lighthouse",
+      "de": "Cucharico-Pfad Leuchtturm",
       "en": "Poco Path Lighthouse",
-      "fr": "Poco Path Lighthouse",
-      "es": "Poco Path Lighthouse",
-      "it": "Poco Path Lighthouse"
+      "fr": "Route de Cuchalaga Phare",
+      "es": "Sendero de Cahíz Faro",
+      "it": "Sentiero di Dosilla Faro"
     },
     "badge": null,
     "max_level": 63
@@ -611,8 +611,8 @@
       "de": "Mesalona City",
       "en": "Mesagoza",
       "fr": "Mesaledo",
-      "es": "Mesagoza",
-      "it": "Mesagoza"
+      "es": "Ciudad Meseta",
+      "it": "Mesapoli"
     },
     "badge": null,
     "max_level": 61
@@ -630,8 +630,8 @@
       "de": "Mesalona City",
       "en": "Mesagoza",
       "fr": "Mesaledo",
-      "es": "Mesagoza",
-      "it": "Mesagoza"
+      "es": "Ciudad Meseta",
+      "it": "Mesapoli"
     },
     "badge": null,
     "max_level": 63
@@ -649,8 +649,8 @@
       "de": "Mesalona City",
       "en": "Mesagoza",
       "fr": "Mesaledo",
-      "es": "Mesagoza",
-      "it": "Mesagoza"
+      "es": "Ciudad Meseta",
+      "it": "Mesapoli"
     },
     "badge": null,
     "max_level": 66

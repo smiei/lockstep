@@ -12,8 +12,8 @@
       "de": "Viola City",
       "en": "Violet City",
       "fr": "Mauville",
-      "es": "Violet City",
-      "it": "Violet City"
+      "es": "Ciudad Malva",
+      "it": "Violapoli"
     },
     "badge": {
       "de": "Zephyrorden",
@@ -36,9 +36,9 @@
     "location": {
       "de": "Azalea City",
       "en": "Azalea Town",
-      "fr": "Ecorcia",
-      "es": "Azalea Town",
-      "it": "Azalea Town"
+      "fr": "Écorcia",
+      "es": "Pueblo Azalea",
+      "it": "Azalina"
     },
     "badge": null,
     "max_level": null,
@@ -56,9 +56,9 @@
     "location": {
       "de": "Azalea City",
       "en": "Azalea Town",
-      "fr": "Ecorcia",
-      "es": "Azalea Town",
-      "it": "Azalea Town"
+      "fr": "Écorcia",
+      "es": "Pueblo Azalea",
+      "it": "Azalina"
     },
     "badge": {
       "de": "Insektenorden",
@@ -82,8 +82,8 @@
       "de": "Dukatia City",
       "en": "Goldenrod City",
       "fr": "Doublonville",
-      "es": "Goldenrod City",
-      "it": "Goldenrod City"
+      "es": "Ciudad Trigal",
+      "it": "Fiordoropoli"
     },
     "badge": {
       "de": "Basisorden",
@@ -104,11 +104,11 @@
       "it": "Rivale"
     },
     "location": {
-      "de": "Verbrannter Turm, Teak City",
+      "de": "Turmruine, Teak City",
       "en": "Burned Tower, Ecruteak City",
-      "fr": "Burned Tower, Ecruteak City",
-      "es": "Burned Tower, Ecruteak City",
-      "it": "Burned Tower, Ecruteak City"
+      "fr": "Tour Cendrée, Rosalia",
+      "es": "Torre Quemada, Ciudad Iris",
+      "it": "Torre Bruciata, Amarantopoli"
     },
     "badge": null,
     "max_level": null,
@@ -127,8 +127,8 @@
       "de": "Teak City",
       "en": "Ecruteak City",
       "fr": "Rosalia",
-      "es": "Ecruteak City",
-      "it": "Ecruteak City"
+      "es": "Ciudad Iris",
+      "it": "Amarantopoli"
     },
     "badge": {
       "de": "Nebelorden",
@@ -152,8 +152,8 @@
       "de": "Anemonia City",
       "en": "Cianwood City",
       "fr": "Irisia",
-      "es": "Cianwood City",
-      "it": "Cianwood City"
+      "es": "Ciudad Orquídea",
+      "it": "Fiorlisopoli"
     },
     "badge": {
       "de": "Sturmorden",
@@ -177,8 +177,8 @@
       "de": "Oliviana City",
       "en": "Olivine City",
       "fr": "Oliville",
-      "es": "Olivine City",
-      "it": "Olivine City"
+      "es": "Ciudad Olivo",
+      "it": "Olivinopoli"
     },
     "badge": {
       "de": "Mineralorden",
@@ -202,8 +202,8 @@
       "de": "Mahagonia City",
       "en": "Mahogany Town",
       "fr": "Acajou",
-      "es": "Mahogany Town",
-      "it": "Mahogany Town"
+      "es": "Pueblo Caoba",
+      "it": "Mogania"
     },
     "badge": {
       "de": "Gletscherorden",
@@ -227,8 +227,8 @@
       "de": "Dukatia City",
       "en": "Goldenrod City",
       "fr": "Doublonville",
-      "es": "Goldenrod City",
-      "it": "Goldenrod City"
+      "es": "Ciudad Trigal",
+      "it": "Fiordoropoli"
     },
     "badge": null,
     "max_level": null,
@@ -246,9 +246,9 @@
     "location": {
       "de": "Ebenholz City",
       "en": "Blackthorn City",
-      "fr": "Ebènelle",
-      "es": "Blackthorn City",
-      "it": "Blackthorn City"
+      "fr": "Ébènelle",
+      "es": "Ciudad Endrino",
+      "it": "Ebanopoli"
     },
     "badge": {
       "de": "Aufstiegsorden",
@@ -289,7 +289,7 @@
       "it": "Will"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -308,7 +308,7 @@
       "it": "Koga"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -327,7 +327,7 @@
       "it": "Bruno"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -346,7 +346,7 @@
       "it": "Karen"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -365,7 +365,7 @@
       "it": "Lance"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -536,9 +536,9 @@
     "location": {
       "de": "Seeschauminseln",
       "en": "Seafoam Islands",
-      "fr": "Iles Ecume",
+      "fr": "Îles Écume",
       "es": "Islas Espuma",
-      "it": "Isole Schiuma"
+      "it": "Isole Spumarine"
     },
     "badge": {
       "de": "Vulkanorden",
@@ -584,11 +584,11 @@
       "it": "Rosso"
     },
     "location": {
-      "de": "Silberberg",
+      "de": "Silberhöhle",
       "en": "Mt. Silver",
-      "fr": "Mont Argenté",
-      "es": "Mt. Silver",
-      "it": "Mt. Silver"
+      "fr": "Grotte Argentée",
+      "es": "Cueva Plateada",
+      "it": "Monte Argento"
     },
     "badge": null,
     "max_level": 81

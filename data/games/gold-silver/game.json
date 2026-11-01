@@ -2,7 +2,6 @@
   "id": "gold-silver",
   "sort": 4,
   "kind": "official",
-  "dataStatus": "unverified",
   "generation": 2,
   "dexLimit": 251,
   "spriteSet": "crystal",

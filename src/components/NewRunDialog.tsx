@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { FieldLabel, Input, Select } from "@/components/ui/Input";
 import { Modal } from "@/components/ui/Modal";
 import { MAX_SOULLINK_PLAYERS, MIN_SOULLINK_PLAYERS } from "@/lib/players";
-import { UnverifiedDataNote } from "@/components/UnverifiedDataNote";
+import { EnglishOnlyNote } from "@/components/EnglishOnlyNote";
 import { isCustomPackId } from "@/lib/gamePack";
 import { CustomGameControls } from "@/components/CustomGameControls";
 
@@ -56,13 +56,11 @@ export function NewRunDialog({
   onCreate: (name: string, mode: RunMode, gameId: string, playerCount: number) => void;
 }) {
   const t = translations[lang].runSwitcher;
-  const tNotice = translations[lang].dataNotice;
 
   function renderGameOption(game: GameSummary) {
     return (
       <option key={game.id} value={game.id}>
         {localizeName(game.names, lang)}
-        {game.unverified ? ` (${tNotice.unverifiedSuffix})` : ""}
       </option>
     );
   }
@@ -145,8 +143,8 @@ export function NewRunDialog({
             ),
           )}
         </Select>
-        {games.find((game) => game.id === gameId)?.unverified && (
-          <UnverifiedDataNote lang={lang} className="mt-2" />
+        {games.find((game) => game.id === gameId)?.kind === "romhack" && (
+          <EnglishOnlyNote lang={lang} className="mt-2" />
         )}
         <CustomGameControls
           lang={lang}

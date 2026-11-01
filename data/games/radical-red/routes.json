@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Inicial",
+      "es": "Starter",
       "it": "Starter"
     },
     "type": "static"
@@ -13,11 +13,11 @@
   {
     "id": 2,
     "names": {
-      "de": "Alabastia",
+      "de": "Pallet Town",
       "en": "Pallet Town",
-      "fr": "Bourg Palette",
-      "es": "Pueblo Paleta",
-      "it": "Biancavilla"
+      "fr": "Pallet Town",
+      "es": "Pallet Town",
+      "it": "Pallet Town"
     },
     "type": "route"
   },
@@ -27,19 +27,19 @@
       "de": "Route 1",
       "en": "Route 1",
       "fr": "Route 1",
-      "es": "Ruta 1",
-      "it": "Percorso 1"
+      "es": "Route 1",
+      "it": "Route 1"
     },
     "type": "route"
   },
   {
     "id": 4,
     "names": {
-      "de": "Vertania City",
+      "de": "Viridian City",
       "en": "Viridian City",
-      "fr": "Jadielle",
-      "es": "Ciudad Verde",
-      "it": "Smeraldopoli"
+      "fr": "Viridian City",
+      "es": "Viridian City",
+      "it": "Viridian City"
     },
     "type": "route"
   },
@@ -49,8 +49,8 @@
       "de": "Route 22",
       "en": "Route 22",
       "fr": "Route 22",
-      "es": "Ruta 22",
-      "it": "Percorso 22"
+      "es": "Route 22",
+      "it": "Route 22"
     },
     "type": "route"
   },
@@ -60,19 +60,19 @@
       "de": "Route 2",
       "en": "Route 2",
       "fr": "Route 2",
-      "es": "Ruta 2",
-      "it": "Percorso 2"
+      "es": "Route 2",
+      "it": "Route 2"
     },
     "type": "route"
   },
   {
     "id": 7,
     "names": {
-      "de": "Vertania Wald",
+      "de": "Viridian Forest",
       "en": "Viridian Forest",
-      "fr": "Forêt de Jade",
-      "es": "Bosque Verde",
-      "it": "Bosco Smeraldo"
+      "fr": "Viridian Forest",
+      "es": "Viridian Forest",
+      "it": "Viridian Forest"
     },
     "type": "route"
   },
@@ -93,8 +93,8 @@
       "de": "Route 3",
       "en": "Route 3",
       "fr": "Route 3",
-      "es": "Ruta 3",
-      "it": "Percorso 3"
+      "es": "Route 3",
+      "it": "Route 3"
     },
     "type": "route"
   },
@@ -104,19 +104,19 @@
       "de": "Route 4",
       "en": "Route 4",
       "fr": "Route 4",
-      "es": "Ruta 4",
-      "it": "Percorso 4"
+      "es": "Route 4",
+      "it": "Route 4"
     },
     "type": "route"
   },
   {
     "id": 11,
     "names": {
-      "de": "Mondberg",
+      "de": "Mt. Moon",
       "en": "Mt. Moon",
-      "fr": "Mont Sélénite",
-      "es": "Monte Luna",
-      "it": "Monte Luna"
+      "fr": "Mt. Moon",
+      "es": "Mt. Moon",
+      "it": "Mt. Moon"
     },
     "type": "route"
   },
@@ -126,8 +126,8 @@
       "de": "Route 24",
       "en": "Route 24",
       "fr": "Route 24",
-      "es": "Ruta 24",
-      "it": "Percorso 24"
+      "es": "Route 24",
+      "it": "Route 24"
     },
     "type": "route"
   },
@@ -137,19 +137,19 @@
       "de": "Route 25",
       "en": "Route 25",
       "fr": "Route 25",
-      "es": "Ruta 25",
-      "it": "Percorso 25"
+      "es": "Route 25",
+      "it": "Route 25"
     },
     "type": "route"
   },
   {
     "id": 14,
     "names": {
-      "de": "Azuria City",
+      "de": "Cerulean City",
       "en": "Cerulean City",
-      "fr": "Azuria",
-      "es": "Ciudad Celeste",
-      "it": "Celestopoli"
+      "fr": "Cerulean City",
+      "es": "Cerulean City",
+      "it": "Cerulean City"
     },
     "type": "route"
   },
@@ -159,8 +159,8 @@
       "de": "Route 5",
       "en": "Route 5",
       "fr": "Route 5",
-      "es": "Ruta 5",
-      "it": "Percorso 5"
+      "es": "Route 5",
+      "it": "Route 5"
     },
     "type": "route"
   },
@@ -170,8 +170,8 @@
       "de": "Route 6",
       "en": "Route 6",
       "fr": "Route 6",
-      "es": "Ruta 6",
-      "it": "Percorso 6"
+      "es": "Route 6",
+      "it": "Route 6"
     },
     "type": "route"
   },
@@ -214,8 +214,8 @@
       "de": "Route 11",
       "en": "Route 11",
       "fr": "Route 11",
-      "es": "Ruta 11",
-      "it": "Percorso 11"
+      "es": "Route 11",
+      "it": "Route 11"
     },
     "type": "route"
   },
@@ -225,19 +225,19 @@
       "de": "Route 9",
       "en": "Route 9",
       "fr": "Route 9",
-      "es": "Ruta 9",
-      "it": "Percorso 9"
+      "es": "Route 9",
+      "it": "Route 9"
     },
     "type": "route"
   },
   {
     "id": 22,
     "names": {
-      "de": "Felstunnel",
+      "de": "Rock Tunnel",
       "en": "Rock Tunnel",
-      "fr": "Grotte",
-      "es": "Túnel Roca",
-      "it": "Tunnel Roccioso"
+      "fr": "Rock Tunnel",
+      "es": "Rock Tunnel",
+      "it": "Rock Tunnel"
     },
     "type": "route"
   },
@@ -247,19 +247,19 @@
       "de": "Route 10",
       "en": "Route 10",
       "fr": "Route 10",
-      "es": "Ruta 10",
-      "it": "Percorso 10"
+      "es": "Route 10",
+      "it": "Route 10"
     },
     "type": "route"
   },
   {
     "id": 24,
     "names": {
-      "de": "Pokémon-Turm",
+      "de": "Pokémon Tower",
       "en": "Pokémon Tower",
-      "fr": "Tour Pokémon",
-      "es": "Torre Pokémon",
-      "it": "Torre Pokémon"
+      "fr": "Pokémon Tower",
+      "es": "Pokémon Tower",
+      "it": "Pokémon Tower"
     },
     "type": "route"
   },
@@ -269,8 +269,8 @@
       "de": "Route 12",
       "en": "Route 12",
       "fr": "Route 12",
-      "es": "Ruta 12",
-      "it": "Percorso 12"
+      "es": "Route 12",
+      "it": "Route 12"
     },
     "type": "route"
   },
@@ -280,8 +280,8 @@
       "de": "Route 8",
       "en": "Route 8",
       "fr": "Route 8",
-      "es": "Ruta 8",
-      "it": "Percorso 8"
+      "es": "Route 8",
+      "it": "Route 8"
     },
     "type": "route"
   },
@@ -291,19 +291,19 @@
       "de": "Route 7",
       "en": "Route 7",
       "fr": "Route 7",
-      "es": "Ruta 7",
-      "it": "Percorso 7"
+      "es": "Route 7",
+      "it": "Route 7"
     },
     "type": "route"
   },
   {
     "id": 28,
     "names": {
-      "de": "Prismania City",
+      "de": "Celadon City",
       "en": "Celadon City",
-      "fr": "Céladopole",
-      "es": "Ciudad Azulona",
-      "it": "Azzurropoli"
+      "fr": "Celadon City",
+      "es": "Celadon City",
+      "it": "Celadon City"
     },
     "type": "route"
   },
@@ -324,8 +324,8 @@
       "de": "Route 16",
       "en": "Route 16",
       "fr": "Route 16",
-      "es": "Ruta 16",
-      "it": "Percorso 16"
+      "es": "Route 16",
+      "it": "Route 16"
     },
     "type": "route"
   },
@@ -335,8 +335,8 @@
       "de": "Route 17",
       "en": "Route 17",
       "fr": "Route 17",
-      "es": "Ruta 17",
-      "it": "Percorso 17"
+      "es": "Route 17",
+      "it": "Route 17"
     },
     "type": "route"
   },
@@ -346,8 +346,8 @@
       "de": "Route 18",
       "en": "Route 18",
       "fr": "Route 18",
-      "es": "Ruta 18",
-      "it": "Percorso 18"
+      "es": "Route 18",
+      "it": "Route 18"
     },
     "type": "route"
   },
@@ -365,11 +365,11 @@
   {
     "id": 34,
     "names": {
-      "de": "Safari-Zone",
+      "de": "Safari Zone",
       "en": "Safari Zone",
-      "fr": "Parc Safari",
-      "es": "Zona Safari",
-      "it": "Zona Safari"
+      "fr": "Safari Zone",
+      "es": "Safari Zone",
+      "it": "Safari Zone"
     },
     "type": "route"
   },
@@ -379,8 +379,8 @@
       "de": "Route 15",
       "en": "Route 15",
       "fr": "Route 15",
-      "es": "Ruta 15",
-      "it": "Percorso 15"
+      "es": "Route 15",
+      "it": "Route 15"
     },
     "type": "route"
   },
@@ -390,8 +390,8 @@
       "de": "Route 14",
       "en": "Route 14",
       "fr": "Route 14",
-      "es": "Ruta 14",
-      "it": "Percorso 14"
+      "es": "Route 14",
+      "it": "Route 14"
     },
     "type": "route"
   },
@@ -401,19 +401,19 @@
       "de": "Route 13",
       "en": "Route 13",
       "fr": "Route 13",
-      "es": "Ruta 13",
-      "it": "Percorso 13"
+      "es": "Route 13",
+      "it": "Route 13"
     },
     "type": "route"
   },
   {
     "id": 38,
     "names": {
-      "de": "Kraftwerk",
+      "de": "Power Plant",
       "en": "Power Plant",
-      "fr": "Centrale",
-      "es": "Central Energía",
-      "it": "Centrale Elettrica"
+      "fr": "Power Plant",
+      "es": "Power Plant",
+      "it": "Power Plant"
     },
     "type": "route"
   },
@@ -422,9 +422,9 @@
     "names": {
       "de": "Route 19",
       "en": "Route 19",
-      "fr": "Chenal 19",
-      "es": "Ruta 19",
-      "it": "Percorso 19"
+      "fr": "Route 19",
+      "es": "Route 19",
+      "it": "Route 19"
     },
     "type": "route"
   },
@@ -433,42 +433,42 @@
     "names": {
       "de": "Route 20",
       "en": "Route 20",
-      "fr": "Chenal 20",
-      "es": "Ruta 20",
-      "it": "Percorso 20"
+      "fr": "Route 20",
+      "es": "Route 20",
+      "it": "Route 20"
     },
     "type": "route"
   },
   {
     "id": 41,
     "names": {
-      "de": "Seeschauminseln",
+      "de": "Seafoam Islands",
       "en": "Seafoam Islands",
-      "fr": "Iles Ecume",
-      "es": "Islas Espuma",
-      "it": "Isole Schiuma"
+      "fr": "Seafoam Islands",
+      "es": "Seafoam Islands",
+      "it": "Seafoam Islands"
     },
     "type": "route"
   },
   {
     "id": 42,
     "names": {
-      "de": "Zinnoberinsel",
+      "de": "Cinnabar Island",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
-      "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "fr": "Cinnabar Island",
+      "es": "Cinnabar Island",
+      "it": "Cinnabar Island"
     },
     "type": "route"
   },
   {
     "id": 43,
     "names": {
-      "de": "Pokémon-Villa",
+      "de": "Pokémon Mansion",
       "en": "Pokémon Mansion",
-      "fr": "Manoir Pokémon",
-      "es": "Mansión Pokémon",
-      "it": "Villa Pokémon"
+      "fr": "Pokémon Mansion",
+      "es": "Pokémon Mansion",
+      "it": "Pokémon Mansion"
     },
     "type": "route"
   },
@@ -477,9 +477,9 @@
     "names": {
       "de": "Route 21",
       "en": "Route 21",
-      "fr": "Chenal 21",
-      "es": "Ruta 21",
-      "it": "Percorso 21"
+      "fr": "Route 21",
+      "es": "Route 21",
+      "it": "Route 21"
     },
     "type": "route"
   },
@@ -489,19 +489,19 @@
       "de": "Route 23",
       "en": "Route 23",
       "fr": "Route 23",
-      "es": "Ruta 23",
-      "it": "Percorso 23"
+      "es": "Route 23",
+      "it": "Route 23"
     },
     "type": "route"
   },
   {
     "id": 46,
     "names": {
-      "de": "Siegesstraße",
+      "de": "Victory Road",
       "en": "Victory Road",
-      "fr": "Route Victoire",
-      "es": "Calle Victoria",
-      "it": "Via Vittoria"
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
     },
     "type": "route"
   },
@@ -519,20 +519,20 @@
   {
     "id": 48,
     "names": {
-      "de": "Glutberg",
+      "de": "Mt. Ember",
       "en": "Mt. Ember",
-      "fr": "Mont Braise",
-      "es": "Monte Ascuas",
-      "it": "Monte Brace"
+      "fr": "Mt. Ember",
+      "es": "Mt. Ember",
+      "it": "Mt. Ember"
     },
     "type": "route"
   },
   {
     "id": 49,
     "names": {
-      "de": "Schatzgestade",
+      "de": "Treasure Beach",
       "en": "Treasure Beach",
-      "fr": "Plage Trésor",
+      "fr": "Treasure Beach",
       "es": "Treasure Beach",
       "it": "Treasure Beach"
     },
@@ -541,10 +541,10 @@
   {
     "id": 50,
     "names": {
-      "de": "Beerenforst",
+      "de": "Berry Forest",
       "en": "Berry Forest",
-      "fr": "Bois Baies",
-      "es": "Bosque Baya",
+      "fr": "Berry Forest",
+      "es": "Berry Forest",
       "it": "Berry Forest"
     },
     "type": "route"
@@ -552,9 +552,9 @@
   {
     "id": 51,
     "names": {
-      "de": "Bundbrücke",
+      "de": "Bond Bridge",
       "en": "Bond Bridge",
-      "fr": "Pont du Lien",
+      "fr": "Bond Bridge",
       "es": "Bond Bridge",
       "it": "Bond Bridge"
     },
@@ -563,9 +563,9 @@
   {
     "id": 52,
     "names": {
-      "de": "Kap Kante",
+      "de": "Cape Brink",
       "en": "Cape Brink",
-      "fr": "Cap Falaise",
+      "fr": "Cape Brink",
       "es": "Cape Brink",
       "it": "Cape Brink"
     },
@@ -574,9 +574,9 @@
   {
     "id": 53,
     "names": {
-      "de": "Glühweg",
+      "de": "Kindle Road",
       "en": "Kindle Road",
-      "fr": "Route Tison",
+      "fr": "Kindle Road",
       "es": "Kindle Road",
       "it": "Kindle Road"
     },
@@ -585,11 +585,11 @@
   {
     "id": 54,
     "names": {
-      "de": "Azuria-Höhle",
+      "de": "Cerulean Cave",
       "en": "Cerulean Cave",
-      "fr": "Caverne Azurée",
-      "es": "Cueva Celeste",
-      "it": "Grotta Celeste"
+      "fr": "Cerulean Cave",
+      "es": "Cerulean Cave",
+      "it": "Cerulean Cave"
     },
     "type": "route",
     "postgame": true

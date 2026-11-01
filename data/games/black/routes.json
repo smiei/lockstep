@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Starter",
+      "es": "Inicial",
       "it": "Starter"
     },
     "type": "static"
@@ -27,8 +27,8 @@
       "de": "Avenitia",
       "en": "Nuvema Town",
       "fr": "Renouet",
-      "es": "Nuvema Town",
-      "it": "Nuvema Town"
+      "es": "Pueblo Arcilla",
+      "it": "Soffiolieve"
     },
     "type": "route"
   },
@@ -49,8 +49,8 @@
       "de": "Traumbrache",
       "en": "Dreamyard",
       "fr": "Vestiges du Rêve",
-      "es": "Dreamyard",
-      "it": "Dreamyard"
+      "es": "Solar de los Sueños",
+      "it": "Cantiere dei Sogni"
     },
     "type": "route"
   },
@@ -59,9 +59,9 @@
     "names": {
       "de": "Affen-Geschenk, Traumbrache",
       "en": "Monkey Gift, Dreamyard",
-      "fr": "Monkey Gift, Dreamyard",
-      "es": "Monkey Gift, Dreamyard",
-      "it": "Monkey Gift, Dreamyard"
+      "fr": "Cadeau du singe, Vestiges du Rêve",
+      "es": "Regalo del mono, Solar de los Sueños",
+      "it": "Dono della scimmia, Cantiere dei Sogni"
     },
     "type": "static"
   },
@@ -71,8 +71,8 @@
       "de": "Orion City",
       "en": "Striaton City",
       "fr": "Ogoesse",
-      "es": "Striaton City",
-      "it": "Striaton City"
+      "es": "Ciudad Gres",
+      "it": "Levantopoli"
     },
     "type": "route"
   },
@@ -93,8 +93,8 @@
       "de": "Grundwassersenke",
       "en": "Wellspring Cave",
       "fr": "Veine Souterraine",
-      "es": "Wellspring Cave",
-      "it": "Wellspring Cave"
+      "es": "Cueva Manantial",
+      "it": "Falda Sotterranea"
     },
     "type": "route"
   },
@@ -104,8 +104,8 @@
       "de": "Septerna City",
       "en": "Nacrene City",
       "fr": "Maillard",
-      "es": "Nacrene City",
-      "it": "Nacrene City"
+      "es": "Ciudad Esmalte",
+      "it": "Zefiropoli"
     },
     "type": "route"
   },
@@ -114,9 +114,9 @@
     "names": {
       "de": "Fossil, Septerna City",
       "en": "Fossil, Nacrene City",
-      "fr": "Fossil, Nacrene City",
-      "es": "Fossil, Nacrene City",
-      "it": "Fossil, Nacrene City"
+      "fr": "Fossile, Maillard",
+      "es": "Fósil, Ciudad Esmalte",
+      "it": "Fossile, Zefiropoli"
     },
     "type": "static"
   },
@@ -126,8 +126,8 @@
       "de": "Ewigenwald",
       "en": "Pinwheel Forest",
       "fr": "Forêt d'Empoigne",
-      "es": "Pinwheel Forest",
-      "it": "Pinwheel Forest"
+      "es": "Bosque Azulejo",
+      "it": "Bosco Girandola"
     },
     "type": "route"
   },
@@ -136,9 +136,9 @@
     "names": {
       "de": "Viridium, Ewigenwald",
       "en": "Virizion, Pinwheel Forest",
-      "fr": "Virizion, Pinwheel Forest",
-      "es": "Virizion, Pinwheel Forest",
-      "it": "Virizion, Pinwheel Forest"
+      "fr": "Viridium, Forêt d'Empoigne",
+      "es": "Virizion, Bosque Azulejo",
+      "it": "Virizion, Bosco Girandola"
     },
     "type": "static"
   },
@@ -148,8 +148,8 @@
       "de": "Stratos City",
       "en": "Castelia City",
       "fr": "Volucité",
-      "es": "Castelia City",
-      "it": "Castelia City"
+      "es": "Ciudad Porcelana",
+      "it": "Austropoli"
     },
     "type": "route"
   },
@@ -170,8 +170,8 @@
       "de": "Wüstenresort",
       "en": "Desert Resort",
       "fr": "Désert Délassant",
-      "es": "Desert Resort",
-      "it": "Desert Resort"
+      "es": "Zona Desierto",
+      "it": "Deserto della Quiete"
     },
     "type": "route"
   },
@@ -181,8 +181,8 @@
       "de": "Alter Palast",
       "en": "Relic Castle",
       "fr": "Château Enfoui",
-      "es": "Relic Castle",
-      "it": "Relic Castle"
+      "es": "Castillo Ancestral",
+      "it": "Castello Sepolto"
     },
     "type": "route"
   },
@@ -203,8 +203,8 @@
       "de": "Hain der Täuschung",
       "en": "Lostlorn Forest",
       "fr": "Bois des Illusions",
-      "es": "Lostlorn Forest",
-      "it": "Lostlorn Forest"
+      "es": "Bosque de los Perdidos",
+      "it": "Bosco Smarrimento"
     },
     "type": "route"
   },
@@ -225,8 +225,8 @@
       "de": "Marea-Zugbrücke",
       "en": "Driftveil Drawbridge",
       "fr": "Pont Yoneuve",
-      "es": "Driftveil Drawbridge",
-      "it": "Driftveil Drawbridge"
+      "es": "Puente de Fayenza",
+      "it": "Ponte Libecciopoli"
     },
     "type": "route"
   },
@@ -236,8 +236,8 @@
       "de": "Marea City",
       "en": "Driftveil City",
       "fr": "Port Yoneuve",
-      "es": "Driftveil City",
-      "it": "Driftveil City"
+      "es": "Ciudad Fayenza",
+      "it": "Libecciopoli"
     },
     "type": "route"
   },
@@ -247,8 +247,8 @@
       "de": "Tiefkühlcontainer",
       "en": "Cold Storage",
       "fr": "Hangar Frigorifique",
-      "es": "Cold Storage",
-      "it": "Cold Storage"
+      "es": "Almacenes Frigoríficos",
+      "it": "Deposito Frigo"
     },
     "type": "route"
   },
@@ -269,8 +269,8 @@
       "de": "Elektrolithhöhle",
       "en": "Chargestone Cave",
       "fr": "Grotte Électrolithe",
-      "es": "Chargestone Cave",
-      "it": "Chargestone Cave"
+      "es": "Cueva Electrorroca",
+      "it": "Cava Pietrelettrica"
     },
     "type": "route"
   },
@@ -280,8 +280,8 @@
       "de": "Panaero-Höhle",
       "en": "Mistralton Cave",
       "fr": "Grotte Parsemille",
-      "es": "Mistralton Cave",
-      "it": "Mistralton Cave"
+      "es": "Cueva Loza",
+      "it": "Cava Ponentopoli"
     },
     "type": "route"
   },
@@ -290,9 +290,9 @@
     "names": {
       "de": "Kobalium, Panaero-Höhle",
       "en": "Cobalion, Mistralton Cave",
-      "fr": "Cobalion, Mistralton Cave",
-      "es": "Cobalion, Mistralton Cave",
-      "it": "Cobalion, Mistralton Cave"
+      "fr": "Cobaltium, Grotte Parsemille",
+      "es": "Cobalion, Cueva Loza",
+      "it": "Cobalion, Cava Ponentopoli"
     },
     "type": "static"
   },
@@ -313,8 +313,8 @@
       "de": "Turm des Himmels",
       "en": "Celestial Tower",
       "fr": "Tour des Cieux",
-      "es": "Celestial Tower",
-      "it": "Celestial Tower"
+      "es": "Torre de los Cielos",
+      "it": "Torre Cielo"
     },
     "type": "route"
   },
@@ -324,8 +324,8 @@
       "de": "Wendelberg",
       "en": "Twist Mountain",
       "fr": "Mont Foré",
-      "es": "Twist Mountain",
-      "it": "Twist Mountain"
+      "es": "Monte Tuerca",
+      "it": "Monte Vite"
     },
     "type": "route"
   },
@@ -335,8 +335,8 @@
       "de": "Nevaio City",
       "en": "Icirrus City",
       "fr": "Flocombe",
-      "es": "Icirrus City",
-      "it": "Icirrus City"
+      "es": "Ciudad Teja",
+      "it": "Mistralopoli"
     },
     "type": "route"
   },
@@ -346,8 +346,8 @@
       "de": "Drachenstiege",
       "en": "Dragonspiral Tower",
       "fr": "Tour Dragospire",
-      "es": "Dragonspiral Tower",
-      "it": "Dragonspiral Tower"
+      "es": "Torre Duodraco",
+      "it": "Torre Dragospira"
     },
     "type": "route"
   },
@@ -357,8 +357,8 @@
       "de": "Moor von Nevaio",
       "en": "Moor of Icirrus",
       "fr": "Tourbière Flocombe",
-      "es": "Moor of Icirrus",
-      "it": "Moor of Icirrus"
+      "es": "Pantano Teja",
+      "it": "Palude Mistralopoli"
     },
     "type": "route"
   },
@@ -411,9 +411,9 @@
     "names": {
       "de": "Terrakium, Siegesstraße",
       "en": "Terrakion, Victory Road",
-      "fr": "Terrakion, Victory Road",
-      "es": "Terrakion, Victory Road",
-      "it": "Terrakion, Victory Road"
+      "fr": "Terrakium, Route Victoire",
+      "es": "Terrakion, Calle Victoria",
+      "it": "Terrakion, Via Vittoria"
     },
     "type": "static"
   },
@@ -423,8 +423,8 @@
       "de": "Schloss von N",
       "en": "N's Castle",
       "fr": "Palais de N",
-      "es": "N's Castle",
-      "it": "N's Castle"
+      "es": "Palacio de N",
+      "it": "Palazzo di N"
     },
     "type": "route"
   },
@@ -433,9 +433,9 @@
     "names": {
       "de": "Reshiram, Schloss von N",
       "en": "Reshiram, N's Castle",
-      "fr": "Reshiram, N's Castle",
-      "es": "Reshiram, N's Castle",
-      "it": "Reshiram, N's Castle"
+      "fr": "Reshiram, Palais de N",
+      "es": "Reshiram, Palacio de N",
+      "it": "Reshiram, Palazzo di N"
     },
     "type": "static"
   },
@@ -457,8 +457,8 @@
       "de": "Dorfbrücke",
       "en": "Village Bridge",
       "fr": "Pont du Hameau",
-      "es": "Village Bridge",
-      "it": "Village Bridge"
+      "es": "Puente Villa",
+      "it": "Ponte Villaggio"
     },
     "type": "route",
     "postgame": true
@@ -481,8 +481,8 @@
       "de": "Ondula",
       "en": "Undella Town",
       "fr": "Vaguelone",
-      "es": "Undella Town",
-      "it": "Undella Town"
+      "es": "Pueblo Arenisca",
+      "it": "Spiraria"
     },
     "type": "route",
     "postgame": true
@@ -493,8 +493,8 @@
       "de": "Bucht von Ondula",
       "en": "Undella Bay",
       "fr": "Baie Vaguelone",
-      "es": "Undella Bay",
-      "it": "Undella Bay"
+      "es": "Bahía Arenisca",
+      "it": "Baia Spiraria"
     },
     "type": "route",
     "postgame": true
@@ -517,8 +517,8 @@
       "de": "Riesengrotte",
       "en": "Giant Chasm",
       "fr": "Grotte Cyclopéenne",
-      "es": "Giant Chasm",
-      "it": "Giant Chasm"
+      "es": "Boquete Gigante",
+      "it": "Fossa Gigante"
     },
     "type": "route",
     "postgame": true
@@ -528,9 +528,9 @@
     "names": {
       "de": "Kyurem, Riesengrotte",
       "en": "Kyurem, Giant Chasm",
-      "fr": "Kyurem, Giant Chasm",
-      "es": "Kyurem, Giant Chasm",
-      "it": "Kyurem, Giant Chasm"
+      "fr": "Kyurem, Grotte Cyclopéenne",
+      "es": "Kyurem, Boquete Gigante",
+      "it": "Kyurem, Fossa Gigante"
     },
     "type": "static",
     "postgame": true
@@ -553,8 +553,8 @@
       "de": "Wunderbrücke",
       "en": "Marvelous Bridge",
       "fr": "Pont de l'Inconnu",
-      "es": "Marvelous Bridge",
-      "it": "Marvelous Bridge"
+      "es": "Puente Progreso",
+      "it": "Ponte Meraviglie"
     },
     "type": "route",
     "postgame": true
@@ -577,8 +577,8 @@
       "de": "Schrein der Ernte",
       "en": "Abundant Shrine",
       "fr": "Autel Abondance",
-      "es": "Abundant Shrine",
-      "it": "Abundant Shrine"
+      "es": "Santuario Abundancia",
+      "it": "Tempio Abbondanza"
     },
     "type": "route",
     "postgame": true
@@ -588,9 +588,9 @@
     "names": {
       "de": "Demeteros, Schrein der Ernte",
       "en": "Landorus, Abundant Shrine",
-      "fr": "Landorus, Abundant Shrine",
-      "es": "Landorus, Abundant Shrine",
-      "it": "Landorus, Abundant Shrine"
+      "fr": "Démétéros, Autel Abondance",
+      "es": "Landorus, Santuario Abundancia",
+      "it": "Landorus, Tempio Abbondanza"
     },
     "type": "static",
     "postgame": true
@@ -612,9 +612,9 @@
     "names": {
       "de": "Ignivor-Ei, Route 18",
       "en": "Larvesta Egg, Route 18",
-      "fr": "Larvesta Egg, Route 18",
-      "es": "Larvesta Egg, Route 18",
-      "it": "Larvesta Egg, Route 18"
+      "fr": "Œuf Pyronille, Route 18",
+      "es": "Huevo de Larvesta, Ruta 18",
+      "it": "Uovo di Larvesta, Percorso 18"
     },
     "type": "static",
     "postgame": true
@@ -625,8 +625,8 @@
       "de": "P2-Labor",
       "en": "P2 Laboratory",
       "fr": "Labo P2",
-      "es": "P2 Laboratory",
-      "it": "P2 Laboratory"
+      "es": "Laboratorio P+P",
+      "it": "Laboratorio P&P"
     },
     "type": "route",
     "postgame": true
@@ -636,7 +636,7 @@
     "names": {
       "de": "Route 17",
       "en": "Route 17",
-      "fr": "Route 17",
+      "fr": "Chenal 17",
       "es": "Ruta 17",
       "it": "Percorso 17"
     },
@@ -649,8 +649,8 @@
       "de": "Höhle der Schulung",
       "en": "Challenger's Cave",
       "fr": "Antre d'Entraînement",
-      "es": "Challenger's Cave",
-      "it": "Challenger's Cave"
+      "es": "Gruta Superación",
+      "it": "Caverna Ascesi"
     },
     "type": "route",
     "postgame": true
@@ -661,8 +661,8 @@
       "de": "Kammer der Weisung",
       "en": "Guidance Chamber",
       "fr": "Espace Guide",
-      "es": "Guidance Chamber",
-      "it": "Guidance Chamber"
+      "es": "Estancia Orientación",
+      "it": "Sala della Guida"
     },
     "type": "route",
     "postgame": true
@@ -673,8 +673,8 @@
       "de": "Kammer der Prüfung",
       "en": "Trial Chamber",
       "fr": "Salle Épreuve",
-      "es": "Trial Chamber",
-      "it": "Trial Chamber"
+      "es": "Cámara de Pruebas",
+      "it": "Sala del Cimento"
     },
     "type": "route",
     "postgame": true
@@ -684,9 +684,9 @@
     "names": {
       "de": "Ramoth, Alter Palast",
       "en": "Volcarona, Relic Castle",
-      "fr": "Volcarona, Relic Castle",
-      "es": "Volcarona, Relic Castle",
-      "it": "Volcarona, Relic Castle"
+      "fr": "Pyrax, Château Enfoui",
+      "es": "Volcarona, Castillo Ancestral",
+      "it": "Volcarona, Castello Sepolto"
     },
     "type": "static",
     "postgame": true
@@ -694,11 +694,11 @@
   {
     "id": 62,
     "names": {
-      "de": "Boreos (wandernd)",
+      "de": "Boreos (umherstreifend)",
       "en": "Tornadus (roaming)",
-      "fr": "Tornadus (roaming)",
-      "es": "Tornadus (roaming)",
-      "it": "Tornadus (roaming)"
+      "fr": "Boréas (errant)",
+      "es": "Tornadus (errante)",
+      "it": "Tornadus (errante)"
     },
     "type": "static",
     "postgame": true
@@ -709,8 +709,8 @@
       "de": "Freiheitsgarten",
       "en": "Liberty Garden",
       "fr": "Île Liberté",
-      "es": "Liberty Garden",
-      "it": "Liberty Garden"
+      "es": "Isla Libertad",
+      "it": "Isola Libertà"
     },
     "type": "route",
     "postgame": true
@@ -720,9 +720,9 @@
     "names": {
       "de": "Victini, Freiheitsgarten",
       "en": "Victini, Liberty Garden",
-      "fr": "Victini, Liberty Garden",
-      "es": "Victini, Liberty Garden",
-      "it": "Victini, Liberty Garden"
+      "fr": "Victini, Île Liberté",
+      "es": "Victini, Isla Libertad",
+      "it": "Victini, Isola Libertà"
     },
     "type": "static",
     "postgame": true

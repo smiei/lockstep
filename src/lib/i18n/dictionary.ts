@@ -77,14 +77,11 @@ const de = {
   dataNotice: {
     spritePlaceholder: "Platzhalter",
     spritePlaceholderTitle: "Platzhalter: Bild der Grundart. Diese Form sieht im Spiel anders aus; für ihr eigenes Bild gibt es keine Quelle mit Nutzungsrechten.",
-    machineTranslated: "Maschinell übersetzt – Pokémon-Namen sind offiziell.",
+    machineTranslated: "Maschinell übersetzt – Pokémon- und Ortsnamen sind offiziell.",
     machineTranslatedLong:
-      "Diese Sprache ist maschinell übersetzt und kann Fehler enthalten, vor allem bei Orts- und Routennamen. Die Pokémon-Namen sind offiziell.",
-    unverifiedBadge: "Daten ungeprüft",
-    unverifiedHint:
-      "Routenliste, Reihenfolge und Ortsnamen dieses Spiels wurden noch nicht mit dem Spiel abgeglichen und können Fehler enthalten.",
-    report: "Fehler melden",
-    unverifiedSuffix: "ungeprüft",
+      "Diese Sprache ist maschinell übersetzt und kann Fehler enthalten. Die Namen der Pokémon und, in den offiziellen Spielen, der Orte sind offiziell.",
+    englishOnlyBadge: "Nur Englisch",
+    englishOnlyHint: "Diesen ROM-Hack gibt es nur auf Englisch. Orte, Trainer und Orden heißen hier deshalb wie im Spiel.",
   },
   blindflug: {
     name: "Blindflug",
@@ -924,14 +921,11 @@ const en: Dictionary = {
   dataNotice: {
     spritePlaceholder: "placeholder",
     spritePlaceholderTitle: "Placeholder: the base species' picture. This form looks different in the game; there is no source for its own picture that we may use.",
-    machineTranslated: "Machine-translated – Pokémon names are official.",
+    machineTranslated: "Machine-translated – Pokémon and place names are official.",
     machineTranslatedLong:
-      "This language is machine-translated and may contain mistakes, especially in place and route names. Pokémon names are official.",
-    unverifiedBadge: "Data unverified",
-    unverifiedHint:
-      "This game's route list, order and place names have not been checked against the game yet and may contain mistakes.",
-    report: "Report a mistake",
-    unverifiedSuffix: "unverified",
+      "This language is machine-translated and may contain mistakes. The names of Pokémon and, in the official games, of places are official.",
+    englishOnlyBadge: "English only",
+    englishOnlyHint: "This ROM hack exists in English only. Places, trainers and badges are named as in the game.",
   },
   blindflug: {
     name: "Blind flight",
@@ -1759,14 +1753,11 @@ const fr: Dictionary = {
   dataNotice: {
     spritePlaceholder: "substitut",
     spritePlaceholderTitle: "Image de substitution : celle de l'espèce de base. Cette forme est différente dans le jeu ; aucune source de son image n'est utilisable librement.",
-    machineTranslated: "Traduction automatique – les noms des Pokémon sont officiels.",
+    machineTranslated: "Traduction automatique – les noms des Pokémon et des lieux sont officiels.",
     machineTranslatedLong:
-      "Cette langue est traduite automatiquement et peut contenir des erreurs, surtout dans les noms de lieux et de routes. Les noms des Pokémon sont officiels.",
-    unverifiedBadge: "Données non vérifiées",
-    unverifiedHint:
-      "La liste des routes, leur ordre et les noms de lieux de ce jeu n’ont pas encore été vérifiés et peuvent contenir des erreurs.",
-    report: "Signaler une erreur",
-    unverifiedSuffix: "non vérifié",
+      "Cette langue est traduite automatiquement et peut contenir des erreurs. Les noms des Pokémon et, dans les jeux officiels, des lieux sont officiels.",
+    englishOnlyBadge: "Anglais uniquement",
+    englishOnlyHint: "Ce ROM hack n’existe qu’en anglais. Les lieux, Dresseurs et badges portent donc ici leur nom du jeu.",
   },
   blindflug: {
     name: "Vol à l’aveugle",
@@ -2601,14 +2592,11 @@ const es: Dictionary = {
   dataNotice: {
     spritePlaceholder: "provisional",
     spritePlaceholderTitle: "Imagen provisional de la especie base. Esta forma es distinta en el juego; no hay ninguna fuente de su imagen que podamos usar.",
-    machineTranslated: "Traducción automática: los nombres de los Pokémon son oficiales.",
+    machineTranslated: "Traducción automática: los nombres de los Pokémon y de los lugares son oficiales.",
     machineTranslatedLong:
-      "Este idioma está traducido automáticamente y puede contener errores, sobre todo en los nombres de lugares y rutas. Los nombres de los Pokémon son oficiales.",
-    unverifiedBadge: "Datos sin verificar",
-    unverifiedHint:
-      "La lista de rutas, su orden y los nombres de lugares de este juego aún no se han comprobado y pueden contener errores.",
-    report: "Informar de un error",
-    unverifiedSuffix: "sin verificar",
+      "Este idioma está traducido automáticamente y puede contener errores. Los nombres de los Pokémon y, en los juegos oficiales, de los lugares son oficiales.",
+    englishOnlyBadge: "Solo en inglés",
+    englishOnlyHint: "Este ROM hack solo existe en inglés. Por eso los lugares, Entrenadores y medallas se llaman aquí como en el juego.",
   },
   blindflug: {
     name: "Vuelo a ciegas",
@@ -3442,14 +3430,11 @@ const it: Dictionary = {
   dataNotice: {
     spritePlaceholder: "segnaposto",
     spritePlaceholderTitle: "Segnaposto: l'immagine della specie base. Nel gioco questa forma è diversa; non esiste una fonte utilizzabile per la sua immagine.",
-    machineTranslated: "Traduzione automatica: i nomi dei Pokémon sono ufficiali.",
+    machineTranslated: "Traduzione automatica: i nomi dei Pokémon e dei luoghi sono ufficiali.",
     machineTranslatedLong:
-      "Questa lingua è tradotta automaticamente e può contenere errori, soprattutto nei nomi di luoghi e percorsi. I nomi dei Pokémon sono ufficiali.",
-    unverifiedBadge: "Dati non verificati",
-    unverifiedHint:
-      "L’elenco dei percorsi, il loro ordine e i nomi dei luoghi di questo gioco non sono ancora stati verificati e possono contenere errori.",
-    report: "Segnala un errore",
-    unverifiedSuffix: "non verificato",
+      "Questa lingua è tradotta automaticamente e può contenere errori. I nomi dei Pokémon e, nei giochi ufficiali, dei luoghi sono ufficiali.",
+    englishOnlyBadge: "Solo inglese",
+    englishOnlyHint: "Questo ROM hack esiste solo in inglese. Per questo luoghi, Allenatori e medaglie qui hanno il nome del gioco.",
   },
   blindflug: {
     name: "Volo cieco",

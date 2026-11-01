@@ -2,7 +2,7 @@
   {
     "id": 1,
     "names": {
-      "de": "Weise Li",
+      "de": "Elder Li",
       "en": "Elder Li",
       "fr": "Elder Li",
       "es": "Elder Li",
@@ -16,37 +16,39 @@
       "it": "Sprout Tower"
     },
     "badge": null,
-    "max_level": 14
+    "max_level": 14,
+    "sprite": "Weise Li"
   },
   {
     "id": 2,
     "names": {
-      "de": "Falk",
+      "de": "Falkner",
       "en": "Falkner",
-      "fr": "Albert",
-      "es": "Pegaso",
+      "fr": "Falkner",
+      "es": "Falkner",
       "it": "Falkner"
     },
     "location": {
-      "de": "Viola City",
+      "de": "Violet City",
       "en": "Violet City",
-      "fr": "Mauville",
+      "fr": "Violet City",
       "es": "Violet City",
       "it": "Violet City"
     },
     "badge": {
-      "de": "Zephyrorden",
+      "de": "Zephyr Badge",
       "en": "Zephyr Badge",
-      "fr": "Badge Zéphyr",
-      "es": "Medalla Céfiro",
-      "it": "Medaglia Zefiro"
+      "fr": "Zephyr Badge",
+      "es": "Zephyr Badge",
+      "it": "Zephyr Badge"
     },
-    "max_level": 15
+    "max_level": 15,
+    "sprite": "Falk"
   },
   {
     "id": 3,
     "names": {
-      "de": "Vorstand Lanzo",
+      "de": "Executive Proton",
       "en": "Executive Proton",
       "fr": "Executive Proton",
       "es": "Executive Proton",
@@ -60,32 +62,34 @@
       "it": "Slowpoke Well"
     },
     "badge": null,
-    "max_level": 18
+    "max_level": 18,
+    "sprite": "Vorstand Lanzo"
   },
   {
     "id": 4,
     "names": {
-      "de": "Kai",
+      "de": "Bugsy",
       "en": "Bugsy",
-      "fr": "Hector",
-      "es": "Antón",
+      "fr": "Bugsy",
+      "es": "Bugsy",
       "it": "Bugsy"
     },
     "location": {
-      "de": "Azalea City",
+      "de": "Azalea Town",
       "en": "Azalea Town",
-      "fr": "Ecorcia",
+      "fr": "Azalea Town",
       "es": "Azalea Town",
       "it": "Azalea Town"
     },
     "badge": {
-      "de": "Insektenorden",
+      "de": "Hive Badge",
       "en": "Hive Badge",
-      "fr": "Badge Essaim",
-      "es": "Medalla Colmena",
-      "it": "Medaglia Alveare"
+      "fr": "Hive Badge",
+      "es": "Hive Badge",
+      "it": "Hive Badge"
     },
-    "max_level": 21
+    "max_level": 21,
+    "sprite": "Kai"
   },
   {
     "id": 5,
@@ -109,27 +113,28 @@
   {
     "id": 6,
     "names": {
-      "de": "Bianka",
+      "de": "Whitney",
       "en": "Whitney",
-      "fr": "Blanche",
-      "es": "Blanca",
+      "fr": "Whitney",
+      "es": "Whitney",
       "it": "Whitney"
     },
     "location": {
-      "de": "Dukatia City",
+      "de": "Goldenrod City",
       "en": "Goldenrod City",
-      "fr": "Doublonville",
+      "fr": "Goldenrod City",
       "es": "Goldenrod City",
       "it": "Goldenrod City"
     },
     "badge": {
-      "de": "Basisorden",
+      "de": "Plain Badge",
       "en": "Plain Badge",
-      "fr": "Badge Plaine",
-      "es": "Medalla Planicie",
-      "it": "Medaglia Pianura"
+      "fr": "Plain Badge",
+      "es": "Plain Badge",
+      "it": "Plain Badge"
     },
-    "max_level": 24
+    "max_level": 24,
+    "sprite": "Bianka"
   },
   {
     "id": 7,
@@ -191,32 +196,33 @@
   {
     "id": 10,
     "names": {
-      "de": "Jens",
+      "de": "Morty",
       "en": "Morty",
-      "fr": "Mortimer",
-      "es": "Morti",
+      "fr": "Morty",
+      "es": "Morty",
       "it": "Morty"
     },
     "location": {
-      "de": "Teak City",
+      "de": "Ecruteak City",
       "en": "Ecruteak City",
-      "fr": "Rosalia",
+      "fr": "Ecruteak City",
       "es": "Ecruteak City",
       "it": "Ecruteak City"
     },
     "badge": {
-      "de": "Nebelorden",
+      "de": "Fog Badge",
       "en": "Fog Badge",
-      "fr": "Badge Brume",
-      "es": "Medalla Niebla",
-      "it": "Medaglia Nebbia"
+      "fr": "Fog Badge",
+      "es": "Fog Badge",
+      "it": "Fog Badge"
     },
-    "max_level": 29
+    "max_level": 29,
+    "sprite": "Jens"
   },
   {
     "id": 11,
     "names": {
-      "de": "Eusin",
+      "de": "Eusine",
       "en": "Eusine",
       "fr": "Eusine",
       "es": "Eusine",
@@ -230,62 +236,65 @@
       "it": "Suicune Encounter"
     },
     "badge": null,
-    "max_level": 34
+    "max_level": 34,
+    "sprite": "Eusin"
   },
   {
     "id": 12,
     "names": {
-      "de": "Hartwig",
+      "de": "Chuck",
       "en": "Chuck",
       "fr": "Chuck",
-      "es": "Aníbal",
+      "es": "Chuck",
       "it": "Chuck"
     },
     "location": {
-      "de": "Anemonia City",
+      "de": "Cianwood City",
       "en": "Cianwood City",
-      "fr": "Irisia",
+      "fr": "Cianwood City",
       "es": "Cianwood City",
       "it": "Cianwood City"
     },
     "badge": {
-      "de": "Sturmorden",
+      "de": "Storm Badge",
       "en": "Storm Badge",
-      "fr": "Badge Tempête",
-      "es": "Medalla Tormenta",
-      "it": "Medaglia Tempesta"
+      "fr": "Storm Badge",
+      "es": "Storm Badge",
+      "it": "Storm Badge"
     },
-    "max_level": 35
+    "max_level": 35,
+    "sprite": "Hartwig"
   },
   {
     "id": 13,
     "names": {
-      "de": "Jasmin",
+      "de": "Jasmine",
       "en": "Jasmine",
       "fr": "Jasmine",
-      "es": "Yasmina",
+      "es": "Jasmine",
       "it": "Jasmine"
     },
     "location": {
-      "de": "Oliviana City",
+      "de": "Olivine City",
       "en": "Olivine City",
-      "fr": "Oliville",
+      "fr": "Olivine City",
       "es": "Olivine City",
       "it": "Olivine City"
     },
     "badge": {
-      "de": "Mineralorden",
+      "de": "Mineral Badge",
       "en": "Mineral Badge",
-      "fr": "Badge Minéral",
-      "es": "Medalla Mineral",
-      "it": "Medaglia Minerale"
+      "fr": "Mineral Badge",
+      "es": "Mineral Badge",
+      "it": "Mineral Badge"
     },
-    "max_level": 40
+    "max_level": 40,
+    "sprite": "Jasmin"
   },
   {
     "id": 14,
     "names": {
-      "de": "Vorstand Athena",
+      "de": "Executive Ariana",
       "en": "Executive Ariana",
       "fr": "Executive Ariana",
       "es": "Executive Ariana",
@@ -299,12 +308,13 @@
       "it": "Route 47"
     },
     "badge": null,
-    "max_level": 38
+    "max_level": 38,
+    "sprite": "Vorstand Athena"
   },
   {
     "id": 15,
     "names": {
-      "de": "Vorstand Lamda",
+      "de": "Executive Petrel",
       "en": "Executive Petrel",
       "fr": "Executive Petrel",
       "es": "Executive Petrel",
@@ -318,12 +328,13 @@
       "it": "Cliff Cave"
     },
     "badge": null,
-    "max_level": 37
+    "max_level": 37,
+    "sprite": "Vorstand Lamda"
   },
   {
     "id": 16,
     "names": {
-      "de": "Vorstand Atlas",
+      "de": "Executive Archer",
       "en": "Executive Archer",
       "fr": "Executive Archer",
       "es": "Executive Archer",
@@ -337,12 +348,13 @@
       "it": "Safari Zone Gate"
     },
     "badge": null,
-    "max_level": 39
+    "max_level": 39,
+    "sprite": "Vorstand Atlas"
   },
   {
     "id": 17,
     "names": {
-      "de": "Vorstand Athena",
+      "de": "Executive Ariana",
       "en": "Executive Ariana",
       "fr": "Executive Ariana",
       "es": "Executive Ariana",
@@ -356,12 +368,13 @@
       "it": "Rocket Hideout"
     },
     "badge": null,
-    "max_level": 43
+    "max_level": 43,
+    "sprite": "Vorstand Athena"
   },
   {
     "id": 18,
     "names": {
-      "de": "Vorstand Lamda",
+      "de": "Executive Petrel",
       "en": "Executive Petrel",
       "fr": "Executive Petrel",
       "es": "Executive Petrel",
@@ -375,37 +388,39 @@
       "it": "Rocket Hideout"
     },
     "badge": null,
-    "max_level": 43
+    "max_level": 43,
+    "sprite": "Vorstand Lamda"
   },
   {
     "id": 19,
     "names": {
-      "de": "Norbert",
+      "de": "Pryce",
       "en": "Pryce",
-      "fr": "Frédo",
-      "es": "Fredo",
+      "fr": "Pryce",
+      "es": "Pryce",
       "it": "Pryce"
     },
     "location": {
-      "de": "Mahagonia City",
+      "de": "Mahogany Town",
       "en": "Mahogany Town",
-      "fr": "Acajou",
+      "fr": "Mahogany Town",
       "es": "Mahogany Town",
       "it": "Mahogany Town"
     },
     "badge": {
-      "de": "Gletscherorden",
+      "de": "Glacier Badge",
       "en": "Glacier Badge",
-      "fr": "Badge Glacier",
-      "es": "Medalla Glaciar",
-      "it": "Medaglia Ghiacciaio"
+      "fr": "Glacier Badge",
+      "es": "Glacier Badge",
+      "it": "Glacier Badge"
     },
-    "max_level": 43
+    "max_level": 43,
+    "sprite": "Norbert"
   },
   {
     "id": 20,
     "names": {
-      "de": "Vorstand Lamda",
+      "de": "Executive Petrel",
       "en": "Executive Petrel",
       "fr": "Executive Petrel",
       "es": "Executive Petrel",
@@ -419,12 +434,13 @@
       "it": "Goldenrod Radio Tower"
     },
     "badge": null,
-    "max_level": 45
+    "max_level": 45,
+    "sprite": "Vorstand Lamda"
   },
   {
     "id": 21,
     "names": {
-      "de": "Vorstand Lanzo",
+      "de": "Executive Proton",
       "en": "Executive Proton",
       "fr": "Executive Proton",
       "es": "Executive Proton",
@@ -438,12 +454,13 @@
       "it": "Goldenrod Radio Tower"
     },
     "badge": null,
-    "max_level": 46
+    "max_level": 46,
+    "sprite": "Vorstand Lanzo"
   },
   {
     "id": 22,
     "names": {
-      "de": "Vorstand Athena",
+      "de": "Executive Ariana",
       "en": "Executive Ariana",
       "fr": "Executive Ariana",
       "es": "Executive Ariana",
@@ -457,12 +474,13 @@
       "it": "Goldenrod Radio Tower"
     },
     "badge": null,
-    "max_level": 47
+    "max_level": 47,
+    "sprite": "Vorstand Athena"
   },
   {
     "id": 23,
     "names": {
-      "de": "Vorstand Atlas",
+      "de": "Executive Archer",
       "en": "Executive Archer",
       "fr": "Executive Archer",
       "es": "Executive Archer",
@@ -476,7 +494,8 @@
       "it": "Goldenrod Radio Tower"
     },
     "badge": null,
-    "max_level": 48
+    "max_level": 48,
+    "sprite": "Vorstand Atlas"
   },
   {
     "id": 24,
@@ -519,32 +538,33 @@
   {
     "id": 26,
     "names": {
-      "de": "Sandra",
+      "de": "Clair",
       "en": "Clair",
-      "fr": "Sandra",
-      "es": "Débora",
+      "fr": "Clair",
+      "es": "Clair",
       "it": "Clair"
     },
     "location": {
-      "de": "Ebenholz City",
+      "de": "Blackthorn City",
       "en": "Blackthorn City",
-      "fr": "Ebènelle",
+      "fr": "Blackthorn City",
       "es": "Blackthorn City",
       "it": "Blackthorn City"
     },
     "badge": {
-      "de": "Aufstiegsorden",
+      "de": "Rising Badge",
       "en": "Rising Badge",
-      "fr": "Badge Lever",
-      "es": "Medalla Alzada",
-      "it": "Medaglia Ascesa"
+      "fr": "Rising Badge",
+      "es": "Rising Badge",
+      "it": "Rising Badge"
     },
-    "max_level": 50
+    "max_level": 50,
+    "sprite": "Sandra"
   },
   {
     "id": 27,
     "names": {
-      "de": "Kimono-Mädels",
+      "de": "Kimono Girls",
       "en": "Kimono Girls",
       "fr": "Kimono Girls",
       "es": "Kimono Girls",
@@ -558,7 +578,8 @@
       "it": "Ecruteak City Dance Hall"
     },
     "badge": null,
-    "max_level": 50
+    "max_level": 50,
+    "sprite": "Kimono-Mädels"
   },
   {
     "id": 28,
@@ -582,21 +603,22 @@
   {
     "id": 29,
     "names": {
-      "de": "Willi",
+      "de": "Will",
       "en": "Will",
-      "fr": "Clément",
-      "es": "Mento",
+      "fr": "Will",
+      "es": "Will",
       "it": "Will"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "sprite": "Willi"
   },
   {
     "id": 30,
@@ -608,11 +630,11 @@
       "it": "Koga"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 55
@@ -622,16 +644,16 @@
     "names": {
       "de": "Bruno",
       "en": "Bruno",
-      "fr": "Aldo",
+      "fr": "Bruno",
       "es": "Bruno",
       "it": "Bruno"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 55
@@ -639,88 +661,91 @@
   {
     "id": 32,
     "names": {
-      "de": "Melanie",
+      "de": "Karen",
       "en": "Karen",
-      "fr": "Marion",
+      "fr": "Karen",
       "es": "Karen",
       "it": "Karen"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "sprite": "Melanie"
   },
   {
     "id": 33,
     "names": {
-      "de": "Siegfried",
+      "de": "Lance",
       "en": "Lance",
-      "fr": "Peter",
+      "fr": "Lance",
       "es": "Lance",
       "it": "Lance"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 60
+    "max_level": 60,
+    "sprite": "Siegfried"
   },
   {
     "id": 34,
     "names": {
-      "de": "Major Bob",
+      "de": "Lt. Surge",
       "en": "Lt. Surge",
-      "fr": "Major Bob",
-      "es": "Teniente Surge",
+      "fr": "Lt. Surge",
+      "es": "Lt. Surge",
       "it": "Lt. Surge"
     },
     "location": {
-      "de": "Orania City",
+      "de": "Vermilion City",
       "en": "Vermilion City",
-      "fr": "Carmin sur Mer",
-      "es": "Ciudad Carmín",
-      "it": "Aranciopoli"
+      "fr": "Vermilion City",
+      "es": "Vermilion City",
+      "it": "Vermilion City"
     },
     "badge": {
-      "de": "Donnerorden",
+      "de": "Thunder Badge",
       "en": "Thunder Badge",
-      "fr": "Badge Foudre",
-      "es": "Medalla Trueno",
-      "it": "Medaglia Tuono"
+      "fr": "Thunder Badge",
+      "es": "Thunder Badge",
+      "it": "Thunder Badge"
     },
-    "max_level": 63
+    "max_level": 63,
+    "sprite": "Major Bob"
   },
   {
     "id": 35,
     "names": {
       "de": "Sabrina",
       "en": "Sabrina",
-      "fr": "Morgane",
+      "fr": "Sabrina",
       "es": "Sabrina",
       "it": "Sabrina"
     },
     "location": {
-      "de": "Saffronia City",
+      "de": "Saffron City",
       "en": "Saffron City",
-      "fr": "Safrania",
-      "es": "Ciudad Azafrán",
-      "it": "Zafferanopoli"
+      "fr": "Saffron City",
+      "es": "Saffron City",
+      "it": "Saffron City"
     },
     "badge": {
-      "de": "Sumpforden",
+      "de": "Marsh Badge",
       "en": "Marsh Badge",
-      "fr": "Badge Marais",
-      "es": "Medalla Pantano",
-      "it": "Medaglia Palude"
+      "fr": "Marsh Badge",
+      "es": "Marsh Badge",
+      "it": "Marsh Badge"
     },
     "max_level": 66
   },
@@ -734,95 +759,97 @@
       "it": "Erika"
     },
     "location": {
-      "de": "Prismania City",
+      "de": "Celadon City",
       "en": "Celadon City",
-      "fr": "Céladopole",
-      "es": "Ciudad Azulona",
-      "it": "Azzurropoli"
+      "fr": "Celadon City",
+      "es": "Celadon City",
+      "it": "Celadon City"
     },
     "badge": {
-      "de": "Farborden",
+      "de": "Rainbow Badge",
       "en": "Rainbow Badge",
-      "fr": "Badge Prisme",
-      "es": "Medalla Arcoíris",
-      "it": "Medaglia Arcobaleno"
+      "fr": "Rainbow Badge",
+      "es": "Rainbow Badge",
+      "it": "Rainbow Badge"
     },
     "max_level": 65
   },
   {
     "id": 37,
     "names": {
-      "de": "Janina",
+      "de": "Janine",
       "en": "Janine",
-      "fr": "Jeannine",
+      "fr": "Janine",
       "es": "Janine",
       "it": "Janine"
     },
     "location": {
-      "de": "Fuchsania City",
+      "de": "Fuschia City",
       "en": "Fuschia City",
       "fr": "Fuschia City",
       "es": "Fuschia City",
       "it": "Fuschia City"
     },
     "badge": {
-      "de": "Seelenorden",
+      "de": "Soul Badge",
       "en": "Soul Badge",
-      "fr": "Badge Âme",
-      "es": "Medalla Alma",
-      "it": "Medaglia Anima"
+      "fr": "Soul Badge",
+      "es": "Soul Badge",
+      "it": "Soul Badge"
     },
-    "max_level": 64
+    "max_level": 64,
+    "sprite": "Janina"
   },
   {
     "id": 38,
     "names": {
       "de": "Misty",
       "en": "Misty",
-      "fr": "Ondine",
+      "fr": "Misty",
       "es": "Misty",
       "it": "Misty"
     },
     "location": {
-      "de": "Azuria City",
+      "de": "Cerulean City",
       "en": "Cerulean City",
-      "fr": "Azuria",
-      "es": "Ciudad Celeste",
-      "it": "Celestopoli"
+      "fr": "Cerulean City",
+      "es": "Cerulean City",
+      "it": "Cerulean City"
     },
     "badge": {
-      "de": "Quellorden",
+      "de": "Cascade Badge",
       "en": "Cascade Badge",
-      "fr": "Badge Cascade",
-      "es": "Medalla Cascada",
-      "it": "Medaglia Cascata"
+      "fr": "Cascade Badge",
+      "es": "Cascade Badge",
+      "it": "Cascade Badge"
     },
     "max_level": 62
   },
   {
     "id": 39,
     "names": {
-      "de": "Rocko",
+      "de": "Brock",
       "en": "Brock",
-      "fr": "Pierre",
+      "fr": "Brock",
       "es": "Brock",
       "it": "Brock"
     },
     "location": {
-      "de": "Marmoria City",
+      "de": "Pewter City",
       "en": "Pewter City",
-      "fr": "Argenta",
-      "es": "Ciudad Plateada",
-      "it": "Plumbeopoli"
+      "fr": "Pewter City",
+      "es": "Pewter City",
+      "it": "Pewter City"
     },
     "badge": {
-      "de": "Felsorden",
+      "de": "Boulder Badge",
       "en": "Boulder Badge",
-      "fr": "Badge Roche",
-      "es": "Medalla Roca",
-      "it": "Medaglia Sasso"
+      "fr": "Boulder Badge",
+      "es": "Boulder Badge",
+      "it": "Boulder Badge"
     },
-    "max_level": 61
+    "max_level": 61,
+    "sprite": "Rocko"
   },
   {
     "id": 40,
@@ -846,61 +873,63 @@
   {
     "id": 41,
     "names": {
-      "de": "Pyro",
+      "de": "Blaine",
       "en": "Blaine",
-      "fr": "Auguste",
+      "fr": "Blaine",
       "es": "Blaine",
       "it": "Blaine"
     },
     "location": {
-      "de": "Zinnoberinsel",
+      "de": "Cinnabar Island",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
-      "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "fr": "Cinnabar Island",
+      "es": "Cinnabar Island",
+      "it": "Cinnabar Island"
     },
     "badge": {
-      "de": "Vulkanorden",
+      "de": "Volcano Badge",
       "en": "Volcano Badge",
-      "fr": "Badge Volcan",
-      "es": "Medalla Volcán",
-      "it": "Medaglia Vulcano"
+      "fr": "Volcano Badge",
+      "es": "Volcano Badge",
+      "it": "Volcano Badge"
     },
-    "max_level": 68
+    "max_level": 68,
+    "sprite": "Pyro"
   },
   {
     "id": 42,
     "names": {
-      "de": "Blau",
+      "de": "Blue",
       "en": "Blue",
       "fr": "Blue",
-      "es": "Azul",
-      "it": "Blu"
+      "es": "Blue",
+      "it": "Blue"
     },
     "location": {
-      "de": "Vertania City",
+      "de": "Viridian City",
       "en": "Viridian City",
-      "fr": "Jadielle",
-      "es": "Ciudad Verde",
-      "it": "Smeraldopoli"
+      "fr": "Viridian City",
+      "es": "Viridian City",
+      "it": "Viridian City"
     },
     "badge": {
-      "de": "Erdorden",
+      "de": "Earth Badge",
       "en": "Earth Badge",
-      "fr": "Badge Terre",
-      "es": "Medalla Tierra",
-      "it": "Medaglia Terra"
+      "fr": "Earth Badge",
+      "es": "Earth Badge",
+      "it": "Earth Badge"
     },
-    "max_level": 70
+    "max_level": 70,
+    "sprite": "Blau"
   },
   {
     "id": 43,
     "names": {
-      "de": "Rot",
+      "de": "Red",
       "en": "Red",
       "fr": "Red",
-      "es": "Rojo",
-      "it": "Rosso"
+      "es": "Red",
+      "it": "Red"
     },
     "location": {
       "de": "Champion",
@@ -910,6 +939,7 @@
       "it": "Champion"
     },
     "badge": null,
-    "max_level": 94
+    "max_level": 94,
+    "sprite": "Rot"
   }
 ]

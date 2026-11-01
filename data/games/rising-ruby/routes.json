@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Inicial",
+      "es": "Starter",
       "it": "Starter"
     },
     "type": "static"
@@ -16,8 +16,8 @@
       "de": "Route 101",
       "en": "Route 101",
       "fr": "Route 101",
-      "es": "Ruta 101",
-      "it": "Percorso 101"
+      "es": "Route 101",
+      "it": "Route 101"
     },
     "type": "route"
   },
@@ -27,8 +27,8 @@
       "de": "Route 102",
       "en": "Route 102",
       "fr": "Route 102",
-      "es": "Ruta 102",
-      "it": "Percorso 102"
+      "es": "Route 102",
+      "it": "Route 102"
     },
     "type": "route"
   },
@@ -38,19 +38,19 @@
       "de": "Route 103",
       "en": "Route 103",
       "fr": "Route 103",
-      "es": "Ruta 103",
-      "it": "Percorso 103"
+      "es": "Route 103",
+      "it": "Route 103"
     },
     "type": "route"
   },
   {
     "id": 5,
     "names": {
-      "de": "Blütenburg City",
+      "de": "Petalburg City",
       "en": "Petalburg City",
-      "fr": "Clémenti-Ville",
-      "es": "Ciudad Petalia",
-      "it": "Petalipoli"
+      "fr": "Petalburg City",
+      "es": "Petalburg City",
+      "it": "Petalburg City"
     },
     "type": "route"
   },
@@ -60,30 +60,30 @@
       "de": "Route 104",
       "en": "Route 104",
       "fr": "Route 104",
-      "es": "Ruta 104",
-      "it": "Percorso 104"
+      "es": "Route 104",
+      "it": "Route 104"
     },
     "type": "route"
   },
   {
     "id": 7,
     "names": {
-      "de": "Blütenburgwald",
+      "de": "Petalburg Woods",
       "en": "Petalburg Woods",
-      "fr": "Bois Clémenti",
-      "es": "Bosque Petalia",
-      "it": "Bosco Petalo"
+      "fr": "Petalburg Woods",
+      "es": "Petalburg Woods",
+      "it": "Petalburg Woods"
     },
     "type": "route"
   },
   {
     "id": 8,
     "names": {
-      "de": "Metarost City",
+      "de": "Rustboro City",
       "en": "Rustboro City",
-      "fr": "Mérouville",
-      "es": "Ciudad Férrica",
-      "it": "Ferrugipoli"
+      "fr": "Rustboro City",
+      "es": "Rustboro City",
+      "it": "Rustboro City"
     },
     "type": "route"
   },
@@ -92,9 +92,9 @@
     "names": {
       "de": "Route 105",
       "en": "Route 105",
-      "fr": "Chenal 105",
-      "es": "Ruta 105",
-      "it": "Percorso 105"
+      "fr": "Route 105",
+      "es": "Route 105",
+      "it": "Route 105"
     },
     "type": "route"
   },
@@ -104,30 +104,30 @@
       "de": "Route 116",
       "en": "Route 116",
       "fr": "Route 116",
-      "es": "Ruta 116",
-      "it": "Percorso 116"
+      "es": "Route 116",
+      "it": "Route 116"
     },
     "type": "route"
   },
   {
     "id": 11,
     "names": {
-      "de": "Metarost-Tunnel",
+      "de": "Rusturf Tunnel",
       "en": "Rusturf Tunnel",
-      "fr": "Tunnel Mérazon",
-      "es": "Túnel Fervergal",
-      "it": "Tunnel Menferro"
+      "fr": "Rusturf Tunnel",
+      "es": "Rusturf Tunnel",
+      "it": "Rusturf Tunnel"
     },
     "type": "route"
   },
   {
     "id": 12,
     "names": {
-      "de": "Faustauhaven",
+      "de": "Dewford Town",
       "en": "Dewford Town",
-      "fr": "Myokara",
-      "es": "Pueblo Azuliza",
-      "it": "Bluruvia"
+      "fr": "Dewford Town",
+      "es": "Dewford Town",
+      "it": "Dewford Town"
     },
     "type": "route"
   },
@@ -136,20 +136,20 @@
     "names": {
       "de": "Route 106",
       "en": "Route 106",
-      "fr": "Chenal 106",
-      "es": "Ruta 106",
-      "it": "Percorso 106"
+      "fr": "Route 106",
+      "es": "Route 106",
+      "it": "Route 106"
     },
     "type": "route"
   },
   {
     "id": 14,
     "names": {
-      "de": "Granithöhle",
+      "de": "Granite Cave",
       "en": "Granite Cave",
-      "fr": "Grotte Granite",
-      "es": "Cueva Granito",
-      "it": "Grotta Pietrosa"
+      "fr": "Granite Cave",
+      "es": "Granite Cave",
+      "it": "Granite Cave"
     },
     "type": "route"
   },
@@ -158,20 +158,20 @@
     "names": {
       "de": "Route 107",
       "en": "Route 107",
-      "fr": "Chenal 107",
-      "es": "Ruta 107",
-      "it": "Percorso 107"
+      "fr": "Route 107",
+      "es": "Route 107",
+      "it": "Route 107"
     },
     "type": "route"
   },
   {
     "id": 16,
     "names": {
-      "de": "Graphitport City",
+      "de": "Slateport City",
       "en": "Slateport City",
-      "fr": "Poivressel",
-      "es": "Ciudad Portual",
-      "it": "Porto Selcepoli"
+      "fr": "Slateport City",
+      "es": "Slateport City",
+      "it": "Slateport City"
     },
     "type": "route"
   },
@@ -181,19 +181,19 @@
       "de": "Route 110",
       "en": "Route 110",
       "fr": "Route 110",
-      "es": "Ruta 110",
-      "it": "Percorso 110"
+      "es": "Route 110",
+      "it": "Route 110"
     },
     "type": "route"
   },
   {
     "id": 18,
     "names": {
-      "de": "Neu Malvenfroh",
+      "de": "New Mauville",
       "en": "New Mauville",
-      "fr": "New Lavandia",
-      "es": "Malvalanova",
-      "it": "Ciclanova"
+      "fr": "New Mauville",
+      "es": "New Mauville",
+      "it": "New Mauville"
     },
     "type": "route"
   },
@@ -203,8 +203,8 @@
       "de": "Route 117",
       "en": "Route 117",
       "fr": "Route 117",
-      "es": "Ruta 117",
-      "it": "Percorso 117"
+      "es": "Route 117",
+      "it": "Route 117"
     },
     "type": "route"
   },
@@ -225,8 +225,8 @@
       "de": "Route 111",
       "en": "Route 111",
       "fr": "Route 111",
-      "es": "Ruta 111",
-      "it": "Percorso 111"
+      "es": "Route 111",
+      "it": "Route 111"
     },
     "type": "route"
   },
@@ -236,19 +236,19 @@
       "de": "Route 112",
       "en": "Route 112",
       "fr": "Route 112",
-      "es": "Ruta 112",
-      "it": "Percorso 112"
+      "es": "Route 112",
+      "it": "Route 112"
     },
     "type": "route"
   },
   {
     "id": 23,
     "names": {
-      "de": "Feuriger Pfad",
+      "de": "Fiery Path",
       "en": "Fiery Path",
-      "fr": "Chemin Ardent",
-      "es": "Senda Ígnea",
-      "it": "Cammino Ardente"
+      "fr": "Fiery Path",
+      "es": "Fiery Path",
+      "it": "Fiery Path"
     },
     "type": "route"
   },
@@ -258,8 +258,8 @@
       "de": "Route 113",
       "en": "Route 113",
       "fr": "Route 113",
-      "es": "Ruta 113",
-      "it": "Percorso 113"
+      "es": "Route 113",
+      "it": "Route 113"
     },
     "type": "route"
   },
@@ -279,7 +279,7 @@
     "names": {
       "de": "Route 114",
       "en": "Route 114",
-      "fr": "Fossile Tour Mirage",
+      "fr": "Route 114",
       "es": "Route 114",
       "it": "Route 114"
     },
@@ -288,11 +288,11 @@
   {
     "id": 27,
     "names": {
-      "de": "Meteorfälle",
+      "de": "Meteor Falls",
       "en": "Meteor Falls",
-      "fr": "Site Météore",
-      "es": "Cascada Meteoro",
-      "it": "Cascate Meteora"
+      "fr": "Meteor Falls",
+      "es": "Meteor Falls",
+      "it": "Meteor Falls"
     },
     "type": "route"
   },
@@ -302,30 +302,30 @@
       "de": "Route 115",
       "en": "Route 115",
       "fr": "Route 115",
-      "es": "Ruta 115",
-      "it": "Percorso 115"
+      "es": "Route 115",
+      "it": "Route 115"
     },
     "type": "route"
   },
   {
     "id": 29,
     "names": {
-      "de": "Steilpass",
+      "de": "Jagged Pass",
       "en": "Jagged Pass",
-      "fr": "Sentier Sinuroc",
-      "es": "Desfiladero",
-      "it": "Passo Selvaggio"
+      "fr": "Jagged Pass",
+      "es": "Jagged Pass",
+      "it": "Jagged Pass"
     },
     "type": "route"
   },
   {
     "id": 30,
     "names": {
-      "de": "Bad Lavastadt",
+      "de": "Lavaridge Town",
       "en": "Lavaridge Town",
-      "fr": "Vermilava",
-      "es": "Pueblo Lavacalda",
-      "it": "Cuordilava"
+      "fr": "Lavaridge Town",
+      "es": "Lavaridge Town",
+      "it": "Lavaridge Town"
     },
     "type": "route"
   },
@@ -335,8 +335,8 @@
       "de": "Route 118",
       "en": "Route 118",
       "fr": "Route 118",
-      "es": "Ruta 118",
-      "it": "Percorso 118"
+      "es": "Route 118",
+      "it": "Route 118"
     },
     "type": "route"
   },
@@ -357,8 +357,8 @@
       "de": "Route 119",
       "en": "Route 119",
       "fr": "Route 119",
-      "es": "Ruta 119",
-      "it": "Percorso 119"
+      "es": "Route 119",
+      "it": "Route 119"
     },
     "type": "route"
   },
@@ -378,9 +378,9 @@
     "names": {
       "de": "Route 120",
       "en": "Route 120",
-      "fr": "Œuf d'Okéoké Vermilava",
-      "es": "Huevo de Wynaut Pueblo Lavacalda",
-      "it": "Uovo di Wynaut Cuordilava"
+      "fr": "Route 120",
+      "es": "Route 120",
+      "it": "Route 120"
     },
     "type": "route"
   },
@@ -400,8 +400,8 @@
     "names": {
       "de": "Route 121",
       "en": "Route 121",
-      "fr": "Morphéo Institut Météo",
-      "es": "Castform Instituto Meteorológico",
+      "fr": "Route 121",
+      "es": "Route 121",
       "it": "Route 121"
     },
     "type": "route"
@@ -411,20 +411,20 @@
     "names": {
       "de": "Route 122",
       "en": "Route 122",
-      "fr": "Chenal 122",
-      "es": "Ruta 122",
-      "it": "Percorso 122"
+      "fr": "Route 122",
+      "es": "Route 122",
+      "it": "Route 122"
     },
     "type": "route"
   },
   {
     "id": 39,
     "names": {
-      "de": "Pyroberg",
+      "de": "Mt. Pyre",
       "en": "Mt. Pyre",
-      "fr": "Rayquaza Pilier Céleste",
-      "es": "Rayquaza Pilar Celeste",
-      "it": "Rayquaza Torre dei Cieli"
+      "fr": "Mt. Pyre",
+      "es": "Mt. Pyre",
+      "it": "Mt. Pyre"
     },
     "type": "route"
   },
@@ -433,31 +433,31 @@
     "names": {
       "de": "Route 123",
       "en": "Route 123",
-      "fr": "Kecleon Route 120",
-      "es": "Kecleon Ruta 120",
-      "it": "Kecleon Percorso 120"
+      "fr": "Route 123",
+      "es": "Route 123",
+      "it": "Route 123"
     },
     "type": "route"
   },
   {
     "id": 41,
     "names": {
-      "de": "Safari-Zone",
+      "de": "Safari Zone",
       "en": "Safari Zone",
-      "fr": "Parc Safari",
-      "es": "Zona Safari",
-      "it": "Zona Safari"
+      "fr": "Safari Zone",
+      "es": "Safari Zone",
+      "it": "Safari Zone"
     },
     "type": "route"
   },
   {
     "id": 42,
     "names": {
-      "de": "Seegrasulb City",
+      "de": "Lilycove City",
       "en": "Lilycove City",
-      "fr": "Registeel Tombeau Antique",
-      "es": "Registeel Tumba Antigua",
-      "it": "Registeel Tomba Antica"
+      "fr": "Lilycove City",
+      "es": "Lilycove City",
+      "it": "Lilycove City"
     },
     "type": "route"
   },
@@ -477,20 +477,20 @@
     "names": {
       "de": "Route 124",
       "en": "Route 124",
-      "fr": "Chenal 124",
-      "es": "Ruta 124",
-      "it": "Percorso 124"
+      "fr": "Route 124",
+      "es": "Route 124",
+      "it": "Route 124"
     },
     "type": "route"
   },
   {
     "id": 45,
     "names": {
-      "de": "Moosbach City",
+      "de": "Mossdeep City",
       "en": "Mossdeep City",
-      "fr": "Terhal Algatia",
-      "es": "Beldum Ciudad Algaria",
-      "it": "Beldum Verdeazzupoli"
+      "fr": "Mossdeep City",
+      "es": "Mossdeep City",
+      "it": "Mossdeep City"
     },
     "type": "route"
   },
@@ -499,18 +499,18 @@
     "names": {
       "de": "Route 125",
       "en": "Route 125",
-      "fr": "Chenal 125",
-      "es": "Ruta 125",
-      "it": "Percorso 125"
+      "fr": "Route 125",
+      "es": "Route 125",
+      "it": "Route 125"
     },
     "type": "route"
   },
   {
     "id": 47,
     "names": {
-      "de": "Küstenhöhle",
+      "de": "Shoal Cave",
       "en": "Shoal Cave",
-      "fr": "Kyogre Grotte Marine",
+      "fr": "Shoal Cave",
       "es": "Shoal Cave",
       "it": "Shoal Cave"
     },
@@ -521,9 +521,9 @@
     "names": {
       "de": "Route 127",
       "en": "Route 127",
-      "fr": "Chenal 127",
-      "es": "Ruta 127",
-      "it": "Percorso 127"
+      "fr": "Route 127",
+      "es": "Route 127",
+      "it": "Route 127"
     },
     "type": "route"
   },
@@ -532,18 +532,18 @@
     "names": {
       "de": "Route 128",
       "en": "Route 128",
-      "fr": "Chenal 128",
-      "es": "Ruta 128",
-      "it": "Percorso 128"
+      "fr": "Route 128",
+      "es": "Route 128",
+      "it": "Route 128"
     },
     "type": "route"
   },
   {
     "id": 50,
     "names": {
-      "de": "Tiefseehöhle",
+      "de": "Seafloor Cavern",
       "en": "Seafloor Cavern",
-      "fr": "Groudon Grotte Terra",
+      "fr": "Seafloor Cavern",
       "es": "Seafloor Cavern",
       "it": "Seafloor Cavern"
     },
@@ -554,31 +554,31 @@
     "names": {
       "de": "Route 126",
       "en": "Route 126",
-      "fr": "Chenal 126",
-      "es": "Ruta 126",
-      "it": "Percorso 126"
+      "fr": "Route 126",
+      "es": "Route 126",
+      "it": "Route 126"
     },
     "type": "route"
   },
   {
     "id": 52,
     "names": {
-      "de": "Xeneroville",
+      "de": "Sootopolis City",
       "en": "Sootopolis City",
-      "fr": "Atalanopolis",
-      "es": "Arrecípolis",
-      "it": "Ceneride"
+      "fr": "Sootopolis City",
+      "es": "Sootopolis City",
+      "it": "Sootopolis City"
     },
     "type": "route"
   },
   {
     "id": 53,
     "names": {
-      "de": "Urzeithöhle",
+      "de": "Cave of Origin",
       "en": "Cave of Origin",
-      "fr": "Grotte Origine",
-      "es": "Cueva Ancestral",
-      "it": "Grotta dei Tempi"
+      "fr": "Cave of Origin",
+      "es": "Cave of Origin",
+      "it": "Cave of Origin"
     },
     "type": "route"
   },
@@ -598,9 +598,9 @@
     "names": {
       "de": "Route 129",
       "en": "Route 129",
-      "fr": "Chenal 129",
-      "es": "Ruta 129",
-      "it": "Percorso 129"
+      "fr": "Route 129",
+      "es": "Route 129",
+      "it": "Route 129"
     },
     "type": "route"
   },
@@ -609,9 +609,9 @@
     "names": {
       "de": "Route 130",
       "en": "Route 130",
-      "fr": "Électrode Repaire Aqua",
-      "es": "Electrode Guarida Aqua",
-      "it": "Electrode Covo Aqua"
+      "fr": "Route 130",
+      "es": "Route 130",
+      "it": "Route 130"
     },
     "type": "route"
   },
@@ -620,20 +620,20 @@
     "names": {
       "de": "Route 131",
       "en": "Route 131",
-      "fr": "Chenal 131",
-      "es": "Ruta 131",
-      "it": "Percorso 131"
+      "fr": "Route 131",
+      "es": "Route 131",
+      "it": "Route 131"
     },
     "type": "route"
   },
   {
     "id": 58,
     "names": {
-      "de": "Himmelturm",
+      "de": "Sky Pillar",
       "en": "Sky Pillar",
-      "fr": "Pilier Céleste",
-      "es": "Pilar Celeste",
-      "it": "Torre dei Cieli"
+      "fr": "Sky Pillar",
+      "es": "Sky Pillar",
+      "it": "Sky Pillar"
     },
     "type": "route"
   },
@@ -651,18 +651,18 @@
   {
     "id": 60,
     "names": {
-      "de": "Floßbrunn",
+      "de": "Pacifidlog Town",
       "en": "Pacifidlog Town",
-      "fr": "Pacifiville",
-      "es": "Pueblo Oromar",
-      "it": "Orocea"
+      "fr": "Pacifidlog Town",
+      "es": "Pacifidlog Town",
+      "it": "Pacifidlog Town"
     },
     "type": "route"
   },
   {
     "id": 61,
     "names": {
-      "de": "Wundereiland",
+      "de": "Mirage Island",
       "en": "Mirage Island",
       "fr": "Mirage Island",
       "es": "Mirage Island",
@@ -675,9 +675,9 @@
     "names": {
       "de": "Route 108",
       "en": "Route 108",
-      "fr": "Chenal 108",
-      "es": "Ruta 108",
-      "it": "Percorso 108"
+      "fr": "Route 108",
+      "es": "Route 108",
+      "it": "Route 108"
     },
     "type": "route"
   },
@@ -697,9 +697,9 @@
     "names": {
       "de": "Route 109",
       "en": "Route 109",
-      "fr": "Chenal 109",
-      "es": "Ruta 109",
-      "it": "Percorso 109"
+      "fr": "Route 109",
+      "es": "Route 109",
+      "it": "Route 109"
     },
     "type": "route"
   },
@@ -708,9 +708,9 @@
     "names": {
       "de": "Route 132",
       "en": "Route 132",
-      "fr": "Chenal 132",
-      "es": "Ruta 132",
-      "it": "Percorso 132"
+      "fr": "Route 132",
+      "es": "Route 132",
+      "it": "Route 132"
     },
     "type": "route"
   },
@@ -719,9 +719,9 @@
     "names": {
       "de": "Route 133",
       "en": "Route 133",
-      "fr": "Chenal 133",
-      "es": "Ruta 133",
-      "it": "Percorso 133"
+      "fr": "Route 133",
+      "es": "Route 133",
+      "it": "Route 133"
     },
     "type": "route"
   },
@@ -730,31 +730,31 @@
     "names": {
       "de": "Route 134",
       "en": "Route 134",
-      "fr": "Chenal 134",
-      "es": "Ruta 134",
-      "it": "Percorso 134"
+      "fr": "Route 134",
+      "es": "Route 134",
+      "it": "Route 134"
     },
     "type": "route"
   },
   {
     "id": 68,
     "names": {
-      "de": "Prachtpolis City",
+      "de": "Ever Grande City",
       "en": "Ever Grande City",
-      "fr": "Éternara",
-      "es": "Ciudad Colosalia",
-      "it": "Iridopoli"
+      "fr": "Ever Grande City",
+      "es": "Ever Grande City",
+      "it": "Ever Grande City"
     },
     "type": "route"
   },
   {
     "id": 69,
     "names": {
-      "de": "Siegesstraße",
+      "de": "Victory Road",
       "en": "Victory Road",
-      "fr": "Route Victoire",
-      "es": "Calle Victoria",
-      "it": "Via Vittoria"
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
     },
     "type": "route"
   },
@@ -772,7 +772,7 @@
   {
     "id": 71,
     "names": {
-      "de": "MS Tide",
+      "de": "S.S. Tidal",
       "en": "S.S. Tidal",
       "fr": "S.S. Tidal",
       "es": "S.S. Tidal",

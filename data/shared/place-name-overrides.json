@@ -1,0 +1,560 @@
+{
+  "source": "Curated: the official names in each part come from PokéWiki (sources per entry) and data/pokemon.json; generic words (Round, Exit, ...) are plain translations, marked in note. Labels from nuzlocke.app that are not one place.",
+  "entries": {
+    "Acuity Cavern": {
+      "de": "Stärkegrotte",
+      "fr": "Caverne Savoir",
+      "es": "Caverna Agudeza",
+      "it": "Grotta Arguzia",
+      "sources": [
+        "Acuity Cavern"
+      ]
+    },
+    "Aether house": {
+      "de": "Æther-Haus",
+      "fr": "Maison Æther",
+      "es": "Casa Æther",
+      "it": "Casa Æther",
+      "sources": [
+        "Route 15 (Alola)",
+        "Æther-Paradies"
+      ],
+      "note": "German \"Æther-Haus\" verified; \"Æther\" spelling verified via Paradis/Paraíso Æther; \"House\" in fr/es/it is a plain translation."
+    },
+    "Aether House": {
+      "de": "Æther-Haus",
+      "fr": "Maison Æther",
+      "es": "Casa Æther",
+      "it": "Casa Æther",
+      "sources": [
+        "Route 15 (Alola)",
+        "Æther-Paradies"
+      ],
+      "note": "German \"Æther-Haus\" verified; \"Æther\" spelling verified via Paradis/Paraíso Æther; \"House\" in fr/es/it is a plain translation."
+    },
+    "Azelf Valor Cavern": {
+      "de": "Tobutz Kühnheitsgrotte",
+      "fr": "Créfadet Caverne Courage",
+      "es": "Azelf Caverna Valor",
+      "it": "Azelf Grotta Valore",
+      "sources": [
+        "Valor Cavern",
+        "pokemon.json"
+      ]
+    },
+    "Battle Court": {
+      "de": "Kampffeld",
+      "fr": "Terrain de combat",
+      "es": "Pista de combate",
+      "it": "Campo di battaglia",
+      "sources": [],
+      "note": "Plain translation; no official name found for this place."
+    },
+    "Command Center": {
+      "de": "Kommandozentrale",
+      "fr": "Centre de commandement",
+      "es": "Centro de mando",
+      "it": "Centro di comando",
+      "sources": [],
+      "note": "Plain translation of a generic location description; no official name found."
+    },
+    "Control Room": {
+      "de": "Kontrollraum",
+      "fr": "Salle de contrôle",
+      "es": "Sala de control",
+      "it": "Sala di controllo",
+      "sources": [],
+      "note": "Plain translation of a generic location description; no official name found."
+    },
+    "Coumarine Pokémon Center": {
+      "de": "Tempera City, Pokémon-Center",
+      "fr": "Port Tempères, Centre Pokémon",
+      "es": "Ciudad Témpera, Centro Pokémon",
+      "it": "Temperopoli, Centro Pokémon",
+      "sources": [
+        "Tempera City",
+        "Pokémon-Center"
+      ]
+    },
+    "Couriway Town Sycamore Battle": {
+      "de": "Mosaia, Kampf gegen Professor Platan",
+      "fr": "Mozheim, combat contre le Professeur Platane",
+      "es": "Pueblo Mosaico, combate contra el Profesor Ciprés",
+      "it": "Ponte Mosaico, battaglia contro il Professor Platan",
+      "sources": [
+        "Mosaia",
+        "Professor Sycamore"
+      ],
+      "note": "Town and professor names verified; \"Battle\" translated plainly."
+    },
+    "Driftveil Tournament Round 1": {
+      "de": "Marea-Turnier, Runde 1",
+      "fr": "Tournoi de Port Yoneuve, manche 1",
+      "es": "Torneo de Ciudad Fayenza, ronda 1",
+      "it": "Torneo di Libecciopoli, turno 1",
+      "sources": [
+        "Pokémon World Tournament",
+        "Marea City"
+      ],
+      "note": "German \"Marea-Turnier\" is the official name; French/Spanish/Italian tournament name not found, built as \"tournament of <verified city name>\" (plain translation)."
+    },
+    "Driftveil Tournament Round 2": {
+      "de": "Marea-Turnier, Runde 2",
+      "fr": "Tournoi de Port Yoneuve, manche 2",
+      "es": "Torneo de Ciudad Fayenza, ronda 2",
+      "it": "Torneo di Libecciopoli, turno 2",
+      "sources": [
+        "Pokémon World Tournament",
+        "Marea City"
+      ],
+      "note": "German \"Marea-Turnier\" is the official name; French/Spanish/Italian tournament name not found, built as \"tournament of <verified city name>\" (plain translation)."
+    },
+    "Driftveil Tournament Round 3": {
+      "de": "Marea-Turnier, Runde 3",
+      "fr": "Tournoi de Port Yoneuve, manche 3",
+      "es": "Torneo de Ciudad Fayenza, ronda 3",
+      "it": "Torneo di Libecciopoli, turno 3",
+      "sources": [
+        "Pokémon World Tournament",
+        "Marea City"
+      ],
+      "note": "German \"Marea-Turnier\" is the official name; French/Spanish/Italian tournament name not found, built as \"tournament of <verified city name>\" (plain translation)."
+    },
+    "Ecruteak City Dance Hall": {
+      "de": "Teak City Tanztheater",
+      "fr": "Rosalia, théâtre de danse",
+      "es": "Ciudad Iris, teatro de baile",
+      "it": "Amarantopoli, teatro della danza",
+      "sources": [
+        "Teak City",
+        "Tanztheater"
+      ],
+      "note": "City names and German building name (Tanztheater) verified; French/Spanish/Italian building name is a plain translation, official wording not found on PokéWiki."
+    },
+    "Edge of space": {
+      "de": "Rand des Weltalls",
+      "fr": "Bord de l'espace",
+      "es": "Borde del espacio",
+      "it": "Margine dello spazio",
+      "sources": [],
+      "note": "Plain translation; no official name found."
+    },
+    "Exit to Ilex Forest": {
+      "de": "Ausgang zum Steineichenwald",
+      "fr": "Sortie vers le Bois aux Chênes",
+      "es": "Salida al Encinar",
+      "it": "Uscita per il Bosco di Lecci",
+      "sources": [
+        "Steineichenwald"
+      ],
+      "note": "\"Exit\" translated plainly."
+    },
+    "Fossil Restoration Center": {
+      "de": "Fossilienlabor",
+      "fr": "Centre de restauration de fossiles",
+      "es": "Centro de restauración de fósiles",
+      "it": "Centro di ripristino dei fossili",
+      "sources": [
+        "Fossilienlabor (Route 8 (Alola))"
+      ],
+      "note": "German \"Fossilienlabor\" is the PokéWiki name of this place; French/Spanish/Italian are plain translations (official wording not found)."
+    },
+    "Galar Mine Exit": {
+      "de": "Ausgang der Galar-Mine 1",
+      "fr": "Sortie de la Mine de Galar",
+      "es": "Salida de la Mina de Galar",
+      "it": "Uscita della Miniera di Galar",
+      "sources": [
+        "Galar-Mine 1"
+      ],
+      "note": "\"Exit\" translated plainly."
+    },
+    "Galar Mine No.2 Exit": {
+      "de": "Ausgang der Galar-Mine 2",
+      "fr": "Sortie de la Mine de Galar n° 2",
+      "es": "Salida de la Mina de Galar n.º 2",
+      "it": "Uscita della Miniera 2",
+      "sources": [
+        "Galar-Mine 2"
+      ],
+      "note": "\"Exit\" translated plainly."
+    },
+    "Giratina (Altered Forme) Turnback Cave": {
+      "de": "Giratina (Wandelform) Höhle der Umkehr",
+      "fr": "Giratina (Forme Alternative) Grotte Retour",
+      "es": "Giratina (Forma Modificada) Cueva Retorno",
+      "it": "Giratina (Forma Alterata) Grotta Ritorno",
+      "sources": [
+        "Höhle der Umkehr (Sinnoh)",
+        "pokemon.json"
+      ],
+      "note": "French: \"Grotte Retour\" (D/P/Pt), \"Grotte du Retour\" in BDSP."
+    },
+    "Giratina (Origin Forme) Distortion World": {
+      "de": "Giratina (Urform) Zerrwelt",
+      "fr": "Giratina (Forme Originelle) Monde Distorsion",
+      "es": "Giratina (Forma Origen) Mundo Distorsión",
+      "it": "Giratina (Forma Originale) Mondo Distorto",
+      "sources": [
+        "Zerrwelt",
+        "Giratina",
+        "pokemon.json"
+      ],
+      "note": "French \"Monde Distorsion\" from PokéWiki langlinks (the template on the page spells it Distortion)."
+    },
+    "Hala's Grand Trial": {
+      "de": "Halas Große Prüfung",
+      "fr": "Grande Épreuve de Pectorius",
+      "es": "Gran Prueba de Kaudan",
+      "it": "Grande Prova di Hala",
+      "sources": [
+        "Hala",
+        "Inselwanderschaft"
+      ],
+      "note": "Hala names verified; German \"Große Prüfung\" verified; French/Spanish/Italian \"Grand Trial\" wording is an unverified plain translation."
+    },
+    "Hau'oli City Trial Captain": {
+      "de": "Hauholi City, Captain",
+      "fr": "Ekaeka, Capitaine d'Épreuve",
+      "es": "Ciudad Hauoli, Capitán",
+      "it": "Hau'oli, Capitano",
+      "sources": [
+        "Hauholi City",
+        "Captains"
+      ]
+    },
+    "Hau'oli Outskirts": {
+      "de": "Hauholi-Stadtrand",
+      "fr": "Abords d'Ekaeka",
+      "es": "Afueras de Hauoli",
+      "it": "Periferia di Hau'oli",
+      "sources": [
+        "Hau'oli Outskirts (Hauholi-Stadtrand)"
+      ]
+    },
+    "Hop's House": {
+      "de": "Hops Haus",
+      "fr": "Maison de Nabil",
+      "es": "Casa de Paul",
+      "it": "Casa di Hop",
+      "sources": [
+        "Hop"
+      ],
+      "note": "Hop is Nabil in French and Paul in Spanish (verified); \"House\" translated plainly."
+    },
+    "Iki Town Festival": {
+      "de": "Lili’i, Fest",
+      "fr": "Lili’i, fête",
+      "es": "Pueblo Lilii, festival",
+      "it": "Lili, festa",
+      "sources": [
+        "Lili’i"
+      ],
+      "note": "Town verified; \"Festival\" translated plainly."
+    },
+    "Kyurem's Location": {
+      "de": "Kyurems Aufenthaltsort",
+      "fr": "Emplacement de Kyurem",
+      "es": "Ubicación de Kyurem",
+      "it": "Posizione di Kyurem",
+      "sources": [
+        "pokemon.json"
+      ],
+      "note": "Plain translation (descriptive label); Kyurem is the same in all languages."
+    },
+    "Malie City Kantonian Gym": {
+      "de": "Malihe City, Kanto-Arena",
+      "fr": "Malié, Arène de Kanto",
+      "es": "Ciudad Malíe, Gimnasio de Kanto",
+      "it": "Malie, Palestra di Kanto",
+      "sources": [
+        "Malihe City",
+        "Kanto-Arenakämpfer"
+      ]
+    },
+    "Monkey Gift, Dreamyard": {
+      "de": "Affen-Geschenk, Traumbrache",
+      "fr": "Cadeau du singe, Vestiges du Rêve",
+      "es": "Regalo del mono, Solar de los Sueños",
+      "it": "Dono della scimmia, Cantiere dei Sogni",
+      "sources": [
+        "Traumbrache"
+      ],
+      "note": "Dreamyard verified; \"Monkey Gift\" translated plainly."
+    },
+    "Mt. Pyre Summit": {
+      "de": "Pyroberg-Gipfel",
+      "fr": "Sommet du Mont Mémoria",
+      "es": "Cima del Monte Pírico",
+      "it": "Vetta del Monte Pira",
+      "sources": [
+        "Pyroberg"
+      ],
+      "note": "Mountain verified; \"Summit\" translated plainly."
+    },
+    "Nimbasa Subway": {
+      "de": "Rayono City, Kampfmetro",
+      "fr": "Méanville, Métro de Combat",
+      "es": "Ciudad Mayólica, Metro Batalla",
+      "it": "Sciroccopoli, Metrò Lotta",
+      "sources": [
+        "Kampfmetro",
+        "Rayono City"
+      ],
+      "note": "Assumes the label means the Battle Subway in Nimbasa City (Black 2/White 2); names verified."
+    },
+    "Old Amber Pewter City": {
+      "de": "Altbernstein Marmoria City",
+      "fr": "Vieil Ambre Argenta",
+      "es": "Ámbar Viejo Ciudad Plateada",
+      "it": "Ambra antica Plumbeopoli",
+      "sources": [
+        "Old Amber",
+        "Marmoria City"
+      ],
+      "note": "Item name (Old Amber) and city verified; comma added for readability."
+    },
+    "Outer Spikemouth": {
+      "de": "Spikeford-Ortsrand",
+      "fr": "Abords de Smashings",
+      "es": "Afueras de Crampón",
+      "it": "Periferia di Spikeville",
+      "sources": [
+        "Outer Spikemuth"
+      ],
+      "note": "Italian official name is abbreviated \"Perif. di Spikeville\"; written out in full."
+    },
+    "Routes 219": {
+      "de": "Route 219",
+      "fr": "Route 219",
+      "es": "Ruta 219",
+      "it": "Percorso 219",
+      "sources": [
+        "Route 219"
+      ],
+      "note": "English label is a typo for \"Route 219\"; translated as Route 219. Route/Ruta/Percorso verified from other route pages."
+    },
+    "Ruin Maniac's Cave": {
+      "de": "Maniac-Höhle",
+      "fr": "Grotte Ruineman.",
+      "es": "Mina Ruinamaníaco",
+      "it": "Grotta Rovine",
+      "sources": [
+        "Ruin Maniac Cave (Maniac-Höhle)"
+      ],
+      "note": "Official French name is the abbreviated \"Grotte Ruineman.\" (BDSP: \"Grotte du Ruinophile\").",
+      "packs": {
+        "brilliant-diamond-shining-pearl": {
+          "fr": "Grotte du Ruinophile"
+        }
+      }
+    },
+    "Ruin Maniac's Tunnel": {
+      "de": "Maniac-Tunnel",
+      "fr": "Tunnel Ruineman.",
+      "es": "Túnel Maníaco",
+      "it": "Tunnel Rovine",
+      "sources": [
+        "Ruin Maniac Cave (Maniac-Tunnel)"
+      ],
+      "note": "Official French name is the abbreviated \"Tunnel Ruineman.\"."
+    },
+    "Slippery Slope Ambush": {
+      "de": "Schlitterfeld, Hinterhalt",
+      "fr": "Plateau Beau-Gant, embuscade",
+      "es": "Campo Deslizante, emboscada",
+      "it": "Nevi Primoscivolo, imboscata",
+      "sources": [
+        "Schlitterfeld"
+      ],
+      "note": "Place verified; \"Ambush\" translated plainly."
+    },
+    "Soaring": {
+      "de": "Flug",
+      "fr": "Vol",
+      "es": "Vuelo",
+      "it": "Volo",
+      "sources": [],
+      "note": "Plain translation (flying with Latios/Latias in ORAS); no official name for this segment found."
+    },
+    "Spikemouth Gym": {
+      "de": "Spikeford-Arena",
+      "fr": "Arène de Smashings",
+      "es": "Gimnasio de Pueblo Crampón",
+      "it": "Palestra di Spikeville",
+      "sources": [
+        "Spikeford"
+      ],
+      "note": "German \"Spikeford-Arena\" is attested; the others are built from the verified town name with the language's word for gym (plain construction)."
+    },
+    "Stow-on-Side Monument": {
+      "de": "Denkmal von Passbeck",
+      "fr": "Monument d'Old Chister",
+      "es": "Monumento de Pueblo Ladera",
+      "it": "Monumento di Latermore",
+      "sources": [
+        "Passbeck"
+      ],
+      "note": "Town verified; \"Monument\" translated plainly."
+    },
+    "Suicune Encounter": {
+      "de": "Suicune-Begegnung",
+      "fr": "Rencontre avec Suicune",
+      "es": "Encuentro con Suicune",
+      "it": "Incontro con Suicune",
+      "sources": [
+        "Suicune"
+      ],
+      "note": "\"Encounter\" translated plainly."
+    },
+    "Team skull": {
+      "de": "Team Skull",
+      "fr": "Team Skull",
+      "es": "Team Skull",
+      "it": "Team Skull",
+      "sources": [
+        "Team Skull"
+      ],
+      "note": "Label has a lowercase typo (\"skull\"); official name is \"Team Skull\"."
+    },
+    "Team Star Dark": {
+      "de": "Team Star Unlicht",
+      "fr": "Team Star Ténèbres",
+      "es": "Team Star Siniestro",
+      "it": "Team Star Buio",
+      "sources": [
+        "Team Star"
+      ],
+      "note": "Verified: \"Team Star\" (same in all languages). The type is the app's own official type name (src/lib/pokemonTypes.ts); the label itself is a descriptive name for that Star Crew boss, not an official title."
+    },
+    "Team Star Fairy": {
+      "de": "Team Star Fee",
+      "fr": "Team Star Fée",
+      "es": "Team Star Hada",
+      "it": "Team Star Folletto",
+      "sources": [
+        "Team Star"
+      ],
+      "note": "Verified: \"Team Star\" (same in all languages). The type is the app's own official type name (src/lib/pokemonTypes.ts); the label itself is a descriptive name for that Star Crew boss, not an official title."
+    },
+    "Team Star Fighting": {
+      "de": "Team Star Kampf",
+      "fr": "Team Star Combat",
+      "es": "Team Star Lucha",
+      "it": "Team Star Lotta",
+      "sources": [
+        "Team Star"
+      ],
+      "note": "Verified: \"Team Star\" (same in all languages). The type is the app's own official type name (src/lib/pokemonTypes.ts); the label itself is a descriptive name for that Star Crew boss, not an official title."
+    },
+    "Team Star Fire": {
+      "de": "Team Star Feuer",
+      "fr": "Team Star Feu",
+      "es": "Team Star Fuego",
+      "it": "Team Star Fuoco",
+      "sources": [
+        "Team Star"
+      ],
+      "note": "Verified: \"Team Star\" (same in all languages). The type is the app's own official type name (src/lib/pokemonTypes.ts); the label itself is a descriptive name for that Star Crew boss, not an official title."
+    },
+    "Team Star Poison": {
+      "de": "Team Star Gift",
+      "fr": "Team Star Poison",
+      "es": "Team Star Veneno",
+      "it": "Team Star Veleno",
+      "sources": [
+        "Team Star"
+      ],
+      "note": "Verified: \"Team Star\" (same in all languages). The type is the app's own official type name (src/lib/pokemonTypes.ts); the label itself is a descriptive name for that Star Crew boss, not an official title."
+    },
+    "Totem trial": {
+      "de": "Prüfung (Herrscher-Pokémon)",
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)",
+      "sources": [
+        "Herrscher-Pokémon",
+        "Captains"
+      ],
+      "note": "Totem Pokémon verified (Herrscher-Pokémon / Pokémon Dominant / Pokémon dominante); trial word (Prüfung/Épreuve/Prueba/Prova) from the games' own trial names. \"Totem Trial\" itself is not an official title."
+    },
+    "Totem Trial": {
+      "de": "Prüfung (Herrscher-Pokémon)",
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)",
+      "sources": [
+        "Herrscher-Pokémon",
+        "Captains"
+      ],
+      "note": "Totem Pokémon verified (Herrscher-Pokémon / Pokémon Dominant / Pokémon dominante); trial word (Prüfung/Épreuve/Prueba/Prova) from the games' own trial names. \"Totem Trial\" itself is not an official title."
+    },
+    "Trophy Garden": {
+      "de": "Trophäengarten",
+      "fr": "Jardin Trophée",
+      "es": "Jardín Trofeo",
+      "it": "Giardino Trofeo",
+      "sources": [
+        "Trophy Garden"
+      ],
+      "note": "German: Trophäengarten in D/P/Pt, Ziergarten in BDSP (pack brilliant-diamond-shining-pearl would use Ziergarten).",
+      "packs": {
+        "brilliant-diamond-shining-pearl": {
+          "de": "Ziergarten"
+        }
+      }
+    },
+    "Uxie Acuity Cavern": {
+      "de": "Selfe Stärkegrotte",
+      "fr": "Créhelf Caverne Savoir",
+      "es": "Uxie Caverna Agudeza",
+      "it": "Uxie Grotta Arguzia",
+      "sources": [
+        "Acuity Cavern",
+        "pokemon.json"
+      ]
+    },
+    "Valor Cavern": {
+      "de": "Kühnheitsgrotte",
+      "fr": "Caverne Courage",
+      "es": "Caverna Valor",
+      "it": "Grotta Valore",
+      "sources": [
+        "Valor Cavern"
+      ]
+    },
+    "Violet City (Primo Egg)": {
+      "de": "Viola City (Primo-Ei)",
+      "fr": "Mauville (Œuf de Primo)",
+      "es": "Ciudad Malva (Huevo de Primo)",
+      "it": "Violapoli (Uovo di Primo)",
+      "sources": [
+        "Viola City",
+        "Primo"
+      ],
+      "note": "City and NPC name (Primo = Kellyn, same in all languages) verified; \"Egg\" translated plainly."
+    },
+    "Wyndon Championship Final": {
+      "de": "Score City, Meisterschaftsfinale",
+      "fr": "Winscor, finale du championnat",
+      "es": "Ciudad Puntera, final del campeonato",
+      "it": "Goalwick, finale del campionato",
+      "sources": [
+        "Score City",
+        "Champ-Turnier"
+      ],
+      "note": "City verified; \"Championship Final\" is a plain translation (no official title found)."
+    },
+    "Wyndon Championship Match": {
+      "de": "Score City, Meisterschaftskampf",
+      "fr": "Winscor, match de championnat",
+      "es": "Ciudad Puntera, combate de campeonato",
+      "it": "Goalwick, incontro di campionato",
+      "sources": [
+        "Score City",
+        "Champ-Turnier"
+      ],
+      "note": "City verified; \"Championship Match\" is a plain translation (no official title found)."
+    }
+  }
+}

@@ -31,8 +31,8 @@
       "de": "Orion City",
       "en": "Striaton City",
       "fr": "Ogoesse",
-      "es": "Striaton City",
-      "it": "Striaton City"
+      "es": "Ciudad Gres",
+      "it": "Levantopoli"
     },
     "badge": {
       "de": "Trio-Orden",
@@ -56,8 +56,8 @@
       "de": "Traumbrache",
       "en": "Dreamyard",
       "fr": "Vestiges du Rêve",
-      "es": "Dreamyard",
-      "it": "Dreamyard"
+      "es": "Solar de los Sueños",
+      "it": "Cantiere dei Sogni"
     },
     "badge": null,
     "max_level": null
@@ -75,8 +75,8 @@
       "de": "Septerna City",
       "en": "Nacrene City",
       "fr": "Maillard",
-      "es": "Nacrene City",
-      "it": "Nacrene City"
+      "es": "Ciudad Esmalte",
+      "it": "Zefiropoli"
     },
     "badge": {
       "de": "Basis-Orden",
@@ -100,8 +100,8 @@
       "de": "Septerna City",
       "en": "Nacrene City",
       "fr": "Maillard",
-      "es": "Nacrene City",
-      "it": "Nacrene City"
+      "es": "Ciudad Esmalte",
+      "it": "Zefiropoli"
     },
     "badge": null,
     "max_level": null
@@ -119,8 +119,8 @@
       "de": "Stratos City",
       "en": "Castelia City",
       "fr": "Volucité",
-      "es": "Castelia City",
-      "it": "Castelia City"
+      "es": "Ciudad Porcelana",
+      "it": "Austropoli"
     },
     "badge": {
       "de": "Insekt-Orden",
@@ -163,8 +163,8 @@
       "de": "Rayono City",
       "en": "Nimbasa City",
       "fr": "Méanville",
-      "es": "Nimbasa City",
-      "it": "Nimbasa City"
+      "es": "Ciudad Mayólica",
+      "it": "Sciroccopoli"
     },
     "badge": {
       "de": "Blitz-Orden",
@@ -188,8 +188,8 @@
       "de": "Rayono City",
       "en": "Nimbasa City",
       "fr": "Méanville",
-      "es": "Nimbasa City",
-      "it": "Nimbasa City"
+      "es": "Ciudad Mayólica",
+      "it": "Sciroccopoli"
     },
     "badge": null,
     "max_level": null
@@ -226,8 +226,8 @@
       "de": "Marea City",
       "en": "Driftveil City",
       "fr": "Port Yoneuve",
-      "es": "Driftveil City",
-      "it": "Driftveil City"
+      "es": "Ciudad Fayenza",
+      "it": "Libecciopoli"
     },
     "badge": {
       "de": "Beben-Orden",
@@ -270,8 +270,8 @@
       "de": "Elektrolithhöhle",
       "en": "Chargestone Cave",
       "fr": "Grotte Électrolithe",
-      "es": "Chargestone Cave",
-      "it": "Chargestone Cave"
+      "es": "Cueva Electrorroca",
+      "it": "Cava Pietrelettrica"
     },
     "badge": null,
     "max_level": null
@@ -289,8 +289,8 @@
       "de": "Panaero City",
       "en": "Mistralton City",
       "fr": "Parsemille",
-      "es": "Mistralton City",
-      "it": "Mistralton City"
+      "es": "Ciudad Loza",
+      "it": "Ponentopoli"
     },
     "badge": {
       "de": "Jet-Orden",
@@ -314,8 +314,8 @@
       "de": "Twindrake City",
       "en": "Opelucid City",
       "fr": "Janusia",
-      "es": "Opelucid City",
-      "it": "Opelucid City"
+      "es": "Ciudad Caolín",
+      "it": "Boreduopoli"
     },
     "badge": null,
     "max_level": null
@@ -333,8 +333,8 @@
       "de": "Nevaio City",
       "en": "Icirrus City",
       "fr": "Flocombe",
-      "es": "Icirrus City",
-      "it": "Icirrus City"
+      "es": "Ciudad Teja",
+      "it": "Mistralopoli"
     },
     "badge": {
       "de": "Frost-Orden",
@@ -358,8 +358,8 @@
       "de": "Drachenstiege",
       "en": "Dragonspiral Tower",
       "fr": "Tour Dragospire",
-      "es": "Dragonspiral Tower",
-      "it": "Dragonspiral Tower"
+      "es": "Torre Duodraco",
+      "it": "Torre Dragospira"
     },
     "badge": null,
     "max_level": null
@@ -377,8 +377,8 @@
       "de": "Twindrake City",
       "en": "Opelucid City",
       "fr": "Janusia",
-      "es": "Opelucid City",
-      "it": "Opelucid City"
+      "es": "Ciudad Caolín",
+      "it": "Boreduopoli"
     },
     "badge": {
       "de": "Legenden-Orden",
@@ -418,7 +418,7 @@
       "it": "Shauntal"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -437,7 +437,7 @@
       "it": "Grimsley"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -456,7 +456,7 @@
       "it": "Caitlin"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -475,7 +475,7 @@
       "it": "Marshal"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -497,8 +497,8 @@
       "de": "Schloss von N",
       "en": "N's Castle",
       "fr": "Palais de N",
-      "es": "N's Castle",
-      "it": "N's Castle"
+      "es": "Palacio de N",
+      "it": "Palazzo di N"
     },
     "badge": null,
     "max_level": 52
@@ -516,8 +516,8 @@
       "de": "Schloss von N",
       "en": "N's Castle",
       "fr": "Palais de N",
-      "es": "N's Castle",
-      "it": "N's Castle"
+      "es": "Palacio de N",
+      "it": "Palazzo di N"
     },
     "badge": null,
     "max_level": 54
@@ -532,7 +532,7 @@
       "it": "Alder"
     },
     "location": {
-      "de": "Pokémon-Liga",
+      "de": "Pokémon Liga",
       "en": "Pokémon League",
       "fr": "Ligue Pokémon",
       "es": "Liga Pokémon",

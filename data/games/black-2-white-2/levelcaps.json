@@ -12,8 +12,8 @@
       "de": "Eventura City",
       "en": "Aspertia City",
       "fr": "Pavonnay",
-      "es": "Aspertia City",
-      "it": "Aspertia City"
+      "es": "Ciudad Engobe",
+      "it": "Alisopoli"
     },
     "badge": null,
     "max_level": 5
@@ -31,8 +31,8 @@
       "de": "Dausing-Hof",
       "en": "Floccesy Ranch",
       "fr": "Ranch d'Amaillide",
-      "es": "Floccesy Ranch",
-      "it": "Floccesy Ranch"
+      "es": "Rancho Ocre",
+      "it": "Fattoria di Venturia"
     },
     "badge": null,
     "max_level": 8
@@ -75,8 +75,8 @@
       "de": "Vapydro City",
       "en": "Virbank City",
       "fr": "Ondes-sur-Mer",
-      "es": "Virbank City",
-      "it": "Virbank City"
+      "es": "Ciudad Hormigón",
+      "it": "Zondopoli"
     },
     "badge": {
       "de": "Giftorden",
@@ -100,8 +100,8 @@
       "de": "Stratos City",
       "en": "Castelia City",
       "fr": "Volucité",
-      "es": "Castelia City",
-      "it": "Castelia City"
+      "es": "Ciudad Porcelana",
+      "it": "Austropoli"
     },
     "badge": {
       "de": "Insekt-Orden",
@@ -125,8 +125,8 @@
       "de": "Route 4",
       "en": "Route 4",
       "fr": "Route 4",
-      "es": "Route 4",
-      "it": "Route 4"
+      "es": "Ruta 4",
+      "it": "Percorso 4"
     },
     "badge": null,
     "max_level": 23
@@ -141,11 +141,11 @@
       "it": "Andy & Torn"
     },
     "location": {
-      "de": "Nimbasa Subway",
+      "de": "Rayono City, Kampfmetro",
       "en": "Nimbasa Subway",
-      "fr": "Nimbasa Subway",
-      "es": "Nimbasa Subway",
-      "it": "Nimbasa Subway"
+      "fr": "Méanville, Métro de Combat",
+      "es": "Ciudad Mayólica, Metro Batalla",
+      "it": "Sciroccopoli, Metrò Lotta"
     },
     "badge": null,
     "max_level": 26
@@ -163,8 +163,8 @@
       "de": "Rayono City",
       "en": "Nimbasa City",
       "fr": "Méanville",
-      "es": "Nimbasa City",
-      "it": "Nimbasa City"
+      "es": "Ciudad Mayólica",
+      "it": "Sciroccopoli"
     },
     "badge": {
       "de": "Blitz-Orden",
@@ -188,8 +188,8 @@
       "de": "Marea City",
       "en": "Driftveil City",
       "fr": "Port Yoneuve",
-      "es": "Driftveil City",
-      "it": "Driftveil City"
+      "es": "Ciudad Fayenza",
+      "it": "Libecciopoli"
     },
     "badge": {
       "de": "Beben-Orden",
@@ -210,11 +210,11 @@
       "it": "Toni"
     },
     "location": {
-      "de": "Driftveil Tournament Round 1",
+      "de": "Marea-Turnier, Runde 1",
       "en": "Driftveil Tournament Round 1",
-      "fr": "Driftveil Tournament Round 1",
-      "es": "Driftveil Tournament Round 1",
-      "it": "Driftveil Tournament Round 1"
+      "fr": "Tournoi de Port Yoneuve, manche 1",
+      "es": "Torneo de Ciudad Fayenza, ronda 1",
+      "it": "Torneo di Libecciopoli, turno 1"
     },
     "badge": null,
     "max_level": 25
@@ -229,11 +229,11 @@
       "it": "Cheren"
     },
     "location": {
-      "de": "Driftveil Tournament Round 2",
+      "de": "Marea-Turnier, Runde 2",
       "en": "Driftveil Tournament Round 2",
-      "fr": "Driftveil Tournament Round 2",
-      "es": "Driftveil Tournament Round 2",
-      "it": "Driftveil Tournament Round 2"
+      "fr": "Tournoi de Port Yoneuve, manche 2",
+      "es": "Torneo de Ciudad Fayenza, ronda 2",
+      "it": "Torneo di Libecciopoli, turno 2"
     },
     "badge": null,
     "max_level": 25
@@ -248,11 +248,11 @@
       "it": "Acromio"
     },
     "location": {
-      "de": "Driftveil Tournament Round 3",
+      "de": "Marea-Turnier, Runde 3",
       "en": "Driftveil Tournament Round 3",
-      "fr": "Driftveil Tournament Round 3",
-      "es": "Driftveil Tournament Round 3",
-      "it": "Driftveil Tournament Round 3"
+      "fr": "Tournoi de Port Yoneuve, manche 3",
+      "es": "Torneo de Ciudad Fayenza, ronda 3",
+      "it": "Torneo di Libecciopoli, turno 3"
     },
     "badge": null,
     "max_level": 25
@@ -270,8 +270,8 @@
       "de": "Panaero City",
       "en": "Mistralton City",
       "fr": "Parsemille",
-      "es": "Mistralton City",
-      "it": "Mistralton City"
+      "es": "Ciudad Loza",
+      "it": "Ponentopoli"
     },
     "badge": {
       "de": "Jet-Orden",
@@ -295,8 +295,8 @@
       "de": "Ondula",
       "en": "Undella Town",
       "fr": "Vaguelone",
-      "es": "Undella Town",
-      "it": "Undella Town"
+      "es": "Pueblo Arenisca",
+      "it": "Spiraria"
     },
     "badge": null,
     "max_level": 41
@@ -314,8 +314,8 @@
       "de": "Tessera",
       "en": "Lacunosa Town",
       "fr": "Entrelasque",
-      "es": "Lacunosa Town",
-      "it": "Lacunosa Town"
+      "es": "Pueblo Ladrillo",
+      "it": "Fortebrezza"
     },
     "badge": null,
     "max_level": 44
@@ -333,8 +333,8 @@
       "de": "Twindrake City",
       "en": "Opelucid City",
       "fr": "Janusia",
-      "es": "Opelucid City",
-      "it": "Opelucid City"
+      "es": "Ciudad Caolín",
+      "it": "Boreduopoli"
     },
     "badge": {
       "de": "Legenden-Orden",
@@ -358,8 +358,8 @@
       "de": "Twindrake City",
       "en": "Opelucid City",
       "fr": "Janusia",
-      "es": "Opelucid City",
-      "it": "Opelucid City"
+      "es": "Ciudad Caolín",
+      "it": "Boreduopoli"
     },
     "badge": null,
     "max_level": 48
@@ -377,8 +377,8 @@
       "de": "Twindrake City",
       "en": "Opelucid City",
       "fr": "Janusia",
-      "es": "Opelucid City",
-      "it": "Opelucid City"
+      "es": "Ciudad Caolín",
+      "it": "Boreduopoli"
     },
     "badge": null,
     "max_level": 48
@@ -396,8 +396,8 @@
       "de": "Abidaya City",
       "en": "Humilau City",
       "fr": "Papeloa",
-      "es": "Humilau City",
-      "it": "Humilau City"
+      "es": "Ciudad Marga",
+      "it": "Grecalopoli"
     },
     "badge": {
       "de": "Wellenorden",
@@ -418,11 +418,11 @@
       "it": "Violante & Recluta"
     },
     "location": {
-      "de": "Command Center",
+      "de": "Kommandozentrale",
       "en": "Command Center",
-      "fr": "Command Center",
-      "es": "Command Center",
-      "it": "Command Center"
+      "fr": "Centre de commandement",
+      "es": "Centro de mando",
+      "it": "Centro di comando"
     },
     "badge": null,
     "max_level": 50
@@ -437,11 +437,11 @@
       "it": "Violante"
     },
     "location": {
-      "de": "Kyurem's Location",
+      "de": "Kyurems Aufenthaltsort",
       "en": "Kyurem's Location",
-      "fr": "Kyurem's Location",
-      "es": "Kyurem's Location",
-      "it": "Kyurem's Location"
+      "fr": "Emplacement de Kyurem",
+      "es": "Ubicación de Kyurem",
+      "it": "Posizione di Kyurem"
     },
     "badge": null,
     "max_level": 51
@@ -456,11 +456,11 @@
       "it": "Acromio"
     },
     "location": {
-      "de": "Control Room",
+      "de": "Kontrollraum",
       "en": "Control Room",
-      "fr": "Control Room",
-      "es": "Control Room",
-      "it": "Control Room"
+      "fr": "Salle de contrôle",
+      "es": "Sala de control",
+      "it": "Sala di controllo"
     },
     "badge": null,
     "max_level": 52
@@ -478,8 +478,8 @@
       "de": "Riesengrotte",
       "en": "Giant Chasm",
       "fr": "Grotte Cyclopéenne",
-      "es": "Giant Chasm",
-      "it": "Giant Chasm"
+      "es": "Boquete Gigante",
+      "it": "Fossa Gigante"
     },
     "badge": null,
     "max_level": 52
@@ -497,8 +497,8 @@
       "de": "Siegesstraße",
       "en": "Victory Road",
       "fr": "Route Victoire",
-      "es": "Victory Road",
-      "it": "Victory Road"
+      "es": "Calle Victoria",
+      "it": "Via Vittoria"
     },
     "badge": null,
     "max_level": 57
@@ -513,7 +513,7 @@
       "it": "Shauntal"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -532,7 +532,7 @@
       "it": "Grimsley"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -551,7 +551,7 @@
       "it": "Caitlin"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -570,7 +570,7 @@
       "it": "Marshal"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -589,7 +589,7 @@
       "it": "Iris"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

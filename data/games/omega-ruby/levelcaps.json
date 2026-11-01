@@ -269,11 +269,11 @@
       "it": "Tabitha"
     },
     "location": {
-      "de": "Weather Institute",
+      "de": "Klima-Institut",
       "en": "Weather Institute",
-      "fr": "Weather Institute",
-      "es": "Weather Institute",
-      "it": "Weather Institute"
+      "fr": "Centre Météo",
+      "es": "Instituto Meteorológico",
+      "it": "Instituto Meteo"
     },
     "badge": null,
     "max_level": 32
@@ -352,11 +352,11 @@
       "it": "Rossella"
     },
     "location": {
-      "de": "Mt. Pyre Summit",
+      "de": "Pyroberg-Gipfel",
       "en": "Mt. Pyre Summit",
-      "fr": "Mt. Pyre Summit",
-      "es": "Mt. Pyre Summit",
-      "it": "Mt. Pyre Summit"
+      "fr": "Sommet du Mont Mémoria",
+      "es": "Cima del Monte Pírico",
+      "it": "Vetta del Monte Pira"
     },
     "badge": null,
     "max_level": 38
@@ -391,11 +391,11 @@
       "it": "Rossella"
     },
     "location": {
-      "de": "Magma Hideout B1F",
+      "de": "Team Magmas Versteck B1F",
       "en": "Magma Hideout B1F",
-      "fr": "Magma Hideout B1F",
-      "es": "Magma Hideout B1F",
-      "it": "Magma Hideout B1F"
+      "fr": "Planque Magma B1F",
+      "es": "Guarida Magma B1F",
+      "it": "Rifugio Magma B1F"
     },
     "badge": null,
     "max_level": 39
@@ -498,7 +498,7 @@
       "it": "Sidney"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -517,7 +517,7 @@
       "it": "Phoebe"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -536,7 +536,7 @@
       "it": "Glacia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -555,7 +555,7 @@
       "it": "Drake"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -574,7 +574,7 @@
       "it": "Steven"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
