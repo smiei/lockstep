@@ -13,6 +13,7 @@ import type { GameSummary } from "@/lib/types";
 import type { PackContext, PackKind } from "@/lib/gamePack";
 import { isCustomPackId } from "@/lib/gamePack";
 import { customGameDir, listCustomGameIds } from "@/lib/customGames";
+import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import {
   historicalMoveNames,
   type Learnset,
@@ -278,7 +279,21 @@ export function getGameSummaries(): GameSummary[] {
     names: game.names,
     fusion: Boolean(game.fusion),
     kind: game.kind ?? "official",
+    cover: getGameCover(game.id),
   }));
+}
+
+// A private instance shows what scripts/download-covers.mjs (or the user) put
+// into public/covers - checked here, on the server, so no page ever asks for a
+// file that is not there. A public instance has no such folder and hotlinks
+// the source instead (behind the image consent, like the sprites).
+const COVER_DIR = path.join(process.cwd(), "public", "covers");
+export function getGameCover(gameId: string): string | null {
+  for (const ext of ["webp", "png"]) {
+    if (fs.existsSync(path.join(COVER_DIR, `${gameId}.${ext}`))) return `/covers/${gameId}.${ext}`;
+  }
+  if (!IS_PUBLIC_INSTANCE) return null;
+  return readJson<{ covers: Record<string, string> }>("cover-sources.json").covers[gameId] ?? null;
 }
 
 export function getGameById(gameId: string): GameInfo | undefined {

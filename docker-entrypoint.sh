@@ -27,6 +27,11 @@ node scripts/download-badges.mjs || echo "WARNING: badge download failed; badges
 echo "Checking trainer pictures (downloads only what's missing)..."
 node scripts/download-trainers.mjs || echo "WARNING: some trainer pictures failed to download; they show an initial letter until the next container start."
 
+# Game covers (scripts/download-covers.mjs): same rules - only what is missing,
+# never over the user's own files, off with COVERS=off.
+echo "Checking game covers (downloads only what's missing)..."
+node scripts/download-covers.mjs || echo "WARNING: some game covers failed to download; they show a drawn tile until the next container start."
+
 # Run migrations (as root - may CREATE the db file on a fresh volume)
 # Private branding override. The image ships the repo's own icon (two rings);
 # mounting a folder onto /app/branding that contains an icon.png (or .svg/.jpg/

@@ -64,12 +64,14 @@ services:
       - balls:/app/public/ball-sprites
       - badges:/app/public/badges
       - trainers:/app/public/trainers               # trainer pictures, see "Trainer pictures"
+      - covers:/app/public/covers                   # game covers, see "Game covers"
     restart: unless-stopped
 
 volumes:
   db:
   sprites:
   trainers:
+  covers:
   balls:
   badges:
 ```
@@ -100,6 +102,7 @@ Most setups need these three mounts:
 | `/app/db` | SQLite database. **Required**, because this is your data. |
 | `/app/public/pokemon-sprites` | Pokémon sprites, one subfolder per sprite set. **Recommended:** without it, every new container (each image update) downloads them again, which takes a few minutes. |
 | `/app/public/trainers` | Trainer pictures. **Recommended:** downloaded on the first start and kept across updates; also where your own pictures go (see below). |
+| `/app/public/covers` | Game covers. **Recommended:** downloaded on the first start and kept across updates; also where your own covers go (see below). |
 
 Everything else is optional and usually best left out:
 
@@ -124,6 +127,7 @@ Everything else is optional and usually best left out:
 | `DEFAULT_SHELL_COLOR` | Optional. The colour every device starts with: `green` (default), `red`, `blue` or `yellow`. The browser-tab icon, the home-screen icon and the installed app's splash screen and status bar take this colour too. Anyone can still pick their own colour in the gear menu, which is kept per device. |
 | `CUSTOM_GAMES_DIR` | Optional. Where games imported in the app are saved (default: `custom-games` next to the database, see [Backups](#backups)). |
 | `TRAINER_SPRITES` | Optional. `off` skips the trainer-picture download (see [Trainer pictures](#trainer-pictures)). |
+| `COVERS` | Optional. `off` skips the game-cover download (see [Game covers](#game-covers)). |
 | `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with German as the last fallback. A language picked in the gear menu always wins. |
 
 Light and dark mode follow the device until someone switches them by hand. Switching back to the mode the device itself uses makes the app follow the device again.
@@ -225,6 +229,14 @@ The Journey tab shows a picture for every boss trainer. On the first start (Dock
 **Your own pictures always win.** Put square PNGs into `public/trainers/`; with Docker, that is the folder mounted at `/app/public/trainers`. A file of yours is never overwritten, and a trainer with a picture of yours in the shared root folder gets nothing downloaded for any game. File names and folder layout are explained in [`public/trainers/README.txt`](../public/trainers/README.txt).
 
 To skip the download entirely, set `TRAINER_SPRITES=off`. A read-only mount also leaves the folder alone. Without a picture, a trainer shows an initial-letter placeholder.
+
+## Game covers
+
+The game picker, the start page and the Overview show each game's cover. On the first start the app downloads them into `public/covers/` (about 1 MB in all): box art from [libretro-thumbnails](https://github.com/libretro-thumbnails), and for Sword/Shield, Brilliant Diamond/Shining Pearl and Scarlet/Violet the cover image of their English Wikipedia article. Only missing files are fetched. The covers are © Nintendo / GAME FREAK / The Pokémon Company and never enter the repository or the Docker image.
+
+Most ROM hacks have no source we may use, so they show a drawn tile with the game's name. **Your own covers always win:** put `<game id>.webp` or `<game id>.png` into `public/covers/` (with Docker, the folder mounted at `/app/public/covers`), e.g. `radical-red.png`. The game ids are the folder names under `data/games/`. A file of yours is never overwritten.
+
+To skip the download, set `COVERS=off`.
 
 ## Custom app icon (optional)
 

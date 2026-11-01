@@ -111,8 +111,9 @@ On top of the toggles:
 
 ## Runs, games and players
 
-- **Start page:** the house icon next to the logo opens the collection: every run as a card with its team, route progress, badges, next level cap and deaths, played-last first. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
+- **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
+- **Game covers** show in the game picker, on the start page and on the Overview. They are downloaded on the first start; a ROM hack without a cover shows a drawn tile, or your own picture (see [self-hosting](self-hosting.md#game-covers)).
 - **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 16 ROM hacks, and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
 - **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.
 - **Generation-aware mechanics:** the type chart (Gen 1 quirks included), the catch formula and balls, which Pokémon are obtainable, and era-appropriate sprites.

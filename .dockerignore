@@ -15,6 +15,7 @@ npm-debug.log*
 public/pokemon-sprites
 public/ball-sprites
 public/badges
+public/covers
 public/trainers/*.png
 public/trainers/**/*.png
 

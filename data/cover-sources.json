@@ -1,0 +1,30 @@
+{
+  "source": "Box art from libretro-thumbnails (github.com/libretro-thumbnails, Named_Boxarts) and, for the Switch games, the infobox image of their English Wikipedia article. Downloaded by scripts/download-covers.mjs at setup, never shipped. A game without an entry shows a drawn tile, or your own public/covers/<gameId>.png.",
+  "covers": {
+    "red-blue": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy/master/Named_Boxarts/Pokemon%20-%20Red%20Version%20(USA%2C%20Europe)%20(SGB%20Enhanced).png",
+    "gold-silver": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Color/master/Named_Boxarts/Pokemon%20-%20Gold%20Version%20(USA%2C%20Europe)%20(SGB%20Enhanced)%20(GB%20Compatible).png",
+    "ruby": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Pokemon%20-%20Ruby%20Version%20(USA%2C%20Europe).png",
+    "sapphire": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Pokemon%20-%20Sapphire%20Version%20(USA%2C%20Europe).png",
+    "firered": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Pokemon%20-%20FireRed%20Version%20(USA%2C%20Europe).png",
+    "emerald": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Pokemon%20-%20Emerald%20Version%20(USA%2C%20Europe).png",
+    "diamond-pearl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20Diamond%20Version%20(Europe)%20(Rev%205).png",
+    "platinum": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20Platinum%20Version%20(Europe).png",
+    "heartgold": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20HeartGold%20Version%20(Europe).png",
+    "soulsilver": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20SoulSilver%20Version%20(Europe).png",
+    "black": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20Black%20Version%20(USA%2C%20Europe)%20(NDSi%20Enhanced).png",
+    "white": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20White%20Version%20(USA%2C%20Europe)%20(NDSi%20Enhanced).png",
+    "black-2-white-2": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_DS/master/Named_Boxarts/Pokemon%20-%20Black%20Version%202%20(USA%2C%20Europe)%20(NDSi%20Enhanced).png",
+    "x-y": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20X%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo).png",
+    "omega-ruby": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20Omega%20Ruby%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo)%20(Rev%202).png",
+    "alpha-sapphire": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20Alpha%20Sapphire%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CKo)%20(Rev%202).png",
+    "sun": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20Sun%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CZh%2CKo).png",
+    "moon": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20Moon%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CZh%2CKo).png",
+    "ultra-sun": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20Ultra%20Sun%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CZh%2CKo).png",
+    "ultra-moon": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_3DS/master/Named_Boxarts/Pokemon%20Ultra%20Moon%20(Europe)%20(En%2CJa%2CFr%2CDe%2CEs%2CIt%2CZh%2CKo).png",
+    "sword": "https://upload.wikimedia.org/wikipedia/en/f/fa/Pok%C3%A9mon_Sword_and_Shield.jpg",
+    "shield": "https://upload.wikimedia.org/wikipedia/en/f/fa/Pok%C3%A9mon_Sword_and_Shield.jpg",
+    "brilliant-diamond-shining-pearl": "https://upload.wikimedia.org/wikipedia/en/3/3e/Pokemon_Brilliant_Diamond_Shining_Pearl.png",
+    "scarlet-violet": "https://upload.wikimedia.org/wikipedia/en/0/00/Pok%C3%A9mon_Scarlet_and_Violet_banner.png",
+    "glazed": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Pokemon%20-%20Glazed%20Version%20(Hack).png"
+  }
+}

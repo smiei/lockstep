@@ -34,6 +34,10 @@ export type GameSummary = {
   fusion?: boolean;
   // official / romhack / fangame (game.json kind) - the dialog groups by it.
   kind?: "official" | "romhack" | "fangame";
+  // The game's cover (getGameCover): a file in public/covers on a private
+  // instance, the source URL on a public one, or null - GameCover then draws a
+  // tile, without ever requesting a picture that is not there.
+  cover?: string | null;
 };
 
 // Shared by a fusion's host row and its body sub-object - the evolution
