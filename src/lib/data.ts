@@ -286,14 +286,17 @@ export function getGameSummaries(): GameSummary[] {
 // A private instance shows what scripts/download-covers.mjs (or the user) put
 // into public/covers - checked here, on the server, so no page ever asks for a
 // file that is not there. A public instance has no such folder and hotlinks
-// the source instead (behind the image consent, like the sprites).
+// the source instead (behind the image consent, like the sprites) - but not
+// Wikipedia's non-free images (the Switch games), which are meant for their
+// articles, not for other sites: those games get the drawn tile there.
 const COVER_DIR = path.join(process.cwd(), "public", "covers");
 export function getGameCover(gameId: string): string | null {
   for (const ext of ["webp", "png"]) {
     if (fs.existsSync(path.join(COVER_DIR, `${gameId}.${ext}`))) return `/covers/${gameId}.${ext}`;
   }
   if (!IS_PUBLIC_INSTANCE) return null;
-  return readJson<{ covers: Record<string, string> }>("cover-sources.json").covers[gameId] ?? null;
+  const url = readJson<{ covers: Record<string, string> }>("cover-sources.json").covers[gameId];
+  return url && !url.startsWith("https://upload.wikimedia.org/") ? url : null;
 }
 
 export function getGameById(gameId: string): GameInfo | undefined {
