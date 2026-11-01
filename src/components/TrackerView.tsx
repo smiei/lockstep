@@ -185,7 +185,13 @@ export function TrackerView({
     }[outcome];
     const number = catalogue.get(route.id);
     return (
-      <div key={route.id} className={`overflow-hidden rounded-md border bg-panel ${trayFrame}`}>
+      // overflow-hidden keeps the tinted label strip inside the round corners,
+      // but it would also cut off an open dropdown (the Pokémon picker of an
+      // empty entry hangs below the tray) - so it is lifted while one is open.
+      <div
+        key={route.id}
+        className={`overflow-hidden rounded-md border bg-panel has-[[aria-expanded=true]]:overflow-visible ${trayFrame}`}
+      >
         {/* The route label is the tray's header strip - "Nr. 001 Starter",
             outcome at the end - so every player column below gets the full
             width and its controls fit on one row. */}
