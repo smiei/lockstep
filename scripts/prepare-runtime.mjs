@@ -31,6 +31,7 @@ function run(label, args, required = false) {
 run("Pokémon sprites", ["scripts/download-sprites.mjs"]);
 run("Badge icons", ["scripts/download-badges.mjs"]);
 run("Trainer pictures", ["scripts/download-trainers.mjs"]);
+run("Game covers", ["scripts/download-covers.mjs"]);
 run("Database migrations", [path.join("node_modules", "prisma", "build", "index.js"), "migrate", "deploy"], true);
 run("familyId re-sync", ["scripts/backfill-encounter-families.mjs"]);
 console.log("\n== Ready");

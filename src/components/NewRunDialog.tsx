@@ -11,6 +11,7 @@ import { FieldLabel, Input, Select } from "@/components/ui/Input";
 import { Modal } from "@/components/ui/Modal";
 import { MAX_SOULLINK_PLAYERS, MIN_SOULLINK_PLAYERS } from "@/lib/players";
 import { EnglishOnlyNote } from "@/components/EnglishOnlyNote";
+import { GameCover } from "@/components/GameCover";
 import { isCustomPackId } from "@/lib/gamePack";
 import { CustomGameControls } from "@/components/CustomGameControls";
 
@@ -127,22 +128,29 @@ export function NewRunDialog({
 
       <div className="mb-3">
         <FieldLabel htmlFor="new-run-game">{t.gameLabel}</FieldLabel>
-        <Select
-          id="new-run-game"
-          value={gameId}
-          disabled={pending}
-          onChange={(e) => setGameId(e.target.value)}
-        >
-          {gameGroups(games, t).map(([label, group]) =>
-            label ? (
-              <optgroup key={label} label={label}>
-                {group.map(renderGameOption)}
-              </optgroup>
-            ) : (
-              group.map(renderGameOption)
-            ),
-          )}
-        </Select>
+        <div className="flex items-center gap-3">
+          <Select
+            id="new-run-game"
+            value={gameId}
+            disabled={pending}
+            onChange={(e) => setGameId(e.target.value)}
+            className="min-w-0 flex-1"
+          >
+            {gameGroups(games, t).map(([label, group]) =>
+              label ? (
+                <optgroup key={label} label={label}>
+                  {group.map(renderGameOption)}
+                </optgroup>
+              ) : (
+                group.map(renderGameOption)
+              ),
+            )}
+          </Select>
+          {(() => {
+            const picked = games.find((game) => game.id === gameId);
+            return picked ? <GameCover src={picked.cover} name={localizeName(picked.names, lang)} size="sm" /> : null;
+          })()}
+        </div>
         {games.find((game) => game.id === gameId)?.kind === "romhack" && (
           <EnglishOnlyNote lang={lang} className="mt-2" />
         )}

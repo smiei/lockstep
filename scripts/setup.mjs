@@ -67,6 +67,7 @@ run("node", ["scripts/backfill-encounter-families.mjs"], "familyId re-sync faile
 run("node", ["scripts/download-sprites.mjs"], "sprite download failed; missing Pokémon images show a '?' until you run `npm run setup` again.");
 run("node", ["scripts/download-badges.mjs"], "badge download failed; badges stay missing until you run `npm run setup` again.");
 run("node", ["scripts/download-trainers.mjs"], "some trainer pictures failed to download; they show an initial letter until you run `npm run setup` again.");
+run("node", ["scripts/download-covers.mjs"], "some game covers failed to download; they show a drawn tile until you run `npm run setup` again.");
 run("npm", ["run", "build"]);
 
 console.log(`

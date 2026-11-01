@@ -6,7 +6,7 @@
 //   Lockstep-Setup-<version>.exe      when Inno Setup is installed (ISCC)
 //
 // The app folder holds what the Docker image's runner stage holds - and like
-// the image, no Pokémon artwork: sprites, badges and trainer pictures are
+// the image, no Pokémon artwork: sprites, badges, covers and trainer pictures are
 // downloaded on the user's machine at first start (scripts/prepare-runtime.mjs).
 //
 // Runs on Windows only (csc.exe from .NET Framework compiles the tray program,
@@ -73,7 +73,7 @@ await rm(buildDb, { force: true });
 // Retries: a virus scanner or indexer briefly holds files of the last build.
 await rm(path.join(dist, "windows"), { recursive: true, force: true, maxRetries: 10, retryDelay: 500 });
 await mkdir(appDir, { recursive: true });
-const DOWNLOADED = ["pokemon-sprites", "ball-sprites", "badges"].map((d) => path.join(root, "public", d));
+const DOWNLOADED = ["pokemon-sprites", "ball-sprites", "badges", "covers"].map((d) => path.join(root, "public", d));
 const skip = (src) =>
   DOWNLOADED.some((d) => src === d || src.startsWith(d + path.sep)) ||
   (src.startsWith(path.join(root, "public", "trainers")) && src.endsWith(".png")) ||

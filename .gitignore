@@ -64,6 +64,8 @@ next-env.d.ts
 # Both the flat root and the per-game trainerSet subfolders.
 /public/trainers/*.png
 /public/trainers/**/*.png
+# Game covers (scripts/download-covers.mjs) - box art, never in the repo.
+/public/covers/
 
 # PWA app icons - OUR artwork, but still a build artefact: generated from
 # src/app/icon.svg by scripts/generate-icons.mjs via npm's prebuild/predev

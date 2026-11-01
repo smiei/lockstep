@@ -2,6 +2,7 @@ import {
   getEvolutionById,
   getEvolutions,
   getGameOrDefault,
+  getGameCover,
   getLearnset,
   getLevelCaps,
   getMoveset,
@@ -423,6 +424,7 @@ export default async function OverviewPage({
             levelCapProgress={levelCapProgress}
             levelCapMarkerAt={levelCapMarkerAt}
             badges={badges}
+            game={{ name: localizeName(game.names, lang), cover: getGameCover(game.id) }}
           />
         </PokemonDetailProvider>
       </PlayerNamesProvider>

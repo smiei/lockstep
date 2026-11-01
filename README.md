@@ -148,15 +148,17 @@ services:
       - db:/app/db
       - sprites:/app/public/pokemon-sprites
       - trainers:/app/public/trainers
+      - covers:/app/public/covers
     restart: unless-stopped
 
 volumes:
   db:
   sprites:
   trainers:
+  covers:
 ```
 
-Save that as `compose.yaml` and run `docker compose up -d`. The first start downloads the Pokémon sprites and trainer pictures, which takes a few minutes.
+Save that as `compose.yaml` and run `docker compose up -d`. The first start downloads the Pokémon sprites, trainer pictures and game covers, which takes a few minutes.
 
 ### Pinokio (one click, Windows / macOS / Linux)
 
@@ -222,6 +224,7 @@ Docker tags follow `MAJOR.MINOR`: `latest` is always the newest release, and eve
 | `5.0` | The app is now called **Lockstep**, and so are the repository (`smiei/lockstep`) and the image, which is published on GitHub's registry only (`ghcr.io/smiei/lockstep`). A Windows app: one installer, runs in the system tray. 16 ROM hacks (Radical Red, Unbound, Run & Bun, Renegade Platinum, and more) with their own stats, types and moves; Pokémon data up to Gen 9 with regional forms; a hack's own Pokémon as placeholders. Import your own game pack in the app, or contribute one. A start page with every run as a card. Boss-trainer pictures download by themselves. Notes on machine-translated languages and unverified game data. Backup format v5. |
 | `5.1` | The Encounter tab tells open and finished routes apart at a glance, in dark mode too (a coloured or dashed frame and an outcome badge per route). 66 more boss-trainer pictures for the ROM hacks, and a complete list of the pictures each game expects. A ROM hack's own forms (Sevii, Hoenn) show their species' sprite, marked as a placeholder. Updated dependencies. |
 | `5.2` | 15 more official games: Ruby and Sapphire, Diamond and Pearl, Black 2 and White 2, and every main game from X and Y to Scarlet and Violet, with place, boss and badge names in all five languages. The catch calculator knows Gen 6 to 9: new balls (Beast Ball), the changed ball bonuses, and Sword/Shield's and Scarlet/Violet's level and badge rules; the Gen 5 formula is corrected. Fixed: 18 Pokémon re-typed to Fairy in Gen 6 (Clefairy, Gardevoir, Mawile, ...) lacked the Fairy type in every game and ROM hack with Gen 6+ data. |
+| `5.3` | Official place names in all five languages for every official game, taken from PokéWiki per game and region (Spanish, Italian and French place names were often English before). ROM hacks keep their English names for places, trainers and badges, as in the game, and say so. Game covers in the game picker, on the start page and on the Overview, downloaded on the first start; your own covers win. The "data unverified" notes are gone. |
 
 ## Acknowledgements
 
@@ -235,6 +238,7 @@ This project stands on the work of others. Thank you!
 - **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics, level caps and trainer names.
 - **[nuzlocke.app](https://github.com/domtronn/nuzlocke.app)** (fork [Bassel-T/nuzlocke.app](https://github.com/Bassel-T/nuzlocke.app)) — the ROM-hack route lists, boss teams and the hacks' stat, type and move changes (BSD 3-Clause).
 - **[Pokémon Showdown](https://pokemonshowdown.com/)** — the boss trainer pictures, downloaded on first start.
+- **[libretro-thumbnails](https://github.com/libretro-thumbnails)** and **[Wikipedia](https://en.wikipedia.org/)** — the game covers, downloaded on first start.
 - Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Familjen Grotesk](https://fonts.google.com/specimen/Familjen+Grotesk) and [Red Hat Mono](https://fonts.google.com/specimen/Red+Hat+Mono) fonts.
 
 Licenses and attributions in full: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
@@ -250,3 +254,4 @@ The source code is released under the [MIT License](LICENSE). Data and artwork f
 > - Infinite Fusion's ball icons come from the game's public repository at container start.
 > - Fusion sprites are loaded by the browser straight from the Infinite Fusion community's sprite server and never stored.
 > - Trainer pictures are downloaded from Pokémon Showdown when the app is set up, unless you bring your own.
+> - Game covers are downloaded from libretro-thumbnails and Wikipedia when the app is set up, unless you bring your own.

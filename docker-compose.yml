@@ -20,6 +20,8 @@ services:
       # from Showdown into it (scripts/download-trainers.mjs). Your own files
       # here are never overwritten.
       - ./public/trainers:/app/public/trainers
+      # Game covers, downloaded the same way (scripts/download-covers.mjs).
+      - ./public/covers:/app/public/covers
       # Optional: drop an icon.svg in here to replace the app icon on your own
       # instance. Gitignored and dockerignored, so it never reaches the repo
       # or the published image.

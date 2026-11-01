@@ -10,6 +10,7 @@ import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { localizeName } from "@/lib/i18n/localize";
 import { RunMode } from "@/generated/prisma/enums";
 import { ALL_PLAYERS } from "@/lib/players";
+import { GameCover } from "@/components/GameCover";
 import type { GameSummary, RunHomeCard } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
 import { PageHeader } from "@/components/ui/Page";
@@ -166,14 +167,19 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
       aria-label={t.home.open(card.name)}
       className="group flex h-full flex-col rounded-md border border-line bg-panel p-4 transition-colors hover:border-line-strong"
     >
-      <div className="flex items-baseline justify-between gap-3 font-mono text-xs text-ink-subtle">
-        <span className="min-w-0 truncate">{gameName}</span>
-        <span className="shrink-0" suppressHydrationWarning>
-          {t.home.changed(relativeTime(card.changedAt, lang))}
-        </span>
+      <div className="flex gap-3">
+        <GameCover src={game?.cover} name={gameName} size="sm" />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-baseline justify-between gap-3 font-mono text-xs text-ink-subtle">
+            <span className="min-w-0 truncate">{gameName}</span>
+            <span className="shrink-0" suppressHydrationWarning>
+              {t.home.changed(relativeTime(card.changedAt, lang))}
+            </span>
+          </div>
+          <h2 className="mt-1 truncate text-xl font-bold tracking-tight text-ink group-hover:underline">{card.name}</h2>
+          <p className="truncate text-sm text-ink-muted">{who}</p>
+        </div>
       </div>
-      <h2 className="mt-1 truncate text-xl font-bold tracking-tight text-ink group-hover:underline">{card.name}</h2>
-      <p className="truncate text-sm text-ink-muted">{who}</p>
 
       {/* The team in its drawer: six slots, the empty ones as outlines. */}
       <SpriteSetProvider spriteSet={card.spriteSet}>

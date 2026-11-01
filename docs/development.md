@@ -55,6 +55,7 @@ All reference data is read from disk at runtime and never copied into the databa
 - `evolutions.json`, the type charts and `catchrates.json`; `form-evolutions.json` adds how regional forms evolve, which PokéAPI's chains leave out.
 - The move data: `moves.json`, `learnsets/`, `movesets/`, `tm-compat/`. The version group `modern` is the app's own: per Pokémon the moves of the newest game that has them, for ROM hacks on current data (`node scripts/generate-learnsets.mjs modern` regenerates only that one).
 - Four correction tables that restore what a value was in the generation being played: `pokemon-history.json`, `move-type-history.json`, `move-name-history.json`, `catchrate-history.json`.
+- `cover-sources.json`: where each game's cover comes from (`scripts/download-covers.mjs` saves them as `public/covers/<id>.webp`; `getGameCover` in `data.ts` decides on the server whether one exists).
 - `shared/`: the official names the game packs are built from, each with the script that fetches it:
   - places: `place-names.json` (`generate-place-names.mjs`, PokéWiki) and the hand-made `place-name-overrides.json`, applied by `localize-places.mjs`;
   - bosses: `trainer-names.json` (`generate-trainer-names.mjs`, Bulbapedia); badges: `badge-names.json` (`generate-badge-names.mjs`, PokéWiki);

@@ -19,6 +19,7 @@ import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { DeathPointPicker, type DeathPointOption } from "@/components/DeathPointPicker";
 import { Card } from "@/components/ui/Card";
 import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
+import { GameCover } from "@/components/GameCover";
 import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
 
 export type OverviewStats = {
@@ -120,8 +121,11 @@ export function OverviewView({
   badges,
   deathPointOptions,
   hasMoveData = true,
+  game,
 }: {
   runKey: string;
+  // The run's game, shown with its cover beside the page title.
+  game: { name: string; cover: string | null };
   lang: Lang;
   mode: RunMode;
   teams: { player: Player; members: TeamMember[] }[];
@@ -204,7 +208,12 @@ export function OverviewView({
 
   return (
     <div>
-      <PageHeader title={t.heading} />
+      <PageHeader title={t.heading}>
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-xs text-ink-muted">{game.name}</span>
+          <GameCover src={game.cover} name={game.name} size="sm" />
+        </div>
+      </PageHeader>
 
       {/* The run sheet: one panel instead of a progress section, five loose
           tiles and a badge row further down. Top: the next level cap - the

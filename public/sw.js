@@ -28,7 +28,7 @@ const IMMUTABLE = ["/pokemon-sprites/", "/ball-sprites/"];
 // mount, and /icons/ is regenerated at startup whenever a private branding
 // override is mounted. Caching those cache-first would pin the old artwork in
 // the browser forever, with no way to invalidate it.
-const REVALIDATE = ["/badges/", "/trainers/", "/icons/"];
+const REVALIDATE = ["/badges/", "/trainers/", "/icons/", "/covers/"];
 
 // The one function this whole file hinges on.
 //
