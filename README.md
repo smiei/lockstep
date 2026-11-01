@@ -13,7 +13,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
-https://github.com/user-attachments/assets/344cc46e-e123-43b3-86c2-4e0ba2f43676
+https://github.com/user-attachments/assets/f7191534-8d36-472e-bc7f-660101b234cd
 
 <details>
 <summary>New to the format?</summary>
