@@ -72,7 +72,9 @@ export function AddToTeamButton({
         {t.addToTeam}
       </Button>
       {open && (
-        <ul className="absolute right-0 z-10 mt-1 min-w-[200px] overflow-hidden rounded-lg border border-line bg-panel shadow-lg">
+        // Opens to the right: the button sits at the left of its card, and a
+        // list opening leftwards slid under the side rail.
+        <ul className="absolute left-0 z-10 mt-1 min-w-[200px] overflow-hidden rounded-lg border border-line bg-panel shadow-lg">
           <li className="px-3 py-2 text-xs font-medium text-ink-subtle">
             {t.replaceHint}
           </li>
