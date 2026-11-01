@@ -43,8 +43,12 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 
 **Wild** is a catch-chance calculator.
 - **Inputs:** ball, HP, level and status condition.
-- **Formula:** the run's own generation (Gen 1, Gen 2, Gen 3/4, Gen 5, or Infinite Fusion's own code).
-- **Ball list:** depends on the version group. HeartGold/SoulSilver bring back the Gen 2 Apricorn balls.
+- **Formula:** the run's own generation (Gen 1, Gen 2, Gen 3/4, Gen 5 to 9, or Infinite Fusion's own code). From Gen 5 a ball's chance is about (rate ÷ 255)^0.75, kinder than before.
+- **Ball list:** depends on the game. HeartGold/SoulSilver bring back the Gen 2 Apricorn balls, Sun/Moon add the Beast Ball, Brilliant Diamond/Shining Pearl keep Diamond/Pearl's list.
+- **Ultra Beasts:** the Beast Ball gives ×5 against them, every other ball only ×0.1. The calculator recognizes them by itself.
+- **Gen 8 and 9:** a bonus against wild Pokémon below level 20 (Gen 8) or 13 (Gen 9), and a field for your badges, filled in from the run's defeated gym leaders.
+  - Sword/Shield and BDSP: without the eighth badge, a wild Pokémon above your own Pokémon's level is caught at only ×0.1. Sword/Shield also refuse the throw altogether above level 20 + 5 per badge.
+  - Scarlet/Violet: more than 5 levels above your obedience limit, ×0.8 per badge you would still need.
 - **Conditional balls** (Repeat, Dusk, Dive, Fast, Love, Moon, …) have a "condition met?" checkbox, so their bonus only counts when it applies.
 - **Recording a catch:** "Pokémon caught?" records the Pokémon as caught on an open route, once per player in SoulLink.
 
@@ -152,4 +156,4 @@ The interface, Pokémon, routes, trainers and badges are available in German, En
 
 German and English are reviewed by hand. French, Spanish and Italian are **machine-translated**, the interface as well as the place and route names, and may contain mistakes. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI.
 
-Some game packs' route lists, route order and place names have not been checked against the game yet: Red/Blue/Yellow, Gold/Silver/Crystal, Black/White and Infinite Fusion. They carry a "Data unverified" badge in the New-Run dialog and a note on the Encounter tab, with a link to report mistakes. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.
+Some game packs' route lists, route order and place names have not been checked against the game yet: Red/Blue/Yellow, Gold/Silver/Crystal, Black/White, the games added in 5.2 (Ruby/Sapphire, Diamond/Pearl, Black 2/White 2 and every game from X/Y to Scarlet/Violet), the ROM hacks and Infinite Fusion. They carry a "Data unverified" badge in the New-Run dialog and a note on the Encounter tab, with a link to report mistakes. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.
