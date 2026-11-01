@@ -9,11 +9,11 @@
       "it": "Hop"
     },
     "location": {
-      "de": "Hop's House",
+      "de": "Hops Haus",
       "en": "Hop's House",
-      "fr": "Hop's House",
-      "es": "Hop's House",
-      "it": "Hop's House"
+      "fr": "Maison de Nabil",
+      "es": "Casa de Paul",
+      "it": "Casa di Hop"
     },
     "badge": null,
     "max_level": 5
@@ -31,8 +31,8 @@
       "de": "Route 2",
       "en": "Route 2",
       "fr": "Route 2",
-      "es": "Route 2",
-      "it": "Route 2"
+      "es": "Ruta 2",
+      "it": "Percorso 2"
     },
     "badge": null,
     "max_level": 8
@@ -50,8 +50,8 @@
       "de": "Engine City",
       "en": "Motostoke",
       "fr": "Motorby",
-      "es": "Motostoke",
-      "it": "Motostoke"
+      "es": "Ciudad Pistón",
+      "it": "Steamington"
     },
     "badge": null,
     "max_level": 14
@@ -66,11 +66,11 @@
       "it": "Beet"
     },
     "location": {
-      "de": "Galar Mine Exit",
+      "de": "Ausgang der Galar-Mine 1",
       "en": "Galar Mine Exit",
-      "fr": "Galar Mine Exit",
-      "es": "Galar Mine Exit",
-      "it": "Galar Mine Exit"
+      "fr": "Sortie de la Mine de Galar",
+      "es": "Salida de la Mina de Galar",
+      "it": "Uscita della Miniera di Galar"
     },
     "badge": null,
     "max_level": 16
@@ -88,7 +88,7 @@
       "de": "Turffield",
       "en": "Turffield",
       "fr": "Greenbury",
-      "es": "Turffield",
+      "es": "Pueblo Hoyuelo",
       "it": "Turffield"
     },
     "badge": {
@@ -113,8 +113,8 @@
       "de": "Route 5",
       "en": "Route 5",
       "fr": "Route 5",
-      "es": "Route 5",
-      "it": "Route 5"
+      "es": "Ruta 5",
+      "it": "Percorso 5"
     },
     "badge": null,
     "max_level": 21
@@ -132,8 +132,8 @@
       "de": "Keelton",
       "en": "Hulbury",
       "fr": "Skifford",
-      "es": "Hulbury",
-      "it": "Hulbury"
+      "es": "Pueblo Amura",
+      "it": "Keelford"
     },
     "badge": {
       "de": "Wasser-Orden",
@@ -154,11 +154,11 @@
       "it": "Beet"
     },
     "location": {
-      "de": "Galar Mine No.2 Exit",
+      "de": "Ausgang der Galar-Mine 2",
       "en": "Galar Mine No.2 Exit",
-      "fr": "Galar Mine No.2 Exit",
-      "es": "Galar Mine No.2 Exit",
-      "it": "Galar Mine No.2 Exit"
+      "fr": "Sortie de la Mine de Galar n° 2",
+      "es": "Salida de la Mina de Galar n.º 2",
+      "it": "Uscita della Miniera 2"
     },
     "badge": null,
     "max_level": 23
@@ -173,11 +173,11 @@
       "it": "Mary"
     },
     "location": {
-      "de": "Budew Drop Inn",
+      "de": "Knospi Inn",
       "en": "Budew Drop Inn",
-      "fr": "Budew Drop Inn",
-      "es": "Budew Drop Inn",
-      "it": "Budew Drop Inn"
+      "fr": "Rozbouton d'Or",
+      "es": "Hotel Budew",
+      "it": "Budew Inn"
     },
     "badge": null,
     "max_level": 26
@@ -195,8 +195,8 @@
       "de": "Engine City",
       "en": "Motostoke",
       "fr": "Motorby",
-      "es": "Motostoke",
-      "it": "Motostoke"
+      "es": "Ciudad Pistón",
+      "it": "Steamington"
     },
     "badge": {
       "de": "Feuer-Orden",
@@ -220,8 +220,8 @@
       "de": "Route 6",
       "en": "Route 6",
       "fr": "Route 6",
-      "es": "Route 6",
-      "it": "Route 6"
+      "es": "Ruta 6",
+      "it": "Percorso 6"
     },
     "badge": null,
     "max_level": 33
@@ -239,8 +239,8 @@
       "de": "Passbeck",
       "en": "Stow-on-Side",
       "fr": "Old Chister",
-      "es": "Stow-on-Side",
-      "it": "Stow-on-Side"
+      "es": "Pueblo Ladera",
+      "it": "Latermore"
     },
     "badge": {
       "de": "Geister-Orden",
@@ -261,11 +261,11 @@
       "it": "Beet"
     },
     "location": {
-      "de": "Stow-on-Side Monument",
+      "de": "Denkmal von Passbeck",
       "en": "Stow-on-Side Monument",
-      "fr": "Stow-on-Side Monument",
-      "es": "Stow-on-Side Monument",
-      "it": "Stow-on-Side Monument"
+      "fr": "Monument d'Old Chister",
+      "es": "Monumento de Pueblo Ladera",
+      "it": "Monumento di Latermore"
     },
     "badge": null,
     "max_level": 35
@@ -283,8 +283,8 @@
       "de": "Fairballey",
       "en": "Ballonlea",
       "fr": "Corrifey",
-      "es": "Ballonlea",
-      "it": "Ballonlea"
+      "es": "Pueblo Plié",
+      "it": "Piquedilly"
     },
     "badge": {
       "de": "Feen-Orden",
@@ -308,8 +308,8 @@
       "de": "Route 7",
       "en": "Route 7",
       "fr": "Route 7",
-      "es": "Route 7",
-      "it": "Route 7"
+      "es": "Ruta 7",
+      "it": "Percorso 7"
     },
     "badge": null,
     "max_level": 37
@@ -327,8 +327,8 @@
       "de": "Route 8",
       "en": "Route 8",
       "fr": "Route 8",
-      "es": "Route 8",
-      "it": "Route 8"
+      "es": "Ruta 8",
+      "it": "Percorso 8"
     },
     "badge": null,
     "max_level": 41
@@ -346,7 +346,7 @@
       "de": "Circhester",
       "en": "Circhester",
       "fr": "Ludester",
-      "es": "Circhester",
+      "es": "Pueblo Auriga",
       "it": "Circhester"
     },
     "badge": {
@@ -368,11 +368,11 @@
       "it": "Mary"
     },
     "location": {
-      "de": "Outer Spikemouth",
+      "de": "Spikeford-Ortsrand",
       "en": "Outer Spikemouth",
-      "fr": "Outer Spikemouth",
-      "es": "Outer Spikemouth",
-      "it": "Outer Spikemouth"
+      "fr": "Abords de Smashings",
+      "es": "Afueras de Crampón",
+      "it": "Periferia di Spikeville"
     },
     "badge": null,
     "max_level": 44
@@ -387,11 +387,11 @@
       "it": "Ginepro"
     },
     "location": {
-      "de": "Spikemouth Gym",
+      "de": "Spikeford-Arena",
       "en": "Spikemouth Gym",
-      "fr": "Spikemouth Gym",
-      "es": "Spikemouth Gym",
-      "it": "Spikemouth Gym"
+      "fr": "Arène de Smashings",
+      "es": "Gimnasio de Pueblo Crampón",
+      "it": "Palestra di Spikeville"
     },
     "badge": {
       "de": "Unlicht-Orden",
@@ -412,11 +412,11 @@
       "it": "Laburno"
     },
     "location": {
-      "de": "Hammerlock Gym",
+      "de": "Claw-Stadion",
       "en": "Hammerlock Gym",
-      "fr": "Hammerlock Gym",
-      "es": "Hammerlock Gym",
-      "it": "Hammerlock Gym"
+      "fr": "Stade de Kickenham",
+      "es": "Estadio de Artejo",
+      "it": "Stadio di Knuckleburgh"
     },
     "badge": {
       "de": "Drachen-Orden",
@@ -437,7 +437,7 @@
       "it": "Mary"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -456,7 +456,7 @@
       "it": "Hop"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -477,8 +477,8 @@
     "location": {
       "de": "Rose Tower",
       "en": "Rose Tower",
-      "fr": "Rose Tower",
-      "es": "Rose Tower",
+      "fr": "Shehroz Tower",
+      "es": "Torre Rose",
       "it": "Rose Tower"
     },
     "badge": null,
@@ -494,11 +494,11 @@
       "it": "Beet"
     },
     "location": {
-      "de": "Wyndon Championship Match",
+      "de": "Score City, Meisterschaftskampf",
       "en": "Wyndon Championship Match",
-      "fr": "Wyndon Championship Match",
-      "es": "Wyndon Championship Match",
-      "it": "Wyndon Championship Match"
+      "fr": "Winscor, match de championnat",
+      "es": "Ciudad Puntera, combate de campeonato",
+      "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
     "max_level": 53
@@ -513,11 +513,11 @@
       "it": "Azzurra"
     },
     "location": {
-      "de": "Wyndon Championship Match",
+      "de": "Score City, Meisterschaftskampf",
       "en": "Wyndon Championship Match",
-      "fr": "Wyndon Championship Match",
-      "es": "Wyndon Championship Match",
-      "it": "Wyndon Championship Match"
+      "fr": "Winscor, match de championnat",
+      "es": "Ciudad Puntera, combate de campeonato",
+      "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
     "max_level": 53
@@ -532,11 +532,11 @@
       "it": "Onion"
     },
     "location": {
-      "de": "Wyndon Championship Match",
+      "de": "Score City, Meisterschaftskampf",
       "en": "Wyndon Championship Match",
-      "fr": "Wyndon Championship Match",
-      "es": "Wyndon Championship Match",
-      "it": "Wyndon Championship Match"
+      "fr": "Winscor, match de championnat",
+      "es": "Ciudad Puntera, combate de campeonato",
+      "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
     "max_level": 54
@@ -551,11 +551,11 @@
       "it": "Laburno"
     },
     "location": {
-      "de": "Wyndon Championship Match",
+      "de": "Score City, Meisterschaftskampf",
       "en": "Wyndon Championship Match",
-      "fr": "Wyndon Championship Match",
-      "es": "Wyndon Championship Match",
-      "it": "Wyndon Championship Match"
+      "fr": "Winscor, match de championnat",
+      "es": "Ciudad Puntera, combate de campeonato",
+      "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
     "max_level": 55
@@ -570,11 +570,11 @@
       "it": "Rose"
     },
     "location": {
-      "de": "Energy Plant",
+      "de": "Energiewerk",
       "en": "Energy Plant",
-      "fr": "Energy Plant",
-      "es": "Energy Plant",
-      "it": "Energy Plant"
+      "fr": "Salle du réacteur",
+      "es": "Planta Eléctrica",
+      "it": "Centrale Energetica"
     },
     "badge": null,
     "max_level": 57
@@ -589,11 +589,11 @@
       "it": "Dandel"
     },
     "location": {
-      "de": "Wyndon Championship Final",
+      "de": "Score City, Meisterschaftsfinale",
       "en": "Wyndon Championship Final",
-      "fr": "Wyndon Championship Final",
-      "es": "Wyndon Championship Final",
-      "it": "Wyndon Championship Final"
+      "fr": "Winscor, finale du championnat",
+      "es": "Ciudad Puntera, final del campeonato",
+      "it": "Goalwick, finale del campionato"
     },
     "badge": null,
     "max_level": 65
@@ -611,8 +611,8 @@
       "de": "Grußgefilde",
       "en": "Fields of Honor",
       "fr": "Plaine Salutation",
-      "es": "Fields of Honor",
-      "it": "Fields of Honor"
+      "es": "Prado Reverencia",
+      "it": "Pianura Inchino"
     },
     "badge": null,
     "max_level": 60
@@ -630,8 +630,8 @@
       "de": "Master-Dojo",
       "en": "Master Dojo",
       "fr": "Dojo de la Maîtrise",
-      "es": "Master Dojo",
-      "it": "Master Dojo"
+      "es": "Dojo Maestro",
+      "it": "Dojo Master"
     },
     "badge": null,
     "max_level": 61
@@ -649,8 +649,8 @@
       "de": "Aufwärmtunnel",
       "en": "Warm-Up Tunnel",
       "fr": "Voie des Étirements",
-      "es": "Warm-Up Tunnel",
-      "it": "Warm-Up Tunnel"
+      "es": "Gruta Calentamiento",
+      "it": "Tunnel Riscaldamento"
     },
     "badge": null,
     "max_level": 62
@@ -665,11 +665,11 @@
       "it": "Savory"
     },
     "location": {
-      "de": "Battle Court",
+      "de": "Kampffeld",
       "en": "Battle Court",
-      "fr": "Battle Court",
-      "es": "Battle Court",
-      "it": "Battle Court"
+      "fr": "Terrain de combat",
+      "es": "Pista de combate",
+      "it": "Campo di battaglia"
     },
     "badge": null,
     "max_level": 67
@@ -684,11 +684,11 @@
       "it": "Mustard"
     },
     "location": {
-      "de": "Battle Court",
+      "de": "Kampffeld",
       "en": "Battle Court",
-      "fr": "Battle Court",
-      "es": "Battle Court",
-      "it": "Battle Court"
+      "fr": "Terrain de combat",
+      "es": "Pista de combate",
+      "it": "Campo di battaglia"
     },
     "badge": null,
     "max_level": 80
@@ -703,11 +703,11 @@
       "it": "Peony"
     },
     "location": {
-      "de": "Slippery Slope Ambush",
+      "de": "Schlitterfeld, Hinterhalt",
       "en": "Slippery Slope Ambush",
-      "fr": "Slippery Slope Ambush",
-      "es": "Slippery Slope Ambush",
-      "it": "Slippery Slope Ambush"
+      "fr": "Plateau Beau-Gant, embuscade",
+      "es": "Campo Deslizante, emboscada",
+      "it": "Nevi Primoscivolo, imboscata"
     },
     "badge": null,
     "max_level": 70
@@ -725,8 +725,8 @@
       "de": "Dyna-Riesennest",
       "en": "Max Lair",
       "fr": "Grand Antre Dynamax",
-      "es": "Max Lair",
-      "it": "Max Lair"
+      "es": "Supernido Dinamax",
+      "it": "Dynatana max"
     },
     "badge": null,
     "max_level": 74

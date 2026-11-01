@@ -13,7 +13,7 @@ Catch one Pokémon per route and player.
   - Static locations (gifts, fossils, legendaries) are pre-marked from the game data.
   - Post-game areas are collapsed by default.
   - "Open only" hides finished routes, but keeps the route you just edited visible.
-  - A coloured rail on every route shows its outcome: open, waiting for a player, formed, or lost.
+  - Every route is a tray whose frame and badge show its outcome: open (dashed), waiting for a player, caught, or lost.
 - **Species Clause:** conflicts show a warning and never block a save.
 - **Buttons on each entry:**
   - the bin clears a mistaken entry;
@@ -23,16 +23,15 @@ Catch one Pokémon per route and player.
 
 ## Team
 
-The active six-slot team plus every link as a card.
+A drawer of six team slots, plus a column with the **Box** (alive, off the team) and the **Memorial** (dead). Each slot holds a whole link: its Pokémon side by side with their specimen label (route number, collectors, types, base stats).
 
 - **Mark as dead:**
   - In SoulLink you pick which player lost their Pokémon, with undo, and can record a cause of death for the Memorial.
   - The catch-time status stays untouched.
 - **Evolve and devolve**, with the evolution method. The evolve button glows when a level evolution is reachable within the level cap you have earned.
 - **Sorting and filtering:**
-  - an "evolvable only" filter;
-  - sorting by encounter order, by current base-stat total (BST), or by the BST once fully evolved;
-  - dead links always sink to the end.
+  - for the Box and Memorial column: an "evolvable only" filter and a type filter;
+  - sorting by encounter order, by current base-stat total (BST), or by the BST once fully evolved.
 - **Filling the team:** new links and solo catches join a free team slot automatically while the team is not full.
 - **Broken pairs** (one player caught, the other fled or killed) never appear here, because that link never formed. The surviving catch stays on the Encounter tab.
 - **Free team mode** turns the tab into a plain team builder for runs that are not a Nuzlocke at all.
@@ -87,16 +86,14 @@ Boss battles with their level caps and trainer pictures: gym leaders, the rival,
 
 A per-run dashboard. In a SoulLink run every number also breaks down per player. From top to bottom:
 
-1. **Progress bars** for routes and the journey.
-2. **Stat tiles:**
-   - deaths and catches;
-   - current and next level cap;
-   - team BST, and bank BST (everything caught and alive but off the team), each now and once fully evolved.
-3. **Team coverage:**
+1. **Run sheet:**
+   - the next level cap, big, with the fight's name and place, the team level and the last cap reached;
+   - progress bars for routes and the journey, and the badges earned so far;
+   - a table per player: catches, deaths, team BST and bank BST (everything caught and alive but off the team), each now and once fully evolved.
+2. **Team coverage:**
    - defensive weaknesses;
    - offensive gaps: types nobody on the team hits super-effectively, judged against the last level cap you reached.
-4. **Badges** earned so far.
-5. **Memorial:** every fallen Pokémon by nickname, with who lost it, the cause, and the journey milestone the run had reached.
+3. **Memorial:** every fallen Pokémon by nickname, with who lost it, the cause, and the journey milestone the run had reached.
 
 ## Rules
 
@@ -116,7 +113,7 @@ On top of the toggles:
 
 - **Start page:** the house icon next to the logo opens the collection: every run as a card with its team, route progress, badges, next level cap and deaths, played-last first. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
-- **Game packs:** each run plays one game pack: Red/Blue/Yellow, Gold/Silver/Crystal, FireRed/LeafGreen, Emerald, Platinum, HeartGold, SoulSilver, Black, White, and the fan game Pokémon Infinite Fusion (Classic and Remix).
+- **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 16 ROM hacks, and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
 - **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.
 - **Generation-aware mechanics:** the type chart (Gen 1 quirks included), the catch formula and balls, which Pokémon are obtainable, and era-appropriate sprites.
 - **Historical values:** these are something PokéAPI cannot give you, because it only serves today's values. Correction tables roll back:
@@ -152,8 +149,8 @@ On top of the toggles:
 
 ## Languages
 
-The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu, and a fresh install also offers it on the welcome page, each language named in its own words.
+The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu, and a fresh install also offers it on the welcome page, each language named in its own words. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.
 
-German and English are reviewed by hand. French, Spanish and Italian are **machine-translated**, the interface as well as the place and route names, and may contain mistakes. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI.
+German and English are reviewed by hand. French, Spanish and Italian are **machine-translated** in the interface and may contain mistakes there. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI, and so are the **place names of the official games**, taken from PokéWiki for each game.
 
-Some game packs' route lists, route order and place names have not been checked against the game yet: Red/Blue/Yellow, Gold/Silver/Crystal, Black/White, the games added in 5.2 (Ruby/Sapphire, Diamond/Pearl, Black 2/White 2 and every game from X/Y to Scarlet/Violet), the ROM hacks and Infinite Fusion. They carry a "Data unverified" badge in the New-Run dialog and a note on the Encounter tab, with a link to report mistakes. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language.
+**ROM hacks** exist in English only, so the app names their places, trainers and badges in English in every language, exactly as the game shows them, and says so in the New-Run dialog and on the Encounter tab.

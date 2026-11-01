@@ -28,11 +28,11 @@
       "it": "Hau"
     },
     "location": {
-      "de": "Iki Town Festival",
+      "de": "Lili’i, Fest",
       "en": "Iki Town Festival",
-      "fr": "Iki Town Festival",
-      "es": "Iki Town Festival",
-      "it": "Iki Town Festival"
+      "fr": "Lili’i, fête",
+      "es": "Pueblo Lilii, festival",
+      "it": "Lili, festa"
     },
     "badge": null,
     "max_level": 7
@@ -51,7 +51,7 @@
       "en": "Hau’oli City",
       "fr": "Ekaeka",
       "es": "Ciudad Hauoli",
-      "it": "Hau’oli"
+      "it": "Hau'oli"
     },
     "badge": null,
     "max_level": 11
@@ -66,11 +66,11 @@
       "it": "Prova di Liam"
     },
     "location": {
-      "de": "Totem trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem trial",
-      "fr": "Totem trial",
-      "es": "Totem trial",
-      "it": "Totem trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 12
@@ -199,11 +199,11 @@
       "it": "Prova di Suiren"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 20
@@ -237,11 +237,11 @@
       "it": "Prova di Kawe"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 22
@@ -256,11 +256,11 @@
       "it": "Prova di Ibis"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 24
@@ -332,11 +332,11 @@
       "it": "Morel"
     },
     "location": {
-      "de": "Malie City Kantonian Gym",
+      "de": "Malihe City, Kanto-Arena",
       "en": "Malie City Kantonian Gym",
-      "fr": "Malie City Kantonian Gym",
-      "es": "Malie City Kantonian Gym",
-      "it": "Malie City Kantonian Gym"
+      "fr": "Malié, Arène de Kanto",
+      "es": "Ciudad Malíe, Gimnasio de Kanto",
+      "it": "Malie, Palestra di Kanto"
     },
     "badge": null,
     "max_level": 29
@@ -351,11 +351,11 @@
       "it": "Sophocles' Trial"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 33
@@ -389,11 +389,11 @@
       "it": "Prova di Malpi"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 35
@@ -408,7 +408,7 @@
       "it": "Plumeria"
     },
     "location": {
-      "de": "Route 15 (Wasserweg)",
+      "de": "Route 15",
       "en": "Route 15",
       "fr": "Route 15",
       "es": "Ruta 15",
@@ -446,11 +446,11 @@
       "it": "Iridio"
     },
     "location": {
-      "de": "Aether House",
+      "de": "Æther-Haus",
       "en": "Aether House",
-      "fr": "Aether House",
-      "es": "Aether House",
-      "it": "Aether House"
+      "fr": "Maison Æther",
+      "es": "Casa Æther",
+      "it": "Casa Æther"
     },
     "badge": null,
     "max_level": 43
@@ -598,11 +598,11 @@
       "it": "Kommo-o's Trial"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 49
@@ -617,11 +617,11 @@
       "it": "Necrozma"
     },
     "location": {
-      "de": "Megalopolis",
+      "de": "Ultrametropolis",
       "en": "Megalopolis",
-      "fr": "Megalopolis",
-      "es": "Megalopolis",
-      "it": "Megalopolis"
+      "fr": "Ultra-Mégalopole",
+      "es": "Ultrópolis",
+      "it": "Ultramegalopoli"
     },
     "badge": null,
     "max_level": 60
@@ -655,11 +655,11 @@
       "it": "Liam"
     },
     "location": {
-      "de": "Hau'oli Cemetry",
+      "de": "Hauholi-Friedhof",
       "en": "Hau'oli Cemetry",
-      "fr": "Hau'oli Cemetry",
-      "es": "Hau'oli Cemetry",
-      "it": "Hau'oli Cemetry"
+      "fr": "Cimetière d’Ekaeka",
+      "es": "Cementerio de Hauoli",
+      "it": "Cimitero di Hau’oli"
     },
     "badge": null,
     "max_level": 51
@@ -696,7 +696,7 @@
       "de": "Wela-Vulkanpark",
       "en": "Wela Volcano Park",
       "fr": "Parc Volcanique",
-      "es": "Área Volcánica Wela",
+      "es": "Área Volcánica del Wela",
       "it": "Parco Vulcano Wela"
     },
     "badge": null,
@@ -715,8 +715,8 @@
       "de": "Hokulani-Sternwarte",
       "en": "Hokulani Observatory",
       "fr": "Observatoire",
-      "es": "Observ. de Hokulani",
-      "it": "Osservatorio"
+      "es": "Observatorio de Hokulani",
+      "it": "Osservatorio Hokulani"
     },
     "badge": null,
     "max_level": 51
@@ -731,11 +731,11 @@
       "it": "Augusto"
     },
     "location": {
-      "de": "Aether House",
+      "de": "Æther-Haus",
       "en": "Aether House",
-      "fr": "Aether House",
-      "es": "Aether House",
-      "it": "Aether House"
+      "fr": "Maison Æther",
+      "es": "Casa Æther",
+      "it": "Casa Æther"
     },
     "badge": null,
     "max_level": 52
@@ -750,11 +750,11 @@
       "it": "Prova di Rika"
     },
     "location": {
-      "de": "Totem Trial",
+      "de": "Prüfung (Herrscher-Pokémon)",
       "en": "Totem Trial",
-      "fr": "Totem Trial",
-      "es": "Totem Trial",
-      "it": "Totem Trial"
+      "fr": "Épreuve (Pokémon Dominant)",
+      "es": "Prueba (Pokémon dominante)",
+      "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
     "max_level": 55
@@ -807,7 +807,7 @@
       "it": "Tapso"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -826,7 +826,7 @@
       "it": "Alyxia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -845,7 +845,7 @@
       "it": "Malpi"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -864,7 +864,7 @@
       "it": "Kahili"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -883,7 +883,7 @@
       "it": "Hau"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -924,8 +924,8 @@
       "de": "Rocket-Schloss",
       "en": "Team Rocket's Castle",
       "fr": "Château Rocket",
-      "es": "Team Rocket's Castle",
-      "it": "Team Rocket's Castle"
+      "es": "Castillo Team Rocket",
+      "it": "Castello Team Rocket"
     },
     "badge": null,
     "max_level": 66
@@ -943,8 +943,8 @@
       "de": "Rocket-Schloss",
       "en": "Team Rocket's Castle",
       "fr": "Château Rocket",
-      "es": "Team Rocket's Castle",
-      "it": "Team Rocket's Castle"
+      "es": "Castillo Team Rocket",
+      "it": "Castello Team Rocket"
     },
     "badge": null,
     "max_level": 66
@@ -962,8 +962,8 @@
       "de": "Rocket-Schloss",
       "en": "Team Rocket's Castle",
       "fr": "Château Rocket",
-      "es": "Team Rocket's Castle",
-      "it": "Team Rocket's Castle"
+      "es": "Castillo Team Rocket",
+      "it": "Castello Team Rocket"
     },
     "badge": null,
     "max_level": 67
@@ -981,8 +981,8 @@
       "de": "Rocket-Schloss",
       "en": "Team Rocket's Castle",
       "fr": "Château Rocket",
-      "es": "Team Rocket's Castle",
-      "it": "Team Rocket's Castle"
+      "es": "Castillo Team Rocket",
+      "it": "Castello Team Rocket"
     },
     "badge": null,
     "max_level": 67
@@ -1000,8 +1000,8 @@
       "de": "Rocket-Schloss",
       "en": "Team Rocket's Castle",
       "fr": "Château Rocket",
-      "es": "Team Rocket's Castle",
-      "it": "Team Rocket's Castle"
+      "es": "Castillo Team Rocket",
+      "it": "Castello Team Rocket"
     },
     "badge": null,
     "max_level": 68
@@ -1019,8 +1019,8 @@
       "de": "Rocket-Schloss",
       "en": "Team Rocket's Castle",
       "fr": "Château Rocket",
-      "es": "Team Rocket's Castle",
-      "it": "Team Rocket's Castle"
+      "es": "Castillo Team Rocket",
+      "it": "Castello Team Rocket"
     },
     "badge": null,
     "max_level": 70

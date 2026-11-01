@@ -8,11 +8,11 @@ A game is a small pack of route and boss lists; there are no encounter tables to
 
 - **Want a game but can't build the pack?** Open an issue with the *Add a game or ROM hack* template and name your sources.
 - **Found a wrong route, order, level cap or name?** Use the *Report a data mistake* template.
-- **Unverified packs:** Red/Blue/Yellow, Gold/Silver/Crystal, Black/White and Infinite Fusion have not been checked against the game yet. Checking one and fixing what is off is very welcome. Set `"dataStatus": "verified"` in the same pull request.
+- **Route order:** most packs' route order follows a third-party route list. Playing through a game and correcting the order is very welcome.
 
 ## Translations
 
-German and English are maintained by hand. French, Spanish and Italian were machine-translated (the interface texts and the place names); the Pokémon names come from PokéAPI and are correct. Corrections go into `src/lib/i18n/dictionary.ts` (interface) or the `names` of `data/games/*/routes.json` and `levelcaps.json` (places and bosses).
+German and English are maintained by hand. French, Spanish and Italian interface texts were machine-translated; corrections go into `src/lib/i18n/dictionary.ts`. Pokémon names come from PokéAPI, and the official games' place names from PokéWiki (`scripts/localize-places.mjs`), so they are the official ones. A wrong place name is best fixed at its source: on PokéWiki, or in `data/shared/place-name-overrides.json` for labels that are not one place. ROM hacks are English only, so their names stay English.
 
 ## Code
 

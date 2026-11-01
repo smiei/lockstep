@@ -2,9 +2,9 @@
   {
     "id": 1,
     "names": {
-      "de": "Rocko",
+      "de": "Brock",
       "en": "Brock",
-      "fr": "Pierre",
+      "fr": "Brock",
       "es": "Brock",
       "it": "Brock"
     },
@@ -16,7 +16,8 @@
       "it": "Pewter City Gym"
     },
     "badge": null,
-    "max_level": 20
+    "max_level": 20,
+    "sprite": "Rocko"
   },
   {
     "id": 2,
@@ -61,7 +62,7 @@
     "names": {
       "de": "Misty",
       "en": "Misty",
-      "fr": "Ondine",
+      "fr": "Misty",
       "es": "Misty",
       "it": "Misty"
     },
@@ -116,11 +117,11 @@
   {
     "id": 7,
     "names": {
-      "de": "Rivale",
+      "de": "Rival",
       "en": "Rival",
       "fr": "Rival",
       "es": "Rival",
-      "it": "Rivale"
+      "it": "Rival"
     },
     "location": {
       "de": "Route 24",
@@ -136,11 +137,11 @@
   {
     "id": 8,
     "names": {
-      "de": "Rivale",
+      "de": "Rival",
       "en": "Rival",
       "fr": "Rival",
       "es": "Rival",
-      "it": "Rivale"
+      "it": "Rival"
     },
     "location": {
       "de": "S.S. Anne",
@@ -156,10 +157,10 @@
   {
     "id": 9,
     "names": {
-      "de": "Major Bob",
+      "de": "Lt. Surge",
       "en": "Lt. Surge",
-      "fr": "Major Bob",
-      "es": "Teniente Surge",
+      "fr": "Lt. Surge",
+      "es": "Lt. Surge",
       "it": "Lt. Surge"
     },
     "location": {
@@ -170,7 +171,8 @@
       "it": "Vermillion City Gym"
     },
     "badge": null,
-    "max_level": 40
+    "max_level": 40,
+    "sprite": "Major Bob"
   },
   {
     "id": 10,
@@ -270,11 +272,11 @@
   {
     "id": 15,
     "names": {
-      "de": "Rivale",
+      "de": "Rival",
       "en": "Rival",
       "fr": "Rival",
       "es": "Rival",
-      "it": "Rivale"
+      "it": "Rival"
     },
     "location": {
       "de": "Pokémon Tower",
@@ -347,11 +349,11 @@
   {
     "id": 19,
     "names": {
-      "de": "Rivale",
+      "de": "Rival",
       "en": "Rival",
       "fr": "Rival",
       "es": "Rival",
-      "it": "Rivale"
+      "it": "Rival"
     },
     "location": {
       "de": "Silph Co",
@@ -369,7 +371,7 @@
     "names": {
       "de": "Sabrina",
       "en": "Sabrina",
-      "fr": "Morgane",
+      "fr": "Sabrina",
       "es": "Sabrina",
       "it": "Sabrina"
     },
@@ -424,9 +426,9 @@
   {
     "id": 23,
     "names": {
-      "de": "Pyro",
+      "de": "Blaine",
       "en": "Blaine",
-      "fr": "Auguste",
+      "fr": "Blaine",
       "es": "Blaine",
       "it": "Blaine"
     },
@@ -438,7 +440,8 @@
       "it": "Cinnabar City Gym"
     },
     "badge": null,
-    "max_level": 70
+    "max_level": 70,
+    "sprite": "Pyro"
   },
   {
     "id": 24,
@@ -539,11 +542,11 @@
   {
     "id": 29,
     "names": {
-      "de": "Rivale",
+      "de": "Rival",
       "en": "Rival",
       "fr": "Rival",
       "es": "Rival",
-      "it": "Rivale"
+      "it": "Rival"
     },
     "location": {
       "de": "Viridian City Gym",
@@ -559,9 +562,9 @@
   {
     "id": 30,
     "names": {
-      "de": "Rocko",
+      "de": "Brock",
       "en": "Brock",
-      "fr": "Pierre",
+      "fr": "Brock",
       "es": "Brock",
       "it": "Brock"
     },
@@ -573,14 +576,15 @@
       "it": "Victory Road (left)"
     },
     "badge": null,
-    "max_level": 95
+    "max_level": 95,
+    "sprite": "Rocko"
   },
   {
     "id": 31,
     "names": {
       "de": "Misty",
       "en": "Misty",
-      "fr": "Ondine",
+      "fr": "Misty",
       "es": "Misty",
       "it": "Misty"
     },
@@ -597,10 +601,10 @@
   {
     "id": 32,
     "names": {
-      "de": "Major Bob",
+      "de": "Lt. Surge",
       "en": "Lt. Surge",
-      "fr": "Major Bob",
-      "es": "Teniente Surge",
+      "fr": "Lt. Surge",
+      "es": "Lt. Surge",
       "it": "Lt. Surge"
     },
     "location": {
@@ -611,7 +615,8 @@
       "it": "Victory Road (left)"
     },
     "badge": null,
-    "max_level": 95
+    "max_level": 95,
+    "sprite": "Major Bob"
   },
   {
     "id": 33,
@@ -656,7 +661,7 @@
     "names": {
       "de": "Sabrina",
       "en": "Sabrina",
-      "fr": "Morgane",
+      "fr": "Sabrina",
       "es": "Sabrina",
       "it": "Sabrina"
     },
@@ -673,9 +678,9 @@
   {
     "id": 36,
     "names": {
-      "de": "Pyro",
+      "de": "Blaine",
       "en": "Blaine",
-      "fr": "Auguste",
+      "fr": "Blaine",
       "es": "Blaine",
       "it": "Blaine"
     },
@@ -687,7 +692,8 @@
       "it": "Victory Road (left)"
     },
     "badge": null,
-    "max_level": 95
+    "max_level": 95,
+    "sprite": "Pyro"
   },
   {
     "id": 37,
@@ -866,16 +872,16 @@
     "names": {
       "de": "Lorelei",
       "en": "Lorelei",
-      "fr": "Olga",
+      "fr": "Lorelei",
       "es": "Lorelei",
       "it": "Lorelei"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 100
@@ -885,16 +891,16 @@
     "names": {
       "de": "Bruno",
       "en": "Bruno",
-      "fr": "Aldo",
+      "fr": "Bruno",
       "es": "Bruno",
       "it": "Bruno"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 100
@@ -902,56 +908,58 @@
   {
     "id": 48,
     "names": {
-      "de": "Agathe",
+      "de": "Agatha",
       "en": "Agatha",
       "fr": "Agatha",
       "es": "Agatha",
       "it": "Agatha"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Agathe"
   },
   {
     "id": 49,
     "names": {
-      "de": "Siegfried",
+      "de": "Lance",
       "en": "Lance",
-      "fr": "Peter",
+      "fr": "Lance",
       "es": "Lance",
       "it": "Lance"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Siegfried"
   },
   {
     "id": 50,
     "names": {
-      "de": "Rivale",
+      "de": "Rival",
       "en": "Rival",
       "fr": "Rival",
       "es": "Rival",
-      "it": "Rivale"
+      "it": "Rival"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 100,

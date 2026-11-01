@@ -2,7 +2,6 @@
   "id": "white",
   "sort": 9,
   "kind": "official",
-  "dataStatus": "unverified",
   "generation": 5,
   "dexLimit": 649,
   "spriteSet": "black-white",

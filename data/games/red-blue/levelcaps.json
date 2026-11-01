@@ -119,9 +119,9 @@
       "it": "Rivale"
     },
     "location": {
-      "de": "S.S. Anne, Orania City",
+      "de": "M.S. Anne, Orania City",
       "en": "S.S. Anne, Vermilion City",
-      "fr": "S.S. Anne, Carmin sur Mer",
+      "fr": "L’Océane, Carmin sur Mer",
       "es": "S.S. Anne, Ciudad Carmín",
       "it": "M/N Anna, Aranciopoli"
     },
@@ -213,7 +213,7 @@
       "en": "Rocket Hideout, Celadon City",
       "fr": "Repaire Rocket, Céladopole",
       "es": "Guarida Rocket, Ciudad Azulona",
-      "it": "Covo Rocket, Azzurropoli"
+      "it": "Rifugio Rocket, Azzurropoli"
     },
     "badge": null,
     "max_level": null
@@ -319,9 +319,9 @@
     "location": {
       "de": "Zinnoberinsel",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
+      "fr": "Cramois'île",
       "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "it": "Isola Cannella"
     },
     "badge": {
       "de": "Vulkanorden",
@@ -387,7 +387,7 @@
       "it": "Lorelei"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -406,7 +406,7 @@
       "it": "Bruno"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -425,7 +425,7 @@
       "it": "Agatha"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -444,7 +444,7 @@
       "it": "Lance"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -463,7 +463,7 @@
       "it": "Campione"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",

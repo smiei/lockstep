@@ -4,9 +4,9 @@
     "names": {
       "de": "Neuborkia (Starter)",
       "en": "New Bark Town (Starter)",
-      "fr": "New Bark Town (Starter)",
-      "es": "New Bark Town (Starter)",
-      "it": "New Bark Town (Starter)"
+      "fr": "Bourg Geon (Starter)",
+      "es": "Pueblo Primavera (Inicial)",
+      "it": "Borgo Foglianova (Starter)"
     },
     "type": "static"
   },
@@ -16,8 +16,8 @@
       "de": "Neuborkia",
       "en": "New Bark Town",
       "fr": "Bourg Geon",
-      "es": "New Bark Town",
-      "it": "New Bark Town"
+      "es": "Pueblo Primavera",
+      "it": "Borgo Foglianova"
     },
     "type": "route"
   },
@@ -49,8 +49,8 @@
       "de": "Rosalia City",
       "en": "Cherrygrove City",
       "fr": "Ville Griotte",
-      "es": "Cherrygrove City",
-      "it": "Cherrygrove City"
+      "es": "Ciudad Cerezo",
+      "it": "Fiorpescopoli"
     },
     "type": "route"
   },
@@ -82,8 +82,8 @@
       "de": "Dunkelhöhle",
       "en": "Dark Cave",
       "fr": "Antre Noir",
-      "es": "Dark Cave",
-      "it": "Dark Cave"
+      "es": "Cueva Oscura",
+      "it": "Grotta Scura"
     },
     "type": "route"
   },
@@ -93,8 +93,8 @@
       "de": "Viola City",
       "en": "Violet City",
       "fr": "Mauville",
-      "es": "Violet City",
-      "it": "Violet City"
+      "es": "Ciudad Malva",
+      "it": "Violapoli"
     },
     "type": "route"
   },
@@ -103,9 +103,9 @@
     "names": {
       "de": "Viola City (Primo-Ei)",
       "en": "Violet City (Primo Egg)",
-      "fr": "Violet City (Primo Egg)",
-      "es": "Violet City (Primo Egg)",
-      "it": "Violet City (Primo Egg)"
+      "fr": "Mauville (Œuf de Primo)",
+      "es": "Ciudad Malva (Huevo de Primo)",
+      "it": "Violapoli (Uovo di Primo)"
     },
     "type": "static"
   },
@@ -114,9 +114,9 @@
     "names": {
       "de": "Viola City (Togepi-Ei)",
       "en": "Violet City (Togepi Egg)",
-      "fr": "Violet City (Togepi Egg)",
-      "es": "Violet City (Togepi Egg)",
-      "it": "Violet City (Togepi Egg)"
+      "fr": "Mauville (Œuf Togepi)",
+      "es": "Ciudad Malva (Huevo de Togepi)",
+      "it": "Violapoli (Uovo di Togepi)"
     },
     "type": "static"
   },
@@ -125,9 +125,9 @@
     "names": {
       "de": "Knofensa-Turm",
       "en": "Sprout Tower",
-      "fr": "Tour Chetiflor",
-      "es": "Sprout Tower",
-      "it": "Sprout Tower"
+      "fr": "Tour Chétiflor",
+      "es": "Torre Bellsprout",
+      "it": "Torre Sprout"
     },
     "type": "route"
   },
@@ -148,8 +148,8 @@
       "de": "Alph-Ruinen",
       "en": "Ruins of Alph",
       "fr": "Ruines d'Alpha",
-      "es": "Ruins of Alph",
-      "it": "Ruins of Alph"
+      "es": "Ruinas Alfa",
+      "it": "Rovine d'Alfa"
     },
     "type": "route"
   },
@@ -159,19 +159,19 @@
       "de": "Einheitstunnel",
       "en": "Union Cave",
       "fr": "Caves Jumelles",
-      "es": "Union Cave",
-      "it": "Union Cave"
+      "es": "Cueva Unión",
+      "it": "Grotta di mezzo"
     },
     "type": "route"
   },
   {
     "id": 16,
     "names": {
-      "de": "Einheitshöhle (Lapras)",
+      "de": "Einheitstunnel (Lapras)",
       "en": "Union Cave (Lapras)",
-      "fr": "Union Cave (Lapras)",
-      "es": "Union Cave (Lapras)",
-      "it": "Union Cave (Lapras)"
+      "fr": "Caves Jumelles (Lokhlass)",
+      "es": "Cueva Unión (Lapras)",
+      "it": "Grotta di mezzo (Lapras)"
     },
     "type": "static"
   },
@@ -191,9 +191,9 @@
     "names": {
       "de": "Azalea City",
       "en": "Azalea Town",
-      "fr": "Ecorcia",
-      "es": "Azalea Town",
-      "it": "Azalea Town"
+      "fr": "Écorcia",
+      "es": "Pueblo Azalea",
+      "it": "Azalina"
     },
     "type": "route"
   },
@@ -203,8 +203,8 @@
       "de": "Flegmon-Brunnen",
       "en": "Slowpoke Well",
       "fr": "Puits Ramoloss",
-      "es": "Slowpoke Well",
-      "it": "Slowpoke Well"
+      "es": "Pozo Slowpoke",
+      "it": "Pozzo Slowpoke"
     },
     "type": "route"
   },
@@ -214,8 +214,8 @@
       "de": "Steineichenwald",
       "en": "Ilex Forest",
       "fr": "Bois aux Chênes",
-      "es": "Ilex Forest",
-      "it": "Ilex Forest"
+      "es": "Encinar",
+      "it": "Bosco di Lecci"
     },
     "type": "route"
   },
@@ -236,8 +236,8 @@
       "de": "Dukatia City",
       "en": "Goldenrod City",
       "fr": "Doublonville",
-      "es": "Goldenrod City",
-      "it": "Goldenrod City"
+      "es": "Ciudad Trigal",
+      "it": "Fiordoropoli"
     },
     "type": "route"
   },
@@ -246,9 +246,9 @@
     "names": {
       "de": "Dukatia City (Habitak)",
       "en": "Goldenrod City (Spearow)",
-      "fr": "Goldenrod City (Spearow)",
-      "es": "Goldenrod City (Spearow)",
-      "it": "Goldenrod City (Spearow)"
+      "fr": "Doublonville (Piafabec)",
+      "es": "Ciudad Trigal (Spearow)",
+      "it": "Fiordoropoli (Spearow)"
     },
     "type": "static"
   },
@@ -257,9 +257,9 @@
     "names": {
       "de": "Dukatia City (Evoli)",
       "en": "Goldenrod City (Eevee)",
-      "fr": "Goldenrod City (Eevee)",
-      "es": "Goldenrod City (Eevee)",
-      "it": "Goldenrod City (Eevee)"
+      "fr": "Doublonville (Évoli)",
+      "es": "Ciudad Trigal (Eevee)",
+      "it": "Fiordoropoli (Eevee)"
     },
     "type": "static"
   },
@@ -280,8 +280,8 @@
       "de": "Nationalpark",
       "en": "National Park",
       "fr": "Parc Naturel",
-      "es": "National Park",
-      "it": "National Park"
+      "es": "Parque Nacional",
+      "it": "Parco Nazionale"
     },
     "type": "route"
   },
@@ -301,9 +301,9 @@
     "names": {
       "de": "Route 36 (Mogelbaum)",
       "en": "Route 36 (Sudowoodo)",
-      "fr": "Route 36 (Sudowoodo)",
-      "es": "Route 36 (Sudowoodo)",
-      "it": "Route 36 (Sudowoodo)"
+      "fr": "Route 36 (Simularbre)",
+      "es": "Ruta 36 (Sudowoodo)",
+      "it": "Percorso 36 (Sudowoodo)"
     },
     "type": "static"
   },
@@ -324,8 +324,8 @@
       "de": "Teak City",
       "en": "Ecruteak City",
       "fr": "Rosalia",
-      "es": "Ecruteak City",
-      "it": "Ecruteak City"
+      "es": "Ciudad Iris",
+      "it": "Amarantopoli"
     },
     "type": "route"
   },
@@ -335,8 +335,8 @@
       "de": "Turmruine",
       "en": "Burned Tower",
       "fr": "Tour Cendrée",
-      "es": "Burned Tower",
-      "it": "Burned Tower"
+      "es": "Torre Quemada",
+      "it": "Torre Bruciata"
     },
     "type": "route"
   },
@@ -346,8 +346,8 @@
       "de": "Glockenturm",
       "en": "Bell Tower",
       "fr": "Tour Carillon",
-      "es": "Bell Tower",
-      "it": "Bell Tower"
+      "es": "Torre Campana",
+      "it": "Torre Campana"
     },
     "type": "route"
   },
@@ -356,9 +356,9 @@
     "names": {
       "de": "Glockenturm (Ho-Oh)",
       "en": "Bell Tower (Ho-Oh)",
-      "fr": "Bell Tower (Ho-Oh)",
-      "es": "Bell Tower (Ho-Oh)",
-      "it": "Bell Tower (Ho-Oh)"
+      "fr": "Tour Carillon (Ho-Oh)",
+      "es": "Torre Campana (Ho-Oh)",
+      "it": "Torre Campana (Ho-Oh)"
     },
     "type": "static",
     "postgame": true
@@ -391,8 +391,8 @@
       "de": "Oliviana City",
       "en": "Olivine City",
       "fr": "Oliville",
-      "es": "Olivine City",
-      "it": "Olivine City"
+      "es": "Ciudad Olivo",
+      "it": "Olivinopoli"
     },
     "type": "route"
   },
@@ -401,7 +401,7 @@
     "names": {
       "de": "Route 40",
       "en": "Route 40",
-      "fr": "Route 40",
+      "fr": "Chenal 40",
       "es": "Ruta 40",
       "it": "Percorso 40"
     },
@@ -412,7 +412,7 @@
     "names": {
       "de": "Route 41",
       "en": "Route 41",
-      "fr": "Route 41",
+      "fr": "Chenal 41",
       "es": "Ruta 41",
       "it": "Percorso 41"
     },
@@ -423,9 +423,9 @@
     "names": {
       "de": "Strudelinseln",
       "en": "Whirl Islands",
-      "fr": "Tourb'Iles",
-      "es": "Whirl Islands",
-      "it": "Whirl Islands"
+      "fr": "Tourb'Îles",
+      "es": "Islas Remolino",
+      "it": "Isole Vorticose"
     },
     "type": "route"
   },
@@ -434,9 +434,9 @@
     "names": {
       "de": "Strudelinseln (Lugia)",
       "en": "Whirl Islands (Lugia)",
-      "fr": "Whirl Islands (Lugia)",
-      "es": "Whirl Islands (Lugia)",
-      "it": "Whirl Islands (Lugia)"
+      "fr": "Tourb'Îles (Lugia)",
+      "es": "Islas Remolino (Lugia)",
+      "it": "Isole Vorticose (Lugia)"
     },
     "type": "static"
   },
@@ -446,8 +446,8 @@
       "de": "Anemonia City",
       "en": "Cianwood City",
       "fr": "Irisia",
-      "es": "Cianwood City",
-      "it": "Cianwood City"
+      "es": "Ciudad Orquídea",
+      "it": "Fiorlisopoli"
     },
     "type": "route"
   },
@@ -456,9 +456,9 @@
     "names": {
       "de": "Anemonia City (Pottrott)",
       "en": "Cianwood City (Shuckle)",
-      "fr": "Cianwood City (Shuckle)",
-      "es": "Cianwood City (Shuckle)",
-      "it": "Cianwood City (Shuckle)"
+      "fr": "Irisia (Caratroc)",
+      "es": "Ciudad Orquídea (Shuckle)",
+      "it": "Fiorlisopoli (Shuckle)"
     },
     "type": "static"
   },
@@ -468,8 +468,8 @@
       "de": "Felsklippentor",
       "en": "Cliff Edge Gate",
       "fr": "Portail Falaise",
-      "es": "Cliff Edge Gate",
-      "it": "Cliff Edge Gate"
+      "es": "Paso Acantilado",
+      "it": "Ingresso Falesia"
     },
     "type": "route"
   },
@@ -487,11 +487,11 @@
   {
     "id": 45,
     "names": {
-      "de": "Klippenhöhle",
+      "de": "Felsschlundhöhle",
       "en": "Cliff Cave",
       "fr": "Grotte Falaise",
-      "es": "Cliff Cave",
-      "it": "Cliff Cave"
+      "es": "Cueva Acantilado",
+      "it": "Grotta Falesia"
     },
     "type": "route"
   },
@@ -509,11 +509,11 @@
   {
     "id": 47,
     "names": {
-      "de": "Safaria-Eingang",
+      "de": "Safari-Eingang",
       "en": "Safari Zone Gate",
       "fr": "Portail Safari",
-      "es": "Safari Zone Gate",
-      "it": "Safari Zone Gate"
+      "es": "Entrada Safari",
+      "it": "Ingresso Safari"
     },
     "type": "route"
   },
@@ -545,8 +545,8 @@
       "de": "Kesselberg",
       "en": "Mt. Mortar",
       "fr": "Mont Creuset",
-      "es": "Mt. Mortar",
-      "it": "Mt. Mortar"
+      "es": "Monte Mortero",
+      "it": "Monte Scodella"
     },
     "type": "route"
   },
@@ -555,9 +555,9 @@
     "names": {
       "de": "Kesselberg (Rabauz)",
       "en": "Mt. Mortar (Tyrogue)",
-      "fr": "Mt. Mortar (Tyrogue)",
-      "es": "Mt. Mortar (Tyrogue)",
-      "it": "Mt. Mortar (Tyrogue)"
+      "fr": "Mont Creuset (Debugant)",
+      "es": "Monte Mortero (Tyrogue)",
+      "it": "Monte Scodella (Tyrogue)"
     },
     "type": "route"
   },
@@ -566,9 +566,9 @@
     "names": {
       "de": "Rocket-Versteck",
       "en": "Rocket Hideout",
-      "fr": "Rocket Hideout",
-      "es": "Rocket Hideout",
-      "it": "Rocket Hideout"
+      "fr": "Repaire Rocket",
+      "es": "Guarida Rocket",
+      "it": "Rifugio Rocket"
     },
     "type": "route"
   },
@@ -578,8 +578,8 @@
       "de": "See des Zorns",
       "en": "Lake of Rage",
       "fr": "Lac Colère",
-      "es": "Lake of Rage",
-      "it": "Lake of Rage"
+      "es": "Lago de la Furia",
+      "it": "Lago d'Ira"
     },
     "type": "route"
   },
@@ -588,9 +588,9 @@
     "names": {
       "de": "See des Zorns (Rotes Garados)",
       "en": "Lake of Rage (Red Gyarados)",
-      "fr": "Lake of Rage (Red Gyarados)",
-      "es": "Lake of Rage (Red Gyarados)",
-      "it": "Lake of Rage (Red Gyarados)"
+      "fr": "Lac Colère (Léviator rouge)",
+      "es": "Lago de la Furia (Gyarados rojo)",
+      "it": "Lago d'Ira (Gyarados rosso)"
     },
     "type": "static"
   },
@@ -622,8 +622,8 @@
       "de": "Eispfad",
       "en": "Ice Path",
       "fr": "Route de Glace",
-      "es": "Ice Path",
-      "it": "Ice Path"
+      "es": "Ruta Helada",
+      "it": "Via Gelata"
     },
     "type": "route"
   },
@@ -632,9 +632,9 @@
     "names": {
       "de": "Ebenholz City",
       "en": "Blackthorn City",
-      "fr": "Ebènelle",
-      "es": "Blackthorn City",
-      "it": "Blackthorn City"
+      "fr": "Ébènelle",
+      "es": "Ciudad Endrino",
+      "it": "Ebanopoli"
     },
     "type": "route"
   },
@@ -644,8 +644,8 @@
       "de": "Drachenhöhle",
       "en": "Dragon's Den",
       "fr": "Antre du Dragon",
-      "es": "Dragon's Den",
-      "it": "Dragon's Den"
+      "es": "Guarida Dragón",
+      "it": "Tana del Drago"
     },
     "type": "route"
   },
@@ -654,9 +654,9 @@
     "names": {
       "de": "Drachenhöhle (Dratini)",
       "en": "Dragon's Den (Dratini)",
-      "fr": "Dragon's Den (Dratini)",
-      "es": "Dragon's Den (Dratini)",
-      "it": "Dragon's Den (Dratini)"
+      "fr": "Antre du Dragon (Minidraco)",
+      "es": "Guarida Dragón (Dratini)",
+      "it": "Tana del Drago (Dratini)"
     },
     "type": "static"
   },
@@ -688,8 +688,8 @@
       "de": "Tohjo-Fälle",
       "en": "Tohjo Falls",
       "fr": "Chutes Tohjo",
-      "es": "Tohjo Falls",
-      "it": "Tohjo Falls"
+      "es": "Cataratas Tohjo",
+      "it": "Cascate Tohjo"
     },
     "type": "route"
   },
@@ -721,30 +721,30 @@
       "de": "Indigo Plateau",
       "en": "Indigo Plateau",
       "fr": "Plateau Indigo",
-      "es": "Indigo Plateau",
-      "it": "Indigo Plateau"
+      "es": "Meseta Añil",
+      "it": "Altopiano Blu"
     },
     "type": "route"
   },
   {
     "id": 67,
     "names": {
-      "de": "Wandernd (Raikou)",
+      "de": "umherstreifend (Raikou)",
       "en": "Roaming (Raikou)",
-      "fr": "Roaming (Raikou)",
-      "es": "Roaming (Raikou)",
-      "it": "Roaming (Raikou)"
+      "fr": "errant (Raikou)",
+      "es": "errante (Raikou)",
+      "it": "errante (Raikou)"
     },
     "type": "static"
   },
   {
     "id": 68,
     "names": {
-      "de": "Wandernd (Entei)",
+      "de": "umherstreifend (Entei)",
       "en": "Roaming (Entei)",
-      "fr": "Roaming (Entei)",
-      "es": "Roaming (Entei)",
-      "it": "Roaming (Entei)"
+      "fr": "errant (Entei)",
+      "es": "errante (Entei)",
+      "it": "errante (Entei)"
     },
     "type": "static"
   },
@@ -765,9 +765,9 @@
     "names": {
       "de": "Orania City (Relaxo)",
       "en": "Vermilion City (Snorlax)",
-      "fr": "Vermilion City (Snorlax)",
-      "es": "Vermilion City (Snorlax)",
-      "it": "Vermilion City (Snorlax)"
+      "fr": "Carmin sur Mer (Ronflex)",
+      "es": "Ciudad Carmín (Snorlax)",
+      "it": "Aranciopoli (Snorlax)"
     },
     "type": "static",
     "postgame": true
@@ -801,9 +801,9 @@
     "names": {
       "de": "Saffronia City (Hoenn-Starter)",
       "en": "Saffron City (Hoenn Starter)",
-      "fr": "Saffron City (Hoenn Starter)",
-      "es": "Saffron City (Hoenn Starter)",
-      "it": "Saffron City (Hoenn Starter)"
+      "fr": "Safrania (Starter de Hoenn)",
+      "es": "Ciudad Azafrán (Inicial de Hoenn)",
+      "it": "Zafferanopoli (Starter di Hoenn)"
     },
     "type": "static",
     "postgame": true
@@ -873,9 +873,9 @@
     "names": {
       "de": "Fuchsania City",
       "en": "Fuschia City",
-      "fr": "Fuschia City",
-      "es": "Fuschia City",
-      "it": "Fuschia City"
+      "fr": "Parmanie",
+      "es": "Ciudad Fucsia",
+      "it": "Fucsiapoli"
     },
     "type": "route",
     "postgame": true
@@ -993,9 +993,9 @@
     "names": {
       "de": "Kraftwerk (Zapdos)",
       "en": "Power Plant (Zapdos)",
-      "fr": "Power Plant (Zapdos)",
-      "es": "Power Plant (Zapdos)",
-      "it": "Power Plant (Zapdos)"
+      "fr": "Centrale (Électhor)",
+      "es": "Central Energía (Zapdos)",
+      "it": "Centrale Elettrica (Zapdos)"
     },
     "type": "static",
     "postgame": true
@@ -1030,8 +1030,8 @@
       "de": "Route 25 (Suicune)",
       "en": "Route 25 (Suicune)",
       "fr": "Route 25 (Suicune)",
-      "es": "Route 25 (Suicune)",
-      "it": "Route 25 (Suicune)"
+      "es": "Ruta 25 (Suicune)",
+      "it": "Percorso 25 (Suicune)"
     },
     "type": "static",
     "postgame": true
@@ -1087,11 +1087,11 @@
   {
     "id": 97,
     "names": {
-      "de": "Digda-Höhle",
+      "de": "Digdas Höhle",
       "en": "Diglett's Cave",
       "fr": "Cave Taupiqueur",
       "es": "Cueva Diglett",
-      "it": "Grotta di Diglett"
+      "it": "Grotta Diglett"
     },
     "type": "route",
     "postgame": true
@@ -1113,9 +1113,9 @@
     "names": {
       "de": "Marmoria City (Fossil)",
       "en": "Pewter City (Fossil)",
-      "fr": "Pewter City (Fossil)",
-      "es": "Pewter City (Fossil)",
-      "it": "Pewter City (Fossil)"
+      "fr": "Argenta (Fossile)",
+      "es": "Ciudad Plateada (Fósil)",
+      "it": "Plumbeopoli (Fossile)"
     },
     "type": "static",
     "postgame": true
@@ -1138,7 +1138,7 @@
       "de": "Mondberg",
       "en": "Mt. Moon",
       "fr": "Mont Sélénite",
-      "es": "Monte Luna",
+      "es": "Mt. Moon",
       "it": "Monte Luna"
     },
     "type": "route",
@@ -1209,9 +1209,9 @@
     "names": {
       "de": "Alabastia (Kanto-Starter)",
       "en": "Pallet Town (Kanto Starter)",
-      "fr": "Pallet Town (Kanto Starter)",
-      "es": "Pallet Town (Kanto Starter)",
-      "it": "Pallet Town (Kanto Starter)"
+      "fr": "Bourg Palette (Starter de Kanto)",
+      "es": "Pueblo Paleta (Inicial de Kanto)",
+      "it": "Biancavilla (Starter di Kanto)"
     },
     "type": "static",
     "postgame": true
@@ -1233,9 +1233,9 @@
     "names": {
       "de": "Zinnoberinsel",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
+      "fr": "Cramois'île",
       "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "it": "Isola Cannella"
     },
     "type": "route",
     "postgame": true
@@ -1293,9 +1293,9 @@
     "names": {
       "de": "Seeschauminseln",
       "en": "Seafoam Islands",
-      "fr": "Iles Ecume",
+      "fr": "Îles Écume",
       "es": "Islas Espuma",
-      "it": "Isole Schiuma"
+      "it": "Isole Spumarine"
     },
     "type": "route",
     "postgame": true
@@ -1305,9 +1305,9 @@
     "names": {
       "de": "Seeschauminseln (Arktos)",
       "en": "Seafoam Islands (Articuno)",
-      "fr": "Seafoam Islands (Articuno)",
-      "es": "Seafoam Islands (Articuno)",
-      "it": "Seafoam Islands (Articuno)"
+      "fr": "Îles Écume (Artikodin)",
+      "es": "Islas Espuma (Articuno)",
+      "it": "Isole Spumarine (Articuno)"
     },
     "type": "static",
     "postgame": true
@@ -1315,7 +1315,7 @@
   {
     "id": 116,
     "names": {
-      "de": "Geheimdungeon",
+      "de": "Azuria-Höhle",
       "en": "Cerulean Cave",
       "fr": "Caverne Azurée",
       "es": "Cueva Celeste",
@@ -1327,11 +1327,11 @@
   {
     "id": 117,
     "names": {
-      "de": "Geheimdungeon (Mewtu)",
+      "de": "Azuria-Höhle (Mewtu)",
       "en": "Cerulean Cave (Mewtwo)",
-      "fr": "Cerulean Cave (Mewtwo)",
-      "es": "Cerulean Cave (Mewtwo)",
-      "it": "Cerulean Cave (Mewtwo)"
+      "fr": "Caverne Azurée (Mewtwo)",
+      "es": "Cueva Celeste (Mewtwo)",
+      "it": "Grotta Celeste (Mewtwo)"
     },
     "type": "static",
     "postgame": true
@@ -1342,8 +1342,8 @@
       "de": "Silberberg",
       "en": "Mt. Silver",
       "fr": "Mont Argenté",
-      "es": "Mt. Silver",
-      "it": "Mt. Silver"
+      "es": "Monte Plateado",
+      "it": "Monte Argento"
     },
     "type": "route",
     "postgame": true
@@ -1353,9 +1353,9 @@
     "names": {
       "de": "Silberberg (Lavados)",
       "en": "Mt. Silver (Moltres)",
-      "fr": "Mt. Silver (Moltres)",
-      "es": "Mt. Silver (Moltres)",
-      "it": "Mt. Silver (Moltres)"
+      "fr": "Mont Argenté (Sulfura)",
+      "es": "Monte Plateado (Moltres)",
+      "it": "Monte Argento (Moltres)"
     },
     "type": "static",
     "postgame": true
@@ -1363,11 +1363,11 @@
   {
     "id": 120,
     "names": {
-      "de": "Wandernd (Latias/Latios)",
+      "de": "umherstreifend (Latias/Latios)",
       "en": "Roaming (Latias/Latios)",
-      "fr": "Roaming (Latias/Latios)",
-      "es": "Roaming (Latias/Latios)",
-      "it": "Roaming (Latias/Latios)"
+      "fr": "errant (Latias/Latios)",
+      "es": "errante (Latias/Latios)",
+      "it": "errante (Latias/Latios)"
     },
     "type": "static",
     "postgame": true

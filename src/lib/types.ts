@@ -32,9 +32,6 @@ export type GameSummary = {
   // The pack has fusions (Infinite Fusion) - the gear menu credits its
   // outside sources while such a run is open.
   fusion?: boolean;
-  // Route list and names not yet checked against the game (game.json
-  // dataStatus) - the New-Run dialog marks it.
-  unverified?: boolean;
   // official / romhack / fangame (game.json kind) - the dialog groups by it.
   kind?: "official" | "romhack" | "fangame";
 };

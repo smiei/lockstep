@@ -16,8 +16,8 @@
       "de": "Zweiblattdorf",
       "en": "Twinleaf Town",
       "fr": "Bonaugure",
-      "es": "Twinleaf Town",
-      "it": "Twinleaf Town"
+      "es": "Pueblo Hojaverde",
+      "it": "Duefoglie"
     },
     "type": "route"
   },
@@ -38,8 +38,8 @@
       "de": "See der Wahrheit",
       "en": "Lake Verity",
       "fr": "Lac Vérité",
-      "es": "Lake Verity",
-      "it": "Lake Verity"
+      "es": "Lago Veraz",
+      "it": "Lago Verità"
     },
     "type": "route"
   },
@@ -70,20 +70,20 @@
     "names": {
       "de": "Erzelingen-Tor",
       "en": "Oreburgh Gate",
-      "fr": "Entrée Charbourg",
-      "es": "Oreburgh Gate",
-      "it": "Oreburgh Gate"
+      "fr": "Entrée de Charbourg",
+      "es": "Puerta Pirita",
+      "it": "Varco Mineropoli"
     },
     "type": "route"
   },
   {
     "id": 8,
     "names": {
-      "de": "Erzelingen City",
+      "de": "Erzelingen",
       "en": "Oreburgh City",
       "fr": "Charbourg",
-      "es": "Oreburgh City",
-      "it": "Oreburgh City"
+      "es": "Ciudad Pirita",
+      "it": "Mineropoli"
     },
     "type": "route"
   },
@@ -92,9 +92,9 @@
     "names": {
       "de": "Erzelingen-Mine",
       "en": "Oreburgh Mine",
-      "fr": "Fossile Charbourg",
-      "es": "Oreburgh Mine",
-      "it": "Oreburgh Mine"
+      "fr": "Mine Charbourg",
+      "es": "Mina Pirita",
+      "it": "Cava Mineropoli"
     },
     "type": "route"
   },
@@ -114,20 +114,20 @@
     "names": {
       "de": "Route 204",
       "en": "Route 204",
-      "fr": "Baudrive Les Eoliennes",
-      "es": "Route 204",
-      "it": "Route 204"
+      "fr": "Route 204",
+      "es": "Ruta 204",
+      "it": "Percorso 204"
     },
     "type": "route"
   },
   {
     "id": 12,
     "names": {
-      "de": "Zerklüfteter Pfad",
+      "de": "Verwüsteter Pfad",
       "en": "Ravaged Path",
       "fr": "Chemin Rocheux",
-      "es": "Ravaged Path",
-      "it": "Ravaged Path"
+      "es": "Senda Desolada",
+      "it": "Cammino Roccioso"
     },
     "type": "route"
   },
@@ -136,9 +136,9 @@
     "names": {
       "de": "Auen von Flori",
       "en": "Floaroma Meadow",
-      "fr": "Pré Floraville",
-      "es": "Floaroma Meadow",
-      "it": "Floaroma Meadow"
+      "fr": "Pré de Floraville",
+      "es": "Prado Aromaflor",
+      "it": "Prato Fiorito"
     },
     "type": "route"
   },
@@ -147,20 +147,20 @@
     "names": {
       "de": "Route 205",
       "en": "Route 205",
-      "fr": "Motisma Vieux Château",
-      "es": "Route 205",
-      "it": "Route 205"
+      "fr": "Route 205",
+      "es": "Ruta 205",
+      "it": "Percorso 205"
     },
     "type": "route"
   },
   {
     "id": 15,
     "names": {
-      "de": "Windkraftanlage",
+      "de": "Windkraftwerk",
       "en": "Valley Windworks",
-      "fr": "Œuf de Togepi Vestigion",
-      "es": "Valley Windworks",
-      "it": "Valley Windworks"
+      "fr": "Parc Éolien",
+      "es": "Valle Eólico",
+      "it": "Impianto Turbine"
     },
     "type": "route"
   },
@@ -169,9 +169,9 @@
     "names": {
       "de": "Ewigwald",
       "en": "Eterna Forest",
-      "fr": "Forêt Vestigion",
-      "es": "Eterna Forest",
-      "it": "Eterna Forest"
+      "fr": "Forêt de Vestigion",
+      "es": "Bosque Vetusto",
+      "it": "Bosco Evopoli"
     },
     "type": "route"
   },
@@ -181,8 +181,8 @@
       "de": "Alte Villa",
       "en": "Old Chateau",
       "fr": "Vieux Château",
-      "es": "Old Chateau",
-      "it": "Old Chateau"
+      "es": "Vieja Mansión",
+      "it": "Antico Château"
     },
     "type": "route"
   },
@@ -191,196 +191,196 @@
     "names": {
       "de": "Ewigenau",
       "en": "Eterna City",
-      "fr": "Évoli Unionpolis",
-      "es": "Eterna City",
-      "it": "Eterna City"
+      "fr": "Vestigion",
+      "es": "Ciudad Vetusta",
+      "it": "Evopoli"
     },
     "type": "route"
   },
   {
     "id": 19,
     "names": {
-      "de": "Underground: Spacious Cave",
+      "de": "Untergrundhöhlen: Großgrotte",
       "en": "Underground: Spacious Cave",
-      "fr": "Underground: Spacious Cave",
-      "es": "Underground: Spacious Cave",
-      "it": "Underground: Spacious Cave"
+      "fr": "Grands Souterrains: Grotte Spacieuse",
+      "es": "Grutas del Subsuelo: Cueva Espaciosa",
+      "it": "Grandi Sotterranei: Antro spazioso"
     },
     "type": "route"
   },
   {
     "id": 20,
     "names": {
-      "de": "Underground: Grassland Cave",
+      "de": "Untergrundhöhlen: Wiesengrotte",
       "en": "Underground: Grassland Cave",
-      "fr": "Underground: Grassland Cave",
-      "es": "Underground: Grassland Cave",
-      "it": "Underground: Grassland Cave"
+      "fr": "Grands Souterrains: Grotte de la Prairie",
+      "es": "Grutas del Subsuelo: Cueva Pradera",
+      "it": "Grandi Sotterranei: Antro della prateria"
     },
     "type": "route"
   },
   {
     "id": 21,
     "names": {
-      "de": "Underground: Fountainspring Cave",
+      "de": "Untergrundhöhlen: Wasserlaufgrotte",
       "en": "Underground: Fountainspring Cave",
-      "fr": "Underground: Fountainspring Cave",
-      "es": "Underground: Fountainspring Cave",
-      "it": "Underground: Fountainspring Cave"
+      "fr": "Grands Souterrains: Grotte des Eaux Souterraines",
+      "es": "Grutas del Subsuelo: Cueva Fluvial",
+      "it": "Grandi Sotterranei: Antro delle falde acquifere"
     },
     "type": "route"
   },
   {
     "id": 22,
     "names": {
-      "de": "Underground: Rocky Cave",
+      "de": "Untergrundhöhlen: Felsengrotte",
       "en": "Underground: Rocky Cave",
-      "fr": "Underground: Rocky Cave",
-      "es": "Underground: Rocky Cave",
-      "it": "Underground: Rocky Cave"
+      "fr": "Grands Souterrains: Grotte des Rochers",
+      "es": "Grutas del Subsuelo: Cueva Rocosa",
+      "it": "Grandi Sotterranei: Antro delle rocce"
     },
     "type": "route"
   },
   {
     "id": 23,
     "names": {
-      "de": "Underground: Swampy Cave",
+      "de": "Untergrundhöhlen: Moorgrotte",
       "en": "Underground: Swampy Cave",
-      "fr": "Underground: Swampy Cave",
-      "es": "Underground: Swampy Cave",
-      "it": "Underground: Swampy Cave"
+      "fr": "Grands Souterrains: Grotte du Marécage",
+      "es": "Grutas del Subsuelo: Cueva Pantanosa",
+      "it": "Grandi Sotterranei: Antro dell’acquitrino"
     },
     "type": "route"
   },
   {
     "id": 24,
     "names": {
-      "de": "Underground: Dazzling Cave",
+      "de": "Untergrundhöhlen: Glitzergrotte",
       "en": "Underground: Dazzling Cave",
-      "fr": "Underground: Dazzling Cave",
-      "es": "Underground: Dazzling Cave",
-      "it": "Underground: Dazzling Cave"
+      "fr": "Grands Souterrains: Grotte Éblouissante",
+      "es": "Grutas del Subsuelo: Cueva Centelleo",
+      "it": "Grandi Sotterranei: Antro dei bagliori"
     },
     "type": "route"
   },
   {
     "id": 25,
     "names": {
-      "de": "Underground: Whiteout Cave",
+      "de": "Untergrundhöhlen: Schneesturmgrotte",
       "en": "Underground: Whiteout Cave",
-      "fr": "Underground: Whiteout Cave",
-      "es": "Underground: Whiteout Cave",
-      "it": "Underground: Whiteout Cave"
+      "fr": "Grands Souterrains: Grotte du Blizzard",
+      "es": "Grutas del Subsuelo: Cueva Ventisca",
+      "it": "Grandi Sotterranei: Antro della tormenta"
     },
     "type": "route"
   },
   {
     "id": 26,
     "names": {
-      "de": "Underground: Icy Cave",
+      "de": "Untergrundhöhlen: Eiszapfengrotte",
       "en": "Underground: Icy Cave",
-      "fr": "Underground: Icy Cave",
-      "es": "Underground: Icy Cave",
-      "it": "Underground: Icy Cave"
+      "fr": "Grands Souterrains: Grotte des Stalactites",
+      "es": "Grutas del Subsuelo: Cueva Carámbano",
+      "it": "Grandi Sotterranei: Antro delle stalattiti"
     },
     "type": "route"
   },
   {
     "id": 27,
     "names": {
-      "de": "Underground: Riverbank Cave",
+      "de": "Untergrundhöhlen: Flussufergrotte",
       "en": "Underground: Riverbank Cave",
-      "fr": "Underground: Riverbank Cave",
-      "es": "Underground: Riverbank Cave",
-      "it": "Underground: Riverbank Cave"
+      "fr": "Grands Souterrains: Grotte de la Rivière",
+      "es": "Grutas del Subsuelo: Cueva Ribera",
+      "it": "Grandi Sotterranei: Antro della riva"
     },
     "type": "route"
   },
   {
     "id": 28,
     "names": {
-      "de": "Underground: Sandsear Cave",
+      "de": "Untergrundhöhlen: Glühsandgrotte",
       "en": "Underground: Sandsear Cave",
-      "fr": "Underground: Sandsear Cave",
-      "es": "Underground: Sandsear Cave",
-      "it": "Underground: Sandsear Cave"
+      "fr": "Grands Souterrains: Grotte des Sables Ardents",
+      "es": "Grutas del Subsuelo: Cueva Caldarena",
+      "it": "Grandi Sotterranei: Antro delle sabbie ardenti"
     },
     "type": "route"
   },
   {
     "id": 29,
     "names": {
-      "de": "Underground: Still-Water Cave",
+      "de": "Untergrundhöhlen: Spiegelseegrotte",
       "en": "Underground: Still-Water Cave",
-      "fr": "Underground: Still-Water Cave",
-      "es": "Underground: Still-Water Cave",
-      "it": "Underground: Still-Water Cave"
+      "fr": "Grands Souterrains: Caverne du Miroir d’Eau",
+      "es": "Grutas del Subsuelo: Caverna Reflelago",
+      "it": "Grandi Sotterranei: Caverna del lago"
     },
     "type": "route"
   },
   {
     "id": 30,
     "names": {
-      "de": "Underground: Sunlit Cavern",
+      "de": "Untergrundhöhlen: Lichtstrahlgrotte",
       "en": "Underground: Sunlit Cavern",
-      "fr": "Underground: Sunlit Cavern",
-      "es": "Underground: Sunlit Cavern",
-      "it": "Underground: Sunlit Cavern"
+      "fr": "Grands Souterrains: Caverne Ensoleillée",
+      "es": "Grutas del Subsuelo: Caverna Solana",
+      "it": "Grandi Sotterranei: Caverna del sole"
     },
     "type": "route"
   },
   {
     "id": 31,
     "names": {
-      "de": "Underground: Big Bluff Cavern",
+      "de": "Untergrundhöhlen: Klippengrotte",
       "en": "Underground: Big Bluff Cavern",
-      "fr": "Underground: Big Bluff Cavern",
-      "es": "Underground: Big Bluff Cavern",
-      "it": "Underground: Big Bluff Cavern"
+      "fr": "Grands Souterrains: Caverne du Piton",
+      "es": "Grutas del Subsuelo: Caverna Peñasco",
+      "it": "Grandi Sotterranei: Caverna della rupe"
     },
     "type": "route"
   },
   {
     "id": 32,
     "names": {
-      "de": "Underground: Stargleam Cavern",
+      "de": "Untergrundhöhlen: Funkelsterngrotte",
       "en": "Underground: Stargleam Cavern",
-      "fr": "Underground: Stargleam Cavern",
-      "es": "Underground: Stargleam Cavern",
-      "it": "Underground: Stargleam Cavern"
+      "fr": "Grands Souterrains: Caverne de la Nuit Étoilée",
+      "es": "Grutas del Subsuelo: Caverna Claroestela",
+      "it": "Grandi Sotterranei: Caverna delle stelle"
     },
     "type": "route"
   },
   {
     "id": 33,
     "names": {
-      "de": "Underground: Volcanic Cave",
+      "de": "Untergrundhöhlen: Magmagrotte",
       "en": "Underground: Volcanic Cave",
-      "fr": "Underground: Volcanic Cave",
-      "es": "Underground: Volcanic Cave",
-      "it": "Underground: Volcanic Cave"
+      "fr": "Grands Souterrains: Grotte du Magma",
+      "es": "Grutas del Subsuelo: Cueva Magma",
+      "it": "Grandi Sotterranei: Antro della lava"
     },
     "type": "route"
   },
   {
     "id": 34,
     "names": {
-      "de": "Underground: Glacial Cavern",
+      "de": "Untergrundhöhlen: Gletschergrotte",
       "en": "Underground: Glacial Cavern",
-      "fr": "Underground: Glacial Cavern",
-      "es": "Underground: Glacial Cavern",
-      "it": "Underground: Glacial Cavern"
+      "fr": "Grands Souterrains: Caverne du Glacier",
+      "es": "Grutas del Subsuelo: Caverna Glaciar",
+      "it": "Grandi Sotterranei: Caverna del ghiacciaio"
     },
     "type": "route"
   },
   {
     "id": 35,
     "names": {
-      "de": "Underground: Bogsunk Cavern",
+      "de": "Untergrundhöhlen: Sickersumpfgrotte",
       "en": "Underground: Bogsunk Cavern",
-      "fr": "Underground: Bogsunk Cavern",
-      "es": "Underground: Bogsunk Cavern",
-      "it": "Underground: Bogsunk Cavern"
+      "fr": "Grands Souterrains: Caverne du Marais Sans Fond",
+      "es": "Grutas del Subsuelo: Caverna Insondable",
+      "it": "Grandi Sotterranei: Caverna della palude"
     },
     "type": "route"
   },
@@ -389,9 +389,9 @@
     "names": {
       "de": "Route 206",
       "en": "Route 206",
-      "fr": "Spiritomb Route 209",
-      "es": "Spiritomb Ruta 209",
-      "it": "Spiritomb Percorso 209"
+      "fr": "Route 206",
+      "es": "Ruta 206",
+      "it": "Percorso 206"
     },
     "type": "route"
   },
@@ -400,9 +400,9 @@
     "names": {
       "de": "Bizarre Höhle",
       "en": "Wayward Cave",
-      "fr": "Grotte Revèche",
-      "es": "Wayward Cave",
-      "it": "Wayward Cave"
+      "fr": "Grotte des Égarés",
+      "es": "Cueva Extravío",
+      "it": "Grotta Labirinto"
     },
     "type": "route"
   },
@@ -412,8 +412,8 @@
       "de": "Kraterberg",
       "en": "Mt. Coronet",
       "fr": "Mont Couronné",
-      "es": "Mt. Coronet",
-      "it": "Mt. Coronet"
+      "es": "Monte Corona",
+      "it": "Monte Corona"
     },
     "type": "route"
   },
@@ -434,8 +434,8 @@
       "de": "Herzhofen",
       "en": "Hearthome City",
       "fr": "Unionpolis",
-      "es": "Hearthome City",
-      "it": "Hearthome City"
+      "es": "Ciudad Corazón",
+      "it": "Cuoripoli"
     },
     "type": "route"
   },
@@ -456,8 +456,8 @@
       "de": "Turm der Ruhenden",
       "en": "Lost Tower",
       "fr": "Tour Perdue",
-      "es": "Lost Tower",
-      "it": "Lost Tower"
+      "es": "Torre Perdida",
+      "it": "Torre Memoria"
     },
     "type": "route"
   },
@@ -466,9 +466,9 @@
     "names": {
       "de": "Trostu-Ruinen",
       "en": "Solaceon Ruins",
-      "fr": "Ruines Bonville",
-      "es": "Solaceon Ruins",
-      "it": "Solaceon Ruins"
+      "fr": "Ruines de Bonville",
+      "es": "Ruinas Sosiego",
+      "it": "Rovine Flemminia"
     },
     "type": "route"
   },
@@ -497,22 +497,22 @@
   {
     "id": 46,
     "names": {
-      "de": "Pokémon-Landgut",
+      "de": "Ziergarten",
       "en": "Trophy Garden",
       "fr": "Jardin Trophée",
-      "es": "Trophy Garden",
-      "it": "Trophy Garden"
+      "es": "Jardín Trofeo",
+      "it": "Giardino Trofeo"
     },
     "type": "route"
   },
   {
     "id": 47,
     "names": {
-      "de": "Pastoria City",
+      "de": "Weideburg",
       "en": "Pastoria City",
       "fr": "Verchamps",
-      "es": "Pastoria City",
-      "it": "Pastoria City"
+      "es": "Ciudad Pradera",
+      "it": "Pratopoli"
     },
     "type": "route"
   },
@@ -522,8 +522,8 @@
       "de": "Großmoor",
       "en": "Great Marsh",
       "fr": "Grand Marais",
-      "es": "Great Marsh",
-      "it": "Great Marsh"
+      "es": "Gran Pantano",
+      "it": "Gran Palude"
     },
     "type": "route"
   },
@@ -554,9 +554,9 @@
     "names": {
       "de": "Kühnheitsufer",
       "en": "Valor Lakefront",
-      "fr": "Œuf de Riolu Ile de Fer",
-      "es": "Valor Lakefront",
-      "it": "Valor Lakefront"
+      "fr": "Rive du Lac Courage",
+      "es": "Orilla Valor",
+      "it": "Riva Valore"
     },
     "type": "route"
   },
@@ -566,8 +566,8 @@
       "de": "See der Kühnheit",
       "en": "Lake Valor",
       "fr": "Lac Courage",
-      "es": "Lake Valor",
-      "it": "Lake Valor"
+      "es": "Lago Valor",
+      "it": "Lago Valore"
     },
     "type": "route"
   },
@@ -585,11 +585,11 @@
   {
     "id": 54,
     "names": {
-      "de": "Tunnel",
+      "de": "Maniac-Höhle",
       "en": "Ruin Maniac's Cave",
-      "fr": "Ruin Maniac's Cave",
-      "es": "Ruin Maniac's Cave",
-      "it": "Ruin Maniac's Cave"
+      "fr": "Grotte du Ruinophile",
+      "es": "Mina Ruinamaníaco",
+      "it": "Grotta Rovine"
     },
     "type": "route"
   },
@@ -599,30 +599,30 @@
       "de": "Elyses",
       "en": "Celestic Town",
       "fr": "Célestia",
-      "es": "Celestic Town",
-      "it": "Celestic Town"
+      "es": "Pueblo Caelestis",
+      "it": "Memoride"
     },
     "type": "route"
   },
   {
     "id": 56,
     "names": {
-      "de": "Feuriohütte",
+      "de": "Feurio-Hütte",
       "en": "Fuego Ironworks",
-      "fr": "Créhelf Lac Savoir",
-      "es": "Fuego Ironworks",
-      "it": "Fuego Ironworks"
+      "fr": "Forge Fuego",
+      "es": "Forja Fuego",
+      "it": "Fonderie Fuego"
     },
     "type": "route"
   },
   {
     "id": 57,
     "names": {
-      "de": "Routes 219",
+      "de": "Route 219",
       "en": "Routes 219",
-      "fr": "Routes 219",
-      "es": "Routes 219",
-      "it": "Routes 219"
+      "fr": "Route 219",
+      "es": "Ruta 219",
+      "it": "Percorso 219"
     },
     "type": "route"
   },
@@ -631,9 +631,9 @@
     "names": {
       "de": "Route 220",
       "en": "Route 220",
-      "fr": "Créfollet (itinérant)",
-      "es": "Mesprit (errante)",
-      "it": "Mesprit (vagante)"
+      "fr": "Chenal 220",
+      "es": "Ruta 220",
+      "it": "Percorso 220"
     },
     "type": "route"
   },
@@ -642,9 +642,9 @@
     "names": {
       "de": "Route 221",
       "en": "Route 221",
-      "fr": "Giratina Monde Distorsion",
-      "es": "Route 221",
-      "it": "Route 221"
+      "fr": "Route 221",
+      "es": "Ruta 221",
+      "it": "Percorso 221"
     },
     "type": "route"
   },
@@ -665,8 +665,8 @@
       "de": "Fleetburg",
       "en": "Canalave City",
       "fr": "Joliberges",
-      "es": "Canalave City",
-      "it": "Canalave City"
+      "es": "Ciudad Canal",
+      "it": "Canalipoli"
     },
     "type": "route"
   },
@@ -675,9 +675,9 @@
     "names": {
       "de": "Eiseninsel",
       "en": "Iron Island",
-      "fr": "Ile de Fer",
-      "es": "Iron Island",
-      "it": "Iron Island"
+      "fr": "Île de Fer",
+      "es": "Isla Hierro",
+      "it": "Isola Ferrosa"
     },
     "type": "route"
   },
@@ -719,9 +719,9 @@
     "names": {
       "de": "Stärkeufer",
       "en": "Acuity Lakefront",
-      "fr": "Rive Lac Savoir",
-      "es": "Acuity Lakefront",
-      "it": "Acuity Lakefront"
+      "fr": "Rive du Lac Savoir",
+      "es": "Orilla Agudeza",
+      "it": "Riva Arguzia"
     },
     "type": "route"
   },
@@ -731,8 +731,8 @@
       "de": "See der Stärke",
       "en": "Lake Acuity",
       "fr": "Lac Savoir",
-      "es": "Lake Acuity",
-      "it": "Lake Acuity"
+      "es": "Lago Agudeza",
+      "it": "Lago Arguzia"
     },
     "type": "route"
   },
@@ -741,9 +741,9 @@
     "names": {
       "de": "Blizzach-Tempel",
       "en": "Snowpoint Temple",
-      "fr": "Temple Frimapic",
-      "es": "Snowpoint Temple",
-      "it": "Snowpoint Temple"
+      "fr": "Temple de Frimapic",
+      "es": "Templo Puntaneva",
+      "it": "Tempio Nevepoli"
     },
     "type": "route",
     "postgame": true
@@ -765,8 +765,8 @@
       "de": "Sonnewik",
       "en": "Sunyshore City",
       "fr": "Rivamar",
-      "es": "Sunyshore City",
-      "it": "Sunyshore City"
+      "es": "Ciudad Marina",
+      "it": "Arenipoli"
     },
     "type": "route"
   },
@@ -775,7 +775,7 @@
     "names": {
       "de": "Route 223",
       "en": "Route 223",
-      "fr": "Route 223",
+      "fr": "Chenal 223",
       "es": "Ruta 223",
       "it": "Percorso 223"
     },
@@ -798,8 +798,8 @@
       "de": "Pokémon-Liga",
       "en": "Pokémon League",
       "fr": "Ligue Pokémon",
-      "es": "Pokémon League",
-      "it": "Pokémon League"
+      "es": "Liga Pokémon",
+      "it": "Lega Pokémon"
     },
     "type": "route"
   }

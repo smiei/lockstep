@@ -2,7 +2,6 @@
   "id": "sapphire",
   "sort": 13,
   "kind": "official",
-  "dataStatus": "unverified",
   "generation": 3,
   "dexLimit": 386,
   "spriteSet": "emerald",

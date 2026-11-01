@@ -2,7 +2,6 @@
   "id": "shield",
   "sort": 24,
   "kind": "official",
-  "dataStatus": "unverified",
   "generation": 8,
   "dexLimit": 898,
   "spriteSet": "modern",

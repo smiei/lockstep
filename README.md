@@ -70,7 +70,7 @@ You know the rules. This is what the tracker handles so you don't have to.
 - **Custom routes** for areas a game pack doesn't list.
 - **Free-team mode** for runs that aren't Nuzlockes.
 - **Blind flight**, which hides every calculated hint, optionally locked on for the whole run.
-- **An installable phone app** in 5 languages: English, German, French, Spanish and Italian. German and English are reviewed by hand. French, Spanish and Italian are machine-translated, apart from the Pokémon names, which are official in every language.
+- **An installable phone app** in 5 languages: English, German, French, Spanish and Italian. German and English are reviewed by hand; French, Spanish and Italian are machine-translated. The names of Pokémon and of every official game's places are the official ones in each language. ROM hacks keep their English names, as in the game.
 - **Backups** of one run or all of them.
 - No account, no cloud: it runs on your PC or home server.
 
@@ -178,23 +178,21 @@ npm start
 
 ## Supported games
 
-| Generation | Games | Route data |
-| --- | --- | --- |
-| 1 | Red / Blue / Yellow | unverified |
-| 2 | Gold / Silver / Crystal | unverified |
-| 3 | FireRed / LeafGreen, Emerald | checked |
-| 3 | Ruby, Sapphire | unverified |
-| 4 | Platinum, HeartGold, SoulSilver | checked |
-| 4 | Diamond / Pearl | unverified |
-| 5 | Black, White, Black 2 / White 2 | unverified |
-| 6 | X / Y, Omega Ruby, Alpha Sapphire | unverified |
-| 7 | Sun, Moon, Ultra Sun, Ultra Moon | unverified |
-| 8 | Sword, Shield, Brilliant Diamond / Shining Pearl (no TM list: the data source has none for it) | unverified |
-| 9 | Scarlet / Violet | unverified |
-| Fan game | [Pokémon Infinite Fusion](#pokémon-infinite-fusion) (Classic and Remix), with fusions and the game's own data | unverified |
-| ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald, Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms | unverified |
+| Generation | Games |
+| --- | --- |
+| 1 | Red / Blue / Yellow |
+| 2 | Gold / Silver / Crystal |
+| 3 | Ruby, Sapphire, FireRed / LeafGreen, Emerald |
+| 4 | Diamond / Pearl, Platinum, HeartGold, SoulSilver |
+| 5 | Black, White, Black 2 / White 2 |
+| 6 | X / Y, Omega Ruby, Alpha Sapphire |
+| 7 | Sun, Moon, Ultra Sun, Ultra Moon |
+| 8 | Sword, Shield, Brilliant Diamond / Shining Pearl (no TM list: the data source has none for it) |
+| 9 | Scarlet / Violet |
+| Fan game | [Pokémon Infinite Fusion](#pokémon-infinite-fusion) (Classic and Remix), with fusions and the game's own data |
+| ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald, Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms; named in English, as in the game |
 
-"Route data" is the list and order of routes plus the place names. **Checked** packs were compared against the game. **Unverified** ones may contain mistakes, and the app says so when you pick one. Corrections are welcome as an issue.
+Found a wrong route or name? Corrections are welcome as an issue.
 
 **Playing a ROM hack or another game?** A pack is just the route list and the boss level caps, with no encounter tables. You can import your own in the app or contribute it for everyone; see [game packs](docs/game-packs.md).
 
@@ -233,7 +231,8 @@ This project stands on the work of others. Thank you!
 - **[infinite-fusion-nuzlocke](https://github.com/fbosch/infinite-fusion-nuzlocke)** by Frederik Bosch — the Infinite Fusion locations, encounters and species list, and the fusion typing rules.
 - **[Pokémon Infinite Fusion](https://github.com/infinitefusion/infinitefusion-e18)** — the game's own stats, moves, trainer levels and capture code. Fusion sprites come from its sprite community.
 - **[Pokémon League Badges](https://github.com/SteGriff/pokemon-badges)** by Stephen Griffiths — the badge icons (CC BY 3.0, cropped from the sheet).
-- **[PokéWiki](https://www.pokewiki.de/)**, **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics and level caps.
+- **[PokéWiki](https://www.pokewiki.de/)** — the official place and badge names in all five languages, and historical move names.
+- **[Bulbapedia](https://bulbapedia.bulbagarden.net/)**, **[pokemon-infinite-fusion.com](https://pokemon-infinite-fusion.com/)** and the **[Infinite Fusion wiki](https://infinitefusion.fandom.com/)** — reference for historical values, mechanics, level caps and trainer names.
 - **[nuzlocke.app](https://github.com/domtronn/nuzlocke.app)** (fork [Bassel-T/nuzlocke.app](https://github.com/Bassel-T/nuzlocke.app)) — the ROM-hack route lists, boss teams and the hacks' stat, type and move changes (BSD 3-Clause).
 - **[Pokémon Showdown](https://pokemonshowdown.com/)** — the boss trainer pictures, downloaded on first start.
 - Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), [Prisma](https://www.prisma.io/), [Tailwind CSS](https://tailwindcss.com/) and the [Familjen Grotesk](https://fonts.google.com/specimen/Familjen+Grotesk) and [Red Hat Mono](https://fonts.google.com/specimen/Red+Hat+Mono) fonts.

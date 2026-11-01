@@ -40,27 +40,28 @@
   {
     "id": 3,
     "names": {
-      "de": "Veit",
+      "de": "Roark",
       "en": "Roark",
-      "fr": "Pierrick",
-      "es": "Roco",
+      "fr": "Roark",
+      "es": "Roark",
       "it": "Roark"
     },
     "location": {
-      "de": "Erzelingen",
+      "de": "Oreburgh City",
       "en": "Oreburgh City",
-      "fr": "Charbourg",
+      "fr": "Oreburgh City",
       "es": "Oreburgh City",
       "it": "Oreburgh City"
     },
     "badge": {
-      "de": "Kohleorden",
+      "de": "Coal Badge",
       "en": "Coal Badge",
-      "fr": "Badge Charbon",
-      "es": "Medalla Lignito",
-      "it": "Medaglia Carbone"
+      "fr": "Coal Badge",
+      "es": "Coal Badge",
+      "it": "Coal Badge"
     },
-    "max_level": 16
+    "max_level": 16,
+    "sprite": "Veit"
   },
   {
     "id": 4,
@@ -103,27 +104,28 @@
   {
     "id": 6,
     "names": {
-      "de": "Silvana",
+      "de": "Gardenia",
       "en": "Gardenia",
-      "fr": "Flo",
+      "fr": "Gardenia",
       "es": "Gardenia",
       "it": "Gardenia"
     },
     "location": {
-      "de": "Ewigenau",
+      "de": "Eterna City",
       "en": "Eterna City",
-      "fr": "Vestigion",
+      "fr": "Eterna City",
       "es": "Eterna City",
       "it": "Eterna City"
     },
     "badge": {
-      "de": "Waldorden",
+      "de": "Forest Badge",
       "en": "Forest Badge",
-      "fr": "Badge Forêt",
-      "es": "Medalla Bosque",
-      "it": "Medaglia Foresta"
+      "fr": "Forest Badge",
+      "es": "Forest Badge",
+      "it": "Forest Badge"
     },
-    "max_level": 26
+    "max_level": 26,
+    "sprite": "Silvana"
   },
   {
     "id": 7,
@@ -204,10 +206,10 @@
   {
     "id": 11,
     "names": {
-      "de": "Herbaro",
+      "de": "Aaron",
       "en": "Aaron",
       "fr": "Aaron",
-      "es": "Alecrán",
+      "es": "Aaron",
       "it": "Aaron"
     },
     "location": {
@@ -218,32 +220,34 @@
       "it": "Route 208"
     },
     "badge": null,
-    "max_level": 32
+    "max_level": 32,
+    "sprite": "Herbaro"
   },
   {
     "id": 12,
     "names": {
-      "de": "Lamina",
+      "de": "Fantina",
       "en": "Fantina",
-      "fr": "Kiméra",
+      "fr": "Fantina",
       "es": "Fantina",
       "it": "Fantina"
     },
     "location": {
-      "de": "Herzhofen",
+      "de": "Hearthome City",
       "en": "Hearthome City",
-      "fr": "Unionpolis",
+      "fr": "Hearthome City",
       "es": "Hearthome City",
       "it": "Hearthome City"
     },
     "badge": {
-      "de": "Reliktorden",
+      "de": "Relic Badge",
       "en": "Relic Badge",
-      "fr": "Badge Relique",
-      "es": "Medalla Reliquia",
-      "it": "Medaglia Reliquia"
+      "fr": "Relic Badge",
+      "es": "Relic Badge",
+      "it": "Relic Badge"
     },
-    "max_level": 33
+    "max_level": 33,
+    "sprite": "Lamina"
   },
   {
     "id": 13,
@@ -286,27 +290,28 @@
   {
     "id": 15,
     "names": {
-      "de": "Hilda",
+      "de": "Maylene",
       "en": "Maylene",
-      "fr": "Mélina",
-      "es": "Brega",
+      "fr": "Maylene",
+      "es": "Maylene",
       "it": "Maylene"
     },
     "location": {
-      "de": "Schleiede",
+      "de": "Veilstone City",
       "en": "Veilstone City",
-      "fr": "Voilaroc",
+      "fr": "Veilstone City",
       "es": "Veilstone City",
       "it": "Veilstone City"
     },
     "badge": {
-      "de": "Bergorden",
+      "de": "Cobble Badge",
       "en": "Cobble Badge",
-      "fr": "Badge Galet",
-      "es": "Medalla Adoquín",
-      "it": "Medaglia Ciottolo"
+      "fr": "Cobble Badge",
+      "es": "Cobble Badge",
+      "it": "Cobble Badge"
     },
-    "max_level": 39
+    "max_level": 39,
+    "sprite": "Hilda"
   },
   {
     "id": 16,
@@ -368,35 +373,36 @@
   {
     "id": 19,
     "names": {
-      "de": "Marinus",
+      "de": "Crasher Wake",
       "en": "Crasher Wake",
-      "fr": "Lovis",
-      "es": "Mananti",
+      "fr": "Crasher Wake",
+      "es": "Crasher Wake",
       "it": "Crasher Wake"
     },
     "location": {
-      "de": "Weideburg",
+      "de": "Pastoria City",
       "en": "Pastoria City",
-      "fr": "Verchamps",
+      "fr": "Pastoria City",
       "es": "Pastoria City",
       "it": "Pastoria City"
     },
     "badge": {
-      "de": "Fennorden",
+      "de": "Fen Badge",
       "en": "Fen Badge",
-      "fr": "Badge Fange",
-      "es": "Medalla Ciénaga",
-      "it": "Medaglia Palude"
+      "fr": "Fen Badge",
+      "es": "Fen Badge",
+      "it": "Fen Badge"
     },
-    "max_level": 44
+    "max_level": 44,
+    "sprite": "Marinus"
   },
   {
     "id": 20,
     "names": {
-      "de": "Zyrus",
+      "de": "Cyrus",
       "en": "Cyrus",
-      "fr": "Hélio",
-      "es": "Helio",
+      "fr": "Cyrus",
+      "es": "Cyrus",
       "it": "Cyrus"
     },
     "location": {
@@ -407,7 +413,8 @@
       "it": "Celestic Town"
     },
     "badge": null,
-    "max_level": 46
+    "max_level": 46,
+    "sprite": "Zyrus"
   },
   {
     "id": 21,
@@ -469,27 +476,28 @@
   {
     "id": 24,
     "names": {
-      "de": "Adam",
+      "de": "Byron",
       "en": "Byron",
-      "fr": "Charles",
-      "es": "Acerón",
+      "fr": "Byron",
+      "es": "Byron",
       "it": "Byron"
     },
     "location": {
-      "de": "Fleetburg",
+      "de": "Canalave City",
       "en": "Canalave City",
-      "fr": "Joliberges",
+      "fr": "Canalave City",
       "es": "Canalave City",
       "it": "Canalave City"
     },
     "badge": {
-      "de": "Minenorden",
+      "de": "Mine Badge",
       "en": "Mine Badge",
-      "fr": "Badge Mine",
-      "es": "Medalla Mina",
-      "it": "Medaglia Miniera"
+      "fr": "Mine Badge",
+      "es": "Mine Badge",
+      "it": "Mine Badge"
     },
-    "max_level": 53
+    "max_level": 53,
+    "sprite": "Adam"
   },
   {
     "id": 25,
@@ -532,35 +540,36 @@
   {
     "id": 27,
     "names": {
-      "de": "Frida",
+      "de": "Candice",
       "en": "Candice",
-      "fr": "Gladys",
-      "es": "Inverna",
+      "fr": "Candice",
+      "es": "Candice",
       "it": "Candice"
     },
     "location": {
-      "de": "Blizzach",
+      "de": "Snowpoint City",
       "en": "Snowpoint City",
-      "fr": "Frimapic",
+      "fr": "Snowpoint City",
       "es": "Snowpoint City",
       "it": "Snowpoint City"
     },
     "badge": {
-      "de": "Firnorden",
+      "de": "Icicle Badge",
       "en": "Icicle Badge",
-      "fr": "Badge Glaçon",
-      "es": "Medalla Carámbano",
-      "it": "Medaglia Ghiacciolo"
+      "fr": "Icicle Badge",
+      "es": "Icicle Badge",
+      "it": "Icicle Badge"
     },
-    "max_level": 56
+    "max_level": 56,
+    "sprite": "Frida"
   },
   {
     "id": 28,
     "names": {
-      "de": "Zyrus",
+      "de": "Cyrus",
       "en": "Cyrus",
-      "fr": "Hélio",
-      "es": "Helio",
+      "fr": "Cyrus",
+      "es": "Cyrus",
       "it": "Cyrus"
     },
     "location": {
@@ -571,7 +580,8 @@
       "it": "Galactic HQ"
     },
     "badge": null,
-    "max_level": 58
+    "max_level": 58,
+    "sprite": "Zyrus"
   },
   {
     "id": 29,
@@ -614,10 +624,10 @@
   {
     "id": 31,
     "names": {
-      "de": "Zyrus",
+      "de": "Cyrus",
       "en": "Cyrus",
-      "fr": "Hélio",
-      "es": "Helio",
+      "fr": "Cyrus",
+      "es": "Cyrus",
       "it": "Cyrus"
     },
     "location": {
@@ -628,15 +638,16 @@
       "it": "Distortion World"
     },
     "badge": null,
-    "max_level": 70
+    "max_level": 70,
+    "sprite": "Zyrus"
   },
   {
     "id": 32,
     "names": {
-      "de": "Zyrus",
+      "de": "Cyrus",
       "en": "Cyrus",
-      "fr": "Hélio",
-      "es": "Helio",
+      "fr": "Cyrus",
+      "es": "Cyrus",
       "it": "Cyrus"
     },
     "location": {
@@ -647,7 +658,8 @@
       "it": "Distortion World"
     },
     "badge": null,
-    "max_level": 60
+    "max_level": 60,
+    "sprite": "Zyrus"
   },
   {
     "id": 33,
@@ -673,23 +685,23 @@
     "names": {
       "de": "Volkner",
       "en": "Volkner",
-      "fr": "Tanguy",
-      "es": "Lectro",
+      "fr": "Volkner",
+      "es": "Volkner",
       "it": "Volkner"
     },
     "location": {
-      "de": "Sonnewik",
+      "de": "Sunyshore City",
       "en": "Sunyshore City",
-      "fr": "Rivamar",
+      "fr": "Sunyshore City",
       "es": "Sunyshore City",
       "it": "Sunyshore City"
     },
     "badge": {
-      "de": "Lichtorden",
+      "de": "Beacon Badge",
       "en": "Beacon Badge",
-      "fr": "Badge Phare",
-      "es": "Medalla Faro",
-      "it": "Medaglia Faro"
+      "fr": "Beacon Badge",
+      "es": "Beacon Badge",
+      "it": "Beacon Badge"
     },
     "max_level": 62
   },
@@ -760,11 +772,11 @@
       "it": "Aaron (Team A)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 72
@@ -779,11 +791,11 @@
       "it": "Aaron (Team B)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 72
@@ -798,11 +810,11 @@
       "it": "Aaron (Team C)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 72
@@ -817,11 +829,11 @@
       "it": "Aaron (Team D)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 72
@@ -836,11 +848,11 @@
       "it": "Bertha (Team A)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 73
@@ -855,11 +867,11 @@
       "it": "Bertha (Team B)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 73
@@ -874,11 +886,11 @@
       "it": "Bertha (Team C)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 73
@@ -893,11 +905,11 @@
       "it": "Bertha (Team D)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 73
@@ -912,11 +924,11 @@
       "it": "Flint (Team A)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 74
@@ -931,11 +943,11 @@
       "it": "Flint (Team B)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 74
@@ -950,11 +962,11 @@
       "it": "Flint (Team C)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 74
@@ -969,11 +981,11 @@
       "it": "Flint (Team D)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 74
@@ -988,11 +1000,11 @@
       "it": "Lucian (Team A)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 75
@@ -1007,11 +1019,11 @@
       "it": "Lucian (Team B)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 75
@@ -1026,11 +1038,11 @@
       "it": "Lucian (Team C)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 75
@@ -1045,11 +1057,11 @@
       "it": "Lucian (Team D)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 75
@@ -1064,11 +1076,11 @@
       "it": "Cynthia (Team A)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 78
@@ -1083,11 +1095,11 @@
       "it": "Cynthia (Team B)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 78
@@ -1102,11 +1114,11 @@
       "it": "Cynthia (Team C)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 78
@@ -1121,11 +1133,11 @@
       "it": "Cynthia (Team D)"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
     "max_level": 78

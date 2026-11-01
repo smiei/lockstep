@@ -5,7 +5,7 @@
       "de": "Starter",
       "en": "Starter",
       "fr": "Starter",
-      "es": "Starter",
+      "es": "Inicial",
       "it": "Starter"
     },
     "type": "static"
@@ -16,8 +16,8 @@
       "de": "Schlummerwald",
       "en": "Slumbering Weald",
       "fr": "Forêt de Sleepwood",
-      "es": "Slumbering Weald",
-      "it": "Slumbering Weald"
+      "es": "Bosque Oniria",
+      "it": "Bosco Assopito"
     },
     "type": "route"
   },
@@ -27,8 +27,8 @@
       "de": "Route 1",
       "en": "Route 1",
       "fr": "Route 1",
-      "es": "Route 1",
-      "it": "Route 1"
+      "es": "Ruta 1",
+      "it": "Percorso 1"
     },
     "type": "route"
   },
@@ -38,8 +38,8 @@
       "de": "Brassbury",
       "en": "Wedgehurst",
       "fr": "Brasswick",
-      "es": "Wedgehurst",
-      "it": "Wedgehurst"
+      "es": "Pueblo Par",
+      "it": "Brassbury"
     },
     "type": "route"
   },
@@ -49,8 +49,8 @@
       "de": "Route 2",
       "en": "Route 2",
       "fr": "Route 2",
-      "es": "Route 2",
-      "it": "Route 2"
+      "es": "Ruta 2",
+      "it": "Percorso 2"
     },
     "type": "route"
   },
@@ -60,8 +60,8 @@
       "de": "Wonnewiesen",
       "en": "Rolling Fields",
       "fr": "Plaine Verdoyante",
-      "es": "Rolling Fields",
-      "it": "Rolling Fields"
+      "es": "Pradera Radiante",
+      "it": "Pianura Serena"
     },
     "type": "route"
   },
@@ -71,8 +71,8 @@
       "de": "Wipfelscheinwald",
       "en": "Dappled Grove",
       "fr": "Bois de Clairjour",
-      "es": "Dappled Grove",
-      "it": "Dappled Grove"
+      "es": "Arboleda Claroscuro",
+      "it": "Boschetto Ombraluce"
     },
     "type": "route"
   },
@@ -82,8 +82,8 @@
       "de": "Milza-See (Westen)",
       "en": "West Lake Axewell",
       "fr": "Lac Coupenotte Ouest",
-      "es": "West Lake Axewell",
-      "it": "West Lake Axewell"
+      "es": "Lago Axew (oeste)",
+      "it": "Lago Axew (ovest)"
     },
     "type": "route"
   },
@@ -93,8 +93,8 @@
       "de": "Wachturmruine",
       "en": "Watchtower Ruins",
       "fr": "Tour en ruines",
-      "es": "Watchtower Ruins",
-      "it": "Watchtower Ruins"
+      "es": "Antigua Atalaya",
+      "it": "Torre Diroccata"
     },
     "type": "route"
   },
@@ -104,8 +104,8 @@
       "de": "Milza-See (Osten)",
       "en": "East Lake Axewell",
       "fr": "Lac Coupenotte Est",
-      "es": "East Lake Axewell",
-      "it": "East Lake Axewell"
+      "es": "Lago Axew (este)",
+      "it": "Lago Axew (est)"
     },
     "type": "route"
   },
@@ -115,8 +115,8 @@
       "de": "Milotic-See (Süden)",
       "en": "South Lake Miloch",
       "fr": "Lac Milobellus Sud",
-      "es": "South Lake Miloch",
-      "it": "South Lake Miloch"
+      "es": "Lago Milotic (sur)",
+      "it": "Lago Milotic (sud)"
     },
     "type": "route"
   },
@@ -126,8 +126,8 @@
       "de": "Sitz des Giganten",
       "en": "Giant's Seat",
       "fr": "Siège du Géant",
-      "es": "Giant's Seat",
-      "it": "Giant's Seat"
+      "es": "Silla del Gigante",
+      "it": "Sedia del Gigante"
     },
     "type": "route"
   },
@@ -137,8 +137,8 @@
       "de": "Milotic-See (Norden)",
       "en": "North Lake Miloch",
       "fr": "Lac Milobellus Nord",
-      "es": "North Lake Miloch",
-      "it": "North Lake Miloch"
+      "es": "Lago Milotic (norte)",
+      "it": "Lago Milotic (nord)"
     },
     "type": "route"
   },
@@ -148,8 +148,8 @@
       "de": "Engine City",
       "en": "Motostoke",
       "fr": "Motorby",
-      "es": "Motostoke",
-      "it": "Motostoke"
+      "es": "Ciudad Pistón",
+      "it": "Steamington"
     },
     "type": "route"
   },
@@ -159,19 +159,19 @@
       "de": "Route 3",
       "en": "Route 3",
       "fr": "Route 3",
-      "es": "Route 3",
-      "it": "Route 3"
+      "es": "Ruta 3",
+      "it": "Percorso 3"
     },
     "type": "route"
   },
   {
     "id": 16,
     "names": {
-      "de": "Galar-Mine",
+      "de": "Galar-Mine 1",
       "en": "Galar Mine",
       "fr": "Mine de Galar",
-      "es": "Galar Mine",
-      "it": "Galar Mine"
+      "es": "Mina de Galar",
+      "it": "Miniera di Galar"
     },
     "type": "route"
   },
@@ -181,8 +181,8 @@
       "de": "Route 4",
       "en": "Route 4",
       "fr": "Route 4",
-      "es": "Route 4",
-      "it": "Route 4"
+      "es": "Ruta 4",
+      "it": "Percorso 4"
     },
     "type": "route"
   },
@@ -192,8 +192,8 @@
       "de": "Route 5",
       "en": "Route 5",
       "fr": "Route 5",
-      "es": "Route 5",
-      "it": "Route 5"
+      "es": "Ruta 5",
+      "it": "Percorso 5"
     },
     "type": "route"
   },
@@ -203,8 +203,8 @@
       "de": "Keelton",
       "en": "Hulbury",
       "fr": "Skifford",
-      "es": "Hulbury",
-      "it": "Hulbury"
+      "es": "Pueblo Amura",
+      "it": "Keelford"
     },
     "type": "route"
   },
@@ -214,8 +214,8 @@
       "de": "Galar-Mine 2",
       "en": "Galar Mine No. 2",
       "fr": "Mine de Galar n° 2",
-      "es": "Galar Mine No. 2",
-      "it": "Galar Mine No. 2"
+      "es": "Mina de Galar n.° 2",
+      "it": "Miniera 2"
     },
     "type": "route"
   },
@@ -225,19 +225,19 @@
       "de": "Engine-Ortsrand",
       "en": "Motostoke Outskirts",
       "fr": "Abords de Motorby",
-      "es": "Motostoke Outskirts",
-      "it": "Motostoke Outskirts"
+      "es": "Afueras de Pistón",
+      "it": "Perif. Steamington"
     },
     "type": "route"
   },
   {
     "id": 22,
     "names": {
-      "de": "Motostoke Stadium",
+      "de": "Engine-Stadion",
       "en": "Motostoke Stadium",
-      "fr": "Motostoke Stadium",
-      "es": "Motostoke Stadium",
-      "it": "Motostoke Stadium"
+      "fr": "Stade de Motorby",
+      "es": "Estadio de Pistón",
+      "it": "Stadio di Steamington"
     },
     "type": "route"
   },
@@ -247,8 +247,8 @@
       "de": "Engine-Flussufer",
       "en": "Motostoke Riverbank",
       "fr": "Berges de Motorby",
-      "es": "Motostoke Riverbank",
-      "it": "Motostoke Riverbank"
+      "es": "Ribera de Pistón",
+      "it": "Fiume di Steamington"
     },
     "type": "route"
   },
@@ -258,8 +258,8 @@
       "de": "Brückental",
       "en": "Bridge Field",
       "fr": "Prairie Entre-Ponts",
-      "es": "Bridge Field",
-      "it": "Bridge Field"
+      "es": "Valle Entrepuentes",
+      "it": "Piana dei Ponti"
     },
     "type": "route"
   },
@@ -269,8 +269,8 @@
       "de": "Megalithen-Ebene",
       "en": "Stony Wilderness",
       "fr": "Plaine Rocheuse",
-      "es": "Stony Wilderness",
-      "it": "Stony Wilderness"
+      "es": "Llanura Pétrea",
+      "it": "Landa delle Pietre"
     },
     "type": "route"
   },
@@ -280,8 +280,8 @@
       "de": "Spiegel des Giganten",
       "en": "Giant's Mirror",
       "fr": "Miroir du Géant",
-      "es": "Giant's Mirror",
-      "it": "Giant's Mirror"
+      "es": "Espejo del Gigante",
+      "it": "Specchio del Gigante"
     },
     "type": "route"
   },
@@ -291,8 +291,8 @@
       "de": "Sandsturmkessel",
       "en": "Dusty Bowl",
       "fr": "Fosse des Sables",
-      "es": "Dusty Bowl",
-      "it": "Dusty Bowl"
+      "es": "Cuenca Polvorienta",
+      "it": "Conca delle Sabbie"
     },
     "type": "route"
   },
@@ -302,8 +302,8 @@
       "de": "Hut des Giganten",
       "en": "Giant's Cap",
       "fr": "Coiffe du Géant",
-      "es": "Giant's Cap",
-      "it": "Giant's Cap"
+      "es": "Gorro del Gigante",
+      "it": "Berretto del Gigante"
     },
     "type": "route"
   },
@@ -313,8 +313,8 @@
       "de": "Claw-Plateau",
       "en": "Hammerlocke Hills",
       "fr": "Plateau de Kickenham",
-      "es": "Hammerlocke Hills",
-      "it": "Hammerlocke Hills"
+      "es": "Cornisa de Artejo",
+      "it": "Colle Knuckleburgh"
     },
     "type": "route"
   },
@@ -324,8 +324,8 @@
       "de": "Wutanfall-See",
       "en": "Lake of Outrage",
       "fr": "Lac Ouragan",
-      "es": "Lake of Outrage",
-      "it": "Lake of Outrage"
+      "es": "Lago del Enfado",
+      "it": "Lago Dragofuria"
     },
     "type": "route"
   },
@@ -335,8 +335,8 @@
       "de": "Route 6",
       "en": "Route 6",
       "fr": "Route 6",
-      "es": "Route 6",
-      "it": "Route 6"
+      "es": "Ruta 6",
+      "it": "Percorso 6"
     },
     "type": "route"
   },
@@ -346,8 +346,8 @@
       "de": "Wirrschein-Wald",
       "en": "Glimwood Tangle",
       "fr": "Forêt de Lumirinth",
-      "es": "Glimwood Tangle",
-      "it": "Glimwood Tangle"
+      "es": "Bosque Lumirinto",
+      "it": "Bosco Brillabirinto"
     },
     "type": "route"
   },
@@ -357,8 +357,8 @@
       "de": "Route 7",
       "en": "Route 7",
       "fr": "Route 7",
-      "es": "Route 7",
-      "it": "Route 7"
+      "es": "Ruta 7",
+      "it": "Percorso 7"
     },
     "type": "route"
   },
@@ -368,8 +368,8 @@
       "de": "Route 8",
       "en": "Route 8",
       "fr": "Route 8",
-      "es": "Route 8",
-      "it": "Route 8"
+      "es": "Ruta 8",
+      "it": "Percorso 8"
     },
     "type": "route"
   },
@@ -379,8 +379,8 @@
       "de": "Route 9",
       "en": "Route 9",
       "fr": "Route 9",
-      "es": "Route 9",
-      "it": "Route 9"
+      "es": "Ruta 9",
+      "it": "Percorso 9"
     },
     "type": "route"
   },
@@ -390,8 +390,8 @@
       "de": "Route 10",
       "en": "Route 10",
       "fr": "Route 10",
-      "es": "Route 10",
-      "it": "Route 10"
+      "es": "Ruta 10",
+      "it": "Percorso 10"
     },
     "type": "route"
   },
@@ -401,8 +401,8 @@
       "de": "Milza-See (Auge)",
       "en": "Axew's Eye",
       "fr": "Œil du Lac",
-      "es": "Axew's Eye",
-      "it": "Axew's Eye"
+      "es": "Ojo de Axew",
+      "it": "Occhio del Lago Axew"
     },
     "type": "route"
   },
@@ -412,8 +412,8 @@
       "de": "Grußgefilde",
       "en": "Fields of Honor",
       "fr": "Plaine Salutation",
-      "es": "Fields of Honor",
-      "it": "Fields of Honor"
+      "es": "Prado Reverencia",
+      "it": "Pianura Inchino"
     },
     "type": "route"
   },
@@ -423,8 +423,8 @@
       "de": "Balsamsumpf",
       "en": "Soothing Wetlands",
       "fr": "Lande Boldair",
-      "es": "Soothing Wetlands",
-      "it": "Soothing Wetlands"
+      "es": "Humedal Frescor",
+      "it": "Acquitrino Fresco"
     },
     "type": "route"
   },
@@ -434,8 +434,8 @@
       "de": "Fokusforst",
       "en": "Forest of Focus",
       "fr": "Forêt Flexion",
-      "es": "Forest of Focus",
-      "it": "Forest of Focus"
+      "es": "Bosque Concentración",
+      "it": "Bosco Concentrazione"
     },
     "type": "route"
   },
@@ -444,9 +444,9 @@
     "names": {
       "de": "Strand der Prüfung",
       "en": "Challenge Beach",
-      "fr": "Plage de l'Épreuve",
-      "es": "Challenge Beach",
-      "it": "Challenge Beach"
+      "fr": "Plage de l’Épreuve",
+      "es": "Playa Desafío",
+      "it": "Spiaggia Sfida"
     },
     "type": "route"
   },
@@ -456,8 +456,8 @@
       "de": "Kämpfergrotte",
       "en": "Brawlers' Cave",
       "fr": "Grotte du Pugilat",
-      "es": "Brawlers' Cave",
-      "it": "Brawlers' Cave"
+      "es": "Cueva Contienda",
+      "it": "Antro Scontro"
     },
     "type": "route"
   },
@@ -466,9 +466,9 @@
     "names": {
       "de": "Pfad der Prüfung",
       "en": "Challenge Road",
-      "fr": "Route de l'Épreuve",
-      "es": "Challenge Road",
-      "it": "Challenge Road"
+      "fr": "Route de l’Épreuve",
+      "es": "Ruta Desafío",
+      "it": "Cammino Sfida"
     },
     "type": "route"
   },
@@ -478,8 +478,8 @@
       "de": "Tapferkeitshöhle",
       "en": "Courageous Cavern",
       "fr": "Caverne Pugnacité",
-      "es": "Courageous Cavern",
-      "it": "Courageous Cavern"
+      "es": "Cueva Tenacidad",
+      "it": "Grotta Grinta"
     },
     "type": "route"
   },
@@ -489,8 +489,8 @@
       "de": "Ringbucht",
       "en": "Loop Lagoon",
       "fr": "Lagune Circulaire",
-      "es": "Loop Lagoon",
-      "it": "Loop Lagoon"
+      "es": "Bahía Circular",
+      "it": "Baia Circolare"
     },
     "type": "route"
   },
@@ -500,8 +500,8 @@
       "de": "Fleißebene",
       "en": "Training Lowlands",
       "fr": "Plaine des Efforts",
-      "es": "Training Lowlands",
-      "it": "Training Lowlands"
+      "es": "Llano Entrenamiento",
+      "it": "Piana Addestramento"
     },
     "type": "route"
   },
@@ -511,8 +511,8 @@
       "de": "Aufwärmtunnel",
       "en": "Warm-Up Tunnel",
       "fr": "Voie des Étirements",
-      "es": "Warm-Up Tunnel",
-      "it": "Warm-Up Tunnel"
+      "es": "Gruta Calentamiento",
+      "it": "Tunnel Riscaldamento"
     },
     "type": "route"
   },
@@ -522,8 +522,8 @@
       "de": "Wüstensenke",
       "en": "Potbottom Desert",
       "fr": "Sables de Kudsac",
-      "es": "Potbottom Desert",
-      "it": "Potbottom Desert"
+      "es": "Cuenca Arenosa",
+      "it": "Deserto Paiolo"
     },
     "type": "route"
   },
@@ -533,8 +533,8 @@
       "de": "Fitnessmeer",
       "en": "Workout Sea",
       "fr": "Mer Eau-Hisse",
-      "es": "Workout Sea",
-      "it": "Workout Sea"
+      "es": "Mar Gimnástico",
+      "it": "Mar Ginnico"
     },
     "type": "route"
   },
@@ -543,9 +543,9 @@
     "names": {
       "de": "Inselkettenmeer",
       "en": "Stepping-Stone Sea",
-      "fr": "Mer Align'Îlots",
-      "es": "Stepping-Stone Sea",
-      "it": "Stepping-Stone Sea"
+      "fr": "Mer Align’Îlots",
+      "es": "Mar Andana",
+      "it": "Mar Lineapelago"
     },
     "type": "route"
   },
@@ -554,9 +554,9 @@
     "names": {
       "de": "Fernarchipel",
       "en": "Insular Sea",
-      "fr": "Mer Isol'Îlots",
-      "es": "Insular Sea",
-      "it": "Insular Sea"
+      "fr": "Mer Isol’Îlots",
+      "es": "Mar Islejos",
+      "it": "Mar Sperdipelago"
     },
     "type": "route"
   },
@@ -566,8 +566,8 @@
       "de": "Wabenmeer",
       "en": "Honeycalm Sea",
       "fr": "Mer Calméole",
-      "es": "Honeycalm Sea",
-      "it": "Honeycalm Sea"
+      "es": "Mar Meloso",
+      "it": "Mar Quietarnia"
     },
     "type": "route"
   },
@@ -577,8 +577,8 @@
       "de": "Wabeninsel",
       "en": "Honeycalm Island",
       "fr": "Îlot Calméole",
-      "es": "Honeycalm Island",
-      "it": "Honeycalm Island"
+      "es": "Isla Melosa",
+      "it": "Isola Quietarnia"
     },
     "type": "route"
   },
@@ -588,8 +588,8 @@
       "de": "Schlitterfeld",
       "en": "Slippery Slope",
       "fr": "Plateau Beau-Gant",
-      "es": "Slippery Slope",
-      "it": "Slippery Slope"
+      "es": "Campo Deslizante",
+      "it": "Nevi Primoscivolo"
     },
     "type": "route"
   },
@@ -599,8 +599,8 @@
       "de": "Freezedale",
       "en": "Freezington",
       "fr": "Hameau Gelé",
-      "es": "Freezington",
-      "it": "Freezington"
+      "es": "Villa Helada",
+      "it": "Freezedale"
     },
     "type": "route"
   },
@@ -610,8 +610,8 @@
       "de": "Frostfeld",
       "en": "Frostpoint Field",
       "fr": "Plaine Granfroy",
-      "es": "Frostpoint Field",
-      "it": "Frostpoint Field"
+      "es": "Campo Bajocero",
+      "it": "Piana Sottozero"
     },
     "type": "route"
   },
@@ -621,8 +621,8 @@
       "de": "Bett des Giganten",
       "en": "Giant's Bed",
       "fr": "Repos du Géant",
-      "es": "Giant's Bed",
-      "it": "Giant's Bed"
+      "es": "Lecho del Gigante",
+      "it": "Letto del Gigante"
     },
     "type": "route"
   },
@@ -632,8 +632,8 @@
       "de": "Uralter Friedhof",
       "en": "Old Cemetery",
       "fr": "Cimetière Ancien",
-      "es": "Old Cemetery",
-      "it": "Old Cemetery"
+      "es": "Viejo Cementerio",
+      "it": "Cimitero Antico"
     },
     "type": "route"
   },
@@ -643,8 +643,8 @@
       "de": "Schneeschlucht",
       "en": "Snowslide Slope",
       "fr": "Pente Enneigée",
-      "es": "Snowslide Slope",
-      "it": "Snowslide Slope"
+      "es": "Desfiladero Nevado",
+      "it": "Valle Innevata"
     },
     "type": "route"
   },
@@ -654,8 +654,8 @@
       "de": "Aufstiegstunnel",
       "en": "Tunnel to the Top",
       "fr": "Galeries Monte-Pic",
-      "es": "Tunnel to the Top",
-      "it": "Tunnel to the Top"
+      "es": "Túnel Ascensión",
+      "it": "Tunnel Scalata"
     },
     "type": "route"
   },
@@ -665,8 +665,8 @@
       "de": "Schneegipfelpfad",
       "en": "Path to the Peak",
       "fr": "Sentier Blanche-Cime",
-      "es": "Path to the Peak",
-      "it": "Path to the Peak"
+      "es": "Senda Blancacima",
+      "it": "Sentiero Biancacima"
     },
     "type": "route"
   },
@@ -676,8 +676,8 @@
       "de": "Kronentempel",
       "en": "Crown Shrine",
       "fr": "Temple Couronne",
-      "es": "Crown Shrine",
-      "it": "Crown Shrine"
+      "es": "Templo Corona",
+      "it": "Tempio Corona"
     },
     "type": "route"
   },
@@ -687,8 +687,8 @@
       "de": "Sohle des Giganten",
       "en": "Giant's Foot",
       "fr": "Empreinte du Géant",
-      "es": "Giant's Foot",
-      "it": "Giant's Foot"
+      "es": "Suela del Gigante",
+      "it": "Suola del Gigante"
     },
     "type": "route"
   },
@@ -698,19 +698,19 @@
       "de": "Rauschende Höhlen",
       "en": "Roaring-Sea Caves",
       "fr": "Cavernes Gronde-Mer",
-      "es": "Roaring-Sea Caves",
-      "it": "Roaring-Sea Caves"
+      "es": "Grutas Sonamar",
+      "it": "Grotte Fragormare"
     },
     "type": "route"
   },
   {
     "id": 65,
     "names": {
-      "de": "Frigrid Sea",
+      "de": "Schollenmeer",
       "en": "Frigrid Sea",
-      "fr": "Frigrid Sea",
-      "es": "Frigrid Sea",
-      "it": "Frigrid Sea"
+      "fr": "Mer Banquise",
+      "es": "Mar Gélido",
+      "it": "Mar Gelido"
     },
     "type": "route"
   },
@@ -720,8 +720,8 @@
       "de": "Dreiwegpass",
       "en": "Three-Point Pass",
       "fr": "Croisée Trois-Voies",
-      "es": "Three-Point Pass",
-      "it": "Three-Point Pass"
+      "es": "Encrucijada Tresvías",
+      "it": "Campo Trivio"
     },
     "type": "route"
   },
@@ -731,8 +731,8 @@
       "de": "Ballsee-Ufer",
       "en": "Ballimere Lake",
       "fr": "Lac Poké Ball",
-      "es": "Ballimere Lake",
-      "it": "Ballimere Lake"
+      "es": "Lago Bolaguna",
+      "it": "Riva del Lago Ball"
     },
     "type": "route"
   },
@@ -742,8 +742,8 @@
       "de": "Ballsee-Höhle",
       "en": "Lakeside Cave",
       "fr": "Grotte du Lac",
-      "es": "Lakeside Cave",
-      "it": "Lakeside Cave"
+      "es": "Gruta del Lago",
+      "it": "Grotta Rivalago"
     },
     "type": "route"
   },
@@ -753,8 +753,8 @@
       "de": "Gipfelruinen",
       "en": "Rock Peak Ruins",
       "fr": "Ruines Pic Roche",
-      "es": "Rock Peak Ruins",
-      "it": "Rock Peak Ruins"
+      "es": "Ruinas Pico Roca",
+      "it": "Rovine Picco"
     },
     "type": "route"
   },
@@ -764,8 +764,8 @@
       "de": "Eisberg-Ruinen",
       "en": "Iceberg Ruins",
       "fr": "Ruines Iceberg",
-      "es": "Iceberg Ruins",
-      "it": "Iceberg Ruins"
+      "es": "Ruinas Iceberg",
+      "it": "Rovine Iceberg"
     },
     "type": "route"
   },
@@ -775,8 +775,8 @@
       "de": "Eisen-Ruinen",
       "en": "Iron Ruins",
       "fr": "Ruines de Fer",
-      "es": "Iron Ruins",
-      "it": "Iron Ruins"
+      "es": "Ruinas Hierro",
+      "it": "Rovine Ferro"
     },
     "type": "route"
   },
@@ -786,8 +786,8 @@
       "de": "Zwiespaltruinen",
       "en": "Split-Decision Ruins",
       "fr": "Ruines du Choix",
-      "es": "Split-Decision Ruins",
-      "it": "Split-Decision Ruins"
+      "es": "Ruinas del Dilema",
+      "it": "Rovine della Scelta"
     },
     "type": "route"
   }

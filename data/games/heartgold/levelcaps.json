@@ -12,8 +12,8 @@
       "de": "Rosalia City",
       "en": "Cherrygrove City",
       "fr": "Ville Griotte",
-      "es": "Cherrygrove City",
-      "it": "Cherrygrove City"
+      "es": "Ciudad Cerezo",
+      "it": "Fiorpescopoli"
     },
     "badge": null,
     "max_level": null
@@ -30,9 +30,9 @@
     "location": {
       "de": "Knofensa-Turm",
       "en": "Sprout Tower",
-      "fr": "Tour Chetiflor",
-      "es": "Sprout Tower",
-      "it": "Sprout Tower"
+      "fr": "Tour Chétiflor",
+      "es": "Torre Bellsprout",
+      "it": "Torre Sprout"
     },
     "badge": null,
     "max_level": null
@@ -50,8 +50,8 @@
       "de": "Viola City",
       "en": "Violet City",
       "fr": "Mauville",
-      "es": "Violet City",
-      "it": "Violet City"
+      "es": "Ciudad Malva",
+      "it": "Violapoli"
     },
     "badge": {
       "de": "Zephyrorden",
@@ -75,8 +75,8 @@
       "de": "Flegmon-Brunnen",
       "en": "Slowpoke Well",
       "fr": "Puits Ramoloss",
-      "es": "Slowpoke Well",
-      "it": "Slowpoke Well"
+      "es": "Pozo Slowpoke",
+      "it": "Pozzo Slowpoke"
     },
     "badge": null,
     "max_level": null
@@ -93,9 +93,9 @@
     "location": {
       "de": "Azalea City",
       "en": "Azalea Town",
-      "fr": "Ecorcia",
-      "es": "Azalea Town",
-      "it": "Azalea Town"
+      "fr": "Écorcia",
+      "es": "Pueblo Azalea",
+      "it": "Azalina"
     },
     "badge": {
       "de": "Insektenorden",
@@ -116,11 +116,11 @@
       "it": "Rivale"
     },
     "location": {
-      "de": "Eingang Steineichenwald",
+      "de": "Ausgang zum Steineichenwald",
       "en": "Exit to Ilex Forest",
-      "fr": "Exit to Ilex Forest",
-      "es": "Exit to Ilex Forest",
-      "it": "Exit to Ilex Forest"
+      "fr": "Sortie vers le Bois aux Chênes",
+      "es": "Salida al Encinar",
+      "it": "Uscita per il Bosco di Lecci"
     },
     "badge": null,
     "max_level": null
@@ -138,8 +138,8 @@
       "de": "Dukatia City",
       "en": "Goldenrod City",
       "fr": "Doublonville",
-      "es": "Goldenrod City",
-      "it": "Goldenrod City"
+      "es": "Ciudad Trigal",
+      "it": "Fiordoropoli"
     },
     "badge": {
       "de": "Basisorden",
@@ -160,11 +160,11 @@
       "it": "Rivale"
     },
     "location": {
-      "de": "Knackturm",
+      "de": "Turmruine",
       "en": "Burned Tower",
       "fr": "Tour Cendrée",
-      "es": "Burned Tower",
-      "it": "Burned Tower"
+      "es": "Torre Quemada",
+      "it": "Torre Bruciata"
     },
     "badge": null,
     "max_level": null
@@ -182,8 +182,8 @@
       "de": "Teak City",
       "en": "Ecruteak City",
       "fr": "Rosalia",
-      "es": "Ecruteak City",
-      "it": "Ecruteak City"
+      "es": "Ciudad Iris",
+      "it": "Amarantopoli"
     },
     "badge": {
       "de": "Nebelorden",
@@ -206,9 +206,9 @@
     "location": {
       "de": "Suicune-Begegnung",
       "en": "Suicune Encounter",
-      "fr": "Suicune Encounter",
-      "es": "Suicune Encounter",
-      "it": "Suicune Encounter"
+      "fr": "Rencontre avec Suicune",
+      "es": "Encuentro con Suicune",
+      "it": "Incontro con Suicune"
     },
     "badge": null,
     "max_level": null
@@ -226,8 +226,8 @@
       "de": "Anemonia City",
       "en": "Cianwood City",
       "fr": "Irisia",
-      "es": "Cianwood City",
-      "it": "Cianwood City"
+      "es": "Ciudad Orquídea",
+      "it": "Fiorlisopoli"
     },
     "badge": {
       "de": "Sturmorden",
@@ -251,8 +251,8 @@
       "de": "Oliviana City",
       "en": "Olivine City",
       "fr": "Oliville",
-      "es": "Olivine City",
-      "it": "Olivine City"
+      "es": "Ciudad Olivo",
+      "it": "Olivinopoli"
     },
     "badge": {
       "de": "Mineralorden",
@@ -273,11 +273,11 @@
       "it": "Executive Petrel"
     },
     "location": {
-      "de": "Team Rocket Versteck",
+      "de": "Rocket-Versteck",
       "en": "Rocket Hideout",
-      "fr": "Rocket Hideout",
-      "es": "Rocket Hideout",
-      "it": "Rocket Hideout"
+      "fr": "Repaire Rocket",
+      "es": "Guarida Rocket",
+      "it": "Rifugio Rocket"
     },
     "badge": null,
     "max_level": null
@@ -292,11 +292,11 @@
       "it": "Executive Ariana & Grunt"
     },
     "location": {
-      "de": "Team Rocket Versteck",
+      "de": "Rocket-Versteck",
       "en": "Rocket Hideout",
-      "fr": "Rocket Hideout",
-      "es": "Rocket Hideout",
-      "it": "Rocket Hideout"
+      "fr": "Repaire Rocket",
+      "es": "Guarida Rocket",
+      "it": "Rifugio Rocket"
     },
     "badge": null,
     "max_level": null
@@ -314,8 +314,8 @@
       "de": "Mahagonia City",
       "en": "Mahogany Town",
       "fr": "Acajou",
-      "es": "Mahogany Town",
-      "it": "Mahogany Town"
+      "es": "Pueblo Caoba",
+      "it": "Mogania"
     },
     "badge": {
       "de": "Gletscherorden",
@@ -339,8 +339,8 @@
       "de": "Dukatia-Passage",
       "en": "Goldenrod Tunnel",
       "fr": "Doublon-Tunnel",
-      "es": "Goldenrod Tunnel",
-      "it": "Goldenrod Tunnel"
+      "es": "Túnel Trigal",
+      "it": "Fiortunnel"
     },
     "badge": null,
     "max_level": null
@@ -355,11 +355,11 @@
       "it": "Executive Petrel"
     },
     "location": {
-      "de": "Dukatia Radioturm",
+      "de": "Radioturm",
       "en": "Goldenrod Radio Tower",
-      "fr": "Goldenrod Radio Tower",
-      "es": "Goldenrod Radio Tower",
-      "it": "Goldenrod Radio Tower"
+      "fr": "Tour Radio de Doublonville",
+      "es": "Torre Radio de Ciudad Trigal",
+      "it": "Torre Radio di Fiordoropoli"
     },
     "badge": null,
     "max_level": null
@@ -374,11 +374,11 @@
       "it": "Executive Proton"
     },
     "location": {
-      "de": "Dukatia Radioturm",
+      "de": "Radioturm",
       "en": "Goldenrod Radio Tower",
-      "fr": "Goldenrod Radio Tower",
-      "es": "Goldenrod Radio Tower",
-      "it": "Goldenrod Radio Tower"
+      "fr": "Tour Radio de Doublonville",
+      "es": "Torre Radio de Ciudad Trigal",
+      "it": "Torre Radio di Fiordoropoli"
     },
     "badge": null,
     "max_level": null
@@ -393,11 +393,11 @@
       "it": "Executive Ariana"
     },
     "location": {
-      "de": "Dukatia Radioturm",
+      "de": "Radioturm",
       "en": "Goldenrod Radio Tower",
-      "fr": "Goldenrod Radio Tower",
-      "es": "Goldenrod Radio Tower",
-      "it": "Goldenrod Radio Tower"
+      "fr": "Tour Radio de Doublonville",
+      "es": "Torre Radio de Ciudad Trigal",
+      "it": "Torre Radio di Fiordoropoli"
     },
     "badge": null,
     "max_level": null
@@ -412,11 +412,11 @@
       "it": "Executive Archer"
     },
     "location": {
-      "de": "Dukatia Radioturm",
+      "de": "Radioturm",
       "en": "Goldenrod Radio Tower",
-      "fr": "Goldenrod Radio Tower",
-      "es": "Goldenrod Radio Tower",
-      "it": "Goldenrod Radio Tower"
+      "fr": "Tour Radio de Doublonville",
+      "es": "Torre Radio de Ciudad Trigal",
+      "it": "Torre Radio di Fiordoropoli"
     },
     "badge": null,
     "max_level": null
@@ -433,9 +433,9 @@
     "location": {
       "de": "Ebenholz City",
       "en": "Blackthorn City",
-      "fr": "Ebènelle",
-      "es": "Blackthorn City",
-      "it": "Blackthorn City"
+      "fr": "Ébènelle",
+      "es": "Ciudad Endrino",
+      "it": "Ebanopoli"
     },
     "badge": {
       "de": "Aufstiegsorden",
@@ -458,9 +458,9 @@
     "location": {
       "de": "Teak City Tanztheater",
       "en": "Ecruteak City Dance Hall",
-      "fr": "Ecruteak City Dance Hall",
-      "es": "Ecruteak City Dance Hall",
-      "it": "Ecruteak City Dance Hall"
+      "fr": "Rosalia, théâtre de danse",
+      "es": "Ciudad Iris, teatro de baile",
+      "it": "Amarantopoli, teatro della danza"
     },
     "badge": null,
     "max_level": null
@@ -494,7 +494,7 @@
       "it": "Will"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -513,7 +513,7 @@
       "it": "Koga"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -532,7 +532,7 @@
       "it": "Bruno"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -551,7 +551,7 @@
       "it": "Karen"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -570,7 +570,7 @@
       "it": "Lance"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Top Vier",
       "en": "Elite Four",
       "fr": "Conseil 4",
       "es": "Alto Mando",
@@ -666,9 +666,9 @@
     "location": {
       "de": "Fuchsania City",
       "en": "Fuschia City",
-      "fr": "Fuschia City",
-      "es": "Fuschia City",
-      "it": "Fuschia City"
+      "fr": "Parmanie",
+      "es": "Ciudad Fucsia",
+      "it": "Fucsiapoli"
     },
     "badge": {
       "de": "Seelenorden",
@@ -742,7 +742,7 @@
       "de": "Mondberg",
       "en": "Mt. Moon",
       "fr": "Mont Sélénite",
-      "es": "Monte Luna",
+      "es": "Mt. Moon",
       "it": "Monte Luna"
     },
     "badge": null,
@@ -760,9 +760,9 @@
     "location": {
       "de": "Zinnoberinsel",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
+      "fr": "Cramois'île",
       "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "it": "Isola Cannella"
     },
     "badge": {
       "de": "Vulkanorden",
@@ -811,8 +811,8 @@
       "de": "Silberberg",
       "en": "Mt. Silver",
       "fr": "Mont Argenté",
-      "es": "Mt. Silver",
-      "it": "Mt. Silver"
+      "es": "Monte Plateado",
+      "it": "Monte Argento"
     },
     "badge": null,
     "max_level": null

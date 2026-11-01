@@ -68,7 +68,7 @@
   {
     "id": 7,
     "names": {
-      "de": "Vertania Wald",
+      "de": "Vertania-Wald",
       "en": "Viridian Forest",
       "fr": "Forêt de Jade",
       "es": "Bosque Verde",
@@ -115,7 +115,7 @@
       "de": "Mondberg",
       "en": "Mt. Moon",
       "fr": "Mont Sélénite",
-      "es": "Monte Luna",
+      "es": "Mt. Moon",
       "it": "Monte Luna"
     },
     "type": "route"
@@ -126,7 +126,7 @@
       "de": "Fossil Mondberg",
       "en": "Fossil Mt. Moon",
       "fr": "Fossile Mont Sélénite",
-      "es": "Fósil Monte Luna",
+      "es": "Fósil Mt. Moon",
       "it": "Fossile Monte Luna"
     },
     "type": "static"
@@ -215,7 +215,7 @@
       "en": "Diglett's Cave",
       "fr": "Cave Taupiqueur",
       "es": "Cueva Diglett",
-      "it": "Grotta di Diglett"
+      "it": "Grotta Diglett"
     },
     "type": "route"
   },
@@ -444,9 +444,9 @@
     "names": {
       "de": "Kampf-Dojo Saffronia City",
       "en": "Fighting Dojo Saffron City",
-      "fr": "Dojo Karaté Safrania",
-      "es": "Dojo Karate Ciudad Azafrán",
-      "it": "Dojo di Lotta Zafferanopoli"
+      "fr": "Dojo Safrania",
+      "es": "Dojo-Karate Ciudad Azafrán",
+      "it": "Dojo Karate Zafferanopoli"
     },
     "type": "static"
   },
@@ -510,9 +510,9 @@
     "names": {
       "de": "Seeschauminseln",
       "en": "Seafoam Islands",
-      "fr": "Iles Ecume",
+      "fr": "Îles Écume",
       "es": "Islas Espuma",
-      "it": "Isole Schiuma"
+      "it": "Isole Spumarine"
     },
     "type": "route"
   },
@@ -521,9 +521,9 @@
     "names": {
       "de": "Arktos Seeschauminseln",
       "en": "Articuno Seafoam Islands",
-      "fr": "Artikodin Iles Ecume",
+      "fr": "Artikodin Îles Écume",
       "es": "Articuno Islas Espuma",
-      "it": "Articuno Isole Schiuma"
+      "it": "Articuno Isole Spumarine"
     },
     "type": "static"
   },
@@ -532,9 +532,9 @@
     "names": {
       "de": "Zinnoberinsel",
       "en": "Cinnabar Island",
-      "fr": "Cramois'Ile",
+      "fr": "Cramois'île",
       "es": "Isla Canela",
-      "it": "Cinabropoli"
+      "it": "Isola Cannella"
     },
     "type": "route"
   },
@@ -545,14 +545,14 @@
       "en": "Old Amber Pewter City",
       "fr": "Vieil Ambre Argenta",
       "es": "Ámbar Viejo Ciudad Plateada",
-      "it": "Vecchia Ambra Plumbeopoli"
+      "it": "Ambra antica Plumbeopoli"
     },
     "type": "static"
   },
   {
     "id": 51,
     "names": {
-      "de": "Pokémon-Villa",
+      "de": "Pokémon-Haus",
       "en": "Pokémon Mansion",
       "fr": "Manoir Pokémon",
       "es": "Mansión Pokémon",
@@ -607,11 +607,11 @@
   {
     "id": 56,
     "names": {
-      "de": "Azuria-Höhle",
+      "de": "Geheimdungeon",
       "en": "Cerulean Cave",
-      "fr": "Caverne Azurée",
-      "es": "Cueva Celeste",
-      "it": "Grotta Celeste"
+      "fr": "Grotte Inconnue",
+      "es": "Mazmorra Rara",
+      "it": "Grotta Ignota"
     },
     "type": "route",
     "postgame": true
@@ -619,11 +619,11 @@
   {
     "id": 57,
     "names": {
-      "de": "Mewtu Azuria-Höhle",
+      "de": "Mewtu Geheimdungeon",
       "en": "Mewtwo Cerulean Cave",
-      "fr": "Mewtwo Caverne Azurée",
-      "es": "Mewtwo Cueva Celeste",
-      "it": "Mewtwo Grotta Celeste"
+      "fr": "Mewtwo Grotte Inconnue",
+      "es": "Mewtwo Mazmorra Rara",
+      "it": "Mewtwo Grotta Ignota"
     },
     "type": "static",
     "postgame": true

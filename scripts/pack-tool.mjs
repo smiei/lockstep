@@ -78,7 +78,6 @@ function fromText(text) {
       fail(`${where}: text before the first [game], [routes] or [levelcaps] section`);
     }
   });
-  game.dataStatus ??= "unverified";
   return { format: FORMAT, version: 1, game, routes, levelcaps };
 }
 

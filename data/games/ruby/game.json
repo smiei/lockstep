@@ -2,7 +2,6 @@
   "id": "ruby",
   "sort": 12,
   "kind": "official",
-  "dataStatus": "unverified",
   "generation": 3,
   "dexLimit": 386,
   "spriteSet": "emerald",

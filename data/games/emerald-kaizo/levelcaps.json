@@ -59,27 +59,28 @@
   {
     "id": 4,
     "names": {
-      "de": "Felizia",
+      "de": "Roxanne",
       "en": "Roxanne",
       "fr": "Roxanne",
-      "es": "Petra",
+      "es": "Roxanne",
       "it": "Roxanne"
     },
     "location": {
-      "de": "Metarost City",
+      "de": "Rustboro City",
       "en": "Rustboro City",
-      "fr": "Mérouville",
-      "es": "Ciudad Férrica",
-      "it": "Ferrugipoli"
+      "fr": "Rustboro City",
+      "es": "Rustboro City",
+      "it": "Rustboro City"
     },
     "badge": {
-      "de": "Steinorden",
+      "de": "Stone Badge",
       "en": "Stone Badge",
-      "fr": "Badge Roc",
-      "es": "Medalla Piedra",
-      "it": "Medaglia Roccia"
+      "fr": "Stone Badge",
+      "es": "Stone Badge",
+      "it": "Stone Badge"
     },
-    "max_level": 15
+    "max_level": 15,
+    "sprite": "Felizia"
   },
   {
     "id": 5,
@@ -122,35 +123,36 @@
   {
     "id": 7,
     "names": {
-      "de": "Kamillo",
+      "de": "Brawly",
       "en": "Brawly",
-      "fr": "Bastien",
-      "es": "Marcial",
+      "fr": "Brawly",
+      "es": "Brawly",
       "it": "Brawly"
     },
     "location": {
-      "de": "Faustauhaven",
+      "de": "Dewford Town",
       "en": "Dewford Town",
-      "fr": "Myokara",
-      "es": "Pueblo Azuliza",
-      "it": "Bluruvia"
+      "fr": "Dewford Town",
+      "es": "Dewford Town",
+      "it": "Dewford Town"
     },
     "badge": {
-      "de": "Faustorden",
+      "de": "Knuckle Badge",
       "en": "Knuckle Badge",
-      "fr": "Badge Poing",
-      "es": "Medalla Puño",
-      "it": "Medaglia Pugno"
+      "fr": "Knuckle Badge",
+      "es": "Knuckle Badge",
+      "it": "Knuckle Badge"
     },
-    "max_level": 19
+    "max_level": 19,
+    "sprite": "Kamillo"
   },
   {
     "id": 8,
     "names": {
-      "de": "Heiko",
+      "de": "Wally",
       "en": "Wally",
-      "fr": "Timmy",
-      "es": "Blasco",
+      "fr": "Wally",
+      "es": "Wally",
       "it": "Wally"
     },
     "location": {
@@ -161,32 +163,34 @@
       "it": "Mauville City"
     },
     "badge": null,
-    "max_level": 70
+    "max_level": 70,
+    "sprite": "Heiko"
   },
   {
     "id": 9,
     "names": {
-      "de": "Walter",
+      "de": "Wattson",
       "en": "Wattson",
-      "fr": "Voltère",
-      "es": "Erico",
+      "fr": "Wattson",
+      "es": "Wattson",
       "it": "Wattson"
     },
     "location": {
-      "de": "Malvenfroh City",
+      "de": "Mauville City",
       "en": "Mauville City",
-      "fr": "Lavandia",
-      "es": "Ciudad Malvalona",
-      "it": "Ciclamipoli"
+      "fr": "Mauville City",
+      "es": "Mauville City",
+      "it": "Mauville City"
     },
     "badge": {
-      "de": "Dynamoorden",
+      "de": "Dynamo Badge",
       "en": "Dynamo Badge",
-      "fr": "Badge Dynamo",
-      "es": "Medalla Dinamo",
-      "it": "Medaglia Dinamo"
+      "fr": "Dynamo Badge",
+      "es": "Dynamo Badge",
+      "it": "Dynamo Badge"
     },
-    "max_level": 29
+    "max_level": 29,
+    "sprite": "Walter"
   },
   {
     "id": 10,
@@ -248,27 +252,28 @@
   {
     "id": 13,
     "names": {
-      "de": "Flavia",
+      "de": "Flannery",
       "en": "Flannery",
-      "fr": "Adriane",
-      "es": "Candela",
+      "fr": "Flannery",
+      "es": "Flannery",
       "it": "Flannery"
     },
     "location": {
-      "de": "Bad Lavastadt",
+      "de": "Lavaridge Town",
       "en": "Lavaridge Town",
-      "fr": "Vermilava",
-      "es": "Pueblo Lavacalda",
-      "it": "Cuordilava"
+      "fr": "Lavaridge Town",
+      "es": "Lavaridge Town",
+      "it": "Lavaridge Town"
     },
     "badge": {
-      "de": "Hitzeorden",
+      "de": "Heat Badge",
       "en": "Heat Badge",
-      "fr": "Badge Chaleur",
-      "es": "Medalla Calor",
-      "it": "Medaglia Calore"
+      "fr": "Heat Badge",
+      "es": "Heat Badge",
+      "it": "Heat Badge"
     },
-    "max_level": 42
+    "max_level": 42,
+    "sprite": "Flavia"
   },
   {
     "id": 14,
@@ -280,18 +285,18 @@
       "it": "Norman"
     },
     "location": {
-      "de": "Blütenburg City",
+      "de": "Petalburg City",
       "en": "Petalburg City",
-      "fr": "Clémenti-Ville",
-      "es": "Ciudad Petalia",
-      "it": "Petalipoli"
+      "fr": "Petalburg City",
+      "es": "Petalburg City",
+      "it": "Petalburg City"
     },
     "badge": {
-      "de": "Balanceorden",
+      "de": "Balance Badge",
       "en": "Balance Badge",
-      "fr": "Badge Équilibre",
-      "es": "Medalla Equilibrio",
-      "it": "Medaglia Equilibrio"
+      "fr": "Balance Badge",
+      "es": "Balance Badge",
+      "it": "Balance Badge"
     },
     "max_level": 48
   },
@@ -355,27 +360,28 @@
   {
     "id": 18,
     "names": {
-      "de": "Wibke",
+      "de": "Winona",
       "en": "Winona",
-      "fr": "Alizée",
-      "es": "Alana",
+      "fr": "Winona",
+      "es": "Winona",
       "it": "Winona"
     },
     "location": {
-      "de": "Baumhausen City",
+      "de": "Fortree City",
       "en": "Fortree City",
-      "fr": "Cimetronelle",
-      "es": "Ciudad Arborada",
-      "it": "Forestopoli"
+      "fr": "Fortree City",
+      "es": "Fortree City",
+      "it": "Fortree City"
     },
     "badge": {
-      "de": "Federorden",
+      "de": "Feather Badge",
       "en": "Feather Badge",
-      "fr": "Badge Plume",
-      "es": "Medalla Pluma",
-      "it": "Medaglia Piuma"
+      "fr": "Feather Badge",
+      "es": "Feather Badge",
+      "it": "Feather Badge"
     },
-    "max_level": 55
+    "max_level": 55,
+    "sprite": "Wibke"
   },
   {
     "id": 19,
@@ -494,27 +500,28 @@
   {
     "id": 25,
     "names": {
-      "de": "Ben & Svenja",
+      "de": "Tate & Liza",
       "en": "Tate & Liza",
-      "fr": "Lévy & Tatia",
-      "es": "Vito & Leti",
+      "fr": "Tate & Liza",
+      "es": "Tate & Liza",
       "it": "Tate & Liza"
     },
     "location": {
-      "de": "Moosbach City",
+      "de": "Mossdeep City",
       "en": "Mossdeep City",
-      "fr": "Algatia",
-      "es": "Ciudad Algaria",
-      "it": "Verdeazzupoli"
+      "fr": "Mossdeep City",
+      "es": "Mossdeep City",
+      "it": "Mossdeep City"
     },
     "badge": {
-      "de": "Psychoorden",
+      "de": "Mind Badge",
       "en": "Mind Badge",
-      "fr": "Badge Esprit",
-      "es": "Medalla Mente",
-      "it": "Medaglia Mente"
+      "fr": "Mind Badge",
+      "es": "Mind Badge",
+      "it": "Mind Badge"
     },
-    "max_level": 70
+    "max_level": 70,
+    "sprite": "Ben & Svenja"
   },
   {
     "id": 26,
@@ -595,10 +602,10 @@
   {
     "id": 30,
     "names": {
-      "de": "Wassili",
+      "de": "Wallace",
       "en": "Wallace",
-      "fr": "Marc",
-      "es": "Plubio",
+      "fr": "Wallace",
+      "es": "Wallace",
       "it": "Wallace"
     },
     "location": {
@@ -609,7 +616,8 @@
       "it": "Sootopolis Gym"
     },
     "badge": null,
-    "max_level": 77
+    "max_level": 77,
+    "sprite": "Wassili"
   },
   {
     "id": 31,
@@ -617,32 +625,32 @@
       "de": "Juan",
       "en": "Juan",
       "fr": "Juan",
-      "es": "Galano",
+      "es": "Juan",
       "it": "Juan"
     },
     "location": {
-      "de": "Xeneroville",
+      "de": "Sootopolis City",
       "en": "Sootopolis City",
-      "fr": "Atalanopolis",
-      "es": "Arrecípolis",
-      "it": "Ceneride"
+      "fr": "Sootopolis City",
+      "es": "Sootopolis City",
+      "it": "Sootopolis City"
     },
     "badge": {
-      "de": "Regenorden",
+      "de": "Rain Badge",
       "en": "Rain Badge",
-      "fr": "Badge Pluie",
-      "es": "Medalla Lluvia",
-      "it": "Medaglia Pioggia"
+      "fr": "Rain Badge",
+      "es": "Rain Badge",
+      "it": "Rain Badge"
     },
     "max_level": 77
   },
   {
     "id": 32,
     "names": {
-      "de": "Heiko",
+      "de": "Wally",
       "en": "Wally",
-      "fr": "Timmy",
-      "es": "Blasco",
+      "fr": "Wally",
+      "es": "Wally",
       "it": "Wally"
     },
     "location": {
@@ -653,101 +661,107 @@
       "it": "Victory Road"
     },
     "badge": null,
-    "max_level": 88
+    "max_level": 88,
+    "sprite": "Heiko"
   },
   {
     "id": 33,
     "names": {
-      "de": "Ulrich",
+      "de": "Sidney",
       "en": "Sidney",
-      "fr": "Damien",
-      "es": "Sixto",
+      "fr": "Sidney",
+      "es": "Sidney",
       "it": "Sidney"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Ulrich"
   },
   {
     "id": 34,
     "names": {
-      "de": "Antonia",
+      "de": "Phoebe",
       "en": "Phoebe",
-      "fr": "Spectra",
-      "es": "Fátima",
+      "fr": "Phoebe",
+      "es": "Phoebe",
       "it": "Phoebe"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Antonia"
   },
   {
     "id": 35,
     "names": {
-      "de": "Frosina",
+      "de": "Glacia",
       "en": "Glacia",
       "fr": "Glacia",
-      "es": "Nívea",
+      "es": "Glacia",
       "it": "Glacia"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Frosina"
   },
   {
     "id": 36,
     "names": {
-      "de": "Dragan",
+      "de": "Drake",
       "en": "Drake",
-      "fr": "Aragon",
-      "es": "Dracón",
+      "fr": "Drake",
+      "es": "Drake",
       "it": "Drake"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Dragan"
   },
   {
     "id": 37,
     "names": {
-      "de": "Troy Trumm",
+      "de": "Steven",
       "en": "Steven",
       "fr": "Steven",
       "es": "Steven",
       "it": "Steven"
     },
     "location": {
-      "de": "Top 4",
+      "de": "Elite Four",
       "en": "Elite Four",
-      "fr": "Conseil 4",
-      "es": "Alto Mando",
-      "it": "Superquattro"
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 100
+    "max_level": 100,
+    "sprite": "Troy Trumm"
   }
 ]

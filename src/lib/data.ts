@@ -42,11 +42,6 @@ export type GameInfo = {
   id: string;
   // Display order in the game picker.
   sort: number;
-  // Whether the maintainer has checked this pack's route list, route order
-  // and DE/EN names against the game. Missing = "unverified", the safe
-  // default for a new or contributed pack: the New-Run dialog and the
-  // Encounter tab then say so (A1 of the 5.0 roadmap).
-  dataStatus?: "verified" | "unverified";
   // Official game, ROM hack or fan game - groups the New-Run dialog's list.
   // Missing = "official". Imported packs (id "custom-...") form a group of
   // their own whatever they say here.
@@ -282,7 +277,6 @@ export function getGameSummaries(): GameSummary[] {
     id: game.id,
     names: game.names,
     fusion: Boolean(game.fusion),
-    unverified: game.dataStatus !== "verified",
     kind: game.kind ?? "official",
   }));
 }

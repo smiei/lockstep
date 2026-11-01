@@ -1,7 +1,7 @@
 {
   "source": "Bassel-T/nuzlocke.app@2b4f2ec8e0bf4d7112a210b4ac922feedb49662e patches.json (rrss)",
   "sourceVersion": "2b4f2ec",
-  "generatedAt": "2026-10-31T03:38:12.594Z",
+  "generatedAt": "2026-11-01T02:56:13.020Z",
   "species": [
     {
       "id": 12,
@@ -118,7 +118,8 @@
       "id": 39,
       "name": "Jigglypuff",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 115,
@@ -136,7 +137,8 @@
       "id": 40,
       "name": "Wigglytuff",
       "types": [
-        "normal"
+        "normal",
+        "fairy"
       ],
       "stats": {
         "KP": 150,
@@ -490,7 +492,8 @@
       "id": 184,
       "name": "Azumarill",
       "types": [
-        "water"
+        "water",
+        "fairy"
       ],
       "stats": {
         "KP": 100,
@@ -937,7 +940,8 @@
       "id": 280,
       "name": "Ralts",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 28,
@@ -955,7 +959,8 @@
       "id": 281,
       "name": "Kirlia",
       "types": [
-        "psychic"
+        "psychic",
+        "fairy"
       ],
       "stats": {
         "KP": 38,
@@ -1066,7 +1071,8 @@
       "id": 303,
       "name": "Mawile",
       "types": [
-        "steel"
+        "steel",
+        "fairy"
       ],
       "stats": {
         "KP": 55,
