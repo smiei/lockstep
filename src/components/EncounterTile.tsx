@@ -132,8 +132,13 @@ export function EncounterTile({
     return (
       <div className="flex w-full flex-wrap items-center gap-x-2.5 gap-y-1">
         {spriteSlot}
-        <div className="flex min-w-0 flex-1 flex-col items-start gap-0.5">
-          <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+        {/* min-w-40: where the text would get narrower than that, the button
+            wraps to a line of its own instead of squeezing the text into a
+            column a word wide. max-w-full on the name row: in an items-start
+            column a row is as wide as its content, so without it the types
+            ran on under the button instead of wrapping. */}
+        <div className="flex min-w-40 flex-1 flex-col items-start gap-0.5">
+          <div className="flex max-w-full flex-wrap items-center gap-x-1.5 gap-y-0.5">
             {name}
             {types}
             {encounter.isStatic && <span className="text-xs text-ink-subtle">{t.links.staticTag}</span>}
