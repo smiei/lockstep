@@ -142,6 +142,8 @@ export type RunHomeCard = {
   players: string[];
   // ISO time of the last change (Run.changedAt); the list is sorted by it.
   changedAt: string;
+  // Marked as lost on the start page: greyed out and listed last.
+  lost: boolean;
   routesDone: number;
   routesTotal: number;
   badges: number;

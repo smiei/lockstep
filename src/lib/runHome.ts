@@ -69,6 +69,7 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
         mode: run.mode,
         players: players.map((player) => settings.playerNames[player] ?? ""),
         changedAt: run.changedAt.toISOString(),
+        lost: run.lostAt !== null,
         routesDone: progress.done,
         routesTotal: progress.total,
         badges: cap?.badges ?? 0,
@@ -79,5 +80,6 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
       };
     }),
   );
-  return cards.sort((a, b) => b.changedAt.localeCompare(a.changedAt));
+  // Lost runs go to the end, each group played-last first.
+  return cards.sort((a, b) => Number(a.lost) - Number(b.lost) || b.changedAt.localeCompare(a.changedAt));
 }

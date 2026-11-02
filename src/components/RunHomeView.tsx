@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { createRun } from "@/lib/actions";
+import { createRun, setRunLost } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
@@ -12,6 +12,7 @@ import { RunMode } from "@/generated/prisma/enums";
 import { ALL_PLAYERS } from "@/lib/players";
 import { GameCover } from "@/components/GameCover";
 import type { GameSummary, RunHomeCard } from "@/lib/types";
+import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { PageHeader } from "@/components/ui/Page";
 import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
@@ -153,6 +154,9 @@ function Welcome({ lang, actions }: { lang: Lang; actions: React.ReactNode }) {
 
 function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: GameSummary[] }) {
   const t = translations[lang];
+  const router = useRouter();
+  const toast = useToast();
+  const [pending, startTransition] = useTransition();
   const game = games.find((g) => g.id === card.gameId);
   const gameName = game ? localizeName(game.names, lang) : card.gameId;
   const who =
@@ -160,15 +164,29 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
       ? t.runSwitcher.modeClassic
       : [t.runSwitcher.modeSoullink, ...card.players.map((name, i) => name.trim() || t.player[ALL_PLAYERS[i]])].join(" · ");
   const percent = card.routesTotal > 0 ? Math.round((card.routesDone / card.routesTotal) * 100) : 0;
+  // A lost run fades its pictures only (cover, team) and says so in words:
+  // the name struck through, a "Lost" badge and the Memorial's heavy rule.
+  const fade = card.lost ? "grayscale" : undefined;
+
+  function toggleLost() {
+    startTransition(async () => {
+      const result = await setRunLost(card.accessKey, !card.lost);
+      if (result.success) router.refresh();
+      else toast.error(formatActionError(result.error, lang));
+    });
+  }
 
   return (
+    // The button sits over the card's bottom-right corner rather than inside
+    // the link, which may not contain another interactive element.
+    <div className="relative h-full">
     <Link
       href={`/overview?run=${card.accessKey}`}
       aria-label={t.home.open(card.name)}
       className="group flex h-full flex-col rounded-md border border-line bg-panel p-4 transition-colors hover:border-line-strong"
     >
       <div className="flex gap-3">
-        <GameCover src={game?.cover} name={gameName} size="sm" />
+        <GameCover src={game?.cover} name={gameName} size="sm" className={fade} />
         <div className="min-w-0 flex-1">
           <div className="flex items-baseline justify-between gap-3 font-mono text-xs text-ink-subtle">
             <span className="min-w-0 truncate">{gameName}</span>
@@ -176,8 +194,17 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
               {t.home.changed(relativeTime(card.changedAt, lang))}
             </span>
           </div>
-          <h2 className="mt-1 truncate text-xl font-bold tracking-tight text-ink group-hover:underline">{card.name}</h2>
-          <p className="truncate text-sm text-ink-muted">{who}</p>
+          <h2
+            className={`mt-1 truncate text-xl font-bold tracking-tight group-hover:underline ${
+              card.lost ? "text-ink-muted line-through" : "text-ink"
+            }`}
+          >
+            {card.name}
+          </h2>
+          <p className="flex items-center gap-2 text-sm text-ink-muted">
+            <span className="min-w-0 truncate">{who}</span>
+            {card.lost && <Badge tone="danger">{t.home.lost}</Badge>}
+          </p>
         </div>
       </div>
 
@@ -189,7 +216,13 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
             return (
               <div key={i} className="flex aspect-square items-center justify-center rounded-sm">
                 {member ? (
-                  <PokemonSprite pokemonId={member.pokemonId} bodyId={member.bodyId} name="" size="md" />
+                  <PokemonSprite
+                    pokemonId={member.pokemonId}
+                    bodyId={member.bodyId}
+                    name=""
+                    size="md"
+                    className={card.lost ? "opacity-50 grayscale" : undefined}
+                  />
                 ) : (
                   <span className="h-6 w-6 rounded-sm border border-dashed border-line-strong" />
                 )}
@@ -200,7 +233,7 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
       </SpriteSetProvider>
       {card.team.length === 0 && <p className="mt-1 text-xs text-ink-subtle">{t.home.noTeam}</p>}
 
-      <SpecimenLabel className="mt-3 font-mono">
+      <SpecimenLabel dead={card.lost} className="mt-3 font-mono">
         <LabelRow strong left={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} right={`${t.home.badges} ${card.badges}/${card.badgesTotal}`} />
         <LabelRow
           left={card.nextCap ? `${t.home.nextCap}: ${localizeName(card.nextCap.names, lang)}` : t.home.allCapsDone}
@@ -208,9 +241,21 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
         />
         <LabelRow left={<span className={card.deaths > 0 ? "text-danger" : undefined}>{t.home.deaths(card.deaths)}</span>} />
       </SpecimenLabel>
-      <div className="mt-auto pt-3">
+      {/* As tall as the button laid over its right end. */}
+      <div className="mt-auto flex min-h-10 items-center pt-3 box-content">
         <ProgressBar done={card.routesDone} total={card.routesTotal} percent={percent} title={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} />
       </div>
     </Link>
+      <Button
+        variant="ghost"
+        size="sm"
+        loading={pending}
+        onClick={toggleLost}
+        aria-label={card.lost ? t.home.unmarkLostFor(card.name) : t.home.markLostFor(card.name)}
+        className="absolute right-3 bottom-4"
+      >
+        {card.lost ? t.home.unmarkLost : t.home.markLost}
+      </Button>
+    </div>
   );
 }

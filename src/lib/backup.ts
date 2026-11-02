@@ -72,6 +72,7 @@ function runToBackupRun(run: RunWithRelations): BackupRun {
     rulesMarkdown: run.rulesMarkdown,
     settingsJson: run.settingsJson,
     createdAt: run.createdAt.toISOString(),
+    lostAt: run.lostAt?.toISOString() ?? null,
     soulLinks: run.soulLinks.map((sl) => ({
       routeId: sl.routeId,
       status: sl.status,
@@ -194,6 +195,7 @@ export async function applyBackup(backup: BackupFile): Promise<string[]> {
             // new-run throttle and when an empty run counts as abandoned - an import
             // is a new run today whatever the file says.
             createdAt: IS_PUBLIC_INSTANCE ? new Date() : new Date(run.createdAt),
+            lostAt: run.lostAt ? new Date(run.lostAt) : null,
           },
         });
         runKeys.push(createdRun.accessKey);
