@@ -49,6 +49,13 @@
   --warning: #8a5300;
   --warning-bg: #fbf1dc;
   --warning-line: #e2b766;
+  /* The Hall of Fame's gold (a won run on the start page). Text gold clears
+     4.5:1 on the panel; -line is for rules, -bg a faint ground, -solid the
+     seal's fill. */
+  --gold: #765a06;
+  --gold-bg: #fbf4dc;
+  --gold-line: #c9a13b;
+  --gold-solid: #d9ab2e;
   --danger: #b3261e; /* the label red */
   --danger-bg: #fbe9e7;
   --danger-line: #e3b4b0;
@@ -188,6 +195,10 @@
   --warning: #f2c46d;
   --warning-bg: #2a1f0b;
   --warning-line: #7a5a1c;
+  --gold: #efcb63;
+  --gold-bg: #262010;
+  --gold-line: #8f7022;
+  --gold-solid: #d1a12a;
   --danger: #f2a099;
   --danger-bg: #2c1312;
   --danger-line: #8a2d27;
@@ -419,6 +430,10 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
 
+  --color-gold: var(--gold);
+  --color-gold-bg: var(--gold-bg);
+  --color-gold-line: var(--gold-line);
+  --color-gold-solid: var(--gold-solid);
   --color-success: var(--success);
   --color-success-bg: var(--success-bg);
   --color-success-line: var(--success-line);
@@ -670,5 +685,92 @@ body {
 
   :root[data-rail="collapsed"] .rail-expand {
     display: flex;
+  }
+}
+
+/* A won run's card on the start page: an entry in the Hall of Fame. A double
+   gold rule instead of the hairline, and a faint gold light falling in from
+   the corner where the seal sits. */
+.hall-of-fame {
+  position: relative;
+  border: 3px double var(--gold-line);
+  background:
+    radial-gradient(90% 70% at 100% 0%, var(--gold-bg), transparent 70%),
+    var(--panel);
+}
+
+/* Its label: the specimen label's double frame, in gold. */
+.specimen-label-won {
+  border: 1px solid var(--gold-line);
+  outline: 1px solid var(--gold-line);
+  outline-offset: 2px;
+  background: var(--panel);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The seal is pressed on once, like a stamp, then rests at a slant. Finite;
+   reduced motion shows it resting straight away. */
+@keyframes seal-stamp {
+  0% {
+    transform: scale(1.7) rotate(-24deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(0.9) rotate(12deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(8deg);
+    opacity: 1;
+  }
+}
+
+.champion-seal {
+  transform: rotate(8deg);
+  animation: seal-stamp 650ms cubic-bezier(0.2, 0.9, 0.3, 1.25) 150ms 1 both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .champion-seal {
+    animation: none;
+  }
+}
+
+/* ... and a gold glint that crosses the card once when the page opens, like
+   light catching a framed certificate. Above the content but click-through;
+   finite, and absent with reduced motion. */
+.hall-of-fame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    color-mix(in srgb, var(--gold-solid) 22%, transparent) 50%,
+    transparent 65%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  opacity: 0;
+  animation: hall-glint 1.6s ease-out 500ms 1 both;
+}
+
+@keyframes hall-glint {
+  0% {
+    background-position: 100% 0;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 0;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hall-of-fame::after {
+    animation: none;
   }
 }

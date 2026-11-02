@@ -5,20 +5,23 @@ import { cn } from "./cn";
 // `.specimen-label`). Rows of small mono data, each a left and an optional
 // right value - "Nr. 004 · Platz 3", "Vertania Wald · Σ 505 → 860". `dead`
 // switches the double frame for the heavy top rule a collection uses for a
-// specimen withdrawn from the drawer (the Memorial, a dead pair).
+// specimen withdrawn from the drawer (the Memorial, a dead pair). `won` is the
+// same double frame in gold, for a run in the Hall of Fame.
 export function SpecimenLabel({
   dead = false,
+  won = false,
   className,
   children,
 }: {
   dead?: boolean;
+  won?: boolean;
   className?: string;
   children: ReactNode;
 }) {
   return (
     <div
       className={cn(
-        dead ? "specimen-label-dead py-1.5" : "specimen-label px-2 py-1.5",
+        dead ? "specimen-label-dead py-1.5" : won ? "specimen-label-won px-2 py-1.5" : "specimen-label px-2 py-1.5",
         "text-xs leading-relaxed text-ink",
         className,
       )}

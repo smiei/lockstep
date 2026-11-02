@@ -100,7 +100,7 @@ export function RunHomeView({
           <PageHeader title={t.home.title} description={`${t.home.description} ${t.home.count(cards.length)}.`}>
             {actions}
           </PageHeader>
-          <ul className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 2xl:grid-cols-3">
             {cards.map((card) => (
               <li key={card.accessKey}>
                 <RunCard card={card} lang={lang} games={games} />
@@ -169,7 +169,9 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
   const won = card.outcome === "won";
   // A lost run fades its pictures only (cover, team) and says so in words:
   // the name struck through, a "Lost" badge and the Memorial's heavy rule.
-  // A won one keeps its colours and gets a green frame and a "Won" badge.
+  // A won one becomes an entry in the Hall of Fame: a gold seal pressed onto
+  // its corner, a double gold frame, a gold drawer and a gold label dated
+  // the day it was won.
   const fade = lost ? "grayscale" : undefined;
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [busy, setBusy] = useState<"outcome" | "delete" | null>(null);
@@ -209,10 +211,11 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
     // The card is the frame; the link fills it above the action row, which
     // may not sit inside the link (no button inside an <a>).
     <div
-      className={`flex h-full flex-col rounded-md border bg-panel p-4 transition-colors ${
-        won ? "border-success-line" : "border-line has-[a:hover]:border-line-strong"
+      className={`relative flex h-full flex-col rounded-md p-4 transition-colors ${
+        won ? "hall-of-fame" : "border border-line bg-panel has-[a:hover]:border-line-strong"
       }`}
     >
+      {won && <ChampionSeal label={t.home.hallOfFameSeal} />}
       <Link
         href={`/overview?run=${card.accessKey}`}
         aria-label={t.home.open(card.name)}
@@ -220,10 +223,12 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
       >
         <div className="flex gap-3">
           <GameCover src={game?.cover} name={gameName} size="sm" className={fade} />
-          <div className="min-w-0 flex-1">
+          {/* Room for the seal in the corner. */}
+          <div className={`min-w-0 flex-1 ${won ? "pr-20" : ""}`}>
             <div className="flex items-baseline justify-between gap-3 font-mono text-xs text-ink-subtle">
               <span className="min-w-0 truncate">{gameName}</span>
-              <span className="shrink-0" suppressHydrationWarning>
+              {/* Beside the seal a phone has room for one of the two: the game. */}
+              <span className={`shrink-0 ${won ? "hidden sm:inline" : ""}`} suppressHydrationWarning>
                 {t.home.changed(relativeTime(card.changedAt, lang))}
               </span>
             </div>
@@ -237,14 +242,22 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
             <p className="flex items-center gap-2 text-sm text-ink-muted">
               <span className="min-w-0 truncate">{who}</span>
               {lost && <Badge tone="danger">{t.home.lost}</Badge>}
-              {won && <Badge tone="success">{t.home.won}</Badge>}
+              {won && (
+                <span className="inline-flex shrink-0 items-center rounded-sm border border-gold-line bg-gold-bg px-1.5 py-0.5 text-xs font-semibold text-gold">
+                  {t.home.won}
+                </span>
+              )}
             </p>
           </div>
         </div>
 
         {/* The team in its drawer: six slots, the empty ones as outlines. */}
         <SpriteSetProvider spriteSet={card.spriteSet}>
-          <div className="mt-3 grid grid-cols-6 gap-1 rounded-md bg-sunken p-1.5">
+          <div
+            className={`mt-3 grid grid-cols-6 gap-1 rounded-md p-1.5 ${
+              won ? "border border-gold-line bg-gold-bg" : "bg-sunken"
+            }`}
+          >
             {Array.from({ length: TEAM_SLOTS }, (_, i) => {
               const member = card.team[i];
               return (
@@ -267,7 +280,17 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
         </SpriteSetProvider>
         {card.team.length === 0 && <p className="mt-1 text-xs text-ink-subtle">{t.home.noTeam}</p>}
 
-        <SpecimenLabel dead={lost} className="mt-3 font-mono">
+        <SpecimenLabel dead={lost} won={won} className="mt-3 font-mono">
+          {won && card.outcomeAt && (
+            <LabelRow
+              left={<span className="font-semibold text-gold">★ {t.home.hallOfFame}</span>}
+              right={
+                <span className="text-gold" suppressHydrationWarning>
+                  {new Intl.DateTimeFormat(lang, { dateStyle: "medium" }).format(new Date(card.outcomeAt))}
+                </span>
+              }
+            />
+          )}
           <LabelRow strong left={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} right={`${t.home.badges} ${card.badges}/${card.badgesTotal}`} />
           <LabelRow
             left={card.nextCap ? `${t.home.nextCap}: ${localizeName(card.nextCap.names, lang)}` : t.home.allCapsDone}
@@ -331,5 +354,35 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
         </Button>
       </div>
     </div>
+  );
+}
+
+// The Hall of Fame seal on a won run's card: a gold rosette with two ribbon
+// tails and a star, pressed onto the corner once (.champion-seal).
+function ChampionSeal({ label }: { label: string }) {
+  const scallops = Array.from({ length: 16 }, (_, i) => {
+    const angle = (i / 16) * Math.PI * 2;
+    return { cx: 32 + Math.cos(angle) * 21, cy: 28 + Math.sin(angle) * 21 };
+  });
+  return (
+    <svg
+      viewBox="0 0 64 76"
+      role="img"
+      aria-label={label}
+      className="champion-seal pointer-events-none absolute -top-4 right-3 z-10 h-24 w-20 drop-shadow-md"
+    >
+      <path d="M22 40 L13 74 L21 69 L27 75 L32 44 Z" className="fill-gold-line" />
+      <path d="M42 40 L51 74 L43 69 L37 75 L32 44 Z" className="fill-gold-line" />
+      {scallops.map((c, i) => (
+        <circle key={i} cx={c.cx} cy={c.cy} r={5} className="fill-gold-solid" />
+      ))}
+      <circle cx={32} cy={28} r={21} className="fill-gold-solid" />
+      <circle cx={32} cy={28} r={15.5} className="fill-panel stroke-gold-line" strokeWidth={1.5} />
+      <circle cx={32} cy={28} r={12.5} fill="none" className="stroke-gold-line" strokeWidth={0.75} strokeDasharray="1.5 1.5" />
+      <path
+        d="M32 19.5 L34.6 25 L40.6 25.6 L36.1 29.6 L37.4 35.5 L32 32.5 L26.6 35.5 L27.9 29.6 L23.4 25.6 L29.4 25 Z"
+        className="fill-gold-solid stroke-gold" strokeWidth={0.75} strokeLinejoin="round"
+      />
+    </svg>
   );
 }

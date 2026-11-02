@@ -158,6 +158,8 @@ const de = {
     linkNote: "Jeder Run hat einen eigenen, geheimen Link. Wer ihn kennt, kann den Run ansehen und bearbeiten - teile ihn nur mit deinen Mitspielern.",
   },
   home: {
+    hallOfFame: "Ruhmeshalle",
+    hallOfFameSeal: "Siegel der Ruhmeshalle",
     lost: "Verloren",
     won: "Gewonnen",
     markWon: "Als gewonnen markieren",
@@ -1020,6 +1022,8 @@ const en: Dictionary = {
     linkNote: "Every run has its own secret link. Anyone who knows it can view and edit the run - only share it with your fellow players.",
   },
   home: {
+    hallOfFame: "Hall of Fame",
+    hallOfFameSeal: "Hall of Fame seal",
     lost: "Lost",
     won: "Won",
     markWon: "Mark as won",
@@ -1872,6 +1876,8 @@ const fr: Dictionary = {
     linkNote: "Chaque run a son propre lien secret. Toute personne qui le connaît peut voir et modifier le run - ne le partage qu'avec tes coéquipiers.",
   },
   home: {
+    hallOfFame: "Panthéon",
+    hallOfFameSeal: "Sceau du Panthéon",
     lost: "Perdu",
     won: "Gagné",
     markWon: "Marquer comme gagné",
@@ -2729,6 +2735,8 @@ const es: Dictionary = {
     linkNote: "Cada run tiene su propio enlace secreto. Quien lo conozca puede ver y editar el run: compártelo solo con tus compañeros.",
   },
   home: {
+    hallOfFame: "Hall de la Fama",
+    hallOfFameSeal: "Sello del Hall de la Fama",
     lost: "Perdido",
     won: "Ganado",
     markWon: "Marcar como ganado",
@@ -3586,6 +3594,8 @@ const it: Dictionary = {
     linkNote: "Ogni run ha un proprio link segreto. Chi lo conosce può vedere e modificare il run: condividilo solo con i tuoi compagni.",
   },
   home: {
+    hallOfFame: "Sala d'Onore",
+    hallOfFameSeal: "Sigillo della Sala d'Onore",
     lost: "Perso",
     won: "Vinto",
     markWon: "Segna come vinto",
