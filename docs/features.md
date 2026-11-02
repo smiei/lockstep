@@ -101,7 +101,7 @@ A per-run dashboard. In a SoulLink run every number also breaks down per player.
 Per-run rule toggles. They are informational: they drive warnings and visibility, and never block a save. Available rules:
 - **Species Clause.** In SoulLink it can apply per player, optionally with "caught links lock for everyone".
 - **Shiny Clause** and **nicknames.**
-- **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed" and "evolutions made easier").
+- **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"). Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
 - **Static encounters** and their clause exemption.
 
 On top of the toggles:
@@ -112,7 +112,7 @@ On top of the toggles:
 
 ## Runs, games and players
 
-- **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. Each card can mark its run as won - it becomes a Hall of Fame entry with a gold seal, frame and label dated the day it was won - or lost (greyed out and struck through). Either way it keeps its place in the list, and "Resume" takes the mark back. Deleting a run takes two clicks on its card: Delete, then Delete for good. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
+- **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. Each card can mark its run as won - it becomes a Hall of Fame entry with a gold seal, frame and label dated the day it was won - or lost (greyed out, struck through, a red frame and a red "Lost" stamp across its team). Either way it keeps its place in the list, "Open only" at the top hides both, and "Resume" takes the mark back. Deleting a run takes two clicks on its card: Delete, then Delete for good. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
 - **Game covers** show in the game picker, on the start page and on the Overview. They are downloaded on the first start; a ROM hack without a cover shows a drawn tile, or your own picture (see [self-hosting](self-hosting.md#game-covers)).
 - **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 16 ROM hacks, and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).

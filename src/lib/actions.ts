@@ -30,6 +30,7 @@ import { DEFAULT_RULES } from "@/lib/defaultRules";
 import { customGamesDir, removeCustomGame, writeCustomGame } from "@/lib/customGames";
 import { formatIssue, hasErrors, isCustomPackId, validateBundle, type GamePackBundle } from "@/lib/gamePack";
 import {
+  NEW_RUN_SETTINGS_JSON,
   PRESET_NAME_MAX,
   parsePlayerNames,
   parseRunSettings,
@@ -1336,7 +1337,7 @@ export async function createRun(
   const rulesMarkdown = source?.rulesMarkdown.trim()
     ? source.rulesMarkdown
     : DEFAULT_RULES[lang ?? "de"];
-  const settingsJson = source?.settingsJson ?? "{}";
+  const settingsJson = source?.settingsJson ?? NEW_RUN_SETTINGS_JSON;
 
   const run = await prisma.run.create({
     data: {

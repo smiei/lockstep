@@ -158,6 +158,9 @@ const de = {
     linkNote: "Jeder Run hat einen eigenen, geheimen Link. Wer ihn kennt, kann den Run ansehen und bearbeiten - teile ihn nur mit deinen Mitspielern.",
   },
   home: {
+    openOnly: "Nur offene",
+    openOnlyTitle: "Nur Runs zeigen, die noch gespielt werden (weder gewonnen noch verloren)",
+    noOpenRuns: "Keine offenen Runs.",
     hallOfFame: "Ruhmeshalle",
     hallOfFameSeal: "Siegel der Ruhmeshalle",
     lost: "Verloren",
@@ -1022,6 +1025,9 @@ const en: Dictionary = {
     linkNote: "Every run has its own secret link. Anyone who knows it can view and edit the run - only share it with your fellow players.",
   },
   home: {
+    openOnly: "Open only",
+    openOnlyTitle: "Show only runs still being played (neither won nor lost)",
+    noOpenRuns: "No open runs.",
     hallOfFame: "Hall of Fame",
     hallOfFameSeal: "Hall of Fame seal",
     lost: "Lost",
@@ -1876,6 +1882,9 @@ const fr: Dictionary = {
     linkNote: "Chaque run a son propre lien secret. Toute personne qui le connaît peut voir et modifier le run - ne le partage qu'avec tes coéquipiers.",
   },
   home: {
+    openOnly: "Ouverts seulement",
+    openOnlyTitle: "Afficher seulement les runs en cours (ni gagnés ni perdus)",
+    noOpenRuns: "Aucun run en cours.",
     hallOfFame: "Panthéon",
     hallOfFameSeal: "Sceau du Panthéon",
     lost: "Perdu",
@@ -2735,6 +2744,9 @@ const es: Dictionary = {
     linkNote: "Cada run tiene su propio enlace secreto. Quien lo conozca puede ver y editar el run: compártelo solo con tus compañeros.",
   },
   home: {
+    openOnly: "Solo abiertos",
+    openOnlyTitle: "Mostrar solo los runs en curso (ni ganados ni perdidos)",
+    noOpenRuns: "No hay runs abiertos.",
     hallOfFame: "Hall de la Fama",
     hallOfFameSeal: "Sello del Hall de la Fama",
     lost: "Perdido",
@@ -3594,6 +3606,9 @@ const it: Dictionary = {
     linkNote: "Ogni run ha un proprio link segreto. Chi lo conosce può vedere e modificare il run: condividilo solo con i tuoi compagni.",
   },
   home: {
+    openOnly: "Solo aperti",
+    openOnlyTitle: "Mostra solo i run ancora in corso (né vinti né persi)",
+    noOpenRuns: "Nessun run aperto.",
     hallOfFame: "Sala d'Onore",
     hallOfFameSeal: "Sigillo della Sala d'Onore",
     lost: "Perso",

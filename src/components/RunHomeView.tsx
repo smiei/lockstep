@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { usePersistentState } from "@/lib/usePersistentState";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createRun, deleteRun, setRunOutcome } from "@/lib/actions";
@@ -82,6 +83,10 @@ export function RunHomeView({
     });
   }
 
+  // Per device, like the other list preferences.
+  const [openOnly, setOpenOnly] = usePersistentState("nuzlocke:home:openOnly", false);
+  const shown = openOnly ? cards.filter((card) => card.outcome === null) : cards;
+
   const actions = (
     <div className="flex flex-wrap gap-2">
       <Button variant="secondary" loading={backupImport.pending} onClick={backupImport.pick}>
@@ -98,10 +103,21 @@ export function RunHomeView({
       {cards.length > 0 ? (
         <>
           <PageHeader title={t.home.title} description={`${t.home.description} ${t.home.count(cards.length)}.`}>
-            {actions}
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant={openOnly ? "primary" : "secondary"}
+                aria-pressed={openOnly}
+                title={t.home.openOnlyTitle}
+                onClick={() => setOpenOnly((value) => !value)}
+              >
+                {t.home.openOnly}
+              </Button>
+              {actions}
+            </div>
           </PageHeader>
+          {shown.length === 0 && <p className="text-sm text-ink-muted">{t.home.noOpenRuns}</p>}
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 2xl:grid-cols-3">
-            {cards.map((card) => (
+            {shown.map((card) => (
               <li key={card.accessKey}>
                 <RunCard card={card} lang={lang} games={games} />
               </li>
@@ -212,7 +228,11 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
     // may not sit inside the link (no button inside an <a>).
     <div
       className={`relative flex h-full flex-col rounded-md p-4 transition-colors ${
-        won ? "hall-of-fame" : "border border-line bg-panel has-[a:hover]:border-line-strong"
+        won
+          ? "hall-of-fame"
+          : lost
+            ? "border-2 border-danger-line bg-panel"
+            : "border border-line bg-panel has-[a:hover]:border-line-strong"
       }`}
     >
       {won && <ChampionSeal label={t.home.hallOfFameSeal} />}
@@ -254,10 +274,21 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
         {/* The team in its drawer: six slots, the empty ones as outlines. */}
         <SpriteSetProvider spriteSet={card.spriteSet}>
           <div
-            className={`mt-3 grid grid-cols-6 gap-1 rounded-md p-1.5 ${
+            className={`relative mt-3 grid grid-cols-6 gap-1 rounded-md p-1.5 ${
               won ? "border border-gold-line bg-gold-bg" : "bg-sunken"
             }`}
           >
+            {/* The counterpart of the won card's seal: a red rubber stamp
+                across the drawer. The word is also the Lost badge, so the
+                stamp itself is decoration. */}
+            {lost && (
+              <span
+                aria-hidden="true"
+                className="lost-stamp pointer-events-none absolute inset-0 z-10 m-auto h-fit w-fit rounded-sm border-4 border-double border-danger bg-panel/85 px-4 py-1 font-mono text-2xl font-bold tracking-widest text-danger uppercase"
+              >
+                {t.home.lost}
+              </span>
+            )}
             {Array.from({ length: TEAM_SLOTS }, (_, i) => {
               const member = card.team[i];
               return (
@@ -280,7 +311,7 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
         </SpriteSetProvider>
         {card.team.length === 0 && <p className="mt-1 text-xs text-ink-subtle">{t.home.noTeam}</p>}
 
-        <SpecimenLabel dead={lost} won={won} className="mt-3 font-mono">
+        <SpecimenLabel dead={lost} won={won} className={`mt-3 font-mono ${lost ? "lost-label" : ""}`}>
           {won && card.outcomeAt && (
             <LabelRow
               left={<span className="font-semibold text-gold">★ {t.home.hallOfFame}</span>}
