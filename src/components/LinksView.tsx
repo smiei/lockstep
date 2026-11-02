@@ -22,6 +22,7 @@ import { FuseDialog } from "@/components/FuseDialog";
 import { PokemonInfoButton } from "@/components/PokemonDetailProvider";
 import { TeamBar } from "@/components/TeamBar";
 import { TypeBadge } from "@/components/TypeBadge";
+import { Badge } from "@/components/ui/Badge";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { usePersistentState } from "@/lib/usePersistentState";
 import { useToast } from "@/components/ui/ToastProvider";
@@ -73,6 +74,7 @@ export function LinksView({
     null,
   );
   const [evolvableOnly, setEvolvableOnly] = useState(false);
+  const [showTeam, setShowTeam] = useState(false);
   const [typeFilter, setTypeFilter] = useState<string[]>([]);
   const {
     open: typeMenuOpen,
@@ -86,10 +88,10 @@ export function LinksView({
 
   // The team lives in the drawer (TeamBar), with all of its controls; the side
   // column is the rest of the collection - the Box (caught, alive, off the
-  // team) and the Memorial. That is what the old "hide team" toggle did by
-  // hand, so the toggle is gone: the list never repeats the team any more.
+  // team) and the Memorial. "Team einblenden" lists the team here too, so the
+  // sort and filters can rank every living link at once (e.g. by BST).
   const collectionLinks = soulLinks.filter(
-    (l) => l.status === LinkStatus.DEAD || l.teamPosition === null,
+    (l) => showTeam || l.status === LinkStatus.DEAD || l.teamPosition === null,
   );
 
   // Only offer types that actually occur in the listed Pokémon, in canonical
@@ -314,6 +316,8 @@ export function LinksView({
   // and what can be done with it from here.
   function collectionEntry(link: SoulLinkView) {
     const isDead = link.status === LinkStatus.DEAD;
+    // Only listed while "Team einblenden" is on; its controls stay in the drawer.
+    const onTeam = !isDead && link.teamPosition !== null;
     const summe = totalSumme(link);
     const summeMax = totalSummeMax(link);
     const number =
@@ -435,6 +439,8 @@ export function LinksView({
             >
               {t.links.revive}
             </Button>
+          ) : onTeam ? (
+            <Badge tone="success">{t.links.onTeamTag}</Badge>
           ) : (
             <>
               <AddToTeamButton runKey={runKey} lang={lang} linkId={link.id} teamLinks={teamLinks} />
@@ -532,6 +538,15 @@ export function LinksView({
                 </Select>
               </div>
             </div>
+            <Button
+              size="sm"
+              variant={showTeam ? "primary" : "secondary"}
+              aria-pressed={showTeam}
+              title={t.links.filterShowTeamTitle}
+              onClick={() => setShowTeam((v) => !v)}
+            >
+              {t.links.filterShowTeam}
+            </Button>
             <Button
               size="sm"
               variant={evolvableOnly ? "primary" : "secondary"}

@@ -124,8 +124,20 @@ export function TrackerView({
   // clothes; it has no business on the Encounter tab.
   const onTheMap = routes.filter((r) => !r.hidden);
   const trackable = settings.statics ? onTheMap : onTheMap.filter((r) => r.type === "route");
+  // Until something is edited on this page, the kept route is the one saved
+  // last (by anyone) - the in-memory one alone was lost on every reload, tab
+  // switch and edit from another device.
+  const trackableIds = new Set(trackable.map((r) => r.id));
+  const lastSaved = encounters.reduce<Encounter | null>(
+    (latest, e) =>
+      trackableIds.has(e.routeId) && (!latest || new Date(e.updatedAt) > new Date(latest.updatedAt))
+        ? e
+        : latest,
+    null,
+  );
+  const keptRouteId = lastTouchedRouteId ?? lastSaved?.routeId ?? null;
   const visible = openOnly
-    ? trackable.filter((r) => !isRouteDone(r, encounters, players) || r.id === lastTouchedRouteId)
+    ? trackable.filter((r) => !isRouteDone(r, encounters, players) || r.id === keptRouteId)
     : trackable;
   const mainRoutes = visible.filter((r) => !r.postgame);
   const postgameRoutes = visible.filter((r) => r.postgame);
