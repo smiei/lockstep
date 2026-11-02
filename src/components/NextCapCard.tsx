@@ -34,7 +34,7 @@ export function NextCapCard({
 
   if (variant === "chip") {
     if (!summary.next) return null;
-    const label = `${t.nextCap}: ${localizeName(summary.next.names, lang)}, ${summary.next.level}`;
+    const label = `${t.nextCap}: ${localizeName(summary.next.names, lang)}, ${summary.next.level} - ${translations[lang].overview.sheetTeamUpTo(summary.next.level - 2)}`;
     return (
       <Link
         href={`/levelcaps?run=${run.accessKey}`}
@@ -43,8 +43,12 @@ export function NextCapCard({
         className="flex h-10 items-center gap-1.5 rounded-md border border-line px-2.5 text-ink transition-colors hover:bg-hover"
       >
         <span className="text-xs text-ink-muted">{t.capShort}</span>
-        <span className="font-mono text-lg font-semibold leading-none tabular-nums">
-          {summary.next.level}
+        <span className="font-mono leading-none tabular-nums">
+          <span className="text-lg font-semibold">{summary.next.level}</span>
+          <span className="text-sm text-ink-muted">
+            {" / "}
+            {summary.next.level - 2}
+          </span>
         </span>
       </Link>
     );
