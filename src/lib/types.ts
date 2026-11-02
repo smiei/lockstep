@@ -132,6 +132,8 @@ export type FusableEncounter = {
 };
 
 // One run on the start page (src/lib/runHome.ts builds them server-side).
+export type RunOutcome = "won" | "lost";
+
 export type RunHomeCard = {
   accessKey: string;
   name: string;
@@ -142,8 +144,8 @@ export type RunHomeCard = {
   players: string[];
   // ISO time of the last change (Run.changedAt); the list is sorted by it.
   changedAt: string;
-  // Marked as lost on the start page: greyed out and listed last.
-  lost: boolean;
+  // How the run ended, set on the start page; null while it is played.
+  outcome: RunOutcome | null;
   routesDone: number;
   routesTotal: number;
   badges: number;

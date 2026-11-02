@@ -112,7 +112,7 @@ On top of the toggles:
 
 ## Runs, games and players
 
-- **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. A run you gave up on can be marked as lost there: it is greyed out, struck through and listed last, and can be resumed any time. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
+- **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. Each card can mark its run as won (green frame) or lost (greyed out and struck through); both move to the end of the list, won before lost, and "Resume" takes the mark back. Deleting a run takes two clicks on its card: Delete, then Delete for good. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
 - **Game covers** show in the game picker, on the start page and on the Overview. They are downloaded on the first start; a ROM hack without a cover shows a drawn tile, or your own picture (see [self-hosting](self-hosting.md#game-covers)).
 - **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 16 ROM hacks, and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
