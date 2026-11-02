@@ -154,6 +154,7 @@ export type RunHomeCard = {
   badgesTotal: number;
   nextCap: RunCapSummary["next"];
   deaths: number;
-  // The first player's living team in slot order; a fusion carries its body.
-  team: { pokemonId: number; bodyId: number | null }[];
+  // The living team in slot order, each slot a link with every player's
+  // Pokémon in player order; a fusion carries its body.
+  team: { pokemonId: number; bodyId: number | null }[][];
 };

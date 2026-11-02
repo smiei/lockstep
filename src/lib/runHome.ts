@@ -44,20 +44,21 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
       const progress = computeRouteProgress(routes, own, players, settings.statics);
       const runLinks = links.filter((link) => link.runId === run.id);
 
-      // The team: the first player's Pokémon of each slot, in slot order - a
-      // fusion as its head with the body it carries.
+      // The team in slot order, each slot the whole link: every player's
+      // Pokémon in player order - a fusion as its head with the body it carries.
       const team = runLinks
         .filter((link) => link.teamPosition !== null && link.status === "ALIVE")
         .sort((a, b) => a.teamPosition! - b.teamPosition!)
-        .flatMap((link) => {
-          const heads = own
+        .map((link) =>
+          own
             .filter((e) => e.soulLinkId === link.id && e.fusedIntoId === null)
-            .sort((a, b) => comparePlayers(a.player, b.player));
-          const head = heads[0];
-          if (!head) return [];
-          const body = own.find((e) => e.fusedIntoId === head.id);
-          return [{ pokemonId: head.currentPokemonId, bodyId: body?.currentPokemonId ?? null }];
-        });
+            .sort((a, b) => comparePlayers(a.player, b.player))
+            .map((head) => ({
+              pokemonId: head.currentPokemonId,
+              bodyId: own.find((e) => e.fusedIntoId === head.id)?.currentPokemonId ?? null,
+            })),
+        )
+        .filter((members) => members.length > 0);
 
       const cap = caps.find((c) => c.accessKey === run.accessKey);
       const game = getGameById(run.gameId);
