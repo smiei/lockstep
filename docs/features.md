@@ -12,7 +12,7 @@ Catch one Pokémon per route and player.
 - **Route list:**
   - Static locations (gifts, fossils, legendaries) are pre-marked from the game data.
   - Post-game areas are collapsed by default.
-  - "Open only" hides finished routes, but keeps the route you just edited visible.
+  - "Open only" hides finished routes, but keeps the route you just edited visible (after a reload: the route saved last).
   - Every route is a tray whose frame and badge show its outcome: open (dashed), waiting for a player, caught, or lost.
 - **Species Clause:** conflicts show a warning and never block a save.
 - **Buttons on each entry:**
@@ -31,6 +31,7 @@ A drawer of six team slots, plus a column with the **Box** (alive, off the team)
 - **Evolve and devolve**, with the evolution method. The evolve button glows when a level evolution is reachable within the level cap you have earned.
 - **Sorting and filtering:**
   - for the Box and Memorial column: an "evolvable only" filter and a type filter;
+  - "Show team" lists the team members in the Box too, so one sort ranks every living link;
   - sorting by encounter order, by current base-stat total (BST), or by the BST once fully evolved.
 - **Filling the team:** new links and solo catches join a free team slot automatically while the team is not full.
 - **Broken pairs** (one player caught, the other fled or killed) never appear here, because that link never formed. The surviving catch stays on the Encounter tab.
@@ -146,6 +147,7 @@ On top of the toggles:
 ## Appearance
 
 - **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in the gear menu. The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
+- **Side rail:** on a desktop it carries the tabs and the next level cap with the team level beside it ("24 / 22"; the phone's top bar shows the same). An arrow at its foot folds it away, a small tab on the left edge brings it back; remembered per device.
 - **Light and dark** follow the device until switched by hand. Switching back to the device's own mode follows the device again.
 
 ## Languages
