@@ -295,17 +295,29 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
               </span>
             )}
             {Array.from({ length: TEAM_SLOTS }, (_, i) => {
-              const member = card.team[i];
+              const members = card.team[i];
+              // A solo run's slot holds one Pokémon at full size; a SoulLink
+              // slot the whole link, smaller, side by side on a tray of its own
+              // so a pair reads as one - or stacked where the slot is too
+              // narrow (phones, four players).
               return (
-                <div key={i} className="flex aspect-square items-center justify-center rounded-sm">
-                  {member ? (
-                    <PokemonSprite
-                      pokemonId={member.pokemonId}
-                      bodyId={member.bodyId}
-                      name=""
-                      size="md"
-                      className={lost ? "opacity-50 grayscale" : undefined}
-                    />
+                <div
+                  key={i}
+                  className={`flex aspect-square flex-wrap content-center items-center justify-center rounded-sm ${
+                    members && members.length > 1 ? "bg-panel" : ""
+                  }`}
+                >
+                  {members ? (
+                    members.map((member, j) => (
+                      <PokemonSprite
+                        key={j}
+                        pokemonId={member.pokemonId}
+                        bodyId={member.bodyId}
+                        name=""
+                        size={members.length > 1 ? "sm" : "md"}
+                        className={lost ? "opacity-50 grayscale" : undefined}
+                      />
+                    ))
                   ) : (
                     <span className="h-6 w-6 rounded-sm border border-dashed border-line-strong" />
                   )}
