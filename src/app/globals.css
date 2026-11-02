@@ -654,3 +654,21 @@ body {
     animation-duration: 1ms;
   }
 }
+
+/* The desktop side rail can be folded away (RailToggle, data-rail on <html>,
+   per device). Unlayered, so it wins over the rail's lg:flex utility. The
+   expand tab exists only while the rail is folded and only from lg - below
+   it the shell is the top bar, which nothing folds. */
+.rail-expand {
+  display: none;
+}
+
+@media (width >= 64rem) {
+  :root[data-rail="collapsed"] .rail {
+    display: none;
+  }
+
+  :root[data-rail="collapsed"] .rail-expand {
+    display: flex;
+  }
+}

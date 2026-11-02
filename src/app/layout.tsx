@@ -27,6 +27,8 @@ import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { getGameSummaries } from "@/lib/data";
 import { uiScaleBootScript } from "@/lib/uiScale";
 import { shellColorBootScript } from "@/lib/shellColor";
+import { railBootScript } from "@/lib/railCollapsed";
+import { RailCollapseButton, RailExpandButton } from "@/components/RailToggle";
 import { runtimeConfigFromEnv, runtimeConfigScript } from "@/lib/runtimeConfig";
 import "./globals.css";
 
@@ -131,6 +133,8 @@ export default async function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: uiScaleBootScript() }} />
         {/* Same for the shell colour (data-shell on <html>). */}
         <script dangerouslySetInnerHTML={{ __html: shellColorBootScript() }} />
+        {/* And whether the desktop rail is folded away (data-rail). */}
+        <script dangerouslySetInnerHTML={{ __html: railBootScript() }} />
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -178,7 +182,7 @@ export default async function RootLayout({
                   positioned buttons painted over those dialogs. 30 keeps it
                   under Modal (50) and Toast (60) at the root. */}
               <div className="flex min-h-full flex-1 flex-col lg:flex-row">
-                <div className="shell contents lg:sticky lg:top-0 lg:z-30 lg:flex lg:h-dvh lg:w-58 lg:shrink-0 lg:flex-col lg:self-start lg:overflow-y-auto lg:bg-shell lg:pb-4">
+                <div className="shell rail contents lg:sticky lg:top-0 lg:z-30 lg:flex lg:h-dvh lg:w-58 lg:shrink-0 lg:flex-col lg:self-start lg:overflow-y-auto lg:bg-shell lg:pb-4">
                   {/* The title row is deliberately NOT sticky on a phone: the
                       run switcher and the gear are occasional, the tabs are
                       constant. flex-wrap: on narrow screens the controls wrap
@@ -220,6 +224,7 @@ export default async function RootLayout({
                           runs={runs.map((run) => ({ id: run.id, accessKey: run.accessKey, settingsJson: run.settingsJson }))}
                         />
                       </Suspense>
+                      <RailCollapseButton />
                     </div>
                   </header>
                   <StickyNav className="lg:order-3">
@@ -247,6 +252,7 @@ export default async function RootLayout({
                   <PublicFooter />
                 </div>
               </div>
+              <RailExpandButton />
               <SpriteConsentBanner />
               <LiveRefresh />
               <ThemeColorSync />
