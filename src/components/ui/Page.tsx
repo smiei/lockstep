@@ -8,9 +8,13 @@ export function PageHeader({
   title,
   description,
   align = "start",
+  aside,
   children,
 }: {
   title: string;
+  // Sits right beside the title block, e.g. a filter for the page's list -
+  // as opposed to `children`, the page's actions at the far end.
+  aside?: ReactNode;
   // "center" for a page that is a single centred block (the start page's welcome).
   align?: "start" | "center";
   // Small print that belongs to the page as a whole - e.g. the TM tab's note
@@ -18,6 +22,14 @@ export function PageHeader({
   description?: string;
   children?: ReactNode;
 }) {
+  const heading = (
+    <div>
+      <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h1>
+      {description && (
+        <p className={cn("mt-1.5 max-w-prose text-sm text-ink-muted", align === "center" && "mx-auto")}>{description}</p>
+      )}
+    </div>
+  );
   return (
     <div
       className={cn(
@@ -28,12 +40,14 @@ export function PageHeader({
         description ? "items-start" : "items-center",
       )}
     >
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h1>
-        {description && (
-          <p className={cn("mt-1.5 max-w-prose text-sm text-ink-muted", align === "center" && "mx-auto")}>{description}</p>
-        )}
-      </div>
+      {aside ? (
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+          {heading}
+          {aside}
+        </div>
+      ) : (
+        heading
+      )}
       {children}
     </div>
   );

@@ -102,23 +102,25 @@ export function RunHomeView({
     <div>
       {cards.length > 0 ? (
         <>
-          <PageHeader title={t.home.title} description={`${t.home.description} ${t.home.count(cards.length)}.`}>
+          {/* The filter belongs to the list, so it sits by the title rather
+              than among the page's actions. */}
+          <PageHeader
+            title={t.home.title}
+            description={`${t.home.description} ${t.home.count(cards.length)}.`}
+            aside={
+              <Button
+                variant={openOnly ? "primary" : "secondary"}
+                aria-pressed={openOnly}
+                title={t.home.openOnlyTitle}
+                onClick={() => setOpenOnly((value) => !value)}
+              >
+                {t.home.openOnly}
+              </Button>
+            }
+          >
             {actions}
           </PageHeader>
-          {/* The filter belongs to the list, so it sits on the list's left
-              edge rather than among the page's actions. */}
-          <div className="mb-4 flex flex-wrap items-center gap-3">
-            <Button
-              size="sm"
-              variant={openOnly ? "primary" : "secondary"}
-              aria-pressed={openOnly}
-              title={t.home.openOnlyTitle}
-              onClick={() => setOpenOnly((value) => !value)}
-            >
-              {t.home.openOnly}
-            </Button>
-            {shown.length === 0 && <p className="text-sm text-ink-muted">{t.home.noOpenRuns}</p>}
-          </div>
+          {shown.length === 0 && <p className="mb-4 text-sm text-ink-muted">{t.home.noOpenRuns}</p>}
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 2xl:grid-cols-3">
             {shown.map((card) => (
               <li key={card.accessKey}>
