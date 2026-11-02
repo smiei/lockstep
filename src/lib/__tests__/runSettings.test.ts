@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { RUN_SETTING_KEYS, serializePresetSettings, parseRunSettings, DEFAULT_RUN_SETTINGS } from "@/lib/runSettings";
+import {
+  RUN_SETTING_KEYS,
+  serializePresetSettings,
+  parseRunSettings,
+  DEFAULT_RUN_SETTINGS,
+  NEW_RUN_SETTINGS_JSON,
+} from "@/lib/runSettings";
 
 describe("parseRunSettings", () => {
   it("returns all defaults for '{}' and for malformed JSON", () => {
@@ -108,5 +114,23 @@ describe("serializePresetSettings", () => {
     const back = parseRunSettings(serializePresetSettings(settings));
     expect(back.shinyClause).toBe(false);
     expect(back.playerNames).toEqual({ PLAYER1: "", PLAYER2: "", PLAYER3: "", PLAYER4: "" });
+  });
+});
+
+describe("NEW_RUN_SETTINGS_JSON", () => {
+  it("starts a run with nothing to inherit with the randomizer adjustments off", () => {
+    expect(parseRunSettings(NEW_RUN_SETTINGS_JSON)).toEqual({
+      ...DEFAULT_RUN_SETTINGS,
+      evolutionOverridesImpossible: false,
+      evolutionOverridesEasier: false,
+      evolutionOverridesTimeBased: false,
+    });
+  });
+
+  it("leaves existing runs without the keys on the old defaults", () => {
+    const old = parseRunSettings("{}");
+    expect(old.evolutionOverridesImpossible).toBe(true);
+    expect(old.evolutionOverridesEasier).toBe(true);
+    expect(old.evolutionOverridesTimeBased).toBe(true);
   });
 });

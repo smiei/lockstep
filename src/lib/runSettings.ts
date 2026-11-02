@@ -102,6 +102,18 @@ export const DEFAULT_RUN_SETTINGS: RunSettings = {
   playerNames: { PLAYER1: "", PLAYER2: "", PLAYER3: "", PLAYER4: "" },
 };
 
+// What a run with nothing to inherit from (a fresh install, a public
+// instance) is created with: the randomizer adjustments off, since most runs
+// play an unmodified game. Stored explicitly in the new run's settingsJson
+// rather than changed in DEFAULT_RUN_SETTINGS, which is also what every
+// existing run without these keys reads - changing it there would switch
+// them off in runs that are already being played.
+export const NEW_RUN_SETTINGS_JSON = JSON.stringify({
+  evolutionOverridesImpossible: false,
+  evolutionOverridesEasier: false,
+  evolutionOverridesTimeBased: false,
+});
+
 // Only the boolean toggles - playerNames is handled separately.
 export const RUN_SETTING_KEYS = (
   Object.keys(DEFAULT_RUN_SETTINGS) as (keyof RunSettings)[]
