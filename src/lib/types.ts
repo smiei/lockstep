@@ -146,6 +146,8 @@ export type RunHomeCard = {
   changedAt: string;
   // How the run ended, set on the start page; null while it is played.
   outcome: RunOutcome | null;
+  // ISO time the outcome was set (the Hall of Fame label shows it).
+  outcomeAt: string | null;
   routesDone: number;
   routesTotal: number;
   badges: number;

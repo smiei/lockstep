@@ -70,6 +70,7 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
         players: players.map((player) => settings.playerNames[player] ?? ""),
         changedAt: run.changedAt.toISOString(),
         outcome: run.wonAt ? "won" : run.lostAt ? "lost" : null,
+        outcomeAt: (run.wonAt ?? run.lostAt)?.toISOString() ?? null,
         routesDone: progress.done,
         routesTotal: progress.total,
         badges: cap?.badges ?? 0,
@@ -80,7 +81,6 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
       };
     }),
   );
-  // Runs still played first, then won, then lost; each group played-last first.
-  const rank = (card: RunHomeCard) => (card.outcome === "won" ? 1 : card.outcome === "lost" ? 2 : 0);
-  return cards.sort((a, b) => rank(a) - rank(b) || b.changedAt.localeCompare(a.changedAt));
+  // A won or lost run keeps its place: marking it does not touch changedAt.
+  return cards.sort((a, b) => b.changedAt.localeCompare(a.changedAt));
 }
