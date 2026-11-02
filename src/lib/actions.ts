@@ -1371,6 +1371,24 @@ export async function renameRun(runKey: string, name: string): Promise<RenameRun
   return { success: true };
 }
 
+export type SetRunLostResult = { success: true } | { success: false; error: ActionError };
+
+// Marks a run as lost (or takes it back). Bumps the version for live sync but
+// deliberately not changedAt: giving a run up is not playing it, and a stamp
+// would move it to the front of the start page and make it the run a bare
+// link opens.
+export async function setRunLost(runKey: string, lost: boolean): Promise<SetRunLostResult> {
+  const run = await findRunByKey(runKey);
+  if (!run) return RUN_NOT_FOUND;
+  await prisma.run.update({
+    where: { id: run.id },
+    data: { lostAt: lost ? new Date() : null, version: { increment: 1 } },
+  });
+  revalidatePath("/", "layout");
+  publishChange(run.id);
+  return { success: true };
+}
+
 export type UpdateRunSettingsResult = { success: true } | { success: false; error: ActionError };
 
 // Merges the given toggle changes into the run's stored settings. Only known
