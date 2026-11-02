@@ -15,6 +15,8 @@ export const LANG_COOKIE = "lang";
 
 const de = {
   header: {
+    railHide: "Seitenleiste ausblenden",
+    railShow: "Seitenleiste einblenden",
     titleShort: "Lockstep",
     titleFull: "Lockstep",
     // The shell's next-level-cap card (NextCapCard).
@@ -862,6 +864,8 @@ export type Dictionary = typeof de;
 
 const en: Dictionary = {
   header: {
+    railHide: "Hide sidebar",
+    railShow: "Show sidebar",
     titleShort: "Lockstep",
     titleFull: "Lockstep",
     // The shell's next-level-cap card (NextCapCard).
@@ -1697,6 +1701,8 @@ const en: Dictionary = {
 
 const fr: Dictionary = {
   header: {
+    railHide: "Masquer la barre latérale",
+    railShow: "Afficher la barre latérale",
     titleShort: "Lockstep",
     titleFull: "Lockstep",
     // The shell's next-level-cap card (NextCapCard).
@@ -2539,6 +2545,8 @@ const fr: Dictionary = {
 
 const es: Dictionary = {
   header: {
+    railHide: "Ocultar barra lateral",
+    railShow: "Mostrar barra lateral",
     titleShort: "Lockstep",
     titleFull: "Lockstep",
     // The shell's next-level-cap card (NextCapCard).
@@ -3380,6 +3388,8 @@ const es: Dictionary = {
 
 const it: Dictionary = {
   header: {
+    railHide: "Nascondi barra laterale",
+    railShow: "Mostra barra laterale",
     titleShort: "Lockstep",
     titleFull: "Lockstep",
     // The shell's next-level-cap card (NextCapCard).
