@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { createRun, setRunLost } from "@/lib/actions";
+import { createRun, deleteRun, setRunOutcome } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
@@ -11,7 +11,8 @@ import { localizeName } from "@/lib/i18n/localize";
 import { RunMode } from "@/generated/prisma/enums";
 import { ALL_PLAYERS } from "@/lib/players";
 import { GameCover } from "@/components/GameCover";
-import type { GameSummary, RunHomeCard } from "@/lib/types";
+import type { GameSummary, RunHomeCard, RunOutcome } from "@/lib/types";
+import { forgetRun } from "@/lib/visitedRuns";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { PageHeader } from "@/components/ui/Page";
@@ -156,7 +157,7 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
   const t = translations[lang];
   const router = useRouter();
   const toast = useToast();
-  const [pending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   const game = games.find((g) => g.id === card.gameId);
   const gameName = game ? localizeName(game.names, lang) : card.gameId;
   const who =
@@ -164,98 +165,171 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
       ? t.runSwitcher.modeClassic
       : [t.runSwitcher.modeSoullink, ...card.players.map((name, i) => name.trim() || t.player[ALL_PLAYERS[i]])].join(" · ");
   const percent = card.routesTotal > 0 ? Math.round((card.routesDone / card.routesTotal) * 100) : 0;
+  const lost = card.outcome === "lost";
+  const won = card.outcome === "won";
   // A lost run fades its pictures only (cover, team) and says so in words:
   // the name struck through, a "Lost" badge and the Memorial's heavy rule.
-  const fade = card.lost ? "grayscale" : undefined;
+  // A won one keeps its colours and gets a green frame and a "Won" badge.
+  const fade = lost ? "grayscale" : undefined;
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const [busy, setBusy] = useState<"outcome" | "delete" | null>(null);
 
-  function toggleLost() {
+  function setOutcome(outcome: RunOutcome | null) {
+    setBusy("outcome");
     startTransition(async () => {
-      const result = await setRunLost(card.accessKey, !card.lost);
+      const result = await setRunOutcome(card.accessKey, outcome);
+      setBusy(null);
       if (result.success) router.refresh();
       else toast.error(formatActionError(result.error, lang));
     });
   }
 
+  // Two clicks: the first turns the button into "Delete for good".
+  function handleDelete() {
+    if (!confirmDelete) {
+      setConfirmDelete(true);
+      return;
+    }
+    setBusy("delete");
+    startTransition(async () => {
+      const result = await deleteRun(card.accessKey);
+      setBusy(null);
+      if (result.success) {
+        if (IS_PUBLIC_INSTANCE) forgetRun(card.accessKey);
+        toast.success(t.home.deleted(card.name));
+        router.refresh();
+      } else {
+        setConfirmDelete(false);
+        toast.error(formatActionError(result.error, lang));
+      }
+    });
+  }
+
   return (
-    // The button sits over the card's bottom-right corner rather than inside
-    // the link, which may not contain another interactive element.
-    <div className="relative h-full">
-    <Link
-      href={`/overview?run=${card.accessKey}`}
-      aria-label={t.home.open(card.name)}
-      className="group flex h-full flex-col rounded-md border border-line bg-panel p-4 transition-colors hover:border-line-strong"
+    // The card is the frame; the link fills it above the action row, which
+    // may not sit inside the link (no button inside an <a>).
+    <div
+      className={`flex h-full flex-col rounded-md border bg-panel p-4 transition-colors ${
+        won ? "border-success-line" : "border-line has-[a:hover]:border-line-strong"
+      }`}
     >
-      <div className="flex gap-3">
-        <GameCover src={game?.cover} name={gameName} size="sm" className={fade} />
-        <div className="min-w-0 flex-1">
-          <div className="flex items-baseline justify-between gap-3 font-mono text-xs text-ink-subtle">
-            <span className="min-w-0 truncate">{gameName}</span>
-            <span className="shrink-0" suppressHydrationWarning>
-              {t.home.changed(relativeTime(card.changedAt, lang))}
-            </span>
-          </div>
-          <h2
-            className={`mt-1 truncate text-xl font-bold tracking-tight group-hover:underline ${
-              card.lost ? "text-ink-muted line-through" : "text-ink"
-            }`}
-          >
-            {card.name}
-          </h2>
-          <p className="flex items-center gap-2 text-sm text-ink-muted">
-            <span className="min-w-0 truncate">{who}</span>
-            {card.lost && <Badge tone="danger">{t.home.lost}</Badge>}
-          </p>
-        </div>
-      </div>
-
-      {/* The team in its drawer: six slots, the empty ones as outlines. */}
-      <SpriteSetProvider spriteSet={card.spriteSet}>
-        <div className="mt-3 grid grid-cols-6 gap-1 rounded-md bg-sunken p-1.5">
-          {Array.from({ length: TEAM_SLOTS }, (_, i) => {
-            const member = card.team[i];
-            return (
-              <div key={i} className="flex aspect-square items-center justify-center rounded-sm">
-                {member ? (
-                  <PokemonSprite
-                    pokemonId={member.pokemonId}
-                    bodyId={member.bodyId}
-                    name=""
-                    size="md"
-                    className={card.lost ? "opacity-50 grayscale" : undefined}
-                  />
-                ) : (
-                  <span className="h-6 w-6 rounded-sm border border-dashed border-line-strong" />
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </SpriteSetProvider>
-      {card.team.length === 0 && <p className="mt-1 text-xs text-ink-subtle">{t.home.noTeam}</p>}
-
-      <SpecimenLabel dead={card.lost} className="mt-3 font-mono">
-        <LabelRow strong left={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} right={`${t.home.badges} ${card.badges}/${card.badgesTotal}`} />
-        <LabelRow
-          left={card.nextCap ? `${t.home.nextCap}: ${localizeName(card.nextCap.names, lang)}` : t.home.allCapsDone}
-          right={card.nextCap ? `Lv. ${card.nextCap.level}` : undefined}
-        />
-        <LabelRow left={<span className={card.deaths > 0 ? "text-danger" : undefined}>{t.home.deaths(card.deaths)}</span>} />
-      </SpecimenLabel>
-      {/* As tall as the button laid over its right end. */}
-      <div className="mt-auto flex min-h-10 items-center pt-3 box-content">
-        <ProgressBar done={card.routesDone} total={card.routesTotal} percent={percent} title={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} />
-      </div>
-    </Link>
-      <Button
-        variant="ghost"
-        size="sm"
-        loading={pending}
-        onClick={toggleLost}
-        aria-label={card.lost ? t.home.unmarkLostFor(card.name) : t.home.markLostFor(card.name)}
-        className="absolute right-3 bottom-4"
+      <Link
+        href={`/overview?run=${card.accessKey}`}
+        aria-label={t.home.open(card.name)}
+        className="group flex flex-1 flex-col rounded-sm"
       >
-        {card.lost ? t.home.unmarkLost : t.home.markLost}
-      </Button>
+        <div className="flex gap-3">
+          <GameCover src={game?.cover} name={gameName} size="sm" className={fade} />
+          <div className="min-w-0 flex-1">
+            <div className="flex items-baseline justify-between gap-3 font-mono text-xs text-ink-subtle">
+              <span className="min-w-0 truncate">{gameName}</span>
+              <span className="shrink-0" suppressHydrationWarning>
+                {t.home.changed(relativeTime(card.changedAt, lang))}
+              </span>
+            </div>
+            <h2
+              className={`mt-1 truncate text-xl font-bold tracking-tight group-hover:underline ${
+                lost ? "text-ink-muted line-through" : "text-ink"
+              }`}
+            >
+              {card.name}
+            </h2>
+            <p className="flex items-center gap-2 text-sm text-ink-muted">
+              <span className="min-w-0 truncate">{who}</span>
+              {lost && <Badge tone="danger">{t.home.lost}</Badge>}
+              {won && <Badge tone="success">{t.home.won}</Badge>}
+            </p>
+          </div>
+        </div>
+
+        {/* The team in its drawer: six slots, the empty ones as outlines. */}
+        <SpriteSetProvider spriteSet={card.spriteSet}>
+          <div className="mt-3 grid grid-cols-6 gap-1 rounded-md bg-sunken p-1.5">
+            {Array.from({ length: TEAM_SLOTS }, (_, i) => {
+              const member = card.team[i];
+              return (
+                <div key={i} className="flex aspect-square items-center justify-center rounded-sm">
+                  {member ? (
+                    <PokemonSprite
+                      pokemonId={member.pokemonId}
+                      bodyId={member.bodyId}
+                      name=""
+                      size="md"
+                      className={lost ? "opacity-50 grayscale" : undefined}
+                    />
+                  ) : (
+                    <span className="h-6 w-6 rounded-sm border border-dashed border-line-strong" />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </SpriteSetProvider>
+        {card.team.length === 0 && <p className="mt-1 text-xs text-ink-subtle">{t.home.noTeam}</p>}
+
+        <SpecimenLabel dead={lost} className="mt-3 font-mono">
+          <LabelRow strong left={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} right={`${t.home.badges} ${card.badges}/${card.badgesTotal}`} />
+          <LabelRow
+            left={card.nextCap ? `${t.home.nextCap}: ${localizeName(card.nextCap.names, lang)}` : t.home.allCapsDone}
+            right={card.nextCap ? `Lv. ${card.nextCap.level}` : undefined}
+          />
+          <LabelRow left={<span className={card.deaths > 0 ? "text-danger" : undefined}>{t.home.deaths(card.deaths)}</span>} />
+        </SpecimenLabel>
+        <div className="mt-auto pt-3">
+          <ProgressBar done={card.routesDone} total={card.routesTotal} percent={percent} title={`${t.home.routes} ${card.routesDone}/${card.routesTotal}`} />
+        </div>
+      </Link>
+
+      <div className="mt-3 flex flex-wrap justify-end gap-1 border-t border-line pt-2">
+        {/* While a delete waits for its second click, only Cancel and the
+            red button remain - nothing else to hit by accident. */}
+        {confirmDelete ? null : card.outcome ? (
+          <Button
+            variant="ghost"
+            size="sm"
+            loading={busy === "outcome"}
+            onClick={() => setOutcome(null)}
+            aria-label={t.home.resumeFor(card.name)}
+          >
+            {t.home.resume}
+          </Button>
+        ) : (
+          <>
+            <Button
+              variant="ghost"
+              size="sm"
+              loading={busy === "outcome"}
+              onClick={() => setOutcome("won")}
+              aria-label={t.home.markWonFor(card.name)}
+            >
+              {t.home.markWon}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              disabled={busy !== null}
+              onClick={() => setOutcome("lost")}
+              aria-label={t.home.markLostFor(card.name)}
+            >
+              {t.home.markLost}
+            </Button>
+          </>
+        )}
+        {confirmDelete && (
+          <Button variant="ghost" size="sm" disabled={busy === "delete"} onClick={() => setConfirmDelete(false)}>
+            {t.home.deleteCancel}
+          </Button>
+        )}
+        <Button
+          variant={confirmDelete ? "danger-solid" : "ghost"}
+          size="sm"
+          loading={busy === "delete"}
+          onClick={handleDelete}
+          aria-label={confirmDelete ? t.home.deleteConfirmFor(card.name) : t.home.deleteFor(card.name)}
+        >
+          {confirmDelete ? t.home.deleteConfirm : t.home.deleteRun}
+        </Button>
+      </div>
     </div>
   );
 }

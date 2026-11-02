@@ -23,6 +23,7 @@ import { formedLinks, groupSoulLinks, teamSlotsNeeded } from "@/lib/fusionGroups
 import { clampPlayerCount, runPlayers } from "@/lib/players";
 import { localizeName } from "@/lib/i18n/localize";
 import type { ActionError } from "@/lib/actionErrors";
+import type { RunOutcome } from "@/lib/types";
 import type { BackupFile } from "@/lib/backup";
 import { applyBackup, backupFilename, buildBackup, buildBackupZip, parseBackup } from "@/lib/backup";
 import { DEFAULT_RULES } from "@/lib/defaultRules";
@@ -1371,18 +1372,26 @@ export async function renameRun(runKey: string, name: string): Promise<RenameRun
   return { success: true };
 }
 
-export type SetRunLostResult = { success: true } | { success: false; error: ActionError };
+export type SetRunOutcomeResult = { success: true } | { success: false; error: ActionError };
 
-// Marks a run as lost (or takes it back). Bumps the version for live sync but
-// deliberately not changedAt: giving a run up is not playing it, and a stamp
-// would move it to the front of the start page and make it the run a bare
-// link opens.
-export async function setRunLost(runKey: string, lost: boolean): Promise<SetRunLostResult> {
+// Marks a run as won or lost, or (null) takes the mark back. Bumps the
+// version for live sync but deliberately not changedAt: ending a run is not
+// playing it, and a stamp would move it to the front of the start page and
+// make it the run a bare link opens.
+export async function setRunOutcome(
+  runKey: string,
+  outcome: RunOutcome | null,
+): Promise<SetRunOutcomeResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
+  const now = new Date();
   await prisma.run.update({
     where: { id: run.id },
-    data: { lostAt: lost ? new Date() : null, version: { increment: 1 } },
+    data: {
+      wonAt: outcome === "won" ? now : null,
+      lostAt: outcome === "lost" ? now : null,
+      version: { increment: 1 },
+    },
   });
   revalidatePath("/", "layout");
   publishChange(run.id);

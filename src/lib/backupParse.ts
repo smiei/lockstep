@@ -115,8 +115,9 @@ export type BackupRun = {
   // simply restore as '{}' (= all defaults).
   settingsJson: string;
   createdAt: string;
-  // When the run was marked as lost; absent in files from before 5.4.
+  // When the run was marked as lost or won; absent in files from before 5.4.
   lostAt: string | null;
+  wonAt: string | null;
   soulLinks: BackupSoulLink[];
   encounters: BackupEncounter[];
   levelCapProgress: BackupLevelCapProgress[];
@@ -192,6 +193,7 @@ export function parseBackup(json: string): BackupFile | null {
       settingsJson: typeof rawRun.settingsJson === "string" ? rawRun.settingsJson : "{}",
       createdAt: isoString(rawRun.createdAt),
       lostAt: isoStringOrNull(rawRun.lostAt),
+      wonAt: isoStringOrNull(rawRun.wonAt),
       soulLinks: Array.isArray(rawRun.soulLinks)
         ? rawRun.soulLinks.filter(isRecord).map((sl) => ({
             routeId: num(sl.routeId),

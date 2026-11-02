@@ -73,10 +73,11 @@ model Run {
   // `version`. Orders the start page's run list and picks the run a link
   // without ?run= opens. Not part of backups (an import is a change).
   changedAt        DateTime           @default(now())
-  // When the players gave the run up as lost (start page: "Als verloren
-  // markieren"); null while it is still being played. Only a label - nothing
-  // is locked. Travels in backups.
+  // How the run ended, set on the start page: won (finished) or given up as
+  // lost; both null while it is still being played, never both set. Only a
+  // label - nothing is locked. Travel in backups.
   lostAt           DateTime?
+  wonAt            DateTime?
   soulLinks        SoulLink[]
   encounters       Encounter[]
   levelCapProgress LevelCapProgress[]
