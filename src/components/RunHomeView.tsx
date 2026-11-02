@@ -188,6 +188,13 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
   const percent = card.routesTotal > 0 ? Math.round((card.routesDone / card.routesTotal) * 100) : 0;
   const lost = card.outcome === "lost";
   const won = card.outcome === "won";
+  // Each player's six slots, from the team's links (one Pokémon per player
+  // per link, in player order).
+  const solo = card.players.length <= 1;
+  const playerBlocks = (solo ? [""] : card.players).map((name, p) => ({
+    name: name.trim() || t.player[ALL_PLAYERS[p]],
+    slots: Array.from({ length: TEAM_SLOTS }, (_, i) => card.team[i]?.[p] ?? null),
+  }));
   // A lost run fades its pictures only (cover, team) and says so in words:
   // the name struck through, a "Lost" badge and the Memorial's heavy rule.
   // A won one becomes an entry in the Hall of Fame: a gold seal pressed onto
@@ -276,10 +283,14 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
           </div>
         </div>
 
-        {/* The team in its drawer: six slots, the empty ones as outlines. */}
+        {/* The team in its drawer: six slots per player, the empty ones as
+            outlines. A solo run is one row of six; in SoulLink each player
+            gets a block of 3 x 2 - the first on the left, the second on the
+            right (four players: two rows of blocks) - with the sprites as
+            large as the block allows. */}
         <SpriteSetProvider spriteSet={card.spriteSet}>
           <div
-            className={`relative mt-3 grid grid-cols-6 gap-1 rounded-md p-1.5 ${
+            className={`relative mt-3 grid gap-2 rounded-md p-1.5 ${solo ? "" : "grid-cols-2"} ${
               won ? "border border-gold-line bg-gold-bg" : "bg-sunken"
             }`}
           >
@@ -294,36 +305,30 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
                 {t.home.lost}
               </span>
             )}
-            {Array.from({ length: TEAM_SLOTS }, (_, i) => {
-              const members = card.team[i];
-              // A solo run's slot holds one Pokémon at full size; a SoulLink
-              // slot the whole link, smaller, side by side on a tray of its own
-              // so a pair reads as one - or stacked where the slot is too
-              // narrow (phones, four players).
-              return (
-                <div
-                  key={i}
-                  className={`flex aspect-square flex-wrap content-center items-center justify-center rounded-sm ${
-                    members && members.length > 1 ? "bg-panel" : ""
-                  }`}
-                >
-                  {members ? (
-                    members.map((member, j) => (
-                      <PokemonSprite
-                        key={j}
-                        pokemonId={member.pokemonId}
-                        bodyId={member.bodyId}
-                        name=""
-                        size={members.length > 1 ? "sm" : "md"}
-                        className={lost ? "opacity-50 grayscale" : undefined}
-                      />
-                    ))
-                  ) : (
-                    <span className="h-6 w-6 rounded-sm border border-dashed border-line-strong" />
-                  )}
+            {playerBlocks.map((block, p) => (
+              <div key={p} className="min-w-0">
+                {!solo && (
+                  <p className="truncate px-0.5 pb-0.5 text-xs text-ink-subtle">{block.name}</p>
+                )}
+                <div className={`grid gap-1 ${solo ? "grid-cols-6" : "grid-cols-3"}`}>
+                  {block.slots.map((member, i) => (
+                    <div key={i} className="flex aspect-square items-center justify-center">
+                      {member ? (
+                        <PokemonSprite
+                          pokemonId={member.pokemonId}
+                          bodyId={member.bodyId}
+                          name=""
+                          size="lg"
+                          className={`h-full w-full ${lost ? "opacity-50 grayscale" : ""}`}
+                        />
+                      ) : (
+                        <span className="h-1/2 w-1/2 rounded-sm border border-dashed border-line-strong" />
+                      )}
+                    </div>
+                  ))}
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </SpriteSetProvider>
         {card.team.length === 0 && <p className="mt-1 text-xs text-ink-subtle">{t.home.noTeam}</p>}
