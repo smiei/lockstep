@@ -103,19 +103,22 @@ export function RunHomeView({
       {cards.length > 0 ? (
         <>
           <PageHeader title={t.home.title} description={`${t.home.description} ${t.home.count(cards.length)}.`}>
-            <div className="flex flex-wrap gap-2">
-              <Button
-                variant={openOnly ? "primary" : "secondary"}
-                aria-pressed={openOnly}
-                title={t.home.openOnlyTitle}
-                onClick={() => setOpenOnly((value) => !value)}
-              >
-                {t.home.openOnly}
-              </Button>
-              {actions}
-            </div>
+            {actions}
           </PageHeader>
-          {shown.length === 0 && <p className="text-sm text-ink-muted">{t.home.noOpenRuns}</p>}
+          {/* The filter belongs to the list, so it sits on the list's left
+              edge rather than among the page's actions. */}
+          <div className="mb-4 flex flex-wrap items-center gap-3">
+            <Button
+              size="sm"
+              variant={openOnly ? "primary" : "secondary"}
+              aria-pressed={openOnly}
+              title={t.home.openOnlyTitle}
+              onClick={() => setOpenOnly((value) => !value)}
+            >
+              {t.home.openOnly}
+            </Button>
+            {shown.length === 0 && <p className="text-sm text-ink-muted">{t.home.noOpenRuns}</p>}
+          </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 2xl:grid-cols-3">
             {shown.map((card) => (
               <li key={card.accessKey}>
