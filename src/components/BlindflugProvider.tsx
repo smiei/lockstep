@@ -11,13 +11,33 @@ import { translations } from "@/lib/i18n/dictionary";
 // The default is `false`, so a component rendered outside a provider (a static
 // page, a test) shows everything rather than silently going blank.
 const BlindflugContext = createContext(false);
+// The "hide Pokémon types too" child rule, already combined with blindflug by
+// the page (on only while blindflug is). Read by TypeBadge, so every chip on
+// a Pokémon goes without a prop anywhere.
+const HideTypesContext = createContext(false);
 
-export function BlindflugProvider({ on, children }: { on: boolean; children: ReactNode }) {
-  return <BlindflugContext.Provider value={on}>{children}</BlindflugContext.Provider>;
+export function BlindflugProvider({
+  on,
+  hideTypes = false,
+  children,
+}: {
+  on: boolean;
+  hideTypes?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <BlindflugContext.Provider value={on}>
+      <HideTypesContext.Provider value={on && hideTypes}>{children}</HideTypesContext.Provider>
+    </BlindflugContext.Provider>
+  );
 }
 
 export function useBlindflug(): boolean {
   return useContext(BlindflugContext);
+}
+
+export function useHideTypes(): boolean {
+  return useContext(HideTypesContext);
 }
 
 // Stands in where a WHOLE block disappears (the opponent's move types, the

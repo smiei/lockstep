@@ -342,7 +342,7 @@ export default async function LinksPage({
   const heading = translations[lang].nav.links;
 
   return (
-    <BlindflugProvider on={settings.blindflug}>
+    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
     <div>
       <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <PageHeader
