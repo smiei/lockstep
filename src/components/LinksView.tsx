@@ -23,6 +23,7 @@ import { PokemonInfoButton } from "@/components/PokemonDetailProvider";
 import { TeamBar } from "@/components/TeamBar";
 import { TypeBadge } from "@/components/TypeBadge";
 import { Badge } from "@/components/ui/Badge";
+import { useHideTypes } from "@/components/BlindflugProvider";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { usePersistentState } from "@/lib/usePersistentState";
 import { useToast } from "@/components/ui/ToastProvider";
@@ -75,6 +76,8 @@ export function LinksView({
   );
   const [evolvableOnly, setEvolvableOnly] = useState(false);
   const [showTeam, setShowTeam] = useState(false);
+  // Blind flight's "hide Pokémon types too" takes the type filter with it.
+  const hideTypes = useHideTypes();
   const [typeFilter, setTypeFilter] = useState<string[]>([]);
   const {
     open: typeMenuOpen,
@@ -144,6 +147,7 @@ export function LinksView({
       return false;
     // Type filter (OR): keep the link if any of its Pokémon has a selected type.
     if (
+      !hideTypes &&
       typeFilter.length > 0 &&
       !link.encounters.some((e) => e.types.some((ty) => typeFilter.includes(ty)))
     )
@@ -335,7 +339,12 @@ export function LinksView({
       />
     );
     return (
-      <div key={link.id} className="flex min-w-0 flex-col rounded-sm border border-line bg-panel p-3">
+      <div
+        key={link.id}
+        className={`flex min-w-0 flex-col rounded-sm bg-panel p-3 ${
+          onTeam ? "border-2 border-success-solid ring-4 ring-success-bg" : "border border-line"
+        }`}
+      >
         {/* One dense row per Pokémon, controls beside it (compact). */}
         <div className="flex flex-col gap-2.5">
           {link.encounters.map((e) => (
@@ -440,7 +449,9 @@ export function LinksView({
               {t.links.revive}
             </Button>
           ) : onTeam ? (
-            <Badge tone="success">{t.links.onTeamTag}</Badge>
+            <Badge tone="success">
+              {t.links.onTeamTag} · {t.links.labelSlot((link.teamPosition ?? 0) + 1)}
+            </Badge>
           ) : (
             <>
               <AddToTeamButton runKey={runKey} lang={lang} linkId={link.id} teamLinks={teamLinks} />
@@ -492,11 +503,11 @@ export function LinksView({
           customSpritesOnly={customSpritesOnly}
         />
       )}
-      {/* The drawer (team) beside the rest of the collection from 105rem
-          (1680px) up; narrower, the column would squeeze the trays until two
-          specimens and their buttons no longer fit side by side, so the
-          collection follows below the drawer instead. */}
-      <div className="min-[105rem]:grid min-[105rem]:grid-cols-[minmax(0,1fr)_24rem] min-[105rem]:items-start min-[105rem]:gap-6">
+      {/* The drawer (team) on top, the rest of the collection below it at
+          every width. It used to sit beside the drawer from 105rem up as a
+          24rem column, which left most of a desktop page empty once the
+          drawer had scrolled away. */}
+      <div>
         <TeamBar
           runKey={runKey}
           mode={mode}
@@ -515,17 +526,14 @@ export function LinksView({
           {/* The filters scope this column only - the team above is always
               shown whole. */}
           <div className="mb-3 flex flex-wrap items-center gap-2">
-            {/* In the narrow side column the sort field takes a row of its
-                own, so the two filter buttons wrap under it instead of
-                squeezing the select down to its arrow. */}
-            <div className="flex items-center gap-2 min-[105rem]:w-full">
+            <div className="flex items-center gap-2">
               <label htmlFor="links-sort" className="text-sm font-medium text-ink-muted">
                 {t.links.sortLabel}
               </label>
               {/* Select is w-full of its box, so the width is set here rather
                   than through className - `cn` is a plain join and cannot
                   drop w-full. */}
-              <div className="w-52 min-[105rem]:w-auto min-[105rem]:min-w-0 min-[105rem]:flex-1">
+              <div className="w-52">
                 <Select
                   id="links-sort"
                   size="sm"
@@ -556,49 +564,51 @@ export function LinksView({
             >
               {t.links.filterEvolvable}
             </Button>
-            <div ref={typeMenuRef} className="relative">
-              <Button
-                size="sm"
-                variant={typeFilter.length > 0 ? "primary" : "secondary"}
-                aria-expanded={typeMenuOpen}
-                title={t.links.filterTypesTitle}
-                onClick={toggleTypeMenu}
-              >
-                {t.links.filterTypes}
-                {typeFilter.length > 0 && <span className="tabular-nums">({typeFilter.length})</span>}
-                <ChevronDownIcon className="h-4 w-4" />
-              </Button>
-              {typeMenuOpen && (
-                <div className="absolute right-0 z-20 mt-1 w-56 rounded-lg border border-line bg-panel p-1 shadow-lg">
-                  <div className="max-h-72 overflow-y-auto">
-                    {availableTypes.map((type) => (
-                      <label
-                        key={type}
-                        className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-2 hover:bg-hover"
+            {!hideTypes && (
+              <div ref={typeMenuRef} className="relative">
+                <Button
+                  size="sm"
+                  variant={typeFilter.length > 0 ? "primary" : "secondary"}
+                  aria-expanded={typeMenuOpen}
+                  title={t.links.filterTypesTitle}
+                  onClick={toggleTypeMenu}
+                >
+                  {t.links.filterTypes}
+                  {typeFilter.length > 0 && <span className="tabular-nums">({typeFilter.length})</span>}
+                  <ChevronDownIcon className="h-4 w-4" />
+                </Button>
+                {typeMenuOpen && (
+                  <div className="absolute right-0 z-20 mt-1 w-56 rounded-lg border border-line bg-panel p-1 shadow-lg">
+                    <div className="max-h-72 overflow-y-auto">
+                      {availableTypes.map((type) => (
+                        <label
+                          key={type}
+                          className="flex h-10 cursor-pointer items-center gap-2 rounded-md px-2 hover:bg-hover"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={typeFilter.includes(type)}
+                            onChange={() => toggleType(type)}
+                            className="accent-success"
+                          />
+                          <TypeBadge type={type} lang={lang} />
+                          <span className="text-sm text-ink">{TYPE_LABELS[lang][type] ?? type}</span>
+                        </label>
+                      ))}
+                    </div>
+                    {typeFilter.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => setTypeFilter([])}
+                        className="mt-1 h-10 w-full rounded-md px-2 text-left text-sm text-ink-muted hover:bg-hover hover:text-ink"
                       >
-                        <input
-                          type="checkbox"
-                          checked={typeFilter.includes(type)}
-                          onChange={() => toggleType(type)}
-                          className="accent-success"
-                        />
-                        <TypeBadge type={type} lang={lang} />
-                        <span className="text-sm text-ink">{TYPE_LABELS[lang][type] ?? type}</span>
-                      </label>
-                    ))}
+                        {t.links.filterTypesClear}
+                      </button>
+                    )}
                   </div>
-                  {typeFilter.length > 0 && (
-                    <button
-                      type="button"
-                      onClick={() => setTypeFilter([])}
-                      className="mt-1 h-10 w-full rounded-md px-2 text-left text-sm text-ink-muted hover:bg-hover hover:text-ink"
-                    >
-                      {t.links.filterTypesClear}
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            )}
           </div>
 
           {visibleLinks.length === 0 ? (
@@ -615,7 +625,7 @@ export function LinksView({
           ) : (
             <>
               {boxLinks.length > 0 ? (
-                <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 min-[105rem]:grid-cols-1">
+                <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 min-[105rem]:grid-cols-4">
                   {boxLinks.map((link) => collectionEntry(link))}
                 </div>
               ) : (
@@ -631,7 +641,7 @@ export function LinksView({
                     <h2 className="text-lg font-bold tracking-tight text-ink">{t.overview.memorial}</h2>
                     <span className="font-mono text-sm tabular-nums text-ink-muted">{deadLinks.length}</span>
                   </div>
-                  <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 min-[105rem]:grid-cols-1">
+                  <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 min-[105rem]:grid-cols-4">
                     {deadLinks.map((link) => collectionEntry(link))}
                   </div>
                 </>

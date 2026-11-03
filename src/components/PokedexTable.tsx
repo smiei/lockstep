@@ -7,6 +7,7 @@ import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { dexNumber, displayNameWithForm } from "@/lib/forms";
 import { TypeBadge } from "@/components/TypeBadge";
+import { useHideTypes } from "@/components/BlindflugProvider";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { Button } from "@/components/ui/Button";
@@ -76,10 +77,12 @@ export function PokedexTable({
   const legendaryCount = useMemo(() => pokemon.filter((p) => p.legendary).length, [pokemon]);
 
   const gen1 = pokemon.some((p) => p.stats.Spezial !== undefined);
+  // Blind flight's "hide Pokémon types too": the column goes, not just its chips.
+  const hideTypes = useHideTypes();
   const COLUMNS: { key: ColumnKey; label: string; align?: "right"; hideClass?: string }[] = [
     { key: "id", label: columns.id, hideClass: "hidden md:table-cell" },
     { key: "name", label: columns.name },
-    { key: "types", label: columns.types, hideClass: "hidden sm:table-cell" },
+    ...(hideTypes ? [] : [{ key: "types" as const, label: columns.types, hideClass: "hidden sm:table-cell" }]),
     { key: "KP", label: columns.kp, align: "right", hideClass: "hidden md:table-cell" },
     { key: "Ang.", label: columns.ang, align: "right", hideClass: "hidden lg:table-cell" },
     { key: "Vert.", label: columns.vert, align: "right", hideClass: "hidden lg:table-cell" },
@@ -297,13 +300,15 @@ export function PokedexTable({
                         )}
                       </button>
                     </td>
-                    <td className="hidden px-3 py-2 sm:table-cell">
-                      <div className="flex flex-wrap gap-1">
-                        {p.types.map((type) => (
-                          <TypeBadge key={type} type={type} lang={lang} />
-                        ))}
-                      </div>
-                    </td>
+                    {!hideTypes && (
+                      <td className="hidden px-3 py-2 sm:table-cell">
+                        <div className="flex flex-wrap gap-1">
+                          {p.types.map((type) => (
+                            <TypeBadge key={type} type={type} lang={lang} />
+                          ))}
+                        </div>
+                      </td>
+                    )}
                     <td className="hidden px-3 py-2 text-right tabular-nums md:table-cell">
                       {p.stats.KP}
                     </td>

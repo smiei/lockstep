@@ -70,6 +70,7 @@ const TOGGLE_ORDER: BooleanSettingKey[] = [
   "freeTeam",
   "blindflug",
   "blindflugPermanent",
+  "blindflugTypes",
   "speciesClause",
   // SoulLink only: the per-player variants of the clause.
   "speciesClausePerPlayer",
@@ -94,6 +95,7 @@ const TOGGLE_ORDER: BooleanSettingKey[] = [
 // A toggle's parents, nearest last. The depth of the chain is its indentation.
 const CLAUSE_PARENTS: Partial<Record<BooleanSettingKey, BooleanSettingKey[]>> = {
   blindflugPermanent: ["blindflug"],
+  blindflugTypes: ["blindflug"],
   speciesClausePerPlayer: ["speciesClause"],
   speciesClauseLinkedLocksAll: ["speciesClause", "speciesClausePerPlayer"],
   staticsExemptFromClause: ["speciesClause"],

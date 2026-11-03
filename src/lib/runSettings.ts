@@ -47,6 +47,10 @@ export type RunSettings = {
   // the header button cannot lift it for a quick peek - not even a stale click
   // from another device. Only switching this rule off in the Rules tab can.
   blindflugPermanent: boolean;
+  // Child of blindflug: also hide the Pokémon's own types (every type chip on
+  // a Pokémon, the Pokédex's type column, the Team tab's type filter). Only
+  // the plain type chart stays. Takes effect while blindflug is on.
+  blindflugTypes: boolean;
   // Free team: the run is not a Nuzlocke at all. The Team tab gets a direct
   // "add a Pokemon" button, so a normal playthrough can use the battle scout
   // without entering a route for every catch. Informational like every other
@@ -94,6 +98,7 @@ export const DEFAULT_RUN_SETTINGS: RunSettings = {
   staticsExemptFromClause: true,
   blindflug: false,
   blindflugPermanent: false,
+  blindflugTypes: false,
   freeTeam: false,
   customSpritesOnly: false,
   wildFusionSplit: true,

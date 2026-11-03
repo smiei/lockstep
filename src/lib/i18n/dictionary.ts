@@ -546,6 +546,11 @@ const de = {
         description:
           "Für Runs ganz ohne Hilfen: Blindflug bleibt immer an, der Schalter oben ist gesperrt – kein kurzes Nachschauen. Nur dieser Schalter hebt ihn wieder auf.",
       },
+      blindflugTypes: {
+        label: "Auch Pokémon-Typen ausblenden",
+        description:
+          "Blendet zusätzlich die Typen der Pokémon aus – im Team, im Pokédex, in Kampf & Fang und bei jedem anderen Pokémon. Es bleiben das Encounter- und Link-Tracking und die Typentabelle.",
+      },
       debugMode: {
         label: "Debug: Encounter-Reihenfolge aufzeichnen",
         description:
@@ -1411,6 +1416,11 @@ const en: Dictionary = {
         description:
           "For a run without any help: blind flight stays on and the header button is locked, so there is no quick peek. Only this switch turns it off.",
       },
+      blindflugTypes: {
+        label: "Hide Pokémon types too",
+        description:
+          "Also hides the Pokémon's own types - on the team, in the Pokédex, in Battle & Catch and everywhere else. What stays is the encounter and link tracking and the type chart.",
+      },
       debugMode: {
         label: "Debug: record encounter order",
         description:
@@ -2271,6 +2281,11 @@ const fr: Dictionary = {
         label: "Verrouiller le vol à l’aveugle",
         description:
           "Pour jouer sans aucune aide : le vol à l’aveugle reste toujours actif et le bouton de l’en-tête est verrouillé. Désactivable uniquement ici.",
+      },
+      blindflugTypes: {
+        label: "Masquer aussi les types des Pokémon",
+        description:
+          "Masque en plus les types des Pokémon - dans l'équipe, le Pokédex, Combat & Capture et partout ailleurs. Il reste le suivi des rencontres et des liens et la table des types.",
       },
       debugMode: {
         label: "Débogage : enregistrer l’ordre des rencontres",
@@ -3134,6 +3149,11 @@ const es: Dictionary = {
         description:
           "Para jugar sin ninguna ayuda: el vuelo a ciegas queda siempre activo y el botón de la cabecera se bloquea. Solo se desactiva aquí.",
       },
+      blindflugTypes: {
+        label: "Ocultar también los tipos de los Pokémon",
+        description:
+          "Oculta además los tipos de los Pokémon: en el equipo, en la Pokédex, en Combate y Captura y en cualquier otro lugar. Quedan el seguimiento de encuentros y vínculos y la tabla de tipos.",
+      },
       debugMode: {
         label: "Depuración: registrar el orden de encuentros",
         description:
@@ -3995,6 +4015,11 @@ const it: Dictionary = {
         label: "Blocca il volo cieco",
         description:
           "Per chi gioca senza alcun aiuto: il volo cieco resta sempre attivo e il pulsante nell’intestazione è bloccato. Si disattiva solo qui.",
+      },
+      blindflugTypes: {
+        label: "Nascondi anche i tipi dei Pokémon",
+        description:
+          "Nasconde anche i tipi dei Pokémon: nella squadra, nel Pokédex, in Lotta e Cattura e ovunque altro. Restano il tracciamento di incontri e legami e la tabella dei tipi.",
       },
       debugMode: {
         label: "Debug: registra l’ordine degli incontri",

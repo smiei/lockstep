@@ -23,7 +23,7 @@ Catch one Pokémon per route and player.
 
 ## Team
 
-A drawer of six team slots, plus a column with the **Box** (alive, off the team) and the **Memorial** (dead). Each slot holds a whole link: its Pokémon side by side with their specimen label (route number, collectors, types, base stats).
+A drawer of six team slots, and below it the **Box** (alive, off the team) and the **Memorial** (dead). Each slot holds a whole link: its Pokémon side by side with their specimen label (route number, collectors, types, base stats).
 
 - **Mark as dead:**
   - In SoulLink you pick which player lost their Pokémon, with undo, and can record a cause of death for the Memorial.
@@ -31,7 +31,7 @@ A drawer of six team slots, plus a column with the **Box** (alive, off the team)
 - **Evolve and devolve**, with the evolution method. The evolve button glows when a level evolution is reachable within the level cap you have earned.
 - **Sorting and filtering:**
   - for the Box and Memorial column: an "evolvable only" filter and a type filter;
-  - "Show team" lists the team members in the Box too, so one sort ranks every living link;
+  - "Show team" lists the team members in the Box too, framed in green and marked with their slot, so one sort ranks every living link;
   - sorting by encounter order, by current base-stat total (BST), or by the BST once fully evolved.
 - **Filling the team:** new links and solo catches join a free team slot automatically while the team is not full.
 - **Broken pairs** (one player caught, the other fled or killed) never appear here, because that link never formed. The surviving catch stays on the Encounter tab.
@@ -105,7 +105,7 @@ Per-run rule toggles. They are informational: they drive warnings and visibility
 - **Static encounters** and their clause exemption.
 
 On top of the toggles:
-- **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions. **Lock blind flight** (nested under it) keeps it on for runs played without any help: the header button can no longer switch it off for a quick peek, only the rule itself can.
+- **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions. **Lock blind flight** (nested under it) keeps it on for runs played without any help: the header button can no longer switch it off for a quick peek, only the rule itself can. **Hide Pokémon types too** (also nested under it) takes away the Pokémon's own types as well - on the team, in the Pokédex (its type column), in Battle & Catch, and the Team tab's type filter - leaving the encounter and link tracking and the plain type chart.
 - **Player names** replace "Player 1 / Player 2" everywhere.
 - **House rules** are a Markdown section, edited in the browser.
 - **Rule presets** carry a rule set from one playthrough to the next.

@@ -100,7 +100,7 @@ export default async function TmsPage({
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <BlindflugProvider on={settings.blindflug}>
+    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
     <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
       <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <PlayerNamesProvider names={settings.playerNames} lang={lang}>
