@@ -182,6 +182,8 @@ const BALLS_GEN4_HGSS: BallId[] = [
   "fast",
   "heavy",
   "sport",
+  // Event Pokémon arrive in it; it catches like a Poké Ball.
+  "cherish",
 ];
 
 // The version group of both Infinite Fusion packs - selects the game's own
@@ -266,7 +268,6 @@ const CONDITIONAL_BALLS = new Set<BallId>([
   "lure",
   "moon",
   "love",
-  "fast",
   "park",
 ]);
 
@@ -294,12 +295,27 @@ export function levelBallMultiplier(ownLevel: number | undefined, wildLevel: num
   return 1;
 }
 
-// From Gen 7 on the Fast Ball reads the target's base Speed, which the
-// calculator knows, so it needs no checkbox there either.
+// The Fast Ball needs no checkbox in any game: Gold/Silver/Crystal's works on
+// three species only (fastBallGen2), every later one reads the target's base
+// Speed - both of which the calculator knows.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function ballHasCondition(ball: BallId, versionGroup?: string, generation?: number): boolean {
   if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return CONDITIONAL_BALLS_INFINITE_FUSION.has(ball);
-  if (ball === "fast" && (generation ?? 0) >= 7) return false;
   return CONDITIONAL_BALLS.has(ball);
+}
+
+// Gold/Silver/Crystal's Fast Ball was meant for species that flee, but a bug
+// makes it check only the first entry of each of the game's three flee lists:
+// Magnemite, Grimer and Tangela get x4, everything else x1.
+const FAST_BALL_GEN2_SPECIES = new Set([81, 88, 114]);
+
+export function fastBallGen2(speciesId: number | undefined): number {
+  return speciesId !== undefined && FAST_BALL_GEN2_SPECIES.has(speciesId) ? 4 : 1;
+}
+
+// HeartGold/SoulSilver (and every game after): x4 from a base Speed of 100.
+export function fastBallBySpeed(baseSpeed: number | undefined): number {
+  return (baseSpeed ?? 0) >= 100 ? 4 : 1;
 }
 
 const STATUS_MULTIPLIERS: Record<StatusId, number> = {
@@ -323,7 +339,7 @@ const STATUS_MULTIPLIERS_GEN5: Record<StatusId, number> = {
 // (night/cave assumed).
 function ballMultiplierGen34(
   ball: BallId,
-  ctx: { types: string[]; level: number; ownLevel?: number; turn: number },
+  ctx: { types: string[]; level: number; ownLevel?: number; turn: number; baseSpeed?: number },
 ): number {
   switch (ball) {
     case "great":
@@ -353,8 +369,9 @@ function ballMultiplierGen34(
     case "lure":
       return 3;
     case "moon":
-    case "fast":
       return 4;
+    case "fast":
+      return fastBallBySpeed(ctx.baseSpeed);
     case "love":
       return 8;
     // heavy shifts the catch rate itself (see effectiveBaseRate), sport is a
@@ -366,7 +383,10 @@ function ballMultiplierGen34(
 
 // Gen 2 multipliers; the conditional balls assume a favorable condition
 // (noted in the UI). Friend Ball has no catch bonus at all.
-function ballMultiplierGen2(ball: BallId, ctx: { level: number; ownLevel?: number }): number {
+function ballMultiplierGen2(
+  ball: BallId,
+  ctx: { level: number; ownLevel?: number; speciesId?: number },
+): number {
   switch (ball) {
     case "great":
     case "park":
@@ -378,8 +398,9 @@ function ballMultiplierGen2(ball: BallId, ctx: { level: number; ownLevel?: numbe
     case "level":
       return levelBallMultiplier(ctx.ownLevel, ctx.level);
     case "moon":
-    case "fast":
       return 4;
+    case "fast":
+      return fastBallGen2(ctx.speciesId);
     case "love":
       return 8;
     default:
@@ -431,7 +452,10 @@ export type CatchInput = {
   // Infinite Fusion only: the target is a fusion (Fusion Ball) and its base
   // Speed (Fast Ball).
   isFusion?: boolean;
+  // The target's base Speed (Fast Ball from HeartGold/SoulSilver on, and
+  // Infinite Fusion) and its species (Gold/Silver/Crystal's Fast Ball).
   baseSpeed?: number;
+  speciesId?: number;
   // Infinite Fusion only: this is the last ball of its kind in the bag, which
   // makes a critical capture possible, and how many species the Pokédex has
   // registered as caught, which scales that chance.
@@ -522,6 +546,7 @@ function computeGen34(input: CatchInput): CatchResult {
         level: input.level,
         ownLevel: input.ownLevel,
         turn: input.turn,
+        baseSpeed: input.baseSpeed,
       });
   const statusBonus = STATUS_MULTIPLIERS[input.status];
   const ballText = `×${ballBonus}`;
@@ -608,7 +633,7 @@ function ballMultiplierModern(
     case "love":
       return 8;
     case "fast":
-      return (input.baseSpeed ?? 0) >= 100 ? 4 : 1;
+      return fastBallBySpeed(input.baseSpeed);
     // Gen 5's is a guaranteed catch (handled by the caller).
     case "dream":
       return input.status === "sleep" ? 4 : 1;
