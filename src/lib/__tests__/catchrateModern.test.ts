@@ -76,7 +76,7 @@ describe("Gen 5-9 balls", () => {
 
   it("Fast Ball reads base Speed from Gen 7, without a checkbox", () => {
     expect(ballHasCondition("fast", "sun-moon", 7)).toBe(false);
-    expect(ballHasCondition("fast", "heartgold-soulsilver", 4)).toBe(true);
+    expect(ballHasCondition("fast", "heartgold-soulsilver", 4)).toBe(false);
     expect(computeCatchChance(7, { ...base, ball: "fast", baseSpeed: 100 }).ballText).toBe("×4");
     expect(computeCatchChance(7, { ...base, ball: "fast", baseSpeed: 99 }).ballText).toBe("×1");
   });

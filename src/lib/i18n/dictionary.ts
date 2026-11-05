@@ -688,7 +688,7 @@ const de = {
       moon: "Mondball: ×4 gilt nur bei Mondstein-Familien (z. B. Nidoran, Piepi) – hier angenommen.",
       friend: "Freundesball: kein Fangbonus, erhöht nach dem Fang die Freundschaft.",
       love: "Sympaball: ×8 gilt nur bei gleicher Art mit entgegengesetztem Geschlecht – hier angenommen.",
-      fast: "Turboball: ×4 gilt nur bei fluchtfreudigen Arten – hier angenommen.",
+      fast: "Turboball: ×4 gegen Pokémon mit Basis-Initiative ab 100 (wird automatisch berücksichtigt).",
       park: "Parkball: ×1,5 beim Käferturnier im Nationalpark.",
       quick: "Flottball: ×4 nur in Runde 1, danach ×1.",
       dusk: "Finsterball: ×3,5 gilt nur nachts oder in Höhlen – hier angenommen.",
@@ -701,6 +701,10 @@ const de = {
     // game's own code differs from the real games, plus its own balls.
     // Gen 5, Gen 7 and Gen 8 onward (catchrate.ts's computeModern): each
     // wins over the older ones and over ballNotes.
+    // Gold/Silver/Crystal only.
+    ballNotesGen2: {
+      fast: "Turboball: ×4 nur gegen Magnetilo, Sleima und Tangela – ein Fehler im Spiel (wird automatisch berücksichtigt).",
+    },
     ballNotesGen5: {
       nest: "Nestball: (41 − Level) ÷ 10, bei Level 1 also ×4. Kein Bonus ab Level 31 (ab Gen 6 ab Level 30).",
       timer: "Timerball: ×1 in Runde 1, danach etwa +0,3 je Runde, max. ×4 ab Runde 11.",
@@ -1556,7 +1560,7 @@ const en: Dictionary = {
       moon: "Moon Ball: ×4 only for Moon Stone families (e.g. Nidoran, Clefairy) – assumed here.",
       friend: "Friend Ball: no catch bonus, sets friendship after the catch.",
       love: "Love Ball: ×8 only for the same species of the opposite gender – assumed here.",
-      fast: "Fast Ball: ×4 only for flee-prone species – assumed here.",
+      fast: "Fast Ball: ×4 against Pokémon with a base Speed of 100 or more (applied automatically).",
       park: "Park Ball: ×1.5 during the Bug-Catching Contest.",
       quick: "Quick Ball: ×4 only on turn 1, ×1 afterwards.",
       dusk: "Dusk Ball: ×3.5 only at night or in caves – assumed here.",
@@ -1564,6 +1568,10 @@ const en: Dictionary = {
       dream: "Dream Ball: a guaranteed catch in Gen 5 (Dream World only).",
       heavy: "Heavy Ball: shifts the catch rate by the target's weight (−20 below 102 kg, up to +40 from 410 kg) instead of multiplying it.",
       sport: "Sport Ball: no catch bonus, only available during the Bug-Catching Contest.",
+    },
+    // Gold/Silver/Crystal only.
+    ballNotesGen2: {
+      fast: "Fast Ball: ×4 only against Magnemite, Grimer and Tangela - a bug in the game (applied automatically).",
     },
     ballNotesGen5: {
       nest: "Nest Ball: (41 − level) ÷ 10, so ×4 at level 1. No bonus from level 31 (from Gen 6: from level 30).",
@@ -2422,7 +2430,7 @@ const fr: Dictionary = {
       moon: "Lune Ball : ×4 seulement pour les familles Pierre Lune (p. ex. Nidoran, Mélofée) – supposé ici.",
       friend: "Copain Ball : aucun bonus de capture, augmente le bonheur après la capture.",
       love: "Love Ball : ×8 seulement pour la même espèce de sexe opposé – supposé ici.",
-      fast: "Speed Ball : ×4 seulement pour les espèces fuyardes – supposé ici.",
+      fast: "Speed Ball : ×4 contre les Pokémon dont la Vitesse de base est d'au moins 100 (appliqué automatiquement).",
       park: "Parc Ball : ×1,5 pendant le Concours de Capture.",
       quick: "Rapide Ball : ×4 seulement au tour 1, ×1 ensuite.",
       dusk: "Sombre Ball : ×3,5 seulement la nuit ou dans les grottes – supposé ici.",
@@ -2430,6 +2438,10 @@ const fr: Dictionary = {
       dream: "Rêve Ball : capture garantie en Gen 5 (Monde des Rêves uniquement).",
       heavy: "Masse Ball : décale le taux de capture selon le poids (−20 sous 102 kg, jusqu’à +40 dès 410 kg) au lieu de le multiplier.",
       sport: "Compét’Ball : aucun bonus de capture, uniquement pendant le Concours Attrap’Insecte.",
+    },
+    // Gold/Silver/Crystal only.
+    ballNotesGen2: {
+      fast: "Speed Ball : ×4 uniquement contre Magnéti, Tadmorv et Saquedeneu – un bug du jeu (appliqué automatiquement).",
     },
     ballNotesGen5: {
       nest: "Faiblo Ball : (41 − niveau) ÷ 10, donc ×4 au niveau 1. Aucun bonus dès le niveau 31 (dès la 6e gén. : dès le niveau 30).",
@@ -3289,7 +3301,7 @@ const es: Dictionary = {
       moon: "Luna Ball: ×4 solo para familias de Piedra Lunar (p. ej. Nidoran, Clefairy) – se asume aquí.",
       friend: "Amigo Ball: sin bono de captura, sube la amistad tras la captura.",
       love: "Amor Ball: ×8 solo con la misma especie del sexo contrario – se asume aquí.",
-      fast: "Rapid Ball: ×4 solo con especies que huyen – se asume aquí.",
+      fast: "Rapid Ball: ×4 contra Pokémon con Velocidad base de 100 o más (se aplica automáticamente).",
       park: "Parque Ball: ×1,5 durante el Concurso de Captura.",
       quick: "Veloz Ball: ×4 solo en el turno 1, después ×1.",
       dusk: "Ocaso Ball: ×3,5 solo de noche o en cuevas – se asume aquí.",
@@ -3297,6 +3309,10 @@ const es: Dictionary = {
       dream: "Ensueño Ball: captura garantizada en la 5.ª gen (solo Mundo Ensueño).",
       heavy: "Peso Ball: desplaza la tasa de captura según el peso (−20 por debajo de 102 kg, hasta +40 desde 410 kg) en vez de multiplicarla.",
       sport: "Competi Ball: sin bonus de captura, solo durante el Concurso de Captura.",
+    },
+    // Gold/Silver/Crystal only.
+    ballNotesGen2: {
+      fast: "Rapid Ball: ×4 solo contra Magnemite, Grimer y Tangela – un fallo del juego (se aplica automáticamente).",
     },
     ballNotesGen5: {
       nest: "Nido Ball: (41 − nivel) ÷ 10, así que ×4 al nivel 1. Sin bonificación desde el nivel 31 (desde la 6.ª gen.: desde el nivel 30).",
@@ -4156,7 +4172,7 @@ const it: Dictionary = {
       moon: "Luna Ball: ×4 solo per famiglie da Pietralunare (es. Nidoran, Clefairy) – qui dato per assunto.",
       friend: "Amico Ball: nessun bonus di cattura, aumenta l'amicizia dopo la cattura.",
       love: "Amore Ball: ×8 solo con la stessa specie di sesso opposto – qui dato per assunto.",
-      fast: "Rapid Ball: ×4 solo con specie che fuggono – qui dato per assunto.",
+      fast: "Rapid Ball: ×4 contro Pokémon con Velocità base di almeno 100 (applicato automaticamente).",
       park: "Parco Ball: ×1,5 durante la Gara di Cattura.",
       quick: "Velox Ball: ×4 solo al turno 1, poi ×1.",
       dusk: "Scuro Ball: ×3,5 solo di notte o nelle grotte – qui dato per assunto.",
@@ -4164,6 +4180,10 @@ const it: Dictionary = {
       dream: "Ball Sogno: cattura garantita in 5ª gen (solo Mondo Sogno).",
       heavy: "Peso Ball: sposta il tasso di cattura in base al peso (−20 sotto 102 kg, fino a +40 da 410 kg) invece di moltiplicarlo.",
       sport: "Gara Ball: nessun bonus di cattura, solo durante la Gara Acchiappainsetti.",
+    },
+    // Gold/Silver/Crystal only.
+    ballNotesGen2: {
+      fast: "Rapid Ball: ×4 solo contro Magnemite, Grimer e Tangela – un bug del gioco (applicato automaticamente).",
     },
     ballNotesGen5: {
       nest: "Minor Ball: (41 − livello) ÷ 10, quindi ×4 al livello 1. Nessun bonus dal livello 31 (dalla 6ª gen.: dal livello 30).",

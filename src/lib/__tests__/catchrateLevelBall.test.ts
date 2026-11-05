@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import {
   ballHasCondition,
   computeCatchChance,
+  getBallIdsForGeneration,
   INFINITE_FUSION_VERSION_GROUP as IF,
   levelBallMultiplier,
   type CatchInput,
@@ -62,8 +63,22 @@ describe("HeartGold/SoulSilver Apricorn balls", () => {
   it("apply the bonus their notes promise when the condition is ticked", () => {
     expect(computeCatchChance(4, { ...base, ball: "lure" }).ballText).toBe("×3");
     expect(computeCatchChance(4, { ...base, ball: "moon" }).ballText).toBe("×4");
-    expect(computeCatchChance(4, { ...base, ball: "fast" }).ballText).toBe("×4");
     expect(computeCatchChance(4, { ...base, ball: "love" }).ballText).toBe("×8");
+  });
+
+  it("work the Fast Ball out instead of asking: base Speed in Gen 4, three species in Gen 2", () => {
+    expect(computeCatchChance(4, { ...base, ball: "fast", baseSpeed: 100 }).ballText).toBe("×4");
+    expect(computeCatchChance(4, { ...base, ball: "fast", baseSpeed: 99 }).ballText).toBe("×1");
+    // Gold/Silver/Crystal's bug: only Magnemite, Grimer and Tangela.
+    for (const speciesId of [81, 88, 114]) {
+      expect(computeCatchChance(2, { ...base, ball: "fast", speciesId }).ballText).toBe("×4");
+    }
+    expect(computeCatchChance(2, { ...base, ball: "fast", speciesId: 101, baseSpeed: 140 }).ballText).toBe("×1");
+  });
+
+  it("include the Cherish Ball, which catches like a Poké Ball", () => {
+    expect(getBallIdsForGeneration(4, "heartgold-soulsilver")).toContain("cherish");
+    expect(computeCatchChance(4, { ...base, ball: "cherish" }).ballText).toBe("×1");
   });
 
   it("drop back to ×1 when the condition is unticked", () => {

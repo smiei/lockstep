@@ -41,7 +41,7 @@ describe("Infinite Fusion ball list", () => {
 
   it("works the Fast Ball out from base Speed instead of asking", () => {
     expect(ballHasCondition("fast", IF)).toBe(false);
-    expect(ballHasCondition("fast")).toBe(true);
+    expect(ballHasCondition("fast")).toBe(false);
     expect(ballHasCondition("dusk", IF)).toBe(true);
   });
 });

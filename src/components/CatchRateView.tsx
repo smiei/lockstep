@@ -399,6 +399,7 @@ export function CatchCardBody({
             turn,
             isFusion: body !== null,
             baseSpeed,
+            speciesId: body ? undefined : baseSpeciesId(selected),
             lastBall: isInfiniteFusion && lastBall,
             dexOwned,
             ultraBeast: !body && isUltraBeast(baseSpeciesId(selected)),
@@ -417,6 +418,7 @@ export function CatchCardBody({
         ...(generation >= 8 ? [t.ballNotesGen8] : []),
         ...(generation >= 7 ? [t.ballNotesGen7] : []),
         ...(generation >= 5 ? [t.ballNotesGen5] : []),
+        ...(generation === 2 ? [t.ballNotesGen2] : []),
         t.ballNotes,
       ];
   const ballNote = noteSets.map((notes) => notes[ball]).find(Boolean);
