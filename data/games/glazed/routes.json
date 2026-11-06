@@ -497,11 +497,11 @@
   {
     "id": 46,
     "names": {
-      "de": "Sinustrus Forest",
-      "en": "Sinustrus Forest",
-      "fr": "Sinustrus Forest",
-      "es": "Sinustrus Forest",
-      "it": "Sinustrus Forest"
+      "de": "Sinistrus Forest",
+      "en": "Sinistrus Forest",
+      "fr": "Sinistrus Forest",
+      "es": "Sinistrus Forest",
+      "it": "Sinistrus Forest"
     },
     "type": "route"
   },
@@ -871,11 +871,11 @@
   {
     "id": 80,
     "names": {
-      "de": "Whirl Islandspokemon",
-      "en": "Whirl Islandspokemon",
-      "fr": "Whirl Islandspokemon",
-      "es": "Whirl Islandspokemon",
-      "it": "Whirl Islandspokemon"
+      "de": "Whirl Islands",
+      "en": "Whirl Islands",
+      "fr": "Whirl Islands",
+      "es": "Whirl Islands",
+      "it": "Whirl Islands"
     },
     "type": "route"
   },

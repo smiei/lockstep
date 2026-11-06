@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Pallet Town",
-      "en": "Pallet Town",
-      "fr": "Pallet Town",
-      "es": "Pallet Town",
-      "it": "Pallet Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 1",
@@ -40,6 +29,17 @@
       "fr": "Viridian City",
       "es": "Viridian City",
       "it": "Viridian City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Pallet Town",
+      "en": "Pallet Town",
+      "fr": "Pallet Town",
+      "es": "Pallet Town",
+      "it": "Pallet Town"
     },
     "type": "route"
   },
@@ -178,22 +178,22 @@
   {
     "id": 17,
     "names": {
-      "de": "Vermillion City",
-      "en": "Vermillion City",
-      "fr": "Vermillion City",
-      "es": "Vermillion City",
-      "it": "Vermillion City"
+      "de": "Vermilion City",
+      "en": "Vermilion City",
+      "fr": "Vermilion City",
+      "es": "Vermilion City",
+      "it": "Vermilion City"
     },
     "type": "route"
   },
   {
     "id": 18,
     "names": {
-      "de": "Digletts Cave",
-      "en": "Digletts Cave",
-      "fr": "Digletts Cave",
-      "es": "Digletts Cave",
-      "it": "Digletts Cave"
+      "de": "Diglett's Cave",
+      "en": "Diglett's Cave",
+      "fr": "Diglett's Cave",
+      "es": "Diglett's Cave",
+      "it": "Diglett's Cave"
     },
     "type": "route"
   },
@@ -275,6 +275,17 @@
     "type": "route"
   },
   {
+    "id": 55,
+    "names": {
+      "de": "Snorlax Route 12",
+      "en": "Snorlax Route 12",
+      "fr": "Snorlax Route 12",
+      "es": "Snorlax Route 12",
+      "it": "Snorlax Route 12"
+    },
+    "type": "static"
+  },
+  {
     "id": 26,
     "names": {
       "de": "Route 8",
@@ -308,15 +319,26 @@
     "type": "route"
   },
   {
+    "id": 57,
+    "names": {
+      "de": "Eevee Celadon City",
+      "en": "Eevee Celadon City",
+      "fr": "Eevee Celadon City",
+      "es": "Eevee Celadon City",
+      "it": "Eevee Celadon City"
+    },
+    "type": "static"
+  },
+  {
     "id": 29,
     "names": {
-      "de": "Saffron City",
-      "en": "Saffron City",
-      "fr": "Saffron City",
-      "es": "Saffron City",
-      "it": "Saffron City"
+      "de": "Lapras Saffron City",
+      "en": "Lapras Saffron City",
+      "fr": "Lapras Saffron City",
+      "es": "Lapras Saffron City",
+      "it": "Lapras Saffron City"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 30,
@@ -328,6 +350,17 @@
       "it": "Route 16"
     },
     "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Snorlax Route 16",
+      "en": "Snorlax Route 16",
+      "fr": "Snorlax Route 16",
+      "es": "Snorlax Route 16",
+      "it": "Snorlax Route 16"
+    },
+    "type": "static"
   },
   {
     "id": 31,
@@ -354,11 +387,11 @@
   {
     "id": 33,
     "names": {
-      "de": "Fuschia City",
-      "en": "Fuschia City",
-      "fr": "Fuschia City",
-      "es": "Fuschia City",
-      "it": "Fuschia City"
+      "de": "Fuchsia City",
+      "en": "Fuchsia City",
+      "fr": "Fuchsia City",
+      "es": "Fuchsia City",
+      "it": "Fuchsia City"
     },
     "type": "route"
   },
@@ -418,6 +451,17 @@
     "type": "route"
   },
   {
+    "id": 58,
+    "names": {
+      "de": "Zapdos Power Plant",
+      "en": "Zapdos Power Plant",
+      "fr": "Zapdos Power Plant",
+      "es": "Zapdos Power Plant",
+      "it": "Zapdos Power Plant"
+    },
+    "type": "static"
+  },
+  {
     "id": 39,
     "names": {
       "de": "Route 19",
@@ -449,6 +493,17 @@
       "it": "Seafoam Islands"
     },
     "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Articuno Seafoam Islands",
+      "en": "Articuno Seafoam Islands",
+      "fr": "Articuno Seafoam Islands",
+      "es": "Articuno Seafoam Islands",
+      "it": "Articuno Seafoam Islands"
+    },
+    "type": "static"
   },
   {
     "id": 42,
@@ -506,15 +561,15 @@
     "type": "route"
   },
   {
-    "id": 47,
+    "id": 60,
     "names": {
-      "de": "Three Island",
-      "en": "Three Island",
-      "fr": "Three Island",
-      "es": "Three Island",
-      "it": "Three Island"
+      "de": "Moltres Victory Road",
+      "en": "Moltres Victory Road",
+      "fr": "Moltres Victory Road",
+      "es": "Moltres Victory Road",
+      "it": "Moltres Victory Road"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 48,
@@ -592,6 +647,18 @@
       "it": "Cerulean Cave"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Mewtwo Cerulean Cave",
+      "en": "Mewtwo Cerulean Cave",
+      "fr": "Mewtwo Cerulean Cave",
+      "es": "Mewtwo Cerulean Cave",
+      "it": "Mewtwo Cerulean Cave"
+    },
+    "type": "static",
     "postgame": true
   }
 ]

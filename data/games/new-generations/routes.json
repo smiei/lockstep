@@ -35,11 +35,11 @@
   {
     "id": 4,
     "names": {
-      "de": "Viridan Forest",
-      "en": "Viridan Forest",
-      "fr": "Viridan Forest",
-      "es": "Viridan Forest",
-      "it": "Viridan Forest"
+      "de": "Viridian Forest",
+      "en": "Viridian Forest",
+      "fr": "Viridian Forest",
+      "es": "Viridian Forest",
+      "it": "Viridian Forest"
     },
     "type": "route"
   },
@@ -176,6 +176,17 @@
     "type": "route"
   },
   {
+    "id": 48,
+    "names": {
+      "de": "Pallet Town",
+      "en": "Pallet Town",
+      "fr": "Pallet Town",
+      "es": "Pallet Town",
+      "it": "Pallet Town"
+    },
+    "type": "route"
+  },
+  {
     "id": 17,
     "names": {
       "de": "Long Cave",
@@ -297,6 +308,17 @@
     "type": "route"
   },
   {
+    "id": 49,
+    "names": {
+      "de": "Eevee Celadon City",
+      "en": "Eevee Celadon City",
+      "fr": "Eevee Celadon City",
+      "es": "Eevee Celadon City",
+      "it": "Eevee Celadon City"
+    },
+    "type": "static"
+  },
+  {
     "id": 28,
     "names": {
       "de": "Pokémon Tower",
@@ -317,6 +339,17 @@
       "it": "Route 12"
     },
     "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Numel Route 12",
+      "en": "Numel Route 12",
+      "fr": "Numel Route 12",
+      "es": "Numel Route 12",
+      "it": "Numel Route 12"
+    },
+    "type": "static"
   },
   {
     "id": 30,
@@ -385,6 +418,17 @@
     "type": "route"
   },
   {
+    "id": 51,
+    "names": {
+      "de": "Lapras Silph Co.",
+      "en": "Lapras Silph Co.",
+      "fr": "Lapras Silph Co.",
+      "es": "Lapras Silph Co.",
+      "it": "Lapras Silph Co."
+    },
+    "type": "static"
+  },
+  {
     "id": 36,
     "names": {
       "de": "Route 16",
@@ -394,6 +438,17 @@
       "it": "Route 16"
     },
     "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Yanma Route 16",
+      "en": "Yanma Route 16",
+      "fr": "Yanma Route 16",
+      "es": "Yanma Route 16",
+      "it": "Yanma Route 16"
+    },
+    "type": "static"
   },
   {
     "id": 37,
@@ -453,11 +508,11 @@
   {
     "id": 42,
     "names": {
-      "de": "Seafom Islands",
-      "en": "Seafom Islands",
-      "fr": "Seafom Islands",
-      "es": "Seafom Islands",
-      "it": "Seafom Islands"
+      "de": "Seafoam Islands",
+      "en": "Seafoam Islands",
+      "fr": "Seafoam Islands",
+      "es": "Seafoam Islands",
+      "it": "Seafoam Islands"
     },
     "type": "route"
   },
@@ -482,6 +537,17 @@
       "it": "Cinnabar Island"
     },
     "type": "route"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Fossil Pokémon Cinnabar Island",
+      "en": "Fossil Pokémon Cinnabar Island",
+      "fr": "Fossil Pokémon Cinnabar Island",
+      "es": "Fossil Pokémon Cinnabar Island",
+      "it": "Fossil Pokémon Cinnabar Island"
+    },
+    "type": "static"
   },
   {
     "id": 45,
@@ -515,5 +581,17 @@
       "it": "Indigo Plateau"
     },
     "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Cerulean Cave",
+      "en": "Cerulean Cave",
+      "fr": "Cerulean Cave",
+      "es": "Cerulean Cave",
+      "it": "Cerulean Cave"
+    },
+    "type": "route",
+    "postgame": true
   }
 ]

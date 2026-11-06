@@ -11,6 +11,17 @@
     "type": "static"
   },
   {
+    "id": 3,
+    "names": {
+      "de": "Route 103",
+      "en": "Route 103",
+      "fr": "Route 103",
+      "es": "Route 103",
+      "it": "Route 103"
+    },
+    "type": "route"
+  },
+  {
     "id": 2,
     "names": {
       "de": "Littleroot Town",
@@ -22,13 +33,13 @@
     "type": "route"
   },
   {
-    "id": 3,
+    "id": 68,
     "names": {
-      "de": "Route 103",
-      "en": "Route 103",
-      "fr": "Route 103",
-      "es": "Route 103",
-      "it": "Route 103"
+      "de": "Route 101",
+      "en": "Route 101",
+      "fr": "Route 101",
+      "es": "Route 101",
+      "it": "Route 101"
     },
     "type": "route"
   },
@@ -68,11 +79,11 @@
   {
     "id": 7,
     "names": {
-      "de": "Route 104 (South)",
-      "en": "Route 104 (South)",
-      "fr": "Route 104 (South)",
-      "es": "Route 104 (South)",
-      "it": "Route 104 (South)"
+      "de": "Route 104",
+      "en": "Route 104",
+      "fr": "Route 104",
+      "es": "Route 104",
+      "it": "Route 104"
     },
     "type": "route"
   },
@@ -97,6 +108,17 @@
       "it": "Rustboro City"
     },
     "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Lileep/Anorith Rustboro City",
+      "en": "Lileep/Anorith Rustboro City",
+      "fr": "Lileep/Anorith Rustboro City",
+      "es": "Lileep/Anorith Rustboro City",
+      "it": "Lileep/Anorith Rustboro City"
+    },
+    "type": "static"
   },
   {
     "id": 10,
@@ -255,11 +277,11 @@
   {
     "id": 24,
     "names": {
-      "de": "Route 112 (South)",
-      "en": "Route 112 (South)",
-      "fr": "Route 112 (South)",
-      "es": "Route 112 (South)",
-      "it": "Route 112 (South)"
+      "de": "Route 112",
+      "en": "Route 112",
+      "fr": "Route 112",
+      "es": "Route 112",
+      "it": "Route 112"
     },
     "type": "route"
   },
@@ -330,6 +352,17 @@
     "type": "route"
   },
   {
+    "id": 70,
+    "names": {
+      "de": "Wynaut Egg Lavaridge Town",
+      "en": "Wynaut Egg Lavaridge Town",
+      "fr": "Wynaut Egg Lavaridge Town",
+      "es": "Wynaut Egg Lavaridge Town",
+      "it": "Wynaut Egg Lavaridge Town"
+    },
+    "type": "static"
+  },
+  {
     "id": 31,
     "names": {
       "de": "Route 111",
@@ -339,6 +372,28 @@
       "it": "Route 111"
     },
     "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Desert Underpass",
+      "en": "Desert Underpass",
+      "fr": "Desert Underpass",
+      "es": "Desert Underpass",
+      "it": "Desert Underpass"
+    },
+    "type": "route"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Regirock Desert Ruins",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Desert Ruins",
+      "es": "Regirock Desert Ruins",
+      "it": "Regirock Desert Ruins"
+    },
+    "type": "static"
   },
   {
     "id": 32,
@@ -363,6 +418,17 @@
     "type": "route"
   },
   {
+    "id": 73,
+    "names": {
+      "de": "Regice Island Cave",
+      "en": "Regice Island Cave",
+      "fr": "Regice Island Cave",
+      "es": "Regice Island Cave",
+      "it": "Regice Island Cave"
+    },
+    "type": "static"
+  },
+  {
     "id": 34,
     "names": {
       "de": "Route 108",
@@ -370,6 +436,17 @@
       "fr": "Route 108",
       "es": "Route 108",
       "it": "Route 108"
+    },
+    "type": "route"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Abandoned Ship",
+      "en": "Abandoned Ship",
+      "fr": "Abandoned Ship",
+      "es": "Abandoned Ship",
+      "it": "Abandoned Ship"
     },
     "type": "route"
   },
@@ -407,13 +484,24 @@
     "type": "route"
   },
   {
+    "id": 75,
+    "names": {
+      "de": "Castform Route 119",
+      "en": "Castform Route 119",
+      "fr": "Castform Route 119",
+      "es": "Castform Route 119",
+      "it": "Castform Route 119"
+    },
+    "type": "static"
+  },
+  {
     "id": 38,
     "names": {
-      "de": "Foretree City",
-      "en": "Foretree City",
-      "fr": "Foretree City",
-      "es": "Foretree City",
-      "it": "Foretree City"
+      "de": "Fortree City",
+      "en": "Fortree City",
+      "fr": "Fortree City",
+      "es": "Fortree City",
+      "it": "Fortree City"
     },
     "type": "route"
   },
@@ -427,6 +515,17 @@
       "it": "Route 120"
     },
     "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Registeel Ancient Tomb",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Ancient Tomb",
+      "es": "Registeel Ancient Tomb",
+      "it": "Registeel Ancient Tomb"
+    },
+    "type": "static"
   },
   {
     "id": 40,
@@ -447,6 +546,17 @@
       "fr": "Route 121",
       "es": "Route 121",
       "it": "Route 121"
+    },
+    "type": "route"
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Artisan Cave",
+      "en": "Artisan Cave",
+      "fr": "Artisan Cave",
+      "es": "Artisan Cave",
+      "it": "Artisan Cave"
     },
     "type": "route"
   },
@@ -528,6 +638,17 @@
     "type": "route"
   },
   {
+    "id": 78,
+    "names": {
+      "de": "Jirachi Mossdeep City",
+      "en": "Jirachi Mossdeep City",
+      "fr": "Jirachi Mossdeep City",
+      "es": "Jirachi Mossdeep City",
+      "it": "Jirachi Mossdeep City"
+    },
+    "type": "static"
+  },
+  {
     "id": 49,
     "names": {
       "de": "Route 125",
@@ -605,13 +726,24 @@
     "type": "route"
   },
   {
+    "id": 79,
+    "names": {
+      "de": "Underwater",
+      "en": "Underwater",
+      "fr": "Underwater",
+      "es": "Underwater",
+      "it": "Underwater"
+    },
+    "type": "route"
+  },
+  {
     "id": 56,
     "names": {
-      "de": "Cave of Origins",
-      "en": "Cave of Origins",
-      "fr": "Cave of Origins",
-      "es": "Cave of Origins",
-      "it": "Cave of Origins"
+      "de": "Cave of Origin",
+      "en": "Cave of Origin",
+      "fr": "Cave of Origin",
+      "es": "Cave of Origin",
+      "it": "Cave of Origin"
     },
     "type": "route"
   },
@@ -671,6 +803,17 @@
     "type": "route"
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Rayquaza Sky Pillar",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Sky Pillar",
+      "es": "Rayquaza Sky Pillar",
+      "it": "Rayquaza Sky Pillar"
+    },
+    "type": "static"
+  },
+  {
     "id": 62,
     "names": {
       "de": "Meteor Falls",
@@ -678,6 +821,17 @@
       "fr": "Meteor Falls",
       "es": "Meteor Falls",
       "it": "Meteor Falls"
+    },
+    "type": "route"
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Altering Cave",
+      "en": "Altering Cave",
+      "fr": "Altering Cave",
+      "es": "Altering Cave",
+      "it": "Altering Cave"
     },
     "type": "route"
   },

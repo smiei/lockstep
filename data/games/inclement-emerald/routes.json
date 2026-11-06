@@ -13,13 +13,13 @@
   {
     "id": 2,
     "names": {
-      "de": "Littleroot Town",
-      "en": "Littleroot Town",
-      "fr": "Littleroot Town",
-      "es": "Littleroot Town",
-      "it": "Littleroot Town"
+      "de": "Cosmog Littleroot Town",
+      "en": "Cosmog Littleroot Town",
+      "fr": "Cosmog Littleroot Town",
+      "es": "Cosmog Littleroot Town",
+      "it": "Cosmog Littleroot Town"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 3,
@@ -119,6 +119,17 @@
       "it": "Route 105"
     },
     "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Regice Island Cave",
+      "en": "Regice Island Cave",
+      "fr": "Regice Island Cave",
+      "es": "Regice Island Cave",
+      "it": "Regice Island Cave"
+    },
+    "type": "static"
   },
   {
     "id": 12,
@@ -242,26 +253,26 @@
     "type": "route"
   },
   {
-    "id": 23,
+    "id": 24,
     "names": {
-      "de": "Verdanturf Town",
-      "en": "Verdanturf Town",
-      "fr": "Verdanturf Town",
-      "es": "Verdanturf Town",
-      "it": "Verdanturf Town"
+      "de": "Verdant Glade",
+      "en": "Verdant Glade",
+      "fr": "Verdant Glade",
+      "es": "Verdant Glade",
+      "it": "Verdant Glade"
     },
     "type": "route"
   },
   {
-    "id": 24,
+    "id": 80,
     "names": {
-      "de": "Verdanturf Glade",
-      "en": "Verdanturf Glade",
-      "fr": "Verdanturf Glade",
-      "es": "Verdanturf Glade",
-      "it": "Verdanturf Glade"
+      "de": "Audino Verdant Glade",
+      "en": "Audino Verdant Glade",
+      "fr": "Audino Verdant Glade",
+      "es": "Audino Verdant Glade",
+      "it": "Audino Verdant Glade"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 25,
@@ -342,6 +353,17 @@
     "type": "route"
   },
   {
+    "id": 81,
+    "names": {
+      "de": "Jirachi Meteor Falls",
+      "en": "Jirachi Meteor Falls",
+      "fr": "Jirachi Meteor Falls",
+      "es": "Jirachi Meteor Falls",
+      "it": "Jirachi Meteor Falls"
+    },
+    "type": "static"
+  },
+  {
     "id": 32,
     "names": {
       "de": "Route 115",
@@ -355,13 +377,13 @@
   {
     "id": 33,
     "names": {
-      "de": "Lavaridge Town",
-      "en": "Lavaridge Town",
-      "fr": "Lavaridge Town",
-      "es": "Lavaridge Town",
-      "it": "Lavaridge Town"
+      "de": "Wynaut Lavaridge Town",
+      "en": "Wynaut Lavaridge Town",
+      "fr": "Wynaut Lavaridge Town",
+      "es": "Wynaut Lavaridge Town",
+      "it": "Wynaut Lavaridge Town"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 34,
@@ -386,6 +408,17 @@
     "type": "route"
   },
   {
+    "id": 82,
+    "names": {
+      "de": "Regirock Desert Ruins",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Desert Ruins",
+      "es": "Regirock Desert Ruins",
+      "it": "Regirock Desert Ruins"
+    },
+    "type": "static"
+  },
+  {
     "id": 36,
     "names": {
       "de": "Mirage Tower",
@@ -406,6 +439,17 @@
       "it": "New Mauville"
     },
     "type": "route"
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Zapdos New Mauville",
+      "en": "Zapdos New Mauville",
+      "fr": "Zapdos New Mauville",
+      "es": "Zapdos New Mauville",
+      "it": "Zapdos New Mauville"
+    },
+    "type": "static"
   },
   {
     "id": 38,
@@ -430,26 +474,15 @@
     "type": "route"
   },
   {
-    "id": 40,
+    "id": 84,
     "names": {
-      "de": "Weather Institute",
-      "en": "Weather Institute",
-      "fr": "Weather Institute",
-      "es": "Weather Institute",
-      "it": "Weather Institute"
+      "de": "Castform Route 119",
+      "en": "Castform Route 119",
+      "fr": "Castform Route 119",
+      "es": "Castform Route 119",
+      "it": "Castform Route 119"
     },
-    "type": "route"
-  },
-  {
-    "id": 41,
-    "names": {
-      "de": "Fortree City",
-      "en": "Fortree City",
-      "fr": "Fortree City",
-      "es": "Fortree City",
-      "it": "Fortree City"
-    },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 42,
@@ -463,6 +496,17 @@
     "type": "route"
   },
   {
+    "id": 85,
+    "names": {
+      "de": "Registeel Ancient Tomb",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Ancient Tomb",
+      "es": "Registeel Ancient Tomb",
+      "it": "Registeel Ancient Tomb"
+    },
+    "type": "static"
+  },
+  {
     "id": 43,
     "names": {
       "de": "Scorched Slab",
@@ -472,6 +516,17 @@
       "it": "Scorched Slab"
     },
     "type": "route"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Heatran Scorched Slab",
+      "en": "Heatran Scorched Slab",
+      "fr": "Heatran Scorched Slab",
+      "es": "Heatran Scorched Slab",
+      "it": "Heatran Scorched Slab"
+    },
+    "type": "static"
   },
   {
     "id": 44,
@@ -551,6 +606,17 @@
     "type": "route"
   },
   {
+    "id": 87,
+    "names": {
+      "de": "Moltres Ember Path",
+      "en": "Moltres Ember Path",
+      "fr": "Moltres Ember Path",
+      "es": "Moltres Ember Path",
+      "it": "Moltres Ember Path"
+    },
+    "type": "static"
+  },
+  {
     "id": 51,
     "names": {
       "de": "Ashen Woods",
@@ -564,11 +630,11 @@
   {
     "id": 52,
     "names": {
-      "de": "Team Magma Hideout",
-      "en": "Team Magma Hideout",
-      "fr": "Team Magma Hideout",
-      "es": "Team Magma Hideout",
-      "it": "Team Magma Hideout"
+      "de": "Magma Hideout",
+      "en": "Magma Hideout",
+      "fr": "Magma Hideout",
+      "es": "Magma Hideout",
+      "it": "Magma Hideout"
     },
     "type": "route"
   },
@@ -617,6 +683,17 @@
     "type": "route"
   },
   {
+    "id": 88,
+    "names": {
+      "de": "Meltan Mossdeep City",
+      "en": "Meltan Mossdeep City",
+      "fr": "Meltan Mossdeep City",
+      "es": "Meltan Mossdeep City",
+      "it": "Meltan Mossdeep City"
+    },
+    "type": "static"
+  },
+  {
     "id": 57,
     "names": {
       "de": "Route 125",
@@ -637,6 +714,17 @@
       "it": "Shoal Cave"
     },
     "type": "route"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Articuno Shoal Cave",
+      "en": "Articuno Shoal Cave",
+      "fr": "Articuno Shoal Cave",
+      "es": "Articuno Shoal Cave",
+      "it": "Articuno Shoal Cave"
+    },
+    "type": "static"
   },
   {
     "id": 59,
@@ -683,6 +771,17 @@
     "type": "route"
   },
   {
+    "id": 90,
+    "names": {
+      "de": "Underwater",
+      "en": "Underwater",
+      "fr": "Underwater",
+      "es": "Underwater",
+      "it": "Underwater"
+    },
+    "type": "route"
+  },
+  {
     "id": 63,
     "names": {
       "de": "Sootopolis City",
@@ -703,6 +802,17 @@
       "it": "Cave of Origin"
     },
     "type": "route"
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Diancie Cave of Origin",
+      "en": "Diancie Cave of Origin",
+      "fr": "Diancie Cave of Origin",
+      "es": "Diancie Cave of Origin",
+      "it": "Diancie Cave of Origin"
+    },
+    "type": "static"
   },
   {
     "id": 65,
@@ -747,6 +857,17 @@
       "it": "Sky Pillar"
     },
     "type": "route"
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Rayquaza Sky Pillar",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Sky Pillar",
+      "es": "Rayquaza Sky Pillar",
+      "it": "Rayquaza Sky Pillar"
+    },
+    "type": "static"
   },
   {
     "id": 69,
@@ -815,6 +936,17 @@
     "type": "route"
   },
   {
+    "id": 93,
+    "names": {
+      "de": "Regigigas Sealed Chamber",
+      "en": "Regigigas Sealed Chamber",
+      "fr": "Regigigas Sealed Chamber",
+      "es": "Regigigas Sealed Chamber",
+      "it": "Regigigas Sealed Chamber"
+    },
+    "type": "static"
+  },
+  {
     "id": 75,
     "names": {
       "de": "Ever Grande City",
@@ -858,6 +990,18 @@
       "it": "Altering Cave"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Mewtwo Altering Cave",
+      "en": "Mewtwo Altering Cave",
+      "fr": "Mewtwo Altering Cave",
+      "es": "Mewtwo Altering Cave",
+      "it": "Mewtwo Altering Cave"
+    },
+    "type": "static",
     "postgame": true
   }
 ]
