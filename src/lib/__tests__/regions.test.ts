@@ -75,6 +75,17 @@ describe("HeartGold / SoulSilver packs", () => {
     });
   }
 
+  it("gold-silver follows the same order: Johto, Kanto after Victory Road, the roaming dogs post-game", () => {
+    const list = read<Route[]>("gold-silver", "routes.json");
+    const firstKanto = list.findIndex((r) => r.region === "kanto");
+    expect(list[firstKanto - 1].names.en).toBe("Victory Road");
+    const parts = list.map((r) => (r.postgame ? 2 : r.region === "kanto" ? 1 : 0));
+    expect([...parts].sort()).toEqual(parts);
+    expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Raikou/Entei/Suicune (Roaming)"]);
+    const caps = read<LevelCap[]>("gold-silver", "levelcaps.json");
+    expect(caps.find((c) => c.region === "kanto")?.names.en).toBe("Lt. Surge");
+  });
+
   it("swaps Lugia and Ho-Oh: the version's own legendary is in Johto, the other in Kanto", () => {
     const region = (game: string, id: number) => read<Route[]>(game, "routes.json").find((r) => r.id === id)?.region;
     // 33 = Bell Tower (Ho-Oh), 40 = Whirl Islands (Lugia)

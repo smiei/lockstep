@@ -33,17 +33,6 @@
     "type": "route"
   },
   {
-    "id": 4,
-    "names": {
-      "de": "Rosalia City",
-      "en": "Cherrygrove City",
-      "fr": "Ville Griotte",
-      "es": "Ciudad Cerezo",
-      "it": "Fiorpescopoli"
-    },
-    "type": "route"
-  },
-  {
     "id": 5,
     "names": {
       "de": "Route 30",
@@ -77,26 +66,15 @@
     "type": "route"
   },
   {
-    "id": 8,
+    "id": 11,
     "names": {
-      "de": "Viola City",
-      "en": "Violet City",
-      "fr": "Mauville",
-      "es": "Ciudad Malva",
-      "it": "Violapoli"
+      "de": "Route 32",
+      "en": "Route 32",
+      "fr": "Route 32",
+      "es": "Ruta 32",
+      "it": "Percorso 32"
     },
     "type": "route"
-  },
-  {
-    "id": 9,
-    "names": {
-      "de": "Togepi-Ei Viola City",
-      "en": "Togepi Egg Violet City",
-      "fr": "Œuf Togepi Mauville",
-      "es": "Huevo de Togepi Ciudad Malva",
-      "it": "Uovo di Togepi Violapoli"
-    },
-    "type": "static"
   },
   {
     "id": 10,
@@ -110,15 +88,15 @@
     "type": "route"
   },
   {
-    "id": 11,
+    "id": 9,
     "names": {
-      "de": "Route 32",
-      "en": "Route 32",
-      "fr": "Route 32",
-      "es": "Ruta 32",
-      "it": "Percorso 32"
+      "de": "Togepi-Ei Viola City",
+      "en": "Togepi Egg Violet City",
+      "fr": "Œuf Togepi Mauville",
+      "es": "Huevo de Togepi Ciudad Malva",
+      "it": "Uovo di Togepi Violapoli"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 12,
@@ -176,17 +154,6 @@
     "type": "route"
   },
   {
-    "id": 17,
-    "names": {
-      "de": "Evoli Dukatia City",
-      "en": "Eevee Goldenrod City",
-      "fr": "Évoli Doublonville",
-      "es": "Eevee Ciudad Trigal",
-      "it": "Eevee Fiordoropoli"
-    },
-    "type": "static"
-  },
-  {
     "id": 18,
     "names": {
       "de": "Route 35",
@@ -242,6 +209,28 @@
     "type": "route"
   },
   {
+    "id": 8,
+    "names": {
+      "de": "Viola City",
+      "en": "Violet City",
+      "fr": "Mauville",
+      "es": "Ciudad Malva",
+      "it": "Violapoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Rosalia City",
+      "en": "Cherrygrove City",
+      "fr": "Ville Griotte",
+      "es": "Ciudad Cerezo",
+      "it": "Fiorpescopoli"
+    },
+    "type": "route"
+  },
+  {
     "id": 23,
     "names": {
       "de": "Teak City",
@@ -253,6 +242,17 @@
     "type": "route"
   },
   {
+    "id": 17,
+    "names": {
+      "de": "Evoli Dukatia City",
+      "en": "Eevee Goldenrod City",
+      "fr": "Évoli Doublonville",
+      "es": "Eevee Ciudad Trigal",
+      "it": "Eevee Fiordoropoli"
+    },
+    "type": "static"
+  },
+  {
     "id": 24,
     "names": {
       "de": "Turmruine",
@@ -260,6 +260,17 @@
       "fr": "Tour Cendrée",
       "es": "Torre Quemada",
       "it": "Torre Bruciata"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Route 42",
+      "en": "Route 42",
+      "fr": "Route 42",
+      "es": "Ruta 42",
+      "it": "Percorso 42"
     },
     "type": "route"
   },
@@ -350,17 +361,6 @@
       "it": "Shuckle Fiorlisopoli"
     },
     "type": "static"
-  },
-  {
-    "id": 33,
-    "names": {
-      "de": "Route 42",
-      "en": "Route 42",
-      "fr": "Route 42",
-      "es": "Ruta 42",
-      "it": "Percorso 42"
-    },
-    "type": "route"
   },
   {
     "id": 34,
@@ -484,6 +484,17 @@
     "type": "route"
   },
   {
+    "id": 50,
+    "names": {
+      "de": "Ho-Oh Zinnturm",
+      "en": "Ho-Oh Bell Tower",
+      "fr": "Ho-Oh Tour Ferraille",
+      "es": "Ho-Oh Torre Hojalata",
+      "it": "Ho-Oh Torre di Latta"
+    },
+    "type": "static"
+  },
+  {
     "id": 45,
     "names": {
       "de": "Route 27",
@@ -528,121 +539,16 @@
     "type": "route"
   },
   {
-    "id": 49,
+    "id": 66,
     "names": {
-      "de": "Lugia Strudelinseln",
-      "en": "Lugia Whirl Islands",
-      "fr": "Lugia Tourb'Îles",
-      "es": "Lugia Islas Remolino",
-      "it": "Lugia Isole Vorticose"
+      "de": "Relaxo Orania City",
+      "en": "Snorlax Vermilion City",
+      "fr": "Ronflex Carmin sur Mer",
+      "es": "Snorlax Ciudad Carmín",
+      "it": "Snorlax Aranciopoli"
     },
-    "type": "static"
-  },
-  {
-    "id": 50,
-    "names": {
-      "de": "Ho-Oh Zinnturm",
-      "en": "Ho-Oh Bell Tower",
-      "fr": "Ho-Oh Tour Ferraille",
-      "es": "Ho-Oh Torre Hojalata",
-      "it": "Ho-Oh Torre di Latta"
-    },
-    "type": "static"
-  },
-  {
-    "id": 51,
-    "names": {
-      "de": "Raikou/Entei/Suicune (umherstreifend)",
-      "en": "Raikou/Entei/Suicune (Roaming)",
-      "fr": "Raikou/Entei/Suicune (errant)",
-      "es": "Raikou/Entei/Suicune (errante)",
-      "it": "Raikou/Entei/Suicune (errante)"
-    },
-    "type": "static"
-  },
-  {
-    "id": 52,
-    "names": {
-      "de": "Route 1",
-      "en": "Route 1",
-      "fr": "Route 1",
-      "es": "Ruta 1",
-      "it": "Percorso 1"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 53,
-    "names": {
-      "de": "Route 2",
-      "en": "Route 2",
-      "fr": "Route 2",
-      "es": "Ruta 2",
-      "it": "Percorso 2"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 54,
-    "names": {
-      "de": "Digdas Höhle",
-      "en": "Diglett's Cave",
-      "fr": "Cave Taupiqueur",
-      "es": "Cueva Diglett",
-      "it": "Grotta Diglett"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 55,
-    "names": {
-      "de": "Route 3",
-      "en": "Route 3",
-      "fr": "Route 3",
-      "es": "Ruta 3",
-      "it": "Percorso 3"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 56,
-    "names": {
-      "de": "Mondberg",
-      "en": "Mt. Moon",
-      "fr": "Mont Sélénite",
-      "es": "Mt. Moon",
-      "it": "Monte Luna"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 57,
-    "names": {
-      "de": "Route 4",
-      "en": "Route 4",
-      "fr": "Route 4",
-      "es": "Ruta 4",
-      "it": "Percorso 4"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 58,
-    "names": {
-      "de": "Route 5",
-      "en": "Route 5",
-      "fr": "Route 5",
-      "es": "Ruta 5",
-      "it": "Percorso 5"
-    },
-    "type": "route",
-    "postgame": true
+    "type": "static",
+    "region": "kanto"
   },
   {
     "id": 59,
@@ -654,7 +560,7 @@
       "it": "Percorso 6"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 60,
@@ -666,127 +572,7 @@
       "it": "Percorso 7"
     },
     "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 61,
-    "names": {
-      "de": "Route 8",
-      "en": "Route 8",
-      "fr": "Route 8",
-      "es": "Ruta 8",
-      "it": "Percorso 8"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 62,
-    "names": {
-      "de": "Route 9",
-      "en": "Route 9",
-      "fr": "Route 9",
-      "es": "Ruta 9",
-      "it": "Percorso 9"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 63,
-    "names": {
-      "de": "Route 10",
-      "en": "Route 10",
-      "fr": "Route 10",
-      "es": "Ruta 10",
-      "it": "Percorso 10"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 64,
-    "names": {
-      "de": "Felstunnel",
-      "en": "Rock Tunnel",
-      "fr": "Grotte",
-      "es": "Túnel Roca",
-      "it": "Tunnel Roccioso"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 65,
-    "names": {
-      "de": "Route 11",
-      "en": "Route 11",
-      "fr": "Route 11",
-      "es": "Ruta 11",
-      "it": "Percorso 11"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 66,
-    "names": {
-      "de": "Relaxo Orania City",
-      "en": "Snorlax Vermilion City",
-      "fr": "Ronflex Carmin sur Mer",
-      "es": "Snorlax Ciudad Carmín",
-      "it": "Snorlax Aranciopoli"
-    },
-    "type": "static",
-    "postgame": true
-  },
-  {
-    "id": 67,
-    "names": {
-      "de": "Route 12",
-      "en": "Route 12",
-      "fr": "Route 12",
-      "es": "Ruta 12",
-      "it": "Percorso 12"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 68,
-    "names": {
-      "de": "Route 13",
-      "en": "Route 13",
-      "fr": "Route 13",
-      "es": "Ruta 13",
-      "it": "Percorso 13"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 69,
-    "names": {
-      "de": "Route 14",
-      "en": "Route 14",
-      "fr": "Route 14",
-      "es": "Ruta 14",
-      "it": "Percorso 14"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 70,
-    "names": {
-      "de": "Route 15",
-      "en": "Route 15",
-      "fr": "Route 15",
-      "es": "Ruta 15",
-      "it": "Percorso 15"
-    },
-    "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 71,
@@ -798,7 +584,7 @@
       "it": "Percorso 16"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 72,
@@ -810,7 +596,7 @@
       "it": "Percorso 17"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 73,
@@ -822,31 +608,103 @@
       "it": "Percorso 18"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
-    "id": 74,
+    "id": 70,
     "names": {
-      "de": "Route 21",
-      "en": "Route 21",
-      "fr": "Chenal 21",
-      "es": "Ruta 21",
-      "it": "Percorso 21"
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Ruta 15",
+      "it": "Percorso 15"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
-    "id": 75,
+    "id": 69,
     "names": {
-      "de": "Route 22",
-      "en": "Route 22",
-      "fr": "Route 22",
-      "es": "Ruta 22",
-      "it": "Percorso 22"
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Ruta 14",
+      "it": "Percorso 14"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Ruta 13",
+      "it": "Percorso 13"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Ruta 12",
+      "it": "Percorso 12"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Ruta 5",
+      "it": "Percorso 5"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Ruta 9",
+      "it": "Percorso 9"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Route 10",
+      "en": "Route 10",
+      "fr": "Route 10",
+      "es": "Ruta 10",
+      "it": "Percorso 10"
+    },
+    "type": "route",
+    "region": "kanto"
   },
   {
     "id": 76,
@@ -858,7 +716,7 @@
       "it": "Percorso 24"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 77,
@@ -870,7 +728,139 @@
       "it": "Percorso 25"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Felstunnel",
+      "en": "Rock Tunnel",
+      "fr": "Grotte",
+      "es": "Túnel Roca",
+      "it": "Tunnel Roccioso"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Ruta 11",
+      "it": "Percorso 11"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Digdas Höhle",
+      "en": "Diglett's Cave",
+      "fr": "Cave Taupiqueur",
+      "es": "Cueva Diglett",
+      "it": "Grotta Diglett"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Lugia Strudelinseln",
+      "en": "Lugia Whirl Islands",
+      "fr": "Lugia Tourb'Îles",
+      "es": "Lugia Islas Remolino",
+      "it": "Lugia Isole Vorticose"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Mondberg",
+      "en": "Mt. Moon",
+      "fr": "Mont Sélénite",
+      "es": "Mt. Moon",
+      "it": "Monte Luna"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Ruta 1",
+      "it": "Percorso 1"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Route 21",
+      "en": "Route 21",
+      "fr": "Chenal 21",
+      "es": "Ruta 21",
+      "it": "Percorso 21"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Ruta 22",
+      "it": "Percorso 22"
+    },
+    "type": "route",
+    "region": "kanto"
   },
   {
     "id": 78,
@@ -882,7 +872,7 @@
       "it": "Percorso 28"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 79,
@@ -894,6 +884,18 @@
       "it": "Monte Argento"
     },
     "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Raikou/Entei/Suicune (umherstreifend)",
+      "en": "Raikou/Entei/Suicune (Roaming)",
+      "fr": "Raikou/Entei/Suicune (errant)",
+      "es": "Raikou/Entei/Suicune (errante)",
+      "it": "Raikou/Entei/Suicune (errante)"
+    },
+    "type": "static",
     "postgame": true
   }
 ]
