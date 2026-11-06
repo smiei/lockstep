@@ -65,6 +65,7 @@ There are two ways to add a game:
 
 - `type: "route"` is a wild encounter. `"static"` is a gift, fossil, purchase or legendary; statics are exempt from the Species Clause.
 - `postgame: true` hides the place behind the Encounter tab's post-game toggle.
+- `region: "kanto"` marks a place in a second region the run may leave out (HeartGold/SoulSilver's Kanto). Such a game gets the rule "Include Kanto": on, these places get their own section and count towards the progress bar; off, they count as post-game. The same field on a level cap leaves that fight out of the Journey progress bar while Kanto is excluded.
 - **The order of the list is the play order** and may be changed at any time.
 - **Ids are permanent.** Saved runs point at them. Never renumber or reuse an id; a new route gets the next free one, wherever it sits in the list.
 

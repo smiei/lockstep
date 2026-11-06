@@ -86,6 +86,8 @@ const TOGGLE_ORDER: BooleanSettingKey[] = [
   // Infinite Fusion only, next to the other randomizer rules.
   "randomizerFuseEverything",
   "statics",
+  // HeartGold/SoulSilver only: whether Kanto is part of the run.
+  "includeKanto",
   // Infinite Fusion only - filtered out below for every other pack, where
   // there is nothing to fuse.
   "wildFusionSplit",
@@ -115,6 +117,9 @@ const FUSION_ONLY_TOGGLES = new Set<BooleanSettingKey>([
   "fusionLocksBothFamilies",
   "randomizerFuseEverything",
 ]);
+
+// Toggles that only mean something in a game with a second region.
+const KANTO_ONLY_TOGGLES = new Set<BooleanSettingKey>(["includeKanto"]);
 
 // One switch row, shared by the rule toggles and the debug switch below them.
 // The whole row is the control; it used to be a 20x36px target sitting at the
@@ -184,6 +189,7 @@ export function RulesView({
   settings,
   presets,
   fusionEnabled = false,
+  kantoEnabled = false,
 }: {
   runKey: string;
   lang: Lang;
@@ -196,6 +202,8 @@ export function RulesView({
   // The run's game pack has fusions (Infinite Fusion) - gates the toggles
   // that only mean something there.
   fusionEnabled?: boolean;
+  // The game has a Kanto to leave out (HeartGold/SoulSilver).
+  kantoEnabled?: boolean;
   // App-wide, not run-scoped - the same list appears in every run.
   presets: RulePresetSummary[];
 }) {
@@ -381,6 +389,7 @@ export function RulesView({
               {TOGGLE_ORDER.filter(
                 (key) =>
                   (fusionEnabled || !FUSION_ONLY_TOGGLES.has(key)) &&
+                  (kantoEnabled || !KANTO_ONLY_TOGGLES.has(key)) &&
                   (players.length > 1 || !SOULLINK_ONLY_TOGGLES.has(key)),
               ).map(renderToggle)}
             </Card>

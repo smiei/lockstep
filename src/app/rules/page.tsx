@@ -8,6 +8,8 @@ import { RulesView } from "@/components/RulesView";
 import { CanonicalRun } from "@/components/CanonicalRun";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { RunLanding } from "@/components/RunLanding";
+import { getRoutesForRun } from "@/lib/runRoutes";
+import { hasKanto } from "@/lib/regions";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +56,7 @@ export default async function RulesPage({
         settings={settings}
         presets={presets}
         fusionEnabled={Boolean(getGameOrDefault(gameId).fusion)}
+        kantoEnabled={hasKanto(await getRoutesForRun(runId, gameId))}
       />
     </>
   );

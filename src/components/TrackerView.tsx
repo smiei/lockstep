@@ -24,6 +24,20 @@ import { EmptyState, PageHeader } from "@/components/ui/Page";
 import { ChevronDownIcon } from "@/components/ActionIcons";
 import { formatCatalogueNumber, routeNumbers } from "@/lib/routeNumbers";
 import { EnglishOnlyNote } from "@/components/EnglishOnlyNote";
+import { applyRegionRule, hasKanto } from "@/lib/regions";
+
+// The two regions' names read the same in every language the app speaks.
+const REGION_LABELS = { main: "Johto", kanto: "Kanto" } as const;
+
+// A divider between the regions of a game that has two (HeartGold/SoulSilver).
+function RegionHeading({ label }: { label: string }) {
+  return (
+    <h2 className="mt-4 flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-wider text-ink-muted first:mt-0">
+      <span>{label}</span>
+      <span aria-hidden="true" className="h-px flex-1 bg-line-strong" />
+    </h2>
+  );
+}
 
 // Tailwind only sees whole class names, so the column count per player count
 // is spelled out rather than built from a number. Three players on two
@@ -42,7 +56,7 @@ export function TrackerView({
   boundRoutes,
   lang,
   settings,
-  routes,
+  routes: runRoutes,
   pokemonList,
   encounters,
   fusionEnabled = false,
@@ -66,6 +80,10 @@ export function TrackerView({
   englishOnly?: boolean;
 }) {
   const playerLabel = usePlayerLabel();
+  // A Kanto the run leaves out is post-game from here on (src/lib/regions.ts).
+  const routes = applyRegionRule(runRoutes, settings);
+  // Johto / Kanto headings, only while Kanto is part of the run.
+  const sectioned = settings.includeKanto && hasKanto(routes);
   const tTracker = translations[lang].tracker;
   const tLinks = translations[lang].links;
   const isClassic = players.length === 1;
@@ -140,6 +158,8 @@ export function TrackerView({
     ? trackable.filter((r) => !isRouteDone(r, encounters, players) || r.id === keptRouteId)
     : trackable;
   const mainRoutes = visible.filter((r) => !r.postgame);
+  const firstRegionRoutes = mainRoutes.filter((r) => r.region !== "kanto");
+  const kantoRoutes = mainRoutes.filter((r) => r.region === "kanto");
   const postgameRoutes = visible.filter((r) => r.postgame);
 
   // Overall completion, independent of the "Nur offene" filter above -
@@ -323,7 +343,16 @@ export function TrackerView({
         // One tray per route on the sage ground: the gap between them is what
         // separates two routes, no divider needed.
         <div className="flex flex-col gap-2">
-          {mainRoutes.map(renderRoute)}
+          {sectioned ? (
+            <>
+              {firstRegionRoutes.length > 0 && <RegionHeading label={REGION_LABELS.main} />}
+              {firstRegionRoutes.map(renderRoute)}
+              {kantoRoutes.length > 0 && <RegionHeading label={REGION_LABELS.kanto} />}
+              {kantoRoutes.map(renderRoute)}
+            </>
+          ) : (
+            mainRoutes.map(renderRoute)
+          )}
           {postgameRoutes.length > 0 && (
             <>
               <button

@@ -5,6 +5,7 @@ import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
 import { translations } from "@/lib/i18n/dictionary";
 import { computeLevelCapProgress, eliteFourIndex } from "@/lib/progress";
+import { levelCapsInRun } from "@/lib/regions";
 import { LevelCapsView } from "@/components/LevelCapsView";
 import { CanonicalRun } from "@/components/CanonicalRun";
 import { RunLanding } from "@/components/RunLanding";
@@ -34,7 +35,8 @@ export default async function LevelCapsPage({
   const defeatedIds = new Set(progressRows.filter((p) => p.defeated).map((p) => p.levelCapId));
 
   const items = levelCaps.map((cap) => ({ ...cap, defeated: defeatedIds.has(cap.id) }));
-  const progress = computeLevelCapProgress(items);
+  // A Kanto the run leaves out does not count towards the journey.
+  const progress = computeLevelCapProgress(levelCapsInRun(items, resolvedRun.settings));
   const markerAt = eliteFourIndex(items);
 
   return (
