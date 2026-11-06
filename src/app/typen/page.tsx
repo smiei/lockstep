@@ -229,7 +229,9 @@ export default async function AnalyzePage({
             // The real battle-mechanics generation (ball list, catch formula),
             // deliberately NOT dataGeneration - see CatchRateView's use of it.
             generation={game.generation}
-            versionGroup={game.versionGroup}
+            // A hack's own capture engine stands in for the version group,
+            // which only the catch calculator reads here.
+            versionGroup={game.catchEngine ?? game.versionGroup}
             badgesEarned={badgesEarned}
             effectiveness={effectiveness}
             attackTypes={attackTypes}

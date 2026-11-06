@@ -7,6 +7,7 @@
   "dexLimit": 905,
   "spriteSet": "emerald",
   "versionGroup": "modern",
+  "catchEngine": "expansion",
   "trainerSet": "emerald",
   "regionalForms": true,
   "names": {

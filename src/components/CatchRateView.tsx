@@ -11,6 +11,10 @@ import {
   isUltraBeast,
   getBallIdsForGeneration,
   INFINITE_FUSION_VERSION_GROUP,
+  CFRU_ENGINE,
+  CFRU_DEX_BRACKETS,
+  EXPANSION_ENGINE,
+  EXPANSION_DEX_BRACKETS,
   STATUS_IDS,
   computeCatchChance,
 } from "@/lib/catchrate";
@@ -166,6 +170,8 @@ export type CatchBodyState = {
   // Gen 8/9: badges held, when set by hand on this card; otherwise the run's
   // own count (badgesEarned) applies.
   badges?: number;
+  // CFRU hacks: the League is beaten, which lifts the level penalty.
+  gameCleared?: boolean;
   status: StatusId;
   turn: number;
   conditionMet: boolean;
@@ -316,6 +322,10 @@ export function CatchCardBody({
   const detail = usePokemonDetail();
   const ballIds = getBallIdsForGeneration(generation, versionGroup);
   const isInfiniteFusion = versionGroup === INFINITE_FUSION_VERSION_GROUP;
+  // ROM hacks with their own capture engine (game.json catchEngine).
+  const isCfru = versionGroup === CFRU_ENGINE;
+  const isExpansion = versionGroup === EXPANSION_ENGINE;
+  const dexBrackets = isCfru ? CFRU_DEX_BRACKETS : isExpansion ? EXPANSION_DEX_BRACKETS : null;
   // Label/field pairs. Several cards can be open at once, so no fixed ids.
   const fieldId = useId();
   const ids = {
@@ -338,6 +348,7 @@ export function CatchCardBody({
   const ownLevel = state.ownLevel ?? 50;
   const lastBall = state.lastBall ?? false;
   const dexOwned = state.dexOwned ?? 0;
+  const gameCleared = state.gameCleared ?? false;
   const ownLevelInput = useClampedIntInput(ownLevel, 1, 100, 50, (n) => onChange({ ownLevel: n }));
   const badges = state.badges ?? badgesEarned;
   const badgesInput = useClampedIntInput(badges, 0, 8, badgesEarned, (n) => onChange({ badges: n }));
@@ -404,6 +415,7 @@ export function CatchCardBody({
             dexOwned,
             ultraBeast: !body && isUltraBeast(baseSpeciesId(selected)),
             badges,
+            gameCleared,
           },
           versionGroup,
         )
@@ -414,7 +426,11 @@ export function CatchCardBody({
   type Notes = Partial<Record<BallId, string>>;
   const noteSets: Notes[] = isInfiniteFusion
     ? [t.ballNotesInfiniteFusion, t.ballNotes]
-    : [
+    : isCfru
+      ? [t.ballNotesCfru, t.ballNotes]
+      : isExpansion
+        ? [t.ballNotesExpansion, t.ballNotes]
+        : [
         ...(generation >= 8 ? [t.ballNotesGen8] : []),
         ...(generation >= 7 ? [t.ballNotesGen7] : []),
         ...(generation >= 5 ? [t.ballNotesGen5] : []),
@@ -531,7 +547,7 @@ export function CatchCardBody({
           </div>
         </div>
 
-        {(ball === "nest" || ball === "level" || levelMatters) && (
+        {(ball === "nest" || ball === "level" || levelMatters || isCfru) && (
           <div className="col-span-2 sm:col-span-1">
             <label className={labelClass} htmlFor={ids.level}>
               {t.levelLabel}
@@ -557,7 +573,7 @@ export function CatchCardBody({
           </div>
         )}
 
-        {(ball === "level" || (levelMatters && generation === 8 && badges < 8)) && (
+        {(ball === "level" || (levelMatters && generation === 8 && badges < 8) || (isCfru && !gameCleared)) && (
           <div className="col-span-2 sm:col-span-1">
             <label className={labelClass} htmlFor={ids.ownLevel}>
               {t.ownLevelLabel}
@@ -655,6 +671,48 @@ export function CatchCardBody({
         </div>
       )}
 
+      {/* ROM hacks with their own engine: the League switch (CFRU's level
+          penalty), the dex count behind a critical capture, and what the
+          engine does differently. */}
+      {dexBrackets && (
+        <div className="mt-3 flex flex-col gap-2">
+          {isCfru && (
+            <label className="flex cursor-pointer items-start gap-2">
+              <input
+                type="checkbox"
+                checked={gameCleared}
+                onChange={(e) => onChange({ gameCleared: e.target.checked })}
+                className="mt-0.5 accent-success"
+              />
+              <span className="text-xs text-ink-muted">
+                <span className="font-medium">{t.gameClearedLabel}</span>
+                <span className="block text-ink-subtle">{t.gameClearedHint}</span>
+              </span>
+            </label>
+          )}
+          <label className="flex flex-wrap items-center gap-2 text-xs text-ink-muted">
+            {t.dexOwnedLabel}
+            <select
+              value={dexOwned}
+              onChange={(e) => onChange({ dexOwned: Number(e.target.value) })}
+              className="select-chevron h-10 rounded-md border border-line-strong bg-panel px-3 text-sm text-ink"
+            >
+              {[0, ...dexBrackets.map((b) => b + 1)].map((value, i) => (
+                <option key={value} value={value}>
+                  {i === 0
+                    ? `≤ ${dexBrackets[0]}`
+                    : i === dexBrackets.length
+                      ? `> ${dexBrackets[i - 1]}`
+                      : `${value}–${dexBrackets[i]}`}
+                </option>
+              ))}
+            </select>
+            <span className="basis-full text-ink-subtle">{t.criticalCaptureHint}</span>
+          </label>
+          <p className="text-xs text-ink-subtle">{isCfru ? t.engineNoteCfru : t.engineNoteExpansion}</p>
+        </div>
+      )}
+
       {/* Result */}
       <div className="mt-4">
         {result === null || selected === null ? (
@@ -707,7 +765,8 @@ export function CatchCardBody({
                   {[
                     t.details(baseRate ?? 0, result.ballText, result.statusText),
                     result.levelText && t.detailsLevel(result.levelText),
-                    result.penaltyText && t.detailsPenalty(result.penaltyText),
+                    result.penaltyText &&
+                      (isCfru ? t.detailsLevelPenalty(result.penaltyText) : t.detailsPenalty(result.penaltyText)),
                   ]
                     .filter(Boolean)
                     .join(" · ")}

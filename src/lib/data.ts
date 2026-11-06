@@ -62,6 +62,12 @@ export type GameInfo = {
   // with identical trainers (HeartGold/SoulSilver) point at the same set.
   // Defaults to the game id when absent.
   trainerSet?: string;
+  // A ROM hack whose engine brings its own capture code and the modern balls:
+  // "cfru" (Complete FireRed Upgrade - Radical Red, Unbound) or "expansion"
+  // (pokeemerald-expansion as of 2023 - Run & Bun). Picks the ball list and
+  // formula in src/lib/catchrate.ts instead of `generation`. Missing = the
+  // generation's own.
+  catchEngine?: "cfru" | "expansion";
   names: LocalizedNames;
   // Selects the type chart plus the pokemon-history/catchrate-history/
   // move-name-history era-correction tables, independently of `generation`
