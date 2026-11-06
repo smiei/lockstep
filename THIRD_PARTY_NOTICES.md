@@ -157,4 +157,4 @@ The runtime and build dependencies listed in `package.json` keep their own licen
 
 ## Universal Pokemon Randomizer ZX (reference only)
 
-`scripts/generate-randomizer-evolutions.mjs` reproduces which evolutions the randomizer's "Change Impossible Evolutions", "Make Evolutions Easier" and "Remove Time-Based Evolutions" options change in Gen 3-7, as described by its source code (https://github.com/Ajarmar/universal-pokemon-randomizer-zx, GPL-3.0). No code of the randomizer is included; the generated `evolution-overrides.json` files list game facts (which Pokémon evolves how).
+`scripts/generate-randomizer-evolutions.mjs` reproduces which evolutions the randomizer's "Change Impossible Evolutions", "Make Evolutions Easier" and "Remove Time-Based Evolutions" options change in Gen 1-7, as described by its source code (https://github.com/Ajarmar/universal-pokemon-randomizer-zx, GPL-3.0). No code of the randomizer is included; the generated `evolution-overrides.json` files list game facts (which Pokémon evolves how).
