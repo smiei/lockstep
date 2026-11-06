@@ -154,6 +154,17 @@
     "type": "route"
   },
   {
+    "id": 85,
+    "names": {
+      "de": "M.S. Anne",
+      "en": "S.S. Anne",
+      "fr": "L’Océane",
+      "es": "S.S. Anne",
+      "it": "M/N Anna"
+    },
+    "type": "route"
+  },
+  {
     "id": 17,
     "names": {
       "de": "Route 11",
@@ -517,6 +528,17 @@
     "type": "static"
   },
   {
+    "id": 86,
+    "names": {
+      "de": "Lektrobal Kraftwerk",
+      "en": "Electrode Power Plant",
+      "fr": "Électrode Centrale",
+      "es": "Electrode Central Energía",
+      "it": "Electrode Centrale Elettrica"
+    },
+    "type": "static"
+  },
+  {
     "id": 40,
     "names": {
       "de": "Zinnoberinsel",
@@ -627,17 +649,6 @@
     "type": "route"
   },
   {
-    "id": 44,
-    "names": {
-      "de": "Tri-Eiland-Pfad",
-      "en": "Three Isle Path",
-      "fr": "Route Île 3",
-      "es": "Vía Isla Tera",
-      "it": "Via Terzisola"
-    },
-    "type": "route"
-  },
-  {
     "id": 67,
     "names": {
       "de": "Bundbrücke",
@@ -645,6 +656,17 @@
       "fr": "Pont du Lien",
       "es": "Puente Unión",
       "it": "Ponte Abbraccio"
+    },
+    "type": "route"
+  },
+  {
+    "id": 87,
+    "names": {
+      "de": "Tri-Eiland Hafen",
+      "en": "Three Isle Port",
+      "fr": "Port Île 3",
+      "es": "Puerto Isla Tera",
+      "it": "Porto Terzisola"
     },
     "type": "route"
   },
@@ -729,6 +751,18 @@
     "postgame": true
   },
   {
+    "id": 88,
+    "names": {
+      "de": "Eiland 5-Weide",
+      "en": "Five Isle Meadow",
+      "fr": "Pré Île 5",
+      "es": "Prado Isla Inta",
+      "it": "Prato Quintisola"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
     "id": 71,
     "names": {
       "de": "Wasserirrgarten",
@@ -789,18 +823,6 @@
     "postgame": true
   },
   {
-    "id": 50,
-    "names": {
-      "de": "Eiland Sechs",
-      "en": "Six Island",
-      "fr": "Île 6",
-      "es": "Isla Exta",
-      "it": "Sestisola"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
     "id": 76,
     "names": {
       "de": "Wasserweg",
@@ -837,6 +859,18 @@
     "postgame": true
   },
   {
+    "id": 89,
+    "names": {
+      "de": "Fern-Eiland",
+      "en": "Outcast Island",
+      "fr": "Île du Lointain",
+      "es": "Isla Aislada",
+      "it": "Isola Solitaria"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
     "id": 79,
     "names": {
       "de": "Musterbuschwald",
@@ -861,13 +895,13 @@
     "postgame": true
   },
   {
-    "id": 51,
+    "id": 90,
     "names": {
-      "de": "Eiland Sieben",
-      "en": "Seven Island",
-      "fr": "Île 7",
-      "es": "Isla Sétima",
-      "it": "Settimisola"
+      "de": "Trainerturm",
+      "en": "Trainer Tower",
+      "fr": "Tour Dresseurs",
+      "es": "Torre Desafío",
+      "it": "Torre Allenatori"
     },
     "type": "route",
     "postgame": true
@@ -904,6 +938,18 @@
       "fr": "Ruines Tanoby",
       "es": "Ruinas Sete",
       "it": "Rovine Florabeto"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Tanibo-Ruinen (Icognito)",
+      "en": "Tanoby Ruins (Unown)",
+      "fr": "Ruines Tanoby (Zarbi)",
+      "es": "Ruinas Sete (Unown)",
+      "it": "Rovine Florabeto (Unown)"
     },
     "type": "route",
     "postgame": true
