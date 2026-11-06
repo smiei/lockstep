@@ -12,9 +12,9 @@ const packs = fs.readdirSync("data/games").map((id) => ({
 }));
 
 describe("randomizer evolution lists", () => {
-  it("every official Gen 3-7 game has one", () => {
+  it("every official Gen 1-7 game has one", () => {
     const missing = packs.filter(
-      (p) => (p.game.kind ?? "official") === "official" && p.game.generation >= 3 && p.game.generation <= 7 && !p.id.startsWith("infinite-fusion") && !p.hasOverrides,
+      (p) => (p.game.kind ?? "official") === "official" && p.game.generation <= 7 && !p.id.startsWith("infinite-fusion") && !p.hasOverrides,
     );
     expect(missing.map((p) => p.id)).toEqual([]);
   });

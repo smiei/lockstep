@@ -1,6 +1,6 @@
 // Generates a game pack's evolution-overrides.json for the three randomizer
 // rules, by replaying what the Universal Pokemon Randomizer ZX does to
-// evolutions in Gen 3-7 (romhandlers/Gen3-7RomHandler.java and
+// evolutions in Gen 1-7 (romhandlers/Gen1-7RomHandler.java and
 // AbstractRomHandler.condenseLevelEvolutions; checked against its master
 // branch on 2026-11-06) on top of data/evolutions.json.
 //
@@ -57,6 +57,16 @@ const HGSS_PLACE_BOUND = {
   471: { kind: "item", item: "dawn-stone" },
 };
 
+// Gold/Silver/Crystal: the original four trades and Poliwhirl level 37,
+// Slowpoke a Water Stone, Seadra level 40, the new single-stage trades
+// (Onix, Scyther, Porygon) level 30.
+function gen2Trade(from, item) {
+  if (from === SLOWPOKE) return { kind: "item", item: "water-stone" };
+  if (from === 117) return { kind: "level", level: 40 }; // Seadra
+  if (from === 61 || !item) return { kind: "level", level: 37 }; // Poliwhirl, the original four
+  return { kind: "level", level: 30 };
+}
+
 // Gen 3 has no "level up holding an item", so each trade-item evolution gets
 // a fixed replacement of its own.
 function gen3Trade(from, item) {
@@ -75,8 +85,10 @@ const SUN_MOON_PLACE_BOUND = [740, 738, 462, 476];
 
 function generate(gameId) {
   const game = JSON.parse(fs.readFileSync(`data/games/${gameId}/game.json`, "utf8"));
-  if (game.generation < 3 || game.generation > 7) throw new Error(`${gameId}: only Gen 3-7 are modelled`);
+  if (game.generation < 1 || game.generation > 7) throw new Error(`${gameId}: only Gen 1-7 are modelled`);
   const gen3 = game.generation === 3;
+  const gen2 = game.generation === 2;
+  const gen1 = game.generation === 1;
   const inDex = (id) => id >= 1 && id <= game.dexLimit;
   const evolvesFurther = (id) => (byId.get(id)?.evolvesTo ?? []).some(inDex);
   const out = [];
@@ -92,7 +104,11 @@ function generate(gameId) {
   for (const { from, to, method } of edges) {
     if (method.kind !== "trade") continue;
     let next;
-    if (gen3) {
+    if (gen1) {
+      next = { kind: "level", level: 37 };
+    } else if (gen2) {
+      next = gen2Trade(from, method.item);
+    } else if (gen3) {
       next = gen3Trade(from, method.item);
     } else if (from === KARRABLAST || from === SHELMET) {
       next = { kind: "levelWith", name: nameDe(from === KARRABLAST ? SHELMET : KARRABLAST) };
