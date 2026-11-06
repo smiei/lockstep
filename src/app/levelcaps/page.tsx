@@ -52,7 +52,13 @@ export default async function LevelCapsPage({
           markerTitle={t.eliteFourMarker}
         />
       </PageHeader>
-      <LevelCapsView runKey={runKey} lang={lang} levelCaps={items} trainerSet={trainerSet} />
+      <LevelCapsView
+        runKey={runKey}
+        lang={lang}
+        levelCaps={items}
+        trainerSet={trainerSet}
+        includeKanto={resolvedRun.settings.includeKanto}
+      />
     </div>
   );
 }

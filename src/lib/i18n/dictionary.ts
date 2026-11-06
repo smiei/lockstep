@@ -448,6 +448,8 @@ const de = {
     retry: "Erneut versuchen",
   },
   levelcaps: {
+    postgameShow: (n: number) => `Post-Game anzeigen (${n} Kämpfe)`,
+    postgameHide: "Post-Game ausblenden",
     heading: "Reise",
     maxLevel: "Max. Level",
     progressTitle: (done: number, total: number, percent: number) =>
@@ -1373,6 +1375,8 @@ const en: Dictionary = {
     retry: "Try again",
   },
   levelcaps: {
+    postgameShow: (n: number) => `Show post-game (${n} fights)`,
+    postgameHide: "Hide post-game",
     heading: "Journey",
     maxLevel: "Max Level",
     progressTitle: (done: number, total: number, percent: number) =>
@@ -2293,6 +2297,8 @@ const fr: Dictionary = {
     retry: "Réessayer",
   },
   levelcaps: {
+    postgameShow: (n: number) => `Afficher le contenu post-ligue (${n} combats)`,
+    postgameHide: "Masquer le contenu post-ligue",
     heading: "Aventure",
     maxLevel: "Niveau max",
     progressTitle: (done: number, total: number, percent: number) =>
@@ -3214,6 +3220,8 @@ const es: Dictionary = {
     retry: "Reintentar",
   },
   levelcaps: {
+    postgameShow: (n: number) => `Mostrar posjuego (${n} combates)`,
+    postgameHide: "Ocultar posjuego",
     heading: "Aventura",
     maxLevel: "Nivel máx.",
     progressTitle: (done: number, total: number, percent: number) =>
@@ -4135,6 +4143,8 @@ const it: Dictionary = {
     retry: "Riprova",
   },
   levelcaps: {
+    postgameShow: (n: number) => `Mostra post-gioco (${n} lotte)`,
+    postgameHide: "Nascondi post-gioco",
     heading: "Viaggio",
     maxLevel: "Livello max",
     progressTitle: (done: number, total: number, percent: number) =>
