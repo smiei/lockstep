@@ -33,17 +33,6 @@
     "type": "route"
   },
   {
-    "id": 4,
-    "names": {
-      "de": "Striaton City",
-      "en": "Striaton City",
-      "fr": "Striaton City",
-      "es": "Striaton City",
-      "it": "Striaton City"
-    },
-    "type": "route"
-  },
-  {
     "id": 5,
     "names": {
       "de": "Dreamyard",
@@ -53,6 +42,29 @@
       "it": "Dreamyard"
     },
     "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Monkey Gift, Dreamyard",
+      "en": "Monkey Gift, Dreamyard",
+      "fr": "Monkey Gift, Dreamyard",
+      "es": "Monkey Gift, Dreamyard",
+      "it": "Monkey Gift, Dreamyard"
+    },
+    "type": "static"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Musharna, Dreamyard",
+      "en": "Musharna, Dreamyard",
+      "fr": "Musharna, Dreamyard",
+      "es": "Musharna, Dreamyard",
+      "it": "Musharna, Dreamyard"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 6,
@@ -77,17 +89,6 @@
     "type": "route"
   },
   {
-    "id": 8,
-    "names": {
-      "de": "Nacrene City",
-      "en": "Nacrene City",
-      "fr": "Nacrene City",
-      "es": "Nacrene City",
-      "it": "Nacrene City"
-    },
-    "type": "route"
-  },
-  {
     "id": 9,
     "names": {
       "de": "Pinwheel Forest",
@@ -99,15 +100,26 @@
     "type": "route"
   },
   {
+    "id": 52,
+    "names": {
+      "de": "Virizion, Pinwheel Forest",
+      "en": "Virizion, Pinwheel Forest",
+      "fr": "Virizion, Pinwheel Forest",
+      "es": "Virizion, Pinwheel Forest",
+      "it": "Virizion, Pinwheel Forest"
+    },
+    "type": "static"
+  },
+  {
     "id": 10,
     "names": {
-      "de": "Liberty Garden",
-      "en": "Liberty Garden",
-      "fr": "Liberty Garden",
-      "es": "Liberty Garden",
-      "it": "Liberty Garden"
+      "de": "Victini, Liberty Garden",
+      "en": "Victini, Liberty Garden",
+      "fr": "Victini, Liberty Garden",
+      "es": "Victini, Liberty Garden",
+      "it": "Victini, Liberty Garden"
     },
-    "type": "route",
+    "type": "static",
     "postgame": true
   },
   {
@@ -144,6 +156,17 @@
     "type": "route"
   },
   {
+    "id": 53,
+    "names": {
+      "de": "Volcarona, Relic Castle",
+      "en": "Volcarona, Relic Castle",
+      "fr": "Volcarona, Relic Castle",
+      "es": "Volcarona, Relic Castle",
+      "it": "Volcarona, Relic Castle"
+    },
+    "type": "static"
+  },
+  {
     "id": 14,
     "names": {
       "de": "Route 16",
@@ -177,6 +200,17 @@
     "type": "route"
   },
   {
+    "id": 54,
+    "names": {
+      "de": "Zoroark, Lostlorn Forest",
+      "en": "Zoroark, Lostlorn Forest",
+      "fr": "Zoroark, Lostlorn Forest",
+      "es": "Zoroark, Lostlorn Forest",
+      "it": "Zoroark, Lostlorn Forest"
+    },
+    "type": "static"
+  },
+  {
     "id": 17,
     "names": {
       "de": "Cold Storage",
@@ -190,22 +224,11 @@
   {
     "id": 18,
     "names": {
-      "de": "Driftveil Drawbidge",
-      "en": "Driftveil Drawbidge",
-      "fr": "Driftveil Drawbidge",
-      "es": "Driftveil Drawbidge",
-      "it": "Driftveil Drawbidge"
-    },
-    "type": "route"
-  },
-  {
-    "id": 19,
-    "names": {
-      "de": "Driftveil City",
-      "en": "Driftveil City",
-      "fr": "Driftveil City",
-      "es": "Driftveil City",
-      "it": "Driftveil City"
+      "de": "Driftveil Drawbridge",
+      "en": "Driftveil Drawbridge",
+      "fr": "Driftveil Drawbridge",
+      "es": "Driftveil Drawbridge",
+      "it": "Driftveil Drawbridge"
     },
     "type": "route"
   },
@@ -278,6 +301,18 @@
     "postgame": true
   },
   {
+    "id": 61,
+    "names": {
+      "de": "Larvesta Egg, Route 18",
+      "en": "Larvesta Egg, Route 18",
+      "fr": "Larvesta Egg, Route 18",
+      "es": "Larvesta Egg, Route 18",
+      "it": "Larvesta Egg, Route 18"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 26,
     "names": {
       "de": "P2 Laboratory",
@@ -301,6 +336,28 @@
     "type": "route"
   },
   {
+    "id": 55,
+    "names": {
+      "de": "Guidance Chamber",
+      "en": "Guidance Chamber",
+      "fr": "Guidance Chamber",
+      "es": "Guidance Chamber",
+      "it": "Guidance Chamber"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Cobalion, Guidance Chamber",
+      "en": "Cobalion, Guidance Chamber",
+      "fr": "Cobalion, Guidance Chamber",
+      "es": "Cobalion, Guidance Chamber",
+      "it": "Cobalion, Guidance Chamber"
+    },
+    "type": "static"
+  },
+  {
     "id": 28,
     "names": {
       "de": "Twist Mountain",
@@ -312,13 +369,35 @@
     "type": "route"
   },
   {
+    "id": 4,
+    "names": {
+      "de": "Striaton City",
+      "en": "Striaton City",
+      "fr": "Striaton City",
+      "es": "Striaton City",
+      "it": "Striaton City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Driftveil City",
+      "en": "Driftveil City",
+      "fr": "Driftveil City",
+      "es": "Driftveil City",
+      "it": "Driftveil City"
+    },
+    "type": "route"
+  },
+  {
     "id": 29,
     "names": {
-      "de": "Iccirus City",
-      "en": "Iccirus City",
-      "fr": "Iccirus City",
-      "es": "Iccirus City",
-      "it": "Iccirus City"
+      "de": "Icirrus City",
+      "en": "Icirrus City",
+      "fr": "Icirrus City",
+      "es": "Icirrus City",
+      "it": "Icirrus City"
     },
     "type": "route"
   },
@@ -389,15 +468,37 @@
     "type": "route"
   },
   {
-    "id": 36,
+    "id": 57,
     "names": {
-      "de": "N's Castle",
-      "en": "N's Castle",
-      "fr": "N's Castle",
-      "es": "N's Castle",
-      "it": "N's Castle"
+      "de": "Trial Chamber",
+      "en": "Trial Chamber",
+      "fr": "Trial Chamber",
+      "es": "Trial Chamber",
+      "it": "Trial Chamber"
     },
     "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Terrakion, Trial Chamber",
+      "en": "Terrakion, Trial Chamber",
+      "fr": "Terrakion, Trial Chamber",
+      "es": "Terrakion, Trial Chamber",
+      "it": "Terrakion, Trial Chamber"
+    },
+    "type": "static"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Zekrom, N's Castle",
+      "en": "Zekrom, N's Castle",
+      "fr": "Zekrom, N's Castle",
+      "es": "Zekrom, N's Castle",
+      "it": "Zekrom, N's Castle"
+    },
+    "type": "static"
   },
   {
     "id": 37,
@@ -460,6 +561,18 @@
     "postgame": true
   },
   {
+    "id": 59,
+    "names": {
+      "de": "Kyurem, Giant Chasm",
+      "en": "Kyurem, Giant Chasm",
+      "fr": "Kyurem, Giant Chasm",
+      "es": "Kyurem, Giant Chasm",
+      "it": "Kyurem, Giant Chasm"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 42,
     "names": {
       "de": "Undella Town",
@@ -508,15 +621,16 @@
     "postgame": true
   },
   {
-    "id": 46,
+    "id": 60,
     "names": {
-      "de": "White Forest",
-      "en": "White Forest",
-      "fr": "White Forest",
-      "es": "White Forest",
-      "it": "White Forest"
+      "de": "Landorus, Abundant Shrine",
+      "en": "Landorus, Abundant Shrine",
+      "fr": "Landorus, Abundant Shrine",
+      "es": "Landorus, Abundant Shrine",
+      "it": "Landorus, Abundant Shrine"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 47,

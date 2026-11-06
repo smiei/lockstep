@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Zweiblattdorf",
-      "en": "Twinleaf Town",
-      "fr": "Bonaugure",
-      "es": "Pueblo Hojaverde",
-      "it": "Duefoglie"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 201",
@@ -55,6 +44,17 @@
     "type": "route"
   },
   {
+    "id": 2,
+    "names": {
+      "de": "Zweiblattdorf",
+      "en": "Twinleaf Town",
+      "fr": "Bonaugure",
+      "es": "Pueblo Hojaverde",
+      "it": "Duefoglie"
+    },
+    "type": "route"
+  },
+  {
     "id": 6,
     "names": {
       "de": "Route 203",
@@ -79,13 +79,13 @@
   {
     "id": 8,
     "names": {
-      "de": "Erzelingen",
-      "en": "Oreburgh City",
-      "fr": "Charbourg",
-      "es": "Ciudad Pirita",
-      "it": "Mineropoli"
+      "de": "Fossil Erzelingen",
+      "en": "Fossil Oreburgh City",
+      "fr": "Fossile Charbourg",
+      "es": "Fósil Ciudad Pirita",
+      "it": "Fossile Mineropoli"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 9,
@@ -165,6 +165,17 @@
     "type": "route"
   },
   {
+    "id": 59,
+    "names": {
+      "de": "Driftlon Windkraftwerk",
+      "en": "Drifloon Valley Windworks",
+      "fr": "Baudrive Les Éoliennes",
+      "es": "Drifloon Valle Eólico",
+      "it": "Drifloon Impianto Turbine"
+    },
+    "type": "static"
+  },
+  {
     "id": 16,
     "names": {
       "de": "Ewigwald",
@@ -185,6 +196,18 @@
       "it": "Antico Château"
     },
     "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Rotom Alte Villa",
+      "en": "Rotom Old Chateau",
+      "fr": "Motisma Vieux Château",
+      "es": "Rotom Vieja Mansión",
+      "it": "Rotom Antico Château"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 18,
@@ -244,13 +267,25 @@
   {
     "id": 23,
     "names": {
-      "de": "Herzhofen",
-      "en": "Hearthome City",
-      "fr": "Unionpolis",
-      "es": "Ciudad Corazón",
-      "it": "Cuoripoli"
+      "de": "Evoli Herzhofen",
+      "en": "Eevee Hearthome City",
+      "fr": "Évoli Unionpolis",
+      "es": "Eevee Ciudad Corazón",
+      "it": "Eevee Cuoripoli"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Wonneira-Ei Herzhofen",
+      "en": "Happiny Egg Hearthome City",
+      "fr": "Œuf Ptiravi Unionpolis",
+      "es": "Huevo de Happiny Ciudad Corazón",
+      "it": "Uovo di Happiny Cuoripoli"
+    },
+    "type": "static"
   },
   {
     "id": 24,
@@ -262,6 +297,17 @@
       "it": "Percorso 209"
     },
     "type": "route"
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Kryppuk Route 209",
+      "en": "Spiritomb Route 209",
+      "fr": "Spiritomb Route 209",
+      "es": "Spiritomb Ruta 209",
+      "it": "Spiritomb Percorso 209"
+    },
+    "type": "static"
   },
   {
     "id": 25,
@@ -304,17 +350,6 @@
       "fr": "Route 215",
       "es": "Ruta 215",
       "it": "Percorso 215"
-    },
-    "type": "route"
-  },
-  {
-    "id": 29,
-    "names": {
-      "de": "Schleiede",
-      "en": "Veilstone City",
-      "fr": "Voilaroc",
-      "es": "Ciudad Rocavelo",
-      "it": "Rupepoli"
     },
     "type": "route"
   },
@@ -454,7 +489,7 @@
     "id": 42,
     "names": {
       "de": "Route 219",
-      "en": "Routes 219",
+      "en": "Route 219",
       "fr": "Route 219",
       "es": "Ruta 219",
       "it": "Percorso 219"
@@ -517,6 +552,17 @@
     "type": "route"
   },
   {
+    "id": 63,
+    "names": {
+      "de": "Riolu-Ei Eiseninsel",
+      "en": "Riolu Egg Iron Island",
+      "fr": "Œuf Riolu Île de Fer",
+      "es": "Huevo de Riolu Isla Hierro",
+      "it": "Uovo di Riolu Isola Ferrosa"
+    },
+    "type": "static"
+  },
+  {
     "id": 48,
     "names": {
       "de": "Route 211",
@@ -572,6 +618,50 @@
     "type": "route"
   },
   {
+    "id": 64,
+    "names": {
+      "de": "Selfe Stärkegrotte",
+      "en": "Uxie Acuity Cavern",
+      "fr": "Créhelf Caverne Savoir",
+      "es": "Uxie Caverna Agudeza",
+      "it": "Uxie Grotta Arguzia"
+    },
+    "type": "static"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Tobutz Kühnheitsgrotte",
+      "en": "Azelf Valor Cavern",
+      "fr": "Créfadet Caverne Courage",
+      "es": "Azelf Caverna Valor",
+      "it": "Azelf Grotta Valore"
+    },
+    "type": "static"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Vesprit (umherstreifend)",
+      "en": "Mesprit (Roaming)",
+      "fr": "Créfollet (errant)",
+      "es": "Mesprit (errante)",
+      "it": "Mesprit (errante)"
+    },
+    "type": "static"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Dialga/Palkia Speersäule",
+      "en": "Dialga/Palkia Spear Pillar",
+      "fr": "Dialga/Palkia Colonnes Lances",
+      "es": "Dialga/Palkia Columna Lanza",
+      "it": "Dialga/Palkia Vetta Lancia"
+    },
+    "type": "static"
+  },
+  {
     "id": 53,
     "names": {
       "de": "Blizzach-Tempel",
@@ -581,6 +671,18 @@
       "it": "Tempio Nevepoli"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Regigigas Blizzach-Tempel",
+      "en": "Regigigas Snowpoint Temple",
+      "fr": "Regigigas Temple Frimapic",
+      "es": "Regigigas Templo Puntaneva",
+      "it": "Regigigas Tempio Nevepoli"
+    },
+    "type": "static",
     "postgame": true
   },
   {
@@ -637,5 +739,173 @@
       "it": "Lega Pokémon"
     },
     "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Route 224",
+      "en": "Route 224",
+      "fr": "Route 224",
+      "es": "Ruta 224",
+      "it": "Percorso 224"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Route 225",
+      "en": "Route 225",
+      "fr": "Route 225",
+      "es": "Ruta 225",
+      "it": "Percorso 225"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Route 226",
+      "en": "Route 226",
+      "fr": "Chenal 226",
+      "es": "Ruta 226",
+      "it": "Percorso 226"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Route 227",
+      "en": "Route 227",
+      "fr": "Route 227",
+      "es": "Ruta 227",
+      "it": "Percorso 227"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Route 228",
+      "en": "Route 228",
+      "fr": "Route 228",
+      "es": "Ruta 228",
+      "it": "Percorso 228"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Route 229",
+      "en": "Route 229",
+      "fr": "Route 229",
+      "es": "Ruta 229",
+      "it": "Percorso 229"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Route 230",
+      "en": "Route 230",
+      "fr": "Chenal 230",
+      "es": "Ruta 230",
+      "it": "Percorso 230"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Erholungsgebiet",
+      "en": "Resort Area",
+      "fr": "Aire de Détente",
+      "es": "Zona Descanso",
+      "it": "Area Svago"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Scheidequelle",
+      "en": "Sendoff Spring",
+      "fr": "Source Adieu",
+      "es": "Fuente Despedida",
+      "it": "Fonte Saluto"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Kahlberg",
+      "en": "Stark Mountain",
+      "fr": "Mont Abrupt",
+      "es": "Montaña Dura",
+      "it": "Monte Ostile"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Heatran Kahlberg",
+      "en": "Heatran Stark Mountain",
+      "fr": "Heatran Mont Abrupt",
+      "es": "Heatran Montaña Dura",
+      "it": "Heatran Monte Ostile"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Höhle der Umkehr",
+      "en": "Turnback Cave",
+      "fr": "Grotte Retour",
+      "es": "Cueva Retorno",
+      "it": "Grotta Ritorno"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Giratina Höhle der Umkehr",
+      "en": "Giratina Turnback Cave",
+      "fr": "Giratina Grotte Retour",
+      "es": "Giratina Cueva Retorno",
+      "it": "Giratina Grotta Ritorno"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Cresselia (umherstreifend)",
+      "en": "Cresselia (Roaming)",
+      "fr": "Cresselia (errant)",
+      "es": "Cresselia (errante)",
+      "it": "Cresselia (errante)"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]

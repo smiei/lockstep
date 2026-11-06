@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Aspertia City",
-      "en": "Aspertia City",
-      "fr": "Aspertia City",
-      "es": "Aspertia City",
-      "it": "Aspertia City"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 19",
@@ -29,17 +18,6 @@
       "fr": "Route 19",
       "es": "Route 19",
       "it": "Route 19"
-    },
-    "type": "route"
-  },
-  {
-    "id": 4,
-    "names": {
-      "de": "Floccesy Town",
-      "en": "Floccesy Town",
-      "fr": "Floccesy Town",
-      "es": "Floccesy Town",
-      "it": "Floccesy Town"
     },
     "type": "route"
   },
@@ -66,17 +44,6 @@
     "type": "route"
   },
   {
-    "id": 7,
-    "names": {
-      "de": "Virbank City",
-      "en": "Virbank City",
-      "fr": "Virbank City",
-      "es": "Virbank City",
-      "it": "Virbank City"
-    },
-    "type": "route"
-  },
-  {
     "id": 8,
     "names": {
       "de": "Virbank Complex",
@@ -97,6 +64,28 @@
       "it": "Castelia City"
     },
     "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Meloetta, Castelia City",
+      "en": "Meloetta, Castelia City",
+      "fr": "Meloetta, Castelia City",
+      "es": "Meloetta, Castelia City",
+      "it": "Meloetta, Castelia City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Victini, Liberty Garden",
+      "en": "Victini, Liberty Garden",
+      "fr": "Victini, Liberty Garden",
+      "es": "Victini, Liberty Garden",
+      "it": "Victini, Liberty Garden"
+    },
+    "type": "static"
   },
   {
     "id": 10,
@@ -132,6 +121,17 @@
     "type": "route"
   },
   {
+    "id": 66,
+    "names": {
+      "de": "Braviary/Mandibuzz, Route 4",
+      "en": "Braviary/Mandibuzz, Route 4",
+      "fr": "Braviary/Mandibuzz, Route 4",
+      "es": "Braviary/Mandibuzz, Route 4",
+      "it": "Braviary/Mandibuzz, Route 4"
+    },
+    "type": "static"
+  },
+  {
     "id": 13,
     "names": {
       "de": "Desert Resort",
@@ -141,6 +141,17 @@
       "it": "Desert Resort"
     },
     "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Entei, Desert Resort",
+      "en": "Entei, Desert Resort",
+      "fr": "Entei, Desert Resort",
+      "es": "Entei, Desert Resort",
+      "it": "Entei, Desert Resort"
+    },
+    "type": "static"
   },
   {
     "id": 14,
@@ -154,15 +165,15 @@
     "type": "route"
   },
   {
-    "id": 15,
+    "id": 68,
     "names": {
-      "de": "Anville Town",
-      "en": "Anville Town",
-      "fr": "Anville Town",
-      "es": "Anville Town",
-      "it": "Anville Town"
+      "de": "Volcarona, Relic Castle",
+      "en": "Volcarona, Relic Castle",
+      "fr": "Volcarona, Relic Castle",
+      "es": "Volcarona, Relic Castle",
+      "it": "Volcarona, Relic Castle"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 16,
@@ -187,6 +198,17 @@
     "type": "route"
   },
   {
+    "id": 69,
+    "names": {
+      "de": "Raikou, Route 16",
+      "en": "Raikou, Route 16",
+      "fr": "Raikou, Route 16",
+      "es": "Raikou, Route 16",
+      "it": "Raikou, Route 16"
+    },
+    "type": "static"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Lostlorn Forest",
@@ -196,6 +218,17 @@
       "it": "Lostlorn Forest"
     },
     "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Mew, Lostlorn Forest",
+      "en": "Mew, Lostlorn Forest",
+      "fr": "Mew, Lostlorn Forest",
+      "es": "Mew, Lostlorn Forest",
+      "it": "Mew, Lostlorn Forest"
+    },
+    "type": "static"
   },
   {
     "id": 19,
@@ -209,17 +242,6 @@
     "type": "route"
   },
   {
-    "id": 20,
-    "names": {
-      "de": "Driftveil City",
-      "en": "Driftveil City",
-      "fr": "Driftveil City",
-      "es": "Driftveil City",
-      "it": "Driftveil City"
-    },
-    "type": "route"
-  },
-  {
     "id": 21,
     "names": {
       "de": "Route 6",
@@ -227,6 +249,39 @@
       "fr": "Route 6",
       "es": "Route 6",
       "it": "Route 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Tornadus, Route 6",
+      "en": "Tornadus, Route 6",
+      "fr": "Tornadus, Route 6",
+      "es": "Tornadus, Route 6",
+      "it": "Tornadus, Route 6"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Aspertia City",
+      "en": "Aspertia City",
+      "fr": "Aspertia City",
+      "es": "Aspertia City",
+      "it": "Aspertia City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Virbank City",
+      "en": "Virbank City",
+      "fr": "Virbank City",
+      "es": "Virbank City",
+      "it": "Virbank City"
     },
     "type": "route"
   },
@@ -253,6 +308,17 @@
     "type": "route"
   },
   {
+    "id": 72,
+    "names": {
+      "de": "Guidance Chamber",
+      "en": "Guidance Chamber",
+      "fr": "Guidance Chamber",
+      "es": "Guidance Chamber",
+      "it": "Guidance Chamber"
+    },
+    "type": "route"
+  },
+  {
     "id": 24,
     "names": {
       "de": "Chargestone Cave",
@@ -262,6 +328,17 @@
       "it": "Chargestone Cave"
     },
     "type": "route"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Zapdos, Chargestone Cave",
+      "en": "Zapdos, Chargestone Cave",
+      "fr": "Zapdos, Chargestone Cave",
+      "es": "Zapdos, Chargestone Cave",
+      "it": "Zapdos, Chargestone Cave"
+    },
+    "type": "static"
   },
   {
     "id": 25,
@@ -286,6 +363,28 @@
     "type": "route"
   },
   {
+    "id": 74,
+    "names": {
+      "de": "Mesprit, Celestial Tower",
+      "en": "Mesprit, Celestial Tower",
+      "fr": "Mesprit, Celestial Tower",
+      "es": "Mesprit, Celestial Tower",
+      "it": "Mesprit, Celestial Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Ho-Oh, Celestial Tower",
+      "en": "Ho-Oh, Celestial Tower",
+      "fr": "Ho-Oh, Celestial Tower",
+      "es": "Ho-Oh, Celestial Tower",
+      "it": "Ho-Oh, Celestial Tower"
+    },
+    "type": "static"
+  },
+  {
     "id": 27,
     "names": {
       "de": "Reversal Mountain",
@@ -297,6 +396,39 @@
     "type": "route"
   },
   {
+    "id": 76,
+    "names": {
+      "de": "Heatran, Reversal Mountain",
+      "en": "Heatran, Reversal Mountain",
+      "fr": "Heatran, Reversal Mountain",
+      "es": "Heatran, Reversal Mountain",
+      "it": "Heatran, Reversal Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Moltres, Reversal Mountain",
+      "en": "Moltres, Reversal Mountain",
+      "fr": "Moltres, Reversal Mountain",
+      "es": "Moltres, Reversal Mountain",
+      "it": "Moltres, Reversal Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Groudon, Reversal Mountain",
+      "en": "Groudon, Reversal Mountain",
+      "fr": "Groudon, Reversal Mountain",
+      "es": "Groudon, Reversal Mountain",
+      "it": "Groudon, Reversal Mountain"
+    },
+    "type": "static"
+  },
+  {
     "id": 28,
     "names": {
       "de": "Strange House",
@@ -306,6 +438,17 @@
       "it": "Strange House"
     },
     "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Darkrai, Strange House",
+      "en": "Darkrai, Strange House",
+      "fr": "Darkrai, Strange House",
+      "es": "Darkrai, Strange House",
+      "it": "Darkrai, Strange House"
+    },
+    "type": "static"
   },
   {
     "id": 29,
@@ -332,6 +475,18 @@
     "postgame": true
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Lugia/Kyogre, Abyssal Ruins",
+      "en": "Lugia/Kyogre, Abyssal Ruins",
+      "fr": "Lugia/Kyogre, Abyssal Ruins",
+      "es": "Lugia/Kyogre, Abyssal Ruins",
+      "it": "Lugia/Kyogre, Abyssal Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 31,
     "names": {
       "de": "Route 14",
@@ -344,6 +499,18 @@
     "postgame": true
   },
   {
+    "id": 81,
+    "names": {
+      "de": "Shaymin, Route 14",
+      "en": "Shaymin, Route 14",
+      "fr": "Shaymin, Route 14",
+      "es": "Shaymin, Route 14",
+      "it": "Shaymin, Route 14"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 32,
     "names": {
       "de": "Abundant Shrine",
@@ -353,6 +520,18 @@
       "it": "Abundant Shrine"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Landorus, Abundant Shrine",
+      "en": "Landorus, Abundant Shrine",
+      "fr": "Landorus, Abundant Shrine",
+      "es": "Landorus, Abundant Shrine",
+      "it": "Landorus, Abundant Shrine"
+    },
+    "type": "static",
     "postgame": true
   },
   {
@@ -376,6 +555,30 @@
       "it": "Route 13"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Cobalion, Route 13",
+      "en": "Cobalion, Route 13",
+      "fr": "Cobalion, Route 13",
+      "es": "Cobalion, Route 13",
+      "it": "Cobalion, Route 13"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Suicune, Route 13",
+      "en": "Suicune, Route 13",
+      "fr": "Suicune, Route 13",
+      "es": "Suicune, Route 13",
+      "it": "Suicune, Route 13"
+    },
+    "type": "static",
     "postgame": true
   },
   {
@@ -415,6 +618,18 @@
     "postgame": true
   },
   {
+    "id": 85,
+    "names": {
+      "de": "Virizion, Route 11",
+      "en": "Virizion, Route 11",
+      "fr": "Virizion, Route 11",
+      "es": "Virizion, Route 11",
+      "it": "Virizion, Route 11"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 38,
     "names": {
       "de": "Route 9",
@@ -424,6 +639,17 @@
       "it": "Route 9"
     },
     "type": "route"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Thundurus, Route 9",
+      "en": "Thundurus, Route 9",
+      "fr": "Thundurus, Route 9",
+      "es": "Thundurus, Route 9",
+      "it": "Thundurus, Route 9"
+    },
+    "type": "static"
   },
   {
     "id": 39,
@@ -459,26 +685,48 @@
     "type": "route"
   },
   {
-    "id": 42,
+    "id": 87,
     "names": {
-      "de": "Team Plasma Safehouse",
-      "en": "Team Plasma Safehouse",
-      "fr": "Team Plasma Safehouse",
-      "es": "Team Plasma Safehouse",
-      "it": "Team Plasma Safehouse"
+      "de": "Terrakion, Route 22",
+      "en": "Terrakion, Route 22",
+      "fr": "Terrakion, Route 22",
+      "es": "Terrakion, Route 22",
+      "it": "Terrakion, Route 22"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 43,
     "names": {
-      "de": "Giants Chasm",
-      "en": "Giants Chasm",
-      "fr": "Giants Chasm",
-      "es": "Giants Chasm",
-      "it": "Giants Chasm"
+      "de": "Giant Chasm",
+      "en": "Giant Chasm",
+      "fr": "Giant Chasm",
+      "es": "Giant Chasm",
+      "it": "Giant Chasm"
     },
     "type": "route"
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Kyurem, Giant Chasm",
+      "en": "Kyurem, Giant Chasm",
+      "fr": "Kyurem, Giant Chasm",
+      "es": "Kyurem, Giant Chasm",
+      "it": "Kyurem, Giant Chasm"
+    },
+    "type": "static"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Deoxys, Giant Chasm",
+      "en": "Deoxys, Giant Chasm",
+      "fr": "Deoxys, Giant Chasm",
+      "es": "Deoxys, Giant Chasm",
+      "it": "Deoxys, Giant Chasm"
+    },
+    "type": "static"
   },
   {
     "id": 44,
@@ -490,6 +738,17 @@
       "it": "Route 23"
     },
     "type": "route"
+  },
+  {
+    "id": 90,
+    "names": {
+      "de": "Azelf, Route 23",
+      "en": "Azelf, Route 23",
+      "fr": "Azelf, Route 23",
+      "es": "Azelf, Route 23",
+      "it": "Azelf, Route 23"
+    },
+    "type": "static"
   },
   {
     "id": 45,
@@ -514,6 +773,28 @@
     "type": "route"
   },
   {
+    "id": 91,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Route 8",
+      "it": "Route 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Keldeo, Pledge Grove",
+      "en": "Keldeo, Pledge Grove",
+      "fr": "Keldeo, Pledge Grove",
+      "es": "Keldeo, Pledge Grove",
+      "it": "Keldeo, Pledge Grove"
+    },
+    "type": "static"
+  },
+  {
     "id": 47,
     "names": {
       "de": "Icirrus City",
@@ -536,6 +817,50 @@
     "type": "route"
   },
   {
+    "id": 93,
+    "names": {
+      "de": "Reshiram/Zekrom, Dragonspiral Tower",
+      "en": "Reshiram/Zekrom, Dragonspiral Tower",
+      "fr": "Reshiram/Zekrom, Dragonspiral Tower",
+      "es": "Reshiram/Zekrom, Dragonspiral Tower",
+      "it": "Reshiram/Zekrom, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Latias/Latios, Dragonspiral Tower",
+      "en": "Latias/Latios, Dragonspiral Tower",
+      "fr": "Latias/Latios, Dragonspiral Tower",
+      "es": "Latias/Latios, Dragonspiral Tower",
+      "it": "Latias/Latios, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 95,
+    "names": {
+      "de": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "en": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "fr": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "es": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "it": "Dialga/Palkia/Giratina, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 96,
+    "names": {
+      "de": "Rayquaza, Dragonspiral Tower",
+      "en": "Rayquaza, Dragonspiral Tower",
+      "fr": "Rayquaza, Dragonspiral Tower",
+      "es": "Rayquaza, Dragonspiral Tower",
+      "it": "Rayquaza, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
     "id": 49,
     "names": {
       "de": "Twist Mountain",
@@ -545,6 +870,28 @@
       "it": "Twist Mountain"
     },
     "type": "route"
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "Articuno, Twist Mountain",
+      "en": "Articuno, Twist Mountain",
+      "fr": "Articuno, Twist Mountain",
+      "es": "Articuno, Twist Mountain",
+      "it": "Articuno, Twist Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 98,
+    "names": {
+      "de": "Regigigas, Twist Mountain",
+      "en": "Regigigas, Twist Mountain",
+      "fr": "Regigigas, Twist Mountain",
+      "es": "Regigigas, Twist Mountain",
+      "it": "Regigigas, Twist Mountain"
+    },
+    "type": "static"
   },
   {
     "id": 50,
@@ -558,15 +905,37 @@
     "type": "route"
   },
   {
+    "id": 99,
+    "names": {
+      "de": "Regirock/Regice/Registeel, Underground Ruins",
+      "en": "Regirock/Regice/Registeel, Underground Ruins",
+      "fr": "Regirock/Regice/Registeel, Underground Ruins",
+      "es": "Regirock/Regice/Registeel, Underground Ruins",
+      "it": "Regirock/Regice/Registeel, Underground Ruins"
+    },
+    "type": "static"
+  },
+  {
     "id": 51,
     "names": {
-      "de": "Marvellous Bridge",
-      "en": "Marvellous Bridge",
-      "fr": "Marvellous Bridge",
-      "es": "Marvellous Bridge",
-      "it": "Marvellous Bridge"
+      "de": "Marvelous Bridge",
+      "en": "Marvelous Bridge",
+      "fr": "Marvelous Bridge",
+      "es": "Marvelous Bridge",
+      "it": "Marvelous Bridge"
     },
     "type": "route"
+  },
+  {
+    "id": 100,
+    "names": {
+      "de": "Cresselia, Marvelous Bridge",
+      "en": "Cresselia, Marvelous Bridge",
+      "fr": "Cresselia, Marvelous Bridge",
+      "es": "Cresselia, Marvelous Bridge",
+      "it": "Cresselia, Marvelous Bridge"
+    },
+    "type": "static"
   },
   {
     "id": 52,
@@ -592,6 +961,28 @@
     "type": "route"
   },
   {
+    "id": 101,
+    "names": {
+      "de": "Celebi, Pinwheel Forest",
+      "en": "Celebi, Pinwheel Forest",
+      "fr": "Celebi, Pinwheel Forest",
+      "es": "Celebi, Pinwheel Forest",
+      "it": "Celebi, Pinwheel Forest"
+    },
+    "type": "static"
+  },
+  {
+    "id": 102,
+    "names": {
+      "de": "Uxie, Nacrene City",
+      "en": "Uxie, Nacrene City",
+      "fr": "Uxie, Nacrene City",
+      "es": "Uxie, Nacrene City",
+      "it": "Uxie, Nacrene City"
+    },
+    "type": "static"
+  },
+  {
     "id": 54,
     "names": {
       "de": "Route 3",
@@ -614,13 +1005,24 @@
     "type": "route"
   },
   {
+    "id": 103,
+    "names": {
+      "de": "Mewtwo, Wellspring Cave",
+      "en": "Mewtwo, Wellspring Cave",
+      "fr": "Mewtwo, Wellspring Cave",
+      "es": "Mewtwo, Wellspring Cave",
+      "it": "Mewtwo, Wellspring Cave"
+    },
+    "type": "static"
+  },
+  {
     "id": 56,
     "names": {
-      "de": "Striation City",
-      "en": "Striation City",
-      "fr": "Striation City",
-      "es": "Striation City",
-      "it": "Striation City"
+      "de": "Striaton City",
+      "en": "Striaton City",
+      "fr": "Striaton City",
+      "es": "Striaton City",
+      "it": "Striaton City"
     },
     "type": "route"
   },
@@ -634,6 +1036,17 @@
       "it": "Dreamyard"
     },
     "type": "route"
+  },
+  {
+    "id": 104,
+    "names": {
+      "de": "Jirachi, Dreamyard",
+      "en": "Jirachi, Dreamyard",
+      "fr": "Jirachi, Dreamyard",
+      "es": "Jirachi, Dreamyard",
+      "it": "Jirachi, Dreamyard"
+    },
+    "type": "static"
   },
   {
     "id": 58,
@@ -694,6 +1107,18 @@
     "postgame": true
   },
   {
+    "id": 105,
+    "names": {
+      "de": "Genesect, P2 Laboratory",
+      "en": "Genesect, P2 Laboratory",
+      "fr": "Genesect, P2 Laboratory",
+      "es": "Genesect, P2 Laboratory",
+      "it": "Genesect, P2 Laboratory"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 63,
     "names": {
       "de": "Nature Preserve",
@@ -703,5 +1128,16 @@
       "it": "Nature Preserve"
     },
     "type": "route"
+  },
+  {
+    "id": 106,
+    "names": {
+      "de": "Arceus, Nature Preserve",
+      "en": "Arceus, Nature Preserve",
+      "fr": "Arceus, Nature Preserve",
+      "es": "Arceus, Nature Preserve",
+      "it": "Arceus, Nature Preserve"
+    },
+    "type": "static"
   }
 ]
