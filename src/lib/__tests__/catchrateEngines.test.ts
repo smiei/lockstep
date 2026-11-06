@@ -24,10 +24,11 @@ const base: CatchInput = {
 describe("ROM hack engines: which games use them", () => {
   const engine = (id: string) =>
     (JSON.parse(fs.readFileSync(`data/games/${id}/game.json`, "utf-8")) as { catchEngine?: string }).catchEngine;
-  it("Radical Red and Unbound run on CFRU, Run & Bun on pokeemerald-expansion", () => {
+  it("Radical Red and Unbound run on CFRU, Run & Bun and Inclement Emerald on pokeemerald-expansion", () => {
     expect(engine("radical-red")).toBe(CFRU_ENGINE);
     expect(engine("unbound")).toBe(CFRU_ENGINE);
     expect(engine("run-and-bun")).toBe(EXPANSION_ENGINE);
+    expect(engine("inclement-emerald")).toBe(EXPANSION_ENGINE);
     expect(engine("emerald")).toBeUndefined();
   });
 
