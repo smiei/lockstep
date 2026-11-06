@@ -107,7 +107,7 @@ Evolutions a hack or randomizer changes, e.g. trade evolutions turned into level
 ```
 
 - **`category`:** one of `impossible` (trade evolutions replaced), `easier` (lowered levels) or `timeBased` (day/night conditions dropped). Each has a switch in the Rules tab, shown only when the pack has changes in that category.
-- For Gen 5-7 games, `node scripts/generate-randomizer-evolutions.mjs <gameId> --write` writes the list the Universal Pokemon Randomizer ZX's three evolution options produce; without `--write` it compares with the existing file.
+- For Gen 3-7 games, `node scripts/generate-randomizer-evolutions.mjs <gameId> --write` writes the list the Universal Pokemon Randomizer ZX's three evolution options produce; without `--write` it compares with the existing file.
 - **`method.kind`:** `level` (`level`), `item` (`item`), `levelHeld` (`item`), `levelWith` (`name`), `levelMove` (`move`), `levelParty` (`species`), `levelLocation` (`location`), `happiness`, `trade`, `shed`, `beauty` or `other`. The field in brackets is required for that kind.
 
 ### ROM hacks: their own stats, types and moves

@@ -151,9 +151,12 @@ export function PokemonDetailModal({
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
+  // A forme (Lycanroc's Midnight Form) carries its forme name, or a family
+  // with several would show the same name on every tile.
   const nameOf = (id: number) => {
-    const p = allPokemon.find((x) => x.id === id);
-    return p ? pokemonName(p, lang) : `#${id}`;
+    const p = allPokemon.find((x) => x.id === id) ?? forms.find((x) => x.id === id);
+    if (!p) return `#${id}`;
+    return p.baseId !== undefined ? displayNameWithForm(p, lang) : pokemonName(p, lang);
   };
 
   // Jump to the Battle & Catch tab with this Pokémon already picked (see the
@@ -206,18 +209,22 @@ export function PokemonDetailModal({
   // Defensive type matchups (gen-corrected types + gen-appropriate chart).
 
   const evoById = new Map(evolutions.map((e) => [e.id, e]));
+  // A stage exists in this game if its species is in the dex, or it is one of
+  // the game's formes (an edge from data/form-evolutions.json: Alolan Raichu,
+  // Lycanroc's Midnight and Dusk Forms).
+  const inGame = (id: number) => id <= dexLimit || forms.some((f) => f.id === id);
   // Walk up to the family's root, then render the whole tree (Eevee & co.
   // branch, so it's a tree, not a chain). Each node shows how it evolves from
   // its parent. dexLimit keeps stages that don't exist in this game out.
   let rootId = speciesId;
   for (let guard = 0; guard < 10; guard++) {
     const from = evoById.get(rootId)?.evolvesFrom;
-    if (from == null || from > dexLimit) break;
+    if (from == null || !inGame(from)) break;
     rootId = from;
   }
   const familyHasEvolution =
     rootId !== speciesId ||
-    (evoById.get(speciesId)?.evolvesTo ?? []).some((id) => id <= dexLimit);
+    (evoById.get(speciesId)?.evolvesTo ?? []).some(inGame);
 
   // Rendered as generations rather than an indented tree: each stage is one
   // wrapping row of tiles, so a branching family (Eevee) stays compact
@@ -226,8 +233,12 @@ export function PokemonDetailModal({
   const evoStages: number[][] = [];
   for (let ids = [rootId], guard = 0; ids.length > 0 && guard < 6; guard++) {
     evoStages.push(ids);
-    ids = ids.flatMap((id) => (evoById.get(id)?.evolvesTo ?? []).filter((c) => c <= dexLimit));
+    ids = ids.flatMap((id) => (evoById.get(id)?.evolvesTo ?? []).filter(inGame));
   }
+  // "Level up with X in the party" only comes from the randomizer's Change
+  // Impossible Evolutions (Karrablast/Shelmet), and with wild Pokémon
+  // randomized as well the randomizer turns it into level 35 instead.
+  const showPartyNote = evoStages.flat().some((id) => evoById.get(id)?.method?.kind === "levelWith");
 
   const renderEvoTile = (id: number): ReactNode => {
     const method = evoById.get(id)?.method;
@@ -452,6 +463,9 @@ export function PokemonDetailModal({
                 </Fragment>
               ))}
             </div>
+          )}
+          {!fusion && familyHasEvolution && showPartyNote && (
+            <p className="mt-2 text-center text-xs text-ink-subtle">{td.evolutionPartyNote}</p>
           )}
         </section>
 

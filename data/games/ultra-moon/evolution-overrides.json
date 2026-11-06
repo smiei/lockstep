@@ -825,5 +825,25 @@
       "item": "sun-stone"
     },
     "category": "timeBased"
+  },
+  {
+    "from": 744,
+    "to": 10126,
+    "comment": "Wuffels -> Wolwerock",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    },
+    "category": "timeBased"
+  },
+  {
+    "from": 744,
+    "to": 10152,
+    "comment": "Wuffels -> Wolwerock",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    },
+    "category": "timeBased"
   }
 ]
