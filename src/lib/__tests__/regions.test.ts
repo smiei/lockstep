@@ -87,13 +87,13 @@ describe("HeartGold / SoulSilver packs", () => {
   });
 
   for (const game of ["sacred-gold", "storm-silver"]) {
-    it(`${game}: Johto, Kanto from Vermillion City, Cerulean Cave post-game`, () => {
+    it(`${game}: Johto, Kanto from Vermilion City, Cerulean Cave post-game`, () => {
       const list = read<Route[]>(game, "routes.json");
       const firstKanto = list.findIndex((r) => r.region === "kanto");
-      expect(list[firstKanto].names.en).toBe("Vermillion City");
+      expect(list[firstKanto].names.en).toBe("Vermilion City");
       const parts = list.map((r) => (r.postgame ? 2 : r.region === "kanto" ? 1 : 0));
       expect([...parts].sort()).toEqual(parts);
-      expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Cerulean Cave"]);
+      expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Cerulean Cave", "Cerulean Cave (Mewtwo)"]);
     });
   }
 

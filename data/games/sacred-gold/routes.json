@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "New Bark Town",
-      "en": "New Bark Town",
-      "fr": "New Bark Town",
-      "es": "New Bark Town",
-      "it": "New Bark Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 29",
@@ -29,17 +18,6 @@
       "fr": "Route 29",
       "es": "Route 29",
       "it": "Route 29"
-    },
-    "type": "route"
-  },
-  {
-    "id": 4,
-    "names": {
-      "de": "Mr. Pokemon's House",
-      "en": "Mr. Pokemon's House",
-      "fr": "Mr. Pokemon's House",
-      "es": "Mr. Pokemon's House",
-      "it": "Mr. Pokemon's House"
     },
     "type": "route"
   },
@@ -66,6 +44,39 @@
     "type": "route"
   },
   {
+    "id": 2,
+    "names": {
+      "de": "New Bark Town",
+      "en": "New Bark Town",
+      "fr": "New Bark Town",
+      "es": "New Bark Town",
+      "it": "New Bark Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "New Bark Town (Rotom)",
+      "en": "New Bark Town (Rotom)",
+      "fr": "New Bark Town (Rotom)",
+      "es": "New Bark Town (Rotom)",
+      "it": "New Bark Town (Rotom)"
+    },
+    "type": "static"
+  },
+  {
+    "id": 130,
+    "names": {
+      "de": "New Bark Town (Darkrai)",
+      "en": "New Bark Town (Darkrai)",
+      "fr": "New Bark Town (Darkrai)",
+      "es": "New Bark Town (Darkrai)",
+      "it": "New Bark Town (Darkrai)"
+    },
+    "type": "static"
+  },
+  {
     "id": 7,
     "names": {
       "de": "Route 30",
@@ -75,6 +86,17 @@
       "it": "Route 30"
     },
     "type": "route"
+  },
+  {
+    "id": 98,
+    "names": {
+      "de": "Route 30 (Eevee)",
+      "en": "Route 30 (Eevee)",
+      "fr": "Route 30 (Eevee)",
+      "es": "Route 30 (Eevee)",
+      "it": "Route 30 (Eevee)"
+    },
+    "type": "static"
   },
   {
     "id": 8,
@@ -99,6 +121,17 @@
     "type": "route"
   },
   {
+    "id": 99,
+    "names": {
+      "de": "Dark Cave (Registeel)",
+      "en": "Dark Cave (Registeel)",
+      "fr": "Dark Cave (Registeel)",
+      "es": "Dark Cave (Registeel)",
+      "it": "Dark Cave (Registeel)"
+    },
+    "type": "static"
+  },
+  {
     "id": 10,
     "names": {
       "de": "Violet City",
@@ -108,6 +141,17 @@
       "it": "Violet City"
     },
     "type": "route"
+  },
+  {
+    "id": 100,
+    "names": {
+      "de": "Violet City (Primo Egg)",
+      "en": "Violet City (Primo Egg)",
+      "fr": "Violet City (Primo Egg)",
+      "es": "Violet City (Primo Egg)",
+      "it": "Violet City (Primo Egg)"
+    },
+    "type": "static"
   },
   {
     "id": 11,
@@ -165,17 +209,6 @@
     "type": "route"
   },
   {
-    "id": 16,
-    "names": {
-      "de": "Azalea Town",
-      "en": "Azalea Town",
-      "fr": "Azalea Town",
-      "es": "Azalea Town",
-      "it": "Azalea Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 17,
     "names": {
       "de": "Slowpoke Well",
@@ -198,6 +231,17 @@
     "type": "route"
   },
   {
+    "id": 101,
+    "names": {
+      "de": "Ilex Forest (Celebi)",
+      "en": "Ilex Forest (Celebi)",
+      "fr": "Ilex Forest (Celebi)",
+      "es": "Ilex Forest (Celebi)",
+      "it": "Ilex Forest (Celebi)"
+    },
+    "type": "static"
+  },
+  {
     "id": 19,
     "names": {
       "de": "Route 34",
@@ -209,15 +253,26 @@
     "type": "route"
   },
   {
-    "id": 20,
+    "id": 102,
     "names": {
-      "de": "Goldenrod City",
-      "en": "Goldenrod City",
-      "fr": "Goldenrod City",
-      "es": "Goldenrod City",
-      "it": "Goldenrod City"
+      "de": "Goldenrod City (Sinnoh Starter)",
+      "en": "Goldenrod City (Sinnoh Starter)",
+      "fr": "Goldenrod City (Sinnoh Starter)",
+      "es": "Goldenrod City (Sinnoh Starter)",
+      "it": "Goldenrod City (Sinnoh Starter)"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 103,
+    "names": {
+      "de": "Goldenrod City (Castform)",
+      "en": "Goldenrod City (Castform)",
+      "fr": "Goldenrod City (Castform)",
+      "es": "Goldenrod City (Castform)",
+      "it": "Goldenrod City (Castform)"
+    },
+    "type": "static"
   },
   {
     "id": 21,
@@ -240,6 +295,28 @@
       "it": "National Park"
     },
     "type": "route"
+  },
+  {
+    "id": 104,
+    "names": {
+      "de": "National Park (Hoenn Starter)",
+      "en": "National Park (Hoenn Starter)",
+      "fr": "National Park (Hoenn Starter)",
+      "es": "National Park (Hoenn Starter)",
+      "it": "National Park (Hoenn Starter)"
+    },
+    "type": "static"
+  },
+  {
+    "id": 105,
+    "names": {
+      "de": "National Park (Shaymin)",
+      "en": "National Park (Shaymin)",
+      "fr": "National Park (Shaymin)",
+      "es": "National Park (Shaymin)",
+      "it": "National Park (Shaymin)"
+    },
+    "type": "static"
   },
   {
     "id": 23,
@@ -297,6 +374,17 @@
     "type": "route"
   },
   {
+    "id": 106,
+    "names": {
+      "de": "Bell Tower (Ho-Oh)",
+      "en": "Bell Tower (Ho-Oh)",
+      "fr": "Bell Tower (Ho-Oh)",
+      "es": "Bell Tower (Ho-Oh)",
+      "it": "Bell Tower (Ho-Oh)"
+    },
+    "type": "static"
+  },
+  {
     "id": 28,
     "names": {
       "de": "Route 38",
@@ -341,6 +429,17 @@
     "type": "route"
   },
   {
+    "id": 107,
+    "names": {
+      "de": "Whirl Islands (Lugia)",
+      "en": "Whirl Islands (Lugia)",
+      "fr": "Whirl Islands (Lugia)",
+      "es": "Whirl Islands (Lugia)",
+      "it": "Whirl Islands (Lugia)"
+    },
+    "type": "static"
+  },
+  {
     "id": 32,
     "names": {
       "de": "Route 40",
@@ -372,6 +471,28 @@
       "it": "Cianwood City"
     },
     "type": "route"
+  },
+  {
+    "id": 108,
+    "names": {
+      "de": "Cliff Edge Gate",
+      "en": "Cliff Edge Gate",
+      "fr": "Cliff Edge Gate",
+      "es": "Cliff Edge Gate",
+      "it": "Cliff Edge Gate"
+    },
+    "type": "route"
+  },
+  {
+    "id": 109,
+    "names": {
+      "de": "Cianwood City (Pikachu)",
+      "en": "Cianwood City (Pikachu)",
+      "fr": "Cianwood City (Pikachu)",
+      "es": "Cianwood City (Pikachu)",
+      "it": "Cianwood City (Pikachu)"
+    },
+    "type": "static"
   },
   {
     "id": 35,
@@ -440,15 +561,37 @@
     "type": "route"
   },
   {
-    "id": 41,
+    "id": 110,
     "names": {
-      "de": "Rocket Hideout",
-      "en": "Rocket Hideout",
-      "fr": "Rocket Hideout",
-      "es": "Rocket Hideout",
-      "it": "Rocket Hideout"
+      "de": "Mt. Mortar (Tyrogue)",
+      "en": "Mt. Mortar (Tyrogue)",
+      "fr": "Mt. Mortar (Tyrogue)",
+      "es": "Mt. Mortar (Tyrogue)",
+      "it": "Mt. Mortar (Tyrogue)"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 111,
+    "names": {
+      "de": "Mt. Mortar (Regirock)",
+      "en": "Mt. Mortar (Regirock)",
+      "fr": "Mt. Mortar (Regirock)",
+      "es": "Mt. Mortar (Regirock)",
+      "it": "Mt. Mortar (Regirock)"
+    },
+    "type": "static"
+  },
+  {
+    "id": 112,
+    "names": {
+      "de": "Mt. Mortar (Jirachi)",
+      "en": "Mt. Mortar (Jirachi)",
+      "fr": "Mt. Mortar (Jirachi)",
+      "es": "Mt. Mortar (Jirachi)",
+      "it": "Mt. Mortar (Jirachi)"
+    },
+    "type": "static"
   },
   {
     "id": 42,
@@ -469,17 +612,6 @@
       "fr": "Route 43",
       "es": "Route 43",
       "it": "Route 43"
-    },
-    "type": "route"
-  },
-  {
-    "id": 44,
-    "names": {
-      "de": "Mahogany Town",
-      "en": "Mahogany Town",
-      "fr": "Mahogany Town",
-      "es": "Mahogany Town",
-      "it": "Mahogany Town"
     },
     "type": "route"
   },
@@ -506,6 +638,17 @@
     "type": "route"
   },
   {
+    "id": 113,
+    "names": {
+      "de": "Ice Path (Regice)",
+      "en": "Ice Path (Regice)",
+      "fr": "Ice Path (Regice)",
+      "es": "Ice Path (Regice)",
+      "it": "Ice Path (Regice)"
+    },
+    "type": "static"
+  },
+  {
     "id": 47,
     "names": {
       "de": "Blackthorn City",
@@ -526,6 +669,17 @@
       "it": "Dragon's Den"
     },
     "type": "route"
+  },
+  {
+    "id": 114,
+    "names": {
+      "de": "Dragon's Den (Dragonair)",
+      "en": "Dragon's Den (Dragonair)",
+      "fr": "Dragon's Den (Dragonair)",
+      "es": "Dragon's Den (Dragonair)",
+      "it": "Dragon's Den (Dragonair)"
+    },
+    "type": "static"
   },
   {
     "id": 49,
@@ -583,26 +737,27 @@
     "type": "route"
   },
   {
-    "id": 54,
-    "names": {
-      "de": "Indigo Plateau",
-      "en": "Indigo Plateau",
-      "fr": "Indigo Plateau",
-      "es": "Indigo Plateau",
-      "it": "Indigo Plateau"
-    },
-    "type": "route"
-  },
-  {
     "id": 55,
     "names": {
-      "de": "Vermillion City",
-      "en": "Vermillion City",
-      "fr": "Vermillion City",
-      "es": "Vermillion City",
-      "it": "Vermillion City"
+      "de": "Vermilion City",
+      "en": "Vermilion City",
+      "fr": "Vermilion City",
+      "es": "Vermilion City",
+      "it": "Vermilion City"
     },
     "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 115,
+    "names": {
+      "de": "Vermilion City (Latias/Latios)",
+      "en": "Vermilion City (Latias/Latios)",
+      "fr": "Vermilion City (Latias/Latios)",
+      "es": "Vermilion City (Latias/Latios)",
+      "it": "Vermilion City (Latias/Latios)"
+    },
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -618,15 +773,15 @@
     "region": "kanto"
   },
   {
-    "id": 57,
+    "id": 116,
     "names": {
-      "de": "Saffron City",
-      "en": "Saffron City",
-      "fr": "Saffron City",
-      "es": "Saffron City",
-      "it": "Saffron City"
+      "de": "Saffron City (Johto Starter)",
+      "en": "Saffron City (Johto Starter)",
+      "fr": "Saffron City (Johto Starter)",
+      "es": "Saffron City (Johto Starter)",
+      "it": "Saffron City (Johto Starter)"
     },
-    "type": "route",
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -685,18 +840,6 @@
       "fr": "Route 18",
       "es": "Route 18",
       "it": "Route 18"
-    },
-    "type": "route",
-    "region": "kanto"
-  },
-  {
-    "id": 63,
-    "names": {
-      "de": "Fuschia City",
-      "en": "Fuschia City",
-      "fr": "Fuschia City",
-      "es": "Fuschia City",
-      "it": "Fuschia City"
     },
     "type": "route",
     "region": "kanto"
@@ -762,6 +905,18 @@
     "region": "kanto"
   },
   {
+    "id": 117,
+    "names": {
+      "de": "Route 12 (Kanto Starter)",
+      "en": "Route 12 (Kanto Starter)",
+      "fr": "Route 12 (Kanto Starter)",
+      "es": "Route 12 (Kanto Starter)",
+      "it": "Route 12 (Kanto Starter)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
     "id": 68,
     "names": {
       "de": "Route 8",
@@ -810,15 +965,15 @@
     "region": "kanto"
   },
   {
-    "id": 72,
+    "id": 118,
     "names": {
-      "de": "Power Plant",
-      "en": "Power Plant",
-      "fr": "Power Plant",
-      "es": "Power Plant",
-      "it": "Power Plant"
+      "de": "Route 10 (Zapdos)",
+      "en": "Route 10 (Zapdos)",
+      "fr": "Route 10 (Zapdos)",
+      "es": "Route 10 (Zapdos)",
+      "it": "Route 10 (Zapdos)"
     },
-    "type": "route",
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -843,6 +998,18 @@
       "it": "Route 25"
     },
     "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 119,
+    "names": {
+      "de": "Route 25 (Suicune)",
+      "en": "Route 25 (Suicune)",
+      "fr": "Route 25 (Suicune)",
+      "es": "Route 25 (Suicune)",
+      "it": "Route 25 (Suicune)"
+    },
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -906,18 +1073,6 @@
     "region": "kanto"
   },
   {
-    "id": 81,
-    "names": {
-      "de": "Pewter City",
-      "en": "Pewter City",
-      "fr": "Pewter City",
-      "es": "Pewter City",
-      "it": "Pewter City"
-    },
-    "type": "route",
-    "region": "kanto"
-  },
-  {
     "id": 82,
     "names": {
       "de": "Route 3",
@@ -927,6 +1082,18 @@
       "it": "Route 3"
     },
     "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 122,
+    "names": {
+      "de": "Route 3 (Deoxys)",
+      "en": "Route 3 (Deoxys)",
+      "fr": "Route 3 (Deoxys)",
+      "es": "Route 3 (Deoxys)",
+      "it": "Route 3 (Deoxys)"
+    },
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -942,6 +1109,18 @@
     "region": "kanto"
   },
   {
+    "id": 120,
+    "names": {
+      "de": "Mt. Moon (Cresselia)",
+      "en": "Mt. Moon (Cresselia)",
+      "fr": "Mt. Moon (Cresselia)",
+      "es": "Mt. Moon (Cresselia)",
+      "it": "Mt. Moon (Cresselia)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
     "id": 84,
     "names": {
       "de": "Viridian Forest",
@@ -951,6 +1130,18 @@
       "it": "Viridian Forest"
     },
     "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 121,
+    "names": {
+      "de": "Viridian Forest (Mew)",
+      "en": "Viridian Forest (Mew)",
+      "fr": "Viridian Forest (Mew)",
+      "es": "Viridian Forest (Mew)",
+      "it": "Viridian Forest (Mew)"
+    },
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -1026,6 +1217,30 @@
     "region": "kanto"
   },
   {
+    "id": 125,
+    "names": {
+      "de": "Cinnabar Island (Moltres)",
+      "en": "Cinnabar Island (Moltres)",
+      "fr": "Cinnabar Island (Moltres)",
+      "es": "Cinnabar Island (Moltres)",
+      "it": "Cinnabar Island (Moltres)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 126,
+    "names": {
+      "de": "Cinnabar Island (Heatran)",
+      "en": "Cinnabar Island (Heatran)",
+      "fr": "Cinnabar Island (Heatran)",
+      "es": "Cinnabar Island (Heatran)",
+      "it": "Cinnabar Island (Heatran)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
     "id": 91,
     "names": {
       "de": "Route 20",
@@ -1035,6 +1250,30 @@
       "it": "Route 20"
     },
     "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 123,
+    "names": {
+      "de": "Seafoam Islands",
+      "en": "Seafoam Islands",
+      "fr": "Seafoam Islands",
+      "es": "Seafoam Islands",
+      "it": "Seafoam Islands"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 124,
+    "names": {
+      "de": "Seafoam Islands (Articuno)",
+      "en": "Seafoam Islands (Articuno)",
+      "fr": "Seafoam Islands (Articuno)",
+      "es": "Seafoam Islands (Articuno)",
+      "it": "Seafoam Islands (Articuno)"
+    },
+    "type": "static",
     "region": "kanto"
   },
   {
@@ -1086,6 +1325,90 @@
     "region": "kanto"
   },
   {
+    "id": 127,
+    "names": {
+      "de": "Mt. Silver Cave",
+      "en": "Mt. Silver Cave",
+      "fr": "Mt. Silver Cave",
+      "es": "Mt. Silver Cave",
+      "it": "Mt. Silver Cave"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 128,
+    "names": {
+      "de": "Mt. Silver Cave (Regigigas)",
+      "en": "Mt. Silver Cave (Regigigas)",
+      "fr": "Mt. Silver Cave (Regigigas)",
+      "es": "Mt. Silver Cave (Regigigas)",
+      "it": "Mt. Silver Cave (Regigigas)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 131,
+    "names": {
+      "de": "Embedded Tower (Kyogre/Groudon)",
+      "en": "Embedded Tower (Kyogre/Groudon)",
+      "fr": "Embedded Tower (Kyogre/Groudon)",
+      "es": "Embedded Tower (Kyogre/Groudon)",
+      "it": "Embedded Tower (Kyogre/Groudon)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 132,
+    "names": {
+      "de": "Embedded Tower (Rayquaza)",
+      "en": "Embedded Tower (Rayquaza)",
+      "fr": "Embedded Tower (Rayquaza)",
+      "es": "Embedded Tower (Rayquaza)",
+      "it": "Embedded Tower (Rayquaza)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 133,
+    "names": {
+      "de": "Sinjoh Ruins (Uxie/Mesprit/Azelf)",
+      "en": "Sinjoh Ruins (Uxie/Mesprit/Azelf)",
+      "fr": "Sinjoh Ruins (Uxie/Mesprit/Azelf)",
+      "es": "Sinjoh Ruins (Uxie/Mesprit/Azelf)",
+      "it": "Sinjoh Ruins (Uxie/Mesprit/Azelf)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 134,
+    "names": {
+      "de": "Sinjoh Ruins (Dialga/Palkia/Giratina)",
+      "en": "Sinjoh Ruins (Dialga/Palkia/Giratina)",
+      "fr": "Sinjoh Ruins (Dialga/Palkia/Giratina)",
+      "es": "Sinjoh Ruins (Dialga/Palkia/Giratina)",
+      "it": "Sinjoh Ruins (Dialga/Palkia/Giratina)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 135,
+    "names": {
+      "de": "Sinjoh Ruins (Arceus)",
+      "en": "Sinjoh Ruins (Arceus)",
+      "fr": "Sinjoh Ruins (Arceus)",
+      "es": "Sinjoh Ruins (Arceus)",
+      "it": "Sinjoh Ruins (Arceus)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
     "id": 96,
     "names": {
       "de": "Cerulean Cave",
@@ -1095,6 +1418,18 @@
       "it": "Cerulean Cave"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 129,
+    "names": {
+      "de": "Cerulean Cave (Mewtwo)",
+      "en": "Cerulean Cave (Mewtwo)",
+      "fr": "Cerulean Cave (Mewtwo)",
+      "es": "Cerulean Cave (Mewtwo)",
+      "it": "Cerulean Cave (Mewtwo)"
+    },
+    "type": "static",
     "postgame": true
   }
 ]
