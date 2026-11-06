@@ -722,7 +722,8 @@
       "it": "Thunder Badge"
     },
     "max_level": 63,
-    "sprite": "Major Bob"
+    "sprite": "Major Bob",
+    "region": "kanto"
   },
   {
     "id": 35,
@@ -747,7 +748,8 @@
       "es": "Marsh Badge",
       "it": "Marsh Badge"
     },
-    "max_level": 66
+    "max_level": 66,
+    "region": "kanto"
   },
   {
     "id": 36,
@@ -772,7 +774,8 @@
       "es": "Rainbow Badge",
       "it": "Rainbow Badge"
     },
-    "max_level": 65
+    "max_level": 65,
+    "region": "kanto"
   },
   {
     "id": 37,
@@ -798,7 +801,8 @@
       "it": "Soul Badge"
     },
     "max_level": 64,
-    "sprite": "Janina"
+    "sprite": "Janina",
+    "region": "kanto"
   },
   {
     "id": 38,
@@ -823,7 +827,8 @@
       "es": "Cascade Badge",
       "it": "Cascade Badge"
     },
-    "max_level": 62
+    "max_level": 62,
+    "region": "kanto"
   },
   {
     "id": 39,
@@ -849,7 +854,8 @@
       "it": "Boulder Badge"
     },
     "max_level": 61,
-    "sprite": "Rocko"
+    "sprite": "Rocko",
+    "region": "kanto"
   },
   {
     "id": 40,
@@ -868,7 +874,8 @@
       "it": "Mt. Moon Rival"
     },
     "badge": null,
-    "max_level": 60
+    "max_level": 60,
+    "region": "kanto"
   },
   {
     "id": 41,
@@ -894,7 +901,8 @@
       "it": "Volcano Badge"
     },
     "max_level": 68,
-    "sprite": "Pyro"
+    "sprite": "Pyro",
+    "region": "kanto"
   },
   {
     "id": 42,
@@ -920,7 +928,8 @@
       "it": "Earth Badge"
     },
     "max_level": 70,
-    "sprite": "Blau"
+    "sprite": "Blau",
+    "region": "kanto"
   },
   {
     "id": 43,
@@ -940,6 +949,7 @@
     },
     "badge": null,
     "max_level": 94,
-    "sprite": "Rot"
+    "sprite": "Rot",
+    "region": "kanto"
   }
 ]
