@@ -59,7 +59,7 @@ const HACKS = [
   { id: "volt-white", src: "volt", league: "blazevolt", patch: "blazevolt", base: "white", name: "Volt White", generation: 5, dataGeneration: 5, spriteSet: "black-white", versionGroup: "black-white", sort: 34 },
   { id: "blaze-black-2-volt-white-2-redux", src: "blazevolt2", routes: "blazevolt2_n", league: "blazevolt2_n", patch: "blazevolt2", base: "black", name: "Blaze Black 2 / Volt White 2 Redux", generation: 5, dataGeneration: 6, spriteSet: "black-white", versionGroup: "black-white", sort: 35 },
   { id: "emerald-kaizo", src: "emkaizo", base: "emerald", name: "Emerald Kaizo", generation: 3, dataGeneration: 3, spriteSet: "emerald", versionGroup: "emerald", sort: 36 },
-  { id: "inclement-emerald", src: "incem", base: "emerald", name: "Inclement Emerald", generation: 3, dataGeneration: 7, spriteSet: "emerald", versionGroup: "emerald", sort: 37 },
+  { id: "inclement-emerald", src: "incem", base: "emerald", name: "Inclement Emerald", generation: 3, dataGeneration: 7, spriteSet: "emerald", versionGroup: "emerald", catchEngine: "expansion", sort: 37 },
   { id: "rising-ruby", src: "rrss", base: "emerald", name: "Rising Ruby", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 38 },
   { id: "sinking-sapphire", src: "ssaph", league: "rrss", patch: "rrss", base: "emerald", name: "Sinking Sapphire", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 39 },
   { id: "glazed", src: "glazed", base: "emerald", name: "Glazed", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 40 },
@@ -68,9 +68,9 @@ const HACKS = [
   // forms, moves from the synthetic "modern" version group
   // (generate-learnsets.mjs). Unbound plays in its own region, so its places
   // and bosses stay English.
-  { id: "radical-red", src: "radred", base: "firered", name: "Radical Red", generation: 3, dataGeneration: 9, spriteSet: "emerald", versionGroup: "modern", sort: 42 },
-  { id: "unbound", src: "unbound", base: "firered", trainerSet: "unbound", name: "Unbound", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 43 },
-  { id: "run-and-bun", src: "emrunbun", base: "emerald", name: "Run & Bun", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 44 },
+  { id: "radical-red", src: "radred", base: "firered", name: "Radical Red", generation: 3, dataGeneration: 9, spriteSet: "emerald", versionGroup: "modern", catchEngine: "cfru", sort: 42 },
+  { id: "unbound", src: "unbound", base: "firered", trainerSet: "unbound", name: "Unbound", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", catchEngine: "cfru", sort: 43 },
+  { id: "run-and-bun", src: "emrunbun", base: "emerald", name: "Run & Bun", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", catchEngine: "expansion", sort: 44 },
   { id: "blazing-emerald", src: "blazingem", base: "emerald", name: "Blazing Emerald", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 45 },
 ];
 
@@ -494,6 +494,7 @@ async function main() {
       dexLimit: Math.min(hack.dexLimit ?? GEN_MAX_ID[hack.dataGeneration], maxDex),
       spriteSet: hack.spriteSet,
       versionGroup: hack.versionGroup,
+      ...(hack.catchEngine ? { catchEngine: hack.catchEngine } : {}),
       trainerSet: hack.trainerSet ?? baseGame?.trainerSet ?? baseGame?.id ?? hack.id,
       ...(species.length ? { speciesData: hack.id } : {}),
       ...(regionalForms || hack.regionalForms ? { regionalForms: true } : {}),
