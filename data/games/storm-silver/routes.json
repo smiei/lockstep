@@ -602,7 +602,8 @@
       "es": "Vermillion City",
       "it": "Vermillion City"
     },
-    "type": "route"
+    "type": "route",
+    "region": "kanto"
   },
   {
     "id": 56,
@@ -614,7 +615,7 @@
       "it": "Route 6"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 57,
@@ -626,7 +627,7 @@
       "it": "Saffron City"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 58,
@@ -638,7 +639,7 @@
       "it": "Route 7"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 59,
@@ -650,7 +651,7 @@
       "it": "Celadon City"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 60,
@@ -662,7 +663,7 @@
       "it": "Route 16"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 61,
@@ -674,7 +675,7 @@
       "it": "Route 17"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 62,
@@ -686,7 +687,7 @@
       "it": "Route 18"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 63,
@@ -698,7 +699,19 @@
       "it": "Fuschia City"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Fuchsia City",
+      "en": "Fuchsia City",
+      "fr": "Fuchsia City",
+      "es": "Fuchsia City",
+      "it": "Fuchsia City"
+    },
+    "type": "route",
+    "region": "kanto"
   },
   {
     "id": 64,
@@ -710,7 +723,7 @@
       "it": "Route 15"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 65,
@@ -722,7 +735,7 @@
       "it": "Route 14"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 66,
@@ -734,7 +747,7 @@
       "it": "Route 13"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 67,
@@ -746,7 +759,7 @@
       "it": "Route 12"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 68,
@@ -758,7 +771,7 @@
       "it": "Route 8"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 69,
@@ -770,7 +783,7 @@
       "it": "Route 5"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 70,
@@ -782,7 +795,7 @@
       "it": "Route 9"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 71,
@@ -794,7 +807,7 @@
       "it": "Route 10"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 72,
@@ -806,7 +819,7 @@
       "it": "Power Plant"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 73,
@@ -818,7 +831,7 @@
       "it": "Route 24"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 74,
@@ -830,7 +843,7 @@
       "it": "Route 25"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 75,
@@ -842,7 +855,7 @@
       "it": "Cerulean City"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 76,
@@ -854,7 +867,7 @@
       "it": "Rock Tunnel"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 77,
@@ -866,7 +879,7 @@
       "it": "Route 4"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 78,
@@ -878,18 +891,7 @@
       "it": "Route 11"
     },
     "type": "route",
-    "postgame": true
-  },
-  {
-    "id": 79,
-    "names": {
-      "de": "Fuchsia City",
-      "en": "Fuchsia City",
-      "fr": "Fuchsia City",
-      "es": "Fuchsia City",
-      "it": "Fuchsia City"
-    },
-    "type": "route"
+    "region": "kanto"
   },
   {
     "id": 80,
@@ -901,7 +903,7 @@
       "it": "Diglett's Cave"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 81,
@@ -913,7 +915,7 @@
       "it": "Pewter City"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 82,
@@ -925,7 +927,7 @@
       "it": "Route 3"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 83,
@@ -937,7 +939,7 @@
       "it": "Mt. Moon"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 84,
@@ -949,7 +951,7 @@
       "it": "Viridian Forest"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 85,
@@ -961,7 +963,7 @@
       "it": "Route 2"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 86,
@@ -973,7 +975,7 @@
       "it": "Viridian City"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 87,
@@ -985,7 +987,7 @@
       "it": "Route 1"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 88,
@@ -997,7 +999,7 @@
       "it": "Pallet Town"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 89,
@@ -1009,7 +1011,7 @@
       "it": "Route 21"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 90,
@@ -1021,7 +1023,7 @@
       "it": "Cinnabar Island"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 91,
@@ -1033,7 +1035,7 @@
       "it": "Route 20"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 92,
@@ -1045,7 +1047,7 @@
       "it": "Route 19"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 93,
@@ -1057,7 +1059,7 @@
       "it": "Route 22"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 94,
@@ -1069,7 +1071,7 @@
       "it": "Route 28"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 95,
@@ -1081,7 +1083,7 @@
       "it": "Mt. Silver"
     },
     "type": "route",
-    "postgame": true
+    "region": "kanto"
   },
   {
     "id": 96,

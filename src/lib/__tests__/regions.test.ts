@@ -86,6 +86,17 @@ describe("HeartGold / SoulSilver packs", () => {
     expect(caps.find((c) => c.region === "kanto")?.names.en).toBe("Lt. Surge");
   });
 
+  for (const game of ["sacred-gold", "storm-silver"]) {
+    it(`${game}: Johto, Kanto from Vermillion City, Cerulean Cave post-game`, () => {
+      const list = read<Route[]>(game, "routes.json");
+      const firstKanto = list.findIndex((r) => r.region === "kanto");
+      expect(list[firstKanto].names.en).toBe("Vermillion City");
+      const parts = list.map((r) => (r.postgame ? 2 : r.region === "kanto" ? 1 : 0));
+      expect([...parts].sort()).toEqual(parts);
+      expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Cerulean Cave"]);
+    });
+  }
+
   it("swaps Lugia and Ho-Oh: the version's own legendary is in Johto, the other in Kanto", () => {
     const region = (game: string, id: number) => read<Route[]>(game, "routes.json").find((r) => r.id === id)?.region;
     // 33 = Bell Tower (Ho-Oh), 40 = Whirl Islands (Lugia)
