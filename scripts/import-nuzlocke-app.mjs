@@ -60,8 +60,10 @@ const HACKS = [
   { id: "blaze-black-2-volt-white-2-redux", src: "blazevolt2", routes: "blazevolt2_n", league: "blazevolt2_n", patch: "blazevolt2", base: "black", name: "Blaze Black 2 / Volt White 2 Redux", generation: 5, dataGeneration: 6, spriteSet: "black-white", versionGroup: "black-white", sort: 35 },
   { id: "emerald-kaizo", src: "emkaizo", base: "emerald", name: "Emerald Kaizo", generation: 3, dataGeneration: 3, spriteSet: "emerald", versionGroup: "emerald", sort: 36 },
   { id: "inclement-emerald", src: "incem", base: "emerald", name: "Inclement Emerald", generation: 3, dataGeneration: 7, spriteSet: "emerald", versionGroup: "emerald", catchEngine: "expansion", sort: 37 },
-  { id: "rising-ruby", src: "rrss", base: "emerald", name: "Rising Ruby", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 38 },
-  { id: "sinking-sapphire", src: "ssaph", league: "rrss", patch: "rrss", base: "emerald", name: "Sinking Sapphire", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 39 },
+  // Drayano's 3DS hacks of Omega Ruby/Alpha Sapphire (Gen 6), not GBA ones:
+  // ORAS's mechanics, balls, movesets and trainer pictures.
+  { id: "rising-ruby", src: "rrss", base: "emerald", trainerSet: "omega-ruby-alpha-sapphire", name: "Rising Ruby", generation: 6, dataGeneration: 6, spriteSet: "modern", versionGroup: "omega-ruby-alpha-sapphire", sort: 38 },
+  { id: "sinking-sapphire", src: "ssaph", league: "rrss", patch: "rrss", base: "emerald", trainerSet: "omega-ruby-alpha-sapphire", name: "Sinking Sapphire", generation: 6, dataGeneration: 6, spriteSet: "modern", versionGroup: "omega-ruby-alpha-sapphire", sort: 39 },
   { id: "glazed", src: "glazed", base: "emerald", name: "Glazed", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 40 },
   { id: "new-generations", src: "newgen", base: "firered", name: "New Generations", generation: 3, dataGeneration: 3, spriteSet: "emerald", versionGroup: "firered-leafgreen", sort: 41 },
   // Modern data on the Gen 3 engine: Pokémon up to Gen 8/9 with regional

@@ -36,7 +36,7 @@ So: put a file in the flat ROOT to use it for ALL games; put one in a
 trainerSet SUBFOLDERS (one per base game; ROM hacks share their base game's
 folder, so a picture there serves all of them):
   firered/                FireRed / LeafGreen, New Generations, Radical Red
-  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, Run & Bun, Blazing Emerald
+  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald
   red-blue/               Red / Blue / Yellow
   gold-silver/            Gold / Silver / Crystal
   platinum/               Platinum, Diamond / Pearl, Renegade Platinum
@@ -45,7 +45,7 @@ folder, so a picture there serves all of them):
   infinite-fusion/        Pokémon Infinite Fusion (Classic), Pokémon Infinite Fusion (Remix)
   black-2-white-2/        Black 2 / White 2
   x-y/                    X / Y
-  omega-ruby-alpha-sapphire/Omega Ruby, Alpha Sapphire
+  omega-ruby-alpha-sapphire/Omega Ruby, Alpha Sapphire, Rising Ruby, Sinking Sapphire
   sun-moon/               Sun, Moon
   ultra-sun-ultra-moon/   Ultra Sun, Ultra Moon
   sword-shield/           Sword, Shield
@@ -126,7 +126,7 @@ A name listed under several folders can live once in the root instead.
     erika-rematch.png           Erika Rematch
     admin-ariana.png            Admin Ariana
 
-  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (98)
+  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (94)
     rivale.png                  Rivale (Rival)   *
     felizia.png                 Felizia (Roxanne)
     kamillo.png                 Kamillo (Brawly)
@@ -168,10 +168,6 @@ A name listed under several folders can live once in the root instead.
     courtney.png                Courtney
     tabitha-courtney.png        Tabitha & Courtney
     maxie-courtney.png          Maxie & Courtney
-    tabitha-grunt.png           Tabitha & Grunt
-    courtney-grunt.png          Courtney & Grunt
-    shelly-grunt.png            Shelly & Grunt
-    matt-grunt.png              Matt & Grunt
     chelle.png                  Chelle   *
     sparky.png                  Sparky   *
     terry.png                   Terry   *
@@ -473,7 +469,7 @@ A name listed under several folders can live once in the root instead.
     dracena.png                 Dracena (Drasna)
     diantha.png                 Diantha
 
-  Omega Ruby, Alpha Sapphire  ->  omega-ruby-alpha-sapphire/   (26)
+  Omega Ruby, Alpha Sapphire, Rising Ruby, Sinking Sapphire  ->  omega-ruby-alpha-sapphire/   (31)
     rivale.png                  Rivale (Rival)   *
     felizia.png                 Felizia (Roxanne)
     kamillo.png                 Kamillo (Brawly)
@@ -500,6 +496,11 @@ A name listed under several folders can live once in the root instead.
     archie.png                  Archie
     wolfgang-rupel.png          Wolfgang & Rüpel (Matt & Grunt)
     wolfgang.png                Wolfgang (Matt)
+    tabitha-grunt.png           Tabitha & Grunt
+    courtney-grunt.png          Courtney & Grunt
+    courtney.png                Courtney
+    shelly-grunt.png            Shelly & Grunt
+    matt-grunt.png              Matt & Grunt
 
   Sun, Moon  ->  sun-moon/   (25)
     tali.png                    Tali (Hau)
