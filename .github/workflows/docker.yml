@@ -42,7 +42,12 @@ concurrency:
 
 jobs:
   image:
-    runs-on: ubuntu-latest
+    # Pinned: on the Ubuntu 26 image `ubuntu-latest` moved to in November
+    # 2026, the arm64 half (QEMU) died with SIGILL (exit 132) in `npm ci` -
+    # the 5.6 release build - while 24.04 had built 5.5 three days before.
+    # Retry `ubuntu-latest` when 24.04 is retired, or move arm64 to a native
+    # `ubuntu-24.04-arm` runner.
+    runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
       - name: Work out version and tags
