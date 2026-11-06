@@ -22,17 +22,6 @@
     "type": "route"
   },
   {
-    "id": 3,
-    "names": {
-      "de": "Avenitia",
-      "en": "Nuvema Town",
-      "fr": "Renouet",
-      "es": "Pueblo Arcilla",
-      "it": "Soffiolieve"
-    },
-    "type": "route"
-  },
-  {
     "id": 4,
     "names": {
       "de": "Route 2",
@@ -64,17 +53,6 @@
       "it": "Dono della scimmia, Cantiere dei Sogni"
     },
     "type": "static"
-  },
-  {
-    "id": 7,
-    "names": {
-      "de": "Orion City",
-      "en": "Striaton City",
-      "fr": "Ogoesse",
-      "es": "Ciudad Gres",
-      "it": "Levantopoli"
-    },
-    "type": "route"
   },
   {
     "id": 8,
@@ -176,6 +154,17 @@
     "type": "route"
   },
   {
+    "id": 65,
+    "names": {
+      "de": "Flampivian, Wüstenresort",
+      "en": "Darmanitan, Desert Resort",
+      "fr": "Darumacho, Désert Délassant",
+      "es": "Darmanitan, Zona Desierto",
+      "it": "Darmanitan, Deserto della Quiete"
+    },
+    "type": "static"
+  },
+  {
     "id": 17,
     "names": {
       "de": "Alter Palast",
@@ -227,17 +216,6 @@
       "fr": "Pont Yoneuve",
       "es": "Puente de Fayenza",
       "it": "Ponte Libecciopoli"
-    },
-    "type": "route"
-  },
-  {
-    "id": 22,
-    "names": {
-      "de": "Marea City",
-      "en": "Driftveil City",
-      "fr": "Port Yoneuve",
-      "es": "Ciudad Fayenza",
-      "it": "Libecciopoli"
     },
     "type": "route"
   },
@@ -330,6 +308,28 @@
     "type": "route"
   },
   {
+    "id": 7,
+    "names": {
+      "de": "Orion City",
+      "en": "Striaton City",
+      "fr": "Ogoesse",
+      "es": "Ciudad Gres",
+      "it": "Levantopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Marea City",
+      "en": "Driftveil City",
+      "fr": "Port Yoneuve",
+      "es": "Ciudad Fayenza",
+      "it": "Libecciopoli"
+    },
+    "type": "route"
+  },
+  {
     "id": 31,
     "names": {
       "de": "Nevaio City",
@@ -416,17 +416,6 @@
       "it": "Terrakion, Via Vittoria"
     },
     "type": "static"
-  },
-  {
-    "id": 39,
-    "names": {
-      "de": "Schloss von N",
-      "en": "N's Castle",
-      "fr": "Palais de N",
-      "es": "Palacio de N",
-      "it": "Palazzo di N"
-    },
-    "type": "route"
   },
   {
     "id": 40,
@@ -680,6 +669,18 @@
     "postgame": true
   },
   {
+    "id": 66,
+    "names": {
+      "de": "Somnivora, Traumbrache",
+      "en": "Musharna, Dreamyard",
+      "fr": "Mushana, Vestiges du Rêve",
+      "es": "Musharna, Solar de los Sueños",
+      "it": "Musharna, Cantiere dei Sogni"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 61,
     "names": {
       "de": "Ramoth, Alter Palast",
@@ -701,18 +702,6 @@
       "it": "Tornadus (errante)"
     },
     "type": "static",
-    "postgame": true
-  },
-  {
-    "id": 63,
-    "names": {
-      "de": "Freiheitsgarten",
-      "en": "Liberty Garden",
-      "fr": "Île Liberté",
-      "es": "Isla Libertad",
-      "it": "Isola Libertà"
-    },
-    "type": "route",
     "postgame": true
   },
   {
