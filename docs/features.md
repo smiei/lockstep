@@ -12,6 +12,7 @@ Catch one Pokémon per route and player.
 - **Route list:**
   - Static locations (gifts, fossils, legendaries) are pre-marked from the game data.
   - Post-game areas are collapsed by default.
+  - HeartGold/SoulSilver, Gold/Silver, Sacred Gold and Storm Silver show Johto and Kanto as their own sections. With the rule **Include Kanto** off, Kanto counts as post-game: it collapses here and on the Journey tab and leaves the progress bars, badges and next level cap.
   - "Open only" hides finished routes, but keeps the route you just edited visible (after a reload: the route saved last).
   - Every route is a tray whose frame and badge show its outcome: open (dashed), waiting for a player, caught, or lost.
 - **Species Clause:** conflicts show a warning and never block a save.
@@ -44,7 +45,8 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 **Wild** is a catch-chance calculator.
 - **Inputs:** ball, HP, level and status condition.
 - **Formula:** the run's own generation (Gen 1, Gen 2, Gen 3/4, Gen 5 to 9, or Infinite Fusion's own code). From Gen 5 a ball's chance is about (rate ÷ 255)^0.75, kinder than before.
-- **Ball list:** depends on the game. HeartGold/SoulSilver bring back the Gen 2 Apricorn balls, Sun/Moon add the Beast Ball, Brilliant Diamond/Shining Pearl keep Diamond/Pearl's list.
+- **Ball list:** depends on the game. HeartGold/SoulSilver bring back the Gen 2 Apricorn balls, Sun/Moon add the Beast Ball, Brilliant Diamond/Shining Pearl keep Diamond/Pearl's list; every game from Gen 4 on has the Cherish Ball.
+- **ROM hacks with their own capture engine:** Radical Red and Unbound (Complete FireRed Upgrade) and Run & Bun and Inclement Emerald (pokeemerald-expansion) offer every ball up to Gen 8 and use their engine's own capture code, critical captures included. On Radical Red and Unbound a Pokémon above your own level is caught at ×0.1 until the League is beaten (a switch on the card).
 - **Ultra Beasts:** the Beast Ball gives ×5 against them, every other ball only ×0.1. The calculator recognizes them by itself.
 - **Gen 8 and 9:** a bonus against wild Pokémon below level 20 (Gen 8) or 13 (Gen 9), and a field for your badges, filled in from the run's defeated gym leaders.
   - Sword/Shield and BDSP: without the eighth badge, a wild Pokémon above your own Pokémon's level is caught at only ×0.1. Sword/Shield also refuse the throw altogether above level 20 + 5 per badge.
@@ -101,8 +103,9 @@ A per-run dashboard. In a SoulLink run every number also breaks down per player.
 Per-run rule toggles. They are informational: they drive warnings and visibility, and never block a save. Available rules:
 - **Species Clause.** In SoulLink it can apply per player, optionally with "caught links lock for everyone".
 - **Shiny Clause** and **nicknames.**
-- **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"). Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
+- **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"), for every official Gen 1–7 game and generated from the randomizer's own code; a game without such a list (the Switch games, ROM hacks) does not show them. Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
 - **Static encounters** and their clause exemption.
+- **Include Kanto** (only in games with Kanto as a second region, see the Encounter tab).
 
 On top of the toggles:
 - **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions. **Lock blind flight** (nested under it) keeps it on for runs played without any help: the header button can no longer switch it off for a quick peek, only the rule itself can. **Hide Pokémon types too** (also nested under it) takes away the Pokémon's own types as well - on the team, in the Pokédex (its type column), in Battle & Catch, and the Team tab's type filter - leaving the encounter and link tracking and the plain type chart.

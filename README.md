@@ -56,8 +56,9 @@ You know the rules. This is what the tracker handles so you don't have to.
 
 ### Accurate to the generation you're playing
 - **The type chart, base stats, catch rates and move names your game actually had:** Gen 1's single Special, no Fairy type before Gen 6, pre-buff stats, old move names.
-- **Catch rates** use that generation's formula and ball list, Apricorn Balls included, up to Sword/Shield's and Scarlet/Violet's level and badge rules.
-- **Evolution overrides** for randomizers and ROM hacks: impossible, easier or time-based evolutions.
+- **Catch rates** use that generation's formula and ball list, Apricorn Balls included, up to Sword/Shield's and Scarlet/Violet's level and badge rules. Radical Red, Unbound, Run & Bun and Inclement Emerald use their own engine's balls and capture code.
+- **Randomizer evolutions:** the Universal Pokémon Randomizer ZX's impossible, easier and time-based evolution changes for every official Gen 1–7 game, generated from what the randomizer does.
+- **HeartGold/SoulSilver** (and Gold/Silver, Sacred Gold, Storm Silver) show Johto and Kanto as their own sections; a rule decides whether Kanto counts or is post-game.
 
 ### Planning the next fight
 - **Level caps** for every gym leader, rival and Elite Four member, with the next cap always in view.
