@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Wurzelheim",
-      "en": "Littleroot Town",
-      "fr": "Bourg-en-Vol",
-      "es": "Villa Raiz",
-      "it": "Albanova"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 101",
@@ -55,17 +44,6 @@
     "type": "route"
   },
   {
-    "id": 6,
-    "names": {
-      "de": "Blütenburg City",
-      "en": "Petalburg City",
-      "fr": "Clémenti-Ville",
-      "es": "Ciudad Petalia",
-      "it": "Petalipoli"
-    },
-    "type": "route"
-  },
-  {
     "id": 7,
     "names": {
       "de": "Route 104",
@@ -90,13 +68,13 @@
   {
     "id": 9,
     "names": {
-      "de": "Metarost City",
-      "en": "Rustboro City",
-      "fr": "Mérouville",
-      "es": "Ciudad Férrica",
-      "it": "Ferrugipoli"
+      "de": "Fossil Metarost City",
+      "en": "Fossil Rustboro City",
+      "fr": "Fossile Mérouville",
+      "es": "Fósil Ciudad Férrica",
+      "it": "Fossile Ferrugipoli"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 10,
@@ -121,6 +99,17 @@
     "type": "route"
   },
   {
+    "id": 13,
+    "names": {
+      "de": "Faustauhaven",
+      "en": "Dewford Town",
+      "fr": "Village Myokara",
+      "es": "Pueblo Azuliza",
+      "it": "Bluruvia"
+    },
+    "type": "route"
+  },
+  {
     "id": 12,
     "names": {
       "de": "Route 105",
@@ -132,15 +121,15 @@
     "type": "route"
   },
   {
-    "id": 13,
+    "id": 68,
     "names": {
-      "de": "Faustauhaven",
-      "en": "Dewford Town",
-      "fr": "Village Myokara",
-      "es": "Pueblo Azuliza",
-      "it": "Bluruvia"
+      "de": "Regice Inselhöhle",
+      "en": "Regice Island Cave",
+      "fr": "Regice Grotte Island",
+      "es": "Regice Cueva Insular",
+      "it": "Regice Grotta Insulare"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 14,
@@ -209,18 +198,6 @@
     "type": "route"
   },
   {
-    "id": 20,
-    "names": {
-      "de": "Wandelhöhle",
-      "en": "Altering Cave",
-      "fr": "Grotte Métamo",
-      "es": "Cueva Cambiante",
-      "it": "Grotta Mutevole"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
     "id": 21,
     "names": {
       "de": "Neu Malvenfroh",
@@ -230,6 +207,17 @@
       "it": "Ciclanova"
     },
     "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Voltobal Neu Malvenfroh",
+      "en": "Voltorb New Mauville",
+      "fr": "Voltorbe New Lavandia",
+      "es": "Voltorb Malvalanova",
+      "it": "Voltorb Ciclanova"
+    },
+    "type": "static"
   },
   {
     "id": 22,
@@ -276,18 +264,6 @@
     "type": "route"
   },
   {
-    "id": 26,
-    "names": {
-      "de": "Wüstentunnel",
-      "en": "Desert Underpass",
-      "fr": "Voie du Désert",
-      "es": "Gruta Desértica",
-      "it": "Galleria Deserto"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
     "id": 27,
     "names": {
       "de": "Meteorfälle",
@@ -323,13 +299,13 @@
   {
     "id": 30,
     "names": {
-      "de": "Bad Lavastadt",
-      "en": "Lavaridge Town",
-      "fr": "Vermilava",
-      "es": "Pueblo Lavacalda",
-      "it": "Cuordilava"
+      "de": "Isso-Ei Bad Lavastadt",
+      "en": "Wynaut Egg Lavaridge Town",
+      "fr": "Œuf Okéoké Vermilava",
+      "es": "Huevo de Wynaut Pueblo Lavacalda",
+      "it": "Uovo di Wynaut Cuordilava"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 31,
@@ -354,15 +330,15 @@
     "type": "route"
   },
   {
-    "id": 33,
+    "id": 70,
     "names": {
-      "de": "Wunderturm",
-      "en": "Mirage Tower",
-      "fr": "Tour Mirage",
-      "es": "Torre Espejismo",
-      "it": "Torre Miraggio"
+      "de": "Regirock Wüstenruine",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Ruines Désert",
+      "es": "Regirock Ruinas Desierto",
+      "it": "Regirock Rovine Sabbiose"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 34,
@@ -387,15 +363,26 @@
     "type": "route"
   },
   {
-    "id": 36,
+    "id": 71,
     "names": {
-      "de": "Baumhausen City",
-      "en": "Fortree City",
-      "fr": "Cimetronelle",
-      "es": "Ciudad Arborada",
-      "it": "Forestopoli"
+      "de": "Formeo Klima-Institut",
+      "en": "Castform Weather Institute",
+      "fr": "Morphéo Centre Météo",
+      "es": "Castform Instituto Meteorológico",
+      "it": "Castform Instituto Meteo"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Kecleon Route 119",
+      "en": "Kecleon Route 119",
+      "fr": "Kecleon Route 119",
+      "es": "Kecleon Ruta 119",
+      "it": "Kecleon Percorso 119"
+    },
+    "type": "static"
   },
   {
     "id": 37,
@@ -407,6 +394,28 @@
       "it": "Percorso 120"
     },
     "type": "route"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Kecleon Route 120",
+      "en": "Kecleon Route 120",
+      "fr": "Kecleon Route 120",
+      "es": "Kecleon Ruta 120",
+      "it": "Kecleon Percorso 120"
+    },
+    "type": "static"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Registeel Grabmal",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Tombeau Antique",
+      "es": "Registeel Tumba Antigua",
+      "it": "Registeel Tomba Antica"
+    },
+    "type": "static"
   },
   {
     "id": 38,
@@ -475,6 +484,17 @@
     "type": "route"
   },
   {
+    "id": 75,
+    "names": {
+      "de": "Lektrobal Team Aquas Versteck",
+      "en": "Electrode Aqua Hideout",
+      "fr": "Électrode Planque Aqua",
+      "es": "Electrode Guarida Aqua",
+      "it": "Electrode Rifugio Idro"
+    },
+    "type": "static"
+  },
+  {
     "id": 44,
     "names": {
       "de": "Route 124",
@@ -493,6 +513,17 @@
       "fr": "Algatia",
       "es": "Ciudad Algaria",
       "it": "Verdeazzupoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Unterwasser",
+      "en": "Underwater",
+      "fr": "Fond marin",
+      "es": "Bajo el agua",
+      "it": "Sott'acqua"
     },
     "type": "route"
   },
@@ -585,6 +616,17 @@
     "type": "route"
   },
   {
+    "id": 77,
+    "names": {
+      "de": "Kyogre Urzeithöhle",
+      "en": "Kyogre Cave of Origin",
+      "fr": "Kyogre Grotte Origine",
+      "es": "Kyogre Cueva Ancestral",
+      "it": "Kyogre Grotta dei Tempi"
+    },
+    "type": "static"
+  },
+  {
     "id": 54,
     "names": {
       "de": "Route 108",
@@ -625,17 +667,6 @@
       "fr": "Chenal 130",
       "es": "Ruta 130",
       "it": "Percorso 130"
-    },
-    "type": "route"
-  },
-  {
-    "id": 58,
-    "names": {
-      "de": "Wundereiland",
-      "en": "Mirage Island",
-      "fr": "Île Mirage",
-      "es": "Isla Espejismo",
-      "it": "Isola Miraggio"
     },
     "type": "route"
   },
@@ -728,15 +759,38 @@
     "type": "route"
   },
   {
-    "id": 67,
+    "id": 78,
     "names": {
-      "de": "Höhlenatelier",
-      "en": "Artisan Cave",
-      "fr": "Grotte Atelier",
-      "es": "Cueva Taller",
-      "it": "Grotta Artistica"
+      "de": "Rayquaza Himmelturm",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Pilier Céleste",
+      "es": "Rayquaza Pilar Celeste",
+      "it": "Rayquaza Torre dei Cieli"
     },
-    "type": "route",
+    "type": "static"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Tanhel Moosbach City",
+      "en": "Beldum Mossdeep City",
+      "fr": "Terhal Algatia",
+      "es": "Beldum Ciudad Algaria",
+      "it": "Beldum Verdeazzupoli"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Latias (umherstreifend)",
+      "en": "Latias (Roaming)",
+      "fr": "Latias (errant)",
+      "es": "Latias (errante)",
+      "it": "Latias (errante)"
+    },
+    "type": "static",
     "postgame": true
   }
 ]
