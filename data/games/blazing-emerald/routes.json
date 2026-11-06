@@ -44,17 +44,6 @@
     "type": "route"
   },
   {
-    "id": 5,
-    "names": {
-      "de": "Petalburg City",
-      "en": "Petalburg City",
-      "fr": "Petalburg City",
-      "es": "Petalburg City",
-      "it": "Petalburg City"
-    },
-    "type": "route"
-  },
-  {
     "id": 6,
     "names": {
       "de": "Route 104",
@@ -75,6 +64,17 @@
       "it": "Petalburg Woods"
     },
     "type": "route"
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Pineco Petalburg Woods",
+      "en": "Pineco Petalburg Woods",
+      "fr": "Pineco Petalburg Woods",
+      "es": "Pineco Petalburg Woods",
+      "it": "Pineco Petalburg Woods"
+    },
+    "type": "static"
   },
   {
     "id": 8,
@@ -99,6 +99,17 @@
     "type": "route"
   },
   {
+    "id": 12,
+    "names": {
+      "de": "Dewford Town",
+      "en": "Dewford Town",
+      "fr": "Dewford Town",
+      "es": "Dewford Town",
+      "it": "Dewford Town"
+    },
+    "type": "route"
+  },
+  {
     "id": 10,
     "names": {
       "de": "Route 105",
@@ -108,6 +119,17 @@
       "it": "Route 105"
     },
     "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Regice Island Cave",
+      "en": "Regice Island Cave",
+      "fr": "Regice Island Cave",
+      "es": "Regice Island Cave",
+      "it": "Regice Island Cave"
+    },
+    "type": "static"
   },
   {
     "id": 11,
@@ -121,13 +143,13 @@
     "type": "route"
   },
   {
-    "id": 12,
+    "id": 5,
     "names": {
-      "de": "Dewford Town",
-      "en": "Dewford Town",
-      "fr": "Dewford Town",
-      "es": "Dewford Town",
-      "it": "Dewford Town"
+      "de": "Petalburg City",
+      "en": "Petalburg City",
+      "fr": "Petalburg City",
+      "es": "Petalburg City",
+      "it": "Petalburg City"
     },
     "type": "route"
   },
@@ -220,6 +242,28 @@
     "type": "route"
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Zapdos Trader's Den",
+      "en": "Zapdos Trader's Den",
+      "fr": "Zapdos Trader's Den",
+      "es": "Zapdos Trader's Den",
+      "it": "Zapdos Trader's Den"
+    },
+    "type": "static"
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Game Corner Mauville City",
+      "en": "Game Corner Mauville City",
+      "fr": "Game Corner Mauville City",
+      "es": "Game Corner Mauville City",
+      "it": "Game Corner Mauville City"
+    },
+    "type": "static"
+  },
+  {
     "id": 21,
     "names": {
       "de": "Route 117",
@@ -229,6 +273,17 @@
       "it": "Route 117"
     },
     "type": "route"
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Bawlfrog Verdanturf Town",
+      "en": "Bawlfrog Verdanturf Town",
+      "fr": "Bawlfrog Verdanturf Town",
+      "es": "Bawlfrog Verdanturf Town",
+      "it": "Bawlfrog Verdanturf Town"
+    },
+    "type": "static"
   },
   {
     "id": 22,
@@ -242,6 +297,17 @@
     "type": "route"
   },
   {
+    "id": 83,
+    "names": {
+      "de": "Entei Shimmering Summit",
+      "en": "Entei Shimmering Summit",
+      "fr": "Entei Shimmering Summit",
+      "es": "Entei Shimmering Summit",
+      "it": "Entei Shimmering Summit"
+    },
+    "type": "static"
+  },
+  {
     "id": 23,
     "names": {
       "de": "Hidden Grove",
@@ -251,6 +317,17 @@
       "it": "Hidden Grove"
     },
     "type": "route"
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Mew Hidden Grove",
+      "en": "Mew Hidden Grove",
+      "fr": "Mew Hidden Grove",
+      "es": "Mew Hidden Grove",
+      "it": "Mew Hidden Grove"
+    },
+    "type": "static"
   },
   {
     "id": 24,
@@ -264,6 +341,17 @@
     "type": "route"
   },
   {
+    "id": 85,
+    "names": {
+      "de": "Regirock Desert Ruins",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Desert Ruins",
+      "es": "Regirock Desert Ruins",
+      "it": "Regirock Desert Ruins"
+    },
+    "type": "static"
+  },
+  {
     "id": 25,
     "names": {
       "de": "Mirage Tower",
@@ -273,6 +361,17 @@
       "it": "Mirage Tower"
     },
     "type": "route"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Fossil Rustboro City",
+      "en": "Fossil Rustboro City",
+      "fr": "Fossil Rustboro City",
+      "es": "Fossil Rustboro City",
+      "it": "Fossil Rustboro City"
+    },
+    "type": "static"
   },
   {
     "id": 26,
@@ -308,13 +407,13 @@
     "type": "route"
   },
   {
-    "id": 29,
+    "id": 87,
     "names": {
-      "de": "Fallarbor Mines",
-      "en": "Fallarbor Mines",
-      "fr": "Fallarbor Mines",
-      "es": "Fallarbor Mines",
-      "it": "Fallarbor Mines"
+      "de": "Crater Crag",
+      "en": "Crater Crag",
+      "fr": "Crater Crag",
+      "es": "Crater Crag",
+      "it": "Crater Crag"
     },
     "type": "route"
   },
@@ -376,13 +475,13 @@
   {
     "id": 35,
     "names": {
-      "de": "Lavaridge Town",
-      "en": "Lavaridge Town",
-      "fr": "Lavaridge Town",
-      "es": "Lavaridge Town",
-      "it": "Lavaridge Town"
+      "de": "Egg Lavaridge Town",
+      "en": "Egg Lavaridge Town",
+      "fr": "Egg Lavaridge Town",
+      "es": "Egg Lavaridge Town",
+      "it": "Egg Lavaridge Town"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 36,
@@ -407,6 +506,17 @@
     "type": "route"
   },
   {
+    "id": 88,
+    "names": {
+      "de": "Jirachi Wish Cave",
+      "en": "Jirachi Wish Cave",
+      "fr": "Jirachi Wish Cave",
+      "es": "Jirachi Wish Cave",
+      "it": "Jirachi Wish Cave"
+    },
+    "type": "static"
+  },
+  {
     "id": 38,
     "names": {
       "de": "New Mauville",
@@ -416,6 +526,17 @@
       "it": "New Mauville"
     },
     "type": "route"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Voltorb/Raikou New Mauville",
+      "en": "Voltorb/Raikou New Mauville",
+      "fr": "Voltorb/Raikou New Mauville",
+      "es": "Voltorb/Raikou New Mauville",
+      "it": "Voltorb/Raikou New Mauville"
+    },
+    "type": "static"
   },
   {
     "id": 39,
@@ -451,6 +572,28 @@
     "type": "route"
   },
   {
+    "id": 90,
+    "names": {
+      "de": "Kecleon Route 119",
+      "en": "Kecleon Route 119",
+      "fr": "Kecleon Route 119",
+      "es": "Kecleon Route 119",
+      "it": "Kecleon Route 119"
+    },
+    "type": "static"
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Castform Weather Institute",
+      "en": "Castform Weather Institute",
+      "fr": "Castform Weather Institute",
+      "es": "Castform Weather Institute",
+      "it": "Castform Weather Institute"
+    },
+    "type": "static"
+  },
+  {
     "id": 42,
     "names": {
       "de": "Fortree City",
@@ -471,6 +614,28 @@
       "it": "Route 120"
     },
     "type": "route"
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Kecleon Route 120",
+      "en": "Kecleon Route 120",
+      "fr": "Kecleon Route 120",
+      "es": "Kecleon Route 120",
+      "it": "Kecleon Route 120"
+    },
+    "type": "static"
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Registeel Ancient Tomb",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Ancient Tomb",
+      "es": "Registeel Ancient Tomb",
+      "it": "Registeel Ancient Tomb"
+    },
+    "type": "static"
   },
   {
     "id": 44,
@@ -540,6 +705,17 @@
     "type": "route"
   },
   {
+    "id": 94,
+    "names": {
+      "de": "Celebi Route 123",
+      "en": "Celebi Route 123",
+      "fr": "Celebi Route 123",
+      "es": "Celebi Route 123",
+      "it": "Celebi Route 123"
+    },
+    "type": "static"
+  },
+  {
     "id": 50,
     "names": {
       "de": "Lilycove City",
@@ -549,6 +725,39 @@
       "it": "Lilycove City"
     },
     "type": "route"
+  },
+  {
+    "id": 95,
+    "names": {
+      "de": "Gift Pokémon Lilycove City",
+      "en": "Gift Pokémon Lilycove City",
+      "fr": "Gift Pokémon Lilycove City",
+      "es": "Gift Pokémon Lilycove City",
+      "it": "Gift Pokémon Lilycove City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 96,
+    "names": {
+      "de": "Shadow Lugia Lilycove City",
+      "en": "Shadow Lugia Lilycove City",
+      "fr": "Shadow Lugia Lilycove City",
+      "es": "Shadow Lugia Lilycove City",
+      "it": "Shadow Lugia Lilycove City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "Electrode Aqua Hideout",
+      "en": "Electrode Aqua Hideout",
+      "fr": "Electrode Aqua Hideout",
+      "es": "Electrode Aqua Hideout",
+      "it": "Electrode Aqua Hideout"
+    },
+    "type": "static"
   },
   {
     "id": 51,
@@ -573,6 +782,17 @@
     "type": "route"
   },
   {
+    "id": 98,
+    "names": {
+      "de": "Manaphy Underwater",
+      "en": "Manaphy Underwater",
+      "fr": "Manaphy Underwater",
+      "es": "Manaphy Underwater",
+      "it": "Manaphy Underwater"
+    },
+    "type": "static"
+  },
+  {
     "id": 53,
     "names": {
       "de": "Mossdeep City",
@@ -595,6 +815,39 @@
     "type": "route"
   },
   {
+    "id": 99,
+    "names": {
+      "de": "Deoxys The Moon",
+      "en": "Deoxys The Moon",
+      "fr": "Deoxys The Moon",
+      "es": "Deoxys The Moon",
+      "it": "Deoxys The Moon"
+    },
+    "type": "static"
+  },
+  {
+    "id": 100,
+    "names": {
+      "de": "Metagross The Moon",
+      "en": "Metagross The Moon",
+      "fr": "Metagross The Moon",
+      "es": "Metagross The Moon",
+      "it": "Metagross The Moon"
+    },
+    "type": "static"
+  },
+  {
+    "id": 101,
+    "names": {
+      "de": "Metunn Ancient Alcove",
+      "en": "Metunn Ancient Alcove",
+      "fr": "Metunn Ancient Alcove",
+      "es": "Metunn Ancient Alcove",
+      "it": "Metunn Ancient Alcove"
+    },
+    "type": "static"
+  },
+  {
     "id": 55,
     "names": {
       "de": "Route 125",
@@ -615,6 +868,17 @@
       "it": "Shoal Cave"
     },
     "type": "route"
+  },
+  {
+    "id": 102,
+    "names": {
+      "de": "Onix/Suicune Shoal Cave",
+      "en": "Onix/Suicune Shoal Cave",
+      "fr": "Onix/Suicune Shoal Cave",
+      "es": "Onix/Suicune Shoal Cave",
+      "it": "Onix/Suicune Shoal Cave"
+    },
+    "type": "static"
   },
   {
     "id": 57,
@@ -705,6 +969,17 @@
     "type": "route"
   },
   {
+    "id": 103,
+    "names": {
+      "de": "Lugia Briny Trench",
+      "en": "Lugia Briny Trench",
+      "fr": "Lugia Briny Trench",
+      "es": "Lugia Briny Trench",
+      "it": "Lugia Briny Trench"
+    },
+    "type": "static"
+  },
+  {
     "id": 65,
     "names": {
       "de": "Verdant Enclave",
@@ -714,6 +989,17 @@
       "it": "Verdant Enclave"
     },
     "type": "route"
+  },
+  {
+    "id": 104,
+    "names": {
+      "de": "Shaymin Verdant Enclave",
+      "en": "Shaymin Verdant Enclave",
+      "fr": "Shaymin Verdant Enclave",
+      "es": "Shaymin Verdant Enclave",
+      "it": "Shaymin Verdant Enclave"
+    },
+    "type": "static"
   },
   {
     "id": 66,
@@ -736,6 +1022,17 @@
       "it": "Sky Pillar"
     },
     "type": "route"
+  },
+  {
+    "id": 105,
+    "names": {
+      "de": "Rayquaza Sky Pillar",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Sky Pillar",
+      "es": "Rayquaza Sky Pillar",
+      "it": "Rayquaza Sky Pillar"
+    },
+    "type": "static"
   },
   {
     "id": 68,
@@ -793,6 +1090,17 @@
     "type": "route"
   },
   {
+    "id": 106,
+    "names": {
+      "de": "Latios/Latias Southern Island",
+      "en": "Latios/Latias Southern Island",
+      "fr": "Latios/Latias Southern Island",
+      "es": "Latios/Latias Southern Island",
+      "it": "Latios/Latias Southern Island"
+    },
+    "type": "static"
+  },
+  {
     "id": 73,
     "names": {
       "de": "Ever Grande City",
@@ -839,12 +1147,139 @@
   {
     "id": 77,
     "names": {
-      "de": "Mirage Island",
-      "en": "Mirage Island",
-      "fr": "Mirage Island",
-      "es": "Mirage Island",
-      "it": "Mirage Island"
+      "de": "Galarian Moltres Mirage Island",
+      "en": "Galarian Moltres Mirage Island",
+      "fr": "Galarian Moltres Mirage Island",
+      "es": "Galarian Moltres Mirage Island",
+      "it": "Galarian Moltres Mirage Island"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 107,
+    "names": {
+      "de": "Ho-Oh/Silviper Shimmering Summit",
+      "en": "Ho-Oh/Silviper Shimmering Summit",
+      "fr": "Ho-Oh/Silviper Shimmering Summit",
+      "es": "Ho-Oh/Silviper Shimmering Summit",
+      "it": "Ho-Oh/Silviper Shimmering Summit"
+    },
+    "type": "static"
+  },
+  {
+    "id": 108,
+    "names": {
+      "de": "Darkrai Nightmare",
+      "en": "Darkrai Nightmare",
+      "fr": "Darkrai Nightmare",
+      "es": "Darkrai Nightmare",
+      "it": "Darkrai Nightmare"
+    },
+    "type": "static"
+  },
+  {
+    "id": 109,
+    "names": {
+      "de": "Cresselia Crescent Isle",
+      "en": "Cresselia Crescent Isle",
+      "fr": "Cresselia Crescent Isle",
+      "es": "Cresselia Crescent Isle",
+      "it": "Cresselia Crescent Isle"
+    },
+    "type": "static"
+  },
+  {
+    "id": 110,
+    "names": {
+      "de": "Spheal Oldale Town",
+      "en": "Spheal Oldale Town",
+      "fr": "Spheal Oldale Town",
+      "es": "Spheal Oldale Town",
+      "it": "Spheal Oldale Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 111,
+    "names": {
+      "de": "Galarian Articuno Littleroot Town",
+      "en": "Galarian Articuno Littleroot Town",
+      "fr": "Galarian Articuno Littleroot Town",
+      "es": "Galarian Articuno Littleroot Town",
+      "it": "Galarian Articuno Littleroot Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 112,
+    "names": {
+      "de": "Beldum Mossdeep City",
+      "en": "Beldum Mossdeep City",
+      "fr": "Beldum Mossdeep City",
+      "es": "Beldum Mossdeep City",
+      "it": "Beldum Mossdeep City"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 113,
+    "names": {
+      "de": "Egg Ever Grande City",
+      "en": "Egg Ever Grande City",
+      "fr": "Egg Ever Grande City",
+      "es": "Egg Ever Grande City",
+      "it": "Egg Ever Grande City"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 114,
+    "names": {
+      "de": "Crawb New Mauville",
+      "en": "Crawb New Mauville",
+      "fr": "Crawb New Mauville",
+      "es": "Crawb New Mauville",
+      "it": "Crawb New Mauville"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 115,
+    "names": {
+      "de": "Victini Egg Crater Crag",
+      "en": "Victini Egg Crater Crag",
+      "fr": "Victini Egg Crater Crag",
+      "es": "Victini Egg Crater Crag",
+      "it": "Victini Egg Crater Crag"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 116,
+    "names": {
+      "de": "Kyogre Marine Cave",
+      "en": "Kyogre Marine Cave",
+      "fr": "Kyogre Marine Cave",
+      "es": "Kyogre Marine Cave",
+      "it": "Kyogre Marine Cave"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 117,
+    "names": {
+      "de": "Groudon Terra Cave",
+      "en": "Groudon Terra Cave",
+      "fr": "Groudon Terra Cave",
+      "es": "Groudon Terra Cave",
+      "it": "Groudon Terra Cave"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]
