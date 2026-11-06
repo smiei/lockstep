@@ -292,6 +292,19 @@
       ],
       "note": "Mountain verified; \"Summit\" translated plainly."
     },
+    "Mt. Silver Cave": {
+      "de": "Silberberghöhle",
+      "fr": "Grotte Argentée",
+      "es": "Cueva Monte Plateado",
+      "it": "Grotta Argento",
+      "sources": [
+        "Silberberg",
+        "Mont Argenté",
+        "Monte Plateado",
+        "Monte Argento"
+      ],
+      "note": "HG/SS interior of Mt. Silver. German read from the German HeartGold ROM; Italian per Pokémon Central; French per Poképédia's Mont Argenté page; Spanish per WikiDex, which may be the wiki's own name for the interior."
+    },
     "Nimbasa Subway": {
       "de": "Rayono City, Kampfmetro",
       "fr": "Méanville, Métro de Combat",

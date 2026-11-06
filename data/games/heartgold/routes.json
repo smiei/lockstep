@@ -503,7 +503,7 @@
       "es": "Monte Mortero (Tyrogue)",
       "it": "Monte Scodella (Tyrogue)"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 55,
@@ -547,7 +547,7 @@
       "es": "Guarida Rocket",
       "it": "Rifugio Rocket"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 56,
@@ -702,18 +702,6 @@
       "fr": "Route 6",
       "es": "Ruta 6",
       "it": "Percorso 6"
-    },
-    "type": "route",
-    "region": "kanto"
-  },
-  {
-    "id": 72,
-    "names": {
-      "de": "Saffronia City",
-      "en": "Saffron City",
-      "fr": "Safrania",
-      "es": "Ciudad Azafrán",
-      "it": "Zafferanopoli"
     },
     "type": "route",
     "region": "kanto"
@@ -899,18 +887,6 @@
     "region": "kanto"
   },
   {
-    "id": 88,
-    "names": {
-      "de": "Kraftwerk",
-      "en": "Power Plant",
-      "fr": "Centrale",
-      "es": "Central Energía",
-      "it": "Centrale Elettrica"
-    },
-    "type": "route",
-    "region": "kanto"
-  },
-  {
     "id": 89,
     "names": {
       "de": "Kraftwerk (Zapdos)",
@@ -1014,18 +990,6 @@
       "fr": "Cave Taupiqueur",
       "es": "Cueva Diglett",
       "it": "Grotta Diglett"
-    },
-    "type": "route",
-    "region": "kanto"
-  },
-  {
-    "id": 98,
-    "names": {
-      "de": "Marmoria City",
-      "en": "Pewter City",
-      "fr": "Argenta",
-      "es": "Ciudad Plateada",
-      "it": "Plumbeopoli"
     },
     "type": "route",
     "region": "kanto"
@@ -1283,6 +1247,18 @@
     "region": "kanto"
   },
   {
+    "id": 121,
+    "names": {
+      "de": "Silberberghöhle",
+      "en": "Mt. Silver Cave",
+      "fr": "Grotte Argentée",
+      "es": "Cueva Monte Plateado",
+      "it": "Grotta Argento"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
     "id": 119,
     "names": {
       "de": "Silberberg (Lavados)",
@@ -1290,6 +1266,30 @@
       "fr": "Mont Argenté (Sulfura)",
       "es": "Monte Plateado (Moltres)",
       "it": "Monte Argento (Moltres)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 122,
+    "names": {
+      "de": "Felsenherzturm (Kyogre/Groudon)",
+      "en": "Embedded Tower (Kyogre/Groudon)",
+      "fr": "Tour Enfouie (Kyogre/Groudon)",
+      "es": "Torre Oculta (Kyogre/Groudon)",
+      "it": "Torre Occulta (Kyogre/Groudon)"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 123,
+    "names": {
+      "de": "Felsenherzturm (Rayquaza)",
+      "en": "Embedded Tower (Rayquaza)",
+      "fr": "Tour Enfouie (Rayquaza)",
+      "es": "Torre Oculta (Rayquaza)",
+      "it": "Torre Occulta (Rayquaza)"
     },
     "type": "static",
     "region": "kanto"
