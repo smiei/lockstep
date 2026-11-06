@@ -300,7 +300,7 @@ export function PokemonDetailModal({
         <div className="grid gap-5 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)]">
           {/* The specimen: sprite on its plate, name, types, label. */}
           <div className="flex min-w-0 flex-col gap-2">
-            <div className="flex justify-center rounded-md bg-sunken py-2">
+            <div className="flex justify-center py-2">
               <PokemonSprite
                 pokemonId={pokemon.id}
                 bodyId={body?.id ?? null}
