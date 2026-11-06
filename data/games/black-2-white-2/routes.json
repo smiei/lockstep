@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Eventura City",
-      "en": "Aspertia City",
-      "fr": "Pavonnay",
-      "es": "Ciudad Engobe",
-      "it": "Alisopoli"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 19",
@@ -35,13 +24,14 @@
   {
     "id": 4,
     "names": {
-      "de": "Dausing",
-      "en": "Floccesy Town",
-      "fr": "Amaillide",
-      "es": "Pueblo Ocre",
-      "it": "Venturia"
+      "de": "Kaumalat/Dratini, Dausing",
+      "en": "Gible/Dratini, Floccesy Town",
+      "fr": "Griknot/Minidraco, Amaillide",
+      "es": "Gible/Dratini, Pueblo Ocre",
+      "it": "Gible/Dratini, Venturia"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 5,
@@ -66,17 +56,6 @@
     "type": "route"
   },
   {
-    "id": 7,
-    "names": {
-      "de": "Vapydro City",
-      "en": "Virbank City",
-      "fr": "Ondes-sur-Mer",
-      "es": "Ciudad Hormigón",
-      "it": "Zondopoli"
-    },
-    "type": "route"
-  },
-  {
     "id": 8,
     "names": {
       "de": "Vapydro-Werke",
@@ -97,6 +76,17 @@
       "it": "Austropoli"
     },
     "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Evoli, Stratos City",
+      "en": "Eevee, Castelia City",
+      "fr": "Évoli, Volucité",
+      "es": "Eevee, Ciudad Porcelana",
+      "it": "Eevee, Austropoli"
+    },
+    "type": "static"
   },
   {
     "id": 10,
@@ -132,6 +122,17 @@
     "type": "route"
   },
   {
+    "id": 65,
+    "names": {
+      "de": "Washakwil/Grypheldis, Route 4",
+      "en": "Braviary/Mandibuzz, Route 4",
+      "fr": "Gueriaigle/Vaututrice, Route 4",
+      "es": "Braviary/Mandibuzz, Ruta 4",
+      "it": "Braviary/Mandibuzz, Percorso 4"
+    },
+    "type": "static"
+  },
+  {
     "id": 13,
     "names": {
       "de": "Wüstenresort",
@@ -152,6 +153,17 @@
       "it": "Castello Sepolto"
     },
     "type": "route"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Ramoth, Alter Palast",
+      "en": "Volcarona, Relic Castle",
+      "fr": "Pyrax, Château Enfoui",
+      "es": "Volcarona, Castillo Ancestral",
+      "it": "Volcarona, Castello Sepolto"
+    },
+    "type": "static"
   },
   {
     "id": 15,
@@ -200,13 +212,13 @@
   {
     "id": 19,
     "names": {
-      "de": "Marea City",
-      "en": "Driftveil City",
-      "fr": "Port Yoneuve",
-      "es": "Ciudad Fayenza",
-      "it": "Libecciopoli"
+      "de": "Zorua, Marea City",
+      "en": "Zorua, Driftveil City",
+      "fr": "Zorua, Port Yoneuve",
+      "es": "Zorua, Ciudad Fayenza",
+      "it": "Zorua, Libecciopoli"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 20,
@@ -220,6 +232,39 @@
     "type": "route"
   },
   {
+    "id": 67,
+    "names": {
+      "de": "Sesokitz, Route 6",
+      "en": "Deerling, Route 6",
+      "fr": "Vivaldaim, Route 6",
+      "es": "Deerling, Ruta 6",
+      "it": "Deerling, Percorso 6"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Eventura City",
+      "en": "Aspertia City",
+      "fr": "Pavonnay",
+      "es": "Ciudad Engobe",
+      "it": "Alisopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Vapydro City",
+      "en": "Virbank City",
+      "fr": "Ondes-sur-Mer",
+      "es": "Ciudad Hormigón",
+      "it": "Zondopoli"
+    },
+    "type": "route"
+  },
+  {
     "id": 21,
     "names": {
       "de": "Panaero-Höhle",
@@ -227,6 +272,17 @@
       "fr": "Grotte Parsemille",
       "es": "Cueva Loza",
       "it": "Cava Ponentopoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Kammer der Weisung",
+      "en": "Guidance Chamber",
+      "fr": "Espace Guide",
+      "es": "Estancia Orientación",
+      "it": "Sala della Guida"
     },
     "type": "route"
   },
@@ -275,6 +331,18 @@
     "type": "route"
   },
   {
+    "id": 69,
+    "names": {
+      "de": "Heatran, Janusberg",
+      "en": "Heatran, Reversal Mountain",
+      "fr": "Heatran, Mont Renenvers",
+      "es": "Heatran, Montaña Reversía",
+      "it": "Heatran, Monte Antipodi"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 26,
     "names": {
       "de": "Bizarro-Haus",
@@ -310,6 +378,18 @@
     "postgame": true
   },
   {
+    "id": 70,
+    "names": {
+      "de": "Apoquallyp, Bucht von Ondula",
+      "en": "Jellicent, Undella Bay",
+      "fr": "Moyade, Baie Vaguelone",
+      "es": "Jellicent, Bahía Arenisca",
+      "it": "Jellicent, Baia Spiraria"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 29,
     "names": {
       "de": "Route 13",
@@ -319,6 +399,18 @@
       "it": "Percorso 13"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Kobalium, Route 13",
+      "en": "Cobalion, Route 13",
+      "fr": "Cobaltium, Route 13",
+      "es": "Cobalion, Ruta 13",
+      "it": "Cobalion, Percorso 13"
+    },
+    "type": "static",
     "postgame": true
   },
   {
@@ -358,6 +450,18 @@
     "postgame": true
   },
   {
+    "id": 72,
+    "names": {
+      "de": "Viridium, Route 11",
+      "en": "Virizion, Route 11",
+      "fr": "Viridium, Route 11",
+      "es": "Virizion, Ruta 11",
+      "it": "Virizion, Percorso 11"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 33,
     "names": {
       "de": "Route 9",
@@ -378,6 +482,17 @@
       "it": "Grotta Costiera"
     },
     "type": "route"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Castellith, Strandgrotte",
+      "en": "Crustle, Seaside Cave",
+      "fr": "Crabaraque, Grotte Littorale",
+      "es": "Crustle, Gruta Marina",
+      "it": "Crustle, Grotta Costiera"
+    },
+    "type": "static"
   },
   {
     "id": 35,
@@ -413,6 +528,17 @@
     "type": "route"
   },
   {
+    "id": 74,
+    "names": {
+      "de": "Terrakium, Route 22",
+      "en": "Terrakion, Route 22",
+      "fr": "Terrakium, Route 22",
+      "es": "Terrakion, Ruta 22",
+      "it": "Terrakion, Percorso 22"
+    },
+    "type": "static"
+  },
+  {
     "id": 38,
     "names": {
       "de": "Riesengrotte",
@@ -425,6 +551,18 @@
     "postgame": true
   },
   {
+    "id": 75,
+    "names": {
+      "de": "Kyurem, Riesengrotte",
+      "en": "Kyurem, Giant Chasm",
+      "fr": "Kyurem, Grotte Cyclopéenne",
+      "es": "Kyurem, Boquete Gigante",
+      "it": "Kyurem, Fossa Gigante"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 39,
     "names": {
       "de": "Route 23",
@@ -434,6 +572,42 @@
       "it": "Percorso 23"
     },
     "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Selfe, Beschwörungshöhle",
+      "en": "Uxie, Cave of Being",
+      "fr": "Créhelf, Caverne des Esprits",
+      "es": "Uxie, Cueva Psique",
+      "it": "Uxie, Cava della Mente"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Vesprit, Beschwörungshöhle",
+      "en": "Mesprit, Cave of Being",
+      "fr": "Créfollet, Caverne des Esprits",
+      "es": "Mesprit, Cueva Psique",
+      "it": "Mesprit, Cava della Mente"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Tobutz, Beschwörungshöhle",
+      "en": "Azelf, Cave of Being",
+      "fr": "Créfadet, Caverne des Esprits",
+      "es": "Azelf, Cueva Psique",
+      "it": "Azelf, Cava della Mente"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 40,
@@ -456,6 +630,18 @@
       "it": "Ponte Meraviglie"
     },
     "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Cresselia, Wunderbrücke",
+      "en": "Cresselia, Marvelous Bridge",
+      "fr": "Cresselia, Pont de l'Inconnu",
+      "es": "Cresselia, Puente Progreso",
+      "it": "Cresselia, Ponte Meraviglie"
+    },
+    "type": "static",
     "postgame": true
   },
   {
@@ -506,6 +692,17 @@
     "type": "route"
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
+    },
+    "type": "route"
+  },
+  {
     "id": 46,
     "names": {
       "de": "Nevaio City",
@@ -528,6 +725,18 @@
     "type": "route"
   },
   {
+    "id": 81,
+    "names": {
+      "de": "Reshiram/Zekrom, Drachenstiege",
+      "en": "Reshiram/Zekrom, Dragonspiral Tower",
+      "fr": "Reshiram/Zekrom, Tour Dragospire",
+      "es": "Reshiram/Zekrom, Torre Duodraco",
+      "it": "Reshiram/Zekrom, Torre Dragospira"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 48,
     "names": {
       "de": "Wendelberg",
@@ -537,6 +746,18 @@
       "it": "Monte Vite"
     },
     "type": "route"
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Regigigas, Wendelberg",
+      "en": "Regigigas, Twist Mountain",
+      "fr": "Regigigas, Mont Foré",
+      "es": "Regigigas, Monte Tuerca",
+      "it": "Regigigas, Monte Vite"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 49,
@@ -561,6 +782,42 @@
     "type": "route"
   },
   {
+    "id": 83,
+    "names": {
+      "de": "Regirock, Unterirdische Ruine",
+      "en": "Regirock, Underground Ruins",
+      "fr": "Regirock, Ruines Enfouies",
+      "es": "Regirock, Ruinas Subterráneas",
+      "it": "Regirock, Rovine Sotterranee"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Regice, Unterirdische Ruine",
+      "en": "Regice, Underground Ruins",
+      "fr": "Regice, Ruines Enfouies",
+      "es": "Regice, Ruinas Subterráneas",
+      "it": "Regice, Rovine Sotterranee"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Registeel, Unterirdische Ruine",
+      "en": "Registeel, Underground Ruins",
+      "fr": "Registeel, Ruines Enfouies",
+      "es": "Registeel, Ruinas Subterráneas",
+      "it": "Registeel, Rovine Sotterranee"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 51,
     "names": {
       "de": "Ewigenwald",
@@ -574,13 +831,24 @@
   {
     "id": 52,
     "names": {
-      "de": "Septerna City",
-      "en": "Nacrene City",
-      "fr": "Maillard",
-      "es": "Ciudad Esmalte",
-      "it": "Zefiropoli"
+      "de": "Fossil, Septerna City",
+      "en": "Fossil, Nacrene City",
+      "fr": "Fossile, Maillard",
+      "es": "Fósil, Ciudad Esmalte",
+      "it": "Fossile, Zefiropoli"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Wonneira-Ei, Septerna City",
+      "en": "Happiny Egg, Nacrene City",
+      "fr": "Œuf Ptiravi, Maillard",
+      "es": "Huevo de Happiny, Ciudad Esmalte",
+      "it": "Uovo di Happiny, Zefiropoli"
+    },
+    "type": "static"
   },
   {
     "id": 53,
@@ -627,6 +895,18 @@
     "type": "route"
   },
   {
+    "id": 87,
+    "names": {
+      "de": "Latias/Latios, Traumbrache",
+      "en": "Latias/Latios, Dreamyard",
+      "fr": "Latias/Latios, Vestiges du Rêve",
+      "es": "Latias/Latios, Solar de los Sueños",
+      "it": "Latias/Latios, Cantiere dei Sogni"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 57,
     "names": {
       "de": "Route 2",
@@ -634,17 +914,6 @@
       "fr": "Route 2",
       "es": "Ruta 2",
       "it": "Percorso 2"
-    },
-    "type": "route"
-  },
-  {
-    "id": 58,
-    "names": {
-      "de": "Gavina",
-      "en": "Accumula Town",
-      "fr": "Arabelle",
-      "es": "Pueblo Terracota",
-      "it": "Quattroventi"
     },
     "type": "route"
   },
@@ -705,5 +974,17 @@
       "it": "Riserva Naturale"
     },
     "type": "route"
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Maxax, Naturschutzgebiet",
+      "en": "Haxorus, Nature Preserve",
+      "fr": "Tranchodon, Réserve Naturelle",
+      "es": "Haxorus, Reserva Natural",
+      "it": "Haxorus, Riserva Naturale"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]
