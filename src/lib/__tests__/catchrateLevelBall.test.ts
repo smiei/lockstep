@@ -78,6 +78,10 @@ describe("HeartGold/SoulSilver Apricorn balls", () => {
 
   it("include the Cherish Ball, which catches like a Poké Ball", () => {
     expect(getBallIdsForGeneration(4, "heartgold-soulsilver")).toContain("cherish");
+    // Every game from Gen 4 on has it - event Pokémon arrive in it.
+    for (const [gen, vg] of [[4, "platinum"], [5, "black-white"], [6, "x-y"], [7, "sun-moon"], [8, "sword-shield"], [8, "brilliant-diamond-and-shining-pearl"], [9, "scarlet-violet"]] as const) {
+      expect(getBallIdsForGeneration(gen, vg)).toContain("cherish");
+    }
     expect(computeCatchChance(4, { ...base, ball: "cherish" }).ballText).toBe("×1");
   });
 

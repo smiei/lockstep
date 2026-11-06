@@ -128,6 +128,8 @@ const BALLS_GEN5: BallId[] = [
   "premier",
   "heal",
   "dream",
+  // Event Pokémon arrive in it from Gen 4 on; it catches like a Poké Ball.
+  "cherish",
 ];
 
 // Kalos and Hoenn's remakes: the Gen 5 balls without the Dream Ball, which
@@ -155,7 +157,7 @@ const BALLS_GEN8: BallId[] = [...BALLS_GEN7, "dream", "safari", "sport"];
 
 // Brilliant Diamond/Shining Pearl follow Diamond/Pearl's item list (Safari
 // Balls in the Great Marsh, no Apricorns) on top of Gen 8's capture code.
-const BALLS_BDSP: BallId[] = [...BALLS_GEN4, "heal"];
+const BALLS_BDSP: BallId[] = [...BALLS_GEN4, "heal", "cherish"];
 const BDSP_VERSION_GROUP = "brilliant-diamond-and-shining-pearl";
 
 // Nihilego to Guzzlord, then Poipole to Blacephalon (Necrozma, 800, is not
@@ -251,7 +253,7 @@ export function getBallIdsForGeneration(generation: number, versionGroup?: strin
   if (generation === 4) {
     return versionGroup === "heartgold-soulsilver"
       ? BALLS_GEN4_HGSS
-      : [...BALLS_GEN4, "heal", "park"];
+      : [...BALLS_GEN4, "heal", "park", "cherish"];
   }
   return BALLS_GEN3;
 }

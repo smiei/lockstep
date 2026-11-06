@@ -35,8 +35,8 @@ describe("Infinite Fusion ball list", () => {
   });
 
   it("leaves every other game's list alone", () => {
-    expect(getBallIdsForGeneration(5)).not.toContain("cherish");
-    expect(getBallIdsForGeneration(5, "black-white")).toHaveLength(15);
+    expect(getBallIdsForGeneration(3)).not.toContain("cherish");
+    expect(getBallIdsForGeneration(5, "black-white")).toHaveLength(16);
   });
 
   it("works the Fast Ball out from base Speed instead of asking", () => {
