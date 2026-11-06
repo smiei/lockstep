@@ -110,6 +110,17 @@
     "type": "route"
   },
   {
+    "id": 82,
+    "names": {
+      "de": "Lapras Einheitstunnel",
+      "en": "Lapras Union Cave",
+      "fr": "Lokhlass Caves Jumelles",
+      "es": "Lapras Cueva Unión",
+      "it": "Lapras Grotta di mezzo"
+    },
+    "type": "static"
+  },
+  {
     "id": 13,
     "names": {
       "de": "Route 33",
@@ -209,6 +220,17 @@
     "type": "route"
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Neuborkia",
+      "en": "New Bark Town",
+      "fr": "Bourg Geon",
+      "es": "Pueblo Primavera",
+      "it": "Borgo Foglianova"
+    },
+    "type": "route"
+  },
+  {
     "id": 8,
     "names": {
       "de": "Viola City",
@@ -216,6 +238,17 @@
       "fr": "Mauville",
       "es": "Ciudad Malva",
       "it": "Violapoli"
+    },
+    "type": "route"
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Knofensa-Turm",
+      "en": "Sprout Tower",
+      "fr": "Tour Chétiflor",
+      "es": "Torre Bellsprout",
+      "it": "Torre Sprout"
     },
     "type": "route"
   },
@@ -429,6 +462,17 @@
     "type": "route"
   },
   {
+    "id": 83,
+    "names": {
+      "de": "Lektrobal Rocket-Versteck",
+      "en": "Electrode Team Rocket HQ",
+      "fr": "Électrode Repaire Rocket",
+      "es": "Electrode Escondite Team Rocket",
+      "it": "Electrode Covo Team Rocket"
+    },
+    "type": "static"
+  },
+  {
     "id": 40,
     "names": {
       "de": "Eispfad",
@@ -480,6 +524,17 @@
       "fr": "Route 45",
       "es": "Ruta 45",
       "it": "Percorso 45"
+    },
+    "type": "route"
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Zinnturm",
+      "en": "Tin Tower",
+      "fr": "Tour Ferraille",
+      "es": "Torre Hojalata",
+      "it": "Torre di Latta"
     },
     "type": "route"
   },
@@ -539,6 +594,18 @@
     "type": "route"
   },
   {
+    "id": 85,
+    "names": {
+      "de": "Orania City",
+      "en": "Vermilion City",
+      "fr": "Carmin sur Mer",
+      "es": "Ciudad Carmín",
+      "it": "Aranciopoli"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
     "id": 66,
     "names": {
       "de": "Relaxo Orania City",
@@ -575,6 +642,18 @@
     "region": "kanto"
   },
   {
+    "id": 86,
+    "names": {
+      "de": "Prismania City",
+      "en": "Celadon City",
+      "fr": "Céladopole",
+      "es": "Ciudad Azulona",
+      "it": "Azzurropoli"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
     "id": 71,
     "names": {
       "de": "Route 16",
@@ -606,6 +685,18 @@
       "fr": "Route 18",
       "es": "Ruta 18",
       "it": "Percorso 18"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 87,
+    "names": {
+      "de": "Fuchsania City",
+      "en": "Fuchsia City",
+      "fr": "Parmanie",
+      "es": "Ciudad Fucsia",
+      "it": "Fucsiapoli"
     },
     "type": "route",
     "region": "kanto"
@@ -731,6 +822,18 @@
     "region": "kanto"
   },
   {
+    "id": 88,
+    "names": {
+      "de": "Azuria City",
+      "en": "Cerulean City",
+      "fr": "Azuria",
+      "es": "Ciudad Celeste",
+      "it": "Celestopoli"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
     "id": 64,
     "names": {
       "de": "Felstunnel",
@@ -839,6 +942,18 @@
     "region": "kanto"
   },
   {
+    "id": 89,
+    "names": {
+      "de": "Alabastia",
+      "en": "Pallet Town",
+      "fr": "Bourg Palette",
+      "es": "Pueblo Paleta",
+      "it": "Biancavilla"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
     "id": 74,
     "names": {
       "de": "Route 21",
@@ -851,6 +966,42 @@
     "region": "kanto"
   },
   {
+    "id": 90,
+    "names": {
+      "de": "Zinnoberinsel",
+      "en": "Cinnabar Island",
+      "fr": "Cramois'île",
+      "es": "Isla Canela",
+      "it": "Isola Cannella"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Route 20",
+      "en": "Route 20",
+      "fr": "Chenal 20",
+      "es": "Ruta 20",
+      "it": "Percorso 20"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Chenal 19",
+      "es": "Ruta 19",
+      "it": "Percorso 19"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
     "id": 75,
     "names": {
       "de": "Route 22",
@@ -858,6 +1009,18 @@
       "fr": "Route 22",
       "es": "Ruta 22",
       "it": "Percorso 22"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Vertania City",
+      "en": "Viridian City",
+      "fr": "Jadielle",
+      "es": "Ciudad Verde",
+      "it": "Smeraldopoli"
     },
     "type": "route",
     "region": "kanto"
