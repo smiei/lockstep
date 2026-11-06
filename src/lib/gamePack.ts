@@ -22,6 +22,9 @@ export const PACK_KINDS = ["official", "romhack", "fangame"] as const;
 export type PackKind = (typeof PACK_KINDS)[number];
 
 const ROUTE_TYPES = ["route", "static"];
+// A second region the run may leave out (HeartGold/SoulSilver's Kanto), on a
+// route or a level cap - see src/lib/regions.ts.
+const REGIONS = ["kanto"];
 const OVERRIDE_CATEGORIES = ["impossible", "easier", "timeBased"];
 // Evolution-override method kinds and the fields each one needs.
 const METHOD_FIELDS: Record<string, Record<string, "number" | "string">> = {
@@ -212,6 +215,9 @@ function checkRoutes(c: Collector, routes: unknown) {
     if (route.postgame !== undefined && typeof route.postgame !== "boolean") {
       c.error("routes", `routes[${i}].postgame`, "must be true or false");
     }
+    if (route.region !== undefined && !REGIONS.includes(route.region as string)) {
+      c.error("routes", `routes[${i}].region`, "must be \"kanto\"");
+    }
   });
 }
 
@@ -237,6 +243,9 @@ function checkLevelCaps(c: Collector, caps: unknown) {
       last = Math.max(last, level);
     }
     if (cap.sprite !== undefined && typeof cap.sprite !== "string") c.error("levelcaps", `${at}.sprite`, "must be text");
+    if (cap.region !== undefined && !REGIONS.includes(cap.region as string)) {
+      c.error("levelcaps", `${at}.region`, "must be \"kanto\"");
+    }
   });
   // The Journey/Overview progress bars mark where the Elite Four starts by
   // location.en === "Elite Four" (eliteFourIndex) - one contiguous block.

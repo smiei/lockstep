@@ -602,7 +602,8 @@
       "es": "Medalla Trueno",
       "it": "Medaglia Tuono"
     },
-    "max_level": 53
+    "max_level": 53,
+    "region": "kanto"
   },
   {
     "id": 30,
@@ -627,7 +628,8 @@
       "es": "Medalla Pantano",
       "it": "Medaglia Palude"
     },
-    "max_level": 55
+    "max_level": 55,
+    "region": "kanto"
   },
   {
     "id": 31,
@@ -652,7 +654,8 @@
       "es": "Medalla Arcoíris",
       "it": "Medaglia Arcobaleno"
     },
-    "max_level": 56
+    "max_level": 56,
+    "region": "kanto"
   },
   {
     "id": 32,
@@ -677,7 +680,8 @@
       "es": "Medalla Alma",
       "it": "Medaglia Anima"
     },
-    "max_level": 50
+    "max_level": 50,
+    "region": "kanto"
   },
   {
     "id": 33,
@@ -702,7 +706,8 @@
       "es": "Medalla Cascada",
       "it": "Medaglia Cascata"
     },
-    "max_level": 54
+    "max_level": 54,
+    "region": "kanto"
   },
   {
     "id": 34,
@@ -727,7 +732,8 @@
       "es": "Medalla Roca",
       "it": "Medaglia Sasso"
     },
-    "max_level": 54
+    "max_level": 54,
+    "region": "kanto"
   },
   {
     "id": 35,
@@ -746,7 +752,8 @@
       "it": "Monte Luna"
     },
     "badge": null,
-    "max_level": null
+    "max_level": null,
+    "region": "kanto"
   },
   {
     "id": 36,
@@ -771,7 +778,8 @@
       "es": "Medalla Volcán",
       "it": "Medaglia Vulcano"
     },
-    "max_level": 59
+    "max_level": 59,
+    "region": "kanto"
   },
   {
     "id": 37,
@@ -796,7 +804,8 @@
       "es": "Medalla Tierra",
       "it": "Medaglia Terra"
     },
-    "max_level": 60
+    "max_level": 60,
+    "region": "kanto"
   },
   {
     "id": 38,
@@ -815,6 +824,7 @@
       "it": "Monte Argento"
     },
     "badge": null,
-    "max_level": null
+    "max_level": null,
+    "region": "kanto"
   }
 ]

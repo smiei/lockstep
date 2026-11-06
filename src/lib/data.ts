@@ -111,6 +111,8 @@ export type GameInfo = {
 // Species Clause and need no manual flag in the UI.
 export type RouteType = "route" | "static";
 
+export type Region = "kanto";
+
 export type Route = {
   id: number;
   // Localized display names (de/en curated, rest generated - see
@@ -120,6 +122,10 @@ export type Route = {
   // Only reachable after the Elite Four (Sevii Islands 4-7, Cerulean Cave).
   // The Encounter tab collapses these behind a "post-game" toggle by default.
   postgame?: boolean;
+  // HeartGold/SoulSilver: the place lies in Kanto, the second region after
+  // Victory Road. The run's includeKanto rule decides whether it counts like
+  // the main game or like post-game (src/lib/regions.ts).
+  region?: Region;
   // Set only by getRoutesForRun for a user-added route (negative id). Pack
   // JSONs never carry it, so `custom` absent === "comes from the game pack".
   custom?: boolean;
@@ -185,6 +191,9 @@ export type LevelCap = {
   // Optional sprite-file override (German slug) when it differs from the
   // canonical German name, e.g. the rival reuses the champion's sprite.
   sprite?: string;
+  // A Kanto fight in HeartGold/SoulSilver (Lt. Surge to Red), left out of
+  // the Journey progress bar when the run excludes Kanto.
+  region?: Region;
 };
 
 // Parsed once per request, not once per call. The files are still re-read on

@@ -77,6 +77,11 @@ export type RunSettings = {
   // fusion". The randomizer re-rolls its encounter table per save file, which
   // is why this is a rule on the Classic/Remix packs and not a pack of its own.
   randomizerFuseEverything: boolean;
+  // HeartGold/SoulSilver only (games whose routes carry region "kanto"): the
+  // run goes on to Kanto after the Elite Four. Off = Kanto counts as
+  // post-game - collapsed on the Encounter tab, left out of the encounter and
+  // Journey progress bars (src/lib/regions.ts).
+  includeKanto: boolean;
   // Custom SoulLink player names (empty = fall back to the localized
   // "Player 1"/"Player 2"/...). Not a toggle - handled separately from the
   // boolean keys below.
@@ -104,6 +109,7 @@ export const DEFAULT_RUN_SETTINGS: RunSettings = {
   wildFusionSplit: true,
   fusionLocksBothFamilies: true,
   randomizerFuseEverything: false,
+  includeKanto: true,
   playerNames: { PLAYER1: "", PLAYER2: "", PLAYER3: "", PLAYER4: "" },
 };
 

@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { getGameById } from "@/lib/data";
 import { comparePlayers, runPlayers } from "@/lib/players";
 import { computeRouteProgress } from "@/lib/progress";
+import { applyRegionRule } from "@/lib/regions";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { listCapSummaries, listRunsForHeader } from "@/lib/runs";
 import { parseRunSettings } from "@/lib/runSettings";
@@ -41,7 +42,7 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
       const players = runPlayers(run.mode, run.playerCount);
       const own = encounters.filter((e) => e.runId === run.id);
       const routes = await getRoutesForRun(run.id, run.gameId);
-      const progress = computeRouteProgress(routes, own, players, settings.statics);
+      const progress = computeRouteProgress(applyRegionRule(routes, settings), own, players, settings.statics);
       const runLinks = links.filter((link) => link.runId === run.id);
 
       // The team in slot order, each slot the whole link: every player's

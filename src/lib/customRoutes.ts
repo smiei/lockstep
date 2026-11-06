@@ -72,6 +72,14 @@ export function mergeRoutes(packRoutes: Route[], customRoutes: CustomRouteInput[
         merged.push(route);
         continue;
       }
+      // A place added after a Kanto or post-game route belongs to that part
+      // of the game too, so the Encounter tab files it under the same heading
+      // and the progress bar counts it the same way.
+      const anchor = merged[at];
+      if (!route.hidden) {
+        if (anchor.region) route.region = anchor.region;
+        if (anchor.postgame) route.postgame = true;
+      }
       merged.splice(at + 1 + siblings, 0, route);
     }
     placed.set(row.afterRouteId, siblings + 1);

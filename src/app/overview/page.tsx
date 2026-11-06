@@ -24,6 +24,7 @@ import { attackTypesAtLevel } from "@/lib/learnset";
 import { resolveEncounterMon } from "@/lib/encounterMon";
 import { formedLinks, groupSoulLinks, isFoldedDonor, teamLinkIds } from "@/lib/fusionGroups";
 import { computeLevelCapProgress, computeRouteProgress, eliteFourIndex } from "@/lib/progress";
+import { applyRegionRule, levelCapsInRun } from "@/lib/regions";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { comparePlayers } from "@/lib/players";
@@ -181,12 +182,12 @@ export default async function OverviewPage({
   // Progress bars (Encounter tab's + Journey tab's), mirrored at the top of
   // the Overview tab.
   const routeProgress = computeRouteProgress(
-    routes,
+    applyRegionRule(routes, settings),
     allEncounters,
     players,
     settings.statics,
   );
-  const levelCapProgress = computeLevelCapProgress(levelCapItems);
+  const levelCapProgress = computeLevelCapProgress(levelCapsInRun(levelCapItems, settings));
   const levelCapMarkerAt = eliteFourIndex(levelCapItems);
 
   // Gym badges: every level-cap entry that awards one, generation-specific

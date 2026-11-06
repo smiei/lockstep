@@ -511,6 +511,11 @@ const de = {
         description:
           "Beim Fusionieren erscheint eine Warnung, wenn die gewählte Kombination kein handgezeichnetes Sprite hat, nur ein automatisch generiertes. Blockiert das Fusionieren nicht.",
       },
+      includeKanto: {
+        label: "Kanto einschließen",
+        description:
+          "Der Run geht nach der Liga in Kanto weiter: Kanto bekommt im Encounter-Tab einen eigenen Abschnitt und zählt in den Fortschrittsleisten mit. Aus = Kanto zählt wie Post-Game und ist im Encounter-Tab eingeklappt.",
+      },
       randomizerFuseEverything: {
         label: "Randomizer: Alles fusioniert",
         description:
@@ -1385,6 +1390,11 @@ const en: Dictionary = {
         description:
           "Fusing shows a warning when the chosen pair has no hand-drawn sprite, only an auto-generated one. Never blocks the fusion.",
       },
+      includeKanto: {
+        label: "Include Kanto",
+        description:
+          "The run carries on into Kanto after the League: Kanto gets its own section on the Encounter tab and counts towards the progress bars. Off = Kanto counts as post-game and is collapsed on the Encounter tab.",
+      },
       randomizerFuseEverything: {
         label: "Randomizer: Fuse everything",
         description:
@@ -2254,6 +2264,11 @@ const fr: Dictionary = {
         label: "Sprites dessinés à la main uniquement",
         description:
           "La fusion affiche un avertissement quand la paire choisie n’a pas de sprite dessiné à la main, seulement un généré automatiquement. Ne bloque jamais la fusion.",
+      },
+      includeKanto: {
+        label: "Inclure Kanto",
+        description:
+          "Le run continue à Kanto après la Ligue : Kanto a sa propre section dans l’onglet Rencontres et compte dans les barres de progression. Désactivé = Kanto compte comme contenu post-ligue et est replié dans l’onglet Rencontres.",
       },
       randomizerFuseEverything: {
         label: "Randomizer : tout fusionner",
@@ -3126,6 +3141,11 @@ const es: Dictionary = {
         description:
           "Al fusionar aparece un aviso si la combinación elegida no tiene un sprite dibujado a mano, solo uno generado automáticamente. Nunca bloquea la fusión.",
       },
+      includeKanto: {
+        label: "Incluir Kanto",
+        description:
+          "El run continúa en Kanto después de la Liga: Kanto tiene su propia sección en la pestaña de encuentros y cuenta en las barras de progreso. Desactivado = Kanto cuenta como posjuego y aparece plegado en la pestaña de encuentros.",
+      },
       randomizerFuseEverything: {
         label: "Randomizer: fusionar todo",
         description:
@@ -3996,6 +4016,11 @@ const it: Dictionary = {
         label: "Solo sprite disegnati a mano",
         description:
           "La fusione mostra un avviso se la coppia scelta non ha uno sprite disegnato a mano, solo uno generato automaticamente. Non blocca mai la fusione.",
+      },
+      includeKanto: {
+        label: "Includi Kanto",
+        description:
+          "Il run continua a Kanto dopo la Lega: Kanto ha una sezione propria nella scheda Incontri e conta nelle barre di avanzamento. Disattivato = Kanto conta come post-gioco ed è compresso nella scheda Incontri.",
       },
       randomizerFuseEverything: {
         label: "Randomizer: fondi tutto",
