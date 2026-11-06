@@ -63,6 +63,8 @@ const GAME_KEYS = new Set([
   "source",
   // Regional forms are catchable (GameInfo.regionalForms).
   "regionalForms",
+  // A ROM hack's own capture engine (GameInfo.catchEngine).
+  "catchEngine",
 ]);
 const BUILT_IN_ONLY_GAME_KEYS = new Set(["species", "nameLang", "speciesData", "fusion", "sourceVersion", "sourceDate"]);
 
@@ -194,6 +196,9 @@ function checkGame(c: Collector, game: unknown, ctx: PackContext) {
   }
   if (game.regionalForms !== undefined && typeof game.regionalForms !== "boolean") {
     c.error("game", "regionalForms", "must be true or false");
+  }
+  if (game.catchEngine !== undefined && game.catchEngine !== "cfru" && game.catchEngine !== "expansion") {
+    c.error("game", "catchEngine", "must be \"cfru\" or \"expansion\"");
   }
   if (game.trainerSet !== undefined && (typeof game.trainerSet !== "string" || !/^[a-z0-9-]+$/.test(game.trainerSet))) {
     c.error("game", "trainerSet", "must be lowercase letters, digits and dashes");

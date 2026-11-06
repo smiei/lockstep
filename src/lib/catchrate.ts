@@ -188,6 +188,48 @@ const BALLS_GEN4_HGSS: BallId[] = [
   "cherish",
 ];
 
+// ROM hacks on the Complete FireRed Upgrade engine (Radical Red, Unbound):
+// game.json's catchEngine "cfru", passed where a version group goes. Every
+// real ball up to Gen 8 (the engine's enum BallTypes, include/new/catching.h
+// in github.com/Skeli789/Complete-Fire-Red-Upgrade - the Dynamax Ball is not
+// given to the player), with the engine's own capture code (computeCfru).
+export const CFRU_ENGINE = "cfru";
+const BALLS_CFRU: BallId[] = [
+  "poke",
+  "great",
+  "ultra",
+  "master",
+  "safari",
+  "net",
+  "nest",
+  "dive",
+  "repeat",
+  "timer",
+  "quick",
+  "dusk",
+  "luxury",
+  "premier",
+  "heal",
+  "cherish",
+  "level",
+  "lure",
+  "moon",
+  "friend",
+  "love",
+  "fast",
+  "heavy",
+  "sport",
+  "park",
+  "dream",
+  "beast",
+];
+
+// ROM hacks on pokeemerald-expansion as of spring 2023 (Run & Bun 1.07):
+// game.json's catchEngine "expansion". The same ball set as CFRU - the
+// expansion's item list has them all - with its own capture code
+// (computeExpansion).
+export const EXPANSION_ENGINE = "expansion";
+
 // The version group of both Infinite Fusion packs - selects the game's own
 // ball list and capture code (computeInfiniteFusion) instead of a generation.
 export const INFINITE_FUSION_VERSION_GROUP = "infinite-fusion";
@@ -243,6 +285,7 @@ const BALLS_INFINITE_FUSION: BallId[] = [
 
 export function getBallIdsForGeneration(generation: number, versionGroup?: string): BallId[] {
   if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return BALLS_INFINITE_FUSION;
+  if (versionGroup === CFRU_ENGINE || versionGroup === EXPANSION_ENGINE) return BALLS_CFRU;
   if (generation === 1) return BALLS_GEN1;
   if (generation === 2) return BALLS_GEN2;
   if (versionGroup === BDSP_VERSION_GROUP) return BALLS_BDSP;
@@ -273,8 +316,8 @@ const CONDITIONAL_BALLS = new Set<BallId>([
   "park",
 ]);
 
-// Infinite Fusion computes the Fast Ball from the target's base Speed instead
-// of a flee-prone species list, so it needs no checkbox there.
+// Infinite Fusion and CFRU: the same set without the Park Ball, which always
+// catches there.
 const CONDITIONAL_BALLS_INFINITE_FUSION = new Set<BallId>([
   "repeat",
   "dive",
@@ -302,7 +345,13 @@ export function levelBallMultiplier(ownLevel: number | undefined, wildLevel: num
 // Speed - both of which the calculator knows.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function ballHasCondition(ball: BallId, versionGroup?: string, generation?: number): boolean {
-  if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return CONDITIONAL_BALLS_INFINITE_FUSION.has(ball);
+  if (
+    versionGroup === INFINITE_FUSION_VERSION_GROUP ||
+    versionGroup === CFRU_ENGINE ||
+    versionGroup === EXPANSION_ENGINE
+  ) {
+    return CONDITIONAL_BALLS_INFINITE_FUSION.has(ball);
+  }
   return CONDITIONAL_BALLS.has(ball);
 }
 
@@ -468,6 +517,9 @@ export type CatchInput = {
   // Gen 8/9: gym badges you hold (Sword/Shield's and BDSP's difficulty
   // factor, Scarlet/Violet's obedience penalty).
   badges?: number;
+  // CFRU: the League has been beaten (FLAG_SYS_GAME_CLEAR), which lifts the
+  // x0.1 against targets above your active Pokemon's level.
+  gameCleared?: boolean;
 };
 
 export type CatchResult = {
@@ -890,6 +942,223 @@ function computeInfiniteFusion(input: CatchInput): CatchResult {
   };
 }
 
+// ---------------------------------------------------------------------------
+// Complete FireRed Upgrade (Radical Red, Unbound): atkEF_handleballthrow and
+// the ball multipliers in src/catching.c, config in src/config.h of
+// github.com/Skeli789/Complete-Fire-Red-Upgrade (read 2026-11-06). Gen 3's
+// shape and shake checks with modern additions, each step in integers:
+//   odds = rate * ball/10 * (3*maxHP - 2*HP)/(3*maxHP)
+//   * (30 - level)/10 at level 20 or below
+//   * 2.5 asleep/frozen, * 1.5 poisoned/burned/paralysed
+//   / 10 against a target above your active Pokemon's level until the League
+//     is beaten (SWSH_CATCHING_DIFFICULTY_MODIFIER)
+// then four checks against 0xFFFF0 / sqrt(sqrt(0xFF0000 / odds)) - two after
+// a critical capture, whose chance grows with the dex's caught count.
+// Left out: the wild double battle penalty and the Catching Charm.
+// ---------------------------------------------------------------------------
+
+// The engine's multipliers in tenths.
+function ballMultiplierCfru(ball: BallId, input: CatchInput): number {
+  // Every ball but the Beast Ball is x0.1 against Ultra Beasts.
+  if (input.ultraBeast) return ball === "beast" ? 50 : 1;
+  if (ballHasCondition(ball, CFRU_ENGINE) && input.conditionMet === false) return 10;
+  switch (ball) {
+    case "great":
+    case "safari":
+    case "sport":
+      return 15;
+    case "ultra":
+      return 20;
+    case "net":
+      return input.types.includes("water") || input.types.includes("bug") ? 35 : 10;
+    case "dive":
+    case "repeat":
+      return 35;
+    case "nest":
+      return input.level < 31 ? 41 - input.level : 10;
+    case "timer":
+      // battleTurnCounter is 0 on the first turn.
+      return Math.min(40, 10 + (input.turn - 1) * 3);
+    case "quick":
+      return input.turn === 1 ? 50 : 10;
+    case "dusk":
+      return 30;
+    case "level":
+      return levelBallMultiplier(input.ownLevel, input.level) * 10;
+    case "lure":
+    case "moon":
+      return 40;
+    case "love":
+      return 80;
+    case "fast":
+      return fastBallBySpeed(input.baseSpeed) * 10;
+    case "dream":
+      return input.status === "sleep" ? 40 : 10;
+    case "beast":
+      return 1;
+    // poke, luxury, premier, cherish, heal, friend; heavy shifts the rate.
+    default:
+      return 10;
+  }
+}
+
+// The engine's critical-capture brackets (species caught) and the factor (in
+// tenths) each gives.
+export const CFRU_DEX_BRACKETS = [30, 150, 300, 450, 600];
+function cfruDexFactor(owned: number): number {
+  const [b1, b2, b3, b4, b5] = CFRU_DEX_BRACKETS;
+  if (owned <= b1) return 0;
+  if (owned <= b2) return 5;
+  if (owned <= b3) return 10;
+  if (owned <= b4) return 15;
+  if (owned <= b5) return 20;
+  return 25;
+}
+
+function computeCfru(input: CatchInput): CatchResult {
+  const statusBonus =
+    input.status === "sleep" || input.status === "freeze" ? 2.5 : input.status === "none" ? 1 : 1.5;
+  const statusText = `×${statusBonus}`;
+  // The Park Ball has no multiplier at all: the engine lets it shake through.
+  if (input.ball === "master" || input.ball === "park") {
+    return { guaranteed: true, chance: 1, ballText: "×1", statusText };
+  }
+  const multiplier = ballMultiplierCfru(input.ball, input);
+  const ballText = multiplierText(multiplier / 10);
+  const rate =
+    input.ball === "heavy"
+      ? Math.min(255, Math.max(1, input.baseRate + heavyBallModifierGen7(input.weight)))
+      : input.baseRate;
+  const hpFrac = Math.min(100, Math.max(1, input.hpPercent)) / 100;
+
+  let odds = Math.floor(Math.floor((rate * multiplier) / 10) * ((3 - 2 * hpFrac) / 3));
+  const lowLevel = input.level <= 20 ? (30 - input.level) / 10 : 1;
+  odds = Math.floor(odds * lowLevel);
+  odds = Math.floor(odds * statusBonus);
+  const penalised = !input.gameCleared && input.ownLevel !== undefined && input.ownLevel < input.level;
+  if (penalised) odds = Math.floor(odds / 10);
+  const extra = {
+    ...(lowLevel !== 1 ? { levelText: multiplierText(lowLevel) } : {}),
+    ...(penalised ? { penaltyText: "×0.1" } : {}),
+  };
+
+  if (odds >= 255) return { guaranteed: true, chance: 1, ballText, statusText, ...extra };
+  if (odds <= 0) return { guaranteed: false, chance: 0, ballText, statusText, ...extra };
+
+  const b = Math.floor(0xffff0 / Math.floor(Math.sqrt(Math.floor(Math.sqrt(Math.floor(0xff0000 / odds))))));
+  const shake = Math.min(1, b / 65536);
+  const critical =
+    Math.min(256, Math.floor(Math.floor((odds * cfruDexFactor(input.dexOwned ?? 0)) / 10) / 6)) / 256;
+  const chance = critical * Math.pow(shake, 2) + (1 - critical) * Math.pow(shake, 4);
+  return { guaranteed: false, chance, ballText, statusText, ...extra };
+}
+
+// ---------------------------------------------------------------------------
+// pokeemerald-expansion, branch "upcoming" as of 2023-04-20 (commit d3fed56,
+// the state Run & Bun 1.07 was built on): Cmd_handleballthrow and
+// CriticalCapture in src/battle_script_commands.c, every B_*_BALL_MODIFIER at
+// GEN_LATEST (= Gen 8) in include/config/battle.h. Gen 3's formula untouched:
+//   odds = rate * ball/100 * (3*maxHP - 2*HP)/(3*maxHP), * 2 asleep/frozen,
+//   * 1.5 poisoned/burned/paralysed; no low-level bonus, no level penalty;
+// four checks against 1048560 / sqrt(sqrt(16711680 / odds)), or ONE after a
+// critical capture (B_CRITICAL_CAPTURE), whose chance grows with the dex.
+// Each hack sets its own config, so this is the expansion's default.
+// ---------------------------------------------------------------------------
+
+// The engine's multipliers in hundredths.
+function ballMultiplierExpansion(ball: BallId, input: CatchInput): number {
+  if (input.ultraBeast) return ball === "beast" ? 500 : 10;
+  if (ballHasCondition(ball, EXPANSION_ENGINE) && input.conditionMet === false) return 100;
+  switch (ball) {
+    case "great":
+    case "safari":
+      return 150;
+    case "ultra":
+      return 200;
+    case "net":
+      return input.types.includes("water") || input.types.includes("bug") ? 350 : 100;
+    case "dive":
+    case "repeat":
+      return 350;
+    case "nest":
+      return input.level < 30 ? 410 - input.level * 10 : 100;
+    case "timer":
+      // battleTurnCounter is 0 on the first turn.
+      return Math.min(400, (input.turn - 1) * 30 + 100);
+    case "quick":
+      return input.turn === 1 ? 500 : 100;
+    // Its night check (hours >= 20 && hours <= 3) can never be true, so the
+    // condition is a cave.
+    case "dusk":
+      return 300;
+    case "level": {
+      // Twice the level must be exceeded, not just reached, for x4.
+      const own = input.ownLevel;
+      if (own === undefined) return 100;
+      if (own >= 4 * input.level) return 800;
+      if (own > 2 * input.level) return 400;
+      return own > input.level ? 200 : 100;
+    }
+    case "lure":
+      return 500;
+    case "moon":
+      return 400;
+    case "love":
+      return 800;
+    case "fast":
+      return fastBallBySpeed(input.baseSpeed) * 100;
+    case "dream":
+      return input.status === "sleep" ? 400 : 100;
+    case "beast":
+      return 10;
+    // poke, sport (x1 from Gen 8), park, luxury, premier, cherish, heal,
+    // friend; heavy shifts the rate.
+    default:
+      return 100;
+  }
+}
+
+// The caught-species brackets of CriticalCapture: NATIONAL_DEX_COUNT (905 in
+// a Gen 8 expansion) * 30/150/300/450/600 / 650, and the factor (in
+// hundredths) each gives.
+export const EXPANSION_DEX_BRACKETS = [41, 208, 417, 626, 835];
+function expansionDexFactor(owned: number): number {
+  const [b1, b2, b3, b4, b5] = EXPANSION_DEX_BRACKETS;
+  if (owned <= b1) return 0;
+  if (owned <= b2) return 50;
+  if (owned <= b3) return 100;
+  if (owned <= b4) return 150;
+  if (owned <= b5) return 200;
+  return 250;
+}
+
+function computeExpansion(input: CatchInput): CatchResult {
+  const statusBonus =
+    input.status === "sleep" || input.status === "freeze" ? 2 : input.status === "none" ? 1 : 1.5;
+  const statusText = `×${statusBonus}`;
+  if (input.ball === "master") return { guaranteed: true, chance: 1, ballText: "×1", statusText };
+  const multiplier = ballMultiplierExpansion(input.ball, input);
+  const ballText = multiplierText(multiplier / 100);
+  let rate = input.baseRate;
+  if (input.ball === "heavy") {
+    const addition = heavyBallModifierGen7(input.weight);
+    // catchRate is a u8: the engine sets it to 1 rather than letting -20 wrap.
+    rate = rate < 21 && addition === -20 ? 1 : Math.min(255, rate + addition);
+  }
+  const hpFrac = Math.min(100, Math.max(1, input.hpPercent)) / 100;
+
+  let odds = Math.floor(Math.floor((rate * multiplier) / 100) * ((3 - 2 * hpFrac) / 3));
+  odds = Math.floor(odds * statusBonus);
+  if (odds > 254) return { guaranteed: true, chance: 1, ballText, statusText };
+  if (odds <= 0) return { guaranteed: false, chance: 0, ballText, statusText };
+
+  const b = Math.floor(1048560 / Math.floor(Math.sqrt(Math.floor(Math.sqrt(Math.floor(16711680 / odds))))));
+  const shake = Math.min(1, b / 65536);
+  const critical = Math.min(255, Math.floor(Math.floor((odds * expansionDexFactor(input.dexOwned ?? 0)) / 100) / 6)) / 255;
+  const chance = critical * shake + (1 - critical) * Math.pow(shake, 4);
+  return { guaranteed: false, chance, ballText, statusText };
+}
+
 // `versionGroup` picks Infinite Fusion's own capture code, and within a
 // generation the games that differ (Sun/Moon's Heavy Ball, BDSP's Safari Ball).
 export function computeCatchChance(
@@ -898,6 +1167,8 @@ export function computeCatchChance(
   versionGroup?: string,
 ): CatchResult {
   if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return computeInfiniteFusion(input);
+  if (versionGroup === CFRU_ENGINE) return computeCfru(input);
+  if (versionGroup === EXPANSION_ENGINE) return computeExpansion(input);
   if (generation === 1) return computeGen1(input);
   if (generation === 2) return computeGen2(input);
   if (generation >= 5) return computeModern(generation, input, versionGroup);
