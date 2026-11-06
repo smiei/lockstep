@@ -547,6 +547,18 @@ const evolutionTable = cache((): EvolutionEntry[] =>
   withFormEvolutions(readJson<EvolutionEntry[]>("evolutions.json")),
 );
 
+// Which of the three randomizer rules a pack's evolution-overrides.json has
+// anything for - the Rules tab only offers those switches.
+export type EvolutionOverrideCategory = "impossible" | "easier" | "timeBased";
+export function getEvolutionOverrideCategories(gameId: string): EvolutionOverrideCategory[] {
+  try {
+    const overrides = parseFileCached(path.join(gameDir(gameId), "evolution-overrides.json")) as EvolutionOverride[];
+    return [...new Set(overrides.map((o) => o.category ?? "impossible"))];
+  } catch {
+    return [];
+  }
+}
+
 export function getEvolutions(options?: {
   gameId?: string;
   impossible?: boolean;

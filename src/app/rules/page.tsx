@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
-import { getGameOrDefault } from "@/lib/data";
+import { getEvolutionOverrideCategories, getGameOrDefault } from "@/lib/data";
 import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
 import { DEFAULT_RULES } from "@/lib/defaultRules";
@@ -57,6 +57,7 @@ export default async function RulesPage({
         presets={presets}
         fusionEnabled={Boolean(getGameOrDefault(gameId).fusion)}
         kantoEnabled={hasKanto(await getRoutesForRun(runId, gameId))}
+        evolutionCategories={getEvolutionOverrideCategories(gameId)}
       />
     </>
   );

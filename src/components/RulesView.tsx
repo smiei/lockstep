@@ -18,6 +18,7 @@ import { Input, Select, Textarea } from "@/components/ui/Input";
 import { RulePresetDialog, type RulePresetSummary } from "@/components/RulePresetDialog";
 import { PageHeader, Section } from "@/components/ui/Page";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
+import type { EvolutionOverrideCategory } from "@/lib/data";
 
 // The boolean rule toggles (playerNames is handled separately).
 type BooleanSettingKey = Exclude<keyof RunSettings, "playerNames">;
@@ -118,6 +119,14 @@ const FUSION_ONLY_TOGGLES = new Set<BooleanSettingKey>([
   "randomizerFuseEverything",
 ]);
 
+// The randomizer's evolution rules, each shown only when the game pack has
+// changes for it (evolution-overrides.json) - elsewhere they would do nothing.
+const EVOLUTION_TOGGLES: Partial<Record<BooleanSettingKey, EvolutionOverrideCategory>> = {
+  evolutionOverridesImpossible: "impossible",
+  evolutionOverridesEasier: "easier",
+  evolutionOverridesTimeBased: "timeBased",
+};
+
 // Toggles that only mean something in a game with a second region.
 const KANTO_ONLY_TOGGLES = new Set<BooleanSettingKey>(["includeKanto"]);
 
@@ -190,6 +199,7 @@ export function RulesView({
   presets,
   fusionEnabled = false,
   kantoEnabled = false,
+  evolutionCategories = [],
 }: {
   runKey: string;
   lang: Lang;
@@ -204,6 +214,8 @@ export function RulesView({
   fusionEnabled?: boolean;
   // The game has a Kanto to leave out (HeartGold/SoulSilver).
   kantoEnabled?: boolean;
+  // The randomizer rules the game pack has evolution changes for.
+  evolutionCategories?: EvolutionOverrideCategory[];
   // App-wide, not run-scoped - the same list appears in every run.
   presets: RulePresetSummary[];
 }) {
@@ -390,6 +402,7 @@ export function RulesView({
                 (key) =>
                   (fusionEnabled || !FUSION_ONLY_TOGGLES.has(key)) &&
                   (kantoEnabled || !KANTO_ONLY_TOGGLES.has(key)) &&
+                  (EVOLUTION_TOGGLES[key] === undefined || evolutionCategories.includes(EVOLUTION_TOGGLES[key])) &&
                   (players.length > 1 || !SOULLINK_ONLY_TOGGLES.has(key)),
               ).map(renderToggle)}
             </Card>

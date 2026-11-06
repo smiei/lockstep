@@ -154,3 +154,7 @@ The runtime and build dependencies listed in `package.json` keep their own licen
 - **MIT:** Next.js, React, react-markdown, next-themes, fflate, Tailwind CSS, libSQL client, Vitest, ESLint, @hyrious/marshal.
 - **Apache-2.0:** Prisma, sharp (its prebuilt libvips binaries are LGPL-3.0), TypeScript.
 - **BSD-2-Clause:** dotenv.
+
+## Universal Pokemon Randomizer ZX (reference only)
+
+`scripts/generate-randomizer-evolutions.mjs` reproduces which evolutions the randomizer's "Change Impossible Evolutions", "Make Evolutions Easier" and "Remove Time-Based Evolutions" options change in Gen 5-7, as described by its source code (https://github.com/Ajarmar/universal-pokemon-randomizer-zx, GPL-3.0). No code of the randomizer is included; the generated `evolution-overrides.json` files list game facts (which Pokémon evolves how).
