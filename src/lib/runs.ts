@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import type { Player, Run, RunMode } from "@/generated/prisma/client";
 import { parseRunSettings, type RunSettings } from "@/lib/runSettings";
+import { levelCapsInRun } from "@/lib/regions";
 import { runPlayers } from "@/lib/players";
 import { isRunKeyShaped } from "@/lib/runKey";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
@@ -109,7 +110,9 @@ export async function listCapSummaries(runs: Run[]): Promise<RunCapSummary[]> {
   });
   return runs.map((run) => {
     const done = new Set(defeated.filter((row) => row.runId === run.id).map((row) => row.levelCapId));
-    const caps = getLevelCaps(run.gameId);
+    // A Kanto the run leaves out (src/lib/regions.ts) has no next cap and no
+    // badges to count.
+    const caps = levelCapsInRun(getLevelCaps(run.gameId), parseRunSettings(run.settingsJson));
     const next = caps.find((cap) => cap.max_level !== null && !done.has(cap.id));
     const badgeCaps = caps.filter((cap) => cap.badge !== null);
     return {

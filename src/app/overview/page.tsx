@@ -174,7 +174,10 @@ export default async function OverviewPage({
     ...cap,
     defeated: defeatedIds.has(cap.id),
   }));
-  const caps = levelCapItems.filter((c) => c.max_level !== null);
+  // The fights the run plays: a Kanto it leaves out has no next cap, no
+  // badges and no share of the progress bar.
+  const runCapItems = levelCapsInRun(levelCapItems, settings);
+  const caps = runCapItems.filter((c) => c.max_level !== null);
   const capCurrent = caps.filter((c) => defeatedIds.has(c.id)).at(-1)?.max_level ?? null;
   const nextCapEntry = caps.find((c) => !defeatedIds.has(c.id)) ?? null;
   const capNext = nextCapEntry?.max_level ?? null;
@@ -187,13 +190,13 @@ export default async function OverviewPage({
     players,
     settings.statics,
   );
-  const levelCapProgress = computeLevelCapProgress(levelCapsInRun(levelCapItems, settings));
+  const levelCapProgress = computeLevelCapProgress(runCapItems);
   const levelCapMarkerAt = eliteFourIndex(levelCapItems);
 
   // Gym badges: every level-cap entry that awards one, generation-specific
   // icon (data/badges.json + scripts/download-badges.mjs), earned ones shown
   // normally and the rest grayed out but still visible.
-  const badges: OverviewBadge[] = levelCapItems
+  const badges: OverviewBadge[] = runCapItems
     .filter((c) => c.badge !== null)
     .map((c) => ({ id: c.id, badge: c.badge!, defeated: c.defeated }));
 

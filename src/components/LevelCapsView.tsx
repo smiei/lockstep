@@ -13,6 +13,21 @@ import { EmptyState } from "@/components/ui/Page";
 import { Spinner } from "@/components/ui/Spinner";
 import { useToast } from "@/components/ui/ToastProvider";
 import { toggleLevelCapDefeated } from "@/lib/actions";
+import { ChevronDownIcon } from "@/components/ActionIcons";
+
+// The two regions' names read the same in every language the app speaks.
+const REGION_LABELS = { main: "Johto", kanto: "Kanto" } as const;
+
+// A divider between the regions of a game that has two (HeartGold/SoulSilver),
+// the same as on the Encounter tab.
+function RegionHeading({ label }: { label: string }) {
+  return (
+    <h2 className="mb-2 mt-6 flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-wider text-ink-muted first:mt-0">
+      <span>{label}</span>
+      <span aria-hidden="true" className="h-px flex-1 bg-line-strong" />
+    </h2>
+  );
+}
 
 type LevelCapWithProgress = LevelCap & { defeated: boolean };
 
@@ -21,10 +36,14 @@ export function LevelCapsView({
   lang,
   levelCaps,
   trainerSet,
+  includeKanto = true,
 }: {
   runKey: string;
   lang: Lang;
   levelCaps: LevelCapWithProgress[];
+  // The run's includeKanto rule (src/lib/regions.ts): off, the Kanto fights
+  // are post-game and start collapsed, as on the Encounter tab.
+  includeKanto?: boolean;
   // Folder under public/trainers/ for game-specific avatars (see TrainerSprite).
   trainerSet: string;
 }) {
@@ -33,6 +52,7 @@ export function LevelCapsView({
   const toast = useToast();
   const [overrides, setOverrides] = useState<Record<number, boolean>>({});
   const [pendingId, setPendingId] = useState<number | null>(null);
+  const [showPostgame, setShowPostgame] = useState(false);
   const [, startTransition] = useTransition();
 
   function handleToggle(cap: LevelCapWithProgress) {
@@ -58,9 +78,12 @@ export function LevelCapsView({
     return <EmptyState title={t.empty} />;
   }
 
-  return (
+  const firstRegion = levelCaps.filter((cap) => cap.region !== "kanto");
+  const kanto = levelCaps.filter((cap) => cap.region === "kanto");
+
+  const renderCard = (caps: LevelCapWithProgress[]) => (
     <Card padding="none" className="divide-y divide-line overflow-hidden">
-      {levelCaps.map((cap) => {
+      {caps.map((cap) => {
         const defeated = overrides[cap.id] ?? cap.defeated;
         const pending = pendingId === cap.id;
         const name = levelCapName(cap, lang);
@@ -120,5 +143,34 @@ export function LevelCapsView({
         );
       })}
     </Card>
+  );
+
+  if (kanto.length === 0) return renderCard(levelCaps);
+  if (includeKanto) {
+    return (
+      <div>
+        <RegionHeading label={REGION_LABELS.main} />
+        {renderCard(firstRegion)}
+        <RegionHeading label={REGION_LABELS.kanto} />
+        {renderCard(kanto)}
+      </div>
+    );
+  }
+  return (
+    <div className="flex flex-col gap-2">
+      {renderCard(firstRegion)}
+      <button
+        type="button"
+        onClick={() => setShowPostgame((v) => !v)}
+        aria-expanded={showPostgame}
+        className="flex w-full items-center justify-center gap-2 rounded-md border border-dashed border-line-strong p-3 text-sm font-semibold text-ink-muted transition-colors hover:bg-hover hover:text-ink"
+      >
+        <ChevronDownIcon
+          className={`h-4 w-4 transition-transform motion-reduce:transition-none ${showPostgame ? "" : "-rotate-90"}`}
+        />
+        {showPostgame ? t.postgameHide : t.postgameShow(kanto.length)}
+      </button>
+      {showPostgame && renderCard(kanto)}
+    </div>
   );
 }
