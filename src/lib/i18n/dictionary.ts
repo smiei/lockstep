@@ -418,6 +418,8 @@ const de = {
       moves: "Attacken (nach Level)",
       evolution: "Entwicklung",
       noEvolution: "Keine Entwicklung",
+      evolutionPartyNote:
+        "Mit randomisierten wilden Pokémon macht der Randomizer aus „mit … im Team“ stattdessen Level 35. Die App zeigt den Fall ohne randomisierte wilde Pokémon.",
       fusionHead: "Kopf",
       fusionBody: "Körper",
       noMoveData: "Für dieses Spiel sind keine Attackendaten hinterlegt.",
@@ -1299,6 +1301,8 @@ const en: Dictionary = {
       moves: "Moves (by level)",
       evolution: "Evolution",
       noEvolution: "No evolution",
+      evolutionPartyNote:
+        "If wild Pokémon are randomized too, the randomizer turns “with … in the party” into level 35 instead. The app shows the case without randomized wild Pokémon.",
       fusionHead: "Head",
       fusionBody: "Body",
       noMoveData: "No move data is available for this game.",
@@ -2174,6 +2178,8 @@ const fr: Dictionary = {
       moves: "Attaques (par niveau)",
       evolution: "Évolution",
       noEvolution: "Aucune évolution",
+      evolutionPartyNote:
+        "Si les Pokémon sauvages sont aussi randomisés, le randomizer remplace « avec … dans l’équipe » par le niveau 35. L’app affiche le cas sans Pokémon sauvages randomisés.",
       fusionHead: "Tête",
       fusionBody: "Corps",
       noMoveData: "Aucune donnée d'attaque n'est disponible pour ce jeu.",
@@ -3050,6 +3056,8 @@ const es: Dictionary = {
       moves: "Ataques (por nivel)",
       evolution: "Evolución",
       noEvolution: "Sin evolución",
+      evolutionPartyNote:
+        "Si los Pokémon salvajes también están aleatorizados, el randomizer convierte «con … en el equipo» en nivel 35. La app muestra el caso sin Pokémon salvajes aleatorizados.",
       fusionHead: "Cabeza",
       fusionBody: "Cuerpo",
       noMoveData: "No hay datos de ataques para este juego.",
@@ -3926,6 +3934,8 @@ const it: Dictionary = {
       moves: "Mosse (per livello)",
       evolution: "Evoluzione",
       noEvolution: "Nessuna evoluzione",
+      evolutionPartyNote:
+        "Se anche i Pokémon selvatici sono randomizzati, il randomizer trasforma «con … in squadra» in livello 35. L’app mostra il caso senza Pokémon selvatici randomizzati.",
       fusionHead: "Testa",
       fusionBody: "Corpo",
       noMoveData: "Per questo gioco non ci sono dati sulle mosse.",

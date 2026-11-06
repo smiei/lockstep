@@ -38,6 +38,8 @@
     { "from": 10241, "to": 10242, "comment": "Sliggoo-Hisui -> Goodra-Hisui (in rain)", "method": { "kind": "level", "level": 50 } },
     { "from": 712, "to": 10243, "comment": "Bergmite -> Avalugg-Hisui", "method": { "kind": "level", "level": 37 } },
     { "from": 723, "to": 10244, "comment": "Dartrix -> Decidueye-Hisui", "method": { "kind": "level", "level": 36 } },
+    { "from": 744, "to": 10126, "comment": "Rockruff -> Lycanroc-Midnight (at night)", "method": { "kind": "level", "level": 25 } },
+    { "from": 744, "to": 10152, "comment": "Rockruff -> Lycanroc-Dusk (Own Tempo, at dusk)", "method": { "kind": "level", "level": 25 } },
     { "from": 10253, "to": 980, "comment": "Wooper-Paldea -> Clodsire", "method": { "kind": "level", "level": 20 } }
   ]
 }

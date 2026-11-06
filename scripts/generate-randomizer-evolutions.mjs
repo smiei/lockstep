@@ -1,6 +1,6 @@
 // Generates a game pack's evolution-overrides.json for the three randomizer
 // rules, by replaying what the Universal Pokemon Randomizer ZX does to
-// evolutions in Gen 5-7 (romhandlers/Gen5-7RomHandler.java and
+// evolutions in Gen 3-7 (romhandlers/Gen3-7RomHandler.java and
 // AbstractRomHandler.condenseLevelEvolutions; checked against its master
 // branch on 2026-11-06) on top of data/evolutions.json.
 //
@@ -21,8 +21,8 @@
 //   (assumed off here, as in the existing Black/White list).
 // - "Remove Time-Based Evolutions": Eevee's Espeon/Umbreon become Sun/Moon
 //   Stone, every other day/night condition is dropped; Gen 7's Rockruff takes
-//   a Sun Stone (Midday; Moon Stone for Midnight, Dusk Stone for Dusk - the
-//   formes share one entry here).
+//   a Sun Stone to Midday, a Moon Stone to Midnight and a Dusk Stone to Dusk
+//   Lycanroc (the formes' edges come from data/form-evolutions.json).
 import fs from "node:fs";
 
 const args = process.argv.slice(2);
@@ -46,13 +46,37 @@ const SHELMET = 616;
 const SLOWPOKE = 79;
 const EEVEE = 133;
 const ROCKRUFF = 744;
+// Lycanroc's three formes and the stone each takes without the time of day.
+const LYCANROC_STONES = { 745: "sun-stone", 10126: "moon-stone", 10152: "dusk-stone" };
+// HeartGold/SoulSilver: evolutions bound to a Sinnoh place, as the
+// randomizer rewrites them (Glaceon takes a Dawn Stone there, not an Ice one).
+const HGSS_PLACE_BOUND = {
+  462: { kind: "level", level: 40 },
+  476: { kind: "level", level: 40 },
+  470: { kind: "item", item: "leaf-stone" },
+  471: { kind: "item", item: "dawn-stone" },
+};
+
+// Gen 3 has no "level up holding an item", so each trade-item evolution gets
+// a fixed replacement of its own.
+function gen3Trade(from, item) {
+  if (!item) return { kind: "level", level: 37 };
+  if (from === 61) return { kind: "level", level: 37 }; // Poliwhirl
+  if (from === SLOWPOKE) return { kind: "item", item: "water-stone" };
+  if (from === 117) return { kind: "level", level: 40 }; // Seadra
+  if (from === 366 && item === "deep-sea-tooth") return { kind: "level", level: 30 };
+  if (from === 366) return { kind: "item", item: "water-stone" }; // Clamperl's Deep Sea Scale
+  return { kind: "level", level: 30 }; // Onix, Scyther, Porygon
+}
+
 // Sun/Moon: level 35 as a second way for evolutions bound to a snowy or
 // electrified place.
 const SUN_MOON_PLACE_BOUND = [740, 738, 462, 476];
 
 function generate(gameId) {
   const game = JSON.parse(fs.readFileSync(`data/games/${gameId}/game.json`, "utf8"));
-  if (game.generation < 5 || game.generation > 7) throw new Error(`${gameId}: only Gen 5-7 are modelled`);
+  if (game.generation < 3 || game.generation > 7) throw new Error(`${gameId}: only Gen 3-7 are modelled`);
+  const gen3 = game.generation === 3;
   const inDex = (id) => id >= 1 && id <= game.dexLimit;
   const evolvesFurther = (id) => (byId.get(id)?.evolvesTo ?? []).some(inDex);
   const out = [];
@@ -68,7 +92,9 @@ function generate(gameId) {
   for (const { from, to, method } of edges) {
     if (method.kind !== "trade") continue;
     let next;
-    if (from === KARRABLAST || from === SHELMET) {
+    if (gen3) {
+      next = gen3Trade(from, method.item);
+    } else if (from === KARRABLAST || from === SHELMET) {
       next = { kind: "levelWith", name: nameDe(from === KARRABLAST ? SHELMET : KARRABLAST) };
     } else if (method.item && from === SLOWPOKE) {
       next = { kind: "item", item: "water-stone" };
@@ -79,6 +105,23 @@ function generate(gameId) {
     }
     impossible.set(to, next);
     add("impossible", from, to, next);
+  }
+  // Not trades, but out of reach without one in these games.
+  for (const { from, to, method } of edges) {
+    let next = null;
+    if (game.versionGroup === "firered-leafgreen") {
+      // No clock in FireRed/LeafGreen, and no Pokéblocks for Feebas.
+      if (method.kind === "happiness" && method.time) next = { kind: "item", item: method.time === "day" ? "sun-stone" : "moon-stone" };
+      if (method.kind === "beauty") next = { kind: "level", level: 35 };
+    } else if (game.versionGroup === "heartgold-soulsilver") {
+      // No Pokéblocks/Poffins, no Mt. Coronet, no Moss or Ice Rock in Johto.
+      if (method.kind === "beauty") next = { kind: "level", level: 35 };
+      if (HGSS_PLACE_BOUND[to]) next = HGSS_PLACE_BOUND[to];
+    }
+    if (next) {
+      impossible.set(to, next);
+      add("impossible", from, to, next);
+    }
   }
   for (const extra of EXTRA_TRADES) {
     if (game.generation >= extra.minGeneration && inDex(extra.to)) {
@@ -107,8 +150,11 @@ function generate(gameId) {
       else add("timeBased", from, to, { kind: "happiness" });
     } else if (method.kind === "levelHeld" && method.time) {
       add("timeBased", from, to, { kind: "levelHeld", item: method.item });
-    } else if (game.generation === 7 && from === ROCKRUFF) {
-      add("timeBased", from, to, { kind: "item", item: "sun-stone" });
+    }
+  }
+  if (game.generation === 7) {
+    for (const [to, item] of Object.entries(LYCANROC_STONES)) {
+      add("timeBased", ROCKRUFF, Number(to), { kind: "item", item });
     }
   }
 
