@@ -62,7 +62,7 @@ games: one file in the root is enough, unless you want generation-accurate art
 - then drop a per-game copy in that game folder.
 
 BY FOLDER - the games using it, then every trainer in journey order
-(407 distinct slugs, 122 entries marked * without an automatic picture).
+(406 distinct slugs, 121 entries marked * without an automatic picture).
 A name listed under several folders can live once in the root instead.
 
   FireRed / LeafGreen, New Generations, Radical Red  ->  firered/   (59)
@@ -641,14 +641,13 @@ A name listed under several folders can live once in the root instead.
     clavel.png                  Clavel (Clive)   *
     cosima.png                  Cosima (Penny)
 
-  Unbound  ->  unbound/   (25)
-    rival-axelrod.png           Rival Axelrod   *
+  Unbound  ->  unbound/   (24)
+    rival-axelford.png          Rival Axelford   *
     leader-mirskle.png          Leader Mirskle   *
     shadow-admin-marlon-grunt.pngShadow Admin Marlon & Grunt   *
     leader-vega.png             Leader Vega   *
     shadow-admin-ivory.png      Shadow Admin Ivory   *
     shadow-boss-zeph.png        Shadow Boss Zeph   *
-    rival-axelford.png          Rival Axelford   *
     leader-alice.png            Leader Alice   *
     leader-mel.png              Leader Mel   *
     shadow-admin-ivory-grunt.pngShadow Admin Ivory & Grunt   *

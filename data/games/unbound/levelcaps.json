@@ -2,11 +2,11 @@
   {
     "id": 1,
     "names": {
-      "de": "Rival Axelrod",
-      "en": "Rival Axelrod",
-      "fr": "Rival Axelrod",
-      "es": "Rival Axelrod",
-      "it": "Rival Axelrod"
+      "de": "Rival Axelford",
+      "en": "Rival Axelford",
+      "fr": "Rival Axelford",
+      "es": "Rival Axelford",
+      "it": "Rival Axelford"
     },
     "location": {
       "de": "Frozen Heights",
@@ -21,11 +21,11 @@
   {
     "id": 2,
     "names": {
-      "de": "Rival Axelrod",
-      "en": "Rival Axelrod",
-      "fr": "Rival Axelrod",
-      "es": "Rival Axelrod",
-      "it": "Rival Axelrod"
+      "de": "Rival Axelford",
+      "en": "Rival Axelford",
+      "fr": "Rival Axelford",
+      "es": "Rival Axelford",
+      "it": "Rival Axelford"
     },
     "location": {
       "de": "Icicle Cave",
@@ -92,7 +92,7 @@
       "it": "Crater Town Gym"
     },
     "badge": null,
-    "max_level": 27
+    "max_level": 26
   },
   {
     "id": 6,
@@ -149,7 +149,7 @@
       "it": "Frost Mountain"
     },
     "badge": null,
-    "max_level": 33
+    "max_level": 26
   },
   {
     "id": 9,
@@ -187,7 +187,7 @@
       "it": "Fallshore City Gym"
     },
     "badge": null,
-    "max_level": 37
+    "max_level": 36
   },
   {
     "id": 11,
@@ -199,11 +199,11 @@
       "it": "Shadow Admin Ivory & Grunt"
     },
     "location": {
-      "de": "Underground Passage",
-      "en": "Underground Passage",
-      "fr": "Underground Passage",
-      "es": "Underground Passage",
-      "it": "Underground Passage"
+      "de": "Underground Pass",
+      "en": "Underground Pass",
+      "fr": "Underground Pass",
+      "es": "Underground Pass",
+      "it": "Underground Pass"
     },
     "badge": null,
     "max_level": 38
@@ -218,14 +218,14 @@
       "it": "Successor Maxima"
     },
     "location": {
-      "de": "Tramigan Mansion",
-      "en": "Tramigan Mansion",
-      "fr": "Tramigan Mansion",
-      "es": "Tramigan Mansion",
-      "it": "Tramigan Mansion"
+      "de": "Tarmigan Mansion",
+      "en": "Tarmigan Mansion",
+      "fr": "Tarmigan Mansion",
+      "es": "Tarmigan Mansion",
+      "it": "Tarmigan Mansion"
     },
     "badge": null,
-    "max_level": 41
+    "max_level": 40
   },
   {
     "id": 13,
@@ -237,14 +237,14 @@
       "it": "Shadow Admin Marlon"
     },
     "location": {
-      "de": "Thunder Cap Mt.",
-      "en": "Thunder Cap Mt.",
-      "fr": "Thunder Cap Mt.",
-      "es": "Thunder Cap Mt.",
-      "it": "Thunder Cap Mt."
+      "de": "Thundercap Mt.",
+      "en": "Thundercap Mt.",
+      "fr": "Thundercap Mt.",
+      "es": "Thundercap Mt.",
+      "it": "Thundercap Mt."
     },
     "badge": null,
-    "max_level": 41
+    "max_level": 38
   },
   {
     "id": 14,
@@ -263,7 +263,7 @@
       "it": "Route 12"
     },
     "badge": null,
-    "max_level": 47
+    "max_level": 39
   },
   {
     "id": 15,
@@ -282,7 +282,7 @@
       "it": "Dehara City Gym"
     },
     "badge": null,
-    "max_level": 46
+    "max_level": 45
   },
   {
     "id": 16,
@@ -320,7 +320,7 @@
       "it": "Shadow Base"
     },
     "badge": null,
-    "max_level": 46
+    "max_level": 44
   },
   {
     "id": 18,
@@ -339,7 +339,7 @@
       "it": "Vivill Warehouse"
     },
     "badge": null,
-    "max_level": 53
+    "max_level": 51
   },
   {
     "id": 19,
@@ -396,7 +396,7 @@
       "it": "Magnolia Town"
     },
     "badge": null,
-    "max_level": 65
+    "max_level": 58
   },
   {
     "id": 22,
@@ -415,7 +415,7 @@
       "it": "Crystal Peak"
     },
     "badge": null,
-    "max_level": 62
+    "max_level": 59
   },
   {
     "id": 23,
@@ -434,7 +434,7 @@
       "it": "Crystal Peak"
     },
     "badge": null,
-    "max_level": 62
+    "max_level": 60
   },
   {
     "id": 24,
@@ -453,7 +453,7 @@
       "it": "Crystal Peak"
     },
     "badge": null,
-    "max_level": 62
+    "max_level": 60
   },
   {
     "id": 25,
@@ -491,7 +491,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 76
+    "max_level": 66
   },
   {
     "id": 27,
@@ -510,7 +510,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 76
+    "max_level": 66
   },
   {
     "id": 28,
@@ -529,7 +529,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 76
+    "max_level": 66
   },
   {
     "id": 29,
@@ -548,7 +548,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 76
+    "max_level": 66
   },
   {
     "id": 30,
@@ -567,7 +567,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 76
+    "max_level": 69
   },
   {
     "id": 31,
@@ -586,6 +586,6 @@
       "it": "Ruins of Void"
     },
     "badge": null,
-    "max_level": 74
+    "max_level": 75
   }
 ]

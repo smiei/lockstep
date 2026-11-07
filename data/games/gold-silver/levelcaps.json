@@ -501,7 +501,7 @@
       "es": "Medalla Alma",
       "it": "Medaglia Anima"
     },
-    "max_level": 36,
+    "max_level": 39,
     "region": "kanto"
   },
   {
@@ -527,7 +527,7 @@
       "es": "Medalla Roca",
       "it": "Medaglia Sasso"
     },
-    "max_level": 42,
+    "max_level": 44,
     "region": "kanto"
   },
   {
@@ -553,7 +553,7 @@
       "es": "Medalla Volcán",
       "it": "Medaglia Vulcano"
     },
-    "max_level": 45,
+    "max_level": 50,
     "region": "kanto"
   },
   {

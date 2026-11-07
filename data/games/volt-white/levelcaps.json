@@ -572,11 +572,11 @@
   {
     "id": 28,
     "names": {
-      "de": "Caitlin",
-      "en": "Caitlin",
-      "fr": "Caitlin",
-      "es": "Caitlin",
-      "it": "Caitlin"
+      "de": "Marshal",
+      "en": "Marshal",
+      "fr": "Marshal",
+      "es": "Marshal",
+      "it": "Marshal"
     },
     "location": {
       "de": "Elite Four",
@@ -587,7 +587,7 @@
     },
     "badge": null,
     "max_level": 73,
-    "sprite": "Kattlea"
+    "sprite": "Eugen"
   },
   {
     "id": 29,
