@@ -532,7 +532,8 @@
       "id": 83,
       "name": "Farfetch’d",
       "types": [
-        "fighting-flying"
+        "fighting",
+        "flying"
       ],
       "stats": {
         "KP": 52,
@@ -1222,7 +1223,7 @@
       "name": "Misdreavus",
       "types": [
         "ghost",
-        "fariy"
+        "fairy"
       ],
       "stats": {
         "KP": 60,

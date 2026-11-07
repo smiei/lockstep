@@ -40,5 +40,11 @@
     "comment": "Zekrom - lowered to 3 in Omega Ruby/Alpha Sapphire",
     "catchRate": 45,
     "maxGeneration": 5
+  },
+  {
+    "id": 20,
+    "comment": "Raticate - 90 in Red/Blue/Yellow and Gold/Silver/Crystal, 127 from Ruby/Sapphire on",
+    "catchRate": 90,
+    "maxGeneration": 2
   }
 ]

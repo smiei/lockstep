@@ -189,6 +189,13 @@
     }
   },
   {
+    "id": 24,
+    "maxGeneration": 6,
+    "stats": {
+      "attack": 85
+    }
+  },
+  {
     "id": 25,
     "maxGeneration": 1,
     "stats": {
@@ -453,6 +460,13 @@
     "maxGeneration": 1,
     "stats": {
       "special": 70
+    }
+  },
+  {
+    "id": 51,
+    "maxGeneration": 6,
+    "stats": {
+      "attack": 80
     }
   },
   {
@@ -722,6 +736,13 @@
     }
   },
   {
+    "id": 83,
+    "maxGeneration": 6,
+    "stats": {
+      "attack": 65
+    }
+  },
+  {
     "id": 84,
     "maxGeneration": 1,
     "stats": {
@@ -733,6 +754,13 @@
     "maxGeneration": 1,
     "stats": {
       "special": 60
+    }
+  },
+  {
+    "id": 85,
+    "maxGeneration": 6,
+    "stats": {
+      "speed": 100
     }
   },
   {
@@ -848,6 +876,13 @@
     }
   },
   {
+    "id": 101,
+    "maxGeneration": 6,
+    "stats": {
+      "speed": 140
+    }
+  },
+  {
     "id": 102,
     "maxGeneration": 1,
     "stats": {
@@ -859,6 +894,13 @@
     "maxGeneration": 1,
     "stats": {
       "special": 125
+    }
+  },
+  {
+    "id": 103,
+    "maxGeneration": 6,
+    "stats": {
+      "special-defense": 65
     }
   },
   {
@@ -1205,6 +1247,20 @@
     }
   },
   {
+    "id": 164,
+    "maxGeneration": 6,
+    "stats": {
+      "special-attack": 76
+    }
+  },
+  {
+    "id": 168,
+    "maxGeneration": 6,
+    "stats": {
+      "special-defense": 60
+    }
+  },
+  {
     "id": 173,
     "maxGeneration": 5,
     "types": [
@@ -1304,6 +1360,37 @@
     ]
   },
   {
+    "id": 211,
+    "maxGeneration": 6,
+    "stats": {
+      "defense": 75
+    }
+  },
+  {
+    "id": 219,
+    "maxGeneration": 6,
+    "stats": {
+      "hp": 50,
+      "special-attack": 80
+    }
+  },
+  {
+    "id": 222,
+    "maxGeneration": 6,
+    "stats": {
+      "hp": 55,
+      "defense": 85,
+      "special-defense": 85
+    }
+  },
+  {
+    "id": 226,
+    "maxGeneration": 6,
+    "stats": {
+      "hp": 65
+    }
+  },
+  {
     "id": 242,
     "maxGeneration": 3,
     "stats": {
@@ -1315,6 +1402,20 @@
     "maxGeneration": 5,
     "stats": {
       "special-attack": 90
+    }
+  },
+  {
+    "id": 277,
+    "maxGeneration": 6,
+    "stats": {
+      "special-attack": 50
+    }
+  },
+  {
+    "id": 279,
+    "maxGeneration": 6,
+    "stats": {
+      "special-attack": 85
     }
   },
   {
@@ -1339,6 +1440,14 @@
     ]
   },
   {
+    "id": 284,
+    "maxGeneration": 6,
+    "stats": {
+      "special-attack": 80,
+      "speed": 60
+    }
+  },
+  {
     "id": 295,
     "maxGeneration": 5,
     "stats": {
@@ -1353,6 +1462,13 @@
     ]
   },
   {
+    "id": 301,
+    "maxGeneration": 6,
+    "stats": {
+      "speed": 70
+    }
+  },
+  {
     "id": 303,
     "maxGeneration": 5,
     "types": [
@@ -1360,10 +1476,40 @@
     ]
   },
   {
+    "id": 313,
+    "maxGeneration": 6,
+    "stats": {
+      "defense": 55,
+      "special-defense": 75
+    }
+  },
+  {
+    "id": 314,
+    "maxGeneration": 6,
+    "stats": {
+      "defense": 55,
+      "special-defense": 75
+    }
+  },
+  {
     "id": 315,
     "maxGeneration": 3,
     "stats": {
       "special-attack": 100
+    }
+  },
+  {
+    "id": 337,
+    "maxGeneration": 6,
+    "stats": {
+      "hp": 70
+    }
+  },
+  {
+    "id": 338,
+    "maxGeneration": 6,
+    "stats": {
+      "hp": 70
     }
   },
   {
@@ -1378,6 +1524,15 @@
     "maxGeneration": 3,
     "stats": {
       "special-defense": 130
+    }
+  },
+  {
+    "id": 358,
+    "maxGeneration": 6,
+    "stats": {
+      "hp": 65,
+      "defense": 70,
+      "special-defense": 80
     }
   },
   {
@@ -1408,6 +1563,14 @@
       "normal",
       "flying"
     ]
+  },
+  {
+    "id": 488,
+    "maxGeneration": 8,
+    "stats": {
+      "defense": 120,
+      "special-defense": 130
+    }
   },
   {
     "id": 508,
