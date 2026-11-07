@@ -1,46 +1,153 @@
 {
-  "cut": {
-    "type": "steel",
-    "power": 90
-  },
-  "strength": {
-    "type": "rock",
-    "power": 100
-  },
-  "wing-attack": {
-    "power": 80
-  },
-  "shadow-punch": {
-    "power": 80
-  },
-  "water-pulse": {
-    "power": 80
+  "absorb": {
+    "power": 35
   },
   "arm-thrust": {
     "power": 25
   },
-  "mega-drain": {
-    "power": 60
+  "bone-club": {
+    "accuracy": 90,
+    "pp": 15
   },
-  "mystical-fire": {
-    "power": 85
+  "bone-rush": {
+    "power": 15
+  },
+  "chatter": {
+    "power": 90,
+    "pp": 15
+  },
+  "comet-punch": {
+    "power": 25,
+    "accuracy": 100
+  },
+  "cross-poison": {
+    "power": 90,
+    "pp": 15
+  },
+  "cut": {
+    "power": 60,
+    "accuracy": 100,
+    "pp": 20,
+    "type": "steel"
+  },
+  "dark-void": {
+    "accuracy": 80
+  },
+  "disarming-voice": {
+    "power": 60
   },
   "draining-kiss": {
     "power": 75
   },
+  "fly": {
+    "accuracy": 100
+  },
+  "force-palm": {
+    "pp": 15
+  },
   "freeze-dry": {
+    "power": 95,
+    "pp": 15
+  },
+  "gear-grind": {
+    "accuracy": 100
+  },
+  "glaciate": {
+    "power": 80
+  },
+  "horn-leech": {
+    "pp": 15
+  },
+  "luster-purge": {
     "power": 95
   },
-  "steel-wing": {
-    "power": 90
+  "mat-block": {
+    "pp": 15
   },
-  "power-gem": {
-    "power": 90
+  "mega-drain": {
+    "power": 60
+  },
+  "mist-ball": {
+    "power": 95
+  },
+  "mud-bomb": {
+    "accuracy": 90,
+    "pp": 15
+  },
+  "multi-attack": {
+    "power": 120
+  },
+  "mystical-fire": {
+    "power": 85
   },
   "needle-arm": {
     "power": 90
   },
-  "cross-poison": {
+  "octazooka": {
+    "power": 85
+  },
+  "parabolic-charge": {
+    "power": 90,
+    "pp": 10
+  },
+  "power-gem": {
+    "power": 90,
+    "pp": 15
+  },
+  "rapid-spin": {
+    "power": 50
+  },
+  "relic-song": {
+    "power": 85
+  },
+  "rock-climb": {
+    "type": "rock"
+  },
+  "rock-smash": {
+    "power": 60
+  },
+  "shadow-punch": {
+    "power": 80
+  },
+  "shell-trap": {
+    "pp": 10
+  },
+  "spike-cannon": {
+    "power": 25,
+    "accuracy": 90,
+    "type": "water"
+  },
+  "spirit-shackle": {
     "power": 90
+  },
+  "steel-wing": {
+    "power": 90,
+    "pp": 15
+  },
+  "strength": {
+    "power": 100,
+    "pp": 10,
+    "type": "rock"
+  },
+  "submission": {
+    "power": 90,
+    "accuracy": 100,
+    "pp": 15
+  },
+  "tail-slap": {
+    "accuracy": 100
+  },
+  "triple-kick": {
+    "power": 20
+  },
+  "twineedle": {
+    "power": 45
+  },
+  "water-pulse": {
+    "power": 80
+  },
+  "wing-attack": {
+    "power": 80,
+    "pp": 20
   }
 }

@@ -1,0 +1,88 @@
+{
+  "aerial-ace": {
+    "power": 80
+  },
+  "ancient-power": {
+    "pp": 15
+  },
+  "astonish": {
+    "power": 60
+  },
+  "blizzard": {
+    "accuracy": 80
+  },
+  "clamp": {
+    "pp": 10
+  },
+  "cut": {
+    "power": 60,
+    "type": "bug"
+  },
+  "dive": {
+    "power": 60
+  },
+  "drain-punch": {
+    "pp": 15
+  },
+  "extreme-speed": {
+    "pp": 10
+  },
+  "fire-fang": {
+    "power": 75
+  },
+  "flame-burst": {
+    "pp": 20
+  },
+  "giga-drain": {
+    "pp": 15
+  },
+  "hurricane": {
+    "accuracy": 80
+  },
+  "ice-fang": {
+    "power": 75
+  },
+  "iron-tail": {
+    "accuracy": 85
+  },
+  "knock-off": {
+    "power": 80
+  },
+  "ominous-wind": {
+    "pp": 15
+  },
+  "outrage": {
+    "pp": 15
+  },
+  "rock-climb": {
+    "type": "rock"
+  },
+  "rock-slide": {
+    "accuracy": 95
+  },
+  "shadow-claw": {
+    "power": 80
+  },
+  "silver-wind": {
+    "pp": 15
+  },
+  "snarl": {
+    "accuracy": 100
+  },
+  "submission": {
+    "pp": 25
+  },
+  "sucker-punch": {
+    "power": 60,
+    "pp": 10
+  },
+  "surf": {
+    "power": 95
+  },
+  "thunder-fang": {
+    "power": 75
+  },
+  "zap-cannon": {
+    "power": 100
+  }
+}

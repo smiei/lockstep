@@ -1,0 +1,120 @@
+{
+  "bind": {
+    "accuracy": 85
+  },
+  "bone-rush": {
+    "accuracy": 90
+  },
+  "bullet-seed": {
+    "power": 25
+  },
+  "clamp": {
+    "accuracy": 85
+  },
+  "cotton-spore": {
+    "accuracy": 100
+  },
+  "covet": {
+    "power": 60
+  },
+  "crabhammer": {
+    "accuracy": 90
+  },
+  "cut": {
+    "power": 60,
+    "accuracy": 100,
+    "type": "grass"
+  },
+  "disable": {
+    "accuracy": 100
+  },
+  "doom-desire": {
+    "power": 140,
+    "accuracy": 100
+  },
+  "drain-punch": {
+    "power": 75,
+    "pp": 10
+  },
+  "feint": {
+    "power": 30
+  },
+  "fire-spin": {
+    "power": 35,
+    "accuracy": 85
+  },
+  "fury-cutter": {
+    "power": 20
+  },
+  "future-sight": {
+    "power": 100,
+    "accuracy": 100
+  },
+  "giga-drain": {
+    "power": 75
+  },
+  "glare": {
+    "accuracy": 90
+  },
+  "high-jump-kick": {
+    "power": 130
+  },
+  "hypnosis": {
+    "accuracy": 70
+  },
+  "icicle-spear": {
+    "power": 25
+  },
+  "jump-kick": {
+    "power": 100
+  },
+  "last-resort": {
+    "power": 140
+  },
+  "magma-storm": {
+    "accuracy": 75
+  },
+  "petal-dance": {
+    "power": 120
+  },
+  "poison-gas": {
+    "accuracy": 80
+  },
+  "rock-blast": {
+    "accuracy": 90
+  },
+  "rock-smash": {
+    "power": 60
+  },
+  "sand-tomb": {
+    "power": 35,
+    "accuracy": 85
+  },
+  "scary-face": {
+    "accuracy": 100
+  },
+  "strength": {
+    "power": 75,
+    "type": "rock"
+  },
+  "tackle": {
+    "power": 50,
+    "accuracy": 100
+  },
+  "thrash": {
+    "power": 120
+  },
+  "toxic": {
+    "accuracy": 90
+  },
+  "uproar": {
+    "power": 90
+  },
+  "whirlpool": {
+    "power": 35,
+    "accuracy": 85
+  },
+  "wrap": {
+    "accuracy": 90
+  }
+}

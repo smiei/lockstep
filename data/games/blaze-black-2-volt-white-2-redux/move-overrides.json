@@ -1,287 +1,51 @@
 {
-  "absorb": {
-    "power": 20
-  },
-  "acid": {
-    "power": 20
-  },
-  "air-cutter": {
-    "power": 55
-  },
-  "aqua-tail": {
-    "power": 90
-  },
   "arm-thrust": {
-    "power": 15
+    "power": 25
   },
-  "assurance": {
-    "power": 50
+  "comet-punch": {
+    "power": 25
   },
-  "aura-sphere": {
-    "power": 80
-  },
-  "aurora-beam": {
-    "power": 65
-  },
-  "blizzard": {
-    "power": 120
-  },
-  "chatter": {
-    "power": 70
-  },
-  "cross-poison": {
-    "power": 70
-  },
-  "dive": {
-    "power": 80
-  },
-  "draco-meteor": {
-    "power": 140
-  },
-  "dragon-breath": {
-    "power": 60
-  },
-  "dragon-claw": {
-    "power": 80
-  },
-  "dragon-pulse": {
-    "power": 85
-  },
-  "draining-kiss": {
-    "power": 50
-  },
-  "echoed-voice": {
-    "power": 40
-  },
-  "energy-ball": {
-    "power": 80
-  },
-  "esper-wing": {
-    "power": 75
-  },
-  "fire-blast": {
-    "power": 120
+  "cut": {
+    "power": 60,
+    "accuracy": 100,
+    "pp": 20,
+    "type": "grass"
   },
   "fire-pledge": {
-    "power": 50
-  },
-  "flame-charge": {
-    "power": 50
-  },
-  "flame-wheel": {
-    "power": 60
-  },
-  "flash-cannon": {
-    "power": 80
-  },
-  "fly": {
-    "power": 95
-  },
-  "frost-breath": {
-    "power": 60
-  },
-  "fury-cutter": {
-    "power": 20
-  },
-  "future-sight": {
     "power": 100
-  },
-  "gear-grind": {
-    "power": 50
-  },
-  "giga-drain": {
-    "power": 75
-  },
-  "glaciate": {
-    "power": 65
   },
   "grass-pledge": {
-    "power": 50
-  },
-  "headlong-rush": {
     "power": 100
-  },
-  "heart-stamp": {
-    "power": 60
-  },
-  "heat-wave": {
-    "power": 95
-  },
-  "hex": {
-    "power": 50
-  },
-  "hurricane": {
-    "power": 120
-  },
-  "hydro-pump": {
-    "power": 120
-  },
-  "ice-beam": {
-    "power": 95
   },
   "incinerate": {
     "power": 50
   },
-  "knock-off": {
-    "power": 20
-  },
-  "leaf-storm": {
-    "power": 140
-  },
-  "leaf-tornado": {
-    "power": 65
-  },
-  "leech-life": {
-    "power": 20
-  },
-  "lick": {
-    "power": 20
-  },
-  "low-sweep": {
-    "power": 60
-  },
-  "magma-storm": {
+  "needle-arm": {
     "power": 100
   },
-  "mega-drain": {
-    "power": 40
-  },
-  "meteor-mash": {
-    "power": 90
-  },
-  "mud-slap": {
-    "power": 20
-  },
-  "muddy-water": {
-    "power": 95
-  },
-  "needle-arm": {
-    "power": 60
-  },
-  "octazooka": {
-    "power": 65
-  },
-  "overheat": {
-    "power": 140
-  },
   "pin-missile": {
-    "power": 14
-  },
-  "poison-fang": {
-    "power": 50
-  },
-  "poison-sting": {
-    "power": 15
-  },
-  "poison-tail": {
-    "power": 50
+    "power": 25
   },
   "power-gem": {
     "power": 80
   },
-  "power-up-punch": {
-    "power": 40
-  },
-  "psycho-cut": {
-    "power": 70
-  },
-  "psyshield-bash": {
-    "type": "psychic",
-    "power": 70,
-    "damageClass": "special"
-  },
-  "raging-fury": {
+  "shadow-claw": {
     "power": 90
   },
-  "rapid-spin": {
-    "power": 20
-  },
-  "rock-climb": {
-    "type": "rock",
-    "power": 90
-  },
-  "rock-smash": {
-    "power": 40
-  },
-  "rock-tomb": {
-    "power": 50
-  },
-  "rollout": {
-    "power": 30
-  },
-  "shadow-punch": {
-    "power": 60
-  },
-  "sludge": {
-    "power": 65
-  },
-  "smelling-salts": {
-    "power": 60
-  },
-  "smog": {
-    "power": 20
-  },
-  "storm-throw": {
-    "power": 40
-  },
-  "strength": {
-    "power": 80
-  },
-  "sucker-punch": {
-    "power": 80
-  },
-  "surf": {
-    "power": 95
-  },
-  "synchronoise": {
-    "power": 70
-  },
-  "tackle": {
-    "power": 40
-  },
-  "techno-blast": {
-    "power": 85
-  },
-  "thief": {
-    "power": 40
-  },
-  "thunderbolt": {
-    "power": 95
-  },
-  "thunder": {
-    "power": 120
-  },
-  "triple-axel": {
-    "power": 20
-  },
-  "twineedle": {
+  "spike-cannon": {
     "power": 25
   },
-  "twister": {
-    "power": 40
-  },
-  "vine-whip": {
-    "power": 35
-  },
-  "wake-up-slap": {
-    "power": 60
-  },
-  "water-pledge": {
-    "power": 50
-  },
-  "wave-crash": {
+  "steamroller": {
     "power": 75
   },
-  "charm": {
-    "type": "fairy"
+  "strength": {
+    "power": 75,
+    "type": "rock"
   },
-  "covet": {
-    "type": "fairy"
+  "struggle-bug": {
+    "power": 50
   },
-  "cut": {
-    "type": "grass"
-  },
-  "moonlight": {
-    "type": "fairy"
+  "water-pledge": {
+    "power": 100
   }
 }
