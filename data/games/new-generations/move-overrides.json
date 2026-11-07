@@ -1,35 +1,87 @@
 {
+  "acid-armor": {
+    "pp": 2
+  },
+  "agility": {
+    "pp": 2
+  },
+  "amnesia": {
+    "pp": 2
+  },
+  "barrier": {
+    "pp": 2
+  },
+  "belly-drum": {
+    "pp": 1
+  },
   "bind": {
-    "power": 20
+    "power": 20,
+    "accuracy": 95
+  },
+  "bulk-up": {
+    "pp": 2
+  },
+  "calm-mind": {
+    "pp": 2
+  },
+  "charm": {
+    "pp": 2
   },
   "comet-punch": {
-    "power": 20
+    "power": 20,
+    "accuracy": 95
+  },
+  "confuse-ray": {
+    "power": 10,
+    "pp": 5
+  },
+  "cosmic-power": {
+    "pp": 2
   },
   "cotton-spore": {
     "power": 10,
+    "accuracy": 100,
+    "pp": 5,
     "damageClass": "special"
   },
   "crabhammer": {
-    "power": 100
+    "power": 100,
+    "accuracy": 100
+  },
+  "cross-chop": {
+    "accuracy": 95
   },
   "crush-claw": {
-    "power": 95
+    "power": 95,
+    "accuracy": 90
+  },
+  "curse": {
+    "pp": 2
   },
   "cut": {
-    "type": "bug",
-    "power": 80
+    "power": 80,
+    "accuracy": 100,
+    "type": "bug"
+  },
+  "defense-curl": {
+    "pp": 5
   },
   "dig": {
     "power": 10
   },
   "doom-desire": {
-    "power": 180
+    "power": 180,
+    "accuracy": 100
   },
   "double-kick": {
     "power": 35
   },
   "double-slap": {
-    "power": 20
+    "power": 20,
+    "accuracy": 95
+  },
+  "double-team": {
+    "pp": 5
   },
   "dragon-breath": {
     "power": 95
@@ -37,82 +89,201 @@
   "dragon-claw": {
     "power": 70
   },
+  "dragon-dance": {
+    "pp": 2
+  },
   "explosion": {
     "power": 255
   },
+  "feather-dance": {
+    "pp": 2
+  },
   "flash": {
-    "type": "electric",
-    "power": 10
+    "power": 10,
+    "accuracy": 100,
+    "pp": 5,
+    "type": "electric"
   },
   "fly": {
-    "power": 80
+    "power": 80,
+    "accuracy": 100
+  },
+  "focus-energy": {
+    "pp": 5
+  },
+  "fury-attack": {
+    "accuracy": 98
   },
   "giga-drain": {
     "power": 95
   },
   "glare": {
-    "type": "dark",
     "power": 10,
+    "accuracy": 100,
+    "pp": 5,
+    "type": "dark",
     "damageClass": "special"
   },
   "growl": {
-    "type": "dark",
     "power": 10,
+    "pp": 5,
+    "type": "dark",
     "damageClass": "special"
   },
+  "growth": {
+    "pp": 5
+  },
+  "harden": {
+    "pp": 5
+  },
+  "head-smash": {
+    "pp": 15
+  },
+  "howl": {
+    "pp": 5
+  },
   "hyper-beam": {
-    "power": 180
+    "power": 180,
+    "accuracy": 100
+  },
+  "iron-defense": {
+    "pp": 2
   },
   "leech-life": {
     "power": 60
   },
   "leer": {
-    "type": "ghost",
     "power": 10,
+    "pp": 5,
+    "type": "ghost",
     "damageClass": "special"
   },
+  "light-screen": {
+    "pp": 5
+  },
+  "lovely-kiss": {
+    "power": 10,
+    "pp": 5
+  },
+  "mega-kick": {
+    "accuracy": 85,
+    "type": "fighting"
+  },
+  "mega-punch": {
+    "accuracy": 95
+  },
+  "minimize": {
+    "pp": 5
+  },
   "pin-missile": {
-    "power": 30
+    "power": 30,
+    "accuracy": 100
+  },
+  "poison-gas": {
+    "power": 10,
+    "accuracy": 65,
+    "pp": 5
   },
   "razor-wind": {
     "power": 150
   },
-  "sand-attack": {
-    "power": 10
+  "recover": {
+    "pp": 5
   },
-  "self-destruct": {
-    "power": 200
+  "reflect": {
+    "pp": 5
+  },
+  "rock-blast": {
+    "accuracy": 95
+  },
+  "rolling-kick": {
+    "accuracy": 95
+  },
+  "roost": {
+    "pp": 5
+  },
+  "sand-attack": {
+    "power": 10,
+    "pp": 5
+  },
+  "scary-face": {
+    "pp": 2
   },
   "screech": {
-    "type": "steel",
     "power": 10,
+    "accuracy": 100,
+    "pp": 5,
+    "type": "steel",
     "damageClass": "special"
   },
   "shadow-ball": {
     "power": 95
   },
+  "sharpen": {
+    "pp": 5
+  },
   "slam": {
-    "power": 120
+    "power": 120,
+    "accuracy": 50
+  },
+  "smokescreen": {
+    "power": 10,
+    "pp": 5,
+    "type": "fire"
+  },
+  "strength": {
+    "type": "steel"
   },
   "string-shot": {
     "power": 10,
+    "accuracy": 100,
+    "pp": 5,
     "damageClass": "special"
   },
   "submission": {
-    "power": 100
+    "power": 100,
+    "accuracy": 100
+  },
+  "substitute": {
+    "pp": 5
+  },
+  "supersonic": {
+    "power": 10,
+    "pp": 5,
+    "type": "psychic"
+  },
+  "sweet-scent": {
+    "pp": 5
   },
   "swift": {
     "power": 50
   },
+  "swords-dance": {
+    "pp": 2
+  },
+  "tail-glow": {
+    "pp": 2
+  },
   "tail-whip": {
-    "type": "fighting",
     "power": 10,
+    "pp": 5,
+    "type": "fighting",
     "damageClass": "special"
+  },
+  "take-down": {
+    "accuracy": 100
   },
   "twineedle": {
     "power": 35
   },
+  "withdraw": {
+    "pp": 5
+  },
   "wrap": {
-    "power": 20
+    "power": 20,
+    "accuracy": 95
+  },
+  "yawn": {
+    "pp": 5
   }
 }

@@ -1,0 +1,132 @@
+{
+  "absorb": {
+    "power": 25
+  },
+  "aura-sphere": {
+    "power": 90
+  },
+  "barb-barrage": {
+    "power": 75,
+    "pp": 15
+  },
+  "bitter-malice": {
+    "power": 60,
+    "pp": 15
+  },
+  "blizzard": {
+    "power": 120
+  },
+  "burn-up": {
+    "power": 140
+  },
+  "dark-void": {
+    "accuracy": 80
+  },
+  "dire-claw": {
+    "power": 60
+  },
+  "dive": {
+    "power": 100
+  },
+  "draco-meteor": {
+    "power": 140
+  },
+  "dragon-pulse": {
+    "power": 90
+  },
+  "esper-wing": {
+    "power": 75,
+    "accuracy": 90
+  },
+  "feint": {
+    "power": 50
+  },
+  "fire-blast": {
+    "power": 120
+  },
+  "flamethrower": {
+    "power": 95
+  },
+  "fly": {
+    "power": 100
+  },
+  "glaciate": {
+    "power": 75,
+    "accuracy": 100
+  },
+  "heat-wave": {
+    "power": 100
+  },
+  "hurricane": {
+    "power": 120
+  },
+  "hydro-pump": {
+    "power": 120
+  },
+  "ice-beam": {
+    "power": 95
+  },
+  "leaf-storm": {
+    "power": 140
+  },
+  "leech-life": {
+    "power": 20,
+    "pp": 15
+  },
+  "magma-storm": {
+    "power": 120
+  },
+  "meteor-mash": {
+    "power": 100
+  },
+  "mountain-gale": {
+    "power": 110,
+    "pp": 5
+  },
+  "muddy-water": {
+    "power": 95
+  },
+  "origin-pulse": {
+    "power": 120
+  },
+  "overheat": {
+    "power": 140
+  },
+  "raging-fury": {
+    "accuracy": 85
+  },
+  "scale-shot": {
+    "pp": 25
+  },
+  "shelter": {
+    "pp": 20
+  },
+  "smog": {
+    "accuracy": 100
+  },
+  "snore": {
+    "power": 80
+  },
+  "stone-axe": {
+    "power": 80
+  },
+  "surf": {
+    "power": 95
+  },
+  "take-heart": {
+    "pp": 20
+  },
+  "thunder": {
+    "power": 120
+  },
+  "thunderbolt": {
+    "power": 95
+  },
+  "triple-arrows": {
+    "power": 60,
+    "pp": 15
+  },
+  "wave-crash": {
+    "power": 75
+  }
+}

@@ -1,126 +1,664 @@
 {
-  "rock-smash": {
-    "power": 40
+  "acid-armor": {
+    "pp": 3
   },
-  "drill-run": {
-    "power": 80
-  },
-  "pin-missile": {
-    "power": 15
-  },
-  "petal-dance": {
-    "power": 95
-  },
-  "earth-power": {
-    "power": 90
-  },
-  "egg-bomb": {
-    "type": "grass",
-    "power": 120
-  },
-  "head-smash": {
-    "power": 150
-  },
-  "sky-attack": {
-    "power": 120
-  },
-  "superpower": {
-    "power": 120
-  },
-  "overheat": {
-    "power": 120
-  },
-  "dizzy-punch": {
-    "power": 90
-  },
-  "crabhammer": {
-    "power": 120
-  },
-  "super-fang": {
-    "type": "dark"
+  "aerial-ace": {
+    "pp": 32
   },
   "aeroblast": {
-    "power": 120
+    "power": 120,
+    "accuracy": 100,
+    "pp": 10
   },
-  "octazooka": {
-    "power": 95
-  },
-  "bone-rush": {
-    "power": 100
-  },
-  "giga-drain": {
-    "power": 75
-  },
-  "steel-wing": {
-    "power": 80
-  },
-  "return": {
-    "power": 103
-  },
-  "frustration": {
-    "power": 103
-  },
-  "extreme-speed": {
-    "power": 100
-  },
-  "ancient-power": {
-    "power": 80
-  },
-  "spit-up": {
-    "power": 100
-  },
-  "heat-wave": {
-    "power": 100
-  },
-  "draco-meteor": {
-    "power": 120
-  },
-  "mist-ball": {
-    "power": 90
-  },
-  "luster-purge": {
-    "power": 90
-  },
-  "blaze-kick": {
-    "power": 100
-  },
-  "needle-arm": {
-    "power": 95
-  },
-  "hyper-voice": {
-    "power": 120
-  },
-  "poison-fang": {
-    "power": 90
-  },
-  "crush-claw": {
-    "power": 100
+  "agility": {
+    "pp": 3
   },
   "air-slash": {
-    "power": 80
+    "power": 80,
+    "accuracy": 100,
+    "pp": 25
   },
-  "flash-cannon": {
-    "power": 90
+  "amnesia": {
+    "pp": 3
   },
-  "shadow-punch": {
-    "power": 70
+  "ancient-power": {
+    "power": 80,
+    "pp": 8
   },
-  "sky-uppercut": {
-    "power": 90
+  "aromatherapy": {
+    "pp": 2
   },
-  "poison-tail": {
-    "power": 120
+  "assist": {
+    "pp": 32
+  },
+  "barrier": {
+    "pp": 3
+  },
+  "belly-drum": {
+    "pp": 3
+  },
+  "bind": {
+    "accuracy": 100
+  },
+  "blast-burn": {
+    "accuracy": 100,
+    "pp": 8
+  },
+  "blaze-kick": {
+    "power": 100,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "blizzard": {
+    "pp": 8
+  },
+  "body-slam": {
+    "pp": 24
+  },
+  "bone-rush": {
+    "power": 100,
+    "accuracy": 100,
+    "pp": 24
+  },
+  "bonemerang": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "bulk-up": {
+    "pp": 3
   },
   "bullet-seed": {
     "power": 25
   },
-  "leaf-blade": {
+  "calm-mind": {
+    "pp": 3
+  },
+  "charm": {
+    "pp": 5
+  },
+  "clamp": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "cosmic-power": {
+    "pp": 6
+  },
+  "counter": {
+    "pp": 32
+  },
+  "crabhammer": {
+    "power": 120,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "cross-chop": {
+    "accuracy": 90,
+    "pp": 8
+  },
+  "crunch": {
+    "pp": 24
+  },
+  "crush-claw": {
+    "power": 100,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "curse": {
+    "pp": 6
+  },
+  "cut": {
+    "accuracy": 100
+  },
+  "defense-curl": {
+    "pp": 1
+  },
+  "disable": {
+    "accuracy": 100
+  },
+  "dizzy-punch": {
     "power": 90
   },
-  "water-spout": {
-    "power": 150
+  "double-edge": {
+    "pp": 24
+  },
+  "double-team": {
+    "pp": 6
+  },
+  "draco-meteor": {
+    "power": 120,
+    "accuracy": 100,
+    "pp": 8
+  },
+  "dragon-claw": {
+    "pp": 24
+  },
+  "dragon-dance": {
+    "pp": 3
+  },
+  "drill-run": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "earth-power": {
+    "pp": 16
+  },
+  "earthquake": {
+    "pp": 16
+  },
+  "egg-bomb": {
+    "power": 120,
+    "accuracy": 100,
+    "type": "grass"
+  },
+  "endure": {
+    "pp": 5
+  },
+  "explosion": {
+    "pp": 1
+  },
+  "extreme-speed": {
+    "power": 100,
+    "pp": 8
+  },
+  "facade": {
+    "pp": 32
+  },
+  "fake-out": {
+    "pp": 5
+  },
+  "fake-tears": {
+    "pp": 3
+  },
+  "feather-dance": {
+    "pp": 5
+  },
+  "fire-blast": {
+    "pp": 8
+  },
+  "fire-spin": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "flail": {
+    "pp": 5
+  },
+  "flamethrower": {
+    "pp": 24
+  },
+  "flash": {
+    "pp": 5
+  },
+  "flash-cannon": {
+    "power": 90,
+    "pp": 16
+  },
+  "flatter": {
+    "pp": 24
+  },
+  "focus-energy": {
+    "pp": 1
+  },
+  "force-palm": {
+    "pp": 16
+  },
+  "foresight": {
+    "pp": 5
+  },
+  "frenzy-plant": {
+    "accuracy": 100,
+    "pp": 8
+  },
+  "frustration": {
+    "pp": 32
+  },
+  "giga-drain": {
+    "power": 75,
+    "pp": 16
+  },
+  "glare": {
+    "accuracy": 100,
+    "type": "dark"
+  },
+  "grass-whistle": {
+    "accuracy": 70,
+    "pp": 24
+  },
+  "growl": {
+    "pp": 1
+  },
+  "growth": {
+    "pp": 5
+  },
+  "gunk-shot": {
+    "accuracy": 100,
+    "pp": 8
+  },
+  "hail": {
+    "pp": 1
+  },
+  "harden": {
+    "pp": 5
+  },
+  "haze": {
+    "pp": 5
+  },
+  "head-smash": {
+    "accuracy": 100,
+    "pp": 8
+  },
+  "heal-bell": {
+    "pp": 2
+  },
+  "heat-wave": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "howl": {
+    "pp": 5
+  },
+  "hydro-cannon": {
+    "accuracy": 100,
+    "pp": 8
+  },
+  "hydro-pump": {
+    "accuracy": 85,
+    "pp": 8
+  },
+  "hyper-beam": {
+    "accuracy": 100,
+    "pp": 8
+  },
+  "hyper-fang": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "hyper-voice": {
+    "power": 120,
+    "pp": 16
+  },
+  "hypnosis": {
+    "accuracy": 70,
+    "pp": 24
+  },
+  "ice-beam": {
+    "pp": 16
+  },
+  "icy-wind": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "ingrain": {
+    "pp": 1
+  },
+  "iron-defense": {
+    "pp": 3
+  },
+  "iron-tail": {
+    "accuracy": 90,
+    "pp": 24
+  },
+  "kinesis": {
+    "accuracy": 100,
+    "pp": 6
+  },
+  "knock-off": {
+    "pp": 5
+  },
+  "leaf-blade": {
+    "power": 95,
+    "pp": 24
+  },
+  "leech-life": {
+    "power": 40,
+    "pp": 24
+  },
+  "leech-seed": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "leer": {
+    "pp": 1
+  },
+  "light-screen": {
+    "pp": 3
+  },
+  "lovely-kiss": {
+    "accuracy": 85,
+    "pp": 16
+  },
+  "luster-purge": {
+    "power": 90,
+    "pp": 10
+  },
+  "meditate": {
+    "pp": 5
+  },
+  "megahorn": {
+    "accuracy": 90,
+    "pp": 16
+  },
+  "memento": {
+    "pp": 1
+  },
+  "meteor-mash": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "metronome": {
+    "pp": 35
+  },
+  "minimize": {
+    "pp": 6
+  },
+  "mirror-coat": {
+    "pp": 32
+  },
+  "mist": {
+    "pp": 3
+  },
+  "mist-ball": {
+    "power": 90,
+    "pp": 10
+  },
+  "moonlight": {
+    "pp": 10
+  },
+  "morning-sun": {
+    "pp": 10
+  },
+  "mud-shot": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "muddy-water": {
+    "accuracy": 100
+  },
+  "needle-arm": {
+    "power": 95,
+    "pp": 24
+  },
+  "octazooka": {
+    "power": 95,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "odor-sleuth": {
+    "pp": 3
+  },
+  "overheat": {
+    "power": 120,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "pain-split": {
+    "pp": 10
+  },
+  "petal-dance": {
+    "power": 95,
+    "pp": 16
+  },
+  "pin-missile": {
+    "power": 15,
+    "accuracy": 100
+  },
+  "poison-fang": {
+    "power": 90,
+    "pp": 24
+  },
+  "poison-tail": {
+    "power": 120,
+    "pp": 16
+  },
+  "psychic": {
+    "pp": 16
   },
   "psycho-boost": {
-    "power": 140
+    "accuracy": 100,
+    "pp": 8
+  },
+  "psywave": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "rain-dance": {
+    "pp": 1
+  },
+  "rapid-spin": {
+    "pp": 1
+  },
+  "recover": {
+    "pp": 10
+  },
+  "recycle": {
+    "pp": 16
+  },
+  "reflect": {
+    "pp": 3
+  },
+  "refresh": {
+    "pp": 5
+  },
+  "return": {
+    "pp": 32
+  },
+  "reversal": {
+    "pp": 5
+  },
+  "roar": {
+    "pp": 5
+  },
+  "rock-slide": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "rock-smash": {
+    "power": 40,
+    "pp": 24
+  },
+  "rock-tomb": {
+    "power": 55,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "rolling-kick": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "sacred-fire": {
+    "power": 120,
+    "accuracy": 100,
+    "pp": 10
+  },
+  "safeguard": {
+    "pp": 3
+  },
+  "sand-attack": {
+    "pp": 5
+  },
+  "sand-tomb": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "sandstorm": {
+    "pp": 1
+  },
+  "scary-face": {
+    "accuracy": 100,
+    "pp": 3
+  },
+  "screech": {
+    "pp": 3
+  },
+  "self-destruct": {
+    "pp": 1
+  },
+  "shadow-ball": {
+    "pp": 24
+  },
+  "shadow-punch": {
+    "power": 70
+  },
+  "shadow-sneak": {
+    "pp": 24
+  },
+  "sheer-cold": {
+    "pp": 8
+  },
+  "signal-beam": {
+    "pp": 24
+  },
+  "sing": {
+    "accuracy": 70,
+    "pp": 32
+  },
+  "sky-attack": {
+    "power": 120,
+    "accuracy": 100,
+    "pp": 16
+  },
+  "sky-uppercut": {
+    "power": 90,
+    "accuracy": 100,
+    "pp": 24
+  },
+  "sleep-powder": {
+    "accuracy": 80,
+    "pp": 24
+  },
+  "sleep-talk": {
+    "pp": 16
+  },
+  "sludge-bomb": {
+    "pp": 16
+  },
+  "smokescreen": {
+    "pp": 5
+  },
+  "snatch": {
+    "pp": 3
+  },
+  "snore": {
+    "power": 60,
+    "pp": 30
+  },
+  "soft-boiled": {
+    "pp": 16
+  },
+  "solar-beam": {
+    "pp": 16
+  },
+  "sonic-boom": {
+    "accuracy": 100
+  },
+  "spikes": {
+    "pp": 3
+  },
+  "spit-up": {
+    "pp": 16
+  },
+  "spite": {
+    "pp": 16
+  },
+  "steel-wing": {
+    "power": 80,
+    "accuracy": 100
+  },
+  "stockpile": {
+    "pp": 16
+  },
+  "string-shot": {
+    "accuracy": 100,
+    "pp": 5
+  },
+  "sunny-day": {
+    "pp": 1
+  },
+  "super-fang": {
+    "accuracy": 100,
+    "pp": 16,
+    "type": "dark"
+  },
+  "superpower": {
+    "pp": 8
+  },
+  "surf": {
+    "pp": 24
+  },
+  "sweet-scent": {
+    "pp": 5
+  },
+  "swords-dance": {
+    "pp": 5
+  },
+  "synthesis": {
+    "pp": 10
+  },
+  "tail-glow": {
+    "pp": 3
+  },
+  "tail-whip": {
+    "pp": 1
+  },
+  "taunt": {
+    "pp": 3
+  },
+  "teeter-dance": {
+    "pp": 32
+  },
+  "thunder": {
+    "pp": 16
+  },
+  "thunder-wave": {
+    "pp": 16
+  },
+  "thunderbolt": {
+    "pp": 24
+  },
+  "tickle": {
+    "pp": 6
+  },
+  "torment": {
+    "pp": 5
+  },
+  "toxic": {
+    "accuracy": 100,
+    "pp": 16
+  },
+  "transform": {
+    "pp": 32
+  },
+  "tri-attack": {
+    "pp": 16
+  },
+  "volt-tackle": {
+    "pp": 24
+  },
+  "water-spout": {
+    "pp": 8
+  },
+  "weather-ball": {
+    "pp": 16
+  },
+  "whirlpool": {
+    "accuracy": 100,
+    "pp": 24
+  },
+  "whirlwind": {
+    "pp": 5
+  },
+  "wild-charge": {
+    "pp": 24
+  },
+  "will-o-wisp": {
+    "accuracy": 85
+  },
+  "wish": {
+    "pp": 2
+  },
+  "withdraw": {
+    "pp": 1
+  },
+  "wrap": {
+    "accuracy": 100
   }
 }
