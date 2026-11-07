@@ -1,0 +1,62 @@
+[
+  {
+    "from": 64,
+    "to": 65,
+    "comment": "Kadabra -> Simsala",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 67,
+    "to": 68,
+    "comment": "Maschock -> Machomei",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 75,
+    "to": 76,
+    "comment": "Georok -> Geowaz",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 93,
+    "to": 94,
+    "comment": "Alpollo -> Gengar",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 111,
+    "to": 112,
+    "comment": "Rihorn -> Rizeros",
+    "method": {
+      "kind": "level",
+      "level": 40
+    },
+    "category": "easier"
+  },
+  {
+    "from": 148,
+    "to": 149,
+    "comment": "Dragonir -> Dragoran",
+    "method": {
+      "kind": "level",
+      "level": 40
+    },
+    "category": "easier"
+  }
+]

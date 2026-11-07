@@ -1,0 +1,18 @@
+{
+  "id": "yellow",
+  "sort": 3,
+  "kind": "official",
+  "generation": 1,
+  "dexLimit": 151,
+  "spriteSet": "red-blue",
+  "versionGroup": "red-blue",
+  "trainerSet": "red-blue",
+  "speciesData": "yellow",
+  "names": {
+    "de": "Gelb",
+    "en": "Yellow",
+    "fr": "Jaune",
+    "es": "Amarillo",
+    "it": "Giallo"
+  }
+}

@@ -7,10 +7,10 @@
   "spriteSet": "red-blue",
   "versionGroup": "red-blue",
   "names": {
-    "de": "Rot / Blau / Gelb",
-    "en": "Red / Blue / Yellow",
-    "fr": "Rouge / Bleu / Jaune",
-    "es": "Rojo / Azul / Amarillo",
-    "it": "Rosso / Blu / Giallo"
+    "de": "Rot / Blau",
+    "en": "Red / Blue",
+    "fr": "Rouge / Bleu",
+    "es": "Rojo / Azul",
+    "it": "Rosso / Blu"
   }
 }

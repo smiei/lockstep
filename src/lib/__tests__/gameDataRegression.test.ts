@@ -45,6 +45,7 @@ describe("game data regression (pre Infinite Fusion refactor)", () => {
     expect(games.map((g) => g.id).sort()).toEqual(
       [
         "red-blue",
+        "yellow",
         "gold-silver",
         "firered",
         "emerald",

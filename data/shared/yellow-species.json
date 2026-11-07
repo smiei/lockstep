@@ -1,0 +1,45 @@
+{
+  "source": "ROM: Pokemon Yellow (US/EU), verified against pret/pokeyellow @ b452f2a: only the species whose catch rate differs from Red/Blue",
+  "sourceVersion": "rom",
+  "species": [
+    {
+      "id": 148,
+      "name": "Dragonair",
+      "types": [
+        "dragon"
+      ],
+      "stats": {
+        "KP": 61,
+        "Ang.": 84,
+        "Vert.": 65,
+        "Sp.-A.": 70,
+        "Sp.-V.": 70,
+        "Init.": 70,
+        "Summe": 350,
+        "Spezial": 70
+      },
+      "catchRate": 27,
+      "weight": 16.5
+    },
+    {
+      "id": 149,
+      "name": "Dragonite",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "KP": 91,
+        "Ang.": 134,
+        "Vert.": 95,
+        "Sp.-A.": 100,
+        "Sp.-V.": 100,
+        "Init.": 80,
+        "Summe": 500,
+        "Spezial": 100
+      },
+      "catchRate": 9,
+      "weight": 210
+    }
+  ]
+}

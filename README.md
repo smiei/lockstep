@@ -183,7 +183,7 @@ npm start
 
 | Generation | Games |
 | --- | --- |
-| 1 | Red / Blue / Yellow |
+| 1 | Red / Blue, Yellow |
 | 2 | Gold / Silver / Crystal |
 | 3 | Ruby, Sapphire, FireRed / LeafGreen, Emerald |
 | 4 | Diamond / Pearl, Platinum, HeartGold, SoulSilver |
