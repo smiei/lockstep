@@ -146,6 +146,10 @@ describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
           expect(moves[name], name).toBeDefined();
           if (change.power !== undefined) expect(Number.isInteger(change.power) && (change.power as number) >= 0, name).toBe(true);
           if (change.damageClass !== undefined) expect(["physical", "special", "status"]).toContain(change.damageClass);
+          if (change.pp !== undefined) expect(Number.isInteger(change.pp) && (change.pp as number) > 0, name).toBe(true);
+          if (change.accuracy !== undefined && change.accuracy !== null) {
+            expect(Number.isInteger(change.accuracy) && (change.accuracy as number) > 0 && (change.accuracy as number) <= 100, name).toBe(true);
+          }
         }
       });
     }

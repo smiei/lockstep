@@ -28,7 +28,7 @@ import {
 import { getTypesForGeneration, type EffectivenessTable } from "@/lib/effectiveness";
 import { LANGS, type Lang } from "@/lib/i18n/dictionary";
 import type { LocalizedNames } from "@/lib/i18n/localize";
-import type { MovesTable } from "@/lib/learnset";
+import { moveStatsForGeneration, type MovesTable } from "@/lib/learnset";
 
 // Public so a page can forward the SAME number into a client component's
 // `generation` prop that this module used internally for Pokemon/type/move
@@ -166,8 +166,10 @@ export function getCatchRatesForGame(game: GameInfo): CatchRateEntry[] {
 }
 
 // A ROM hack's move changes (move-overrides.json) win over the shared table.
-// The changed move's era history (`past`) is dropped: it describes the real
-// games and would otherwise roll the hack's new power or type back.
+// The changed move's era history (`past`) is resolved first - the base game's
+// values for the fields the hack leaves alone - and then dropped, so it can
+// neither roll the hack's new value back nor leave the untouched fields on
+// today's values (a Gen 5 hack's Thunder Punch kept Gen 9's PP before).
 export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
   const table = getMoves(lang, dataGeneration(game));
   const overrides = getMoveOverrides(game.id);
@@ -176,10 +178,14 @@ export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
   for (const [name, change] of Object.entries(overrides)) {
     const move = out[name];
     if (!move) continue;
+    const era = moveStatsForGeneration(move, dataGeneration(game));
     out[name] = {
       ...move,
+      ...era,
       ...(change.type ? { type: change.type } : {}),
       ...(change.power !== undefined ? { power: change.power } : {}),
+      ...(change.accuracy !== undefined ? { accuracy: change.accuracy } : {}),
+      ...(change.pp !== undefined ? { pp: change.pp } : {}),
       ...(change.damageClass ? { damageClass: change.damageClass, damaging: change.damageClass !== "status" } : {}),
       past: undefined,
     };
