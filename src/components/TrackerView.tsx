@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { usePersistentState } from "@/lib/usePersistentState";
 import type { Route, Pokemon } from "@/lib/data";
 import type { Encounter, Player } from "@/generated/prisma/client";
 import { EncounterStatus } from "@/generated/prisma/enums";
@@ -90,7 +91,9 @@ export function TrackerView({
   // Post-game areas (Sevii 4-7, Cerulean Cave) are collapsed by default so
   // the main-game list stays tidy until the league is beaten.
   const [showPostgame, setShowPostgame] = useState(false);
-  const [openOnly, setOpenOnly] = useState(false);
+  // Per device and kept across tab changes: leaving the tab used to
+  // reset the filter, so coming back meant switching it on again.
+  const [openOnly, setOpenOnly] = usePersistentState("nuzlocke:tracker:openOnly", false);
   // The route the user last edited. "Open only" keeps it on screen even once it
   // is complete, so filling in a species no longer makes the row vanish before
   // the nickname, shiny flag or status can be set. Exactly one extra row, and
