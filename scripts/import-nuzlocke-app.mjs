@@ -52,7 +52,7 @@ const GEN_MAX_ID = { 1: 151, 2: 251, 3: 386, 4: 493, 5: 649, 6: 721, 7: 809, 8: 
 // trainerSet overrides the trainer-picture folder for a hack whose bosses are
 // all its own.
 const HACKS = [
-  { id: "renegade-platinum", src: "renplat", base: "platinum", name: "Renegade Platinum", generation: 4, dataGeneration: 6, spriteSet: "platinum", versionGroup: "platinum", sort: 30 },
+  { id: "renegade-platinum", src: "renplat", base: "platinum", name: "Renegade Platinum", generation: 4, dataGeneration: 6, dexLimit: 493, spriteSet: "platinum", versionGroup: "platinum", sort: 30 },
   { id: "sacred-gold", src: "sacredgold", league: "sssg", patch: "sssg", base: "heartgold", name: "Sacred Gold", generation: 4, dataGeneration: 4, spriteSet: "heartgold-soulsilver", versionGroup: "heartgold-soulsilver", sort: 31 },
   { id: "storm-silver", src: "stormsilv", league: "sssg", patch: "sssg", base: "soulsilver", name: "Storm Silver", generation: 4, dataGeneration: 4, spriteSet: "heartgold-soulsilver", versionGroup: "heartgold-soulsilver", sort: 32 },
   { id: "blaze-black", src: "blaze", league: "blazevolt", patch: "blazevolt", base: "black", name: "Blaze Black", generation: 5, dataGeneration: 5, spriteSet: "black-white", versionGroup: "black-white", sort: 33 },

@@ -11,15 +11,15 @@
     "type": "static"
   },
   {
-    "id": 2,
+    "id": 60,
     "names": {
-      "de": "Twinleaf Town",
-      "en": "Twinleaf Town",
-      "fr": "Twinleaf Town",
-      "es": "Twinleaf Town",
-      "it": "Twinleaf Town"
+      "de": "Eevee Twinleaf Town",
+      "en": "Eevee Twinleaf Town",
+      "fr": "Eevee Twinleaf Town",
+      "es": "Eevee Twinleaf Town",
+      "it": "Eevee Twinleaf Town"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 3,
@@ -55,6 +55,28 @@
     "type": "route"
   },
   {
+    "id": 2,
+    "names": {
+      "de": "Twinleaf Town",
+      "en": "Twinleaf Town",
+      "fr": "Twinleaf Town",
+      "es": "Twinleaf Town",
+      "it": "Twinleaf Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Kanto Starter Jubilife City",
+      "en": "Kanto Starter Jubilife City",
+      "fr": "Kanto Starter Jubilife City",
+      "es": "Kanto Starter Jubilife City",
+      "it": "Kanto Starter Jubilife City"
+    },
+    "type": "static"
+  },
+  {
     "id": 6,
     "names": {
       "de": "Route 203",
@@ -77,17 +99,6 @@
     "type": "route"
   },
   {
-    "id": 8,
-    "names": {
-      "de": "Oreburgh City",
-      "en": "Oreburgh City",
-      "fr": "Oreburgh City",
-      "es": "Oreburgh City",
-      "it": "Oreburgh City"
-    },
-    "type": "route"
-  },
-  {
     "id": 9,
     "names": {
       "de": "Oreburgh Mine",
@@ -97,6 +108,28 @@
       "it": "Oreburgh Mine"
     },
     "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Hoenn Starter Oreburgh City",
+      "en": "Hoenn Starter Oreburgh City",
+      "fr": "Hoenn Starter Oreburgh City",
+      "es": "Hoenn Starter Oreburgh City",
+      "it": "Hoenn Starter Oreburgh City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Beldum Oreburgh City",
+      "en": "Beldum Oreburgh City",
+      "fr": "Beldum Oreburgh City",
+      "es": "Beldum Oreburgh City",
+      "it": "Beldum Oreburgh City"
+    },
+    "type": "static"
   },
   {
     "id": 10,
@@ -121,17 +154,6 @@
     "type": "route"
   },
   {
-    "id": 12,
-    "names": {
-      "de": "Jubilife City",
-      "en": "Jubilife City",
-      "fr": "Jubilife City",
-      "es": "Jubilife City",
-      "it": "Jubilife City"
-    },
-    "type": "route"
-  },
-  {
     "id": 13,
     "names": {
       "de": "Ravaged Path",
@@ -145,13 +167,13 @@
   {
     "id": 14,
     "names": {
-      "de": "Floaroma Town",
-      "en": "Floaroma Town",
-      "fr": "Floaroma Town",
-      "es": "Floaroma Town",
-      "it": "Floaroma Town"
+      "de": "Johto Starter Floaroma Town",
+      "en": "Johto Starter Floaroma Town",
+      "fr": "Johto Starter Floaroma Town",
+      "es": "Johto Starter Floaroma Town",
+      "it": "Johto Starter Floaroma Town"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 15,
@@ -187,6 +209,17 @@
     "type": "route"
   },
   {
+    "id": 62,
+    "names": {
+      "de": "Drifloon Valley Windworks",
+      "en": "Drifloon Valley Windworks",
+      "fr": "Drifloon Valley Windworks",
+      "es": "Drifloon Valley Windworks",
+      "it": "Drifloon Valley Windworks"
+    },
+    "type": "static"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Eterna Forest",
@@ -200,13 +233,24 @@
   {
     "id": 19,
     "names": {
-      "de": "The Old Chateau",
-      "en": "The Old Chateau",
-      "fr": "The Old Chateau",
-      "es": "The Old Chateau",
-      "it": "The Old Chateau"
+      "de": "Old Chateau",
+      "en": "Old Chateau",
+      "fr": "Old Chateau",
+      "es": "Old Chateau",
+      "it": "Old Chateau"
     },
     "type": "route"
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Rotom Old Chateau",
+      "en": "Rotom Old Chateau",
+      "fr": "Rotom Old Chateau",
+      "es": "Rotom Old Chateau",
+      "it": "Rotom Old Chateau"
+    },
+    "type": "static"
   },
   {
     "id": 20,
@@ -220,15 +264,26 @@
     "type": "route"
   },
   {
+    "id": 64,
+    "names": {
+      "de": "Togepi Egg Eterna City",
+      "en": "Togepi Egg Eterna City",
+      "fr": "Togepi Egg Eterna City",
+      "es": "Togepi Egg Eterna City",
+      "it": "Togepi Egg Eterna City"
+    },
+    "type": "static"
+  },
+  {
     "id": 21,
     "names": {
-      "de": "Eterna Building",
-      "en": "Eterna Building",
-      "fr": "Eterna Building",
-      "es": "Eterna Building",
-      "it": "Eterna Building"
+      "de": "Porygon Eterna Building",
+      "en": "Porygon Eterna Building",
+      "fr": "Porygon Eterna Building",
+      "es": "Porygon Eterna Building",
+      "it": "Porygon Eterna Building"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 22,
@@ -286,13 +341,24 @@
     "type": "route"
   },
   {
+    "id": 65,
+    "names": {
+      "de": "Spiritomb Route 209",
+      "en": "Spiritomb Route 209",
+      "fr": "Spiritomb Route 209",
+      "es": "Spiritomb Route 209",
+      "it": "Spiritomb Route 209"
+    },
+    "type": "static"
+  },
+  {
     "id": 27,
     "names": {
-      "de": "The Lost Tower",
-      "en": "The Lost Tower",
-      "fr": "The Lost Tower",
-      "es": "The Lost Tower",
-      "it": "The Lost Tower"
+      "de": "Lost Tower",
+      "en": "Lost Tower",
+      "fr": "Lost Tower",
+      "es": "Lost Tower",
+      "it": "Lost Tower"
     },
     "type": "route"
   },
@@ -330,17 +396,6 @@
     "type": "route"
   },
   {
-    "id": 31,
-    "names": {
-      "de": "Veilstone City",
-      "en": "Veilstone City",
-      "fr": "Veilstone City",
-      "es": "Veilstone City",
-      "it": "Veilstone City"
-    },
-    "type": "route"
-  },
-  {
     "id": 32,
     "names": {
       "de": "Route 214",
@@ -354,22 +409,22 @@
   {
     "id": 33,
     "names": {
-      "de": "Ruin Maniac's Cave",
-      "en": "Ruin Maniac's Cave",
-      "fr": "Ruin Maniac's Cave",
-      "es": "Ruin Maniac's Cave",
-      "it": "Ruin Maniac's Cave"
+      "de": "Ruin Maniac Cave",
+      "en": "Ruin Maniac Cave",
+      "fr": "Ruin Maniac Cave",
+      "es": "Ruin Maniac Cave",
+      "it": "Ruin Maniac Cave"
     },
     "type": "route"
   },
   {
     "id": 34,
     "names": {
-      "de": "Ruin Maniac's Tunnel",
-      "en": "Ruin Maniac's Tunnel",
-      "fr": "Ruin Maniac's Tunnel",
-      "es": "Ruin Maniac's Tunnel",
-      "it": "Ruin Maniac's Tunnel"
+      "de": "Maniac Tunnel",
+      "en": "Maniac Tunnel",
+      "fr": "Maniac Tunnel",
+      "es": "Maniac Tunnel",
+      "it": "Maniac Tunnel"
     },
     "type": "route"
   },
@@ -385,6 +440,17 @@
     "type": "route"
   },
   {
+    "id": 66,
+    "names": {
+      "de": "Lake Valor",
+      "en": "Lake Valor",
+      "fr": "Lake Valor",
+      "es": "Lake Valor",
+      "it": "Lake Valor"
+    },
+    "type": "route"
+  },
+  {
     "id": 36,
     "names": {
       "de": "Pastoria City",
@@ -394,6 +460,17 @@
       "it": "Pastoria City"
     },
     "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Lapras Pastoria City",
+      "en": "Lapras Pastoria City",
+      "fr": "Lapras Pastoria City",
+      "es": "Lapras Pastoria City",
+      "it": "Lapras Pastoria City"
+    },
+    "type": "static"
   },
   {
     "id": 37,
@@ -517,6 +594,17 @@
     "type": "route"
   },
   {
+    "id": 68,
+    "names": {
+      "de": "Riolu Egg Iron Island",
+      "en": "Riolu Egg Iron Island",
+      "fr": "Riolu Egg Iron Island",
+      "es": "Riolu Egg Iron Island",
+      "it": "Riolu Egg Iron Island"
+    },
+    "type": "static"
+  },
+  {
     "id": 48,
     "names": {
       "de": "Route 211",
@@ -572,16 +660,37 @@
     "type": "route"
   },
   {
-    "id": 53,
+    "id": 69,
     "names": {
-      "de": "Snowpoint Temple",
-      "en": "Snowpoint Temple",
-      "fr": "Snowpoint Temple",
-      "es": "Snowpoint Temple",
-      "it": "Snowpoint Temple"
+      "de": "Uxie Acuity Cavern",
+      "en": "Uxie Acuity Cavern",
+      "fr": "Uxie Acuity Cavern",
+      "es": "Uxie Acuity Cavern",
+      "it": "Uxie Acuity Cavern"
     },
-    "type": "route",
-    "postgame": true
+    "type": "static"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Azelf Valor Cavern",
+      "en": "Azelf Valor Cavern",
+      "fr": "Azelf Valor Cavern",
+      "es": "Azelf Valor Cavern",
+      "it": "Azelf Valor Cavern"
+    },
+    "type": "static"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Mesprit Verity Cavern",
+      "en": "Mesprit Verity Cavern",
+      "fr": "Mesprit Verity Cavern",
+      "es": "Mesprit Verity Cavern",
+      "it": "Mesprit Verity Cavern"
+    },
+    "type": "static"
   },
   {
     "id": 54,
@@ -617,6 +726,17 @@
     "type": "route"
   },
   {
+    "id": 59,
+    "names": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "type": "route"
+  },
+  {
     "id": 57,
     "names": {
       "de": "Pokémon League",
@@ -640,14 +760,435 @@
     "postgame": true
   },
   {
-    "id": 59,
+    "id": 72,
     "names": {
-      "de": "Victory Road",
-      "en": "Victory Road",
-      "fr": "Victory Road",
-      "es": "Victory Road",
-      "it": "Victory Road"
+      "de": "Route 225",
+      "en": "Route 225",
+      "fr": "Route 225",
+      "es": "Route 225",
+      "it": "Route 225"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Route 226",
+      "en": "Route 226",
+      "fr": "Route 226",
+      "es": "Route 226",
+      "it": "Route 226"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Route 227",
+      "en": "Route 227",
+      "fr": "Route 227",
+      "es": "Route 227",
+      "it": "Route 227"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Route 228",
+      "en": "Route 228",
+      "fr": "Route 228",
+      "es": "Route 228",
+      "it": "Route 228"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Route 229",
+      "en": "Route 229",
+      "fr": "Route 229",
+      "es": "Route 229",
+      "it": "Route 229"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Route 230",
+      "en": "Route 230",
+      "fr": "Route 230",
+      "es": "Route 230",
+      "it": "Route 230"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Trophy Garden",
+      "en": "Trophy Garden",
+      "fr": "Trophy Garden",
+      "es": "Trophy Garden",
+      "it": "Trophy Garden"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Resort Area",
+      "en": "Resort Area",
+      "fr": "Resort Area",
+      "es": "Resort Area",
+      "it": "Resort Area"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Sendoff Spring",
+      "en": "Sendoff Spring",
+      "fr": "Sendoff Spring",
+      "es": "Sendoff Spring",
+      "it": "Sendoff Spring"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Snowpoint Temple",
+      "en": "Snowpoint Temple",
+      "fr": "Snowpoint Temple",
+      "es": "Snowpoint Temple",
+      "it": "Snowpoint Temple"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Regigigas Snowpoint Temple",
+      "en": "Regigigas Snowpoint Temple",
+      "fr": "Regigigas Snowpoint Temple",
+      "es": "Regigigas Snowpoint Temple",
+      "it": "Regigigas Snowpoint Temple"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Stark Mountain",
+      "en": "Stark Mountain",
+      "fr": "Stark Mountain",
+      "es": "Stark Mountain",
+      "it": "Stark Mountain"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Heatran Stark Mountain",
+      "en": "Heatran Stark Mountain",
+      "fr": "Heatran Stark Mountain",
+      "es": "Heatran Stark Mountain",
+      "it": "Heatran Stark Mountain"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Groudon Stark Mountain",
+      "en": "Groudon Stark Mountain",
+      "fr": "Groudon Stark Mountain",
+      "es": "Groudon Stark Mountain",
+      "it": "Groudon Stark Mountain"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Turnback Cave",
+      "en": "Turnback Cave",
+      "fr": "Turnback Cave",
+      "es": "Turnback Cave",
+      "it": "Turnback Cave"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Giratina Turnback Cave",
+      "en": "Giratina Turnback Cave",
+      "fr": "Giratina Turnback Cave",
+      "es": "Giratina Turnback Cave",
+      "it": "Giratina Turnback Cave"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 87,
+    "names": {
+      "de": "Dialga Spear Pillar",
+      "en": "Dialga Spear Pillar",
+      "fr": "Dialga Spear Pillar",
+      "es": "Dialga Spear Pillar",
+      "it": "Dialga Spear Pillar"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Palkia Spear Pillar",
+      "en": "Palkia Spear Pillar",
+      "fr": "Palkia Spear Pillar",
+      "es": "Palkia Spear Pillar",
+      "it": "Palkia Spear Pillar"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Regirock Rock Peak Ruins",
+      "en": "Regirock Rock Peak Ruins",
+      "fr": "Regirock Rock Peak Ruins",
+      "es": "Regirock Rock Peak Ruins",
+      "it": "Regirock Rock Peak Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 90,
+    "names": {
+      "de": "Regice Iceberg Ruins",
+      "en": "Regice Iceberg Ruins",
+      "fr": "Regice Iceberg Ruins",
+      "es": "Regice Iceberg Ruins",
+      "it": "Regice Iceberg Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Registeel Iron Ruins",
+      "en": "Registeel Iron Ruins",
+      "fr": "Registeel Iron Ruins",
+      "es": "Registeel Iron Ruins",
+      "it": "Registeel Iron Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Cresselia Fullmoon Island",
+      "en": "Cresselia Fullmoon Island",
+      "fr": "Cresselia Fullmoon Island",
+      "es": "Cresselia Fullmoon Island",
+      "it": "Cresselia Fullmoon Island"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Latias Fullmoon Island",
+      "en": "Latias Fullmoon Island",
+      "fr": "Latias Fullmoon Island",
+      "es": "Latias Fullmoon Island",
+      "it": "Latias Fullmoon Island"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Latios Fullmoon Island",
+      "en": "Latios Fullmoon Island",
+      "fr": "Latios Fullmoon Island",
+      "es": "Latios Fullmoon Island",
+      "it": "Latios Fullmoon Island"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 95,
+    "names": {
+      "de": "Darkrai Newmoon Island",
+      "en": "Darkrai Newmoon Island",
+      "fr": "Darkrai Newmoon Island",
+      "es": "Darkrai Newmoon Island",
+      "it": "Darkrai Newmoon Island"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 96,
+    "names": {
+      "de": "Shaymin Flower Paradise",
+      "en": "Shaymin Flower Paradise",
+      "fr": "Shaymin Flower Paradise",
+      "es": "Shaymin Flower Paradise",
+      "it": "Shaymin Flower Paradise"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "Arceus Hall of Origin",
+      "en": "Arceus Hall of Origin",
+      "fr": "Arceus Hall of Origin",
+      "es": "Arceus Hall of Origin",
+      "it": "Arceus Hall of Origin"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Deoxys Veilstone City",
+      "en": "Deoxys Veilstone City",
+      "fr": "Deoxys Veilstone City",
+      "es": "Deoxys Veilstone City",
+      "it": "Deoxys Veilstone City"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 98,
+    "names": {
+      "de": "Zapdos Valley Windworks",
+      "en": "Zapdos Valley Windworks",
+      "fr": "Zapdos Valley Windworks",
+      "es": "Zapdos Valley Windworks",
+      "it": "Zapdos Valley Windworks"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 99,
+    "names": {
+      "de": "Celebi Eterna Forest",
+      "en": "Celebi Eterna Forest",
+      "fr": "Celebi Eterna Forest",
+      "es": "Celebi Eterna Forest",
+      "it": "Celebi Eterna Forest"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 100,
+    "names": {
+      "de": "Jirachi Solaceon Ruins",
+      "en": "Jirachi Solaceon Ruins",
+      "fr": "Jirachi Solaceon Ruins",
+      "es": "Jirachi Solaceon Ruins",
+      "it": "Jirachi Solaceon Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 101,
+    "names": {
+      "de": "Mewtwo Oreburgh Gate",
+      "en": "Mewtwo Oreburgh Gate",
+      "fr": "Mewtwo Oreburgh Gate",
+      "es": "Mewtwo Oreburgh Gate",
+      "it": "Mewtwo Oreburgh Gate"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 102,
+    "names": {
+      "de": "Raikou Route 208",
+      "en": "Raikou Route 208",
+      "fr": "Raikou Route 208",
+      "es": "Raikou Route 208",
+      "it": "Raikou Route 208"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 103,
+    "names": {
+      "de": "Entei Route 211",
+      "en": "Entei Route 211",
+      "fr": "Entei Route 211",
+      "es": "Entei Route 211",
+      "it": "Entei Route 211"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 104,
+    "names": {
+      "de": "Suicune Route 213",
+      "en": "Suicune Route 213",
+      "fr": "Suicune Route 213",
+      "es": "Suicune Route 213",
+      "it": "Suicune Route 213"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 105,
+    "names": {
+      "de": "Ho-Oh Route 209",
+      "en": "Ho-Oh Route 209",
+      "fr": "Ho-Oh Route 209",
+      "es": "Ho-Oh Route 209",
+      "it": "Ho-Oh Route 209"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]
