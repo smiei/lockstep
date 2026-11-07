@@ -1,0 +1,383 @@
+[
+  {
+    "from": 64,
+    "to": 65,
+    "comment": "Kadabra -> Alakazam",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 67,
+    "to": 68,
+    "comment": "Machoke -> Machamp",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 75,
+    "to": 76,
+    "comment": "Graveler -> Golem",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 93,
+    "to": 94,
+    "comment": "Haunter -> Gengar",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 158,
+    "to": 159,
+    "comment": "Totodile -> Croconaw",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 133,
+    "to": 196,
+    "comment": "Eevee -> Espeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 133,
+    "to": 197,
+    "comment": "Eevee -> Umbreon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    }
+  },
+  {
+    "from": 406,
+    "to": 315,
+    "comment": "Budew -> Roselia",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 361,
+    "to": 362,
+    "comment": "Snorunt -> Glalie",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 387,
+    "to": 388,
+    "comment": "Turtwig -> Grotle",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 447,
+    "to": 448,
+    "comment": "Riolu -> Lucario",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 133,
+    "to": 470,
+    "comment": "Eevee -> Leafeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "leaf-stone"
+    }
+  },
+  {
+    "from": 133,
+    "to": 471,
+    "comment": "Eevee -> Glaceon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "from": 299,
+    "to": 476,
+    "comment": "Nosepass -> Probopass",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "from": 495,
+    "to": 496,
+    "comment": "Snivy -> Servine",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 498,
+    "to": 499,
+    "comment": "Tepig -> Pignite",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 501,
+    "to": 502,
+    "comment": "Oshawott -> Dewott",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 525,
+    "to": 526,
+    "comment": "Boldore -> Gigalith",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 533,
+    "to": 534,
+    "comment": "Gurdurr -> Conkeldurr",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 582,
+    "to": 583,
+    "comment": "Vanillite -> Vanillish",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 25
+    }
+  },
+  {
+    "from": 583,
+    "to": 584,
+    "comment": "Vanillish -> Vanilluxe",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 599,
+    "to": 600,
+    "comment": "Klink -> Klang",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
+  },
+  {
+    "from": 600,
+    "to": 601,
+    "comment": "Klang -> Klinklang",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 602,
+    "to": 603,
+    "comment": "Tynamo -> Eelektrik",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 20
+    }
+  },
+  {
+    "from": 607,
+    "to": 608,
+    "comment": "Litwick -> Lampent",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 31
+    }
+  },
+  {
+    "from": 619,
+    "to": 620,
+    "comment": "Mienfoo -> Mienshao",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 624,
+    "to": 625,
+    "comment": "Pawniard -> Bisharp",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 42
+    }
+  },
+  {
+    "from": 627,
+    "to": 628,
+    "comment": "Rufflet -> Braviary",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 629,
+    "to": 630,
+    "comment": "Vullaby -> Mandibuzz",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 633,
+    "to": 634,
+    "comment": "Deino -> Zweilous",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 634,
+    "to": 635,
+    "comment": "Zweilous -> Hydreigon",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 54
+    }
+  },
+  {
+    "from": 636,
+    "to": 637,
+    "comment": "Larvesta -> Volcarona",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 49
+    }
+  },
+  {
+    "from": 690,
+    "to": 691,
+    "comment": "Skrelp -> Dragalge",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 708,
+    "to": 709,
+    "comment": "Phantump -> Trevenant",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 710,
+    "to": 711,
+    "comment": "Pumpkaboo -> Gourgeist",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 722,
+    "to": 723,
+    "comment": "Rowlet -> Dartrix",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 725,
+    "to": 726,
+    "comment": "Litten -> Torracat",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 728,
+    "to": 729,
+    "comment": "Popplio -> Brionne",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 739,
+    "to": 740,
+    "comment": "Crabrawler -> Crabominable",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  }
+]

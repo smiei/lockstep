@@ -1,0 +1,242 @@
+[
+  {
+    "from": 64,
+    "to": 65,
+    "comment": "Kadabra -> Alakazam",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "covenant-orb"
+    }
+  },
+  {
+    "from": 67,
+    "to": 68,
+    "comment": "Machoke -> Machamp",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "covenant-orb"
+    }
+  },
+  {
+    "from": 75,
+    "to": 76,
+    "comment": "Graveler -> Golem",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "covenant-orb"
+    }
+  },
+  {
+    "from": 93,
+    "to": 94,
+    "comment": "Haunter -> Gengar",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "covenant-orb"
+    }
+  },
+  {
+    "from": 61,
+    "to": 186,
+    "comment": "Poliwhirl -> Politoed",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "kings-rock"
+    }
+  },
+  {
+    "from": 133,
+    "to": 196,
+    "comment": "Eevee -> Espeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "aubade-orb"
+    }
+  },
+  {
+    "from": 133,
+    "to": 197,
+    "comment": "Eevee -> Umbreon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "serenade-orb"
+    }
+  },
+  {
+    "from": 79,
+    "to": 199,
+    "comment": "Slowpoke -> Slowking",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "kings-rock"
+    }
+  },
+  {
+    "from": 95,
+    "to": 208,
+    "comment": "Onix -> Steelix",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 123,
+    "to": 212,
+    "comment": "Scyther -> Scizor",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 458,
+    "to": 226,
+    "comment": "Mantyke -> Mantine",
+    "category": "game",
+    "method": {
+      "kind": "levelParty",
+      "species": "voltorb"
+    }
+  },
+  {
+    "from": 117,
+    "to": 230,
+    "comment": "Seadra -> Kingdra",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dragon-scale"
+    }
+  },
+  {
+    "from": 137,
+    "to": 233,
+    "comment": "Porygon -> Porygon2",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "up-grade"
+    }
+  },
+  {
+    "from": 366,
+    "to": 367,
+    "comment": "Clamperl -> Huntail",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "deep-sea-tooth"
+    }
+  },
+  {
+    "from": 366,
+    "to": 368,
+    "comment": "Clamperl -> Gorebyss",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "deep-sea-scale"
+    }
+  },
+  {
+    "from": 82,
+    "to": 462,
+    "comment": "Magneton -> Magnezone",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "voltaic-ore"
+    }
+  },
+  {
+    "from": 112,
+    "to": 464,
+    "comment": "Rhydon -> Rhyperior",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "protector"
+    }
+  },
+  {
+    "from": 125,
+    "to": 466,
+    "comment": "Electabuzz -> Electivire",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "electirizer"
+    }
+  },
+  {
+    "from": 126,
+    "to": 467,
+    "comment": "Magmar -> Magmortar",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "magmarizer"
+    }
+  },
+  {
+    "from": 133,
+    "to": 470,
+    "comment": "Eevee -> Leafeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "woodland-ore"
+    }
+  },
+  {
+    "from": 133,
+    "to": 471,
+    "comment": "Eevee -> Glaceon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "chilled-ore"
+    }
+  },
+  {
+    "from": 233,
+    "to": 474,
+    "comment": "Porygon2 -> Porygon-Z",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dubious-disc"
+    }
+  },
+  {
+    "from": 299,
+    "to": 476,
+    "comment": "Nosepass -> Probopass",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "voltaic-ore"
+    }
+  },
+  {
+    "from": 356,
+    "to": 477,
+    "comment": "Dusclops -> Dusknoir",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "reaper-cloth"
+    }
+  }
+]

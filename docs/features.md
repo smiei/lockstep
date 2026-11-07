@@ -104,6 +104,7 @@ Per-run rule toggles. They are informational: they drive warnings and visibility
 - **Species Clause.** In SoulLink it can apply per player, optionally with "caught links lock for everyone".
 - **Shiny Clause** and **nicknames.**
 - **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"), for every official Gen 1–7 game and generated from the randomizer's own code; a game without such a list (the Switch games, ROM hacks) does not show them. Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
+- **A ROM hack's own evolutions** (Kadabra at level 36 in Renegade Platinum, Poliwhirl to Politoed with King's Rock in Blaze Black, ...) are read from the hack's ROM and always apply in its pack; the evolve button and the Pokédex show the hack's method.
 - **Static encounters** and their clause exemption.
 - **Include Kanto** (only in games with Kanto as a second region, see the Encounter tab).
 
