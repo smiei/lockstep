@@ -260,9 +260,16 @@ export function getGames(): GameInfo[] {
 }
 
 // A ROM hack's own move changes (data/games/<id>/move-overrides.json:
-// { "<move slug>": { type?, power?, damageClass? } }), applied on top of the
-// shared move table by gameData.ts getMovesForGame. Missing file = none.
-export type MoveOverride = { type?: string; power?: number; damageClass?: "physical" | "special" | "status" };
+// { "<move slug>": { type?, power?, accuracy?, pp?, damageClass? } }), applied
+// on top of the shared move table by gameData.ts getMovesForGame. Missing
+// file = none. accuracy null = never misses.
+export type MoveOverride = {
+  type?: string;
+  power?: number;
+  accuracy?: number | null;
+  pp?: number;
+  damageClass?: "physical" | "special" | "status";
+};
 
 export function getMoveOverrides(gameId: string): Record<string, MoveOverride> | null {
   const file = path.join(gameDir(gameId), "move-overrides.json");
