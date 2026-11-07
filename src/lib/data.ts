@@ -18,6 +18,7 @@ import {
   historicalMoveNames,
   type Learnset,
   type MoveInfo,
+  type MovePastValue,
   type MoveNameHistoryEntry,
   type Moveset,
   type MovesTable,
@@ -750,8 +751,11 @@ export function getMoves(lang?: Lang, generation?: number): MovesTable {
   try {
     const raw = readJson<Record<string, MoveInfoFile>>("moves.json");
     const nameHistory = generation === undefined ? [] : getMoveNameHistory();
+    const statHistory = moveStatHistoryBySlug();
     const out: MovesTable = {};
-    for (const [slug, info] of Object.entries(raw)) {
+    for (const [slug, file] of Object.entries(raw)) {
+      const fix = statHistory.get(slug);
+      const info = fix ? { ...file, past: withStatHistory(file.past, fix) } : file;
       const { flavor, ...rest } = info;
       const text = lang ? flavor?.[lang] ?? flavor?.en ?? flavor?.de : undefined;
       const names =
@@ -765,6 +769,36 @@ export function getMoves(lang?: Lang, generation?: number): MovesTable {
   } catch {
     return {};
   }
+}
+
+// data/move-stat-history.json: power/accuracy/PP per generation where
+// PokeAPI's `past` is wrong or missing (Rest and Soft-Boiled had 10 PP until
+// Gen 8, Mind Reader 5 PP in Gen 2-4, Gen 7's Absorb 40 is Z-move data, ...).
+// Built from Pokemon Showdown's per-generation mods and checked against the
+// Gen 1-4 ROMs. Same shape as `past`; for every field a slug has entries for,
+// they REPLACE that field's `past` values (the entries run up to Gen 9).
+type MoveStatHistoryEntry = { slug: string } & MovePastValue;
+
+const moveStatHistoryBySlug = cache((): Map<string, MovePastValue[]> => {
+  const bySlug = new Map<string, MovePastValue[]>();
+  try {
+    for (const { slug, ...entry } of readJson<MoveStatHistoryEntry[]>("move-stat-history.json")) {
+      bySlug.set(slug, [...(bySlug.get(slug) ?? []), entry]);
+    }
+  } catch {
+    // No corrections file - PokeAPI's past values apply.
+  }
+  return bySlug;
+});
+
+const STAT_FIELDS = ["power", "accuracy", "pp", "effectChance"] as const;
+
+function withStatHistory(past: MovePastValue[] | undefined, fix: MovePastValue[]): MovePastValue[] {
+  const fixed = new Set(STAT_FIELDS.filter((field) => fix.some((entry) => field in entry)));
+  const kept = (past ?? [])
+    .map((entry) => Object.fromEntries(Object.entries(entry).filter(([key]) => !fixed.has(key as never))) as MovePastValue)
+    .filter((entry) => STAT_FIELDS.some((field) => field in entry));
+  return [...kept, ...fix].sort((a, b) => a.maxGeneration - b.maxGeneration);
 }
 
 // Hand-curated corrections for moves whose German name changed in a later

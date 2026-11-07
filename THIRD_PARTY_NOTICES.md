@@ -113,6 +113,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 - **Source:** [github.com/infinitefusion/infinitefusion-e18](https://github.com/infinitefusion/infinitefusion-e18)
 - **License:** the repository does not state one. Only factual game values are used, and the project is credited in the app's menu while an Infinite Fusion run is open.
 
+### Pokémon Showdown (smogon/pokemon-showdown)
+
+- **What:** the per-generation move values (power, accuracy, PP) in its `data/moves.ts` and `data/mods/gen1`-`gen8`, read once to build `data/move-stat-history.json` where PokéAPI's history is wrong or missing. The values were checked against the Gen 1-4 games; only facts (numbers) are used, no code.
+- **Source:** [github.com/smogon/pokemon-showdown](https://github.com/smogon/pokemon-showdown)
+- **License:** MIT.
+
 ### Reference wikis
 
 - **[PokéWiki](https://www.pokewiki.de/):** source for the German move names that changed between generations (`data/move-name-history.json`), and for the gym badges' official names in all five languages that no older pack carried (Kalos, Galar, Paldea and a few Hoenn and Unova badges; `data/shared/badge-names.json`, `scripts/generate-badge-names.mjs`), and for the official place names of every official game in all five languages (`data/shared/place-names.json`, `scripts/generate-place-names.mjs`; the hand-made `data/shared/place-name-overrides.json` cites the pages it used), read from the "In anderen Sprachen" table of each page - facts, no text copied.

@@ -18,10 +18,10 @@ export type MoveDamageClass = "physical" | "special" | "status";
 // moveStatsForGeneration().
 export type MovePastValue = {
   maxGeneration: number;
-  power?: number;
-  accuracy?: number;
-  pp?: number;
-  effectChance?: number;
+  power?: number | null;
+  accuracy?: number | null;
+  pp?: number | null;
+  effectChance?: number | null;
 };
 
 // moveSlug -> localized names + type + battle stats. Everything past
