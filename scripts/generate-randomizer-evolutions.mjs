@@ -182,7 +182,11 @@ const key = (e) => `${e.category} ${e.from}->${e.to} ${JSON.stringify(e.method)}
 for (const gameId of games) {
   const generated = generate(gameId);
   const file = `data/games/${gameId}/evolution-overrides.json`;
-  const existing = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
+  const stored = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
+  // "game" entries are the game's own evolutions (a ROM hack's, read from its
+  // ROM), not randomizer output: kept as they are, ahead of the generated ones.
+  const own = stored.filter((e) => e.category === "game");
+  const existing = stored.filter((e) => e.category !== "game");
   const had = new Set(existing.map(key));
   const now = new Set(generated.map(key));
   const added = generated.filter((e) => !had.has(key(e)));
@@ -192,5 +196,5 @@ for (const gameId of games) {
   console.log(`${gameId}: ${generated.length} ${JSON.stringify(counts)}  +${added.length} -${removed.length}`);
   for (const e of added) console.log(`  + ${e.category} ${e.comment} ${JSON.stringify(e.method)}`);
   for (const e of removed) console.log(`  - ${e.category} ${e.comment} ${JSON.stringify(e.method)}`);
-  if (write) fs.writeFileSync(file, JSON.stringify(generated, null, 2) + "\n");
+  if (write) fs.writeFileSync(file, JSON.stringify([...own, ...generated], null, 2) + "\n");
 }
