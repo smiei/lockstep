@@ -22,17 +22,6 @@
     "type": "route"
   },
   {
-    "id": 3,
-    "names": {
-      "de": "Bellin Town",
-      "en": "Bellin Town",
-      "fr": "Bellin Town",
-      "es": "Bellin Town",
-      "it": "Bellin Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 4,
     "names": {
       "de": "Icicle Cave",
@@ -55,15 +44,27 @@
     "type": "route"
   },
   {
-    "id": 6,
+    "id": 62,
     "names": {
-      "de": "Dresco Town",
-      "en": "Dresco Town",
-      "fr": "Dresco Town",
-      "es": "Dresco Town",
-      "it": "Dresco Town"
+      "de": "Litleo Route 2",
+      "en": "Litleo Route 2",
+      "fr": "Litleo Route 2",
+      "es": "Litleo Route 2",
+      "it": "Litleo Route 2"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Tapu Fini Route 2",
+      "en": "Tapu Fini Route 2",
+      "fr": "Tapu Fini Route 2",
+      "es": "Tapu Fini Route 2",
+      "it": "Tapu Fini Route 2"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 7,
@@ -99,6 +100,18 @@
     "type": "route"
   },
   {
+    "id": 73,
+    "names": {
+      "de": "Buzzwole Route 4",
+      "en": "Buzzwole Route 4",
+      "fr": "Buzzwole Route 4",
+      "es": "Buzzwole Route 4",
+      "it": "Buzzwole Route 4"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 10,
     "names": {
       "de": "Grim Woods",
@@ -121,6 +134,18 @@
     "type": "route"
   },
   {
+    "id": 74,
+    "names": {
+      "de": "Volcanion Cinder Volcano",
+      "en": "Volcanion Cinder Volcano",
+      "fr": "Volcanion Cinder Volcano",
+      "es": "Volcanion Cinder Volcano",
+      "it": "Volcanion Cinder Volcano"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 12,
     "names": {
       "de": "Route 5",
@@ -134,13 +159,26 @@
   {
     "id": 13,
     "names": {
-      "de": "Crater Town",
-      "en": "Crater Town",
-      "fr": "Crater Town",
-      "es": "Crater Town",
-      "it": "Crater Town"
+      "de": "Jirachi Crater Town",
+      "en": "Jirachi Crater Town",
+      "fr": "Jirachi Crater Town",
+      "es": "Jirachi Crater Town",
+      "it": "Jirachi Crater Town"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Celesteela Crater Town",
+      "en": "Celesteela Crater Town",
+      "fr": "Celesteela Crater Town",
+      "es": "Celesteela Crater Town",
+      "it": "Celesteela Crater Town"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 14,
@@ -187,6 +225,29 @@
     "type": "route"
   },
   {
+    "id": 76,
+    "names": {
+      "de": "Stakataka Route 7",
+      "en": "Stakataka Route 7",
+      "fr": "Stakataka Route 7",
+      "es": "Stakataka Route 7",
+      "it": "Stakataka Route 7"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Dresco Town",
+      "en": "Dresco Town",
+      "fr": "Dresco Town",
+      "es": "Dresco Town",
+      "it": "Dresco Town"
+    },
+    "type": "route"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Frost Mountain",
@@ -196,6 +257,18 @@
       "it": "Frost Mountain"
     },
     "type": "route"
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Necrozma Frost Mountain",
+      "en": "Necrozma Frost Mountain",
+      "fr": "Necrozma Frost Mountain",
+      "es": "Necrozma Frost Mountain",
+      "it": "Necrozma Frost Mountain"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 19,
@@ -211,13 +284,13 @@
   {
     "id": 20,
     "names": {
-      "de": "Blizzard City",
-      "en": "Blizzard City",
-      "fr": "Blizzard City",
-      "es": "Blizzard City",
-      "it": "Blizzard City"
+      "de": "Vulpix Blizzard City",
+      "en": "Vulpix Blizzard City",
+      "fr": "Vulpix Blizzard City",
+      "es": "Vulpix Blizzard City",
+      "it": "Vulpix Blizzard City"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 21,
@@ -242,6 +315,17 @@
     "type": "route"
   },
   {
+    "id": 63,
+    "names": {
+      "de": "Togepi Fallshore City",
+      "en": "Togepi Fallshore City",
+      "fr": "Togepi Fallshore City",
+      "es": "Togepi Fallshore City",
+      "it": "Togepi Fallshore City"
+    },
+    "type": "static"
+  },
+  {
     "id": 23,
     "names": {
       "de": "Route 11",
@@ -253,6 +337,18 @@
     "type": "route"
   },
   {
+    "id": 78,
+    "names": {
+      "de": "Tapu Koko Route 11",
+      "en": "Tapu Koko Route 11",
+      "fr": "Tapu Koko Route 11",
+      "es": "Tapu Koko Route 11",
+      "it": "Tapu Koko Route 11"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 24,
     "names": {
       "de": "Epidimy Town",
@@ -262,6 +358,17 @@
       "it": "Epidimy Town"
     },
     "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Elekid Epidimy Town",
+      "en": "Elekid Epidimy Town",
+      "fr": "Elekid Epidimy Town",
+      "es": "Elekid Epidimy Town",
+      "it": "Elekid Epidimy Town"
+    },
+    "type": "static"
   },
   {
     "id": 25,
@@ -297,6 +404,29 @@
     "type": "route"
   },
   {
+    "id": 65,
+    "names": {
+      "de": "Autl Woods",
+      "en": "Autl Woods",
+      "fr": "Autl Woods",
+      "es": "Autl Woods",
+      "it": "Autl Woods"
+    },
+    "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Tapu Bulu Route 9",
+      "en": "Tapu Bulu Route 9",
+      "fr": "Tapu Bulu Route 9",
+      "es": "Tapu Bulu Route 9",
+      "it": "Tapu Bulu Route 9"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 28,
     "names": {
       "de": "Tehl Town",
@@ -319,6 +449,30 @@
     "type": "route"
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Darkrai Tarmigan Town",
+      "en": "Darkrai Tarmigan Town",
+      "fr": "Darkrai Tarmigan Town",
+      "es": "Darkrai Tarmigan Town",
+      "it": "Darkrai Tarmigan Town"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Arceus Tarmigan Town",
+      "en": "Arceus Tarmigan Town",
+      "fr": "Arceus Tarmigan Town",
+      "es": "Arceus Tarmigan Town",
+      "it": "Arceus Tarmigan Town"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 30,
     "names": {
       "de": "Thundercap Mt.",
@@ -330,6 +484,18 @@
     "type": "route"
   },
   {
+    "id": 82,
+    "names": {
+      "de": "Xurkitree Thundercap Mt.",
+      "en": "Xurkitree Thundercap Mt.",
+      "fr": "Xurkitree Thundercap Mt.",
+      "es": "Xurkitree Thundercap Mt.",
+      "it": "Xurkitree Thundercap Mt."
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 31,
     "names": {
       "de": "Route 12",
@@ -339,6 +505,41 @@
       "it": "Route 12"
     },
     "type": "route"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Cosmog Route 12",
+      "en": "Cosmog Route 12",
+      "fr": "Cosmog Route 12",
+      "es": "Cosmog Route 12",
+      "it": "Cosmog Route 12"
+    },
+    "type": "static"
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Solgaleo Route 12",
+      "en": "Solgaleo Route 12",
+      "fr": "Solgaleo Route 12",
+      "es": "Solgaleo Route 12",
+      "it": "Solgaleo Route 12"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Lunala Route 12",
+      "en": "Lunala Route 12",
+      "fr": "Lunala Route 12",
+      "es": "Lunala Route 12",
+      "it": "Lunala Route 12"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 32,
@@ -385,6 +586,18 @@
     "type": "route"
   },
   {
+    "id": 85,
+    "names": {
+      "de": "Deoxys Route 13",
+      "en": "Deoxys Route 13",
+      "fr": "Deoxys Route 13",
+      "es": "Deoxys Route 13",
+      "it": "Deoxys Route 13"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 36,
     "names": {
       "de": "Route 14",
@@ -394,6 +607,18 @@
       "it": "Route 14"
     },
     "type": "route"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Nihilego Route 14",
+      "en": "Nihilego Route 14",
+      "fr": "Nihilego Route 14",
+      "es": "Nihilego Route 14",
+      "it": "Nihilego Route 14"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 37,
@@ -418,6 +643,18 @@
     "type": "route"
   },
   {
+    "id": 87,
+    "names": {
+      "de": "Pheromosa Great Desert",
+      "en": "Pheromosa Great Desert",
+      "fr": "Pheromosa Great Desert",
+      "es": "Pheromosa Great Desert",
+      "it": "Pheromosa Great Desert"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 39,
     "names": {
       "de": "Gurun Town",
@@ -427,6 +664,17 @@
       "it": "Gurun Town"
     },
     "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Larvesta Gurun Town",
+      "en": "Larvesta Gurun Town",
+      "fr": "Larvesta Gurun Town",
+      "es": "Larvesta Gurun Town",
+      "it": "Larvesta Gurun Town"
+    },
+    "type": "static"
   },
   {
     "id": 40,
@@ -440,6 +688,18 @@
     "type": "route"
   },
   {
+    "id": 88,
+    "names": {
+      "de": "Kartana Vivill Woods",
+      "en": "Kartana Vivill Woods",
+      "fr": "Kartana Vivill Woods",
+      "es": "Kartana Vivill Woods",
+      "it": "Kartana Vivill Woods"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 41,
     "names": {
       "de": "Vivill Town",
@@ -449,6 +709,18 @@
       "it": "Vivill Town"
     },
     "type": "route"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Kyogre Vivill Town",
+      "en": "Kyogre Vivill Town",
+      "fr": "Kyogre Vivill Town",
+      "es": "Kyogre Vivill Town",
+      "it": "Kyogre Vivill Town"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 42,
@@ -495,6 +767,18 @@
     "type": "route"
   },
   {
+    "id": 90,
+    "names": {
+      "de": "Guzzlord Antisis Sewers",
+      "en": "Guzzlord Antisis Sewers",
+      "fr": "Guzzlord Antisis Sewers",
+      "es": "Guzzlord Antisis Sewers",
+      "it": "Guzzlord Antisis Sewers"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 46,
     "names": {
       "de": "Icy Hole",
@@ -517,6 +801,28 @@
     "type": "route"
   },
   {
+    "id": 68,
+    "names": {
+      "de": "Castform Seaport City",
+      "en": "Castform Seaport City",
+      "fr": "Castform Seaport City",
+      "es": "Castform Seaport City",
+      "it": "Castform Seaport City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Route 17",
+      "it": "Route 17"
+    },
+    "type": "route"
+  },
+  {
     "id": 48,
     "names": {
       "de": "Polder Town",
@@ -526,6 +832,28 @@
       "it": "Polder Town"
     },
     "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Feebas Polder Town",
+      "en": "Feebas Polder Town",
+      "fr": "Feebas Polder Town",
+      "es": "Feebas Polder Town",
+      "it": "Feebas Polder Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Rotom Polder Town",
+      "en": "Rotom Polder Town",
+      "fr": "Rotom Polder Town",
+      "es": "Rotom Polder Town",
+      "it": "Rotom Polder Town"
+    },
+    "type": "static"
   },
   {
     "id": 49,
@@ -552,13 +880,13 @@
   {
     "id": 51,
     "names": {
-      "de": "Magnolia Town",
-      "en": "Magnolia Town",
-      "fr": "Magnolia Town",
-      "es": "Magnolia Town",
-      "it": "Magnolia Town"
+      "de": "Vivillon Magnolia Town",
+      "en": "Vivillon Magnolia Town",
+      "fr": "Vivillon Magnolia Town",
+      "es": "Vivillon Magnolia Town",
+      "it": "Vivillon Magnolia Town"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 52,
@@ -572,6 +900,30 @@
     "type": "route"
   },
   {
+    "id": 91,
+    "names": {
+      "de": "Rayquaza Crystal Peak",
+      "en": "Rayquaza Crystal Peak",
+      "fr": "Rayquaza Crystal Peak",
+      "es": "Rayquaza Crystal Peak",
+      "it": "Rayquaza Crystal Peak"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Yveltal Crystal Peak",
+      "en": "Yveltal Crystal Peak",
+      "fr": "Yveltal Crystal Peak",
+      "es": "Yveltal Crystal Peak",
+      "it": "Yveltal Crystal Peak"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 53,
     "names": {
       "de": "Magnolia Fields",
@@ -581,6 +933,30 @@
       "it": "Magnolia Fields"
     },
     "type": "route"
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Landorus Magnolia Fields",
+      "en": "Landorus Magnolia Fields",
+      "fr": "Landorus Magnolia Fields",
+      "es": "Landorus Magnolia Fields",
+      "it": "Landorus Magnolia Fields"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Blacephalon Magnolia Fields",
+      "en": "Blacephalon Magnolia Fields",
+      "fr": "Blacephalon Magnolia Fields",
+      "es": "Blacephalon Magnolia Fields",
+      "it": "Blacephalon Magnolia Fields"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 54,
@@ -616,6 +992,18 @@
     "type": "route"
   },
   {
+    "id": 95,
+    "names": {
+      "de": "Kyurem Victory Road",
+      "en": "Kyurem Victory Road",
+      "fr": "Kyurem Victory Road",
+      "es": "Kyurem Victory Road",
+      "it": "Kyurem Victory Road"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 57,
     "names": {
       "de": "Tomb of Borrius",
@@ -638,6 +1026,18 @@
     "type": "route"
   },
   {
+    "id": 96,
+    "names": {
+      "de": "Palkia Rift Cave",
+      "en": "Palkia Rift Cave",
+      "fr": "Palkia Rift Cave",
+      "es": "Palkia Rift Cave",
+      "it": "Palkia Rift Cave"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 59,
     "names": {
       "de": "Redwood Forest",
@@ -647,6 +1047,18 @@
       "it": "Redwood Forest"
     },
     "type": "route"
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "Xerneas Redwood Forest",
+      "en": "Xerneas Redwood Forest",
+      "fr": "Xerneas Redwood Forest",
+      "es": "Xerneas Redwood Forest",
+      "it": "Xerneas Redwood Forest"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 60,

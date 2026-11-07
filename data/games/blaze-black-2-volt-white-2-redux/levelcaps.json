@@ -54,7 +54,7 @@
       "it": "Aspertia City Trainer School"
     },
     "badge": null,
-    "max_level": 11
+    "max_level": 12
   },
   {
     "id": 4,
@@ -92,7 +92,7 @@
       "it": "Virbank City"
     },
     "badge": null,
-    "max_level": 18
+    "max_level": 19
   },
   {
     "id": 6,
@@ -156,7 +156,7 @@
       "it": "Café Sonata"
     },
     "badge": null,
-    "max_level": 26
+    "max_level": 25
   },
   {
     "id": 9,
@@ -201,7 +201,7 @@
       "it": "Route 4"
     },
     "badge": null,
-    "max_level": 28
+    "max_level": 27
   },
   {
     "id": 11,
@@ -246,7 +246,7 @@
       "it": "Nimbasa Subway"
     },
     "badge": null,
-    "max_level": 34
+    "max_level": 30
   },
   {
     "id": 13,
@@ -284,7 +284,7 @@
       "it": "Big Stadium"
     },
     "badge": null,
-    "max_level": 35
+    "max_level": 34
   },
   {
     "id": 15,
@@ -309,7 +309,7 @@
       "es": "Bolt Badge",
       "it": "Bolt Badge"
     },
-    "max_level": 36,
+    "max_level": 35,
     "sprite": "Kamilla"
   },
   {
@@ -329,7 +329,7 @@
       "it": "Nimbasa City"
     },
     "badge": null,
-    "max_level": 37
+    "max_level": 33
   },
   {
     "id": 17,
@@ -348,7 +348,7 @@
       "it": "Route 6"
     },
     "badge": null,
-    "max_level": 41
+    "max_level": 32
   },
   {
     "id": 18,
@@ -367,7 +367,7 @@
       "it": "Route 6"
     },
     "badge": null,
-    "max_level": 42
+    "max_level": 39
   },
   {
     "id": 19,
@@ -392,7 +392,7 @@
       "es": "Quake Badge",
       "it": "Quake Badge"
     },
-    "max_level": 43,
+    "max_level": 42,
     "sprite": "Turner"
   },
   {
@@ -412,7 +412,7 @@
       "it": "Route 6"
     },
     "badge": null,
-    "max_level": 47
+    "max_level": 50
   },
   {
     "id": 21,
@@ -450,7 +450,7 @@
       "it": "Mistralton City"
     },
     "badge": null,
-    "max_level": 51
+    "max_level": 46
   },
   {
     "id": 23,
@@ -475,7 +475,7 @@
       "es": "Jet Badge",
       "it": "Jet Badge"
     },
-    "max_level": 52,
+    "max_level": 49,
     "sprite": "Géraldine"
   },
   {
@@ -495,7 +495,7 @@
       "it": "Reversal Mountain"
     },
     "badge": null,
-    "max_level": 51,
+    "max_level": 44,
     "sprite": "Bel"
   },
   {
@@ -515,7 +515,7 @@
       "it": "Undella Town"
     },
     "badge": null,
-    "max_level": 54
+    "max_level": 52
   },
   {
     "id": 26,
@@ -572,7 +572,7 @@
       "it": "Opelucid City"
     },
     "badge": null,
-    "max_level": 59
+    "max_level": 54
   },
   {
     "id": 29,
@@ -597,7 +597,7 @@
       "es": "Legend Badge",
       "it": "Legend Badge"
     },
-    "max_level": 61,
+    "max_level": 56,
     "sprite": "Lysander"
   },
   {
@@ -636,7 +636,7 @@
       "it": "Humilau City"
     },
     "badge": null,
-    "max_level": 63
+    "max_level": 60
   },
   {
     "id": 32,
@@ -655,7 +655,7 @@
       "it": "Humilau City Gym"
     },
     "badge": null,
-    "max_level": 64
+    "max_level": 62
   },
   {
     "id": 33,
@@ -712,7 +712,7 @@
       "it": "Plasma Frigate"
     },
     "badge": null,
-    "max_level": 66
+    "max_level": 65
   },
   {
     "id": 36,
@@ -731,7 +731,7 @@
       "it": "Giant Chasm"
     },
     "badge": null,
-    "max_level": 68,
+    "max_level": 66,
     "sprite": "G-Cis"
   },
   {
@@ -751,7 +751,7 @@
       "it": "Victory Road"
     },
     "badge": null,
-    "max_level": 72
+    "max_level": 68
   },
   {
     "id": 38,
@@ -770,7 +770,7 @@
       "it": "Victory Road"
     },
     "badge": null,
-    "max_level": 72
+    "max_level": 68
   },
   {
     "id": 39,
@@ -808,7 +808,7 @@
       "it": "Victory Road"
     },
     "badge": null,
-    "max_level": 72
+    "max_level": 68
   },
   {
     "id": 41,
