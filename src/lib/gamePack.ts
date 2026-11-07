@@ -25,7 +25,7 @@ const ROUTE_TYPES = ["route", "static"];
 // A second region the run may leave out (HeartGold/SoulSilver's Kanto), on a
 // route or a level cap - see src/lib/regions.ts.
 const REGIONS = ["kanto"];
-const OVERRIDE_CATEGORIES = ["impossible", "easier", "timeBased"];
+const OVERRIDE_CATEGORIES = ["impossible", "easier", "timeBased", "game"];
 // Evolution-override method kinds and the fields each one needs.
 const METHOD_FIELDS: Record<string, Record<string, "number" | "string">> = {
   level: { level: "number" },

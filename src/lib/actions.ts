@@ -1086,7 +1086,9 @@ export async function evolveEncounter(
     return { success: false, error: { key: "deadCannotEvolve" } };
   }
 
-  const evo = getEvolutionById(encounter.currentPokemonId);
+  // The run's game decides the edges: a ROM hack's own evolutions ("game"
+  // entries) can add one the shared table lacks.
+  const evo = getEvolutionById(encounter.currentPokemonId, { gameId: run.gameId });
   if (!evo || !evo.evolvesTo.includes(targetPokemonId)) {
     return { success: false, error: { key: "invalidEvolutionTarget" } };
   }
@@ -1166,7 +1168,9 @@ export async function revertEvolution(runKey: string, encounterId: number): Prom
     return { success: false, error: { key: "deadCannotRevert" } };
   }
 
-  const evo = getEvolutionById(encounter.currentPokemonId);
+  // The run's game decides the edges: a ROM hack's own evolutions ("game"
+  // entries) can add one the shared table lacks.
+  const evo = getEvolutionById(encounter.currentPokemonId, { gameId: run.gameId });
   if (!evo?.evolvesFrom) {
     return { success: false, error: { key: "noPreEvolution" } };
   }

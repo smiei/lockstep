@@ -486,7 +486,7 @@ export type EvolutionEntry = {
   method?: EvolutionMethod | null;
 };
 
-type EvolutionOverride = {
+export type EvolutionOverride = {
   from: number;
   to: number;
   method: EvolutionMethod;
@@ -495,7 +495,10 @@ type EvolutionOverride = {
   // "timeBased" = Remove Time-Based Evolutions (day/night conditions dropped,
   // Espeon/Umbreon become stone evolutions).
   // Missing = treated as "impossible" (the conservative default).
-  category?: "impossible" | "easier" | "timeBased";
+  // "game" = how THIS game evolves it (a ROM hack's own changes, read from
+  // its ROM): always applied, no rule switch, and it may add an edge the
+  // shared table lacks (then `to` gets `from` as its pre-evolution).
+  category?: "impossible" | "easier" | "timeBased" | "game";
 };
 
 // Overrides are merged at read time (not baked into evolutions.json), so
@@ -559,10 +562,52 @@ export type EvolutionOverrideCategory = "impossible" | "easier" | "timeBased";
 export function getEvolutionOverrideCategories(gameId: string): EvolutionOverrideCategory[] {
   try {
     const overrides = parseFileCached(path.join(gameDir(gameId), "evolution-overrides.json")) as EvolutionOverride[];
-    return [...new Set(overrides.map((o) => o.category ?? "impossible"))];
+    return [
+      ...new Set(
+        overrides
+          .map((o) => o.category ?? "impossible")
+          .filter((c): c is EvolutionOverrideCategory => c !== "game"),
+      ),
+    ];
   } catch {
     return [];
   }
+}
+
+// A pack's "game" entries: the source game's own evolutions. Applied before
+// the randomizer switches, whatever they are set to. An entry for an edge the
+// shared table already has swaps its method; any other entry adds the edge,
+// moving `to` away from a different pre-evolution (a hack that re-parents a
+// species), the way form-evolutions.json does.
+export function withGameEvolutions(entries: EvolutionEntry[], changes: EvolutionOverride[]): EvolutionEntry[] {
+  if (changes.length === 0) return entries;
+  const byId = new Map(entries.map((entry) => [entry.id, entry]));
+  const touched = new Map<number, EvolutionEntry>();
+  const edit = (id: number) => {
+    let entry = touched.get(id);
+    if (!entry) {
+      const base = byId.get(id);
+      entry = base ? { ...base, evolvesTo: [...base.evolvesTo] } : { id, evolvesFrom: null, evolvesTo: [] };
+      touched.set(id, entry);
+    }
+    return entry;
+  };
+  for (const change of changes) {
+    const target = edit(change.to);
+    if (target.evolvesFrom !== change.from) {
+      if (target.evolvesFrom !== null) {
+        const old = edit(target.evolvesFrom);
+        old.evolvesTo = old.evolvesTo.filter((id) => id !== change.to);
+      }
+      target.evolvesFrom = change.from;
+      const source = edit(change.from);
+      if (!source.evolvesTo.includes(change.to)) source.evolvesTo.push(change.to);
+    }
+    target.method = change.method;
+  }
+  const out = entries.map((entry) => touched.get(entry.id) ?? entry);
+  for (const [id, entry] of touched) if (!byId.has(id)) out.push(entry);
+  return out;
 }
 
 export function getEvolutions(options?: {
@@ -571,11 +616,6 @@ export function getEvolutions(options?: {
   easier?: boolean;
   timeBased?: boolean;
 }): EvolutionEntry[] {
-  const entries = evolutionTable();
-  const applyImpossible = options?.impossible ?? true;
-  const applyEasier = options?.easier ?? true;
-  const applyTimeBased = options?.timeBased ?? true;
-  if (!applyImpossible && !applyEasier && !applyTimeBased) return entries;
   let overrides: EvolutionOverride[] = [];
   try {
     overrides = parseFileCached(
@@ -584,15 +624,19 @@ export function getEvolutions(options?: {
   } catch {
     // No override file for this pack - vanilla methods apply.
   }
+  const entries = withGameEvolutions(
+    evolutionTable(),
+    overrides.filter((o) => o.category === "game"),
+  );
   const enabled: Record<string, boolean> = {
-    impossible: applyImpossible,
-    easier: applyEasier,
-    timeBased: applyTimeBased,
+    impossible: options?.impossible ?? true,
+    easier: options?.easier ?? true,
+    timeBased: options?.timeBased ?? true,
   };
-  overrides = overrides.filter((o) => enabled[o.category ?? "impossible"] ?? false);
-  if (overrides.length === 0) return entries;
+  const toggled = overrides.filter((o) => o.category !== "game" && (enabled[o.category ?? "impossible"] ?? false));
+  if (toggled.length === 0) return entries;
 
-  const byKey = new Map(overrides.map((o) => [`${o.from}->${o.to}`, o.method]));
+  const byKey = new Map(toggled.map((o) => [`${o.from}->${o.to}`, o.method]));
   return entries.map((entry) => {
     const method =
       entry.evolvesFrom !== null ? byKey.get(`${entry.evolvesFrom}->${entry.id}`) : undefined;

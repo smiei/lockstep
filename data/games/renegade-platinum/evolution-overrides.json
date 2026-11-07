@@ -1,0 +1,479 @@
+[
+  {
+    "from": 64,
+    "to": 65,
+    "comment": "Kadabra -> Alakazam",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 67,
+    "to": 68,
+    "comment": "Machoke -> Machamp",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 75,
+    "to": 76,
+    "comment": "Graveler -> Golem",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 77,
+    "to": 78,
+    "comment": "Ponyta -> Rapidash",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 79,
+    "to": 80,
+    "comment": "Slowpoke -> Slowbro",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 88,
+    "to": 89,
+    "comment": "Grimer -> Muk",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 93,
+    "to": 94,
+    "comment": "Haunter -> Gengar",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 111,
+    "to": 112,
+    "comment": "Rhyhorn -> Rhydon",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 138,
+    "to": 139,
+    "comment": "Omanyte -> Omastar",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 140,
+    "to": 141,
+    "comment": "Kabuto -> Kabutops",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 61,
+    "to": 186,
+    "comment": "Poliwhirl -> Politoed",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "kings-rock"
+    }
+  },
+  {
+    "from": 133,
+    "to": 196,
+    "comment": "Eevee -> Espeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 133,
+    "to": 197,
+    "comment": "Eevee -> Umbreon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    }
+  },
+  {
+    "from": 79,
+    "to": 199,
+    "comment": "Slowpoke -> Slowking",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "kings-rock"
+    }
+  },
+  {
+    "from": 95,
+    "to": 208,
+    "comment": "Onix -> Steelix",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 123,
+    "to": 212,
+    "comment": "Scyther -> Scizor",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 218,
+    "to": 219,
+    "comment": "Slugma -> Magcargo",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 117,
+    "to": 230,
+    "comment": "Seadra -> Kingdra",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dragon-scale"
+    }
+  },
+  {
+    "from": 137,
+    "to": 233,
+    "comment": "Porygon -> Porygon2",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "up-grade"
+    }
+  },
+  {
+    "from": 304,
+    "to": 305,
+    "comment": "Aron -> Lairon",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "from": 305,
+    "to": 306,
+    "comment": "Lairon -> Aggron",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 307,
+    "to": 308,
+    "comment": "Meditite -> Medicham",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 406,
+    "to": 315,
+    "comment": "Budew -> Roselia",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 320,
+    "to": 321,
+    "comment": "Wailmer -> Wailord",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 328,
+    "to": 329,
+    "comment": "Trapinch -> Vibrava",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 343,
+    "to": 344,
+    "comment": "Baltoy -> Claydol",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 345,
+    "to": 346,
+    "comment": "Lileep -> Cradily",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 347,
+    "to": 348,
+    "comment": "Anorith -> Armaldo",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 353,
+    "to": 354,
+    "comment": "Shuppet -> Banette",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 355,
+    "to": 356,
+    "comment": "Duskull -> Dusclops",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 433,
+    "to": 358,
+    "comment": "Chingling -> Chimecho",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 361,
+    "to": 362,
+    "comment": "Snorunt -> Glalie",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 363,
+    "to": 364,
+    "comment": "Spheal -> Sealeo",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 24
+    }
+  },
+  {
+    "from": 364,
+    "to": 365,
+    "comment": "Sealeo -> Walrein",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 366,
+    "to": 367,
+    "comment": "Clamperl -> Huntail",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "deep-sea-tooth"
+    }
+  },
+  {
+    "from": 366,
+    "to": 368,
+    "comment": "Clamperl -> Gorebyss",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "deep-sea-scale"
+    }
+  },
+  {
+    "from": 431,
+    "to": 432,
+    "comment": "Glameow -> Purugly",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 434,
+    "to": 435,
+    "comment": "Stunky -> Skuntank",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 447,
+    "to": 448,
+    "comment": "Riolu -> Lucario",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 451,
+    "to": 452,
+    "comment": "Skorupi -> Drapion",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 453,
+    "to": 454,
+    "comment": "Croagunk -> Toxicroak",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 112,
+    "to": 464,
+    "comment": "Rhydon -> Rhyperior",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "protector"
+    }
+  },
+  {
+    "from": 125,
+    "to": 466,
+    "comment": "Electabuzz -> Electivire",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "electirizer"
+    }
+  },
+  {
+    "from": 126,
+    "to": 467,
+    "comment": "Magmar -> Magmortar",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "magmarizer"
+    }
+  },
+  {
+    "from": 133,
+    "to": 470,
+    "comment": "Eevee -> Leafeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "leaf-stone"
+    }
+  },
+  {
+    "from": 133,
+    "to": 471,
+    "comment": "Eevee -> Glaceon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "from": 233,
+    "to": 474,
+    "comment": "Porygon2 -> Porygon-Z",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dubious-disc"
+    }
+  },
+  {
+    "from": 356,
+    "to": 477,
+    "comment": "Dusclops -> Dusknoir",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "reaper-cloth"
+    }
+  }
+]
