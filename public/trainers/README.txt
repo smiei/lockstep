@@ -37,7 +37,7 @@ trainerSet SUBFOLDERS (one per base game; ROM hacks share their base game's
 folder, so a picture there serves all of them):
   firered/                FireRed / LeafGreen, New Generations, Radical Red
   emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald
-  red-blue/               Red / Blue / Yellow
+  red-blue/               Red / Blue, Yellow
   gold-silver/            Gold / Silver / Crystal
   platinum/               Platinum, Diamond / Pearl, Renegade Platinum
   heartgold-soulsilver/   HeartGold, SoulSilver, Sacred Gold, Storm Silver
@@ -222,7 +222,7 @@ A name listed under several folders can live once in the root instead.
     serena.png                  Serena
     bede.png                    Bede
 
-  Red / Blue / Yellow  ->  red-blue/   (14)
+  Red / Blue, Yellow  ->  red-blue/   (14)
     rivale.png                  Rivale (Rival)
     rocko.png                   Rocko (Brock)
     misty.png                   Misty

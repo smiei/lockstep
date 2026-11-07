@@ -24,7 +24,8 @@ const readJson = async (file) => JSON.parse(await readFile(file, "utf-8"));
 
 // PokéWiki's game abbreviations per pack, to pick a name that changed between games.
 const PACK_GAMES = {
-  "red-blue": ["R", "B", "Ge", "G"],
+  "red-blue": ["R", "B"],
+  yellow: ["Ge", "G"],
   "gold-silver": ["Go", "Si", "K"],
   firered: ["FR", "BG"],
   ruby: ["RU", "Ru", "SA", "Sa"],

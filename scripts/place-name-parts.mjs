@@ -11,6 +11,7 @@
 // ("Victory Road (Kanto)") and the right one of two same-named places.
 export const PACK_REGIONS = {
   "red-blue": ["kanto"],
+  yellow: ["kanto"],
   "gold-silver": ["johto", "kanto"],
   firered: ["kanto"],
   ruby: ["hoenn"],
