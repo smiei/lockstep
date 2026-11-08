@@ -20,6 +20,7 @@ import {
   getMoveset,
   getMoveTypeHistory,
   getLearnset,
+  getPackMoves,
   getPackMoveset,
   getPackTmCompat,
   getTmCompat,
@@ -183,8 +184,16 @@ export function getCatchRatesForGame(game: GameInfo): CatchRateEntry[] {
 // values for the fields the hack leaves alone - and then dropped, so it can
 // neither roll the hack's new value back nor leave the untouched fields on
 // today's values (a Gen 5 hack's Thunder Punch kept Gen 9's PP before).
-export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
+// The shared table plus the pack's own moves (custom-moves.json), which carry
+// the hack's values already - no era history, no overrides.
+function movesWithPackMoves(game: GameInfo, lang: Lang | undefined): MovesTable {
   const table = getMoves(lang, dataGeneration(game));
+  const own = getPackMoves(game.id);
+  return own ? { ...table, ...own } : table;
+}
+
+export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
+  const table = movesWithPackMoves(game, lang);
   const overrides = getMoveOverrides(game.id);
   if (!overrides) return table;
   const out: MovesTable = { ...table };
@@ -225,7 +234,7 @@ export function getLearnsetForGame(game: GameInfo): Learnset {
   const own = getPackMoveset(game.id);
   if (!own) return getLearnset(game.versionGroup);
   const generation = dataGeneration(game);
-  const moves = getMoves(undefined, generation);
+  const moves = movesWithPackMoves(game, undefined);
   const overrides = getMoveOverrides(game.id) ?? {};
   const history = getMoveTypeHistory();
   const out: Learnset = {};

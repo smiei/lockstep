@@ -288,6 +288,16 @@ export function getPackMoveset(gameId: string): Moveset | null {
   return fs.existsSync(file) ? (parseFileCached(file) as Moveset) : null;
 }
 
+// Moves only a ROM hack has (New Generations' Ultra-punch, Unbound's Leech
+// Fang, ...): data/games/<id>/custom-moves.json, same shape as a moves.json
+// entry, English names only, values read from the ROM. getMovesForGame adds
+// them to the shared table, so the pack's movesets.json/tm-compat.json can
+// name them.
+export function getPackMoves(gameId: string): Record<string, MoveInfo> | null {
+  const file = path.join(gameDir(gameId), "custom-moves.json");
+  return fs.existsSync(file) ? (parseFileCached(file) as Record<string, MoveInfo>) : null;
+}
+
 export function getPackTmCompat(gameId: string): TmCompatTable | null {
   const file = path.join(gameDir(gameId), "tm-compat.json");
   return fs.existsSync(file) ? (parseFileCached(file) as TmCompatTable) : null;

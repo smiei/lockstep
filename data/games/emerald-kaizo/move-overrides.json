@@ -660,5 +660,8 @@
   },
   "wrap": {
     "accuracy": 100
+  },
+  "x-scissor": {
+    "pp": 20
   }
 }

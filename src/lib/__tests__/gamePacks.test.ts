@@ -153,6 +153,21 @@ describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
         }
       });
     }
+    const customFile = path.join(dir, "custom-moves.json");
+    const custom = existsSync(customFile) ? (read(customFile) as Record<string, Record<string, unknown>>) : {};
+    const known = (slug: string) => moves[slug] !== undefined || custom[slug] !== undefined;
+    if (existsSync(customFile)) {
+      it(`${id}: its own moves are new and complete`, () => {
+        for (const [slug, move] of Object.entries(custom)) {
+          expect(moves[slug], `${slug} shadows a shared move`).toBeUndefined();
+          expect(typeof (move.names as Record<string, string>)?.en, slug).toBe("string");
+          expect(typeof move.type, slug).toBe("string");
+          expect(["physical", "special", "status"]).toContain(move.damageClass);
+          expect(move.damaging, slug).toBe(move.damageClass !== "status");
+          expect(Number.isInteger(move.pp) && (move.pp as number) > 0, slug).toBe(true);
+        }
+      });
+    }
     const movesets = path.join(dir, "movesets.json");
     if (existsSync(movesets)) {
       it(`${id}: own movesets list real moves for real Pokemon`, () => {
@@ -161,7 +176,7 @@ describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
         for (const [pid, list] of Object.entries(table)) {
           expect(ids.has(Number(pid)), pid).toBe(true);
           for (const [level, slug] of list) {
-            expect(moves[slug], `${pid} ${slug}`).toBeDefined();
+            expect(known(slug), `${pid} ${slug}`).toBe(true);
             expect(Number.isInteger(level) && level >= 1 && level <= 100, `${pid} ${slug} ${level}`).toBe(true);
           }
         }
@@ -172,7 +187,7 @@ describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
       it(`${id}: own TM/tutor compatibility names real moves and Pokemon`, () => {
         type Entry = { machine?: { kind: string; ids: number[] }; tutor?: number[] };
         for (const [slug, entry] of Object.entries(read(tmCompat) as Record<string, Entry>)) {
-          expect(moves[slug], slug).toBeDefined();
+          expect(known(slug), slug).toBe(true);
           if (entry.machine) expect(["tm", "hm"]).toContain(entry.machine.kind);
           for (const pid of [...(entry.machine?.ids ?? []), ...(entry.tutor ?? [])]) expect(ids.has(pid), `${slug} ${pid}`).toBe(true);
         }
