@@ -54,6 +54,17 @@ const STAT_NAME_FIXES = {
   407: { attack: "defense" },
 };
 
+// Changes PokeAPI has no past_stats for. Sun/Moon raised these four Gen 5
+// Pokémon; found by the Black/White ROM audit (their personal data), which
+// branding-local/rom-audit records: Woobat HP, Crustle and Beartic Attack,
+// Cryogonal HP and Defense.
+const MISSING_PAST_STATS = [
+  { id: 527, maxGeneration: 6, stats: { hp: 55 } },
+  { id: 558, maxGeneration: 6, stats: { attack: 95 } },
+  { id: 614, maxGeneration: 6, stats: { attack: 110 } },
+  { id: 615, maxGeneration: 6, stats: { hp: 70, defense: 30 } },
+];
+
 // Every base-stat change from Gen 5 to Gen 6 was a flat +10 buff. That makes a
 // cheap, total correctness check: any override whose delta against the current
 // value is not exactly 10 is either a PokeAPI error or something genuinely new,
@@ -130,6 +141,9 @@ async function main() {
   }
 
   // Stable order: by id, then by the generation the override stops applying.
+  for (const extra of MISSING_PAST_STATS) {
+    if (!out.some((e) => e.id === extra.id && e.maxGeneration === extra.maxGeneration)) out.push(extra);
+  }
   out.sort((a, b) => a.id - b.id || a.maxGeneration - b.maxGeneration);
   await writeFile(
     path.join(dataDir, "pokemon-history.json"),
