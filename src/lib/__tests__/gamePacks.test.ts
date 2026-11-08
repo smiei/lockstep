@@ -135,7 +135,9 @@ describe("npm run pack -- from-text", () => {
 
 describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
   const moves = read(path.join(root, "data", "moves.json")) as Record<string, unknown>;
-  const ids = new Set(pokemon.map((p) => p.id));
+  // a hack's own Pokémon (data/fakemon.json) count too: species data and movesets may name them
+  const fakemonIds = (read(path.join(root, "data", "fakemon.json")).fakemon as { id: number }[]).map((f) => f.id);
+  const ids = new Set([...pokemon.map((p) => p.id), ...fakemonIds]);
   for (const id of readdirSync(gamesDir)) {
     const dir = path.join(gamesDir, id);
     const game = read(path.join(dir, "game.json"));

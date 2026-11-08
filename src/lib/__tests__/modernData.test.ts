@@ -162,7 +162,8 @@ describe("fakemon.json (a ROM hack's own Pokémon)", () => {
     const venonat = fakemon.find((f) => f.alias === "venonat-hoenn")!;
     expect(getEvolutionById(venonat.id)?.evolvesTo).toEqual(venonat.evolvesTo);
     expect(getEvolutionById(venonat.evolvesTo![0])?.evolvesFrom).toBe(venonat.id);
-    expect(getCatchRatesForGame(blazingEmerald).find((r) => r.id === oreon.id)?.catch_rate).toBe(oreon.catchRate);
+    // Blazing Emerald's species data (read from its ROM) has the last word; Oreon's rate there is 3
+    expect(getCatchRatesForGame(blazingEmerald).find((r) => r.id === oreon.id)?.catch_rate).toBe(3);
   });
 
   it("borrow their species' sprite as a placeholder; new species have none", () => {
