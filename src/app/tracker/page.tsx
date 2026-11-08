@@ -1,4 +1,4 @@
-import { getEvolutions, getGameOrDefault, getMoveTypeHistory, getMoveset } from "@/lib/data";
+import { getEvolutions, getGameOrDefault, getMoveTypeHistory } from "@/lib/data";
 import {
   getEffectivenessForGame,
   getPokemonListForGame,
@@ -6,6 +6,7 @@ import {
   getMovesForGame,
   getDataGenerationForGame,
   getFusionSpriteConfigForGame,
+  getMovesetForGame,
 } from "@/lib/gameData";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
@@ -64,7 +65,7 @@ export default async function TrackerPage({
               timeBased: settings.evolutionOverridesTimeBased,
             })}
             moveData={{
-              movesets: getMoveset(game.versionGroup),
+              movesets: getMovesetForGame(game),
               moves: getMovesForGame(game, lang),
             }}
             moveTypeHistory={getMoveTypeHistory()}

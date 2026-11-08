@@ -1,4 +1,4 @@
-import { getEvolutions, getGameOrDefault, getMoveTypeHistory, getMoveset } from "@/lib/data";
+import { getEvolutions, getGameOrDefault, getMoveTypeHistory } from "@/lib/data";
 import {
   getEffectivenessForGame,
   getMovesForGame,
@@ -6,6 +6,7 @@ import {
   getPokemonFormsForGame,
   getDataGenerationForGame,
   getFusionSpriteConfigForGame,
+  getMovesetForGame,
 } from "@/lib/gameData";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
@@ -68,7 +69,7 @@ export default async function PokedexPage({
         forms={getPokemonFormsForGame(game)}
         evolutions={evolutions}
         moveData={{
-          movesets: getMoveset(game.versionGroup),
+          movesets: getMovesetForGame(game),
           moves: getMovesForGame(game, lang),
         }}
         moveTypeHistory={getMoveTypeHistory()}

@@ -3,7 +3,6 @@ import {
   getEvolutionById,
   getEvolutions,
   getMoveTypeHistory,
-  getMoveset,
   getLevelCaps,
 } from "@/lib/data";
 import {
@@ -15,6 +14,7 @@ import {
   getDataGenerationForGame,
   getFusionSpriteConfigForGame,
   isInDex,
+  getMovesetForGame,
 } from "@/lib/gameData";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { routeNumbers } from "@/lib/routeNumbers";
@@ -364,7 +364,7 @@ export default async function LinksPage({
             forms={getPokemonFormsForGame(game)}
             evolutions={getEvolutions(evoOptions)}
             moveData={{
-              movesets: getMoveset(game.versionGroup),
+              movesets: getMovesetForGame(game),
               moves: getMovesForGame(game, lang),
             }}
             moveTypeHistory={getMoveTypeHistory()}

@@ -277,6 +277,22 @@ export function getMoveOverrides(gameId: string): Record<string, MoveOverride> |
   return fs.existsSync(file) ? (parseFileCached(file) as Record<string, MoveOverride>) : null;
 }
 
+// A ROM hack's own level-up movesets and TM/HM/tutor compatibility, read from
+// its ROM (data/games/<id>/movesets.json, same shape as data/movesets/<vg>.json,
+// and tm-compat.json, same shape as data/tm-compat/<vg>.json). Hacks reuse
+// move slots and rewrite learnsets, so the base game's version-group tables
+// would show moves the hack does not teach. Missing file = null (the version
+// group's table applies); gameData.ts picks between the two.
+export function getPackMoveset(gameId: string): Moveset | null {
+  const file = path.join(gameDir(gameId), "movesets.json");
+  return fs.existsSync(file) ? (parseFileCached(file) as Moveset) : null;
+}
+
+export function getPackTmCompat(gameId: string): TmCompatTable | null {
+  const file = path.join(gameDir(gameId), "tm-compat.json");
+  return fs.existsSync(file) ? (parseFileCached(file) as TmCompatTable) : null;
+}
+
 // What the pack validator needs to know about this installation - for the
 // in-app import (client-side preview and the server's own check).
 export function getPackContext(): PackContext {

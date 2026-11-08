@@ -1,4 +1,4 @@
-import { getEvolutions, getGameOrDefault, getMoveset, getMoveTypeHistory, getTmCompat } from "@/lib/data";
+import { getEvolutions, getGameOrDefault, getMoveTypeHistory } from "@/lib/data";
 import {
   getEffectivenessForGame,
   getPokemonByIdForGame,
@@ -7,6 +7,8 @@ import {
   getMovesForGame,
   getDataGenerationForGame,
   getFusionSpriteConfigForGame,
+  getMovesetForGame,
+  getTmCompatForGame,
 } from "@/lib/gameData";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
@@ -42,7 +44,7 @@ export default async function TmsPage({
 
   // Read before the team loop below, which consults it to decide whether a
   // forme keeps its own movepool or falls back to its species.
-  const moveset = getMoveset(game.versionGroup);
+  const moveset = getMovesetForGame(game);
 
   // All LIVING caught Pokémon (status CAUGHT, link not dead), per player,
   // de-duplicated by current species (learnability is species-based).
@@ -85,7 +87,7 @@ export default async function TmsPage({
 
   // Selectable moves = the move universe of this game (level-up + machine +
   // tutor moves), localized and sorted by name.
-  const tmCompat = getTmCompat(game.versionGroup);
+  const tmCompat = getTmCompatForGame(game);
   const moveTypeHistory = getMoveTypeHistory();
   // With lang, so the move descriptions reach both the selected-move summary
   // and the Pokédex card opened from a team row.

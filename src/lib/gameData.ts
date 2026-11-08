@@ -17,6 +17,12 @@ import {
   getCatchRates,
   getMoves,
   getMoveOverrides,
+  getMoveset,
+  getMoveTypeHistory,
+  getLearnset,
+  getPackMoveset,
+  getPackTmCompat,
+  getTmCompat,
   getSpeciesData,
   getSpeciesList,
   getFakemon,
@@ -28,7 +34,14 @@ import {
 import { getTypesForGeneration, type EffectivenessTable } from "@/lib/effectiveness";
 import { LANGS, type Lang } from "@/lib/i18n/dictionary";
 import type { LocalizedNames } from "@/lib/i18n/localize";
-import { moveStatsForGeneration, type MovesTable } from "@/lib/learnset";
+import {
+  historicalMoveType,
+  moveStatsForGeneration,
+  type Learnset,
+  type Moveset,
+  type MovesTable,
+  type TmCompatTable,
+} from "@/lib/learnset";
 
 // Public so a page can forward the SAME number into a client component's
 // `generation` prop that this module used internally for Pokemon/type/move
@@ -189,6 +202,46 @@ export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
       ...(change.damageClass ? { damageClass: change.damageClass, damaging: change.damageClass !== "status" } : {}),
       past: undefined,
     };
+  }
+  return out;
+}
+
+// Level-up movesets and TM/tutor compatibility: a ROM hack's own tables (read
+// from its ROM, see data.ts getPackMoveset) when the pack ships them, else the
+// version group's.
+export function getMovesetForGame(game: GameInfo): Moveset {
+  return getPackMoveset(game.id) ?? getMoveset(game.versionGroup);
+}
+
+export function getTmCompatForGame(game: GameInfo): TmCompatTable {
+  return getPackTmCompat(game.id) ?? getTmCompat(game.versionGroup);
+}
+
+// The damaging-type coverage table (type -> lowest level). For a pack with its
+// own movesets it is built from them here, with the pack's move changes
+// (move-overrides.json) deciding the type and whether a move does damage - the
+// stored data/learnsets/<vg>.json knows neither.
+export function getLearnsetForGame(game: GameInfo): Learnset {
+  const own = getPackMoveset(game.id);
+  if (!own) return getLearnset(game.versionGroup);
+  const generation = dataGeneration(game);
+  const moves = getMoves(undefined, generation);
+  const overrides = getMoveOverrides(game.id) ?? {};
+  const history = getMoveTypeHistory();
+  const out: Learnset = {};
+  for (const [id, list] of Object.entries(own)) {
+    for (const [level, slug] of list) {
+      const info = moves[slug];
+      if (!info) continue;
+      const change = overrides[slug];
+      const damaging = change?.damageClass
+        ? change.damageClass !== "status"
+        : info.damaging || (change?.power ?? 0) > 1;
+      if (!damaging) continue;
+      const type = change?.type ?? historicalMoveType(history, slug, generation, info.type);
+      const entry = (out[id] ??= {});
+      entry[type] = Math.min(entry[type] ?? Infinity, level);
+    }
   }
   return out;
 }
