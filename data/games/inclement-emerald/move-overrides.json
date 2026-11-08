@@ -33,6 +33,9 @@
   "dark-void": {
     "accuracy": 80
   },
+  "darkest-lariat": {
+    "power": 95
+  },
   "disarming-voice": {
     "power": 60
   },
@@ -111,6 +114,9 @@
   },
   "shell-trap": {
     "pp": 10
+  },
+  "sparkling-aria": {
+    "power": 100
   },
   "spike-cannon": {
     "power": 25,

@@ -44,11 +44,21 @@
   "blaze-kick": {
     "accuracy": 100
   },
+  "bleakwind-storm": {
+    "accuracy": 90
+  },
   "bone-rush": {
     "accuracy": 100
   },
   "bonemerang": {
     "accuracy": 100
+  },
+  "bouncy-bubble": {
+    "power": 90,
+    "pp": 5
+  },
+  "breaking-swipe": {
+    "pp": 10
   },
   "charge-beam": {
     "accuracy": 100
@@ -90,6 +100,9 @@
   "draco-meteor": {
     "accuracy": 100
   },
+  "dragon-hammer": {
+    "power": 100
+  },
   "dragon-tail": {
     "accuracy": 100,
     "pp": 8
@@ -105,6 +118,9 @@
   },
   "electroweb": {
     "accuracy": 100
+  },
+  "expanding-force": {
+    "pp": 20
   },
   "explosion": {
     "power": 150
@@ -134,6 +150,11 @@
   },
   "freeze-shock": {
     "accuracy": 100
+  },
+  "freezy-frost": {
+    "power": 95,
+    "accuracy": 100,
+    "pp": 5
   },
   "frenzy-plant": {
     "power": 160,
@@ -180,6 +201,9 @@
   "heal-order": {
     "pp": 5
   },
+  "high-horsepower": {
+    "accuracy": 100
+  },
   "hydro-cannon": {
     "power": 160,
     "accuracy": 100,
@@ -219,6 +243,9 @@
   "judgment": {
     "pp": 5
   },
+  "jungle-healing": {
+    "pp": 5
+  },
   "kings-shield": {
     "pp": 5
   },
@@ -250,6 +277,10 @@
   "metal-claw": {
     "accuracy": 100
   },
+  "meteor-assault": {
+    "power": 160,
+    "pp": 4
+  },
   "meteor-beam": {
     "accuracy": 100
   },
@@ -280,6 +311,9 @@
   "muddy-water": {
     "power": 95
   },
+  "mystical-power": {
+    "accuracy": 100
+  },
   "needle-arm": {
     "power": 95
   },
@@ -296,6 +330,9 @@
   },
   "overheat": {
     "accuracy": 100
+  },
+  "parabolic-charge": {
+    "power": 75
   },
   "pin-missile": {
     "accuracy": 100
@@ -319,11 +356,17 @@
   "psycho-boost": {
     "accuracy": 100
   },
+  "psyshield-bash": {
+    "accuracy": 100
+  },
   "razor-leaf": {
     "accuracy": 100
   },
   "razor-shell": {
     "accuracy": 100
+  },
+  "revelation-dance": {
+    "power": 100
   },
   "roar": {
     "pp": 5
@@ -350,6 +393,14 @@
   },
   "rock-wrecker": {
     "accuracy": 100
+  },
+  "sandsear-storm": {
+    "accuracy": 90
+  },
+  "sappy-seed": {
+    "power": 95,
+    "accuracy": 100,
+    "pp": 5
   },
   "scale-shot": {
     "accuracy": 100,
@@ -403,6 +454,10 @@
   "spin-out": {
     "power": 110
   },
+  "steam-eruption": {
+    "power": 120,
+    "accuracy": 100
+  },
   "steel-beam": {
     "accuracy": 100
   },
@@ -433,6 +488,9 @@
   "tri-attack": {
     "power": 90
   },
+  "triple-arrows": {
+    "pp": 15
+  },
   "triple-dive": {
     "power": 40,
     "accuracy": 90
@@ -455,7 +513,14 @@
   "whirlwind": {
     "pp": 5
   },
+  "wildbolt-storm": {
+    "accuracy": 90
+  },
   "zen-headbutt": {
     "accuracy": 100
+  },
+  "zippy-zap": {
+    "power": 50,
+    "pp": 5
   }
 }

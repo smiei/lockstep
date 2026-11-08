@@ -13,11 +13,21 @@
     "power": 60,
     "pp": 15
   },
+  "bleakwind-storm": {
+    "power": 105,
+    "pp": 5
+  },
   "blizzard": {
     "power": 120
   },
   "burn-up": {
     "power": 140
+  },
+  "ceaseless-edge": {
+    "power": 80
+  },
+  "clanging-scales": {
+    "power": 120
   },
   "dark-void": {
     "accuracy": 80
@@ -37,6 +47,9 @@
   "esper-wing": {
     "power": 75,
     "accuracy": 90
+  },
+  "expanding-force": {
+    "pp": 20
   },
   "feint": {
     "power": 50
@@ -66,12 +79,18 @@
   "ice-beam": {
     "power": 95
   },
+  "infernal-parade": {
+    "power": 75
+  },
   "leaf-storm": {
     "power": 140
   },
   "leech-life": {
     "power": 20,
     "pp": 15
+  },
+  "lunar-blessing": {
+    "pp": 10
   },
   "magma-storm": {
     "power": 120
@@ -95,6 +114,10 @@
   "raging-fury": {
     "accuracy": 85
   },
+  "sandsear-storm": {
+    "power": 105,
+    "pp": 5
+  },
   "scale-shot": {
     "pp": 25
   },
@@ -106,6 +129,9 @@
   },
   "snore": {
     "power": 80
+  },
+  "steam-eruption": {
+    "power": 120
   },
   "stone-axe": {
     "power": 80
@@ -128,5 +154,9 @@
   },
   "wave-crash": {
     "power": 75
+  },
+  "wildbolt-storm": {
+    "power": 105,
+    "pp": 5
   }
 }

@@ -199,7 +199,48 @@ function buildFlavor(move, vgGenerations) {
   return flavor;
 }
 
+// node scripts/generate-learnsets.mjs --add-moves <slug>...
+// Adds official moves no version group here teaches (Let's Go's, Celebrate,
+// Hold Back, ...) to moves.json - what a ROM hack's own movesets.json can name.
+// Leaves every existing entry as it is.
+async function addMoves(slugs) {
+  const file = path.join(dataDir, "moves.json");
+  const moves = JSON.parse(await readFile(file, "utf-8"));
+  const vgGenerations = await loadVersionGroupGenerations();
+  for (const slug of slugs) {
+    if (moves[slug]) {
+      console.log(`${slug}: already there`);
+      continue;
+    }
+    const move = await fetchJson(`https://pokeapi.co/api/v2/move/${slug}`);
+    const names = {};
+    for (const lang of LANGS) {
+      const hit = move.names.find((n) => n.language?.name === lang);
+      names[lang] = hit?.name ?? move.names.find((n) => n.language?.name === "en")?.name ?? slug;
+    }
+    const past = buildPastValues(move, vgGenerations);
+    const flavor = buildFlavor(move, vgGenerations);
+    moves[slug] = {
+      type: move.type.name,
+      damaging: move.damage_class?.name !== "status",
+      damageClass: move.damage_class?.name ?? "status",
+      power: move.power ?? null,
+      accuracy: move.accuracy ?? null,
+      pp: move.pp ?? null,
+      effectChance: move.effect_chance ?? null,
+      names,
+      ...(Object.keys(flavor).length > 0 && { flavor }),
+      ...(past.length > 0 && { past }),
+    };
+    console.log(`${slug}: added (${names.de} / ${names.en})`);
+  }
+  const sorted = {};
+  for (const slug of Object.keys(moves).sort()) sorted[slug] = moves[slug];
+  await writeFile(file, JSON.stringify(sorted) + "\n", "utf-8");
+}
+
 async function main() {
+  if (process.argv[2] === "--add-moves") return addMoves(process.argv.slice(3));
   const only = process.argv.slice(2);
   // Which version groups do the installed game packs need, and up to which id?
   const gameDirs = await readdir(path.join(dataDir, "games"), { withFileTypes: true });

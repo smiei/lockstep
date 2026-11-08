@@ -42,6 +42,10 @@
   "blaze-kick": {
     "accuracy": 100
   },
+  "bleakwind-storm": {
+    "power": 95,
+    "pp": 5
+  },
   "blizzard": {
     "accuracy": 80
   },
@@ -218,6 +222,9 @@
   "heat-wave": {
     "accuracy": 100
   },
+  "high-horsepower": {
+    "accuracy": 100
+  },
   "hurricane": {
     "accuracy": 80
   },
@@ -278,6 +285,9 @@
   "lovely-kiss": {
     "accuracy": 80
   },
+  "lunar-blessing": {
+    "pp": 10
+  },
   "magma-storm": {
     "accuracy": 90
   },
@@ -312,6 +322,9 @@
   "mirror-shot": {
     "accuracy": 100
   },
+  "misty-explosion": {
+    "power": 200
+  },
   "mountain-gale": {
     "pp": 5
   },
@@ -323,6 +336,9 @@
   },
   "muddy-water": {
     "accuracy": 95
+  },
+  "natures-madness": {
+    "accuracy": 100
   },
   "night-daze": {
     "accuracy": 100
@@ -354,6 +370,9 @@
   },
   "power-whip": {
     "accuracy": 90
+  },
+  "precipice-blades": {
+    "accuracy": 100
   },
   "psychic-fangs": {
     "pp": 15
@@ -407,6 +426,10 @@
   "sand-tomb": {
     "accuracy": 100
   },
+  "sandsear-storm": {
+    "power": 95,
+    "pp": 5
+  },
   "scale-shot": {
     "accuracy": 100
   },
@@ -446,6 +469,12 @@
     "accuracy": 100
   },
   "spacial-rend": {
+    "accuracy": 100
+  },
+  "springtide-storm": {
+    "power": 95
+  },
+  "steam-eruption": {
     "accuracy": 100
   },
   "steel-beam": {
@@ -518,6 +547,10 @@
   },
   "whirlpool": {
     "accuracy": 100
+  },
+  "wildbolt-storm": {
+    "power": 95,
+    "pp": 5
   },
   "wrap": {
     "accuracy": 100

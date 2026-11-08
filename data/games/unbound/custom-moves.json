@@ -1,0 +1,24 @@
+{
+  "leech-fang": {
+    "type": "bug",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 80,
+    "accuracy": 100,
+    "pp": 10,
+    "names": {
+      "en": "Leech Fang"
+    }
+  },
+  "metal-bash": {
+    "type": "steel",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 40,
+    "accuracy": 100,
+    "pp": 35,
+    "names": {
+      "en": "Metal Bash"
+    }
+  }
+}

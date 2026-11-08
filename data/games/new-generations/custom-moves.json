@@ -1,0 +1,68 @@
+{
+  "bug-slash": {
+    "type": "bug",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 75,
+    "accuracy": 100,
+    "pp": 15,
+    "names": {
+      "en": "Bug Slash"
+    }
+  },
+  "hidden-power-electric": {
+    "type": "electric",
+    "damaging": true,
+    "damageClass": "special",
+    "power": 60,
+    "accuracy": 100,
+    "pp": 15,
+    "names": {
+      "en": "Hidden Power Electric"
+    }
+  },
+  "hidden-power-grass": {
+    "type": "grass",
+    "damaging": true,
+    "damageClass": "special",
+    "power": 60,
+    "accuracy": 100,
+    "pp": 15,
+    "names": {
+      "en": "Hidden Power Grass"
+    }
+  },
+  "hidden-power-ground": {
+    "type": "ground",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 60,
+    "accuracy": 100,
+    "pp": 15,
+    "names": {
+      "en": "Hidden Power Ground"
+    }
+  },
+  "shadow-rage": {
+    "type": "ghost",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 15,
+    "accuracy": 100,
+    "pp": 20,
+    "names": {
+      "en": "Shadow Rage"
+    }
+  },
+  "ultra-punch": {
+    "type": "dragon",
+    "damaging": true,
+    "damageClass": "special",
+    "power": 100,
+    "accuracy": 95,
+    "pp": 10,
+    "names": {
+      "en": "Ultra-punch"
+    }
+  }
+}

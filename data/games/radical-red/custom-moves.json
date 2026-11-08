@@ -1,0 +1,57 @@
+{
+  "aqua-fang": {
+    "type": "water",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 80,
+    "accuracy": 100,
+    "pp": 10,
+    "names": {
+      "en": "Aqua Fang"
+    }
+  },
+  "dark-hole": {
+    "type": "dark",
+    "damaging": true,
+    "damageClass": "special",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 5,
+    "names": {
+      "en": "Dark Hole"
+    }
+  },
+  "draco-barrage": {
+    "type": "dragon",
+    "damaging": true,
+    "damageClass": "special",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 5,
+    "names": {
+      "en": "Draco Barrage"
+    }
+  },
+  "sonic-slash": {
+    "type": "flying",
+    "damaging": true,
+    "damageClass": "physical",
+    "power": 1,
+    "accuracy": 100,
+    "pp": 10,
+    "names": {
+      "en": "Sonic Slash"
+    }
+  },
+  "soul-robbery": {
+    "type": "psychic",
+    "damaging": true,
+    "damageClass": "special",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 5,
+    "names": {
+      "en": "Soul Robbery"
+    }
+  }
+}
