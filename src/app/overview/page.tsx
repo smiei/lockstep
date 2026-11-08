@@ -3,9 +3,7 @@ import {
   getEvolutions,
   getGameOrDefault,
   getGameCover,
-  getLearnset,
   getLevelCaps,
-  getMoveset,
   getMoveTypeHistory,
 } from "@/lib/data";
 import {
@@ -18,6 +16,8 @@ import {
   getDataGenerationForGame,
   getFusionSpriteConfigForGame,
   isInDex,
+  getMovesetForGame,
+  getLearnsetForGame,
 } from "@/lib/gameData";
 import { teamOffensiveCoverage } from "@/lib/effectiveness";
 import { attackTypesAtLevel } from "@/lib/learnset";
@@ -117,7 +117,7 @@ export default async function OverviewPage({
 
   // Read before the team loop below: it decides whether a forme keeps its own
   // movepool or falls back to its species.
-  const learnset = getLearnset(game.versionGroup);
+  const learnset = getLearnsetForGame(game);
 
   // Infinite Fusion: a fusion is two encounters, and its group's team slot can
   // sit on either route's link (see src/lib/fusionGroups.ts) - so "on the
@@ -398,7 +398,7 @@ export default async function OverviewPage({
           forms={getPokemonFormsForGame(game)}
           evolutions={getEvolutions(evoOptions)}
           moveData={{
-            movesets: getMoveset(game.versionGroup),
+            movesets: getMovesetForGame(game),
             moves: getMovesForGame(game, lang),
           }}
           moveTypeHistory={getMoveTypeHistory()}

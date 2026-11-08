@@ -3,9 +3,7 @@ import {
   getEvolutions,
   getGameOrDefault,
   getLevelCaps,
-  getLearnset,
   getMoveTypeHistory,
-  getMoveset,
 } from "@/lib/data";
 import {
   getCatchRatesForGame,
@@ -18,6 +16,8 @@ import {
   getDataGenerationForGame,
   getFusionSpriteConfigForGame,
   isInDex,
+  getMovesetForGame,
+  getLearnsetForGame,
 } from "@/lib/gameData";
 import { explosiveMove } from "@/lib/learnset";
 import { prisma } from "@/lib/prisma";
@@ -60,7 +60,7 @@ export default async function AnalyzePage({
 
   const lang = await getLang();
   const game = getGameOrDefault(gameId);
-  const learnsetTable = getLearnset(game.versionGroup);
+  const learnsetTable = getLearnsetForGame(game);
   const pokemonList = getPokemonListForGame(game);
   // Formes are pickable HERE (unlike in the Pokédex or an encounter): scouting
   // a Wash Rotom or a Deoxys Attack is exactly what this tab is for. Species-
@@ -68,7 +68,7 @@ export default async function AnalyzePage({
   // baseSpeciesId, so a forme inherits its species' values.
   const formEntries = getPokemonFormsForGame(game);
   const pickableList = [...pokemonList, ...formEntries];
-  const moveset = getMoveset(game.versionGroup);
+  const moveset = getMovesetForGame(game);
   const moves = getMovesForGame(game, lang);
   const evoOptions = {
     gameId,

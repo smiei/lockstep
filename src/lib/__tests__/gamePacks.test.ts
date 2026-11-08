@@ -153,6 +153,31 @@ describe("ROM-hack extras (move-overrides.json, speciesData)", () => {
         }
       });
     }
+    const movesets = path.join(dir, "movesets.json");
+    if (existsSync(movesets)) {
+      it(`${id}: own movesets list real moves for real Pokemon`, () => {
+        const table = read(movesets) as Record<string, [number, string][]>;
+        expect(Object.keys(table).length).toBeGreaterThan(100);
+        for (const [pid, list] of Object.entries(table)) {
+          expect(ids.has(Number(pid)), pid).toBe(true);
+          for (const [level, slug] of list) {
+            expect(moves[slug], `${pid} ${slug}`).toBeDefined();
+            expect(Number.isInteger(level) && level >= 1 && level <= 100, `${pid} ${slug} ${level}`).toBe(true);
+          }
+        }
+      });
+    }
+    const tmCompat = path.join(dir, "tm-compat.json");
+    if (existsSync(tmCompat)) {
+      it(`${id}: own TM/tutor compatibility names real moves and Pokemon`, () => {
+        type Entry = { machine?: { kind: string; ids: number[] }; tutor?: number[] };
+        for (const [slug, entry] of Object.entries(read(tmCompat) as Record<string, Entry>)) {
+          expect(moves[slug], slug).toBeDefined();
+          if (entry.machine) expect(["tm", "hm"]).toContain(entry.machine.kind);
+          for (const pid of [...(entry.machine?.ids ?? []), ...(entry.tutor ?? [])]) expect(ids.has(pid), `${slug} ${pid}`).toBe(true);
+        }
+      });
+    }
     if (game.speciesData) {
       it(`${id}: species data exists and covers known Pokemon`, () => {
         const file = path.join(root, "data", "shared", `${game.speciesData}-species.json`);
