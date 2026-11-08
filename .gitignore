@@ -109,3 +109,6 @@ PUBLIC_RELEASE.md
 /.impeccable/review/
 /.impeccable/questions/
 /.impeccable/hook.cache.json
+
+# scripts/import-nuzlocke-app.mjs: generated files it did not overwrite
+/tmp/

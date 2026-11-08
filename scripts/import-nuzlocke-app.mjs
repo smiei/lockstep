@@ -30,6 +30,13 @@
 //   left out like everywhere else. No sprites: nothing hosts them openly.
 // Not in the source and therefore not generated: changed evolutions and catch
 // rates. Every generated pack is "unverified".
+//
+// Existing files are NOT overwritten: most packs were corrected since (route
+// lists, level caps, species and moves read from the ROMs - see
+// docs/game-packs.md), and a rerun would silently undo that. A file that
+// already exists is written to tmp/nuzlocke-app-import/<path> instead, for
+// comparing; `--overwrite` replaces the pack's files (fakemon.json, whose ids
+// the script itself keeps stable, is always updated).
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -307,10 +314,31 @@ function highestLevel(boss) {
   return levels.length ? Math.min(100, Math.max(...levels)) : null;
 }
 
+const OVERWRITE = process.argv.includes("--overwrite");
+const COMPARE_DIR = path.join(root, "tmp", "nuzlocke-app-import");
+const kept = [];
+
+// Writes a pack file, or - when it exists and --overwrite is not given -
+// leaves it alone and puts the generated version under COMPARE_DIR.
+async function writePackFile(file, content) {
+  let current = null;
+  try {
+    current = await readFile(file, "utf-8");
+  } catch {
+    // missing - write it
+  }
+  if (current === null || OVERWRITE) return writeFile(file, content);
+  if (current === content) return;
+  const copy = path.join(COMPARE_DIR, path.relative(dataDir, file));
+  await mkdir(path.dirname(copy), { recursive: true });
+  await writeFile(copy, content);
+  kept.push(path.relative(root, file));
+}
+
 async function main() {
   // `node scripts/import-nuzlocke-app.mjs` = every hack and official game;
   // a pack id = just that one; `hacks` / `official` = one of the two lists.
-  const only = process.argv[2];
+  const only = process.argv.slice(2).find((arg) => !arg.startsWith("--"));
   const all = [...HACKS.map((h) => ({ ...h, kind: "romhack" })), ...OFFICIAL];
   const hacks =
     only === "hacks" ? all.filter((g) => g.kind === "romhack")
@@ -513,14 +541,14 @@ async function main() {
     const dir = path.join(dataDir, "games", hack.id);
     await mkdir(dir, { recursive: true });
     const json = (value) => JSON.stringify(value, null, 2) + "\n";
-    await writeFile(path.join(dir, "game.json"), json(game));
-    await writeFile(path.join(dir, "routes.json"), json(routes));
-    await writeFile(path.join(dir, "levelcaps.json"), json(levelcaps));
+    await writePackFile(path.join(dir, "game.json"), json(game));
+    await writePackFile(path.join(dir, "routes.json"), json(routes));
+    await writePackFile(path.join(dir, "levelcaps.json"), json(levelcaps));
     const movesFile = path.join(dir, "move-overrides.json");
-    if (Object.keys(moveOverrides).length) await writeFile(movesFile, json(moveOverrides));
-    else await rm(movesFile, { force: true });
+    if (Object.keys(moveOverrides).length) await writePackFile(movesFile, json(moveOverrides));
+    else if (OVERWRITE) await rm(movesFile, { force: true });
     if (species.length) {
-      await writeFile(
+      await writePackFile(
         path.join(dataDir, "shared", `${hack.id}-species.json`),
         json({ source: `${SOURCE_REPO}@${SOURCE_COMMIT} patches.json (${hack.patch ?? hack.src})`, sourceVersion: SOURCE_COMMIT.slice(0, 7), generatedAt: new Date().toISOString(), species }),
       );
@@ -550,6 +578,12 @@ async function main() {
     ) + "\n",
   );
   console.log(`fakemon.json: ${fakemon.length} Pokémon`);
+  if (kept.length) {
+    console.log(
+      `\n${kept.length} existing files kept (pass --overwrite to replace them); the generated versions are in ` +
+        `${path.relative(root, COMPARE_DIR)}/:\n  ${kept.join("\n  ")}`,
+    );
+  }
 }
 
 main().catch((err) => {
