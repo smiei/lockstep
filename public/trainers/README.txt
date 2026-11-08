@@ -62,7 +62,7 @@ games: one file in the root is enough, unless you want generation-accurate art
 - then drop a per-game copy in that game folder.
 
 BY FOLDER - the games using it, then every trainer in journey order
-(406 distinct slugs, 121 entries marked * without an automatic picture).
+(405 distinct slugs, 121 entries marked * without an automatic picture).
 A name listed under several folders can live once in the root instead.
 
   FireRed / LeafGreen, New Generations, Radical Red  ->  firered/   (59)
@@ -126,7 +126,7 @@ A name listed under several folders can live once in the root instead.
     erika-rematch.png           Erika Rematch
     admin-ariana.png            Admin Ariana
 
-  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (94)
+  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (93)
     rivale.png                  Rivale (Rival)   *
     felizia.png                 Felizia (Roxanne)
     kamillo.png                 Kamillo (Brawly)
@@ -220,7 +220,6 @@ A name listed under several folders can live once in the root instead.
     aqua-grunt.png              Aqua Grunt
     winstrate-vito.png          Winstrate Vito   *
     serena.png                  Serena
-    bede.png                    Bede
 
   Red / Blue, Yellow  ->  red-blue/   (14)
     rivale.png                  Rivale (Rival)

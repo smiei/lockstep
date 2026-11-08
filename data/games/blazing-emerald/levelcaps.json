@@ -67,7 +67,7 @@
       "es": "Dynamo Badge",
       "it": "Dynamo Badge"
     },
-    "max_level": 32,
+    "max_level": 31,
     "sprite": "Walter"
   },
   {
@@ -93,7 +93,7 @@
       "es": "Heat Badge",
       "it": "Heat Badge"
     },
-    "max_level": 37,
+    "max_level": 39,
     "sprite": "Flavia"
   },
   {
@@ -144,7 +144,7 @@
       "es": "Feather Badge",
       "it": "Feather Badge"
     },
-    "max_level": 50,
+    "max_level": 48,
     "sprite": "Wibke"
   },
   {
@@ -170,7 +170,7 @@
       "es": "Mind Badge",
       "it": "Mind Badge"
     },
-    "max_level": 54,
+    "max_level": 53,
     "sprite": "Ben & Svenja"
   },
   {
@@ -196,16 +196,16 @@
       "es": "Rain Badge",
       "it": "Rain Badge"
     },
-    "max_level": 60
+    "max_level": 57
   },
   {
     "id": 9,
     "names": {
-      "de": "Sidney",
-      "en": "Sidney",
-      "fr": "Sidney",
-      "es": "Sidney",
-      "it": "Sidney"
+      "de": "Phoebe",
+      "en": "Phoebe",
+      "fr": "Phoebe",
+      "es": "Phoebe",
+      "it": "Phoebe"
     },
     "location": {
       "de": "Elite Four",
@@ -215,8 +215,8 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 68,
-    "sprite": "Ulrich"
+    "max_level": 62,
+    "sprite": "Antonia"
   },
   {
     "id": 10,
@@ -235,16 +235,16 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 68
+    "max_level": 63
   },
   {
     "id": 11,
     "names": {
-      "de": "Bede",
-      "en": "Bede",
-      "fr": "Bede",
-      "es": "Bede",
-      "it": "Bede"
+      "de": "Glacia",
+      "en": "Glacia",
+      "fr": "Glacia",
+      "es": "Glacia",
+      "it": "Glacia"
     },
     "location": {
       "de": "Elite Four",
@@ -254,7 +254,8 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 70
+    "max_level": 65,
+    "sprite": "Frosina"
   },
   {
     "id": 12,
@@ -273,7 +274,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 71,
+    "max_level": 66,
     "sprite": "Dragan"
   },
   {
@@ -293,7 +294,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 75,
+    "max_level": 70,
     "sprite": "Wassili"
   },
   {
