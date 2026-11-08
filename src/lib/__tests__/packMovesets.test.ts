@@ -45,3 +45,20 @@ describe("a ROM hack's own moves", () => {
     expect(getMovesForGame(getGameOrDefault("radical-red"), "de")["leech-fang"]).toBeUndefined();
   });
 });
+
+describe("formes with their own lists", () => {
+  it("Renegade Platinum's Rotom formes learn their own signature move", () => {
+    const game = getGameOrDefault("renegade-platinum");
+    const movesets = getMovesetForGame(game);
+    // Rotom formes are rows of their own (Wash Rotom = 10009)
+    expect(movesets["10009"]).toBeDefined();
+    expect(getTmCompatForGame(game)["thunderbolt"]?.machine?.ids).toContain(10009);
+  });
+
+  it("Radical Red's Alolan Vulpix has a list apart from Vulpix's", () => {
+    const movesets = getMovesetForGame(getGameOrDefault("radical-red"));
+    const alolan = movesets["10103"].map(([, slug]) => slug);
+    expect(alolan).toContain("powder-snow");
+    expect(movesets["37"].map(([, slug]) => slug)).not.toContain("powder-snow");
+  });
+});
