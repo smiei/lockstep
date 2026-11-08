@@ -88,15 +88,15 @@
     "type": "route"
   },
   {
-    "id": 9,
+    "id": 105,
     "names": {
-      "de": "Serene Bridge",
-      "en": "Serene Bridge",
-      "fr": "Serene Bridge",
-      "es": "Serene Bridge",
-      "it": "Serene Bridge"
+      "de": "Eevee Serenity Isle",
+      "en": "Eevee Serenity Isle",
+      "fr": "Eevee Serenity Isle",
+      "es": "Eevee Serenity Isle",
+      "it": "Eevee Serenity Isle"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 10,
@@ -308,6 +308,17 @@
     "type": "route"
   },
   {
+    "id": 106,
+    "names": {
+      "de": "Fennekin Palmtree Park",
+      "en": "Fennekin Palmtree Park",
+      "fr": "Fennekin Palmtree Park",
+      "es": "Fennekin Palmtree Park",
+      "it": "Fennekin Palmtree Park"
+    },
+    "type": "static"
+  },
+  {
     "id": 29,
     "names": {
       "de": "Sunshore Beach",
@@ -385,6 +396,17 @@
     "type": "route"
   },
   {
+    "id": 107,
+    "names": {
+      "de": "Lapras Loxsly Channel",
+      "en": "Lapras Loxsly Channel",
+      "fr": "Lapras Loxsly Channel",
+      "es": "Lapras Loxsly Channel",
+      "it": "Lapras Loxsly Channel"
+    },
+    "type": "static"
+  },
+  {
     "id": 36,
     "names": {
       "de": "Nitchside Cove",
@@ -418,6 +440,17 @@
     "type": "route"
   },
   {
+    "id": 108,
+    "names": {
+      "de": "Victini Soheal's Strait",
+      "en": "Victini Soheal's Strait",
+      "fr": "Victini Soheal's Strait",
+      "es": "Victini Soheal's Strait",
+      "it": "Victini Soheal's Strait"
+    },
+    "type": "static"
+  },
+  {
     "id": 39,
     "names": {
       "de": "Turquoise Bay",
@@ -438,6 +471,17 @@
       "it": "Haunted Seaway"
     },
     "type": "route"
+  },
+  {
+    "id": 109,
+    "names": {
+      "de": "Rotom Haunted Seaway",
+      "en": "Rotom Haunted Seaway",
+      "fr": "Rotom Haunted Seaway",
+      "es": "Rotom Haunted Seaway",
+      "it": "Rotom Haunted Seaway"
+    },
+    "type": "static"
   },
   {
     "id": 41,
@@ -572,6 +616,17 @@
     "type": "route"
   },
   {
+    "id": 110,
+    "names": {
+      "de": "Togepi Route 30",
+      "en": "Togepi Route 30",
+      "fr": "Togepi Route 30",
+      "es": "Togepi Route 30",
+      "it": "Togepi Route 30"
+    },
+    "type": "static"
+  },
+  {
     "id": 53,
     "names": {
       "de": "Route 31",
@@ -658,6 +713,17 @@
       "it": "Route 35"
     },
     "type": "route"
+  },
+  {
+    "id": 111,
+    "names": {
+      "de": "Feebas Route 35",
+      "en": "Feebas Route 35",
+      "fr": "Feebas Route 35",
+      "es": "Feebas Route 35",
+      "it": "Feebas Route 35"
+    },
+    "type": "static"
   },
   {
     "id": 61,
@@ -803,28 +869,6 @@
     "type": "route"
   },
   {
-    "id": 74,
-    "names": {
-      "de": "Goldenrod City",
-      "en": "Goldenrod City",
-      "fr": "Goldenrod City",
-      "es": "Goldenrod City",
-      "it": "Goldenrod City"
-    },
-    "type": "route"
-  },
-  {
-    "id": 75,
-    "names": {
-      "de": "Route 33",
-      "en": "Route 33",
-      "fr": "Route 33",
-      "es": "Route 33",
-      "it": "Route 33"
-    },
-    "type": "route"
-  },
-  {
     "id": 76,
     "names": {
       "de": "Union Cave",
@@ -858,17 +902,6 @@
     "type": "route"
   },
   {
-    "id": 79,
-    "names": {
-      "de": "Route 40",
-      "en": "Route 40",
-      "fr": "Route 40",
-      "es": "Route 40",
-      "it": "Route 40"
-    },
-    "type": "route"
-  },
-  {
     "id": 80,
     "names": {
       "de": "Whirl Islands",
@@ -878,6 +911,17 @@
       "it": "Whirl Islands"
     },
     "type": "route"
+  },
+  {
+    "id": 112,
+    "names": {
+      "de": "Lugia Whirl Islands",
+      "en": "Lugia Whirl Islands",
+      "fr": "Lugia Whirl Islands",
+      "es": "Lugia Whirl Islands",
+      "it": "Lugia Whirl Islands"
+    },
+    "type": "static"
   },
   {
     "id": 81,
@@ -946,17 +990,6 @@
     "type": "route"
   },
   {
-    "id": 87,
-    "names": {
-      "de": "Rocket Hideout",
-      "en": "Rocket Hideout",
-      "fr": "Rocket Hideout",
-      "es": "Rocket Hideout",
-      "it": "Rocket Hideout"
-    },
-    "type": "route"
-  },
-  {
     "id": 88,
     "names": {
       "de": "Bell Tower",
@@ -966,6 +999,39 @@
       "it": "Bell Tower"
     },
     "type": "route"
+  },
+  {
+    "id": 113,
+    "names": {
+      "de": "Raikou Bell Tower",
+      "en": "Raikou Bell Tower",
+      "fr": "Raikou Bell Tower",
+      "es": "Raikou Bell Tower",
+      "it": "Raikou Bell Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 114,
+    "names": {
+      "de": "Entei Bell Tower",
+      "en": "Entei Bell Tower",
+      "fr": "Entei Bell Tower",
+      "es": "Entei Bell Tower",
+      "it": "Entei Bell Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 115,
+    "names": {
+      "de": "Suicune Bell Tower",
+      "en": "Suicune Bell Tower",
+      "fr": "Suicune Bell Tower",
+      "es": "Suicune Bell Tower",
+      "it": "Suicune Bell Tower"
+    },
+    "type": "static"
   },
   {
     "id": 89,
@@ -1034,17 +1100,6 @@
     "type": "route"
   },
   {
-    "id": 95,
-    "names": {
-      "de": "Reefen Isle",
-      "en": "Reefen Isle",
-      "fr": "Reefen Isle",
-      "es": "Reefen Isle",
-      "it": "Reefen Isle"
-    },
-    "type": "route"
-  },
-  {
     "id": 96,
     "names": {
       "de": "Olcan Isle",
@@ -1054,6 +1109,17 @@
       "it": "Olcan Isle"
     },
     "type": "route"
+  },
+  {
+    "id": 116,
+    "names": {
+      "de": "Moltres Olcan Isle",
+      "en": "Moltres Olcan Isle",
+      "fr": "Moltres Olcan Isle",
+      "es": "Moltres Olcan Isle",
+      "it": "Moltres Olcan Isle"
+    },
+    "type": "static"
   },
   {
     "id": 97,
@@ -1076,6 +1142,17 @@
       "it": "Nitro Isle"
     },
     "type": "route"
+  },
+  {
+    "id": 117,
+    "names": {
+      "de": "Zapdos Nitro Isle",
+      "en": "Zapdos Nitro Isle",
+      "fr": "Zapdos Nitro Isle",
+      "es": "Zapdos Nitro Isle",
+      "it": "Zapdos Nitro Isle"
+    },
+    "type": "static"
   },
   {
     "id": 99,
@@ -1131,6 +1208,39 @@
       "it": "Peaks of Alpha"
     },
     "type": "route"
+  },
+  {
+    "id": 118,
+    "names": {
+      "de": "Uxie Peaks of Alpha",
+      "en": "Uxie Peaks of Alpha",
+      "fr": "Uxie Peaks of Alpha",
+      "es": "Uxie Peaks of Alpha",
+      "it": "Uxie Peaks of Alpha"
+    },
+    "type": "static"
+  },
+  {
+    "id": 119,
+    "names": {
+      "de": "Azelf Peaks of Alpha",
+      "en": "Azelf Peaks of Alpha",
+      "fr": "Azelf Peaks of Alpha",
+      "es": "Azelf Peaks of Alpha",
+      "it": "Azelf Peaks of Alpha"
+    },
+    "type": "static"
+  },
+  {
+    "id": 120,
+    "names": {
+      "de": "Mesprit Peaks of Alpha",
+      "en": "Mesprit Peaks of Alpha",
+      "fr": "Mesprit Peaks of Alpha",
+      "es": "Mesprit Peaks of Alpha",
+      "it": "Mesprit Peaks of Alpha"
+    },
+    "type": "static"
   },
   {
     "id": 104,

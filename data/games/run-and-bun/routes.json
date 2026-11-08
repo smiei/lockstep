@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Littleroot Town",
-      "en": "Littleroot Town",
-      "fr": "Littleroot Town",
-      "es": "Littleroot Town",
-      "it": "Littleroot Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Route 101",
@@ -77,17 +66,6 @@
     "type": "route"
   },
   {
-    "id": 8,
-    "names": {
-      "de": "Route 106",
-      "en": "Route 106",
-      "fr": "Route 106",
-      "es": "Route 106",
-      "it": "Route 106"
-    },
-    "type": "route"
-  },
-  {
     "id": 9,
     "names": {
       "de": "Granite Cave",
@@ -106,6 +84,28 @@
       "fr": "Steven's Room",
       "es": "Steven's Room",
       "it": "Steven's Room"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Dewford Town",
+      "en": "Dewford Town",
+      "fr": "Dewford Town",
+      "es": "Dewford Town",
+      "it": "Dewford Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Route 106",
+      "en": "Route 106",
+      "fr": "Route 106",
+      "es": "Route 106",
+      "it": "Route 106"
     },
     "type": "route"
   },
@@ -132,13 +132,13 @@
     "type": "route"
   },
   {
-    "id": 13,
+    "id": 2,
     "names": {
-      "de": "Dewford Town",
-      "en": "Dewford Town",
-      "fr": "Dewford Town",
-      "es": "Dewford Town",
-      "it": "Dewford Town"
+      "de": "Littleroot Town",
+      "en": "Littleroot Town",
+      "fr": "Littleroot Town",
+      "es": "Littleroot Town",
+      "it": "Littleroot Town"
     },
     "type": "route"
   },
@@ -187,6 +187,17 @@
     "type": "route"
   },
   {
+    "id": 72,
+    "names": {
+      "de": "Fossil Pokémon Rustboro City",
+      "en": "Fossil Pokémon Rustboro City",
+      "fr": "Fossil Pokémon Rustboro City",
+      "es": "Fossil Pokémon Rustboro City",
+      "it": "Fossil Pokémon Rustboro City"
+    },
+    "type": "static"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Rusturf Tunnel",
@@ -194,6 +205,17 @@
       "fr": "Rusturf Tunnel",
       "es": "Rusturf Tunnel",
       "it": "Rusturf Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Verdanturf Town",
+      "en": "Verdanturf Town",
+      "fr": "Verdanturf Town",
+      "es": "Verdanturf Town",
+      "it": "Verdanturf Town"
     },
     "type": "route"
   },
@@ -229,6 +251,17 @@
       "it": "Route 111"
     },
     "type": "route"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Regirock Desert Ruins",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Desert Ruins",
+      "es": "Regirock Desert Ruins",
+      "it": "Regirock Desert Ruins"
+    },
+    "type": "static"
   },
   {
     "id": 22,
@@ -272,6 +305,17 @@
       "fr": "Route 114",
       "es": "Route 114",
       "it": "Route 114"
+    },
+    "type": "route"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Artisan Cave",
+      "en": "Artisan Cave",
+      "fr": "Artisan Cave",
+      "es": "Artisan Cave",
+      "it": "Artisan Cave"
     },
     "type": "route"
   },
@@ -333,13 +377,24 @@
   {
     "id": 31,
     "names": {
-      "de": "Lavaridge Town",
-      "en": "Lavaridge Town",
-      "fr": "Lavaridge Town",
-      "es": "Lavaridge Town",
-      "it": "Lavaridge Town"
+      "de": "Treecko/Torchic/Mudkip Egg Lavaridge Town",
+      "en": "Treecko/Torchic/Mudkip Egg Lavaridge Town",
+      "fr": "Treecko/Torchic/Mudkip Egg Lavaridge Town",
+      "es": "Treecko/Torchic/Mudkip Egg Lavaridge Town",
+      "it": "Treecko/Torchic/Mudkip Egg Lavaridge Town"
     },
-    "type": "route"
+    "type": "static"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Larvitar/Beldum Lavaridge Town",
+      "en": "Larvitar/Beldum Lavaridge Town",
+      "fr": "Larvitar/Beldum Lavaridge Town",
+      "es": "Larvitar/Beldum Lavaridge Town",
+      "it": "Larvitar/Beldum Lavaridge Town"
+    },
+    "type": "static"
   },
   {
     "id": 32,
@@ -373,6 +428,17 @@
       "it": "Route 105"
     },
     "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Regice Island Cave",
+      "en": "Regice Island Cave",
+      "fr": "Regice Island Cave",
+      "es": "Regice Island Cave",
+      "it": "Regice Island Cave"
+    },
+    "type": "static"
   },
   {
     "id": 35,
@@ -453,6 +519,17 @@
     "type": "route"
   },
   {
+    "id": 77,
+    "names": {
+      "de": "Castform Route 119",
+      "en": "Castform Route 119",
+      "fr": "Castform Route 119",
+      "es": "Castform Route 119",
+      "it": "Castform Route 119"
+    },
+    "type": "static"
+  },
+  {
     "id": 42,
     "names": {
       "de": "Route 120",
@@ -462,6 +539,28 @@
       "it": "Route 120"
     },
     "type": "route"
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Scorched Slab",
+      "en": "Scorched Slab",
+      "fr": "Scorched Slab",
+      "es": "Scorched Slab",
+      "it": "Scorched Slab"
+    },
+    "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Registeel Ancient Tomb",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Ancient Tomb",
+      "es": "Registeel Ancient Tomb",
+      "it": "Registeel Ancient Tomb"
+    },
+    "type": "static"
   },
   {
     "id": 43,
@@ -532,11 +631,11 @@
   {
     "id": 49,
     "names": {
-      "de": "Team Magma Hideout",
-      "en": "Team Magma Hideout",
-      "fr": "Team Magma Hideout",
-      "es": "Team Magma Hideout",
-      "it": "Team Magma Hideout"
+      "de": "Magma Hideout",
+      "en": "Magma Hideout",
+      "fr": "Magma Hideout",
+      "es": "Magma Hideout",
+      "it": "Magma Hideout"
     },
     "type": "route"
   },
@@ -585,6 +684,28 @@
     "type": "route"
   },
   {
+    "id": 80,
+    "names": {
+      "de": "Kubfu Mossdeep City",
+      "en": "Kubfu Mossdeep City",
+      "fr": "Kubfu Mossdeep City",
+      "es": "Kubfu Mossdeep City",
+      "it": "Kubfu Mossdeep City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Route 124 Underwater",
+      "en": "Route 124 Underwater",
+      "fr": "Route 124 Underwater",
+      "es": "Route 124 Underwater",
+      "it": "Route 124 Underwater"
+    },
+    "type": "route"
+  },
+  {
     "id": 54,
     "names": {
       "de": "Shoal Cave",
@@ -603,6 +724,17 @@
       "fr": "Route 126",
       "es": "Route 126",
       "it": "Route 126"
+    },
+    "type": "route"
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Route 126 Underwater",
+      "en": "Route 126 Underwater",
+      "fr": "Route 126 Underwater",
+      "es": "Route 126 Underwater",
+      "it": "Route 126 Underwater"
     },
     "type": "route"
   },
@@ -653,11 +785,11 @@
   {
     "id": 60,
     "names": {
-      "de": "Cave of Origin Entrance",
-      "en": "Cave of Origin Entrance",
-      "fr": "Cave of Origin Entrance",
-      "es": "Cave of Origin Entrance",
-      "it": "Cave of Origin Entrance"
+      "de": "Cave of Origin",
+      "en": "Cave of Origin",
+      "fr": "Cave of Origin",
+      "es": "Cave of Origin",
+      "it": "Cave of Origin"
     },
     "type": "route"
   },
@@ -706,6 +838,28 @@
     "type": "route"
   },
   {
+    "id": 83,
+    "names": {
+      "de": "Kyogre Marine Cave",
+      "en": "Kyogre Marine Cave",
+      "fr": "Kyogre Marine Cave",
+      "es": "Kyogre Marine Cave",
+      "it": "Kyogre Marine Cave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Groudon Terra Cave",
+      "en": "Groudon Terra Cave",
+      "fr": "Groudon Terra Cave",
+      "es": "Groudon Terra Cave",
+      "it": "Groudon Terra Cave"
+    },
+    "type": "static"
+  },
+  {
     "id": 65,
     "names": {
       "de": "Pacifidlog Town",
@@ -748,6 +902,17 @@
       "it": "Sky Pillar"
     },
     "type": "route"
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Rayquaza Sky Pillar",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Sky Pillar",
+      "es": "Rayquaza Sky Pillar",
+      "it": "Rayquaza Sky Pillar"
+    },
+    "type": "static"
   },
   {
     "id": 69,
