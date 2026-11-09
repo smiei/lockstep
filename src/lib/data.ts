@@ -72,6 +72,9 @@ export type GameInfo = {
   // Balls of the engine's list that this game lacks, read from its ROM
   // (Unbound has no Sport Ball). Ball ids as in src/lib/catchrate.ts.
   missingBalls?: string[];
+  // Two versions of one hack as two packs (Blazing Emerald v1.5.1 / v1.6):
+  // whose data/fakemon.json entries this pack offers. Missing = its own id.
+  fakemonPack?: string;
   names: LocalizedNames;
   // Selects the type chart plus the pokemon-history/catchrate-history/
   // move-name-history era-correction tables, independently of `generation`

@@ -1,0 +1,22 @@
+{
+  "id": "blazing-emerald-v1-6",
+  "sort": 46,
+  "kind": "romhack",
+  "generation": 3,
+  "dataGeneration": 8,
+  "dexLimit": 905,
+  "spriteSet": "emerald",
+  "versionGroup": "modern",
+  "trainerSet": "emerald",
+  "speciesData": "blazing-emerald-v1-6",
+  "regionalForms": true,
+  "names": {
+    "de": "Blazing Emerald v1.6",
+    "en": "Blazing Emerald v1.6",
+    "fr": "Blazing Emerald v1.6",
+    "es": "Blazing Emerald v1.6",
+    "it": "Blazing Emerald v1.6"
+  },
+  "source": "Bassel-T/nuzlocke.app@2b4f2ec (blazingem; species, move changes, level caps); route list, learnsets and evolutions from the v1.5.1 ROM",
+  "fakemonPack": "blazing-emerald"
+}

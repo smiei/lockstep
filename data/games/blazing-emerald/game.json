@@ -11,11 +11,11 @@
   "speciesData": "blazing-emerald",
   "regionalForms": true,
   "names": {
-    "de": "Blazing Emerald",
-    "en": "Blazing Emerald",
-    "fr": "Blazing Emerald",
-    "es": "Blazing Emerald",
-    "it": "Blazing Emerald"
+    "de": "Blazing Emerald v1.5.1",
+    "en": "Blazing Emerald v1.5.1",
+    "fr": "Blazing Emerald v1.5.1",
+    "es": "Blazing Emerald v1.5.1",
+    "it": "Blazing Emerald v1.5.1"
   },
-  "source": "Bassel-T/nuzlocke.app@2b4f2ec (blazingem)"
+  "source": "ROM v1.5.1 (route list, species, moves, learnsets, level caps, evolutions)"
 }

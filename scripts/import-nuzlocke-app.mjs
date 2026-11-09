@@ -86,6 +86,10 @@ const HACKS = [
   // Quick, Dream and its own Polka, Lime, Luster, Sun, Battle Ball) get ball
   // ids 12-26, which the multiplier switch (ids 0-9) never reaches: x1, a
   // Poke Ball in another skin. So the Gen 3 list and formula are exact.
+  // nuzlocke.app's data is v1.6: since 2026-11-09 "blazing-emerald" is the
+  // ROM-checked v1.5.1 and data/games/blazing-emerald-v1-6 holds these values
+  // (game.json fakemonPack shares this entry's fakemon). An --overwrite run
+  // would put v1.6 data into the v1.5.1 pack.
   { id: "blazing-emerald", src: "blazingem", base: "emerald", name: "Blazing Emerald", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 45 },
 ];
 

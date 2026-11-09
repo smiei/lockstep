@@ -68,7 +68,16 @@ const GAME_KEYS = new Set([
   // Balls the game lacks (GameInfo.missingBalls).
   "missingBalls",
 ]);
-const BUILT_IN_ONLY_GAME_KEYS = new Set(["species", "nameLang", "speciesData", "fusion", "sourceVersion", "sourceDate"]);
+const BUILT_IN_ONLY_GAME_KEYS = new Set([
+  "species",
+  "nameLang",
+  "speciesData",
+  "fusion",
+  "sourceVersion",
+  "sourceDate",
+  // whose data/fakemon.json entries the pack offers (GameInfo.fakemonPack)
+  "fakemonPack",
+]);
 
 // Where a custom (imported) pack's id must start, so it can never collide
 // with a built-in pack, now or after a later release adds one.

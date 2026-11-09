@@ -193,7 +193,7 @@ npm start
 | 8 | Sword, Shield, Brilliant Diamond / Shining Pearl (no TM list: the data source has none for it) |
 | 9 | Scarlet / Violet |
 | Fan game | [Pokémon Infinite Fusion](#pokémon-infinite-fusion) (Classic and Remix), with fusions and the game's own data |
-| ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald, Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms; named in English, as in the game |
+| ROM hacks | Radical Red, Unbound, Run & Bun, Renegade Platinum, Sacred Gold, Storm Silver, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Emerald Kaizo, Inclement Emerald, Rising Ruby, Sinking Sapphire, Blazing Emerald (v1.5.1 and v1.6), Glazed, New Generations, with each hack's own stats, types and moves, Pokémon up to Gen 9 and regional forms; named in English, as in the game |
 
 Found a wrong route or name? Corrections are welcome as an issue.
 

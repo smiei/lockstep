@@ -1,0 +1,1296 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Route 101",
+      "en": "Route 101",
+      "fr": "Route 101",
+      "es": "Route 101",
+      "it": "Route 101"
+    },
+    "type": "route"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Route 103",
+      "en": "Route 103",
+      "fr": "Route 103",
+      "es": "Route 103",
+      "it": "Route 103"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Route 102",
+      "en": "Route 102",
+      "fr": "Route 102",
+      "es": "Route 102",
+      "it": "Route 102"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Route 104",
+      "en": "Route 104",
+      "fr": "Route 104",
+      "es": "Route 104",
+      "it": "Route 104"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Petalburg Woods",
+      "en": "Petalburg Woods",
+      "fr": "Petalburg Woods",
+      "es": "Petalburg Woods",
+      "it": "Petalburg Woods"
+    },
+    "type": "route"
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Pineco Petalburg Woods",
+      "en": "Pineco Petalburg Woods",
+      "fr": "Pineco Petalburg Woods",
+      "es": "Pineco Petalburg Woods",
+      "it": "Pineco Petalburg Woods"
+    },
+    "type": "static"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Route 116",
+      "en": "Route 116",
+      "fr": "Route 116",
+      "es": "Route 116",
+      "it": "Route 116"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Rusturf Tunnel",
+      "en": "Rusturf Tunnel",
+      "fr": "Rusturf Tunnel",
+      "es": "Rusturf Tunnel",
+      "it": "Rusturf Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Dewford Town",
+      "en": "Dewford Town",
+      "fr": "Dewford Town",
+      "es": "Dewford Town",
+      "it": "Dewford Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Route 105",
+      "en": "Route 105",
+      "fr": "Route 105",
+      "es": "Route 105",
+      "it": "Route 105"
+    },
+    "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Regice Island Cave",
+      "en": "Regice Island Cave",
+      "fr": "Regice Island Cave",
+      "es": "Regice Island Cave",
+      "it": "Regice Island Cave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Route 106",
+      "en": "Route 106",
+      "fr": "Route 106",
+      "es": "Route 106",
+      "it": "Route 106"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Petalburg City",
+      "en": "Petalburg City",
+      "fr": "Petalburg City",
+      "es": "Petalburg City",
+      "it": "Petalburg City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Dewshine Beach",
+      "en": "Dewshine Beach",
+      "fr": "Dewshine Beach",
+      "es": "Dewshine Beach",
+      "it": "Dewshine Beach"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Granite Cave",
+      "en": "Granite Cave",
+      "fr": "Granite Cave",
+      "es": "Granite Cave",
+      "it": "Granite Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 15,
+    "names": {
+      "de": "Route 107",
+      "en": "Route 107",
+      "fr": "Route 107",
+      "es": "Route 107",
+      "it": "Route 107"
+    },
+    "type": "route"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Route 108",
+      "en": "Route 108",
+      "fr": "Route 108",
+      "es": "Route 108",
+      "it": "Route 108"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Route 109",
+      "en": "Route 109",
+      "fr": "Route 109",
+      "es": "Route 109",
+      "it": "Route 109"
+    },
+    "type": "route"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Slateport City",
+      "en": "Slateport City",
+      "fr": "Slateport City",
+      "es": "Slateport City",
+      "it": "Slateport City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Route 110",
+      "en": "Route 110",
+      "fr": "Route 110",
+      "es": "Route 110",
+      "it": "Route 110"
+    },
+    "type": "route"
+  },
+  {
+    "id": 20,
+    "names": {
+      "de": "Secret Tunnel",
+      "en": "Secret Tunnel",
+      "fr": "Secret Tunnel",
+      "es": "Secret Tunnel",
+      "it": "Secret Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Zapdos Trader's Den",
+      "en": "Zapdos Trader's Den",
+      "fr": "Zapdos Trader's Den",
+      "es": "Zapdos Trader's Den",
+      "it": "Zapdos Trader's Den"
+    },
+    "type": "static"
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Game Corner Mauville City",
+      "en": "Game Corner Mauville City",
+      "fr": "Game Corner Mauville City",
+      "es": "Game Corner Mauville City",
+      "it": "Game Corner Mauville City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Route 117",
+      "en": "Route 117",
+      "fr": "Route 117",
+      "es": "Route 117",
+      "it": "Route 117"
+    },
+    "type": "route"
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Bawlfrog Verdanturf Town",
+      "en": "Bawlfrog Verdanturf Town",
+      "fr": "Bawlfrog Verdanturf Town",
+      "es": "Bawlfrog Verdanturf Town",
+      "it": "Bawlfrog Verdanturf Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Burning Grotto",
+      "en": "Burning Grotto",
+      "fr": "Burning Grotto",
+      "es": "Burning Grotto",
+      "it": "Burning Grotto"
+    },
+    "type": "route"
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Entei Shimmering Summit",
+      "en": "Entei Shimmering Summit",
+      "fr": "Entei Shimmering Summit",
+      "es": "Entei Shimmering Summit",
+      "it": "Entei Shimmering Summit"
+    },
+    "type": "static"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Hidden Grove",
+      "en": "Hidden Grove",
+      "fr": "Hidden Grove",
+      "es": "Hidden Grove",
+      "it": "Hidden Grove"
+    },
+    "type": "route"
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Mew Hidden Grove",
+      "en": "Mew Hidden Grove",
+      "fr": "Mew Hidden Grove",
+      "es": "Mew Hidden Grove",
+      "it": "Mew Hidden Grove"
+    },
+    "type": "static"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Route 111",
+      "en": "Route 111",
+      "fr": "Route 111",
+      "es": "Route 111",
+      "it": "Route 111"
+    },
+    "type": "route"
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Regirock Desert Ruins",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Desert Ruins",
+      "es": "Regirock Desert Ruins",
+      "it": "Regirock Desert Ruins"
+    },
+    "type": "static"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Mirage Tower",
+      "en": "Mirage Tower",
+      "fr": "Mirage Tower",
+      "es": "Mirage Tower",
+      "it": "Mirage Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Fossil Rustboro City",
+      "en": "Fossil Rustboro City",
+      "fr": "Fossil Rustboro City",
+      "es": "Fossil Rustboro City",
+      "it": "Fossil Rustboro City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Route 112",
+      "en": "Route 112",
+      "fr": "Route 112",
+      "es": "Route 112",
+      "it": "Route 112"
+    },
+    "type": "route"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Fiery Path",
+      "en": "Fiery Path",
+      "fr": "Fiery Path",
+      "es": "Fiery Path",
+      "it": "Fiery Path"
+    },
+    "type": "route"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Route 113",
+      "en": "Route 113",
+      "fr": "Route 113",
+      "es": "Route 113",
+      "it": "Route 113"
+    },
+    "type": "route"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Fallarbor Mines",
+      "en": "Fallarbor Mines",
+      "fr": "Fallarbor Mines",
+      "es": "Fallarbor Mines",
+      "it": "Fallarbor Mines"
+    },
+    "type": "route"
+  },
+  {
+    "id": 87,
+    "names": {
+      "de": "Crater Crag",
+      "en": "Crater Crag",
+      "fr": "Crater Crag",
+      "es": "Crater Crag",
+      "it": "Crater Crag"
+    },
+    "type": "route"
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Route 114",
+      "en": "Route 114",
+      "fr": "Route 114",
+      "es": "Route 114",
+      "it": "Route 114"
+    },
+    "type": "route"
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Meteor Falls",
+      "en": "Meteor Falls",
+      "fr": "Meteor Falls",
+      "es": "Meteor Falls",
+      "it": "Meteor Falls"
+    },
+    "type": "route"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Route 115",
+      "en": "Route 115",
+      "fr": "Route 115",
+      "es": "Route 115",
+      "it": "Route 115"
+    },
+    "type": "route"
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Ancient Alcove",
+      "en": "Ancient Alcove",
+      "fr": "Ancient Alcove",
+      "es": "Ancient Alcove",
+      "it": "Ancient Alcove"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Jagged Pass",
+      "en": "Jagged Pass",
+      "fr": "Jagged Pass",
+      "es": "Jagged Pass",
+      "it": "Jagged Pass"
+    },
+    "type": "route"
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Egg Lavaridge Town",
+      "en": "Egg Lavaridge Town",
+      "fr": "Egg Lavaridge Town",
+      "es": "Egg Lavaridge Town",
+      "it": "Egg Lavaridge Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Abandoned Ship",
+      "en": "Abandoned Ship",
+      "fr": "Abandoned Ship",
+      "es": "Abandoned Ship",
+      "it": "Abandoned Ship"
+    },
+    "type": "route"
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Seaspring Ruins",
+      "en": "Seaspring Ruins",
+      "fr": "Seaspring Ruins",
+      "es": "Seaspring Ruins",
+      "it": "Seaspring Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Jirachi Wish Cave",
+      "en": "Jirachi Wish Cave",
+      "fr": "Jirachi Wish Cave",
+      "es": "Jirachi Wish Cave",
+      "it": "Jirachi Wish Cave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "New Mauville",
+      "en": "New Mauville",
+      "fr": "New Mauville",
+      "es": "New Mauville",
+      "it": "New Mauville"
+    },
+    "type": "route"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Voltorb/Raikou New Mauville",
+      "en": "Voltorb/Raikou New Mauville",
+      "fr": "Voltorb/Raikou New Mauville",
+      "es": "Voltorb/Raikou New Mauville",
+      "it": "Voltorb/Raikou New Mauville"
+    },
+    "type": "static"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Specialty Tower",
+      "en": "Specialty Tower",
+      "fr": "Specialty Tower",
+      "es": "Specialty Tower",
+      "it": "Specialty Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Route 118",
+      "en": "Route 118",
+      "fr": "Route 118",
+      "es": "Route 118",
+      "it": "Route 118"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Route 119",
+      "en": "Route 119",
+      "fr": "Route 119",
+      "es": "Route 119",
+      "it": "Route 119"
+    },
+    "type": "route"
+  },
+  {
+    "id": 90,
+    "names": {
+      "de": "Kecleon Route 119",
+      "en": "Kecleon Route 119",
+      "fr": "Kecleon Route 119",
+      "es": "Kecleon Route 119",
+      "it": "Kecleon Route 119"
+    },
+    "type": "static"
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Castform Weather Institute",
+      "en": "Castform Weather Institute",
+      "fr": "Castform Weather Institute",
+      "es": "Castform Weather Institute",
+      "it": "Castform Weather Institute"
+    },
+    "type": "static"
+  },
+  {
+    "id": 42,
+    "names": {
+      "de": "Fortree City",
+      "en": "Fortree City",
+      "fr": "Fortree City",
+      "es": "Fortree City",
+      "it": "Fortree City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Route 120",
+      "en": "Route 120",
+      "fr": "Route 120",
+      "es": "Route 120",
+      "it": "Route 120"
+    },
+    "type": "route"
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Kecleon Route 120",
+      "en": "Kecleon Route 120",
+      "fr": "Kecleon Route 120",
+      "es": "Kecleon Route 120",
+      "it": "Kecleon Route 120"
+    },
+    "type": "static"
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Registeel Ancient Tomb",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Ancient Tomb",
+      "es": "Registeel Ancient Tomb",
+      "it": "Registeel Ancient Tomb"
+    },
+    "type": "static"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Desert Underpass",
+      "en": "Desert Underpass",
+      "fr": "Desert Underpass",
+      "es": "Desert Underpass",
+      "it": "Desert Underpass"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Route 121",
+      "en": "Route 121",
+      "fr": "Route 121",
+      "es": "Route 121",
+      "it": "Route 121"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Safari Zone",
+      "en": "Safari Zone",
+      "fr": "Safari Zone",
+      "es": "Safari Zone",
+      "it": "Safari Zone"
+    },
+    "type": "route"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Route 122",
+      "en": "Route 122",
+      "fr": "Route 122",
+      "es": "Route 122",
+      "it": "Route 122"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Mt. Pyre",
+      "en": "Mt. Pyre",
+      "fr": "Mt. Pyre",
+      "es": "Mt. Pyre",
+      "it": "Mt. Pyre"
+    },
+    "type": "route"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Route 123",
+      "en": "Route 123",
+      "fr": "Route 123",
+      "es": "Route 123",
+      "it": "Route 123"
+    },
+    "type": "route"
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Celebi Route 123",
+      "en": "Celebi Route 123",
+      "fr": "Celebi Route 123",
+      "es": "Celebi Route 123",
+      "it": "Celebi Route 123"
+    },
+    "type": "static"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Lilycove City",
+      "en": "Lilycove City",
+      "fr": "Lilycove City",
+      "es": "Lilycove City",
+      "it": "Lilycove City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 95,
+    "names": {
+      "de": "Gift Pokémon Lilycove City",
+      "en": "Gift Pokémon Lilycove City",
+      "fr": "Gift Pokémon Lilycove City",
+      "es": "Gift Pokémon Lilycove City",
+      "it": "Gift Pokémon Lilycove City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 96,
+    "names": {
+      "de": "Shadow Lugia Lilycove City",
+      "en": "Shadow Lugia Lilycove City",
+      "fr": "Shadow Lugia Lilycove City",
+      "es": "Shadow Lugia Lilycove City",
+      "it": "Shadow Lugia Lilycove City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "Electrode Aqua Hideout",
+      "en": "Electrode Aqua Hideout",
+      "fr": "Electrode Aqua Hideout",
+      "es": "Electrode Aqua Hideout",
+      "it": "Electrode Aqua Hideout"
+    },
+    "type": "static"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Route 124",
+      "en": "Route 124",
+      "fr": "Route 124",
+      "es": "Route 124",
+      "it": "Route 124"
+    },
+    "type": "route"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "All Dive Areas",
+      "en": "All Dive Areas",
+      "fr": "All Dive Areas",
+      "es": "All Dive Areas",
+      "it": "All Dive Areas"
+    },
+    "type": "route"
+  },
+  {
+    "id": 98,
+    "names": {
+      "de": "Manaphy Underwater",
+      "en": "Manaphy Underwater",
+      "fr": "Manaphy Underwater",
+      "es": "Manaphy Underwater",
+      "it": "Manaphy Underwater"
+    },
+    "type": "static"
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Mossdeep City",
+      "en": "Mossdeep City",
+      "fr": "Mossdeep City",
+      "es": "Mossdeep City",
+      "it": "Mossdeep City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "The Moon",
+      "en": "The Moon",
+      "fr": "The Moon",
+      "es": "The Moon",
+      "it": "The Moon"
+    },
+    "type": "route"
+  },
+  {
+    "id": 99,
+    "names": {
+      "de": "Deoxys The Moon",
+      "en": "Deoxys The Moon",
+      "fr": "Deoxys The Moon",
+      "es": "Deoxys The Moon",
+      "it": "Deoxys The Moon"
+    },
+    "type": "static"
+  },
+  {
+    "id": 100,
+    "names": {
+      "de": "Metagross The Moon",
+      "en": "Metagross The Moon",
+      "fr": "Metagross The Moon",
+      "es": "Metagross The Moon",
+      "it": "Metagross The Moon"
+    },
+    "type": "static"
+  },
+  {
+    "id": 101,
+    "names": {
+      "de": "Metunn Ancient Alcove",
+      "en": "Metunn Ancient Alcove",
+      "fr": "Metunn Ancient Alcove",
+      "es": "Metunn Ancient Alcove",
+      "it": "Metunn Ancient Alcove"
+    },
+    "type": "static"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Route 125",
+      "en": "Route 125",
+      "fr": "Route 125",
+      "es": "Route 125",
+      "it": "Route 125"
+    },
+    "type": "route"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Shoal Cave",
+      "en": "Shoal Cave",
+      "fr": "Shoal Cave",
+      "es": "Shoal Cave",
+      "it": "Shoal Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 102,
+    "names": {
+      "de": "Onix/Suicune Shoal Cave",
+      "en": "Onix/Suicune Shoal Cave",
+      "fr": "Onix/Suicune Shoal Cave",
+      "es": "Onix/Suicune Shoal Cave",
+      "it": "Onix/Suicune Shoal Cave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Route 126",
+      "en": "Route 126",
+      "fr": "Route 126",
+      "es": "Route 126",
+      "it": "Route 126"
+    },
+    "type": "route"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Sootopolis City",
+      "en": "Sootopolis City",
+      "fr": "Sootopolis City",
+      "es": "Sootopolis City",
+      "it": "Sootopolis City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Cave of Origin Corridor",
+      "en": "Cave of Origin Corridor",
+      "fr": "Cave of Origin Corridor",
+      "es": "Cave of Origin Corridor",
+      "it": "Cave of Origin Corridor"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Route 127",
+      "en": "Route 127",
+      "fr": "Route 127",
+      "es": "Route 127",
+      "it": "Route 127"
+    },
+    "type": "route"
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Seafloor Cavern",
+      "en": "Seafloor Cavern",
+      "fr": "Seafloor Cavern",
+      "es": "Seafloor Cavern",
+      "it": "Seafloor Cavern"
+    },
+    "type": "route"
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Route 128",
+      "en": "Route 128",
+      "fr": "Route 128",
+      "es": "Route 128",
+      "it": "Route 128"
+    },
+    "type": "route"
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Route 129",
+      "en": "Route 129",
+      "fr": "Route 129",
+      "es": "Route 129",
+      "it": "Route 129"
+    },
+    "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Briny Trench",
+      "en": "Briny Trench",
+      "fr": "Briny Trench",
+      "es": "Briny Trench",
+      "it": "Briny Trench"
+    },
+    "type": "route"
+  },
+  {
+    "id": 103,
+    "names": {
+      "de": "Lugia Briny Trench",
+      "en": "Lugia Briny Trench",
+      "fr": "Lugia Briny Trench",
+      "es": "Lugia Briny Trench",
+      "it": "Lugia Briny Trench"
+    },
+    "type": "static"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Verdant Enclave",
+      "en": "Verdant Enclave",
+      "fr": "Verdant Enclave",
+      "es": "Verdant Enclave",
+      "it": "Verdant Enclave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 104,
+    "names": {
+      "de": "Shaymin Verdant Enclave",
+      "en": "Shaymin Verdant Enclave",
+      "fr": "Shaymin Verdant Enclave",
+      "es": "Shaymin Verdant Enclave",
+      "it": "Shaymin Verdant Enclave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Route 130",
+      "en": "Route 130",
+      "fr": "Route 130",
+      "es": "Route 130",
+      "it": "Route 130"
+    },
+    "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Sky Pillar",
+      "en": "Sky Pillar",
+      "fr": "Sky Pillar",
+      "es": "Sky Pillar",
+      "it": "Sky Pillar"
+    },
+    "type": "route"
+  },
+  {
+    "id": 105,
+    "names": {
+      "de": "Rayquaza Sky Pillar",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Sky Pillar",
+      "es": "Rayquaza Sky Pillar",
+      "it": "Rayquaza Sky Pillar"
+    },
+    "type": "static"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Route 131",
+      "en": "Route 131",
+      "fr": "Route 131",
+      "es": "Route 131",
+      "it": "Route 131"
+    },
+    "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Pacifidlog Town",
+      "en": "Pacifidlog Town",
+      "fr": "Pacifidlog Town",
+      "es": "Pacifidlog Town",
+      "it": "Pacifidlog Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Route 132",
+      "en": "Route 132",
+      "fr": "Route 132",
+      "es": "Route 132",
+      "it": "Route 132"
+    },
+    "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Route 133",
+      "en": "Route 133",
+      "fr": "Route 133",
+      "es": "Route 133",
+      "it": "Route 133"
+    },
+    "type": "route"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Route 134",
+      "en": "Route 134",
+      "fr": "Route 134",
+      "es": "Route 134",
+      "it": "Route 134"
+    },
+    "type": "route"
+  },
+  {
+    "id": 106,
+    "names": {
+      "de": "Latios/Latias Southern Island",
+      "en": "Latios/Latias Southern Island",
+      "fr": "Latios/Latias Southern Island",
+      "es": "Latios/Latias Southern Island",
+      "it": "Latios/Latias Southern Island"
+    },
+    "type": "static"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Ever Grande City",
+      "en": "Ever Grande City",
+      "fr": "Ever Grande City",
+      "es": "Ever Grande City",
+      "it": "Ever Grande City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "type": "route"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Rocklight Cave",
+      "en": "Rocklight Cave",
+      "fr": "Rocklight Cave",
+      "es": "Rocklight Cave",
+      "it": "Rocklight Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Rocky Hollow",
+      "en": "Rocky Hollow",
+      "fr": "Rocky Hollow",
+      "es": "Rocky Hollow",
+      "it": "Rocky Hollow"
+    },
+    "type": "route"
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Galarian Moltres Mirage Island",
+      "en": "Galarian Moltres Mirage Island",
+      "fr": "Galarian Moltres Mirage Island",
+      "es": "Galarian Moltres Mirage Island",
+      "it": "Galarian Moltres Mirage Island"
+    },
+    "type": "static"
+  },
+  {
+    "id": 107,
+    "names": {
+      "de": "Ho-Oh/Silviper Shimmering Summit",
+      "en": "Ho-Oh/Silviper Shimmering Summit",
+      "fr": "Ho-Oh/Silviper Shimmering Summit",
+      "es": "Ho-Oh/Silviper Shimmering Summit",
+      "it": "Ho-Oh/Silviper Shimmering Summit"
+    },
+    "type": "static"
+  },
+  {
+    "id": 108,
+    "names": {
+      "de": "Darkrai Nightmare",
+      "en": "Darkrai Nightmare",
+      "fr": "Darkrai Nightmare",
+      "es": "Darkrai Nightmare",
+      "it": "Darkrai Nightmare"
+    },
+    "type": "static"
+  },
+  {
+    "id": 109,
+    "names": {
+      "de": "Cresselia Crescent Isle",
+      "en": "Cresselia Crescent Isle",
+      "fr": "Cresselia Crescent Isle",
+      "es": "Cresselia Crescent Isle",
+      "it": "Cresselia Crescent Isle"
+    },
+    "type": "static"
+  },
+  {
+    "id": 110,
+    "names": {
+      "de": "Spheal Oldale Town",
+      "en": "Spheal Oldale Town",
+      "fr": "Spheal Oldale Town",
+      "es": "Spheal Oldale Town",
+      "it": "Spheal Oldale Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 111,
+    "names": {
+      "de": "Galarian Articuno Littleroot Town",
+      "en": "Galarian Articuno Littleroot Town",
+      "fr": "Galarian Articuno Littleroot Town",
+      "es": "Galarian Articuno Littleroot Town",
+      "it": "Galarian Articuno Littleroot Town"
+    },
+    "type": "static"
+  },
+  {
+    "id": 112,
+    "names": {
+      "de": "Beldum Mossdeep City",
+      "en": "Beldum Mossdeep City",
+      "fr": "Beldum Mossdeep City",
+      "es": "Beldum Mossdeep City",
+      "it": "Beldum Mossdeep City"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 113,
+    "names": {
+      "de": "Egg Ever Grande City",
+      "en": "Egg Ever Grande City",
+      "fr": "Egg Ever Grande City",
+      "es": "Egg Ever Grande City",
+      "it": "Egg Ever Grande City"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 114,
+    "names": {
+      "de": "Crawb New Mauville",
+      "en": "Crawb New Mauville",
+      "fr": "Crawb New Mauville",
+      "es": "Crawb New Mauville",
+      "it": "Crawb New Mauville"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 115,
+    "names": {
+      "de": "Victini Egg Crater Crag",
+      "en": "Victini Egg Crater Crag",
+      "fr": "Victini Egg Crater Crag",
+      "es": "Victini Egg Crater Crag",
+      "it": "Victini Egg Crater Crag"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 116,
+    "names": {
+      "de": "Kyogre Marine Cave",
+      "en": "Kyogre Marine Cave",
+      "fr": "Kyogre Marine Cave",
+      "es": "Kyogre Marine Cave",
+      "it": "Kyogre Marine Cave"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 117,
+    "names": {
+      "de": "Groudon Terra Cave",
+      "en": "Groudon Terra Cave",
+      "fr": "Groudon Terra Cave",
+      "es": "Groudon Terra Cave",
+      "it": "Groudon Terra Cave"
+    },
+    "type": "static",
+    "postgame": true
+  }
+]

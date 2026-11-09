@@ -1,0 +1,319 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Roxanne",
+      "en": "Roxanne",
+      "fr": "Roxanne",
+      "es": "Roxanne",
+      "it": "Roxanne"
+    },
+    "location": {
+      "de": "Rustboro City",
+      "en": "Rustboro City",
+      "fr": "Rustboro City",
+      "es": "Rustboro City",
+      "it": "Rustboro City"
+    },
+    "badge": {
+      "de": "Stone Badge",
+      "en": "Stone Badge",
+      "fr": "Stone Badge",
+      "es": "Stone Badge",
+      "it": "Stone Badge"
+    },
+    "max_level": 15,
+    "sprite": "Felizia"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Blake",
+      "en": "Blake",
+      "fr": "Blake",
+      "es": "Blake",
+      "it": "Blake"
+    },
+    "location": {
+      "de": "Dewford Town Gym",
+      "en": "Dewford Town Gym",
+      "fr": "Dewford Town Gym",
+      "es": "Dewford Town Gym",
+      "it": "Dewford Town Gym"
+    },
+    "badge": null,
+    "max_level": 22
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Wattson",
+      "en": "Wattson",
+      "fr": "Wattson",
+      "es": "Wattson",
+      "it": "Wattson"
+    },
+    "location": {
+      "de": "Mauville City",
+      "en": "Mauville City",
+      "fr": "Mauville City",
+      "es": "Mauville City",
+      "it": "Mauville City"
+    },
+    "badge": {
+      "de": "Dynamo Badge",
+      "en": "Dynamo Badge",
+      "fr": "Dynamo Badge",
+      "es": "Dynamo Badge",
+      "it": "Dynamo Badge"
+    },
+    "max_level": 32,
+    "sprite": "Walter"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Flannery",
+      "en": "Flannery",
+      "fr": "Flannery",
+      "es": "Flannery",
+      "it": "Flannery"
+    },
+    "location": {
+      "de": "Lavaridge Town",
+      "en": "Lavaridge Town",
+      "fr": "Lavaridge Town",
+      "es": "Lavaridge Town",
+      "it": "Lavaridge Town"
+    },
+    "badge": {
+      "de": "Heat Badge",
+      "en": "Heat Badge",
+      "fr": "Heat Badge",
+      "es": "Heat Badge",
+      "it": "Heat Badge"
+    },
+    "max_level": 37,
+    "sprite": "Flavia"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Norman",
+      "en": "Norman",
+      "fr": "Norman",
+      "es": "Norman",
+      "it": "Norman"
+    },
+    "location": {
+      "de": "Petalburg City",
+      "en": "Petalburg City",
+      "fr": "Petalburg City",
+      "es": "Petalburg City",
+      "it": "Petalburg City"
+    },
+    "badge": {
+      "de": "Balance Badge",
+      "en": "Balance Badge",
+      "fr": "Balance Badge",
+      "es": "Balance Badge",
+      "it": "Balance Badge"
+    },
+    "max_level": 43
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Winona",
+      "en": "Winona",
+      "fr": "Winona",
+      "es": "Winona",
+      "it": "Winona"
+    },
+    "location": {
+      "de": "Fortree City",
+      "en": "Fortree City",
+      "fr": "Fortree City",
+      "es": "Fortree City",
+      "it": "Fortree City"
+    },
+    "badge": {
+      "de": "Feather Badge",
+      "en": "Feather Badge",
+      "fr": "Feather Badge",
+      "es": "Feather Badge",
+      "it": "Feather Badge"
+    },
+    "max_level": 50,
+    "sprite": "Wibke"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Tate & Liza",
+      "en": "Tate & Liza",
+      "fr": "Tate & Liza",
+      "es": "Tate & Liza",
+      "it": "Tate & Liza"
+    },
+    "location": {
+      "de": "Mossdeep City",
+      "en": "Mossdeep City",
+      "fr": "Mossdeep City",
+      "es": "Mossdeep City",
+      "it": "Mossdeep City"
+    },
+    "badge": {
+      "de": "Mind Badge",
+      "en": "Mind Badge",
+      "fr": "Mind Badge",
+      "es": "Mind Badge",
+      "it": "Mind Badge"
+    },
+    "max_level": 54,
+    "sprite": "Ben & Svenja"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Juan",
+      "en": "Juan",
+      "fr": "Juan",
+      "es": "Juan",
+      "it": "Juan"
+    },
+    "location": {
+      "de": "Sootopolis City",
+      "en": "Sootopolis City",
+      "fr": "Sootopolis City",
+      "es": "Sootopolis City",
+      "it": "Sootopolis City"
+    },
+    "badge": {
+      "de": "Rain Badge",
+      "en": "Rain Badge",
+      "fr": "Rain Badge",
+      "es": "Rain Badge",
+      "it": "Rain Badge"
+    },
+    "max_level": 60
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Sidney",
+      "en": "Sidney",
+      "fr": "Sidney",
+      "es": "Sidney",
+      "it": "Sidney"
+    },
+    "location": {
+      "de": "Elite Four",
+      "en": "Elite Four",
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
+    },
+    "badge": null,
+    "max_level": 68,
+    "sprite": "Ulrich"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Serena",
+      "en": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
+    "location": {
+      "de": "Elite Four",
+      "en": "Elite Four",
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
+    },
+    "badge": null,
+    "max_level": 68
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Bede",
+      "en": "Bede",
+      "fr": "Bede",
+      "es": "Bede",
+      "it": "Bede"
+    },
+    "location": {
+      "de": "Elite Four",
+      "en": "Elite Four",
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
+    },
+    "badge": null,
+    "max_level": 70
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Drake",
+      "en": "Drake",
+      "fr": "Drake",
+      "es": "Drake",
+      "it": "Drake"
+    },
+    "location": {
+      "de": "Elite Four",
+      "en": "Elite Four",
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
+    },
+    "badge": null,
+    "max_level": 71,
+    "sprite": "Dragan"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Wallace",
+      "en": "Wallace",
+      "fr": "Wallace",
+      "es": "Wallace",
+      "it": "Wallace"
+    },
+    "location": {
+      "de": "Elite Four",
+      "en": "Elite Four",
+      "fr": "Elite Four",
+      "es": "Elite Four",
+      "it": "Elite Four"
+    },
+    "badge": null,
+    "max_level": 75,
+    "sprite": "Wassili"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Steven",
+      "en": "Steven",
+      "fr": "Steven",
+      "es": "Steven",
+      "it": "Steven"
+    },
+    "location": {
+      "de": "Meteor Falls Champion",
+      "en": "Meteor Falls Champion",
+      "fr": "Meteor Falls Champion",
+      "es": "Meteor Falls Champion",
+      "it": "Meteor Falls Champion"
+    },
+    "badge": null,
+    "max_level": 76,
+    "sprite": "Troy Trumm"
+  }
+]
