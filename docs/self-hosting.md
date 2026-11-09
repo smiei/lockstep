@@ -200,7 +200,7 @@ Database migrations are applied automatically in every case. Existing runs are n
 
 ## Backups
 
-The easiest backup is in the app itself: gear menu → **Back up all runs**. It downloads a file that **Import backup** turns back into runs on any instance, without overwriting what is already there.
+The easiest backup is in the app itself: gear menu → **Back up all runs**. It downloads a file that **Import backup** turns back into runs on any instance, without overwriting what is already there. It carries your rule presets too; an import adds the ones that are missing.
 
 For a file-level backup, copy the database while the tracker is stopped:
 
