@@ -444,12 +444,12 @@ export function BattleCardBody({
                       onClick={() => setPickedRows((cur) => toggle(cur, attack))}
                       className="ml-auto flex items-center gap-0.5 rounded-md"
                     >
-                      {/* a small bar marks a picked row, like the columns' */}
+                      <TypeAbbrev type={attack} lang={lang} dimmed={rowDimmed(attack)} />
+                      {/* a small bar marks a picked row, on the matrix side like the columns' */}
                       <span
                         aria-hidden
                         className={`block h-5 w-1 rounded-full ${pickedRows.includes(attack) ? "bg-ink" : "bg-transparent"}`}
                       />
-                      <TypeAbbrev type={attack} lang={lang} dimmed={rowDimmed(attack)} />
                     </button>
                   </th>
                   {attackTypes.map((defense) => {
