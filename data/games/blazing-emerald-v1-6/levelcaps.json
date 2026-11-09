@@ -93,7 +93,7 @@
       "es": "Heat Badge",
       "it": "Heat Badge"
     },
-    "max_level": 37,
+    "max_level": 39,
     "sprite": "Flavia"
   },
   {
@@ -201,11 +201,11 @@
   {
     "id": 9,
     "names": {
-      "de": "Sidney",
-      "en": "Sidney",
-      "fr": "Sidney",
-      "es": "Sidney",
-      "it": "Sidney"
+      "de": "Phoebe",
+      "en": "Phoebe",
+      "fr": "Phoebe",
+      "es": "Phoebe",
+      "it": "Phoebe"
     },
     "location": {
       "de": "Elite Four",
@@ -215,8 +215,8 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": 68,
-    "sprite": "Ulrich"
+    "max_level": 67,
+    "sprite": "Antonia"
   },
   {
     "id": 10,
