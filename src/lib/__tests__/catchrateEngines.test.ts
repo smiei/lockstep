@@ -5,6 +5,7 @@ import {
   EXPANSION_ENGINE,
   computeCatchChance,
   getBallIdsForGeneration,
+  getBallIdsForGame,
   ballHasCondition,
   type CatchInput,
 } from "@/lib/catchrate";
@@ -109,5 +110,24 @@ describe("pokeemerald-expansion (2023) capture code", () => {
     expect(ballHasCondition("dusk", EXPANSION_ENGINE)).toBe(true);
     expect(ballHasCondition("park", CFRU_ENGINE)).toBe(false);
     expect(ballHasCondition("fast", EXPANSION_ENGINE)).toBe(false);
+  });
+});
+
+// Read from the ROMs' item names (2026-11-09): Radical Red, Run & Bun and
+// Inclement Emerald have every ball of the list, Unbound has no Sport Ball.
+describe("balls a game lacks (game.json missingBalls)", () => {
+  const game = (id: string) => JSON.parse(fs.readFileSync(`data/games/${id}/game.json`, "utf8"));
+
+  it("Unbound offers the CFRU balls without the Sport Ball", () => {
+    const g = game("unbound");
+    const balls = getBallIdsForGame(g.generation, g.catchEngine, g.missingBalls);
+    expect(balls).not.toContain("sport");
+    expect(balls).toEqual(getBallIdsForGeneration(3, CFRU_ENGINE).filter((b) => b !== "sport"));
+  });
+
+  it("the other engine hacks keep the full list", () => {
+    for (const id of ["radical-red", "run-and-bun", "inclement-emerald"]) {
+      expect(game(id).missingBalls).toBeUndefined();
+    }
   });
 });

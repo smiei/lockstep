@@ -65,6 +65,8 @@ const GAME_KEYS = new Set([
   "regionalForms",
   // A ROM hack's own capture engine (GameInfo.catchEngine).
   "catchEngine",
+  // Balls the game lacks (GameInfo.missingBalls).
+  "missingBalls",
 ]);
 const BUILT_IN_ONLY_GAME_KEYS = new Set(["species", "nameLang", "speciesData", "fusion", "sourceVersion", "sourceDate"]);
 
@@ -199,6 +201,13 @@ function checkGame(c: Collector, game: unknown, ctx: PackContext) {
   }
   if (game.catchEngine !== undefined && game.catchEngine !== "cfru" && game.catchEngine !== "expansion") {
     c.error("game", "catchEngine", "must be \"cfru\" or \"expansion\"");
+  }
+  if (
+    game.missingBalls !== undefined &&
+    (!Array.isArray(game.missingBalls) ||
+      game.missingBalls.some((b: unknown) => typeof b !== "string" || !/^[a-z]+$/.test(b)))
+  ) {
+    c.error("game", "missingBalls", "must be a list of ball ids such as \"sport\"");
   }
   if (game.trainerSet !== undefined && (typeof game.trainerSet !== "string" || !/^[a-z0-9-]+$/.test(game.trainerSet))) {
     c.error("game", "trainerSet", "must be lowercase letters, digits and dashes");

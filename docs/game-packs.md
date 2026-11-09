@@ -50,6 +50,7 @@ There are two ways to add a game:
 | `spriteSet` | Which sprites the app downloads: `red-blue`, `crystal`, `emerald`, `firered-leafgreen`, `platinum`, `heartgold-soulsilver`, `black-white`, or `modern` (current sprites for every Pokémon). Pokémon and forms the chosen set does not have, such as a Gen 8 Pokémon in a Gen 3 hack, come from `modern`. |
 | `versionGroup` | Which move and TM data the app uses: one of the main games (`red-blue`, `crystal`, `ruby-sapphire`, `emerald`, `firered-leafgreen`, `diamond-pearl`, `platinum`, `heartgold-soulsilver`, `black-white`, `black-2-white-2`, `x-y`, `omega-ruby-alpha-sapphire`, `sun-moon`, `ultra-sun-ultra-moon`, `sword-shield`, `brilliant-diamond-and-shining-pearl`, `scarlet-violet`), or `modern` (each Pokémon's moves from the newest game that has them, for hacks on current data). |
 | `regionalForms` | Optional. `true` when Alolan, Galarian, Hisuian or Paldean forms are caught on routes: they are then listed beside the species when you enter a catch. Without it they can still be switched into on the Team tab, as long as `dataGeneration` is new enough. |
+| `missingBalls` | Optional. Balls of the generation's (or engine's) list that this game does not have, as ball ids, e.g. `["sport"]`. The catch calculator leaves them out. |
 | `trainerSet` | Optional. The folder under `public/trainers/` for trainer pictures (default: the id). |
 | `names` | The game's name. `de` and `en` are required; `fr`, `es` and `it` are optional and fall back to English. |
 

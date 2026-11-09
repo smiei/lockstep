@@ -283,6 +283,16 @@ const BALLS_INFINITE_FUSION: BallId[] = [
   "fusion",
 ];
 
+// A game's ball list minus the balls its ROM lacks (game.json missingBalls).
+export function getBallIdsForGame(
+  generation: number,
+  versionGroup?: string,
+  missingBalls: readonly string[] = [],
+): BallId[] {
+  const balls = getBallIdsForGeneration(generation, versionGroup);
+  return missingBalls.length ? balls.filter((b) => !missingBalls.includes(b)) : balls;
+}
+
 export function getBallIdsForGeneration(generation: number, versionGroup?: string): BallId[] {
   if (versionGroup === INFINITE_FUSION_VERSION_GROUP) return BALLS_INFINITE_FUSION;
   if (versionGroup === CFRU_ENGINE || versionGroup === EXPANSION_ENGINE) return BALLS_CFRU;

@@ -69,6 +69,9 @@ export type GameInfo = {
   // formula in src/lib/catchrate.ts instead of `generation`. Missing = the
   // generation's own.
   catchEngine?: "cfru" | "expansion";
+  // Balls of the engine's list that this game lacks, read from its ROM
+  // (Unbound has no Sport Ball). Ball ids as in src/lib/catchrate.ts.
+  missingBalls?: string[];
   names: LocalizedNames;
   // Selects the type chart plus the pokemon-history/catchrate-history/
   // move-name-history era-correction tables, independently of `generation`

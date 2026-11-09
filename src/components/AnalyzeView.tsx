@@ -205,6 +205,7 @@ export function AnalyzeView({
   pokemonList,
   generation,
   versionGroup,
+  missingBalls,
   badgesEarned,
   effectiveness,
   attackTypes,
@@ -225,6 +226,7 @@ export function AnalyzeView({
   pokemonList: Pokemon[];
   generation: number;
   versionGroup: string;
+  missingBalls?: string[];
   // Gym badges the run holds - the default for Gen 8/9's catch formula.
   badgesEarned: number;
   effectiveness: EffectivenessTable;
@@ -262,6 +264,7 @@ export function AnalyzeView({
     lockedFamiliesByPlayer,
     generation,
     versionGroup,
+    missingBalls,
     badgesEarned,
     openSlots,
     effectiveness,
