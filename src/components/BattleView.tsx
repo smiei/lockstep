@@ -234,13 +234,18 @@ export function BattleCardBody({
     0: t.immune,
   };
   const isDimmed = (defenseType: string) => selectedRaw !== null && !opponentTypes.includes(defenseType);
-  // Columns picked by tapping their type in the matrix header (a toggle each).
-  // While any is picked they take over from the opponent's dimming: the picked
-  // columns stay bright and framed, the rest fade.
+  // Rows and columns picked by tapping their type in the matrix (a toggle
+  // each). While any is picked they take over from the opponent's dimming:
+  // a cell stays bright when its row or its column is picked, the rest fade.
   const [pickedColumns, setPickedColumns] = useState<string[]>([]);
-  const togglePickedColumn = (type: string) =>
-    setPickedColumns((cur) => (cur.includes(type) ? cur.filter((x) => x !== type) : [...cur, type]));
-  const columnDimmed = (type: string) => (pickedColumns.length > 0 ? !pickedColumns.includes(type) : isDimmed(type));
+  const [pickedRows, setPickedRows] = useState<string[]>([]);
+  const toggle = (list: string[], type: string) => (list.includes(type) ? list.filter((x) => x !== type) : [...list, type]);
+  const anyPicked = pickedColumns.length > 0 || pickedRows.length > 0;
+  const columnDimmed = (type: string) =>
+    pickedColumns.length > 0 ? !pickedColumns.includes(type) : pickedRows.length > 0 ? false : isDimmed(type);
+  const rowDimmed = (type: string) => pickedRows.length > 0 && !pickedRows.includes(type);
+  const cellPicked = (attack: string, defense: string) => pickedColumns.includes(defense) || pickedRows.includes(attack);
+  const cellDimmed = (attack: string, defense: string) => (anyPicked ? !cellPicked(attack, defense) : isDimmed(defense));
 
   const hasTeam = teams.some((team) => team.members.length > 0);
 
@@ -413,7 +418,7 @@ export function BattleCardBody({
                         type="button"
                         aria-pressed={picked}
                         aria-label={`${t.matrixHighlight}: ${TYPE_LABELS[lang][defense] ?? defense}`}
-                        onClick={() => togglePickedColumn(defense)}
+                        onClick={() => setPickedColumns((cur) => toggle(cur, defense))}
                         className="block rounded-md"
                       >
                         <TypeAbbrev type={defense} lang={lang} dimmed={columnDimmed(defense)} />
@@ -432,18 +437,31 @@ export function BattleCardBody({
               {attackTypes.map((attack) => (
                 <tr key={attack}>
                   <th className="p-0 pr-1 text-right">
-                    <TypeAbbrev type={attack} lang={lang} dimmed={false} />
+                    <button
+                      type="button"
+                      aria-pressed={pickedRows.includes(attack)}
+                      aria-label={`${t.matrixHighlightRow}: ${TYPE_LABELS[lang][attack] ?? attack}`}
+                      onClick={() => setPickedRows((cur) => toggle(cur, attack))}
+                      className="ml-auto flex items-center gap-0.5 rounded-md"
+                    >
+                      {/* a small bar marks a picked row, like the columns' */}
+                      <span
+                        aria-hidden
+                        className={`block h-5 w-1 rounded-full ${pickedRows.includes(attack) ? "bg-ink" : "bg-transparent"}`}
+                      />
+                      <TypeAbbrev type={attack} lang={lang} dimmed={rowDimmed(attack)} />
+                    </button>
                   </th>
                   {attackTypes.map((defense) => {
                     const { text, className: cellClass } = matrixCellStyle(singleTypeMultiplier(table, attack, defense));
                     // A picked column's neutral cells get a light fill, so it reads as one band.
                     const className =
-                      pickedColumns.includes(defense) && cellClass === "bg-sunken" ? "bg-line" : cellClass;
+                      cellPicked(attack, defense) && cellClass === "bg-sunken" ? "bg-line" : cellClass;
                     return (
                       <td
                         key={defense}
                         className={`h-7 w-8 rounded text-center text-xs font-semibold transition-opacity ${className} ${
-                          columnDimmed(defense) ? "opacity-25" : ""
+                          cellDimmed(attack, defense) ? "opacity-25" : ""
                         }`}
                       >
                         {text}

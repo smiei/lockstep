@@ -56,7 +56,7 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 
 **Trainer** is a battle scout. It shows:
 - the opponent's types and its damaging attack types by level;
-- the full type matrix, Gen 1 chart included; tapping a type at the top highlights its column (again to undo);
+- the full type matrix, Gen 1 chart included; tapping a type at the top or on the left highlights its column or row (again to undo);
 - a team-matchup table: how well each of your Pokémon takes that opponent's attacks;
 - a ⚠ warning for Self-Destruct and Explosion learners.
 
