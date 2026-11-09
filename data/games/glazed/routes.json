@@ -11,17 +11,6 @@
     "type": "static"
   },
   {
-    "id": 2,
-    "names": {
-      "de": "Glenwood Town",
-      "en": "Glenwood Town",
-      "fr": "Glenwood Town",
-      "es": "Glenwood Town",
-      "it": "Glenwood Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 3,
     "names": {
       "de": "Forest Pass",
@@ -29,17 +18,6 @@
       "fr": "Forest Pass",
       "es": "Forest Pass",
       "it": "Forest Pass"
-    },
-    "type": "route"
-  },
-  {
-    "id": 4,
-    "names": {
-      "de": "Chocco Town",
-      "en": "Chocco Town",
-      "fr": "Chocco Town",
-      "es": "Chocco Town",
-      "it": "Chocco Town"
     },
     "type": "route"
   },
@@ -68,11 +46,11 @@
   {
     "id": 7,
     "names": {
-      "de": "Oceanview Power Plant",
-      "en": "Oceanview Power Plant",
-      "fr": "Oceanview Power Plant",
-      "es": "Oceanview Power Plant",
-      "it": "Oceanview Power Plant"
+      "de": "Oceanview City",
+      "en": "Oceanview City",
+      "fr": "Oceanview City",
+      "es": "Oceanview City",
+      "it": "Oceanview City"
     },
     "type": "route"
   },
@@ -143,17 +121,6 @@
     "type": "route"
   },
   {
-    "id": 14,
-    "names": {
-      "de": "Seaspray Town",
-      "en": "Seaspray Town",
-      "fr": "Seaspray Town",
-      "es": "Seaspray Town",
-      "it": "Seaspray Town"
-    },
-    "type": "route"
-  },
-  {
     "id": 15,
     "names": {
       "de": "Seaspray Dam",
@@ -172,6 +139,17 @@
       "fr": "Mt. Stratus",
       "es": "Mt. Stratus",
       "it": "Mt. Stratus"
+    },
+    "type": "route"
+  },
+  {
+    "id": 121,
+    "names": {
+      "de": "Sunshine Skyway",
+      "en": "Sunshine Skyway",
+      "fr": "Sunshine Skyway",
+      "es": "Sunshine Skyway",
+      "it": "Sunshine Skyway"
     },
     "type": "route"
   },
@@ -209,6 +187,39 @@
     "type": "route"
   },
   {
+    "id": 2,
+    "names": {
+      "de": "Glenwood Town",
+      "en": "Glenwood Town",
+      "fr": "Glenwood Town",
+      "es": "Glenwood Town",
+      "it": "Glenwood Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Seaspray Town",
+      "en": "Seaspray Town",
+      "fr": "Seaspray Town",
+      "es": "Seaspray Town",
+      "it": "Seaspray Town"
+    },
+    "type": "route"
+  },
+  {
+    "id": 122,
+    "names": {
+      "de": "Geminite Village",
+      "en": "Geminite Village",
+      "fr": "Geminite Village",
+      "es": "Geminite Village",
+      "it": "Geminite Village"
+    },
+    "type": "route"
+  },
+  {
     "id": 20,
     "names": {
       "de": "Blizzard Slopes",
@@ -227,6 +238,39 @@
       "fr": "Icicle Tunnel",
       "es": "Icicle Tunnel",
       "it": "Icicle Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 123,
+    "names": {
+      "de": "Northcoast Peak",
+      "en": "Northcoast Peak",
+      "fr": "Northcoast Peak",
+      "es": "Northcoast Peak",
+      "it": "Northcoast Peak"
+    },
+    "type": "route"
+  },
+  {
+    "id": 124,
+    "names": {
+      "de": "Cape Azure",
+      "en": "Cape Azure",
+      "fr": "Cape Azure",
+      "es": "Cape Azure",
+      "it": "Cape Azure"
+    },
+    "type": "route"
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Chocco Town",
+      "en": "Chocco Town",
+      "fr": "Chocco Town",
+      "es": "Chocco Town",
+      "it": "Chocco Town"
     },
     "type": "route"
   },
@@ -330,6 +374,17 @@
     "type": "route"
   },
   {
+    "id": 125,
+    "names": {
+      "de": "Palmtree Resort",
+      "en": "Palmtree Resort",
+      "fr": "Palmtree Resort",
+      "es": "Palmtree Resort",
+      "it": "Palmtree Resort"
+    },
+    "type": "route"
+  },
+  {
     "id": 30,
     "names": {
       "de": "Spatial Sea",
@@ -418,6 +473,17 @@
     "type": "route"
   },
   {
+    "id": 126,
+    "names": {
+      "de": "New Port Ritchey",
+      "en": "New Port Ritchey",
+      "fr": "New Port Ritchey",
+      "es": "New Port Ritchey",
+      "it": "New Port Ritchey"
+    },
+    "type": "route"
+  },
+  {
     "id": 37,
     "names": {
       "de": "Temporal Sea",
@@ -482,6 +548,17 @@
       "it": "Rotom Haunted Seaway"
     },
     "type": "static"
+  },
+  {
+    "id": 127,
+    "names": {
+      "de": "Trainer Isle",
+      "en": "Trainer Isle",
+      "fr": "Trainer Isle",
+      "es": "Trainer Isle",
+      "it": "Trainer Isle"
+    },
+    "type": "route"
   },
   {
     "id": 41,
@@ -557,6 +634,17 @@
       "fr": "Victory Road",
       "es": "Victory Road",
       "it": "Victory Road"
+    },
+    "type": "route"
+  },
+  {
+    "id": 128,
+    "names": {
+      "de": "Tunod League",
+      "en": "Tunod League",
+      "fr": "Tunod League",
+      "es": "Tunod League",
+      "it": "Tunod League"
     },
     "type": "route"
   },
