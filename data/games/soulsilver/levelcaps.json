@@ -54,7 +54,7 @@
       "it": "Violapoli"
     },
     "badge": {
-      "de": "Zephyrorden",
+      "de": "Flügelorden",
       "en": "Zephyr Badge",
       "fr": "Badge Zéphyr",
       "es": "Medalla Céfiro",
@@ -98,7 +98,7 @@
       "it": "Azalina"
     },
     "badge": {
-      "de": "Insektenorden",
+      "de": "Insektorden",
       "en": "Hive Badge",
       "fr": "Badge Essaim",
       "es": "Medalla Colmena",
@@ -146,7 +146,7 @@
       "en": "Plain Badge",
       "fr": "Badge Plaine",
       "es": "Medalla Planicie",
-      "it": "Medaglia Pianura"
+      "it": "Medaglia Piana"
     },
     "max_level": 19
   },
@@ -186,7 +186,7 @@
       "it": "Amarantopoli"
     },
     "badge": {
-      "de": "Nebelorden",
+      "de": "Phantomorden",
       "en": "Fog Badge",
       "fr": "Badge Brume",
       "es": "Medalla Niebla",
@@ -230,9 +230,9 @@
       "it": "Fiorlisopoli"
     },
     "badge": {
-      "de": "Sturmorden",
+      "de": "Faustorden",
       "en": "Storm Badge",
-      "fr": "Badge Tempête",
+      "fr": "Badge Choc",
       "es": "Medalla Tormenta",
       "it": "Medaglia Tempesta"
     },
@@ -255,7 +255,7 @@
       "it": "Olivinopoli"
     },
     "badge": {
-      "de": "Mineralorden",
+      "de": "Stahlorden",
       "en": "Mineral Badge",
       "fr": "Badge Minéral",
       "es": "Medalla Mineral",
@@ -318,11 +318,11 @@
       "it": "Mogania"
     },
     "badge": {
-      "de": "Gletscherorden",
+      "de": "Eisorden",
       "en": "Glacier Badge",
       "fr": "Badge Glacier",
       "es": "Medalla Glaciar",
-      "it": "Medaglia Ghiacciaio"
+      "it": "Medaglia Gelo"
     },
     "max_level": 34
   },
@@ -438,11 +438,11 @@
       "it": "Ebanopoli"
     },
     "badge": {
-      "de": "Aufstiegsorden",
+      "de": "Drachenorden",
       "en": "Rising Badge",
       "fr": "Badge Lever",
-      "es": "Medalla Alzada",
-      "it": "Medaglia Ascesa"
+      "es": "Medalla Dragón",
+      "it": "Medaglia Levante"
     },
     "max_level": 41
   },

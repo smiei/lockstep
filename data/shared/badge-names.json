@@ -1,8 +1,200 @@
 {
   "source": "PokéWiki badge pages, \"In anderen Sprachen\" table (https://www.pokewiki.de)",
-  "generatedAt": "2026-11-01T01:15:07.292Z",
+  "generatedAt": "2026-11-09T02:31:40.388Z",
   "regions": {
+    "kanto": {
+      "Brock": {
+        "de": "Felsorden",
+        "en": "Boulder Badge",
+        "fr": "Badge Roche",
+        "it": "Medaglia Sasso"
+      },
+      "Misty": {
+        "de": "Quellorden",
+        "en": "Cascade Badge",
+        "fr": "Badge Cascade",
+        "es": "Medalla Cascada",
+        "it": "Medaglia Cascata"
+      },
+      "Lt. Surge": {
+        "de": "Donnerorden",
+        "en": "Thunder Badge",
+        "fr": "Badge Foudre",
+        "es": "Medalla Trueno",
+        "it": "Medaglia Tuono"
+      },
+      "Erika": {
+        "de": "Farborden",
+        "en": "Rainbow Badge",
+        "fr": "Badge Prisme",
+        "es": "Medalla Arcoíris",
+        "it": "Medaglia Arcobaleno"
+      },
+      "Koga": {
+        "de": "Seelenorden",
+        "en": "Soul Badge",
+        "fr": "Badge Âme",
+        "es": "Medalla Alma",
+        "it": "Medaglia Anima"
+      },
+      "Janine": {
+        "de": "Seelenorden",
+        "en": "Soul Badge",
+        "fr": "Badge Âme",
+        "es": "Medalla Alma",
+        "it": "Medaglia Anima"
+      },
+      "Sabrina": {
+        "de": "Sumpforden",
+        "en": "Marsh Badge",
+        "fr": "Badge Marais",
+        "es": "Medalla Pantano",
+        "it": "Medaglia Palude"
+      },
+      "Blaine": {
+        "de": "Vulkanorden",
+        "en": "Volcano Badge",
+        "fr": "Badge Volcan",
+        "es": "Medalla Volcán",
+        "it": "Medaglia Vulcano"
+      },
+      "Giovanni": {
+        "de": "Erdorden",
+        "en": "Earth Badge",
+        "fr": "Badge Terre",
+        "es": "Medalla Tierra",
+        "it": "Medaglia Terra"
+      },
+      "Blue": {
+        "de": "Erdorden",
+        "en": "Earth Badge",
+        "fr": "Badge Terre",
+        "es": "Medalla Tierra",
+        "it": "Medaglia Terra"
+      }
+    },
+    "johto": {
+      "Falkner": {
+        "de": "Flügelorden",
+        "en": "Zephyr Badge",
+        "fr": "Badge Zéphyr",
+        "es": "Medalla Céfiro",
+        "it": "Medaglia Zefiro"
+      },
+      "Bugsy": {
+        "de": "Insektorden",
+        "en": "Hive Badge",
+        "fr": "Badge Essaim",
+        "es": "Medalla Colmena",
+        "it": "Medaglia Alveare"
+      },
+      "Kurt": {
+        "de": "Insektorden",
+        "en": "Hive Badge",
+        "fr": "Badge Essaim",
+        "es": "Medalla Colmena",
+        "it": "Medaglia Alveare"
+      },
+      "Whitney": {
+        "de": "Basisorden",
+        "en": "Plain Badge",
+        "fr": "Badge Plaine",
+        "es": "Medalla Planicie",
+        "it": "Medaglia Piana"
+      },
+      "Morty": {
+        "de": "Phantomorden",
+        "en": "Fog Badge",
+        "fr": "Badge Brume",
+        "es": "Medalla Niebla",
+        "it": "Medaglia Nebbia"
+      },
+      "Chuck": {
+        "de": "Faustorden",
+        "en": "Storm Badge",
+        "fr": "Badge Choc",
+        "es": "Medalla Tormenta",
+        "it": "Medaglia Tempesta"
+      },
+      "Jasmine": {
+        "de": "Stahlorden",
+        "en": "Mineral Badge",
+        "fr": "Badge Minéral",
+        "es": "Medalla Mineral",
+        "it": "Medaglia Minerale"
+      },
+      "Pryce": {
+        "de": "Eisorden",
+        "en": "Glacier Badge",
+        "fr": "Badge Glacier",
+        "es": "Medalla Glaciar",
+        "it": "Medaglia Gelo"
+      },
+      "Clair": {
+        "de": "Drachenorden",
+        "en": "Rising Badge",
+        "fr": "Badge Lever",
+        "es": "Medalla Dragón",
+        "it": "Medaglia Levante"
+      }
+    },
     "hoenn": {
+      "Roxanne": {
+        "de": "Steinorden",
+        "en": "Stone Badge",
+        "fr": "Badge Roche",
+        "es": "Medalla Piedra",
+        "it": "Medaglia Pietra"
+      },
+      "Brawly": {
+        "de": "Knöchelorden",
+        "en": "Knuckle Badge",
+        "fr": "Badge Poing",
+        "es": "Medalla Puño",
+        "it": "Medaglia Pugno"
+      },
+      "Wattson": {
+        "de": "Dynamo-Orden",
+        "en": "Dynamo Badge",
+        "fr": "Badge Dynamo",
+        "es": "Medalla Dinamo",
+        "it": "Medaglia Dinamo"
+      },
+      "Flannery": {
+        "de": "Hitzeorden",
+        "en": "Heat Badge",
+        "fr": "Badge Chaleur",
+        "es": "Medalla Calor",
+        "it": "Medaglia Fiamma"
+      },
+      "Norman": {
+        "de": "Balanceorden",
+        "en": "Balance Badge",
+        "fr": "Badge Balancier",
+        "es": "Medalla Equilibrio",
+        "it": "Medaglia Armonia"
+      },
+      "Winona": {
+        "de": "Federorden",
+        "en": "Feather Badge",
+        "fr": "Badge Plume",
+        "es": "Medalla Pluma",
+        "it": "Medaglia Piuma"
+      },
+      "Tate & Liza": {
+        "de": "Mentalorden",
+        "en": "Mind Badge",
+        "fr": "Badge Esprit",
+        "es": "Medalla Mente",
+        "it": "Medaglia Mente"
+      },
+      "Juan": {
+        "de": "Schauerorden",
+        "en": "Rain Badge",
+        "fr": "Badge Pluie",
+        "es": "Medalla Lluvia",
+        "it": "Medaglia Pioggia"
+      },
       "Wallace": {
         "de": "Schauerorden",
         "en": "Rain Badge",
@@ -11,7 +203,79 @@
         "it": "Medaglia Pioggia"
       }
     },
+    "sinnoh": {
+      "Roark": {
+        "de": "Kohleorden",
+        "en": "Coal Badge",
+        "fr": "Badge Charbon",
+        "es": "Medalla Lignito",
+        "it": "Medaglia Carbone"
+      },
+      "Gardenia": {
+        "de": "Waldorden",
+        "en": "Forest Badge",
+        "fr": "Badge Forêt",
+        "es": "Medalla Bosque",
+        "it": "Medaglia Bosco"
+      },
+      "Maylene": {
+        "de": "Bergorden",
+        "en": "Cobble Badge",
+        "fr": "Badge Pavé",
+        "es": "Medalla Adoquín",
+        "it": "Medaglia Ciottolo"
+      },
+      "Crasher Wake": {
+        "de": "Fennorden",
+        "en": "Fen Badge",
+        "fr": "Badge Palustre",
+        "es": "Medalla Ciénaga",
+        "it": "Medaglia Acquitrino"
+      },
+      "Fantina": {
+        "de": "Reliktorden",
+        "en": "Relic Badge",
+        "fr": "Badge Fantôme",
+        "es": "Medalla Reliquia",
+        "it": "Medaglia Vestigia"
+      },
+      "Byron": {
+        "de": "Minenorden",
+        "en": "Mine Badge",
+        "fr": "Badge Mine",
+        "es": "Medalla Mina",
+        "it": "Medaglia Cava"
+      },
+      "Candice": {
+        "de": "Firnorden",
+        "en": "Icicle Badge",
+        "fr": "Badge Glaçon",
+        "es": "Medalla Carámbano",
+        "it": "Medaglia Ghiacciolo"
+      },
+      "Volkner": {
+        "de": "Lichtorden",
+        "en": "Beacon Badge",
+        "fr": "Badge Phare",
+        "es": "Medalla Faro",
+        "it": "Medaglia Faro"
+      }
+    },
     "unova": {
+      "Cilan, Chili & Cress": {
+        "de": "Triorden",
+        "en": "Trio Badge",
+        "fr": "Badge Triple",
+        "es": "Medalla Trío",
+        "it": "Medaglia Tris"
+      },
+      "Lenora": {
+        "de": "Grundorden",
+        "en": "Basic Badge",
+        "fr": "Badge Basique",
+        "es": "Medalla Base",
+        "it": "Medaglia Base"
+      },
       "Cheren": {
         "de": "Grundorden",
         "en": "Basic Badge",
@@ -25,6 +289,55 @@
         "fr": "Badge Toxique",
         "es": "Medalla Ponzoña",
         "it": "Medaglia Arsenico"
+      },
+      "Burgh": {
+        "de": "Käferorden",
+        "en": "Insect Badge",
+        "fr": "Badge Élytre",
+        "es": "Medalla Élitro",
+        "it": "Medaglia Scarabeo"
+      },
+      "Elesa": {
+        "de": "Voltorden",
+        "en": "Bolt Badge",
+        "fr": "Badge Volt",
+        "es": "Medalla Voltio",
+        "it": "Medaglia Volt"
+      },
+      "Clay": {
+        "de": "Seismo-Orden",
+        "en": "Quake Badge",
+        "fr": "Badge Sismique",
+        "es": "Medalla Temblor",
+        "it": "Medaglia Sisma"
+      },
+      "Skyla": {
+        "de": "Jetorden",
+        "en": "Jet Badge",
+        "fr": "Badge Jet",
+        "es": "Medalla Jet",
+        "it": "Medaglia Jet"
+      },
+      "Brycen": {
+        "de": "Eiszapforden",
+        "en": "Freeze Badge",
+        "fr": "Badge Stalactite",
+        "es": "Medalla Candelizo",
+        "it": "Medaglia Stalattite"
+      },
+      "Drayden": {
+        "de": "Legendenorden",
+        "en": "Legend Badge",
+        "fr": "Badge Mythe",
+        "es": "Medalla Leyenda",
+        "it": "Medaglia Leggenda"
+      },
+      "Iris": {
+        "de": "Legendenorden",
+        "en": "Legend Badge",
+        "fr": "Badge Mythe",
+        "es": "Medalla Leyenda",
+        "it": "Medaglia Leggenda"
       },
       "Marlon": {
         "de": "Wellenorden",

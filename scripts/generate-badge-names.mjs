@@ -1,14 +1,16 @@
-// Fetches the localized names of the gym badges that no older pack of ours
-// carries (Kalos, Galar, Paldea, and the few Hoenn/Unova badges the base
-// games' packs lack) into data/shared/badge-names.json:
+// Fetches the localized names of every official gym badge into
+// data/shared/badge-names.json:
 //   { source, generatedAt, regions: { <region>: { <English leader name>: { de, en, fr, es, it } } } }
 // Keyed by leader, not by badge: English badge names repeat across regions
-// (Kalos' and Paldea's "Bug Badge", Kalos' and Galar's "Fairy Badge").
+// (Kalos' and Galar's "Fairy Badge", which differ in French).
 // Source: the "In anderen Sprachen" table on each badge's PokéWiki page
 // (facts: the official names in each language), read through the MediaWiki
 // API, one request per second. scripts/import-nuzlocke-app.mjs gives a gym
-// leader's level cap its badge from it.
-// Run manually: node scripts/generate-badge-names.mjs   (network, ~40 seconds)
+// leader's level cap its badge from it, and scripts/apply-badge-names.mjs
+// puts these names into every pack's levelcaps.json (until 2026-11-09 the
+// older packs carried German names translated from English: "Mineralorden"
+// for Jasmine's Stahlorden).
+// Run manually: node scripts/generate-badge-names.mjs   (network, ~1 minute)
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -19,8 +21,64 @@ const USER_AGENT = "Lockstep badge-name import (https://github.com/smiei/lockste
 
 // Leader (as nuzlocke.app names them) -> German PokéWiki page of the badge.
 const BADGES = {
-  hoenn: { Wallace: "Schauerorden" },
-  unova: { Cheren: "Grundorden", Roxie: "Giftorden", Marlon: "Wellenorden" },
+  kanto: {
+    Brock: "Felsorden",
+    Misty: "Quellorden",
+    "Lt. Surge": "Donnerorden",
+    Erika: "Farborden",
+    Koga: "Seelenorden",
+    Janine: "Seelenorden",
+    Sabrina: "Sumpforden",
+    Blaine: "Vulkanorden",
+    Giovanni: "Erdorden",
+    Blue: "Erdorden",
+  },
+  johto: {
+    Falkner: "Flügelorden",
+    Bugsy: "Insektorden",
+    Kurt: "Insektorden",
+    Whitney: "Basisorden",
+    Morty: "Phantomorden",
+    Chuck: "Faustorden",
+    Jasmine: "Stahlorden",
+    Pryce: "Eisorden",
+    Clair: "Drachenorden",
+  },
+  hoenn: {
+    Roxanne: "Steinorden",
+    Brawly: "Knöchelorden",
+    Wattson: "Dynamo-Orden",
+    Flannery: "Hitzeorden",
+    Norman: "Balanceorden",
+    Winona: "Federorden",
+    "Tate & Liza": "Mentalorden",
+    Juan: "Schauerorden",
+    Wallace: "Schauerorden",
+  },
+  sinnoh: {
+    Roark: "Kohleorden",
+    Gardenia: "Waldorden",
+    Maylene: "Bergorden",
+    "Crasher Wake": "Fennorden",
+    Fantina: "Reliktorden",
+    Byron: "Minenorden",
+    Candice: "Firnorden",
+    Volkner: "Lichtorden",
+  },
+  unova: {
+    "Cilan, Chili & Cress": "Triorden",
+    Lenora: "Grundorden",
+    Cheren: "Grundorden",
+    Roxie: "Giftorden",
+    Burgh: "Käferorden",
+    Elesa: "Voltorden",
+    Clay: "Seismo-Orden",
+    Skyla: "Jetorden",
+    Brycen: "Eiszapforden",
+    Drayden: "Legendenorden",
+    Iris: "Legendenorden",
+    Marlon: "Wellenorden",
+  },
   kalos: {
     Viola: "Krabbelorden",
     Grant: "Wallorden",
@@ -79,7 +137,12 @@ async function namesOf(page) {
   const names = {};
   for (const lang of ["de", "en", "fr", "es", "it"]) {
     const match = table.match(new RegExp(`\\|\\s*Name_${lang}\\s*=([^\\n]+)`));
-    if (!match) throw new Error(`${page}: no ${lang} name`);
+    // A few pages lack a language (Kanto's have no Spanish name): left out,
+    // apply-badge-names.mjs then keeps the pack's own value for it.
+    if (!match) {
+      if (lang === "de" || lang === "en") throw new Error(`${page}: no ${lang} name`);
+      continue;
+    }
     names[lang] = clean(match[1]);
   }
   return names;
