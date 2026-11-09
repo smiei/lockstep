@@ -35,6 +35,8 @@ import { EmptyState } from "@/components/ui/Page";
 import { FreeTeamDialog } from "@/components/FreeTeamDialog";
 
 const SORT_MODE_KEY = "nuzlocke:linksSortMode";
+// "Team einblenden", kept per device like the sort so it survives a tab switch.
+const SHOW_TEAM_KEY = "nuzlocke:linksShowTeam";
 type SortMode = "default" | "summe" | "summeMax";
 
 export function LinksView({
@@ -75,7 +77,7 @@ export function LinksView({
     null,
   );
   const [evolvableOnly, setEvolvableOnly] = useState(false);
-  const [showTeam, setShowTeam] = useState(false);
+  const [showTeam, setShowTeam] = usePersistentState<boolean>(SHOW_TEAM_KEY, false);
   // Blind flight's "hide Pokémon types too" takes the type filter with it.
   const hideTypes = useHideTypes();
   const [typeFilter, setTypeFilter] = useState<string[]>([]);
