@@ -113,7 +113,7 @@ describe("pokeemerald-expansion (2023) capture code", () => {
   });
 });
 
-// Read from the ROMs' item names (2026-11-09): Radical Red, Run & Bun and
+// From the games' own item lists (2026-11-09): Radical Red, Run & Bun and
 // Inclement Emerald have every ball of the list, Unbound has no Sport Ball.
 describe("balls a game lacks (game.json missingBalls)", () => {
   const game = (id: string) => JSON.parse(fs.readFileSync(`data/games/${id}/game.json`, "utf8"));

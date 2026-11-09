@@ -283,7 +283,7 @@ const BALLS_INFINITE_FUSION: BallId[] = [
   "fusion",
 ];
 
-// A game's ball list minus the balls its ROM lacks (game.json missingBalls).
+// A game's ball list minus the balls the game lacks (game.json missingBalls).
 export function getBallIdsForGame(
   generation: number,
   versionGroup?: string,

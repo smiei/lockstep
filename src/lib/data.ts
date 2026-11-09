@@ -69,7 +69,7 @@ export type GameInfo = {
   // formula in src/lib/catchrate.ts instead of `generation`. Missing = the
   // generation's own.
   catchEngine?: "cfru" | "expansion";
-  // Balls of the engine's list that this game lacks, read from its ROM
+  // Balls of the engine's list that this game lacks, from its own game data
   // (Unbound has no Sport Ball). Ball ids as in src/lib/catchrate.ts.
   missingBalls?: string[];
   // Two versions of one hack as two packs (Blazing Emerald v1.5.1 / v1.6):
@@ -283,8 +283,8 @@ export function getMoveOverrides(gameId: string): Record<string, MoveOverride> |
   return fs.existsSync(file) ? (parseFileCached(file) as Record<string, MoveOverride>) : null;
 }
 
-// A ROM hack's own level-up movesets and TM/HM/tutor compatibility, read from
-// its ROM (data/games/<id>/movesets.json, same shape as data/movesets/<vg>.json,
+// A ROM hack's own level-up movesets and TM/HM/tutor compatibility, from
+// its own game data (data/games/<id>/movesets.json, same shape as data/movesets/<vg>.json,
 // and tm-compat.json, same shape as data/tm-compat/<vg>.json). Hacks reuse
 // move slots and rewrite learnsets, so the base game's version-group tables
 // would show moves the hack does not teach. Missing file = null (the version
@@ -296,9 +296,9 @@ export function getPackMoveset(gameId: string): Moveset | null {
 
 // Moves only a ROM hack has (New Generations' Ultra-punch, Unbound's Leech
 // Fang, ...): data/games/<id>/custom-moves.json, same shape as a moves.json
-// entry, English names only, values read from the ROM. getMovesForGame adds
+// entry, English names only, values from the game's own data. getMovesForGame adds
 // them to the shared table, so the pack's movesets.json/tm-compat.json can
-// name them. `flavor` is the ROM's English description, `{ en }` on disk.
+// name them. `flavor` is the game's English description, `{ en }` on disk.
 export function getPackMoves(gameId: string): Record<string, MoveInfo> | null {
   const file = path.join(gameDir(gameId), "custom-moves.json");
   return fs.existsSync(file) ? (parseFileCached(file) as Record<string, MoveInfo>) : null;
@@ -536,7 +536,7 @@ export type EvolutionOverride = {
   // Espeon/Umbreon become stone evolutions).
   // Missing = treated as "impossible" (the conservative default).
   // "game" = how THIS game evolves it (a ROM hack's own changes, read from
-  // its ROM): always applied, no rule switch, and it may add an edge the
+  // its own game data): always applied, no rule switch, and it may add an edge the
   // shared table lacks (then `to` gets `from` as its pre-evolution).
   category?: "impossible" | "easier" | "timeBased" | "game";
 };
@@ -807,7 +807,7 @@ export function getMoves(lang?: Lang, generation?: number): MovesTable {
 // PokeAPI's `past` is wrong or missing (Rest and Soft-Boiled had 10 PP until
 // Gen 8, Mind Reader 5 PP in Gen 2-4, Gen 7's Absorb 40 is Z-move data, ...).
 // Built from Pokemon Showdown's per-generation mods and checked against the
-// Gen 1-4 ROMs. Same shape as `past`; for every field a slug has entries for,
+// Gen 1-4 games' own data. Same shape as `past`; for every field a slug has entries for,
 // they REPLACE that field's `past` values (the entries run up to Gen 9).
 type MoveStatHistoryEntry = { slug: string } & MovePastValue;
 

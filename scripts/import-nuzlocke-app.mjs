@@ -32,7 +32,7 @@
 // rates. Every generated pack is "unverified".
 //
 // Existing files are NOT overwritten: most packs were corrected since (route
-// lists, level caps, species and moves read from the ROMs - see
+// lists, level caps, species and moves checked against the games' own data - see
 // docs/game-packs.md), and a rerun would silently undo that. A file that
 // already exists is written to tmp/nuzlocke-app-import/<path> instead, for
 // comparing; `--overwrite` replaces the pack's files (fakemon.json, whose ids
@@ -80,14 +80,14 @@ const HACKS = [
   { id: "radical-red", src: "radred", base: "firered", name: "Radical Red", generation: 3, dataGeneration: 9, spriteSet: "emerald", versionGroup: "modern", catchEngine: "cfru", sort: 42 },
   { id: "unbound", src: "unbound", base: "firered", trainerSet: "unbound", name: "Unbound", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", catchEngine: "cfru", sort: 43 },
   { id: "run-and-bun", src: "emrunbun", base: "emerald", name: "Run & Bun", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", catchEngine: "expansion", sort: 44 },
-  // No catchEngine on purpose: read from the v1.5.1 ROM (2026-11-06), its
+  // No catchEngine on purpose: checked in v1.5.1's game data (2026-11-06), its
   // handleballthrow is Emerald's own Gen 3 code, recompiled. The 15 balls it
   // adds (items 226-240: Level, Lure, Moon, Friend, Love, Heavy, Fast, Dusk,
   // Quick, Dream and its own Polka, Lime, Luster, Sun, Battle Ball) get ball
   // ids 12-26, which the multiplier switch (ids 0-9) never reaches: x1, a
   // Poke Ball in another skin. So the Gen 3 list and formula are exact.
   // nuzlocke.app's data is v1.6: since 2026-11-09 "blazing-emerald" is the
-  // ROM-checked v1.5.1 and data/games/blazing-emerald-v1-6 holds these values
+  // checked v1.5.1 and data/games/blazing-emerald-v1-6 holds these values
   // (game.json fakemonPack shares this entry's fakemon). An --overwrite run
   // would put v1.6 data into the v1.5.1 pack.
   { id: "blazing-emerald", src: "blazingem", base: "emerald", name: "Blazing Emerald", generation: 3, dataGeneration: 8, spriteSet: "emerald", versionGroup: "modern", sort: 45 },

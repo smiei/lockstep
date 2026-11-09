@@ -1,6 +1,6 @@
 {
-  "source": "ROM: Pokemon Renegade Platinum (v1.3.0) (personal NARC poketool/personal/pl_personal.narc; type ??? = Fairy)",
-  "sourceVersion": "rom",
+  "source": "game data: Renegade Platinum v1.3.0",
+  "sourceVersion": "game-data",
   "generatedAt": "2026-11-07T13:37:36.000Z",
   "species": [
     {

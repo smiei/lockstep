@@ -183,8 +183,8 @@ for (const gameId of games) {
   const generated = generate(gameId);
   const file = `data/games/${gameId}/evolution-overrides.json`;
   const stored = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
-  // "game" entries are the game's own evolutions (a ROM hack's, read from its
-  // ROM), not randomizer output: kept as they are, ahead of the generated ones.
+  // "game" entries are the game's own evolutions (a ROM hack's, from its own
+  // game data), not randomizer output: kept as they are, ahead of the generated ones.
   const own = stored.filter((e) => e.category === "game");
   const existing = stored.filter((e) => e.category !== "game");
   const had = new Set(existing.map(key));

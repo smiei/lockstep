@@ -1,6 +1,6 @@
 {
-  "source": "ROM: blaz-em v1.6.gba (stats table 0x3203cc, slots matched by name and types)",
-  "sourceVersion": "rom",
+  "source": "game data: Blazing Emerald v1.6",
+  "sourceVersion": "game-data",
   "generatedAt": "2026-11-09T03:03:07.000Z",
   "species": [
     {

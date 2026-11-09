@@ -1,6 +1,6 @@
 {
-  "source": "ROM: emerald-kaizo-2020-03-14.gba (stats table 0x3203cc, internal ids mapped to national via the ROM natmap)",
-  "sourceVersion": "rom",
+  "source": "game data: Emerald Kaizo (2020-03-14)",
+  "sourceVersion": "game-data",
   "generatedAt": "2026-11-07T12:17:32.000Z",
   "species": [
     {

@@ -1,6 +1,6 @@
 {
-  "source": "ROM: new generations april 7 2024 version.gba (stats table 0x254784, names 0x245ee0; Psyduck/Golduck names swapped at 54/55 mapped by id)",
-  "sourceVersion": "rom",
+  "source": "game data: New Generations (April 2024)",
+  "sourceVersion": "game-data",
   "generatedAt": "2026-11-07T12:17:10.000Z",
   "species": [
     {

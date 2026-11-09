@@ -55,8 +55,8 @@ const STAT_NAME_FIXES = {
 };
 
 // Changes PokeAPI has no past_stats for. Sun/Moon raised these four Gen 5
-// Pokémon; found by the Black/White ROM audit (their personal data), which
-// branding-local/rom-audit records: Woobat HP, Crustle and Beartic Attack,
+// Pokémon; found by the Black/White game-data audit (their personal data), which
+// the audit records: Woobat HP, Crustle and Beartic Attack,
 // Cryogonal HP and Defense.
 const MISSING_PAST_STATS = [
   { id: 527, maxGeneration: 6, stats: { hp: 55 } },

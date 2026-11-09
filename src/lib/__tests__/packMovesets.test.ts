@@ -41,7 +41,7 @@ describe("a ROM hack's own moves", () => {
     expect(getTmCompatForGame(game)["leech-fang"]?.machine?.ids.length).toBeGreaterThan(0);
   });
 
-  it("carry the ROM's English description as plain text", () => {
+  it("carry the game's English description as plain text", () => {
     const game = getGameOrDefault("radical-red");
     // a German page falls back to the English text, like moves.json's
     expect(getMovesForGame(game, "de")["dark-hole"].flavor).toBe(

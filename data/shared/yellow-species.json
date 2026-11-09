@@ -1,6 +1,6 @@
 {
-  "source": "ROM: Pokemon Yellow (US/EU), verified against pret/pokeyellow @ b452f2a: only the species whose catch rate differs from Red/Blue",
-  "sourceVersion": "rom",
+  "source": "game data: Pokémon Yellow, verified against pret/pokeyellow @ b452f2a: only the species whose catch rate differs from Red/Blue",
+  "sourceVersion": "game-data",
   "species": [
     {
       "id": 148,

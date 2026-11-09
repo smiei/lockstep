@@ -5,7 +5,7 @@ import { pokemonForGeneration, type PokemonHistoryEntry } from "@/lib/pokemonHis
 import { historicalMoveType, type MoveTypeHistoryEntry } from "@/lib/learnset";
 import type { Pokemon } from "@/lib/data";
 
-// Values read from the original ROMs (branding-local/rom-audit) and cross-checked
+// Values taken from the original games' data and cross-checked
 // with PokeAPI's past_stats: these species were buffed after Gen 6.
 const read = <T,>(f: string): T => JSON.parse(readFileSync(join(process.cwd(), "data", f), "utf8"));
 const pokemon = read<Pokemon[]>("pokemon.json");
@@ -13,7 +13,7 @@ const history = read<PokemonHistoryEntry[]>("pokemon-history.json");
 const at = (id: number, gen: number) =>
   pokemonForGeneration(history, pokemon.find((p) => p.id === id)!, gen);
 
-describe("ROM-verified history entries", () => {
+describe("history entries verified against the games' data", () => {
   it("Arbok had 85 Attack in Gen 3 and 4, today's 95 from Gen 7", () => {
     expect(at(24, 3).stats["Ang."]).toBe(85);
     expect(at(24, 4).stats["Ang."]).toBe(85);

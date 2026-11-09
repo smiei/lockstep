@@ -3,7 +3,7 @@ import { getMoves } from "@/lib/data";
 import { moveStatsForGeneration } from "@/lib/learnset";
 
 // data/move-stat-history.json: where PokeAPI's past values are wrong or
-// missing. Pins taken from the ROMs (Gen 1-4) and Pokemon Showdown's
+// missing. Pins taken from the games' own data (Gen 1-4) and Pokemon Showdown's
 // per-generation data (Gen 5-8).
 const moves = getMoves();
 const at = (slug: string, generation: number) => moveStatsForGeneration(moves[slug], generation);
@@ -18,7 +18,7 @@ describe("move stat history", () => {
     expect(at("soft-boiled", 2).pp).toBe(10);
   });
 
-  it("matches the ROMs where PokeAPI does not", () => {
+  it("matches the games' own data where PokeAPI does not", () => {
     expect(at("mind-reader", 2).pp).toBe(5);
     expect(at("mind-reader", 4).pp).toBe(5);
     expect(at("swift", 1).accuracy).toBe(100);

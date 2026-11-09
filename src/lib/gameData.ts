@@ -195,7 +195,7 @@ function movesWithPackMoves(game: GameInfo, lang: Lang | undefined): MovesTable 
   const table = getMoves(lang, dataGeneration(game));
   const own = getPackMoves(game.id);
   if (!own) return table;
-  // Their descriptions sit on disk per language (English only, from the ROM),
+  // Their descriptions sit on disk per language (English only, the game's own text),
   // like moves.json's: keep the one for `lang`, none without it.
   const out: MovesTable = { ...table };
   for (const [slug, move] of Object.entries(own)) {
@@ -232,7 +232,7 @@ export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {
 }
 
 // Level-up movesets and TM/tutor compatibility: a ROM hack's own tables (read
-// from its ROM, see data.ts getPackMoveset) when the pack ships them, else the
+// from its own game data, see data.ts getPackMoveset) when the pack ships them, else the
 // version group's.
 export function getMovesetForGame(game: GameInfo): Moveset {
   return getPackMoveset(game.id) ?? getMoveset(game.versionGroup);
