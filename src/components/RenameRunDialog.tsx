@@ -26,9 +26,17 @@ export function RenameRunDialog({
   const [name, setName] = useState(currentName);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Start from the current name each time the dialog opens - during render,
+  // against the last seen open state, rather than in an effect.
+  const openKey = `${open}|${currentName}`;
+  const [seenOpenKey, setSeenOpenKey] = useState(openKey);
+  if (seenOpenKey !== openKey) {
+    setSeenOpenKey(openKey);
+    if (open) setName(currentName);
+  }
+
   useEffect(() => {
     if (!open) return;
-    setName(currentName);
     // After Modal's own focus pass, so the text ends up selected rather than
     // just focused - retyping a name is the common case here.
     const id = setTimeout(() => inputRef.current?.select(), 0);

@@ -71,12 +71,22 @@ export function NewRunDialog({
   const [gameId, setGameId] = useState(initialGameId);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // A fresh form each time the dialog opens - reset during render, against
+  // the last seen open state, rather than in an effect.
+  const openKey = `${open}|${initialGameId}`;
+  const [seenOpenKey, setSeenOpenKey] = useState(openKey);
+  if (seenOpenKey !== openKey) {
+    setSeenOpenKey(openKey);
+    if (open) {
+      setName("");
+      setMode(RunMode.SOULLINK);
+      setPlayerCount(MIN_SOULLINK_PLAYERS);
+      setGameId(initialGameId);
+    }
+  }
+
   useEffect(() => {
     if (!open) return;
-    setName("");
-    setMode(RunMode.SOULLINK);
-    setPlayerCount(MIN_SOULLINK_PLAYERS);
-    setGameId(initialGameId);
     const id = setTimeout(() => inputRef.current?.focus(), 0);
     return () => clearTimeout(id);
   }, [open, initialGameId]);

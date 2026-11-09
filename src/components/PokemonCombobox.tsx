@@ -45,11 +45,14 @@ export function PokemonCombobox({
   );
 
   // Keep the input text in sync when the selection changes from the outside
-  // (e.g. an optimistic update gets reverted after a failed save).
-  useEffect(() => {
+  // (e.g. an optimistic update gets reverted after a failed save) - during
+  // render, against the last synced value, rather than in an effect.
+  const syncKey = `${selectedId}|${lang}`;
+  const [syncedKey, setSyncedKey] = useState(syncKey);
+  if (syncedKey !== syncKey) {
+    setSyncedKey(syncKey);
     setQuery(selected ? displayNameWithForm(selected, lang) : "");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedId, lang]);
+  }
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
