@@ -1,0 +1,292 @@
+[
+  {
+    "from": 29,
+    "to": 33,
+    "comment": "Nidoran♀ -> Nidorino",
+    "method": {
+      "kind": "level",
+      "level": 16
+    },
+    "category": "game"
+  },
+  {
+    "from": 64,
+    "to": 65,
+    "comment": "Kadabra -> Alakazam",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 67,
+    "to": 68,
+    "comment": "Machoke -> Machamp",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 75,
+    "to": 76,
+    "comment": "Graveler -> Golem",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 93,
+    "to": 94,
+    "comment": "Haunter -> Gengar",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 236,
+    "to": 106,
+    "comment": "Tyrogue -> Hitmonlee",
+    "method": {
+      "kind": "level",
+      "level": 25
+    },
+    "category": "game"
+  },
+  {
+    "from": 236,
+    "to": 107,
+    "comment": "Tyrogue -> Hitmonchan",
+    "method": {
+      "kind": "level",
+      "level": 25
+    },
+    "category": "game"
+  },
+  {
+    "from": 148,
+    "to": 149,
+    "comment": "Dragonair -> Dragonite",
+    "method": {
+      "kind": "level",
+      "level": 50
+    },
+    "category": "game"
+  },
+  {
+    "from": 170,
+    "to": 171,
+    "comment": "Chinchou -> Lanturn",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 61,
+    "to": 186,
+    "comment": "Poliwhirl -> Politoed",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 133,
+    "to": 197,
+    "comment": "Eevee -> Umbreon",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 79,
+    "to": 199,
+    "comment": "Slowpoke -> Slowking",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 123,
+    "to": 212,
+    "comment": "Scyther -> Scizor",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 117,
+    "to": 230,
+    "comment": "Seadra -> Kingdra",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 137,
+    "to": 233,
+    "comment": "Porygon -> Porygon2",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 236,
+    "to": 237,
+    "comment": "Tyrogue -> Hitmontop",
+    "method": {
+      "kind": "level",
+      "level": 25
+    },
+    "category": "game"
+  },
+  {
+    "from": 247,
+    "to": 248,
+    "comment": "Pupitar -> Tyranitar",
+    "method": {
+      "kind": "level",
+      "level": 50
+    },
+    "category": "game"
+  },
+  {
+    "from": 215,
+    "to": 461,
+    "comment": "Sneasel -> Weavile",
+    "method": {
+      "kind": "level",
+      "level": 35
+    },
+    "category": "game"
+  },
+  {
+    "from": 82,
+    "to": 462,
+    "comment": "Magneton -> Magnezone",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 112,
+    "to": 464,
+    "comment": "Rhydon -> Rhyperior",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 114,
+    "to": 465,
+    "comment": "Tangela -> Tangrowth",
+    "method": {
+      "kind": "level",
+      "level": 30
+    },
+    "category": "game"
+  },
+  {
+    "from": 207,
+    "to": 472,
+    "comment": "Gligar -> Gliscor",
+    "method": {
+      "kind": "level",
+      "level": 35
+    },
+    "category": "game"
+  },
+  {
+    "from": 233,
+    "to": 474,
+    "comment": "Porygon2 -> Porygon-Z",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 281,
+    "to": 475,
+    "comment": "Kirlia -> Gallade",
+    "method": {
+      "kind": "levelParty",
+      "species": "dewgong"
+    },
+    "category": "game"
+  },
+  {
+    "from": 361,
+    "to": 478,
+    "comment": "Snorunt -> Froslass",
+    "method": {
+      "kind": "level",
+      "level": 87
+    },
+    "category": "game"
+  },
+  {
+    "from": 578,
+    "to": 579,
+    "comment": "Duosion -> Reuniclus",
+    "method": {
+      "kind": "happiness",
+      "time": "day"
+    },
+    "category": "game"
+  },
+  {
+    "from": 636,
+    "to": 637,
+    "comment": "Larvesta -> Volcarona",
+    "method": {
+      "kind": "level",
+      "level": 50
+    },
+    "category": "game"
+  },
+  {
+    "from": 885,
+    "to": 886,
+    "comment": "Dreepy -> Drakloak",
+    "method": {
+      "kind": "level",
+      "level": 35
+    },
+    "category": "game"
+  },
+  {
+    "from": 886,
+    "to": 887,
+    "comment": "Drakloak -> Dragapult",
+    "method": {
+      "kind": "level",
+      "level": 50
+    },
+    "category": "game"
+  }
+]

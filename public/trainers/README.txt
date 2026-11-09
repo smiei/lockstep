@@ -36,7 +36,7 @@ So: put a file in the flat ROOT to use it for ALL games; put one in a
 trainerSet SUBFOLDERS (one per base game; ROM hacks share their base game's
 folder, so a picture there serves all of them):
   firered/                FireRed / LeafGreen, New Generations, Radical Red
-  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald
+  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald v1.5.1, Blazing Emerald v1.6
   red-blue/               Red / Blue, Yellow
   gold-silver/            Gold / Silver / Crystal
   platinum/               Platinum, Diamond / Pearl, Renegade Platinum
@@ -62,7 +62,7 @@ games: one file in the root is enough, unless you want generation-accurate art
 - then drop a per-game copy in that game folder.
 
 BY FOLDER - the games using it, then every trainer in journey order
-(405 distinct slugs, 121 entries marked * without an automatic picture).
+(406 distinct slugs, 121 entries marked * without an automatic picture).
 A name listed under several folders can live once in the root instead.
 
   FireRed / LeafGreen, New Generations, Radical Red  ->  firered/   (59)
@@ -126,7 +126,7 @@ A name listed under several folders can live once in the root instead.
     erika-rematch.png           Erika Rematch
     admin-ariana.png            Admin Ariana
 
-  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald  ->  emerald/   (93)
+  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Glazed, Run & Bun, Blazing Emerald v1.5.1, Blazing Emerald v1.6  ->  emerald/   (94)
     rivale.png                  Rivale (Rival)   *
     felizia.png                 Felizia (Roxanne)
     kamillo.png                 Kamillo (Brawly)
@@ -220,6 +220,7 @@ A name listed under several folders can live once in the root instead.
     aqua-grunt.png              Aqua Grunt
     winstrate-vito.png          Winstrate Vito   *
     serena.png                  Serena
+    bede.png                    Bede
 
   Red / Blue, Yellow  ->  red-blue/   (14)
     rivale.png                  Rivale (Rival)

@@ -66,7 +66,12 @@ const FAKEMON_ID_START = 20001;
 // The pack's own Pokémon (data/fakemon.json): catchable like any species, and
 // the variants among them (Seviian Doduo) also a forme to switch into.
 function packFakemon(game: GameInfo): Pokemon[] {
-  return getFakemon().filter((p) => p.pack === game.id);
+  return getFakemon().filter((p) => p.pack === fakemonPackId(game));
+}
+
+// game.json fakemonPack: a second version of a hack shares the first one's.
+function fakemonPackId(game: GameInfo): string {
+  return game.fakemonPack ?? game.id;
 }
 
 function speciesAllowlist(game: GameInfo): Set<number> | undefined {
@@ -162,7 +167,7 @@ export function getCatchRatesForGame(game: GameInfo): CatchRateEntry[] {
   const rates = [
     ...getCatchRates(dataGeneration(game)),
     ...getFakemon()
-      .filter((p) => p.pack === game.id)
+      .filter((p) => p.pack === fakemonPackId(game))
       .map((p) => ({ id: p.id, catch_rate: p.catchRate })),
   ];
   const own = speciesData(game);

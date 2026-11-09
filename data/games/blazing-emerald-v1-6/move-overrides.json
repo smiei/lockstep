@@ -1,0 +1,229 @@
+{
+  "flash": {
+    "type": "electric",
+    "power": 25
+  },
+  "covet": {
+    "type": "fairy",
+    "power": 40
+  },
+  "comet-punch": {
+    "type": "fighting",
+    "power": 20
+  },
+  "cut": {
+    "type": "steel",
+    "power": 60
+  },
+  "pin-missile": {
+    "power": 18
+  },
+  "signal-beam": {
+    "power": 90
+  },
+  "twineedle": {
+    "power": 40
+  },
+  "u-turn": {
+    "power": 85
+  },
+  "x-scissor": {
+    "power": 90
+  },
+  "beat-up": {
+    "power": 15
+  },
+  "feint-attack": {
+    "power": 80
+  },
+  "pursuit": {
+    "power": 60
+  },
+  "thief": {
+    "power": 50
+  },
+  "draco-meteor": {
+    "power": 140
+  },
+  "dragon-claw": {
+    "power": 90
+  },
+  "dragon-pulse": {
+    "power": 95
+  },
+  "twister": {
+    "power": 45
+  },
+  "shock-wave": {
+    "power": 80
+  },
+  "aura-sphere": {
+    "power": 90
+  },
+  "jump-kick": {
+    "power": 70
+  },
+  "mach-punch": {
+    "power": 45
+  },
+  "rock-smash": {
+    "power": 55
+  },
+  "sky-uppercut": {
+    "power": 100
+  },
+  "submission": {
+    "power": 120
+  },
+  "triple-kick": {
+    "power": 20
+  },
+  "vital-throw": {
+    "power": 80
+  },
+  "fire-spin": {
+    "power": 50
+  },
+  "flame-wheel": {
+    "power": 65
+  },
+  "heat-wave": {
+    "power": 80
+  },
+  "overheat": {
+    "power": 140
+  },
+  "fly": {
+    "power": 100
+  },
+  "hurricane": {
+    "power": 130
+  },
+  "ominous-wind": {
+    "power": 80
+  },
+  "shadow-punch": {
+    "type": "ghost",
+    "power": 80
+  },
+  "shadow-sneak": {
+    "power": 45
+  },
+  "absorb": {
+    "power": 35
+  },
+  "bullet-seed": {
+    "power": 20
+  },
+  "magical-leaf": {
+    "power": 80
+  },
+  "mega-drain": {
+    "power": 55
+  },
+  "seed-bomb": {
+    "power": 95
+  },
+  "bone-rush": {
+    "power": 80
+  },
+  "dig": {
+    "power": 85
+  },
+  "mud-slap": {
+    "power": 30
+  },
+  "sand-tomb": {
+    "power": 50
+  },
+  "ice-shard": {
+    "power": 45
+  },
+  "hyper-fang": {
+    "power": 95
+  },
+  "hyper-voice": {
+    "power": 130
+  },
+  "quick-attack": {
+    "power": 45
+  },
+  "snore": {
+    "power": 80
+  },
+  "spike-cannon": {
+    "power": 30
+  },
+  "strength": {
+    "power": 90
+  },
+  "tackle": {
+    "power": 35
+  },
+  "wrap": {
+    "power": 35
+  },
+  "poison-fang": {
+    "power": 60
+  },
+  "poison-tail": {
+    "power": 75
+  },
+  "smog": {
+    "power": 20
+  },
+  "dream-eater": {
+    "power": 130
+  },
+  "psybeam": {
+    "power": 70
+  },
+  "accelerock": {
+    "power": 45
+  },
+  "rock-throw": {
+    "power": 65
+  },
+  "rock-tomb": {
+    "power": 55
+  },
+  "bullet-punch": {
+    "power": 45
+  },
+  "doom-desire": {
+    "power": 150
+  },
+  "iron-tail": {
+    "power": 80
+  },
+  "metal-claw": {
+    "power": 55
+  },
+  "meteor-mash": {
+    "power": 100
+  },
+  "aqua-jet": {
+    "power": 45
+  },
+  "crabhammer": {
+    "power": 95
+  },
+  "dive": {
+    "power": 100
+  },
+  "hydro-pump": {
+    "power": 120
+  },
+  "muddy-water": {
+    "power": 95
+  },
+  "octazooka": {
+    "power": 110
+  },
+  "surf": {
+    "power": 95
+  },
+  "whirlpool": {
+    "power": 50
+  }
+}
