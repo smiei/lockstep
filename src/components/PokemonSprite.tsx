@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { whenBroken } from "@/lib/brokenImage";
 import { getPokemonSpriteUrls, placeholderSpriteBase } from "@/lib/sprites";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
@@ -84,6 +85,13 @@ export function PokemonSprite({
   const identity = `${pokemonId}:${bodyId ?? ""}`;
   const [failedStage, setFailedStage] = useState<{ identity: string; stage: number } | null>(null);
   const stage = failedStage && failedStage.identity === identity ? failedStage.stage : 0;
+  // Move past a candidate only while it is still the one shown: the error
+  // event and the ref check (whenBroken) may both report the same failure.
+  const failed = (atStage: number) =>
+    setFailedStage((prev) => {
+      const current = prev && prev.identity === identity ? prev.stage : 0;
+      return current === atStage ? { identity, stage: atStage + 1 } : prev;
+    });
   const px = SIZES[size];
 
   const candidates = spriteCandidates(pokemonId, bodyId, spriteSet, fusion);
@@ -113,7 +121,8 @@ export function PokemonSprite({
       loading="lazy"
       decoding="async"
       referrerPolicy={isHotlinked ? "no-referrer" : undefined}
-      onError={() => setFailedStage({ identity, stage: stage + 1 })}
+      ref={whenBroken(() => failed(stage))}
+      onError={() => failed(stage)}
       style={{ imageRendering: "pixelated" }}
       className={imgClass}
     />

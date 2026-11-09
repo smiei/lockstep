@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { badgeSlug, hasBadgeArtwork } from "@/lib/badges";
+import { whenBroken } from "@/lib/brokenImage";
 
 // Badge icons are served locally from /public/badges (downloaded once via
 // scripts/download-badges.mjs). A badge the sheet does not have (Kalos onward)
@@ -34,6 +35,7 @@ export function BadgeIcon({
       height={size}
       loading="lazy"
       decoding="async"
+      ref={whenBroken(() => setFailed(true))}
       onError={() => setFailed(true)}
       className={`shrink-0 object-contain transition-[filter,opacity] ${
         earned ? "" : "opacity-40 grayscale"

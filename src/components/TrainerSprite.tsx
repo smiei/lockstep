@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { whenBroken } from "@/lib/brokenImage";
 import { slugify } from "@/lib/slug";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { getTrainerSpriteUrl } from "@/lib/sprites";
@@ -53,6 +54,9 @@ export function TrainerSprite({
   }
   // Which candidate we're currently attempting; advanced on each load error.
   const [stage, setStage] = useState(0);
+  // Move past a source only while it is still the one shown: the error event
+  // and the ref check (whenBroken) may both report the same failure.
+  const failed = (src: string) => setStage((s) => (sources[s] === src ? s + 1 : s));
 
   if (stage >= sources.length) {
     return (
@@ -78,7 +82,8 @@ export function TrainerSprite({
       // Showdown's sprites are 80x80 pixel art: keep them crisp at 88px, and do
       // not tell that server which page they were shown on.
       referrerPolicy={IS_PUBLIC_INSTANCE ? "no-referrer" : undefined}
-      onError={() => setStage((s) => s + 1)}
+      ref={whenBroken(() => failed(sources[stage]))}
+      onError={() => failed(sources[stage])}
       className="shrink-0 rounded-full object-cover"
       style={{ width: size, height: size, ...(IS_PUBLIC_INSTANCE ? { imageRendering: "pixelated" } : {}) }}
     />
