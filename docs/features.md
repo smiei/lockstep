@@ -56,7 +56,7 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 
 **Trainer** is a battle scout. It shows:
 - the opponent's types and its damaging attack types by level;
-- the full type matrix, Gen 1 chart included;
+- the full type matrix, Gen 1 chart included; tapping a type at the top highlights its column (again to undo);
 - a team-matchup table: how well each of your Pokémon takes that opponent's attacks;
 - a ⚠ warning for Self-Destruct and Explosion learners.
 
@@ -65,7 +65,7 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 Pick a move **by name** and see which of your living Pokémon can learn it by TM, HM or move tutor.
 
 - **Why by name:** TM numbers are reshuffled by randomizers.
-- **What the data is:** the original game data, not the ROM's actual mapping. A randomizer re-rolls TM compatibility, so this is a clean reference, or a house rule ("TM compatibility follows the original games"). ROM hacks show their own TM, HM and tutor lists, read from the hack's ROM.
+- **What the data is:** the original game data, not the ROM's actual mapping. A randomizer re-rolls TM compatibility, so this is a clean reference, or a house rule ("TM compatibility follows the original games"). ROM hacks show their own TM, HM and tutor lists, taken from the hack's own game data.
 - **Display:** split per player in SoulLink, with TM, HM and tutor labelled.
 
 ## Pokédex
@@ -104,7 +104,7 @@ Per-run rule toggles. They are informational: they drive warnings and visibility
 - **Species Clause.** In SoulLink it can apply per player, optionally with "caught links lock for everyone".
 - **Shiny Clause** and **nicknames.**
 - **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"), for every official Gen 1–7 game and generated from the randomizer's own code; a game without such a list (the Switch games, ROM hacks) does not show them. Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
-- **A ROM hack's own evolutions** (Kadabra at level 36 in Renegade Platinum, Poliwhirl to Politoed with King's Rock in Blaze Black, ...) are read from the hack's ROM and always apply in its pack; the evolve button and the Pokédex show the hack's method.
+- **A ROM hack's own evolutions** (Kadabra at level 36 in Renegade Platinum, Poliwhirl to Politoed with King's Rock in Blaze Black, ...) come from the hack's own game data and always apply in its pack; the evolve button and the Pokédex show the hack's method.
 - **Static encounters** and their clause exemption.
 - **Include Kanto** (only in games with Kanto as a second region, see the Encounter tab).
 
@@ -121,7 +121,7 @@ On top of the toggles:
 - **Game covers** show in the game picker, on the start page and on the Overview. They are downloaded on the first start; a ROM hack without a cover shows a drawn tile, or your own picture (see [self-hosting](self-hosting.md#game-covers)).
 - **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 17 ROM hack packs (Blazing Emerald as v1.5.1 and v1.6), and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
 - **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.
-- **Checked against the ROMs:** route lists (statics, gifts and legendaries included; places with only water or fishing encounters come after the rod or Surf), level caps, and each ROM hack's species data, evolutions, moves, level-up moves, TMs and tutors were read from the games' own ROMs where one was available. A hack's own moves show with the description from its ROM, in English.
+- **Checked against the ROMs:** route lists (statics, gifts and legendaries included; places with only water or fishing encounters come after the rod or Surf), level caps, and each ROM hack's species data, evolutions, moves, level-up moves, TMs and tutors were checked against the games' own data where it was available. A hack's own moves show with the game's own description, in English.
 - **Generation-aware mechanics:** the type chart (Gen 1 quirks included), the catch formula and balls, which Pokémon are obtainable, and era-appropriate sprites.
 - **Historical values:** these are something PokéAPI cannot give you, because it only serves today's values. Correction tables roll back:
   - the Gen 6 Fairy re-typings;
