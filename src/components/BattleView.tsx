@@ -414,9 +414,14 @@ export function BattleCardBody({
                         aria-pressed={picked}
                         aria-label={`${t.matrixHighlight}: ${TYPE_LABELS[lang][defense] ?? defense}`}
                         onClick={() => togglePickedColumn(defense)}
-                        className={`block rounded-md ${picked ? "ring-2 ring-ink ring-offset-1 ring-offset-panel" : ""}`}
+                        className="block rounded-md"
                       >
                         <TypeAbbrev type={defense} lang={lang} dimmed={columnDimmed(defense)} />
+                        {/* a small bar marks a picked column, the cells below need no frame */}
+                        <span
+                          aria-hidden
+                          className={`mx-auto mt-0.5 block h-1 w-5 rounded-full ${picked ? "bg-ink" : "bg-transparent"}`}
+                        />
                       </button>
                     </th>
                   );
@@ -430,13 +435,16 @@ export function BattleCardBody({
                     <TypeAbbrev type={attack} lang={lang} dimmed={false} />
                   </th>
                   {attackTypes.map((defense) => {
-                    const { text, className } = matrixCellStyle(singleTypeMultiplier(table, attack, defense));
+                    const { text, className: cellClass } = matrixCellStyle(singleTypeMultiplier(table, attack, defense));
+                    // A picked column's neutral cells get a light fill, so it reads as one band.
+                    const className =
+                      pickedColumns.includes(defense) && cellClass === "bg-sunken" ? "bg-line" : cellClass;
                     return (
                       <td
                         key={defense}
                         className={`h-7 w-8 rounded text-center text-xs font-semibold transition-opacity ${className} ${
                           columnDimmed(defense) ? "opacity-25" : ""
-                        } ${pickedColumns.includes(defense) ? "ring-2 ring-inset ring-ink" : ""}`}
+                        }`}
                       >
                         {text}
                       </td>
