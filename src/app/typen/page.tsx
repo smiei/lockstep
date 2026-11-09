@@ -232,6 +232,7 @@ export default async function AnalyzePage({
             // A hack's own capture engine stands in for the version group,
             // which only the catch calculator reads here.
             versionGroup={game.catchEngine ?? game.versionGroup}
+            missingBalls={game.missingBalls}
             badgesEarned={badgesEarned}
             effectiveness={effectiveness}
             attackTypes={attackTypes}

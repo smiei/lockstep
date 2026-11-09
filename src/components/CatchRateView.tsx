@@ -9,7 +9,7 @@ import type { BallId, StatusId } from "@/lib/catchrate";
 import {
   ballHasCondition,
   isUltraBeast,
-  getBallIdsForGeneration,
+  getBallIdsForGame,
   INFINITE_FUSION_VERSION_GROUP,
   CFRU_ENGINE,
   CFRU_DEX_BRACKETS,
@@ -144,6 +144,8 @@ export type CatchSharedProps = {
   generation: number;
   // Which Gen 4 game: only HeartGold/SoulSilver sell the Apricorn balls.
   versionGroup: string;
+  // Balls this game lacks (game.json missingBalls).
+  missingBalls?: string[];
   // Gym badges the run holds - the default for Gen 8/9's badge field.
   badgesEarned: number;
   openSlots: OpenSlot[];
@@ -311,7 +313,7 @@ export function CatchCardBody({
   state: CatchBodyState;
   onChange: (patch: Partial<CatchBodyState>) => void;
 }) {
-  const { runKey, players, pokemonList, catchRates, lockedFamilies, lockedFamiliesByPlayer, generation, versionGroup, badgesEarned, openSlots, effectiveness, attackTypes, settings } =
+  const { runKey, players, pokemonList, catchRates, lockedFamilies, lockedFamiliesByPlayer, generation, versionGroup, missingBalls, badgesEarned, openSlots, effectiveness, attackTypes, settings } =
     shared;
   const router = useRouter();
   const { lang } = useLanguage();
@@ -320,7 +322,7 @@ export function CatchCardBody({
   const blindflug = useBlindflug();
   const toast = useToast();
   const detail = usePokemonDetail();
-  const ballIds = getBallIdsForGeneration(generation, versionGroup);
+  const ballIds = getBallIdsForGame(generation, versionGroup, missingBalls);
   const isInfiniteFusion = versionGroup === INFINITE_FUSION_VERSION_GROUP;
   // ROM hacks with their own capture engine (game.json catchEngine).
   const isCfru = versionGroup === CFRU_ENGINE;

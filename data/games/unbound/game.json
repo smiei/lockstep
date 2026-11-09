@@ -8,6 +8,7 @@
   "spriteSet": "emerald",
   "versionGroup": "modern",
   "catchEngine": "cfru",
+  "missingBalls": ["sport"],
   "trainerSet": "unbound",
   "regionalForms": true,
   "names": {
