@@ -56,6 +56,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "covenant-ore": "Covenant Ore",
     "frozen-ore": "Frozen Ore",
     "link-stone": "Link Stone",
+    "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
   },
   en: {
@@ -108,6 +109,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "covenant-ore": "Covenant Ore",
     "frozen-ore": "Frozen Ore",
     "link-stone": "Link Stone",
+    "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
   },
   fr: {
@@ -160,6 +162,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "covenant-ore": "Covenant Ore",
     "frozen-ore": "Frozen Ore",
     "link-stone": "Link Stone",
+    "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
   },
   es: {
@@ -212,6 +215,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "covenant-ore": "Covenant Ore",
     "frozen-ore": "Frozen Ore",
     "link-stone": "Link Stone",
+    "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
   },
   it: {
@@ -264,6 +268,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "covenant-ore": "Covenant Ore",
     "frozen-ore": "Frozen Ore",
     "link-stone": "Link Stone",
+    "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
   },
 };

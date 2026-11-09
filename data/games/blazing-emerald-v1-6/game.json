@@ -17,6 +17,6 @@
     "es": "Blazing Emerald v1.6",
     "it": "Blazing Emerald v1.6"
   },
-  "source": "Bassel-T/nuzlocke.app@2b4f2ec (blazingem; species, move changes, level caps); route list, learnsets and evolutions from the v1.5.1 ROM",
+  "source": "ROM v1.6 (species, moves, level-up moves, TMs and tutors, level caps, evolutions, statics); route list from the v1.5.1 ROM plus Fallarbor Mines",
   "fakemonPack": "blazing-emerald"
 }

@@ -171,8 +171,8 @@ describe("fakemon.json (a ROM hack's own Pokémon)", () => {
     const oreon = fakemon.find((f) => f.alias === "oreon")!;
     expect(isInDex(v16, oreon.id)).toBe(true);
     expect(getPokemonListForGame(v16).some((p) => p.id === oreon.id)).toBe(true);
-    // v1.6 has no ROM species data for it: fakemon.json's own rate (nuzlocke.app) applies
-    expect(getCatchRatesForGame(v16).find((r) => r.id === oreon.id)?.catch_rate).toBe(oreon.catchRate);
+    // v1.6's species data is read from its own ROM too
+    expect(getCatchRatesForGame(v16).find((r) => r.id === oreon.id)?.catch_rate).toBe(3);
   });
 
   it("borrow their species' sprite as a placeholder; new species have none", () => {

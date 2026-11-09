@@ -44,6 +44,17 @@
     "type": "route"
   },
   {
+    "id": 118,
+    "names": {
+      "de": "Solosis Route 102",
+      "en": "Solosis Route 102",
+      "fr": "Solosis Route 102",
+      "es": "Solosis Route 102",
+      "it": "Solosis Route 102"
+    },
+    "type": "static"
+  },
+  {
     "id": 6,
     "names": {
       "de": "Route 104",
@@ -1289,6 +1300,18 @@
       "fr": "Groudon Terra Cave",
       "es": "Groudon Terra Cave",
       "it": "Groudon Terra Cave"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 119,
+    "names": {
+      "de": "Regigigas Sunken Crypt",
+      "en": "Regigigas Sunken Crypt",
+      "fr": "Regigigas Sunken Crypt",
+      "es": "Regigigas Sunken Crypt",
+      "it": "Regigigas Sunken Crypt"
     },
     "type": "static",
     "postgame": true

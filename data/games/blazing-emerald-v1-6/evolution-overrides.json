@@ -1,15 +1,5 @@
 [
   {
-    "from": 29,
-    "to": 33,
-    "comment": "Nidoran♀ -> Nidorino",
-    "method": {
-      "kind": "level",
-      "level": 16
-    },
-    "category": "game"
-  },
-  {
     "from": 64,
     "to": 65,
     "comment": "Kadabra -> Alakazam",
@@ -36,6 +26,17 @@
     "method": {
       "kind": "item",
       "item": "link-stone"
+    },
+    "category": "game"
+  },
+  {
+    "from": 84,
+    "to": 85,
+    "comment": "Doduo -> Dodrio",
+    "method": {
+      "kind": "levelHeld",
+      "item": "mining-kit",
+      "time": "day"
     },
     "category": "game"
   },
@@ -174,8 +175,8 @@
     "to": 461,
     "comment": "Sneasel -> Weavile",
     "method": {
-      "kind": "level",
-      "level": 35
+      "kind": "item",
+      "item": "razor-claw"
     },
     "category": "game"
   },
@@ -214,8 +215,8 @@
     "to": 472,
     "comment": "Gligar -> Gliscor",
     "method": {
-      "kind": "level",
-      "level": 35
+      "kind": "item",
+      "item": "razor-fang"
     },
     "category": "game"
   },
@@ -256,6 +257,16 @@
     "method": {
       "kind": "happiness",
       "time": "day"
+    },
+    "category": "game"
+  },
+  {
+    "from": 624,
+    "to": 625,
+    "comment": "Pawniard -> Bisharp",
+    "method": {
+      "kind": "level",
+      "level": 50
     },
     "category": "game"
   },
