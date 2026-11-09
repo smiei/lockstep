@@ -239,31 +239,6 @@
     "max_level": 31
   },
   {
-    "id": 12,
-    "names": {
-      "de": "Jasmin",
-      "en": "Jasmine",
-      "fr": "Jasmine",
-      "es": "Yasmina",
-      "it": "Jasmine"
-    },
-    "location": {
-      "de": "Oliviana City",
-      "en": "Olivine City",
-      "fr": "Oliville",
-      "es": "Ciudad Olivo",
-      "it": "Olivinopoli"
-    },
-    "badge": {
-      "de": "Stahlorden",
-      "en": "Mineral Badge",
-      "fr": "Badge Minéral",
-      "es": "Medalla Mineral",
-      "it": "Medaglia Minerale"
-    },
-    "max_level": 35
-  },
-  {
     "id": 13,
     "names": {
       "de": "Vorstand Lamda",
@@ -325,6 +300,31 @@
       "it": "Medaglia Gelo"
     },
     "max_level": 34
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Jasmin",
+      "en": "Jasmine",
+      "fr": "Jasmine",
+      "es": "Yasmina",
+      "it": "Jasmine"
+    },
+    "location": {
+      "de": "Oliviana City",
+      "en": "Olivine City",
+      "fr": "Oliville",
+      "es": "Ciudad Olivo",
+      "it": "Olivinopoli"
+    },
+    "badge": {
+      "de": "Stahlorden",
+      "en": "Mineral Badge",
+      "fr": "Badge Minéral",
+      "es": "Medalla Mineral",
+      "it": "Medaglia Minerale"
+    },
+    "max_level": 35
   },
   {
     "id": 16,
