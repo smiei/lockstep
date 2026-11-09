@@ -8,7 +8,14 @@ import type { Prisma } from "@/generated/prisma/client";
 // before anything is sent to the server); re-exported here so existing
 // server-side imports of "@/lib/backup" keep working unchanged.
 export * from "@/lib/backupParse";
-import { BACKUP_FORMAT, BACKUP_VERSION, type BackupFile, type BackupRun } from "@/lib/backupParse";
+import {
+  BACKUP_FORMAT,
+  BACKUP_VERSION,
+  type BackupFile,
+  type BackupRulePreset,
+  type BackupRun,
+} from "@/lib/backupParse";
+import { parseRunSettings, serializePresetSettings } from "@/lib/runSettings";
 import { readCustomGameBundle, writeCustomGame } from "@/lib/customGames";
 import { getGameById, getPackContext } from "@/lib/data";
 import { hasErrors, isCustomPackId, validateBundle, type GamePackBundle } from "@/lib/gamePack";
@@ -23,6 +30,15 @@ function gamePacksFor(gameIds: string[]): Record<string, GamePackBundle> | undef
     if (bundle) packs[id] = bundle;
   }
   return Object.keys(packs).length > 0 ? packs : undefined;
+}
+
+// Every rule preset on this server - they belong to no run, so each backup
+// carries all of them. A public instance has no shared presets to give away.
+async function rulePresetsForBackup(): Promise<BackupRulePreset[] | undefined> {
+  if (IS_PUBLIC_INSTANCE) return undefined;
+  const presets = await prisma.rulePreset.findMany({ orderBy: { name: "asc" } });
+  if (presets.length === 0) return undefined;
+  return presets.map((p) => ({ name: p.name, settingsJson: p.settingsJson, rulesMarkdown: p.rulesMarkdown }));
 }
 
 // Installs the backup's custom games this server does not have yet. One that
@@ -130,12 +146,14 @@ export async function buildBackup(runIds?: number[]): Promise<BackupFile> {
   });
 
   const gamePacks = gamePacksFor(runs.map((run) => run.gameId));
+  const rulePresets = await rulePresetsForBackup();
   return {
     format: BACKUP_FORMAT,
     version: BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
     runs: runs.map(runToBackupRun),
     ...(gamePacks ? { gamePacks } : {}),
+    ...(rulePresets ? { rulePresets } : {}),
   };
 }
 
@@ -149,6 +167,7 @@ export async function buildBackupZip(): Promise<{ filename: string; data: Uint8A
     include: BACKUP_INCLUDE,
   });
 
+  const rulePresets = await rulePresetsForBackup();
   const usedNames = new Set<string>();
   const files: Record<string, Uint8Array> = {};
   for (const run of runs) {
@@ -159,6 +178,7 @@ export async function buildBackupZip(): Promise<{ filename: string; data: Uint8A
       exportedAt: new Date().toISOString(),
       runs: [runToBackupRun(run)],
       ...(gamePacks ? { gamePacks } : {}),
+      ...(rulePresets ? { rulePresets } : {}),
     };
     let name = backupFilename(run.name);
     let suffix = 2;
@@ -299,6 +319,22 @@ export async function applyBackup(backup: BackupFile): Promise<string[]> {
               runId: createdRun.id,
               routeId: re.routeId,
               seenAt: new Date(re.seenAt),
+            },
+          });
+        }
+      }
+
+      // Rule presets whose name this server lacks; an existing one with the
+      // same name stays as it is. Only the toggles are kept (no player names).
+      if (!IS_PUBLIC_INSTANCE) {
+        for (const preset of backup.rulePresets ?? []) {
+          const exists = await tx.rulePreset.findUnique({ where: { name: preset.name }, select: { id: true } });
+          if (exists) continue;
+          await tx.rulePreset.create({
+            data: {
+              name: preset.name,
+              settingsJson: serializePresetSettings(parseRunSettings(preset.settingsJson)),
+              rulesMarkdown: preset.rulesMarkdown,
             },
           });
         }

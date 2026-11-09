@@ -153,3 +153,32 @@ describe("gamePacks (v5)", () => {
     expect(parseBackup(envelope([]))?.gamePacks).toBeUndefined();
   });
 });
+
+describe("rulePresets (v6)", () => {
+  const withPresets = (rulePresets: unknown) =>
+    parseBackup(JSON.stringify({ ...JSON.parse(envelope([])), rulePresets }));
+
+  it("keeps valid presets, trims names and drops broken or duplicate ones", () => {
+    const parsed = withPresets([
+      { name: "  Hardcore ", settingsJson: '{"speciesClause":true}', rulesMarkdown: "# Rules" },
+      { name: "Hardcore", settingsJson: "{}", rulesMarkdown: "second copy" },
+      { name: "", settingsJson: "{}" },
+      { settingsJson: "{}" },
+      "nonsense",
+      { name: "Casual" },
+    ]);
+    expect(parsed?.rulePresets).toEqual([
+      { name: "Hardcore", settingsJson: '{"speciesClause":true}', rulesMarkdown: "# Rules" },
+      { name: "Casual", settingsJson: "{}", rulesMarkdown: "" },
+    ]);
+  });
+
+  it("leaves the field out for older files and empty lists", () => {
+    expect(parseBackup(envelope([]))?.rulePresets).toBeUndefined();
+    expect(withPresets([])?.rulePresets).toBeUndefined();
+  });
+
+  it("is version 6", () => {
+    expect(BACKUP_VERSION).toBe(6);
+  });
+});

@@ -1,5 +1,6 @@
 import { EncounterStatus, LinkStatus, Player, RunMode } from "@/generated/prisma/enums";
 import { clampPlayerCount } from "@/lib/players";
+import { PRESET_NAME_MAX } from "@/lib/runSettings";
 
 // Client-safe half of the backup format: types + parsing only, no Prisma
 // client import (unlike backup.ts, which needs the DB for buildBackup/
@@ -27,7 +28,17 @@ export const BACKUP_FORMAT = "nuzlocke-tracker-backup";
 // 5 added `gamePacks`: the custom game packs (imported in the app, ids
 // "custom-...") the file's runs play, so importing the backup on another
 // server installs the game too instead of falling back to FireRed.
-export const BACKUP_VERSION = 5;
+// 6 added `rulePresets`: the server's rule presets (Rules tab), which are not
+// tied to a run - every backup carries all of them, and an import adds the
+// ones whose name is missing, leaving existing presets alone.
+export const BACKUP_VERSION = 6;
+
+export type BackupRulePreset = {
+  name: string;
+  // The toggles only (serializePresetSettings), never player names.
+  settingsJson: string;
+  rulesMarkdown: string;
+};
 
 export type BackupSoulLink = {
   routeId: number;
@@ -134,7 +145,27 @@ export type BackupFile = {
   // Custom game packs by id, as pack bundles (src/lib/gamePack.ts). Only the
   // ones the runs play; validated again before anything is installed.
   gamePacks?: Record<string, unknown>;
+  // Every rule preset of the server that wrote the file (v6).
+  rulePresets?: BackupRulePreset[];
 };
+
+// Presets by name, first one wins: a preset name is unique on a server, and a
+// merged zip of single-run files carries the same presets once per file.
+export function parseRulePresets(value: unknown): BackupRulePreset[] {
+  if (!Array.isArray(value)) return [];
+  const byName = new Map<string, BackupRulePreset>();
+  for (const raw of value) {
+    if (!isRecord(raw) || typeof raw.name !== "string") continue;
+    const name = raw.name.trim().slice(0, PRESET_NAME_MAX);
+    if (!name || byName.has(name)) continue;
+    byName.set(name, {
+      name,
+      settingsJson: typeof raw.settingsJson === "string" ? raw.settingsJson : "{}",
+      rulesMarkdown: typeof raw.rulesMarkdown === "string" ? raw.rulesMarkdown : "",
+    });
+  }
+  return [...byName.values()];
+}
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -263,11 +294,13 @@ export function parseBackup(json: string): BackupFile | null {
   const gamePacks = isRecord(data.gamePacks)
     ? Object.fromEntries(Object.entries(data.gamePacks).filter(([id, pack]) => id.startsWith("custom-") && isRecord(pack)))
     : {};
+  const rulePresets = parseRulePresets(data.rulePresets);
   return {
     format: BACKUP_FORMAT,
     version: num(data.version, BACKUP_VERSION),
     exportedAt: isoString(data.exportedAt),
     runs,
     ...(Object.keys(gamePacks).length > 0 ? { gamePacks } : {}),
+    ...(rulePresets.length > 0 ? { rulePresets } : {}),
   };
 }
