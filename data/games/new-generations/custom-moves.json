@@ -8,6 +8,9 @@
     "pp": 15,
     "names": {
       "en": "Bug Slash"
+    },
+    "flavor": {
+      "en": "High Critical Hit ratio and chance to poison the target."
     }
   },
   "hidden-power-electric": {
@@ -19,6 +22,9 @@
     "pp": 15,
     "names": {
       "en": "Hidden Power Electric"
+    },
+    "flavor": {
+      "en": "An electric move."
     }
   },
   "hidden-power-grass": {
@@ -30,6 +36,9 @@
     "pp": 15,
     "names": {
       "en": "Hidden Power Grass"
+    },
+    "flavor": {
+      "en": "A grassy move."
     }
   },
   "hidden-power-ground": {
@@ -41,6 +50,9 @@
     "pp": 15,
     "names": {
       "en": "Hidden Power Ground"
+    },
+    "flavor": {
+      "en": "A groundy move."
     }
   },
   "shadow-rage": {
@@ -52,6 +64,9 @@
     "pp": 20,
     "names": {
       "en": "Shadow Rage"
+    },
+    "flavor": {
+      "en": "Hits three times with double damage every time"
     }
   },
   "ultra-punch": {
@@ -63,6 +78,9 @@
     "pp": 10,
     "names": {
       "en": "Ultra-punch"
+    },
+    "flavor": {
+      "en": "This move can Freeze, Burn or Paralize the target."
     }
   }
 }

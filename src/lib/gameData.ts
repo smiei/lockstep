@@ -189,7 +189,18 @@ export function getCatchRatesForGame(game: GameInfo): CatchRateEntry[] {
 function movesWithPackMoves(game: GameInfo, lang: Lang | undefined): MovesTable {
   const table = getMoves(lang, dataGeneration(game));
   const own = getPackMoves(game.id);
-  return own ? { ...table, ...own } : table;
+  if (!own) return table;
+  // Their descriptions sit on disk per language (English only, from the ROM),
+  // like moves.json's: keep the one for `lang`, none without it.
+  const out: MovesTable = { ...table };
+  for (const [slug, move] of Object.entries(own)) {
+    const { flavor, ...rest } = move as Omit<typeof move, "flavor"> & {
+      flavor?: string | Partial<Record<Lang, string>>;
+    };
+    const text = !lang || !flavor ? undefined : typeof flavor === "string" ? flavor : (flavor[lang] ?? flavor.en);
+    out[slug] = text ? { ...rest, flavor: text } : rest;
+  }
+  return out;
 }
 
 export function getMovesForGame(game: GameInfo, lang: Lang): MovesTable {

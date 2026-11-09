@@ -295,7 +295,7 @@ export function getPackMoveset(gameId: string): Moveset | null {
 // Fang, ...): data/games/<id>/custom-moves.json, same shape as a moves.json
 // entry, English names only, values read from the ROM. getMovesForGame adds
 // them to the shared table, so the pack's movesets.json/tm-compat.json can
-// name them.
+// name them. `flavor` is the ROM's English description, `{ en }` on disk.
 export function getPackMoves(gameId: string): Record<string, MoveInfo> | null {
   const file = path.join(gameDir(gameId), "custom-moves.json");
   return fs.existsSync(file) ? (parseFileCached(file) as Record<string, MoveInfo>) : null;
