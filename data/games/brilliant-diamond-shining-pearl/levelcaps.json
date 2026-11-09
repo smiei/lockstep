@@ -83,7 +83,7 @@
       "en": "Forest Badge",
       "fr": "Badge Forêt",
       "es": "Medalla Bosque",
-      "it": "Medaglia Foresta"
+      "it": "Medaglia Bosco"
     },
     "max_level": 22
   },
@@ -144,7 +144,7 @@
     "badge": {
       "de": "Bergorden",
       "en": "Cobble Badge",
-      "fr": "Badge Galet",
+      "fr": "Badge Pavé",
       "es": "Medalla Adoquín",
       "it": "Medaglia Ciottolo"
     },
@@ -169,9 +169,9 @@
     "badge": {
       "de": "Fennorden",
       "en": "Fen Badge",
-      "fr": "Badge Fange",
+      "fr": "Badge Palustre",
       "es": "Medalla Ciénaga",
-      "it": "Medaglia Palude"
+      "it": "Medaglia Acquitrino"
     },
     "max_level": 30
   },
@@ -213,9 +213,9 @@
     "badge": {
       "de": "Reliktorden",
       "en": "Relic Badge",
-      "fr": "Badge Relique",
+      "fr": "Badge Fantôme",
       "es": "Medalla Reliquia",
-      "it": "Medaglia Reliquia"
+      "it": "Medaglia Vestigia"
     },
     "max_level": 36
   },
@@ -259,7 +259,7 @@
       "en": "Mine Badge",
       "fr": "Badge Mine",
       "es": "Medalla Mina",
-      "it": "Medaglia Miniera"
+      "it": "Medaglia Cava"
     },
     "max_level": 39
   },

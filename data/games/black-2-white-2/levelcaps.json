@@ -104,11 +104,11 @@
       "it": "Austropoli"
     },
     "badge": {
-      "de": "Insekt-Orden",
+      "de": "Käferorden",
       "en": "Insect Badge",
-      "fr": "Insect Badge",
-      "es": "Insect Badge",
-      "it": "Insect Badge"
+      "fr": "Badge Élytre",
+      "es": "Medalla Élitro",
+      "it": "Medaglia Scarabeo"
     },
     "max_level": 24
   },
@@ -167,11 +167,11 @@
       "it": "Sciroccopoli"
     },
     "badge": {
-      "de": "Blitz-Orden",
+      "de": "Voltorden",
       "en": "Bolt Badge",
-      "fr": "Bolt Badge",
-      "es": "Bolt Badge",
-      "it": "Bolt Badge"
+      "fr": "Badge Volt",
+      "es": "Medalla Voltio",
+      "it": "Medaglia Volt"
     },
     "max_level": 30
   },
@@ -192,11 +192,11 @@
       "it": "Libecciopoli"
     },
     "badge": {
-      "de": "Beben-Orden",
+      "de": "Seismo-Orden",
       "en": "Quake Badge",
-      "fr": "Quake Badge",
-      "es": "Quake Badge",
-      "it": "Quake Badge"
+      "fr": "Badge Sismique",
+      "es": "Medalla Temblor",
+      "it": "Medaglia Sisma"
     },
     "max_level": 33
   },
@@ -274,11 +274,11 @@
       "it": "Ponentopoli"
     },
     "badge": {
-      "de": "Jet-Orden",
+      "de": "Jetorden",
       "en": "Jet Badge",
-      "fr": "Jet Badge",
-      "es": "Jet Badge",
-      "it": "Jet Badge"
+      "fr": "Badge Jet",
+      "es": "Medalla Jet",
+      "it": "Medaglia Jet"
     },
     "max_level": 39
   },
@@ -337,11 +337,11 @@
       "it": "Boreduopoli"
     },
     "badge": {
-      "de": "Legenden-Orden",
+      "de": "Legendenorden",
       "en": "Legend Badge",
-      "fr": "Legend Badge",
-      "es": "Legend Badge",
-      "it": "Legend Badge"
+      "fr": "Badge Mythe",
+      "es": "Medalla Leyenda",
+      "it": "Medaglia Leggenda"
     },
     "max_level": 48
   },

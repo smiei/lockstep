@@ -38,9 +38,9 @@
     "badge": {
       "de": "Steinorden",
       "en": "Stone Badge",
-      "fr": "Badge Roc",
+      "fr": "Badge Roche",
       "es": "Medalla Piedra",
-      "it": "Medaglia Roccia"
+      "it": "Medaglia Pietra"
     },
     "max_level": 14
   },
@@ -61,7 +61,7 @@
       "it": "Bluruvia"
     },
     "badge": {
-      "de": "Faustorden",
+      "de": "Knöchelorden",
       "en": "Knuckle Badge",
       "fr": "Badge Poing",
       "es": "Medalla Puño",
@@ -125,7 +125,7 @@
       "it": "Ciclamipoli"
     },
     "badge": {
-      "de": "Dynamoorden",
+      "de": "Dynamo-Orden",
       "en": "Dynamo Badge",
       "fr": "Badge Dynamo",
       "es": "Medalla Dinamo",
@@ -211,7 +211,7 @@
       "en": "Heat Badge",
       "fr": "Badge Chaleur",
       "es": "Medalla Calor",
-      "it": "Medaglia Calore"
+      "it": "Medaglia Fiamma"
     },
     "max_level": 28
   },
@@ -234,9 +234,9 @@
     "badge": {
       "de": "Balanceorden",
       "en": "Balance Badge",
-      "fr": "Badge Équilibre",
+      "fr": "Badge Balancier",
       "es": "Medalla Equilibrio",
-      "it": "Medaglia Equilibrio"
+      "it": "Medaglia Armonia"
     },
     "max_level": 30
   },
@@ -417,7 +417,7 @@
       "it": "Verdeazzupoli"
     },
     "badge": {
-      "de": "Psychoorden",
+      "de": "Mentalorden",
       "en": "Mind Badge",
       "fr": "Badge Esprit",
       "es": "Medalla Mente",
