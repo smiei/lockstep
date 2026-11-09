@@ -7,7 +7,7 @@ import { importBackup } from "@/lib/actions";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { rememberRun } from "@/lib/visitedRuns";
 import { formatActionError } from "@/lib/actionErrors";
-import { BACKUP_FORMAT, BACKUP_VERSION, parseBackup, type BackupFile } from "@/lib/backupParse";
+import { BACKUP_FORMAT, BACKUP_VERSION, parseBackup, parseRulePresets, type BackupFile } from "@/lib/backupParse";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { ImportBackupDialog } from "@/components/ImportBackupDialog";
 import { useToast } from "@/components/ui/ToastProvider";
@@ -51,11 +51,17 @@ export function useBackupImport({
         toast.error(formatActionError({ key: "backupInvalid" }, lang));
         return;
       }
+      // Each file of an "all runs" zip carries its own game packs and the
+      // server's rule presets: keep them all (presets deduplicated by name).
+      const gamePacks = Object.assign({}, ...parts.map((p) => p.gamePacks ?? {}));
+      const rulePresets = parseRulePresets(parts.flatMap((p) => p.rulePresets ?? []));
       const merged: BackupFile = {
         format: BACKUP_FORMAT,
         version: BACKUP_VERSION,
         exportedAt: new Date().toISOString(),
         runs: parts.flatMap((p) => p.runs),
+        ...(Object.keys(gamePacks).length > 0 ? { gamePacks } : {}),
+        ...(rulePresets.length > 0 ? { rulePresets } : {}),
       };
       json = JSON.stringify(merged);
     } else {

@@ -147,6 +147,7 @@ On top of the toggles:
 
 - **Export:** the current run or all runs as a file.
 - **Import:** adds the runs it contains without ever overwriting existing ones.
+- **Rule presets** travel with every backup. An import adds the presets this server does not have yet; one with the same name stays as it is.
 
 ## Appearance
 
