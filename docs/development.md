@@ -40,7 +40,7 @@ Then open [http://localhost:3000](http://localhost:3000). For checking a product
 | `npm run generate:if-species` / `npm run generate:if-moves` | Regenerate Infinite Fusion's species table and move data from the game's own data files. |
 | `npm run generate:trainer-readme` | Rewrites `public/trainers/README.txt`, the list of trainer pictures each game folder expects, marking those without an automatic picture. Run after level caps or the sprite map change. |
 | `npm run generate:trainer-sprites` | Regenerates `data/trainer-sprite-sources.json`, the map of boss trainers to Pokémon Showdown pictures that the trainer download (and the public deployment) use. Needs the network, about 2 minutes. |
-| `npm run lint` | ESLint. |
+| `npm run lint` | ESLint. CI fails on any lint error. |
 | `npm run build:windows` | Windows only: builds the Windows app into `dist/` (tray program, bundled Node.js, the app; a zip, plus the installer when [Inno Setup](https://jrsoftware.org/isinfo.php) is installed). Set `APP_VERSION` to override the version. |
 | `npm test` | Unit tests for the pure logic, plus a guard test that checks the UI conventions in the source tree. |
 
@@ -55,17 +55,17 @@ All reference data is read from disk at runtime and never copied into the databa
 - `fakemon.json`: Pokémon only a ROM hack has, each tied to its pack, ids from 20001 on (permanent).
 - `evolutions.json`, the type charts and `catchrates.json`; `form-evolutions.json` adds how regional forms evolve, which PokéAPI's chains leave out.
 - The move data: `moves.json`, `learnsets/`, `movesets/`, `tm-compat/`. The version group `modern` is the app's own: per Pokémon the moves of the newest game that has them, for ROM hacks on current data (`node scripts/generate-learnsets.mjs modern` regenerates only that one).
-- Four correction tables that restore what a value was in the generation being played: `pokemon-history.json`, `move-type-history.json`, `move-name-history.json`, `catchrate-history.json`.
+- Five correction tables that restore what a value was in the generation being played: `pokemon-history.json`, `move-type-history.json`, `move-stat-history.json` (power, accuracy and PP), `move-name-history.json`, `catchrate-history.json`.
 - `cover-sources.json`: where each game's cover comes from (`scripts/download-covers.mjs` saves them as `public/covers/<id>.webp`; `getGameCover` in `data.ts` decides on the server whether one exists).
 - `shared/`: the official names the game packs are built from, each with the script that fetches it:
   - places: `place-names.json` (`generate-place-names.mjs`, PokéWiki) and the hand-made `place-name-overrides.json`, applied by `localize-places.mjs`;
-  - bosses: `trainer-names.json` (`generate-trainer-names.mjs`, Bulbapedia); badges: `badge-names.json` (`generate-badge-names.mjs`, PokéWiki);
-  - a ROM hack's changed stats and types: `<id>-species.json` (`import-nuzlocke-app.mjs`).
+  - bosses: `trainer-names.json` (`generate-trainer-names.mjs`, Bulbapedia); badges: `badge-names.json` (`generate-badge-names.mjs`, PokéWiki; `apply-badge-names.mjs` writes the names into every pack);
+  - a ROM hack's changed stats and types: `<id>-species.json` (first from `import-nuzlocke-app.mjs`, which since keeps existing files; most were checked against the hack's own data).
 
 **Game packs** live in `data/games/<gameId>/`:
 - `game.json`: names, generation, dex limit, sprite set, version group, and `regionalForms` when regional forms are caught on routes;
 - `routes.json` and `levelcaps.json`;
-- optionally `evolution-overrides.json`.
+- optionally `evolution-overrides.json`, and for ROM hacks `move-overrides.json`, `movesets.json`, `tm-compat.json` and `custom-moves.json` (see [game packs](game-packs.md)).
 
 Each run is bound to one pack. Adding another game of a supported generation means adding a folder; no code changes.
 
