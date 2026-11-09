@@ -46,7 +46,7 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 - **Inputs:** ball, HP, level and status condition.
 - **Formula:** the run's own generation (Gen 1, Gen 2, Gen 3/4, Gen 5 to 9, or Infinite Fusion's own code). From Gen 5 a ball's chance is about (rate ÷ 255)^0.75, kinder than before.
 - **Ball list:** depends on the game. HeartGold/SoulSilver bring back the Gen 2 Apricorn balls, Sun/Moon add the Beast Ball, Brilliant Diamond/Shining Pearl keep Diamond/Pearl's list; every game from Gen 4 on has the Cherish Ball.
-- **ROM hacks with their own capture engine:** Radical Red and Unbound (Complete FireRed Upgrade) and Run & Bun and Inclement Emerald (pokeemerald-expansion) offer every ball up to Gen 8 and use their engine's own capture code, critical captures included. On Radical Red and Unbound a Pokémon above your own level is caught at ×0.1 until the League is beaten (a switch on the card).
+- **ROM hacks with their own capture engine:** Radical Red and Unbound (Complete FireRed Upgrade) and Run & Bun and Inclement Emerald (pokeemerald-expansion) offer every ball up to Gen 8 (Unbound has no Sport Ball) and use their engine's own capture code, critical captures included. On Radical Red and Unbound a Pokémon above your own level is caught at ×0.1 until the League is beaten (a switch on the card).
 - **Ultra Beasts:** the Beast Ball gives ×5 against them, every other ball only ×0.1. The calculator recognizes them by itself.
 - **Gen 8 and 9:** a bonus against wild Pokémon below level 20 (Gen 8) or 13 (Gen 9), and a field for your badges, filled in from the run's defeated gym leaders.
   - Sword/Shield and BDSP: without the eighth badge, a wild Pokémon above your own Pokémon's level is caught at only ×0.1. Sword/Shield also refuse the throw altogether above level 20 + 5 per badge.
@@ -65,7 +65,7 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 Pick a move **by name** and see which of your living Pokémon can learn it by TM, HM or move tutor.
 
 - **Why by name:** TM numbers are reshuffled by randomizers.
-- **What the data is:** the original game data, not the ROM's actual mapping. A randomizer re-rolls TM compatibility, so this is a clean reference, or a house rule ("TM compatibility follows the original games").
+- **What the data is:** the original game data, not the ROM's actual mapping. A randomizer re-rolls TM compatibility, so this is a clean reference, or a house rule ("TM compatibility follows the original games"). ROM hacks show their own TM, HM and tutor lists, read from the hack's ROM.
 - **Display:** split per player in SoulLink, with TM, HM and tutor labelled.
 
 ## Pokédex
@@ -119,8 +119,9 @@ On top of the toggles:
 - **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. Each card can mark its run as won - it becomes a Hall of Fame entry with a gold seal, frame and label dated the day it was won - or lost (greyed out, struck through, a red frame and a red "Lost" stamp across its team). Either way it keeps its place in the list, "Open only" at the top hides both, and "Resume" takes the mark back. Deleting a run takes two clicks on its card: Delete, then Delete for good. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
 - **Game covers** show in the game picker, on the start page and on the Overview. They are downloaded on the first start; a ROM hack without a cover shows a drawn tile, or your own picture (see [self-hosting](self-hosting.md#game-covers)).
-- **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 16 ROM hacks, and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
+- **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 17 ROM hack packs (Blazing Emerald as v1.5.1 and v1.6), and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
 - **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.
+- **Checked against the ROMs:** route lists (statics, gifts and legendaries included; places with only water or fishing encounters come after the rod or Surf), level caps, and each ROM hack's species data, evolutions, moves, level-up moves, TMs and tutors were read from the games' own ROMs where one was available. A hack's own moves show with the description from its ROM, in English.
 - **Generation-aware mechanics:** the type chart (Gen 1 quirks included), the catch formula and balls, which Pokémon are obtainable, and era-appropriate sprites.
 - **Historical values:** these are something PokéAPI cannot give you, because it only serves today's values. Correction tables roll back:
   - the Gen 6 Fairy re-typings;
