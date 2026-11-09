@@ -8,6 +8,9 @@
     "pp": 10,
     "names": {
       "en": "Aqua Fang"
+    },
+    "flavor": {
+      "en": "The user bites the foe with aquatic force."
     }
   },
   "dark-hole": {
@@ -19,6 +22,9 @@
     "pp": 5,
     "names": {
       "en": "Dark Hole"
+    },
+    "flavor": {
+      "en": "The user sends the foe to the shadow realm. It may cause sleep."
     }
   },
   "draco-barrage": {
@@ -30,6 +36,9 @@
     "pp": 5,
     "names": {
       "en": "Draco Barrage"
+    },
+    "flavor": {
+      "en": "This attack beats beats fairy immunities but hurts the user. Changes split based off which is stronger."
     }
   },
   "sonic-slash": {
@@ -41,6 +50,9 @@
     "pp": 10,
     "names": {
       "en": "Sonic Slash"
+    },
+    "flavor": {
+      "en": "The user attacks with a swift slash that becomes stronger the faster the user is."
     }
   },
   "soul-robbery": {
@@ -52,6 +64,9 @@
     "pp": 5,
     "names": {
       "en": "Soul Robbery"
+    },
+    "flavor": {
+      "en": "The user consumes the target's soul, stealing the target's stat boosts, and then attacks."
     }
   }
 }

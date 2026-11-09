@@ -8,6 +8,9 @@
     "pp": 10,
     "names": {
       "en": "Leech Fang"
+    },
+    "flavor": {
+      "en": "An attack that absorbs half the damage it inflicted to restore HP."
     }
   },
   "metal-bash": {
@@ -19,6 +22,9 @@
     "pp": 35,
     "names": {
       "en": "Metal Bash"
+    },
+    "flavor": {
+      "en": "A physical attack in which the user charges, full body, into the foe."
     }
   }
 }

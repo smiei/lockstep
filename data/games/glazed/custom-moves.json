@@ -8,6 +8,9 @@
     "pp": 5,
     "names": {
       "en": "Storm Surge"
+    },
+    "flavor": {
+      "en": "Inflicts more damage if the user's HP is high."
     }
   }
 }
