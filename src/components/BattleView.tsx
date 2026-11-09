@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useId, useState } from "react";
 import type { Pokemon } from "@/lib/data";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import { computeDefenseMultipliers, singleTypeMultiplier } from "@/lib/effectiveness";
@@ -234,6 +234,13 @@ export function BattleCardBody({
     0: t.immune,
   };
   const isDimmed = (defenseType: string) => selectedRaw !== null && !opponentTypes.includes(defenseType);
+  // Columns picked by tapping their type in the matrix header (a toggle each).
+  // While any is picked they take over from the opponent's dimming: the picked
+  // columns stay bright and framed, the rest fade.
+  const [pickedColumns, setPickedColumns] = useState<string[]>([]);
+  const togglePickedColumn = (type: string) =>
+    setPickedColumns((cur) => (cur.includes(type) ? cur.filter((x) => x !== type) : [...cur, type]));
+  const columnDimmed = (type: string) => (pickedColumns.length > 0 ? !pickedColumns.includes(type) : isDimmed(type));
 
   const hasTeam = teams.some((team) => team.members.length > 0);
 
@@ -387,7 +394,7 @@ export function BattleCardBody({
         <h2 className="mb-1 text-sm font-semibold text-ink">
           {t.matrixHeading}
         </h2>
-          <MatrixLegend text={t.legendOffense} />
+          <MatrixLegend text={`${t.legendOffense} · ${t.matrixHighlightHint}`} />
         <div className="overflow-x-auto">
           <table className="border-separate border-spacing-0.5">
             <thead>
@@ -398,11 +405,22 @@ export function BattleCardBody({
                     <div>{t.attack} ↓</div>
                   </div>
                 </th>
-                {attackTypes.map((defense) => (
-                  <th key={defense} className="p-0">
-                    <TypeAbbrev type={defense} lang={lang} dimmed={isDimmed(defense)} />
-                  </th>
-                ))}
+                {attackTypes.map((defense) => {
+                  const picked = pickedColumns.includes(defense);
+                  return (
+                    <th key={defense} className="p-0">
+                      <button
+                        type="button"
+                        aria-pressed={picked}
+                        aria-label={`${t.matrixHighlight}: ${TYPE_LABELS[lang][defense] ?? defense}`}
+                        onClick={() => togglePickedColumn(defense)}
+                        className={`block rounded-md ${picked ? "ring-2 ring-ink ring-offset-1 ring-offset-panel" : ""}`}
+                      >
+                        <TypeAbbrev type={defense} lang={lang} dimmed={columnDimmed(defense)} />
+                      </button>
+                    </th>
+                  );
+                })}
               </tr>
             </thead>
             <tbody>
@@ -417,8 +435,8 @@ export function BattleCardBody({
                       <td
                         key={defense}
                         className={`h-7 w-8 rounded text-center text-xs font-semibold transition-opacity ${className} ${
-                          isDimmed(defense) ? "opacity-25" : ""
-                        }`}
+                          columnDimmed(defense) ? "opacity-25" : ""
+                        } ${pickedColumns.includes(defense) ? "ring-2 ring-inset ring-ink" : ""}`}
                       >
                         {text}
                       </td>
