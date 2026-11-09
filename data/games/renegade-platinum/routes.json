@@ -253,6 +253,17 @@
     "type": "static"
   },
   {
+    "id": 107,
+    "names": {
+      "de": "Gengar Old Chateau",
+      "en": "Gengar Old Chateau",
+      "fr": "Gengar Old Chateau",
+      "es": "Gengar Old Chateau",
+      "it": "Gengar Old Chateau"
+    },
+    "type": "static"
+  },
+  {
     "id": 20,
     "names": {
       "de": "Eterna City",
@@ -306,6 +317,17 @@
       "it": "Wayward Cave"
     },
     "type": "route"
+  },
+  {
+    "id": 106,
+    "names": {
+      "de": "Gabite Wayward Cave",
+      "en": "Gabite Wayward Cave",
+      "fr": "Gabite Wayward Cave",
+      "es": "Gabite Wayward Cave",
+      "it": "Gabite Wayward Cave"
+    },
+    "type": "static"
   },
   {
     "id": 24,
@@ -928,6 +950,30 @@
     "postgame": true
   },
   {
+    "id": 111,
+    "names": {
+      "de": "Kyogre Mt. Coronet",
+      "en": "Kyogre Mt. Coronet",
+      "fr": "Kyogre Mt. Coronet",
+      "es": "Kyogre Mt. Coronet",
+      "it": "Kyogre Mt. Coronet"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 112,
+    "names": {
+      "de": "Rayquaza Pokémon League",
+      "en": "Rayquaza Pokémon League",
+      "fr": "Rayquaza Pokémon League",
+      "es": "Rayquaza Pokémon League",
+      "it": "Rayquaza Pokémon League"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 85,
     "names": {
       "de": "Turnback Cave",
@@ -1108,6 +1154,30 @@
     "postgame": true
   },
   {
+    "id": 108,
+    "names": {
+      "de": "Articuno Mt. Coronet",
+      "en": "Articuno Mt. Coronet",
+      "fr": "Articuno Mt. Coronet",
+      "es": "Articuno Mt. Coronet",
+      "it": "Articuno Mt. Coronet"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 109,
+    "names": {
+      "de": "Moltres Victory Road",
+      "en": "Moltres Victory Road",
+      "fr": "Moltres Victory Road",
+      "es": "Moltres Victory Road",
+      "it": "Moltres Victory Road"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 99,
     "names": {
       "de": "Celebi Eterna Forest",
@@ -1127,6 +1197,18 @@
       "fr": "Jirachi Solaceon Ruins",
       "es": "Jirachi Solaceon Ruins",
       "it": "Jirachi Solaceon Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 113,
+    "names": {
+      "de": "Mew Route 201",
+      "en": "Mew Route 201",
+      "fr": "Mew Route 201",
+      "es": "Mew Route 201",
+      "it": "Mew Route 201"
     },
     "type": "static",
     "postgame": true
@@ -1175,6 +1257,18 @@
       "fr": "Suicune Route 213",
       "es": "Suicune Route 213",
       "it": "Suicune Route 213"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 110,
+    "names": {
+      "de": "Lugia Route 220",
+      "en": "Lugia Route 220",
+      "fr": "Lugia Route 220",
+      "es": "Lugia Route 220",
+      "it": "Lugia Route 220"
     },
     "type": "static",
     "postgame": true
