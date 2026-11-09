@@ -308,13 +308,24 @@
     "type": "route"
   },
   {
-    "id": 32,
+    "id": 49,
     "names": {
-      "de": "Glockenturm",
-      "en": "Bell Tower",
-      "fr": "Tour Carillon",
-      "es": "Torre Campana",
-      "it": "Torre Campana"
+      "de": "Route 42",
+      "en": "Route 42",
+      "fr": "Route 42",
+      "es": "Ruta 42",
+      "it": "Percorso 42"
+    },
+    "type": "route"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Kesselberg",
+      "en": "Mt. Mortar",
+      "fr": "Mont Creuset",
+      "es": "Monte Mortero",
+      "it": "Monte Scodella"
     },
     "type": "route"
   },
@@ -328,17 +339,6 @@
       "it": "Grotta di mezzo (Lapras)"
     },
     "type": "static"
-  },
-  {
-    "id": 49,
-    "names": {
-      "de": "Route 42",
-      "en": "Route 42",
-      "fr": "Route 42",
-      "es": "Ruta 42",
-      "it": "Percorso 42"
-    },
-    "type": "route"
   },
   {
     "id": 34,
@@ -480,17 +480,6 @@
       "fr": "Parc Safari",
       "es": "Zona Safari",
       "it": "Zona Safari"
-    },
-    "type": "route"
-  },
-  {
-    "id": 50,
-    "names": {
-      "de": "Kesselberg",
-      "en": "Mt. Mortar",
-      "fr": "Mont Creuset",
-      "es": "Monte Mortero",
-      "it": "Monte Scodella"
     },
     "type": "route"
   },
@@ -990,6 +979,18 @@
       "fr": "Cave Taupiqueur",
       "es": "Cueva Diglett",
       "it": "Grotta Diglett"
+    },
+    "type": "route",
+    "region": "kanto"
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Glockenturm",
+      "en": "Bell Tower",
+      "fr": "Tour Carillon",
+      "es": "Torre Campana",
+      "it": "Torre Campana"
     },
     "type": "route",
     "region": "kanto"
