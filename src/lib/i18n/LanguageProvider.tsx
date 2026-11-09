@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, useSyncExternalStore } from "react";
+import { createContext, useContext, useEffect, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import { LANG_COOKIE, isLang, type Lang } from "@/lib/i18n/dictionary";
 import { clientRuntimeConfig, pickLang } from "@/lib/runtimeConfig";
@@ -52,25 +52,40 @@ function fallbackLang(): Lang {
   return configured ?? deviceLang() ?? "en";
 }
 
+// The language this device uses: a choice made in this page's lifetime, else
+// the cookie, else the fallback order above. A tiny store rather than state,
+// so the provider reads it with useSyncExternalStore instead of copying it in
+// an effect.
+let chosenLang: Lang | null = null;
+const langListeners = new Set<() => void>();
+
+function subscribeLang(listener: () => void): () => void {
+  langListeners.add(listener);
+  return () => {
+    langListeners.delete(listener);
+  };
+}
+
+function clientLang(): Lang {
+  return chosenLang ?? readCookieLang() ?? fallbackLang();
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  // Server and the first client render always agree on "de" (no cookie read
-  // here) to avoid a text hydration mismatch; the real stored preference is
-  // applied right after mount - the same "briefly shows the default, then
-  // corrects" trade-off ThemeToggle already makes for its icon.
-  const [lang, setLangState] = useState<Lang>("de");
+  // Server and hydration always agree on "de" (getServerSnapshot) to avoid a
+  // text hydration mismatch; the real stored preference follows right after -
+  // the same "briefly shows the default, then corrects" trade-off ThemeToggle
+  // makes for its icon.
+  const lang = useSyncExternalStore(subscribeLang, clientLang, () => SERVER_LANG);
 
   useEffect(() => {
-    const stored = readCookieLang();
-    const next = stored ?? fallbackLang();
-    if (!stored && isInstalledApp()) {
+    if (!readCookieLang() && isInstalledApp()) {
       // The server cannot tell the app from a browser tab and rendered the
       // browser's default; store the device language so it renders that from
       // now on. Written once - from then on it behaves like a chosen language.
-      writeLangCookie(next);
+      writeLangCookie(fallbackLang());
       router.refresh();
     }
-    setLangState(next);
   }, [router]);
 
   // The layout's <html lang> is static; screen readers need the real one.
@@ -79,8 +94,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [lang]);
 
   function setLang(next: Lang) {
-    setLangState(next);
+    chosenLang = next;
     writeLangCookie(next);
+    langListeners.forEach((listener) => listener());
     // Dynamic pages (tracker/links/levelcaps) resolve their language
     // server-side from the same cookie - refresh so they re-render with it.
     router.refresh();

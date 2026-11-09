@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, useTransition } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { Spinner } from "@/components/ui/Spinner";
 import { useRouter } from "next/navigation";
 import type { Pokemon, Route } from "@/lib/data";
@@ -181,17 +181,18 @@ export function EncounterEditor({
     return p ? displayNameWithForm(p, lang) : "";
   })();
 
-  useEffect(() => {
+  // Take over a saved value that changed (this device's save landing, or
+  // another device's edit) - during render, against the last synced value,
+  // rather than in an effect.
+  const savedKey = JSON.stringify([current?.pokemonId, current?.status, current?.nickname, current?.shiny]);
+  const [syncedKey, setSyncedKey] = useState(savedKey);
+  if (syncedKey !== savedKey) {
+    setSyncedKey(savedKey);
     setSelectedId(current?.pokemonId ?? null);
     setStatus(current?.status ?? EncounterStatus.CAUGHT);
     setNickname(current?.nickname ?? "");
     setShiny(current?.shiny ?? false);
-  }, [
-    current?.pokemonId,
-    current?.status,
-    current?.nickname,
-    current?.shiny,
-  ]);
+  }
 
   // Static/gift is a fixed property of the location (routes.json `type`),
   // no longer a user-set checkbox.

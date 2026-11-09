@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
@@ -25,15 +25,17 @@ function MoonIcon({ className }: { className?: string }) {
   );
 }
 
+const subscribeNever = () => () => {};
+
 export function ThemeToggle() {
   const { resolvedTheme, systemTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  // Theme is only known client-side after hydration: false on the server and
+  // during hydration, true from then on - a neutral placeholder first avoids
+  // a light/dark mismatch flash.
+  const mounted = useSyncExternalStore(subscribeNever, () => true, () => false);
   const { lang } = useLanguage();
   const t = translations[lang].theme;
 
-  // Theme is only known client-side after hydration; render a neutral
-  // placeholder first to avoid a light/dark mismatch flash.
-  useEffect(() => setMounted(true), []);
 
   const isDark = mounted && resolvedTheme === "dark";
 

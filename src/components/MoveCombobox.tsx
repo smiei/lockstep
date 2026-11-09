@@ -33,10 +33,14 @@ export function MoveCombobox({
     setQuery(selected ? selected.name : ""),
   );
 
-  useEffect(() => {
+  // Follow a selection changed from the outside - during render, against the
+  // last synced value, rather than in an effect.
+  const syncKey = `${selectedSlug}|${lang}`;
+  const [syncedKey, setSyncedKey] = useState(syncKey);
+  if (syncedKey !== syncKey) {
+    setSyncedKey(syncKey);
     setQuery(selected ? selected.name : "");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedSlug, lang]);
+  }
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
