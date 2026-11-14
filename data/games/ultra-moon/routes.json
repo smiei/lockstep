@@ -80,7 +80,7 @@
     "id": 8,
     "names": {
       "de": "Beerenfelder",
-      "en": "Alola Berry Fields",
+      "en": "Berry Fields",
       "fr": "Champ de Baies",
       "es": "Huerto de Bayas",
       "it": "Orto delle Bacche"
@@ -187,6 +187,17 @@
     "type": "route"
   },
   {
+    "id": 74,
+    "names": {
+      "de": "Evoli-Ei Ohana-Farm",
+      "en": "Eevee Egg Paniola Ranch",
+      "fr": "Œuf Évoli Ranch Ohana",
+      "es": "Huevo de Eevee Rancho Ohana",
+      "it": "Uovo di Eevee Fattoria Ohana"
+    },
+    "type": "static"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Route 5",
@@ -209,6 +220,17 @@
     "type": "route"
   },
   {
+    "id": 73,
+    "names": {
+      "de": "Strandhöhle",
+      "en": "Sandy Cave",
+      "fr": "Grotte de la Plage",
+      "es": "Cueva Costera",
+      "it": "Caverna Costiera"
+    },
+    "type": "route"
+  },
+  {
     "id": 20,
     "names": {
       "de": "Route 6",
@@ -216,17 +238,6 @@
       "fr": "Route 6",
       "es": "Ruta 6",
       "it": "Percorso 6"
-    },
-    "type": "route"
-  },
-  {
-    "id": 21,
-    "names": {
-      "de": "Avenue Royale",
-      "en": "Royal Avenue",
-      "fr": "Rue du Dôme Royal",
-      "es": "Avenida Royale",
-      "it": "Viale Royale"
     },
     "type": "route"
   },
@@ -326,17 +337,6 @@
       "fr": "Route 9",
       "es": "Ruta 9",
       "it": "Percorso 9"
-    },
-    "type": "route"
-  },
-  {
-    "id": 31,
-    "names": {
-      "de": "Konikoni City",
-      "en": "Konikoni City",
-      "fr": "Konikoni",
-      "es": "Ciudad Konikoni",
-      "it": "Konikoni"
     },
     "type": "route"
   },
@@ -508,13 +508,13 @@
   {
     "id": 47,
     "names": {
-      "de": "Æther-Haus",
-      "en": "Aether House",
-      "fr": "Maison Æther",
-      "es": "Casa Æther",
-      "it": "Casa Æther"
+      "de": "Porygon Æther-Haus",
+      "en": "Porygon Aether House",
+      "fr": "Porygon Maison Æther",
+      "es": "Porygon Casa Æther",
+      "it": "Porygon Casa Æther"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 48,
@@ -561,17 +561,6 @@
     "type": "route"
   },
   {
-    "id": 52,
-    "names": {
-      "de": "Mondscheiben-See",
-      "en": "Lake of the Moone",
-      "fr": "Lac du Halo Lunaire",
-      "es": "Lago Coroluna",
-      "it": "Lago Lunare"
-    },
-    "type": "route"
-  },
-  {
     "id": 53,
     "names": {
       "de": "Route 17",
@@ -592,6 +581,17 @@
       "it": "Villaggio del Mare"
     },
     "type": "route"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Aerodactyl Dorf des Seevolkes",
+      "en": "Aerodactyl Seafolk Village",
+      "fr": "Ptéra Village Flottant",
+      "es": "Aerodactyl Aldea Marina",
+      "it": "Aerodactyl Villaggio del Mare"
+    },
+    "type": "static"
   },
   {
     "id": 55,
@@ -640,13 +640,13 @@
   {
     "id": 59,
     "names": {
-      "de": "Ultrametropolis",
-      "en": "Megalopolis",
-      "fr": "Ultra-Mégalopole",
-      "es": "Ultrópolis",
-      "it": "Ultramegalopoli"
+      "de": "Venicro Ultrametropolis",
+      "en": "Poipole Ultra Megalopolis",
+      "fr": "Vémini Ultra-Mégalopole",
+      "es": "Poipole Ultrópolis",
+      "it": "Poipole Ultramegalopoli"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 60,
@@ -673,13 +673,13 @@
   {
     "id": 62,
     "names": {
-      "de": "Mahalo-Bergpfad",
-      "en": "Mahalo Trail",
-      "fr": "Sentier de Mahalo",
-      "es": "Senda Mahalo",
-      "it": "Sentiero Mahalo"
+      "de": "Lunala Mahalo-Bergpfad",
+      "en": "Lunala Mahalo Trail",
+      "fr": "Lunala Sentier de Mahalo",
+      "es": "Lunala Senda Mahalo",
+      "it": "Lunala Sentiero Mahalo"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 63,
@@ -750,45 +750,109 @@
   {
     "id": 69,
     "names": {
-      "de": "Ruinen des Krieges",
-      "en": "Ruins of Conflict",
-      "fr": "Ruines du Conflit",
-      "es": "Ruinas de la Guerra",
-      "it": "Tempio del Conflitto"
+      "de": "Kapu-Riki Ruinen des Krieges",
+      "en": "Tapu Koko Ruins of Conflict",
+      "fr": "Tokorico Ruines du Conflit",
+      "es": "Tapu Koko Ruinas de la Guerra",
+      "it": "Tapu Koko Tempio del Conflitto"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 70,
     "names": {
-      "de": "Ruinen des Lebens",
-      "en": "Ruins of Life",
-      "fr": "Ruines de l’Éveil",
-      "es": "Ruinas de la Vida",
-      "it": "Tempio della Vita"
+      "de": "Kapu-Fala Ruinen des Lebens",
+      "en": "Tapu Lele Ruins of Life",
+      "fr": "Tokopiyon Ruines de l’Éveil",
+      "es": "Tapu Lele Ruinas de la Vida",
+      "it": "Tapu Lele Tempio della Vita"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 71,
     "names": {
-      "de": "Ruinen des Gedeihens",
-      "en": "Ruins of Abundance",
-      "fr": "Ruines de l’Essor",
-      "es": "Ruinas de la Cosecha",
-      "it": "Tempio del Raccolto"
+      "de": "Kapu-Toro Ruinen des Gedeihens",
+      "en": "Tapu Bulu Ruins of Abundance",
+      "fr": "Tokotoro Ruines de l’Essor",
+      "es": "Tapu Bulu Ruinas de la Cosecha",
+      "it": "Tapu Bulu Tempio del Raccolto"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 72,
     "names": {
-      "de": "Ruinen der Heimkehr",
-      "en": "Ruins of Hope",
-      "fr": "Ruines de l’Au-Delà",
-      "es": "Ruinas del Tránsito",
-      "it": "Tempio del Passaggio"
+      "de": "Kapu-Kime Ruinen der Heimkehr",
+      "en": "Tapu Fini Ruins of Hope",
+      "fr": "Tokopisco Ruines de l’Au-Delà",
+      "es": "Tapu Fini Ruinas del Tránsito",
+      "it": "Tapu Fini Tempio del Passaggio"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Cosmog Mondscheiben-See",
+      "en": "Cosmog Lake of the Moone",
+      "fr": "Cosmog Lac du Halo Lunaire",
+      "es": "Cosmog Lago Coroluna",
+      "it": "Cosmog Lago Lunare"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Necrozma Mount Lanakila",
+      "en": "Necrozma Mount Lanakila",
+      "fr": "Necrozma Mont Lanakila",
+      "es": "Necrozma Monte Lanakila",
+      "it": "Necrozma Monte Lanakila"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Zygarde Finalhöhle",
+      "en": "Zygarde Resolution Cave",
+      "fr": "Zygarde Caverne Coda",
+      "es": "Zygarde Gruta Desenlace",
+      "it": "Zygarde Caverna Climax"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Typ:Null Alter Pfad von Poni",
+      "en": "Type: Null Ancient Poni Path",
+      "fr": "Type:0 Vieille Route",
+      "es": "Código Cero Antiguo Paso de Poni",
+      "it": "Tipo Zero Via Antica di Poni"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Ultrapforte",
+      "en": "Ultra Wormhole",
+      "fr": "Ultra-Brèche",
+      "es": "Ultraumbral",
+      "it": "Ultravarco"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]
