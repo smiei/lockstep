@@ -568,6 +568,16 @@
         "Champ-Turnier"
       ],
       "note": "City verified; \"Championship Match\" is a plain translation (no official title found)."
+    },
+    "Legendary Bird Sea Spirit’s Den": {
+      "de": "Legendärer Vogel Meerestitanenhöhle",
+      "fr": "Oiseau légendaire Antre Néréen",
+      "es": "Ave legendaria Cueva Talasia",
+      "it": "Uccello leggendario Antro Talassico",
+      "sources": [
+        "Sea Spirit's Den"
+      ],
+      "note": "Articuno, Zapdos or Moltres, depending on the starter; \"Legendary Bird\" is a plain translation, the place name is the game's own."
     }
   }
 }
