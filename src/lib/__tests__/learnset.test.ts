@@ -77,6 +77,13 @@ describe("damageClassForGeneration", () => {
     expect(damageClassForGeneration(9, "ghost", "special")).toBe("special");
   });
 
+  it("knows a class that changed after the split (Water Shuriken)", () => {
+    // Physical in X/Y and Omega Ruby/Alpha Sapphire, special from Sun/Moon on.
+    expect(damageClassForGeneration(6, "water", "special", true, "water-shuriken")).toBe("physical");
+    expect(damageClassForGeneration(7, "water", "special", true, "water-shuriken")).toBe("special");
+    expect(damageClassForGeneration(6, "water", "special", true, "surf")).toBe("special");
+  });
+
   it("derives the class from the TYPE before the Gen 4 split", () => {
     // Bite/Crunch are Dark -> special in Gen 3, physical from Gen 4.
     expect(damageClassForGeneration(3, "dark", "physical")).toBe("special");

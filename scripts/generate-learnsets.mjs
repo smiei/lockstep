@@ -429,6 +429,17 @@ async function main() {
     console.log(`movesets/${vg}.json: ${Object.keys(sorted).length} Pokémon`);
   }
 
+  // Tutors PokeAPI lacks (data/tutor-additions.json, from the games' own data):
+  // Omega Ruby/Alpha Sapphire's Dark Pulse, Roost and Sleep Talk are listed
+  // there as machines only.
+  const tutorAdditions = JSON.parse(await readFile(path.join(dataDir, "tutor-additions.json"), "utf-8"));
+  for (const [vg, table] of tmCompat) {
+    for (const [slug, ids] of Object.entries(tutorAdditions[vg] ?? {})) {
+      const e = (table[slug] ??= {});
+      e.tutor = [...new Set([...(e.tutor ?? []), ...ids])];
+    }
+  }
+
   for (const [vg, table] of tmCompat) {
     const sorted = {};
     for (const slug of Object.keys(table).sort()) {

@@ -1,0 +1,137 @@
+{
+  "source": "game data: Pokémon Sun: only the species whose catch rate differs from the later games of the generation",
+  "sourceVersion": "game-data",
+  "species": [
+    {
+      "id": 794,
+      "name": "Buzzwole",
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 107,
+        "Ang.": 139,
+        "Vert.": 139,
+        "Sp.-A.": 53,
+        "Sp.-V.": 53,
+        "Init.": 79,
+        "Summe": 570
+      },
+      "catchRate": 25,
+      "weight": 333.6
+    },
+    {
+      "id": 795,
+      "name": "Pheromosa",
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "stats": {
+        "KP": 71,
+        "Ang.": 137,
+        "Vert.": 37,
+        "Sp.-A.": 137,
+        "Sp.-V.": 37,
+        "Init.": 151,
+        "Summe": 570
+      },
+      "catchRate": 255,
+      "weight": 25
+    },
+    {
+      "id": 796,
+      "name": "Xurkitree",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "KP": 83,
+        "Ang.": 89,
+        "Vert.": 71,
+        "Sp.-A.": 173,
+        "Sp.-V.": 71,
+        "Init.": 83,
+        "Summe": 570
+      },
+      "catchRate": 30,
+      "weight": 100
+    },
+    {
+      "id": 797,
+      "name": "Celesteela",
+      "types": [
+        "steel",
+        "flying"
+      ],
+      "stats": {
+        "KP": 97,
+        "Ang.": 101,
+        "Vert.": 103,
+        "Sp.-A.": 107,
+        "Sp.-V.": 101,
+        "Init.": 61,
+        "Summe": 570
+      },
+      "catchRate": 25,
+      "weight": 999.9
+    },
+    {
+      "id": 798,
+      "name": "Kartana",
+      "types": [
+        "grass",
+        "steel"
+      ],
+      "stats": {
+        "KP": 59,
+        "Ang.": 181,
+        "Vert.": 131,
+        "Sp.-A.": 59,
+        "Sp.-V.": 31,
+        "Init.": 109,
+        "Summe": 570
+      },
+      "catchRate": 255,
+      "weight": 0.1
+    },
+    {
+      "id": 799,
+      "name": "Guzzlord",
+      "types": [
+        "dark",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 223,
+        "Ang.": 101,
+        "Vert.": 53,
+        "Sp.-A.": 97,
+        "Sp.-V.": 53,
+        "Init.": 43,
+        "Summe": 570
+      },
+      "catchRate": 15,
+      "weight": 888
+    },
+    {
+      "id": 800,
+      "name": "Necrozma",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 97,
+        "Ang.": 107,
+        "Vert.": 101,
+        "Sp.-A.": 127,
+        "Sp.-V.": 89,
+        "Init.": 79,
+        "Summe": 600
+      },
+      "catchRate": 3,
+      "weight": 230
+    }
+  ]
+}

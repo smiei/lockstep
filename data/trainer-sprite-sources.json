@@ -448,6 +448,7 @@
     "x-y/tierno": "tierno",
     "x-y/trovato": "trevor",
     "x-y/trovato-tierno": "trevor",
+    "x-y/valerie": "valerie",
     "x-y/viola": "viola",
     "x-y/xeros": "xerosic"
   },
@@ -537,7 +538,6 @@
     "ultra-sun-ultra-moon/matsurika": "no Showdown sprite found for \"Captain Mina\"",
     "ultra-sun-ultra-moon/mayla": "no Showdown sprite found for \"Island Kahuna Olivia\"",
     "ultra-sun-ultra-moon/necrozma": "no Showdown sprite found for \"Necrozma\"",
-    "ultra-sun-ultra-moon/paniola-ranch": "no Showdown sprite found for \"Paniola Ranch\"",
     "ultra-sun-ultra-moon/prufung-von-elima": "no Showdown sprite found for \"Ilima's Trial\"",
     "ultra-sun-ultra-moon/prufung-von-kiawe": "no Showdown sprite found for \"Kiawe's Trial\"",
     "ultra-sun-ultra-moon/prufung-von-lola": "no Showdown sprite found for \"Acerola's Trial\"",
@@ -571,7 +571,6 @@
     "unbound/successor-maxima": "no Showdown sprite found for \"Successor Maxima\"",
     "x-y/aliana": "no Showdown sprite found for \"Aliana\"",
     "x-y/calluna": "no Showdown sprite found for \"Celosia\"",
-    "x-y/calluna-begonia": "no Showdown sprite found for \"Celosia & Bryony\"",
-    "x-y/valeria": "no Showdown sprite found for \"Valeria\""
+    "x-y/calluna-begonia": "no Showdown sprite found for \"Celosia & Bryony\""
   }
 }

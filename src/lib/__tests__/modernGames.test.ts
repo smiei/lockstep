@@ -66,11 +66,20 @@ describe("official Gen 6+ packs", () => {
     }
   });
 
-  it("take the post-ORAS catch rates (Rayquaza 45)", () => {
+  it("take the post-ORAS catch rates (Rayquaza 45), except X/Y, which still has the old 3", () => {
     for (const game of games.filter((g) => g.dexLimit >= 384)) {
       const rate = getCatchRatesForGame(game).find((r) => r.id === 384)?.catch_rate;
-      expect(rate, game.id).toBe(45);
+      expect(rate, game.id).toBe(game.id === "x-y" ? 3 : 45);
     }
+  });
+
+  it("Sun/Moon keep their own Ultra Beast catch rates (Ultra Sun/Ultra Moon changed them)", () => {
+    const rate = (id: string, pokemon: number) =>
+      getCatchRatesForGame(games.find((g) => g.id === id)!).find((r) => r.id === pokemon)?.catch_rate;
+    expect(rate("sun", 795)).toBe(255);
+    expect(rate("moon", 800)).toBe(3);
+    expect(rate("ultra-sun", 795)).toBe(45);
+    expect(rate("ultra-sun", 800)).toBe(255);
   });
 
   it("list their own dex and no further", () => {
