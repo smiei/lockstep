@@ -44,17 +44,6 @@
     "type": "route"
   },
   {
-    "id": 5,
-    "names": {
-      "de": "Blütenburg City",
-      "en": "Petalburg City",
-      "fr": "Clémenti-Ville",
-      "es": "Ciudad Petalia",
-      "it": "Petalipoli"
-    },
-    "type": "route"
-  },
-  {
     "id": 6,
     "names": {
       "de": "Route 104",
@@ -73,17 +62,6 @@
       "fr": "Bois Clémenti",
       "es": "Bosque Petalia",
       "it": "Bosco Petalo"
-    },
-    "type": "route"
-  },
-  {
-    "id": 8,
-    "names": {
-      "de": "Metarost City",
-      "en": "Rustboro City",
-      "fr": "Mérouville",
-      "es": "Ciudad Férrica",
-      "it": "Ferrugipoli"
     },
     "type": "route"
   },
@@ -128,6 +106,17 @@
       "fr": "Myokara",
       "es": "Pueblo Azuliza",
       "it": "Bluruvia"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Blütenburg City",
+      "en": "Petalburg City",
+      "fr": "Clémenti-Ville",
+      "es": "Ciudad Petalia",
+      "it": "Petalipoli"
     },
     "type": "route"
   },
@@ -209,17 +198,6 @@
     "type": "route"
   },
   {
-    "id": 20,
-    "names": {
-      "de": "Wiesenflur",
-      "en": "Verdanturf Town",
-      "fr": "Vergazon",
-      "es": "Pueblo Verdegal",
-      "it": "Mentania"
-    },
-    "type": "route"
-  },
-  {
     "id": 21,
     "names": {
       "de": "Route 111",
@@ -229,6 +207,17 @@
       "it": "Percorso 111"
     },
     "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Fossil Metarost City",
+      "en": "Fossil Rustboro City",
+      "fr": "Fossile Mérouville",
+      "es": "Fósil Ciudad Férrica",
+      "it": "Fossile Ferrugipoli"
+    },
+    "type": "static"
   },
   {
     "id": 22,
@@ -260,17 +249,6 @@
       "fr": "Route 113",
       "es": "Ruta 113",
       "it": "Percorso 113"
-    },
-    "type": "route"
-  },
-  {
-    "id": 25,
-    "names": {
-      "de": "Laubwechselfeld",
-      "en": "Fallarbor Town",
-      "fr": "Autéquia",
-      "es": "Pueblo Pardal",
-      "it": "Brunifoglia"
     },
     "type": "route"
   },
@@ -321,13 +299,13 @@
   {
     "id": 30,
     "names": {
-      "de": "Bad Lavastadt",
-      "en": "Lavaridge Town",
-      "fr": "Vermilava",
-      "es": "Pueblo Lavacalda",
-      "it": "Cuordilava"
+      "de": "Isso-Ei Bad Lavastadt",
+      "en": "Wynaut Egg Lavaridge Town",
+      "fr": "Œuf Okéoké Vermilava",
+      "es": "Huevo de Wynaut Pueblo Lavacalda",
+      "it": "Uovo di Wynaut Cuordilava"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 31,
@@ -343,13 +321,13 @@
   {
     "id": 32,
     "names": {
-      "de": "Insel im Süden",
-      "en": "Southern Island",
-      "fr": "Île du Sud",
-      "es": "Isla del Sur",
-      "it": "Isola Remota"
+      "de": "Latias Insel im Süden",
+      "en": "Latias Southern Island",
+      "fr": "Latias Île du Sud",
+      "es": "Latias Isla del Sur",
+      "it": "Latias Isola Remota"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 33,
@@ -363,15 +341,15 @@
     "type": "route"
   },
   {
-    "id": 34,
+    "id": 86,
     "names": {
-      "de": "Baumhausen City",
-      "en": "Fortree City",
-      "fr": "Cimetronelle",
-      "es": "Ciudad Arborada",
-      "it": "Forestopoli"
+      "de": "Formeo Klima-Institut",
+      "en": "Castform Weather Institute",
+      "fr": "Morphéo Centre Météo",
+      "es": "Castform Instituto Meteorológico",
+      "it": "Castform Instituto Meteo"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 35,
@@ -583,6 +561,50 @@
     "type": "route"
   },
   {
+    "id": 87,
+    "names": {
+      "de": "Kyogre Urzeithöhle",
+      "en": "Kyogre Cave of Origin",
+      "fr": "Kyogre Grotte Origine",
+      "es": "Kyogre Cueva Ancestral",
+      "it": "Kyogre Grotta dei Tempi"
+    },
+    "type": "static"
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Lugia Seewoge Malvenfroh",
+      "en": "Lugia Sea Mauville",
+      "fr": "Lugia Lavandia Sea",
+      "es": "Lugia Malvamar",
+      "it": "Lugia Ciclamare"
+    },
+    "type": "static"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Heatran Sonnengrotte",
+      "en": "Heatran Scorched Slab",
+      "fr": "Heatran Grotte Zénith",
+      "es": "Heatran Gruta Solar",
+      "it": "Heatran Grottino Solare"
+    },
+    "type": "static"
+  },
+  {
+    "id": 90,
+    "names": {
+      "de": "Togepi-Ei Bad Lavastadt",
+      "en": "Togepi Egg Lavaridge Town",
+      "fr": "Œuf Togepi Vermilava",
+      "es": "Huevo de Togepi Pueblo Lavacalda",
+      "it": "Uovo di Togepi Cuordilava"
+    },
+    "type": "static"
+  },
+  {
     "id": 54,
     "names": {
       "de": "Flug",
@@ -592,6 +614,17 @@
       "it": "Volo"
     },
     "type": "route"
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Legendäre im Flug",
+      "en": "Soaring Legendaries",
+      "fr": "Légendaires en vol",
+      "es": "Legendarios en vuelo",
+      "it": "Leggendari in volo"
+    },
+    "type": "static"
   },
   {
     "id": 55,
@@ -635,18 +668,32 @@
       "es": "Pilar Celeste",
       "it": "Torre dei Cieli"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Rayquaza Himmelturm",
+      "en": "Rayquaza Sky Pillar",
+      "fr": "Rayquaza Pilier Céleste",
+      "es": "Rayquaza Pilar Celeste",
+      "it": "Rayquaza Torre dei Cieli"
+    },
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 59,
     "names": {
-      "de": "Rand des Weltalls",
-      "en": "Edge of space",
-      "fr": "Bord de l'espace",
-      "es": "Borde del espacio",
-      "it": "Margine dello spazio"
+      "de": "Deoxys Rand des Weltalls",
+      "en": "Deoxys Edge of Space",
+      "fr": "Deoxys Bord de l'espace",
+      "es": "Deoxys Borde del espacio",
+      "it": "Deoxys Margine dello spazio"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 60,
@@ -737,6 +784,61 @@
     "type": "route"
   },
   {
+    "id": 81,
+    "names": {
+      "de": "Siegelkammer",
+      "en": "Sealed Chamber",
+      "fr": "Sanctuaire",
+      "es": "Cámara Sellada",
+      "it": "Sala Incisa"
+    },
+    "type": "route"
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Regirock Wüstenruine",
+      "en": "Regirock Desert Ruins",
+      "fr": "Regirock Ruines Désert",
+      "es": "Regirock Ruinas del Desierto",
+      "it": "Regirock Rovine Sabbiose"
+    },
+    "type": "static"
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Regice Inselhöhle",
+      "en": "Regice Island Cave",
+      "fr": "Regice Grotte de l'Îlot",
+      "es": "Regice Cueva Insular",
+      "it": "Regice Grotta Insulare"
+    },
+    "type": "static"
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Registeel Grabmal",
+      "en": "Registeel Ancient Tomb",
+      "fr": "Registeel Tombeau Antique",
+      "es": "Registeel Tumba Antigua",
+      "it": "Registeel Tomba Antica"
+    },
+    "type": "static"
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Regigigas Inselhöhle",
+      "en": "Regigigas Island Cave",
+      "fr": "Regigigas Grotte de l'Îlot",
+      "es": "Regigigas Cueva Insular",
+      "it": "Regigigas Grotta Insulare"
+    },
+    "type": "static"
+  },
+  {
     "id": 68,
     "names": {
       "de": "Prachtpolis City",
@@ -759,82 +861,70 @@
     "type": "route"
   },
   {
-    "id": 70,
-    "names": {
-      "de": "MS Tide",
-      "en": "S.S. Tidal",
-      "fr": "Le Marina",
-      "es": "S.S. Marea",
-      "it": "Motonave Marea"
-    },
-    "type": "route",
-    "postgame": true
-  },
-  {
     "id": 71,
     "names": {
-      "de": "Namenlose Ebene",
-      "en": "Pathless Plain",
-      "fr": "Plaine Sans Nom",
-      "es": "Llanura Sinnombre",
-      "it": "Piana Senza Nome"
+      "de": "Kobalium/Terrakium/Viridium Namenlose Ebene",
+      "en": "Cobalion/Terrakion/Virizion Pathless Plain",
+      "fr": "Cobaltium/Terrakium/Viridium Plaine Sans Nom",
+      "es": "Cobalion/Terrakion/Virizion Llanura Sinnombre",
+      "it": "Cobalion/Terrakion/Virizion Piana Senza Nome"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 72,
     "names": {
-      "de": "Unerforschte Höhle",
-      "en": "Nameless Cavern",
-      "fr": "Grotte Oubliée",
-      "es": "Cueva Ignota",
-      "it": "Caverna Ignota"
+      "de": "Selfe/Vesprit/Tobutz Unerforschte Höhle",
+      "en": "Uxie/Mesprit/Azelf Nameless Cavern",
+      "fr": "Créhelf/Créfollet/Créfadet Grotte Oubliée",
+      "es": "Uxie/Mesprit/Azelf Cueva Ignota",
+      "it": "Uxie/Mesprit/Azelf Caverna Ignota"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 73,
     "names": {
-      "de": "Rätselhafte Höhle",
-      "en": "Fabled Cave",
-      "fr": "Grotte Évanescente",
-      "es": "Cueva Incierta",
-      "it": "Grotta Sfuggente"
+      "de": "Zekrom Rätselhafte Höhle",
+      "en": "Zekrom Fabled Cave",
+      "fr": "Zekrom Grotte Évanescente",
+      "es": "Zekrom Cueva Incierta",
+      "it": "Zekrom Grotta Sfuggente"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 74,
     "names": {
-      "de": "Höhle der Spaltung",
-      "en": "Gnarled Den",
-      "fr": "Gouffre Informe",
-      "es": "Boquete Irregular",
-      "it": "Fossa Informe"
+      "de": "Kyurem Höhle der Spaltung",
+      "en": "Kyurem Gnarled Den",
+      "fr": "Kyurem Gouffre Informe",
+      "es": "Kyurem Boquete Irregular",
+      "it": "Kyurem Fossa Informe"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 75,
     "names": {
-      "de": "Wilder Wald",
-      "en": "Trackless Forest",
-      "fr": "Forêt Impénétrable",
-      "es": "Bosque Virgen",
-      "it": "Foresta Vergine"
+      "de": "Raikou/Entei/Suicune Wilder Wald",
+      "en": "Raikou/Entei/Suicune Trackless Forest",
+      "fr": "Raikou/Entei/Suicune Forêt Impénétrable",
+      "es": "Raikou/Entei/Suicune Bosque Virgen",
+      "it": "Raikou/Entei/Suicune Foresta Vergine"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 76,
     "names": {
-      "de": "Sichelinsel",
-      "en": "Crescent Isle",
-      "fr": "Île de l'Arc",
-      "es": "Isla Creciente",
-      "it": "Isola Arcodiluna"
+      "de": "Cresselia Sichelinsel",
+      "en": "Cresselia Crescent Isle",
+      "fr": "Cresselia Île de l'Arc",
+      "es": "Cresselia Isla Creciente",
+      "it": "Cresselia Isola Arcodiluna"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 77,
@@ -845,7 +935,8 @@
       "es": "Resort Batalla",
       "it": "Resort Lotta"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 78,
@@ -879,5 +970,17 @@
       "it": "Monte Miraggio"
     },
     "type": "route"
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Tanhel Moosbach City",
+      "en": "Beldum Mossdeep City",
+      "fr": "Terhal Algatia",
+      "es": "Beldum Ciudad Algaria",
+      "it": "Beldum Verdeazzupoli"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]
