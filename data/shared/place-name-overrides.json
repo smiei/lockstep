@@ -578,6 +578,24 @@
         "Sea Spirit's Den"
       ],
       "note": "Articuno, Zapdos or Moltres, depending on the starter; \"Legendary Bird\" is a plain translation, the place name is the game's own."
+    },
+    "Deoxys Edge of Space": {
+      "de": "Deoxys Rand des Weltalls",
+      "fr": "Deoxys Bord de l'espace",
+      "es": "Deoxys Borde del espacio",
+      "it": "Deoxys Margine dello spazio",
+      "sources": [
+        "pokemon.json"
+      ],
+      "note": "Place as in \"Edge of space\": plain translation, no official name found."
+    },
+    "Soaring Legendaries": {
+      "de": "Legendäre im Flug",
+      "fr": "Légendaires en vol",
+      "es": "Legendarios en vuelo",
+      "it": "Leggendari in volo",
+      "sources": [],
+      "note": "Dialga/Palkia/Giratina and Tornadus/Thundurus/Landorus, met while soaring; plain translation, as for \"Soaring\"."
     }
   }
 }
