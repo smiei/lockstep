@@ -211,11 +211,11 @@
   {
     "id": 12,
     "names": {
-      "de": "Paniola Ranch",
-      "en": "Paniola Ranch",
-      "fr": "Paniola Ranch",
-      "es": "Paniola Ranch",
-      "it": "Paniola Ranch"
+      "de": "Darus",
+      "en": "Dulse",
+      "fr": "Rhody",
+      "es": "Darius",
+      "it": "Darus"
     },
     "location": {
       "de": "Ohana-Farm",
@@ -738,7 +738,7 @@
       "it": "Casa Æther"
     },
     "badge": null,
-    "max_level": 52
+    "max_level": 53
   },
   {
     "id": 40,

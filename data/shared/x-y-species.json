@@ -1,0 +1,137 @@
+{
+  "source": "game data: Pokémon X: only the species whose catch rate differs from the later games of the generation",
+  "sourceVersion": "game-data",
+  "species": [
+    {
+      "id": 382,
+      "name": "Kyogre",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 100,
+        "Vert.": 90,
+        "Sp.-A.": 150,
+        "Sp.-V.": 140,
+        "Init.": 90,
+        "Summe": 670
+      },
+      "catchRate": 5,
+      "weight": 352
+    },
+    {
+      "id": 383,
+      "name": "Groudon",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 150,
+        "Vert.": 140,
+        "Sp.-A.": 100,
+        "Sp.-V.": 90,
+        "Init.": 90,
+        "Summe": 670
+      },
+      "catchRate": 5,
+      "weight": 950
+    },
+    {
+      "id": 384,
+      "name": "Rayquaza",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "KP": 105,
+        "Ang.": 150,
+        "Vert.": 90,
+        "Sp.-A.": 150,
+        "Sp.-V.": 90,
+        "Init.": 95,
+        "Summe": 680
+      },
+      "catchRate": 3,
+      "weight": 206.5
+    },
+    {
+      "id": 483,
+      "name": "Dialga",
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 120,
+        "Vert.": 120,
+        "Sp.-A.": 150,
+        "Sp.-V.": 100,
+        "Init.": 90,
+        "Summe": 680
+      },
+      "catchRate": 30,
+      "weight": 683
+    },
+    {
+      "id": 484,
+      "name": "Palkia",
+      "types": [
+        "water",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 90,
+        "Ang.": 120,
+        "Vert.": 100,
+        "Sp.-A.": 150,
+        "Sp.-V.": 120,
+        "Init.": 100,
+        "Summe": 680
+      },
+      "catchRate": 30,
+      "weight": 336
+    },
+    {
+      "id": 643,
+      "name": "Reshiram",
+      "types": [
+        "dragon",
+        "fire"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 120,
+        "Vert.": 100,
+        "Sp.-A.": 150,
+        "Sp.-V.": 120,
+        "Init.": 90,
+        "Summe": 680
+      },
+      "catchRate": 45,
+      "weight": 330
+    },
+    {
+      "id": 644,
+      "name": "Zekrom",
+      "types": [
+        "dragon",
+        "electric"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 150,
+        "Vert.": 120,
+        "Sp.-A.": 120,
+        "Sp.-V.": 100,
+        "Init.": 90,
+        "Summe": 680
+      },
+      "catchRate": 45,
+      "weight": 345
+    }
+  ]
+}

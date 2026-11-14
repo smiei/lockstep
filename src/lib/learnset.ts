@@ -143,6 +143,14 @@ const PRE_SPLIT_PHYSICAL_TYPES = new Set([
   "steel",
 ]);
 
+// Moves whose category changed AFTER the split, which PokeAPI does not record
+// (it serves the current class only). Same `maxGeneration` convention as the
+// other history tables; checked against the games' own data.
+const DAMAGE_CLASS_HISTORY: Record<string, { maxGeneration: number; damageClass: MoveDamageClass }> = {
+  // Physical in X/Y and Omega Ruby/Alpha Sapphire, special from Sun/Moon on.
+  "water-shuriken": { maxGeneration: 6, damageClass: "physical" },
+};
+
 // The category a move actually had in the given generation. `moveType` must
 // be the type it had THEN (i.e. run it through historicalMoveType first) -
 // Bite being Normal in Gen 1-2 and Dark in Gen 3 flips its category too.
@@ -152,9 +160,12 @@ export function damageClassForGeneration(
   moveType: string,
   currentClass: MoveDamageClass | undefined,
   damaging = true,
+  slug?: string,
 ): MoveDamageClass {
   const known = currentClass ?? (damaging ? "physical" : "status");
   if (known === "status" || !damaging) return "status";
+  const past = slug === undefined ? undefined : DAMAGE_CLASS_HISTORY[slug];
+  if (past && generation >= 4 && generation <= past.maxGeneration) return past.damageClass;
   if (generation >= 4) return known;
   return PRE_SPLIT_PHYSICAL_TYPES.has(moveType) ? "physical" : "special";
 }
@@ -256,7 +267,7 @@ export function moveDetail(
   const stats = info
     ? moveStatsForGeneration(info, generation)
     : { power: null, accuracy: null, pp: null, effectChance: null };
-  const damageClass = damageClassForGeneration(generation, type, info?.damageClass, damaging);
+  const damageClass = damageClassForGeneration(generation, type, info?.damageClass, damaging, slug);
   const modernDamageClass = damageClassForGeneration(9, modernType, info?.damageClass, damaging);
 
   const detail: MoveDetail = {

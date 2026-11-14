@@ -40,9 +40,11 @@ const GENERATIONS = {
   "generation-ix": 9,
 };
 
-// Nothing past Gen 5 can matter: every game pack in this app is Gen 1-5, so an
-// override that only kicks in from Gen 6 on would be dead weight.
-const MAX_RELEVANT_GENERATION = 5;
+// The app has packs up to Gen 7 that roll values back (X/Y to Ultra Sun/Ultra
+// Moon), so changes made in Gen 8 matter too: Aegislash had 150 Defense and
+// Sp. Defense until then, and the old limit of 5 dropped that entry. The Gen 8/9
+// packs show current values.
+const MAX_RELEVANT_GENERATION = 7;
 
 // PokeAPI is not infallible. Roserade's past_stats names the wrong stat: it
 // reports attack=55, but Roserade's attack has always been 70 - what Gen 6

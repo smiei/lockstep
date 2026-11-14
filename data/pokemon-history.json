@@ -1665,6 +1665,14 @@
     }
   },
   {
+    "id": 681,
+    "maxGeneration": 7,
+    "stats": {
+      "defense": 150,
+      "special-defense": 150
+    }
+  },
+  {
     "id": 10008,
     "maxGeneration": 4,
     "types": [

@@ -62,7 +62,7 @@ games: one file in the root is enough, unless you want generation-accurate art
 - then drop a per-game copy in that game folder.
 
 BY FOLDER - the games using it, then every trainer in journey order
-(406 distinct slugs, 121 entries marked * without an automatic picture).
+(405 distinct slugs, 119 entries marked * without an automatic picture).
 A name listed under several folders can live once in the root instead.
 
   FireRed / LeafGreen, New Generations, Radical Red  ->  firered/   (59)
@@ -453,7 +453,7 @@ A name listed under several folders can live once in the root instead.
     amaro.png                   Amaro (Ramos)
     aliana.png                  Aliana   *
     citro.png                   Citro (Clemont)
-    valeria.png                 Valeria   *
+    valerie.png                 Valerie
     calluna-begonia.png         Calluna & Begonia (Celosia & Bryony)   *
     magnolia.png                Magnolia (Mable)
     astrid.png                  Astrid (Olympia)
@@ -529,7 +529,7 @@ A name listed under several folders can live once in the root instead.
     professor-kukui.png         Professor Kukui (Kukui)
     sina.png                    Sina
 
-  Ultra Sun, Ultra Moon  ->  ultra-sun-ultra-moon/   (39)
+  Ultra Sun, Ultra Moon  ->  ultra-sun-ultra-moon/   (38)
     tali.png                    Tali (Hau)
     elima.png                   Elima (Ilima)
     prufung-von-elima.png       Prüfung von Elima (Ilima's Trial)   *
@@ -538,7 +538,6 @@ A name listed under several folders can live once in the root instead.
     dexio.png                   Dexio
     gladio.png                  Gladio (Gladion)
     prufung-von-tracy.png       Prüfung von Tracy (Lana's Trial)   *
-    paniola-ranch.png           Paniola Ranch   *
     prufung-von-kiawe.png       Prüfung von Kiawe (Kiawe's Trial)   *
     prufung-von-maho.png        Prüfung von Maho (Mallow's Trial)   *
     fran.png                    Fran (Plumeria)
