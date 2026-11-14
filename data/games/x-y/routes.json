@@ -68,13 +68,13 @@
   {
     "id": 7,
     "names": {
-      "de": "Illumina City",
-      "en": "Lumiose City",
-      "fr": "Illumis",
-      "es": "Ciudad Luminalia",
-      "it": "Luminopoli"
+      "de": "Kanto-Starter Illumina City",
+      "en": "Kanto Starter Lumiose City",
+      "fr": "Starter de Kanto Illumis",
+      "es": "Inicial de Kanto Ciudad Luminalia",
+      "it": "Starter di Kanto Luminopoli"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 8,
@@ -99,17 +99,6 @@
     "type": "route"
   },
   {
-    "id": 10,
-    "names": {
-      "de": "Magnum-Opus-Palast",
-      "en": "Parfum Palace",
-      "fr": "Palais Chaydeuvre",
-      "es": "Palacio Cénit",
-      "it": "Reggia Aurea"
-    },
-    "type": "route"
-  },
-  {
     "id": 11,
     "names": {
       "de": "Route 7",
@@ -119,6 +108,17 @@
       "it": "Percorso 7"
     },
     "type": "route"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Relaxo Route 7",
+      "en": "Snorlax Route 7",
+      "fr": "Ronflex Route 7",
+      "es": "Snorlax Ruta 7",
+      "it": "Snorlax Percorso 7"
+    },
+    "type": "static"
   },
   {
     "id": 12,
@@ -150,6 +150,28 @@
       "fr": "Roche-sur-Gliffe",
       "es": "Pueblo Petroglifo",
       "it": "Petroglifari"
+    },
+    "type": "route"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Fossil Petrophia",
+      "en": "Fossil Ambrette Town",
+      "fr": "Fossile Roche-sur-Gliffe",
+      "es": "Fósil Pueblo Petroglifo",
+      "it": "Fossile Petroglifari"
+    },
+    "type": "static"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Magnum-Opus-Palast",
+      "en": "Parfum Palace",
+      "fr": "Palais Chaydeuvre",
+      "es": "Palacio Cénit",
+      "it": "Reggia Aurea"
     },
     "type": "route"
   },
@@ -233,13 +255,13 @@
   {
     "id": 22,
     "names": {
-      "de": "Turm der Erkenntnis",
-      "en": "Tower of Mastery",
-      "fr": "Tour Maîtrise",
-      "es": "Torre Maestra",
-      "it": "Torre Maestra"
+      "de": "Lucario Turm der Erkenntnis",
+      "en": "Lucario Tower of Mastery",
+      "fr": "Lucario Tour Maîtrise",
+      "es": "Lucario Torre Maestra",
+      "it": "Lucario Torre Maestra"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 23,
@@ -251,6 +273,17 @@
       "it": "Percorso 12"
     },
     "type": "route"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Lapras Route 12",
+      "en": "Lapras Route 12",
+      "fr": "Lokhlass Route 12",
+      "es": "Lapras Ruta 12",
+      "it": "Lapras Percorso 12"
+    },
+    "type": "static"
   },
   {
     "id": 24,
@@ -354,13 +387,13 @@
   {
     "id": 33,
     "names": {
-      "de": "Flare-Geheimbasis",
-      "en": "Team Flare Secret HQ",
-      "fr": "Repaire Team Flare",
-      "es": "Guarida Team Flare",
-      "it": "Covo del Team Flare"
+      "de": "Xerneas/Yveltal Flare-Geheimbasis",
+      "en": "Xerneas/Yveltal Team Flare Secret HQ",
+      "fr": "Xerneas/Yveltal Repaire Team Flare",
+      "es": "Xerneas/Yveltal Guarida Team Flare",
+      "it": "Xerneas/Yveltal Covo del Team Flare"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 34,
@@ -451,14 +484,39 @@
     "type": "route"
   },
   {
+    "id": 46,
+    "names": {
+      "de": "Zygarde Omega-Höhle",
+      "en": "Zygarde Terminus Cave",
+      "fr": "Zygarde Grotte Coda",
+      "es": "Zygarde Cueva Desenlace",
+      "it": "Zygarde Grotta Climax"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
     "id": 42,
     "names": {
-      "de": "Meerestitanenhöhle",
-      "en": "Sea Spirit’s Den",
-      "fr": "Antre Néréen",
-      "es": "Cueva Talasia",
-      "it": "Antro Talassico"
+      "de": "Legendärer Vogel Meerestitanenhöhle",
+      "en": "Legendary Bird Sea Spirit’s Den",
+      "fr": "Oiseau légendaire Antre Néréen",
+      "es": "Ave legendaria Cueva Talasia",
+      "it": "Uccello leggendario Antro Talassico"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Mewtu Geheimdungeon",
+      "en": "Mewtwo Unknown Dungeon",
+      "fr": "Mewtwo Grotte Inconnue",
+      "es": "Mewtwo Mazmorra Rara",
+      "it": "Mewtwo Grotta Ignota"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]
