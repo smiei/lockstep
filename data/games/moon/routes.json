@@ -46,11 +46,11 @@
   {
     "id": 5,
     "names": {
-      "de": "Hauholi City",
-      "en": "Hau’oli City",
-      "fr": "Ekaeka",
-      "es": "Ciudad Hauoli",
-      "it": "Hau'oli"
+      "de": "Hauholi City (Einkaufsviertel)",
+      "en": "Hau’oli City (Shopping District)",
+      "fr": "Ekaeka (Zone commerciale)",
+      "es": "Ciudad Hauoli (Zona Comercial)",
+      "it": "Hau'oli (Zona Commerciale)"
     },
     "type": "route"
   },
@@ -80,7 +80,7 @@
     "id": 8,
     "names": {
       "de": "Beerenfelder",
-      "en": "Alola Berry Fields",
+      "en": "Berry Fields",
       "fr": "Champ de Baies",
       "es": "Huerto de Bayas",
       "it": "Orto delle Bacche"
@@ -187,6 +187,17 @@
     "type": "route"
   },
   {
+    "id": 71,
+    "names": {
+      "de": "Evoli-Ei Ohana-Farm",
+      "en": "Eevee Egg Paniola Ranch",
+      "fr": "Œuf Évoli Ranch Ohana",
+      "es": "Huevo de Eevee Rancho Ohana",
+      "it": "Uovo di Eevee Fattoria Ohana"
+    },
+    "type": "static"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Route 5",
@@ -205,6 +216,17 @@
       "fr": "Colline Clapotis",
       "es": "Colina Saltagua",
       "it": "Collina Scrosciante"
+    },
+    "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Hauholi City (Strandpromenade)",
+      "en": "Hau’oli City (Beachfront)",
+      "fr": "Ekaeka (Plage)",
+      "es": "Ciudad Hauoli (Paseo Marítimo)",
+      "it": "Hau'oli (Lungomare)"
     },
     "type": "route"
   },
@@ -304,17 +326,6 @@
       "fr": "Route 9",
       "es": "Ruta 9",
       "it": "Percorso 9"
-    },
-    "type": "route"
-  },
-  {
-    "id": 29,
-    "names": {
-      "de": "Konikoni City",
-      "en": "Konikoni City",
-      "fr": "Konikoni",
-      "es": "Ciudad Konikoni",
-      "it": "Konikoni"
     },
     "type": "route"
   },
@@ -475,13 +486,14 @@
   {
     "id": 44,
     "names": {
-      "de": "Æther-Haus",
-      "en": "Aether House",
-      "fr": "Maison Æther",
-      "es": "Casa Æther",
-      "it": "Casa Æther"
+      "de": "Porygon Æther-Haus",
+      "en": "Porygon Aether House",
+      "fr": "Porygon Maison Æther",
+      "es": "Porygon Casa Æther",
+      "it": "Porygon Casa Æther"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 45,
@@ -528,17 +540,6 @@
     "type": "route"
   },
   {
-    "id": 49,
-    "names": {
-      "de": "Sonnenkreis-See",
-      "en": "Lake of the Sunne",
-      "fr": "Lac du Halo Solaire",
-      "es": "Lago Corosol",
-      "it": "Lago Solare"
-    },
-    "type": "route"
-  },
-  {
     "id": 50,
     "names": {
       "de": "Route 17",
@@ -570,6 +571,17 @@
       "it": "Villaggio del Mare"
     },
     "type": "route"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Aerodactyl Dorf des Seevolkes",
+      "en": "Aerodactyl Seafolk Village",
+      "fr": "Ptéra Village Flottant",
+      "es": "Aerodactyl Aldea Marina",
+      "it": "Aerodactyl Villaggio del Mare"
+    },
+    "type": "static"
   },
   {
     "id": 53,
@@ -629,13 +641,13 @@
   {
     "id": 58,
     "names": {
-      "de": "Mondscheiben-Podium",
-      "en": "Altar of the Moone",
-      "fr": "Autel de la Lune",
-      "es": "Altar de la Luna",
-      "it": "Altare Lunare"
+      "de": "Lunala Mondscheiben-Podium",
+      "en": "Lunala Altar of the Moone",
+      "fr": "Lunala Autel de la Lune",
+      "es": "Lunala Altar de la Luna",
+      "it": "Lunala Altare Lunare"
     },
-    "type": "route"
+    "type": "static"
   },
   {
     "id": 59,
@@ -657,7 +669,8 @@
       "es": "Bosque de Poni",
       "it": "Foresta di Poni"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 61,
@@ -668,7 +681,8 @@
       "es": "Llanura de Poni",
       "it": "Prateria di Poni"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 62,
@@ -679,7 +693,8 @@
       "es": "Jardines de Poni",
       "it": "Prato Poni"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 63,
@@ -690,7 +705,8 @@
       "es": "Gruta Desenlace",
       "it": "Caverna Climax"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 64,
@@ -701,7 +717,8 @@
       "es": "Costa de Poni",
       "it": "Costa di Poni"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 65,
@@ -712,50 +729,103 @@
       "es": "Pendiente de Poni",
       "it": "Erta di Poni"
     },
-    "type": "route"
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 66,
     "names": {
-      "de": "Ruinen des Krieges",
-      "en": "Ruins of Conflict",
-      "fr": "Ruines du Conflit",
-      "es": "Ruinas de la Guerra",
-      "it": "Tempio del Conflitto"
+      "de": "Kapu-Riki Ruinen des Krieges",
+      "en": "Tapu Koko Ruins of Conflict",
+      "fr": "Tokorico Ruines du Conflit",
+      "es": "Tapu Koko Ruinas de la Guerra",
+      "it": "Tapu Koko Tempio del Conflitto"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 67,
     "names": {
-      "de": "Ruinen des Lebens",
-      "en": "Ruins of Life",
-      "fr": "Ruines de l’Éveil",
-      "es": "Ruinas de la Vida",
-      "it": "Tempio della Vita"
+      "de": "Kapu-Fala Ruinen des Lebens",
+      "en": "Tapu Lele Ruins of Life",
+      "fr": "Tokopiyon Ruines de l’Éveil",
+      "es": "Tapu Lele Ruinas de la Vida",
+      "it": "Tapu Lele Tempio della Vita"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 68,
     "names": {
-      "de": "Ruinen des Gedeihens",
-      "en": "Ruins of Abundance",
-      "fr": "Ruines de l’Essor",
-      "es": "Ruinas de la Cosecha",
-      "it": "Tempio del Raccolto"
+      "de": "Kapu-Toro Ruinen des Gedeihens",
+      "en": "Tapu Bulu Ruins of Abundance",
+      "fr": "Tokotoro Ruines de l’Essor",
+      "es": "Tapu Bulu Ruinas de la Cosecha",
+      "it": "Tapu Bulu Tempio del Raccolto"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
   },
   {
     "id": 69,
     "names": {
-      "de": "Ruinen der Heimkehr",
-      "en": "Ruins of Hope",
-      "fr": "Ruines de l’Au-Delà",
-      "es": "Ruinas del Tránsito",
-      "it": "Tempio del Passaggio"
+      "de": "Kapu-Kime Ruinen der Heimkehr",
+      "en": "Tapu Fini Ruins of Hope",
+      "fr": "Tokopisco Ruines de l’Au-Delà",
+      "es": "Tapu Fini Ruinas del Tránsito",
+      "it": "Tapu Fini Tempio del Passaggio"
     },
-    "type": "route"
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Cosmog Mondscheiben-See",
+      "en": "Cosmog Lake of the Moone",
+      "fr": "Cosmog Lac du Halo Lunaire",
+      "es": "Cosmog Lago Coroluna",
+      "it": "Cosmog Lago Lunare"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Typ:Null Æther-Paradies",
+      "en": "Type: Null Aether Paradise",
+      "fr": "Type:0 Paradis Æther",
+      "es": "Código Cero Paraíso Æther",
+      "it": "Tipo Zero Æther Paradise"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Ultrabestien",
+      "en": "Ultra Beasts",
+      "fr": "Ultra-Chimères",
+      "es": "Ultraentes",
+      "it": "Ultracreature"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Necrozma Tenkarat-Hügel",
+      "en": "Necrozma Ten Carat Hill",
+      "fr": "Necrozma Colline Dicarat",
+      "es": "Necrozma Colina Dequilate",
+      "it": "Necrozma Collina Diecicarati"
+    },
+    "type": "static",
+    "postgame": true
   }
 ]

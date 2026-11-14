@@ -596,6 +596,58 @@
       "it": "Leggendari in volo",
       "sources": [],
       "note": "Dialga/Palkia/Giratina and Tornadus/Thundurus/Landorus, met while soaring; plain translation, as for \"Soaring\"."
+    },
+    "Hau’oli City (Shopping District)": {
+      "de": "Hauholi City (Einkaufsviertel)",
+      "fr": "Ekaeka (Zone commerciale)",
+      "es": "Ciudad Hauoli (Zona Comercial)",
+      "it": "Hau'oli (Zona Commerciale)",
+      "sources": [
+        "Hau'oli City"
+      ],
+      "note": "City and district names are the game's own (its place-name text)."
+    },
+    "Hau’oli City (Beachfront)": {
+      "de": "Hauholi City (Strandpromenade)",
+      "fr": "Ekaeka (Plage)",
+      "es": "Ciudad Hauoli (Paseo Marítimo)",
+      "it": "Hau'oli (Lungomare)",
+      "sources": [
+        "Hau'oli City"
+      ],
+      "note": "City and district names are the game's own (its place-name text)."
+    },
+    "Porygon Aether House": {
+      "de": "Porygon Æther-Haus",
+      "fr": "Porygon Maison Æther",
+      "es": "Porygon Casa Æther",
+      "it": "Porygon Casa Æther",
+      "sources": [
+        "Route 15 (Alola)",
+        "Æther-Paradies",
+        "pokemon.json"
+      ],
+      "note": "German \"Æther-Haus\" verified; \"Æther\" spelling verified via Paradis/Paraíso Æther; \"House\" in fr/es/it is a plain translation."
+    },
+    "Ultra Beasts": {
+      "de": "Ultrabestien",
+      "fr": "Ultra-Chimères",
+      "es": "Ultraentes",
+      "it": "Ultracreature",
+      "sources": [
+        "Ultrabestie"
+      ],
+      "note": "The group's official name; one entry for all Ultra Beasts of the game (post-game)."
+    },
+    "Ultra Wormhole": {
+      "de": "Ultrapforte",
+      "fr": "Ultra-Brèche",
+      "es": "Ultraumbral",
+      "it": "Ultravarco",
+      "sources": [
+        "Ultrapforte"
+      ],
+      "note": "One entry for the legendary Pokémon and Ultra Beasts found through the Ultra Wormhole (post-game)."
     }
   }
 }
