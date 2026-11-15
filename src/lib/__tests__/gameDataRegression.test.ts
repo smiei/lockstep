@@ -47,6 +47,7 @@ describe("game data regression (pre Infinite Fusion refactor)", () => {
         "red-blue",
         "yellow",
         "gold-silver",
+        "silver",
         "crystal",
         "firered",
         "emerald",
