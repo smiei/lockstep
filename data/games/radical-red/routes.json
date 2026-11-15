@@ -572,17 +572,6 @@
     "type": "static"
   },
   {
-    "id": 48,
-    "names": {
-      "de": "Mt. Ember",
-      "en": "Mt. Ember",
-      "fr": "Mt. Ember",
-      "es": "Mt. Ember",
-      "it": "Mt. Ember"
-    },
-    "type": "route"
-  },
-  {
     "id": 49,
     "names": {
       "de": "Treasure Beach",
@@ -590,39 +579,6 @@
       "fr": "Treasure Beach",
       "es": "Treasure Beach",
       "it": "Treasure Beach"
-    },
-    "type": "route"
-  },
-  {
-    "id": 50,
-    "names": {
-      "de": "Berry Forest",
-      "en": "Berry Forest",
-      "fr": "Berry Forest",
-      "es": "Berry Forest",
-      "it": "Berry Forest"
-    },
-    "type": "route"
-  },
-  {
-    "id": 51,
-    "names": {
-      "de": "Bond Bridge",
-      "en": "Bond Bridge",
-      "fr": "Bond Bridge",
-      "es": "Bond Bridge",
-      "it": "Bond Bridge"
-    },
-    "type": "route"
-  },
-  {
-    "id": 52,
-    "names": {
-      "de": "Cape Brink",
-      "en": "Cape Brink",
-      "fr": "Cape Brink",
-      "es": "Cape Brink",
-      "it": "Cape Brink"
     },
     "type": "route"
   },
