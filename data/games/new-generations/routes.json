@@ -583,6 +583,330 @@
     "type": "route"
   },
   {
+    "id": 55,
+    "names": {
+      "de": "One Island",
+      "en": "One Island",
+      "fr": "One Island",
+      "es": "One Island",
+      "it": "One Island"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Kindle Road",
+      "en": "Kindle Road",
+      "fr": "Kindle Road",
+      "es": "Kindle Road",
+      "it": "Kindle Road"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Mt. Ember",
+      "en": "Mt. Ember",
+      "fr": "Mt. Ember",
+      "es": "Mt. Ember",
+      "it": "Mt. Ember"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Treasure Beach",
+      "en": "Treasure Beach",
+      "fr": "Treasure Beach",
+      "es": "Treasure Beach",
+      "it": "Treasure Beach"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Cape Brink",
+      "en": "Cape Brink",
+      "fr": "Cape Brink",
+      "es": "Cape Brink",
+      "it": "Cape Brink"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Bond Bridge",
+      "en": "Bond Bridge",
+      "fr": "Bond Bridge",
+      "es": "Bond Bridge",
+      "it": "Bond Bridge"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Three Isle Port",
+      "en": "Three Isle Port",
+      "fr": "Three Isle Port",
+      "es": "Three Isle Port",
+      "it": "Three Isle Port"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "Berry Forest",
+      "en": "Berry Forest",
+      "fr": "Berry Forest",
+      "es": "Berry Forest",
+      "it": "Berry Forest"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Four Island",
+      "en": "Four Island",
+      "fr": "Four Island",
+      "es": "Four Island",
+      "it": "Four Island"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Icefall Cave",
+      "en": "Icefall Cave",
+      "fr": "Icefall Cave",
+      "es": "Icefall Cave",
+      "it": "Icefall Cave"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Five Island",
+      "en": "Five Island",
+      "fr": "Five Island",
+      "es": "Five Island",
+      "it": "Five Island"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Five Isle Meadow",
+      "en": "Five Isle Meadow",
+      "fr": "Five Isle Meadow",
+      "es": "Five Isle Meadow",
+      "it": "Five Isle Meadow"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Water Labyrinth",
+      "en": "Water Labyrinth",
+      "fr": "Water Labyrinth",
+      "es": "Water Labyrinth",
+      "it": "Water Labyrinth"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Resort Gorgeous",
+      "en": "Resort Gorgeous",
+      "fr": "Resort Gorgeous",
+      "es": "Resort Gorgeous",
+      "it": "Resort Gorgeous"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Lost Cave",
+      "en": "Lost Cave",
+      "fr": "Lost Cave",
+      "es": "Lost Cave",
+      "it": "Lost Cave"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Memorial Pillar",
+      "en": "Memorial Pillar",
+      "fr": "Memorial Pillar",
+      "es": "Memorial Pillar",
+      "it": "Memorial Pillar"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Water Path",
+      "en": "Water Path",
+      "fr": "Water Path",
+      "es": "Water Path",
+      "it": "Water Path"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Ruin Valley",
+      "en": "Ruin Valley",
+      "fr": "Ruin Valley",
+      "es": "Ruin Valley",
+      "it": "Ruin Valley"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Green Path",
+      "en": "Green Path",
+      "fr": "Green Path",
+      "es": "Green Path",
+      "it": "Green Path"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Outcast Island",
+      "en": "Outcast Island",
+      "fr": "Outcast Island",
+      "es": "Outcast Island",
+      "it": "Outcast Island"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Pattern Bush",
+      "en": "Pattern Bush",
+      "fr": "Pattern Bush",
+      "es": "Pattern Bush",
+      "it": "Pattern Bush"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Altering Cave",
+      "en": "Altering Cave",
+      "fr": "Altering Cave",
+      "es": "Altering Cave",
+      "it": "Altering Cave"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Trainer Tower",
+      "en": "Trainer Tower",
+      "fr": "Trainer Tower",
+      "es": "Trainer Tower",
+      "it": "Trainer Tower"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Canyon Entrance",
+      "en": "Canyon Entrance",
+      "fr": "Canyon Entrance",
+      "es": "Canyon Entrance",
+      "it": "Canyon Entrance"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Sevault Canyon",
+      "en": "Sevault Canyon",
+      "fr": "Sevault Canyon",
+      "es": "Sevault Canyon",
+      "it": "Sevault Canyon"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Tanoby Ruins",
+      "en": "Tanoby Ruins",
+      "fr": "Tanoby Ruins",
+      "es": "Tanoby Ruins",
+      "it": "Tanoby Ruins"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Tanoby Ruins (Unown)",
+      "en": "Tanoby Ruins (Unown)",
+      "fr": "Tanoby Ruins (Unown)",
+      "es": "Tanoby Ruins (Unown)",
+      "it": "Tanoby Ruins (Unown)"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
     "id": 54,
     "names": {
       "de": "Cerulean Cave",

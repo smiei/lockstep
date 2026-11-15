@@ -1081,5 +1081,17 @@
       "it": "Cube Corp."
     },
     "type": "route"
+  },
+  {
+    "id": 98,
+    "names": {
+      "de": "Distortion World",
+      "en": "Distortion World",
+      "fr": "Distortion World",
+      "es": "Distortion World",
+      "it": "Distortion World"
+    },
+    "type": "route",
+    "postgame": true
   }
 ]
