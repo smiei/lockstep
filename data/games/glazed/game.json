@@ -5,8 +5,10 @@
   "generation": 3,
   "dataGeneration": 6,
   "dexLimit": 721,
+  "species": true,
   "spriteSet": "emerald",
   "versionGroup": "emerald",
+  "speciesData": "glazed",
   "trainerSet": "emerald",
   "names": {
     "de": "Glazed",
