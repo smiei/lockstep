@@ -21,11 +21,11 @@
   {
     "id": 2,
     "names": {
-      "de": "Brandan (optional)",
-      "en": "Brandan (optional)",
-      "fr": "Brandan (optional)",
-      "es": "Brandan (optional)",
-      "it": "Brandan (optional)"
+      "de": "Brendan (optional)",
+      "en": "Brendan (optional)",
+      "fr": "Brendan (optional)",
+      "es": "Brendan (optional)",
+      "it": "Brendan (optional)"
     },
     "location": {
       "de": "Rustboro City",
@@ -81,44 +81,6 @@
     },
     "max_level": 15,
     "sprite": "Felizia"
-  },
-  {
-    "id": 5,
-    "names": {
-      "de": "Magma Admin Tabitha",
-      "en": "Magma Admin Tabitha",
-      "fr": "Magma Admin Tabitha",
-      "es": "Magma Admin Tabitha",
-      "it": "Magma Admin Tabitha"
-    },
-    "location": {
-      "de": "Mt. Chimney",
-      "en": "Mt. Chimney",
-      "fr": "Mt. Chimney",
-      "es": "Mt. Chimney",
-      "it": "Mt. Chimney"
-    },
-    "badge": null,
-    "max_level": 38
-  },
-  {
-    "id": 6,
-    "names": {
-      "de": "Magma Leader Maxie",
-      "en": "Magma Leader Maxie",
-      "fr": "Magma Leader Maxie",
-      "es": "Magma Leader Maxie",
-      "it": "Magma Leader Maxie"
-    },
-    "location": {
-      "de": "Mt. Chimney",
-      "en": "Mt. Chimney",
-      "fr": "Mt. Chimney",
-      "es": "Mt. Chimney",
-      "it": "Mt. Chimney"
-    },
-    "badge": null,
-    "max_level": 39
   },
   {
     "id": 7,
@@ -248,6 +210,44 @@
     },
     "badge": null,
     "max_level": 37
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Magma Admin Tabitha",
+      "en": "Magma Admin Tabitha",
+      "fr": "Magma Admin Tabitha",
+      "es": "Magma Admin Tabitha",
+      "it": "Magma Admin Tabitha"
+    },
+    "location": {
+      "de": "Mt. Chimney",
+      "en": "Mt. Chimney",
+      "fr": "Mt. Chimney",
+      "es": "Mt. Chimney",
+      "it": "Mt. Chimney"
+    },
+    "badge": null,
+    "max_level": 38
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Magma Leader Maxie",
+      "en": "Magma Leader Maxie",
+      "fr": "Magma Leader Maxie",
+      "es": "Magma Leader Maxie",
+      "it": "Magma Leader Maxie"
+    },
+    "location": {
+      "de": "Mt. Chimney",
+      "en": "Mt. Chimney",
+      "fr": "Mt. Chimney",
+      "es": "Mt. Chimney",
+      "it": "Mt. Chimney"
+    },
+    "badge": null,
+    "max_level": 39
   },
   {
     "id": 13,

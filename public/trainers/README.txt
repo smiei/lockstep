@@ -152,12 +152,12 @@ A name listed under several folders can live once in the root instead.
     maike.png                   Maike (May)
     jordis.png                  Jördis (Courtney)
     red.png                     Red
-    brandan-optional.png        Brandan (optional)
+    brendan-optional.png        Brendan (optional)
     may-optional.png            May (optional)
-    magma-admin-tabitha.png     Magma Admin Tabitha
-    magma-leader-maxie.png      Magma Leader Maxie
     brendan.png                 Brendan
     may.png                     May
+    magma-admin-tabitha.png     Magma Admin Tabitha
+    magma-leader-maxie.png      Magma Leader Maxie
     aqua-admin-shelly.png       Aqua Admin Shelly
     aqua-admin-matt.png         Aqua Admin Matt
     magma-admin-courtney.png    Magma Admin Courtney
