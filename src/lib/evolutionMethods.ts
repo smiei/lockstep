@@ -58,6 +58,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "link-stone": "Link Stone",
     "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
+    "trade-stone": "Trade Stone",
   },
   en: {
     "fire-stone": "Fire Stone",
@@ -111,6 +112,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "link-stone": "Link Stone",
     "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
+    "trade-stone": "Trade Stone",
   },
   fr: {
     "fire-stone": "Pierre Feu",
@@ -164,6 +166,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "link-stone": "Link Stone",
     "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
+    "trade-stone": "Trade Stone",
   },
   es: {
     "fire-stone": "Piedra Fuego",
@@ -217,6 +220,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "link-stone": "Link Stone",
     "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
+    "trade-stone": "Trade Stone",
   },
   it: {
     "fire-stone": "Pietrafocaia",
@@ -270,6 +274,7 @@ const ITEM_LABELS: Record<Lang, Record<string, string>> = {
     "link-stone": "Link Stone",
     "mining-kit": "Mining Kit",
     "link-cable": "Link Cable",
+    "trade-stone": "Trade Stone",
   },
 };
 

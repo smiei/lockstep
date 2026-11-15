@@ -1,0 +1,322 @@
+[
+  {
+    "from": 82,
+    "to": 462,
+    "comment": "Magneton -> Magnezone",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 108,
+    "to": 463,
+    "comment": "Lickitung -> Lickilicky",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 112,
+    "to": 464,
+    "comment": "Rhydon -> Rhyperior",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "trade-stone"
+    }
+  },
+  {
+    "from": 114,
+    "to": 465,
+    "comment": "Tangela -> Tangrowth",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "from": 125,
+    "to": 466,
+    "comment": "Electabuzz -> Electivire",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "trade-stone"
+    }
+  },
+  {
+    "from": 126,
+    "to": 467,
+    "comment": "Magmar -> Magmortar",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "trade-stone"
+    }
+  },
+  {
+    "from": 190,
+    "to": 424,
+    "comment": "Aipom -> Ambipom",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 193,
+    "to": 469,
+    "comment": "Yanma -> Yanmega",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 207,
+    "to": 472,
+    "comment": "Gligar -> Gliscor",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 215,
+    "to": 461,
+    "comment": "Sneasel -> Weavile",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 221,
+    "to": 473,
+    "comment": "Piloswine -> Mamoswine",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 44
+    }
+  },
+  {
+    "from": 233,
+    "to": 474,
+    "comment": "Porygon2 -> Porygon-Z",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "trade-stone"
+    }
+  },
+  {
+    "from": 353,
+    "to": 354,
+    "comment": "Shuppet -> Banette",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 361,
+    "to": 362,
+    "comment": "Snorunt -> Glalie",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 406,
+    "to": 315,
+    "comment": "Budew -> Roselia",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 14
+    }
+  },
+  {
+    "from": 447,
+    "to": 448,
+    "comment": "Riolu -> Lucario",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 25
+    }
+  },
+  {
+    "from": 451,
+    "to": 452,
+    "comment": "Skorupi -> Drapion",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 453,
+    "to": 454,
+    "comment": "Croagunk -> Toxicroak",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 479,
+    "to": 10008,
+    "comment": "Rotom (Rotom) -> Rotom (Heat Rotom)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "fire-stone"
+    }
+  },
+  {
+    "from": 479,
+    "to": 10009,
+    "comment": "Rotom (Rotom) -> Rotom (Wash Rotom)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "water-stone"
+    }
+  },
+  {
+    "from": 479,
+    "to": 10010,
+    "comment": "Rotom (Rotom) -> Rotom (Frost Rotom)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    }
+  },
+  {
+    "from": 479,
+    "to": 10011,
+    "comment": "Rotom (Rotom) -> Rotom (Fan Rotom)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 479,
+    "to": 10012,
+    "comment": "Rotom (Rotom) -> Rotom (Mow Rotom)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "leaf-stone"
+    }
+  },
+  {
+    "from": 595,
+    "to": 596,
+    "comment": "Joltik -> Galvantula",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 619,
+    "to": 620,
+    "comment": "Mienfoo -> Mienshao",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 622,
+    "to": 623,
+    "comment": "Golett -> Golurk",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 624,
+    "to": 625,
+    "comment": "Pawniard -> Bisharp",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 42
+    }
+  },
+  {
+    "from": 633,
+    "to": 634,
+    "comment": "Deino -> Zweilous",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 634,
+    "to": 635,
+    "comment": "Zweilous -> Hydreigon",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 54
+    }
+  },
+  {
+    "from": 636,
+    "to": 637,
+    "comment": "Larvesta -> Volcarona",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 49
+    }
+  },
+  {
+    "from": 690,
+    "to": 691,
+    "comment": "Skrelp -> Dragalge",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 42
+    }
+  },
+  {
+    "from": 708,
+    "to": 709,
+    "comment": "Phantump -> Trevenant",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "trade-stone"
+    }
+  }
+]
