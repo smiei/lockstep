@@ -1,0 +1,162 @@
+[
+  {
+    "from": 61,
+    "to": 186,
+    "comment": "Quaputzi -> Quaxo",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 64,
+    "to": 65,
+    "comment": "Kadabra -> Simsala",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 67,
+    "to": 68,
+    "comment": "Maschock -> Machomei",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 75,
+    "to": 76,
+    "comment": "Georok -> Geowaz",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 79,
+    "to": 199,
+    "comment": "Flegmon -> Laschoking",
+    "method": {
+      "kind": "item",
+      "item": "water-stone"
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 93,
+    "to": 94,
+    "comment": "Alpollo -> Gengar",
+    "method": {
+      "kind": "level",
+      "level": 37
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 95,
+    "to": 208,
+    "comment": "Onix -> Stahlos",
+    "method": {
+      "kind": "level",
+      "level": 30
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 117,
+    "to": 230,
+    "comment": "Seemon -> Seedraking",
+    "method": {
+      "kind": "level",
+      "level": 40
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 123,
+    "to": 212,
+    "comment": "Sichlor -> Scherox",
+    "method": {
+      "kind": "level",
+      "level": 30
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 137,
+    "to": 233,
+    "comment": "Porygon -> Porygon2",
+    "method": {
+      "kind": "level",
+      "level": 30
+    },
+    "category": "impossible"
+  },
+  {
+    "from": 111,
+    "to": 112,
+    "comment": "Rihorn -> Rizeros",
+    "method": {
+      "kind": "level",
+      "level": 40
+    },
+    "category": "easier"
+  },
+  {
+    "from": 116,
+    "to": 117,
+    "comment": "Seeper -> Seemon",
+    "method": {
+      "kind": "level",
+      "level": 30
+    },
+    "category": "easier"
+  },
+  {
+    "from": 148,
+    "to": 149,
+    "comment": "Dragonir -> Dragoran",
+    "method": {
+      "kind": "level",
+      "level": 40
+    },
+    "category": "easier"
+  },
+  {
+    "from": 247,
+    "to": 248,
+    "comment": "Pupitar -> Despotar",
+    "method": {
+      "kind": "level",
+      "level": 40
+    },
+    "category": "easier"
+  },
+  {
+    "from": 133,
+    "to": 196,
+    "comment": "Evoli -> Psiana",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    },
+    "category": "timeBased"
+  },
+  {
+    "from": 133,
+    "to": 197,
+    "comment": "Evoli -> Nachtara",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    },
+    "category": "timeBased"
+  }
+]

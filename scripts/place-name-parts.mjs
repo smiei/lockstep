@@ -13,6 +13,7 @@ export const PACK_REGIONS = {
   "red-blue": ["kanto"],
   yellow: ["kanto"],
   "gold-silver": ["johto", "kanto"],
+  crystal: ["johto", "kanto"],
   firered: ["kanto"],
   ruby: ["hoenn"],
   sapphire: ["hoenn"],

@@ -86,6 +86,16 @@ describe("HeartGold / SoulSilver packs", () => {
     expect(caps.find((c) => c.region === "kanto")?.names.en).toBe("Lt. Surge");
   });
 
+  it("crystal: Suicune waits at the Bell Tower, only Raikou and Entei roam", () => {
+    const list = read<Route[]>("crystal", "routes.json");
+    expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Raikou/Entei (Roaming)"]);
+    expect(list.some((r) => r.names.en === "Suicune Bell Tower" && !r.region)).toBe(true);
+    // Gold/Silver have no Dratini gift; Ho-Oh needs the Rainbow Wing from Pewter City there
+    const gs = read<Route[]>("gold-silver", "routes.json");
+    expect(gs.some((r) => r.names.en === "Dratini Dragon's Den")).toBe(false);
+    expect(gs.find((r) => r.names.en === "Ho-Oh Bell Tower")?.region).toBe("kanto");
+  });
+
   for (const game of ["sacred-gold", "storm-silver"]) {
     it(`${game}: Johto, Kanto from Vermilion City, Cerulean Cave post-game`, () => {
       const list = read<Route[]>(game, "routes.json");

@@ -506,17 +506,6 @@
     "type": "route"
   },
   {
-    "id": 43,
-    "names": {
-      "de": "Dratini Drachenhöhle",
-      "en": "Dratini Dragon's Den",
-      "fr": "Minidraco Antre du Dragon",
-      "es": "Dratini Guarida Dragón",
-      "it": "Dratini Tana del Drago"
-    },
-    "type": "static"
-  },
-  {
     "id": 44,
     "names": {
       "de": "Route 45",
@@ -537,17 +526,6 @@
       "it": "Torre di Latta"
     },
     "type": "route"
-  },
-  {
-    "id": 50,
-    "names": {
-      "de": "Ho-Oh Zinnturm",
-      "en": "Ho-Oh Bell Tower",
-      "fr": "Ho-Oh Tour Ferraille",
-      "es": "Ho-Oh Torre Hojalata",
-      "it": "Ho-Oh Torre di Latta"
-    },
-    "type": "static"
   },
   {
     "id": 45,
@@ -889,6 +867,18 @@
       "fr": "Lugia Tourb'Îles",
       "es": "Lugia Islas Remolino",
       "it": "Lugia Isole Vorticose"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Ho-Oh Zinnturm",
+      "en": "Ho-Oh Bell Tower",
+      "fr": "Ho-Oh Tour Ferraille",
+      "es": "Ho-Oh Torre Hojalata",
+      "it": "Ho-Oh Torre di Latta"
     },
     "type": "static",
     "region": "kanto"
