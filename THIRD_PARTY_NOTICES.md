@@ -115,7 +115,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ### Pokémon Showdown (smogon/pokemon-showdown)
 
-- **What:** the per-generation move values (power, accuracy, PP) in its `data/moves.ts` and `data/mods/gen1`-`gen8`, read once to build `data/move-stat-history.json` where PokéAPI's history is wrong or missing. The values were checked against the Gen 1-4 games; only facts (numbers) are used, no code.
+- **What:** the per-generation move values (power, accuracy, PP) in its `data/moves.ts` and `data/mods/gen1`-`gen8`, read once to build `data/move-stat-history.json` where PokéAPI's history is wrong or missing. The values were checked against the Gen 1-4 games; only facts (numbers) are used, no code. Its `data/mods/gen8bdsp/learnsets.ts` is the source of the level-up moves and TM compatibility of the Brilliant Diamond / Shining Pearl pack (`data/games/brilliant-diamond-shining-pearl/movesets.json`, `tm-compat.json`), which PokéAPI does not have.
 - **Source:** [github.com/smogon/pokemon-showdown](https://github.com/smogon/pokemon-showdown)
 - **License:** MIT.
 
