@@ -663,5 +663,8 @@
   },
   "x-scissor": {
     "pp": 20
+  },
+  "yawn": {
+    "accuracy": 70
   }
 }

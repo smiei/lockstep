@@ -1,7 +1,7 @@
 {
   "source": "game data: Blazing Emerald v1.6",
   "sourceVersion": "game-data",
-  "generatedAt": "2026-11-09T03:03:07.000Z",
+  "generatedAt": "2026-11-15T01:50:13.000Z",
   "species": [
     {
       "id": 1,
@@ -6529,6 +6529,25 @@
       "weight": 210
     },
     {
+      "id": 10104,
+      "name": "Ninetales",
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "stats": {
+        "KP": 88,
+        "Ang.": 62,
+        "Vert.": 75,
+        "Sp.-A.": 106,
+        "Sp.-V.": 100,
+        "Init.": 109,
+        "Summe": 540
+      },
+      "catchRate": 45,
+      "weight": 19.9
+    },
+    {
       "id": 20029,
       "name": "Oreon",
       "types": [
@@ -7421,7 +7440,7 @@
       "id": 20077,
       "name": "Vitellion",
       "types": [
-        "???"
+        "mystery"
       ],
       "stats": {
         "KP": 250,

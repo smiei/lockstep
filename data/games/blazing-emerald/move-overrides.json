@@ -27,6 +27,9 @@
   "rapid-spin": {
     "power": 20
   },
+  "sacred-fire": {
+    "damageClass": "special"
+  },
   "submission": {
     "pp": 25
   },
@@ -44,5 +47,8 @@
   },
   "thunder-wave": {
     "accuracy": 100
+  },
+  "water-shuriken": {
+    "damageClass": "physical"
   }
 }

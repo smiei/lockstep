@@ -60,6 +60,9 @@
   "flamethrower": {
     "power": 95
   },
+  "fleur-cannon": {
+    "power": 140
+  },
   "fly": {
     "power": 100
   },
@@ -129,6 +132,9 @@
   },
   "snore": {
     "power": 80
+  },
+  "springtide-storm": {
+    "power": 105
   },
   "steam-eruption": {
     "power": 120

@@ -878,5 +878,245 @@
       "kind": "item",
       "item": "honey"
     }
+  },
+  {
+    "from": 25,
+    "to": 10100,
+    "comment": "Pikachu -> Raichu (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 88,
+    "to": 10113,
+    "comment": "Grimer -> Muk (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 102,
+    "to": 10114,
+    "comment": "Exeggcute -> Exeggutor (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "shiny-stone"
+    }
+  },
+  {
+    "from": 133,
+    "to": 470,
+    "comment": "Eevee -> Leafeon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "leaf-stone"
+    }
+  },
+  {
+    "from": 133,
+    "to": 471,
+    "comment": "Eevee -> Glaceon",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "from": 502,
+    "to": 10236,
+    "comment": "Dewott -> Samurott (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 548,
+    "to": 10237,
+    "comment": "Petilil -> Lilligant (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "leaf-stone"
+    }
+  },
+  {
+    "from": 704,
+    "to": 10241,
+    "comment": "Goomy -> Sliggoo (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 712,
+    "to": 10243,
+    "comment": "Bergmite -> Avalugg (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "levelMove",
+      "move": "ancient-power"
+    }
+  },
+  {
+    "from": 723,
+    "to": 10244,
+    "comment": "Dartrix -> Decidueye (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 737,
+    "to": 738,
+    "comment": "Charjabug -> Vikavolt",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "from": 744,
+    "to": 10126,
+    "comment": "Rockruff -> Lycanroc (Midnight Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "moon-stone"
+    }
+  },
+  {
+    "from": 744,
+    "to": 10152,
+    "comment": "Rockruff -> Lycanroc (Dusk Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 891,
+    "to": 892,
+    "comment": "Kubfu -> Urshifu (Single Strike Style)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 50
+    }
+  },
+  {
+    "from": 891,
+    "to": 10191,
+    "comment": "Kubfu -> Urshifu (Rapid Strike Style)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 50
+    }
+  },
+  {
+    "from": 10027,
+    "to": 10030,
+    "comment": "Pumpkaboo (Small Size) -> Gourgeist (Small Size)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 10028,
+    "to": 10031,
+    "comment": "Pumpkaboo (Large Size) -> Gourgeist (Large Size)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 10029,
+    "to": 10032,
+    "comment": "Pumpkaboo (Super Size) -> Gourgeist (Super Size)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 10110,
+    "to": 10111,
+    "comment": "Graveler (Alolan Form) -> Golem (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 38
+    }
+  },
+  {
+    "from": 10161,
+    "to": 863,
+    "comment": "Meowth (Galarian Form) -> Perrserker",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 26
+    }
+  },
+  {
+    "from": 10166,
+    "to": 865,
+    "comment": "Farfetch’d (Galarian Form) -> Sirfetch’d",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 10231,
+    "to": 10232,
+    "comment": "Voltorb (Hisuian Form) -> Electrode (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 10234,
+    "to": 904,
+    "comment": "Qwilfish (Hisuian Form) -> Overqwil",
+    "category": "game",
+    "method": {
+      "kind": "levelMove",
+      "move": "explosion"
+    }
+  },
+  {
+    "from": 10235,
+    "to": 903,
+    "comment": "Sneasel (Hisuian Form) -> Sneasler",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "razor-claw"
+    }
   }
 ]

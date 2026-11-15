@@ -1768,5 +1768,324 @@
       "kind": "level",
       "level": 45
     }
+  },
+  {
+    "from": 25,
+    "to": 10100,
+    "comment": "Pikachu -> Raichu (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "shiny-stone"
+    }
+  },
+  {
+    "from": 57,
+    "to": 979,
+    "comment": "Primeape -> Annihilape",
+    "category": "game",
+    "method": {
+      "kind": "levelMove",
+      "move": "shadow-punch"
+    }
+  },
+  {
+    "from": 102,
+    "to": 10114,
+    "comment": "Exeggcute -> Exeggutor (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 439,
+    "to": 10168,
+    "comment": "Mime Jr. -> Mr. Mime (Galarian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "from": 548,
+    "to": 10237,
+    "comment": "Petilil -> Lilligant (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "leaf-stone"
+    }
+  },
+  {
+    "from": 550,
+    "to": 10248,
+    "comment": "Basculin -> Basculegion (Female)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 44
+    }
+  },
+  {
+    "from": 627,
+    "to": 10240,
+    "comment": "Rufflet -> Braviary (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 704,
+    "to": 10241,
+    "comment": "Goomy -> Sliggoo (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 712,
+    "to": 10243,
+    "comment": "Bergmite -> Avalugg (Hisuian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "from": 891,
+    "to": 10191,
+    "comment": "Kubfu -> Urshifu (Rapid Strike Style)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "water-stone"
+    }
+  },
+  {
+    "from": 915,
+    "to": 10254,
+    "comment": "Lechonk -> Oinkologne (Female)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 10028,
+    "to": 10031,
+    "comment": "Pumpkaboo (Large Size) -> Gourgeist (Large Size)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "link-cable"
+    }
+  },
+  {
+    "from": 10091,
+    "to": 10092,
+    "comment": "Rattata (Alolan Form) -> Raticate (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 10105,
+    "to": 10106,
+    "comment": "Diglett (Alolan Form) -> Dugtrio (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 22
+    }
+  },
+  {
+    "from": 10109,
+    "to": 10110,
+    "comment": "Geodude (Alolan Form) -> Graveler (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 23
+    }
+  },
+  {
+    "from": 10112,
+    "to": 10113,
+    "comment": "Grimer (Alolan Form) -> Muk (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 10162,
+    "to": 10163,
+    "comment": "Ponyta (Galarian Form) -> Rapidash (Galarian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
+  },
+  {
+    "from": 10164,
+    "to": 10165,
+    "comment": "Slowpoke (Galarian Form) -> Slowbro (Galarian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 10164,
+    "to": 10172,
+    "comment": "Slowpoke (Galarian Form) -> Slowking (Galarian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "kings-rock"
+    }
+  },
+  {
+    "from": 10166,
+    "to": 865,
+    "comment": "Farfetch’d (Galarian Form) -> Sirfetch’d",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 10174,
+    "to": 10175,
+    "comment": "Zigzagoon (Galarian Form) -> Linoone (Galarian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 10179,
+    "to": 867,
+    "comment": "Yamask (Galarian Form) -> Runerigus",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 10234,
+    "to": 904,
+    "comment": "Qwilfish (Hisuian Form) -> Overqwil",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 10235,
+    "to": 903,
+    "comment": "Sneasel (Hisuian Form) -> Sneasler",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 47
+    }
+  },
+  {
+    "from": 10263,
+    "to": 1000,
+    "comment": "Gimmighoul (Roaming Form) -> Gholdengo",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 45
+    }
+  },
+  {
+    "from": 20005,
+    "to": 20006,
+    "comment": "Blitzle (Seviian Form) -> Zebstrika (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 27
+    }
+  },
+  {
+    "from": 20009,
+    "to": 20008,
+    "comment": "Sizzlipede (Seviian Form) -> Centiskorch (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
+  },
+  {
+    "from": 20010,
+    "to": 20011,
+    "comment": "Clauncher (Seviian Form) -> Clawitzer (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 20014,
+    "to": 20013,
+    "comment": "Doduo (Seviian Form) -> Dodrio (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 31
+    }
+  },
+  {
+    "from": 20015,
+    "to": 20016,
+    "comment": "Feebas (Seviian Form) -> Milotic (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "prism-scale"
+    }
+  },
+  {
+    "from": 20018,
+    "to": 20017,
+    "comment": "Mantyke (Seviian Form) -> Mantine (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 20019,
+    "to": 20020,
+    "comment": "Teddiursa (Seviian Form) -> Ursaring (Seviian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 28
+    }
   }
 ]
