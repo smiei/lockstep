@@ -1,5 +1,25 @@
 [
   {
+    "id": 27,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Rosalia City",
+      "en": "Cherrygrove City",
+      "fr": "Ville Griotte",
+      "es": "Ciudad Cerezo",
+      "it": "Fiorpescopoli"
+    },
+    "badge": null,
+    "max_level": 5,
+    "sprite": "rivale"
+  },
+  {
     "id": 1,
     "names": {
       "de": "Falk",
@@ -528,6 +548,27 @@
       "it": "Medaglia Sasso"
     },
     "max_level": 44,
+    "region": "kanto"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Mondberg",
+      "en": "Mt. Moon",
+      "fr": "Mont Sélénite",
+      "es": "Mt. Moon",
+      "it": "Monte Luna"
+    },
+    "badge": null,
+    "max_level": 45,
+    "sprite": "rivale",
     "region": "kanto"
   },
   {

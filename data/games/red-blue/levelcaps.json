@@ -74,11 +74,11 @@
       "it": "Rivale"
     },
     "location": {
-      "de": "Route 24",
-      "en": "Route 24",
-      "fr": "Route 24",
-      "es": "Ruta 24",
-      "it": "Percorso 24"
+      "de": "Azuria City",
+      "en": "Cerulean City",
+      "fr": "Azuria",
+      "es": "Ciudad Celeste",
+      "it": "Celestopoli"
     },
     "badge": null,
     "max_level": 18,

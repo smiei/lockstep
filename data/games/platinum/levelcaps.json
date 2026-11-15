@@ -20,6 +20,26 @@
     "sprite": "rivale"
   },
   {
+    "id": 28,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Route 203",
+      "en": "Route 203",
+      "fr": "Route 203",
+      "es": "Ruta 203",
+      "it": "Percorso 203"
+    },
+    "badge": null,
+    "max_level": 9,
+    "sprite": "rivale"
+  },
+  {
     "id": 2,
     "names": {
       "de": "Veit",
@@ -89,26 +109,6 @@
     "max_level": 22
   },
   {
-    "id": 4,
-    "names": {
-      "de": "Rivale",
-      "en": "Rival",
-      "fr": "Rival",
-      "es": "Rival",
-      "it": "Rivale"
-    },
-    "location": {
-      "de": "Herzhofen",
-      "en": "Hearthome City",
-      "fr": "Unionpolis",
-      "es": "Ciudad Corazón",
-      "it": "Cuoripoli"
-    },
-    "badge": null,
-    "max_level": 27,
-    "sprite": "rivale"
-  },
-  {
     "id": 21,
     "names": {
       "de": "Jupiter",
@@ -151,6 +151,26 @@
       "it": "Medaglia Vestigia"
     },
     "max_level": 26
+  },
+  {
+    "id": 4,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Herzhofen",
+      "en": "Hearthome City",
+      "fr": "Unionpolis",
+      "es": "Ciudad Corazón",
+      "it": "Cuoripoli"
+    },
+    "badge": null,
+    "max_level": 27,
+    "sprite": "rivale"
   },
   {
     "id": 6,
@@ -242,6 +262,26 @@
     "max_level": 36
   },
   {
+    "id": 10,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Fleetburg",
+      "en": "Canalave City",
+      "fr": "Joliberges",
+      "es": "Ciudad Canal",
+      "it": "Canalipoli"
+    },
+    "badge": null,
+    "max_level": 38,
+    "sprite": "rivale"
+  },
+  {
     "id": 9,
     "names": {
       "de": "Adam",
@@ -265,26 +305,6 @@
       "it": "Medaglia Cava"
     },
     "max_level": 41
-  },
-  {
-    "id": 10,
-    "names": {
-      "de": "Rivale",
-      "en": "Rival",
-      "fr": "Rival",
-      "es": "Rival",
-      "it": "Rivale"
-    },
-    "location": {
-      "de": "Fleetburg",
-      "en": "Canalave City",
-      "fr": "Joliberges",
-      "es": "Ciudad Canal",
-      "it": "Canalipoli"
-    },
-    "badge": null,
-    "max_level": 38,
-    "sprite": "rivale"
   },
   {
     "id": 23,

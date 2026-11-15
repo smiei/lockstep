@@ -173,6 +173,25 @@
     "max_level": 22
   },
   {
+    "id": 30,
+    "names": {
+      "de": "Maxie",
+      "en": "Maxie",
+      "fr": "Max",
+      "es": "Magno",
+      "it": "Maxie"
+    },
+    "location": {
+      "de": "Schlotberg",
+      "en": "Mt. Chimney",
+      "fr": "Mont Chimnée",
+      "es": "Monte Cenizo",
+      "it": "Monte Camino"
+    },
+    "badge": null,
+    "max_level": 25
+  },
+  {
     "id": 7,
     "names": {
       "de": "Flavia",
@@ -251,11 +270,11 @@
       "it": "Rivale"
     },
     "location": {
-      "de": "Klima-Institut",
-      "en": "Weather Institute",
-      "fr": "Centre Météo",
-      "es": "Instituto Meteorológico",
-      "it": "Instituto Meteo"
+      "de": "Route 119",
+      "en": "Route 119",
+      "fr": "Route 119",
+      "es": "Ruta 119",
+      "it": "Percorso 119"
     },
     "badge": null,
     "max_level": 31,
@@ -285,6 +304,26 @@
       "it": "Medaglia Piuma"
     },
     "max_level": 33
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Seegrasulb City",
+      "en": "Lilycove City",
+      "fr": "Nénucrique",
+      "es": "Ciudad Calagua",
+      "it": "Porto Alghepoli"
+    },
+    "badge": null,
+    "max_level": 34,
+    "sprite": "rivale"
   },
   {
     "id": 25,
@@ -323,26 +362,6 @@
     },
     "badge": null,
     "max_level": 39
-  },
-  {
-    "id": 11,
-    "names": {
-      "de": "Rivale",
-      "en": "Rival",
-      "fr": "Rival",
-      "es": "Rival",
-      "it": "Rivale"
-    },
-    "location": {
-      "de": "Seegrasulb City",
-      "en": "Lilycove City",
-      "fr": "Nénucrique",
-      "es": "Ciudad Calagua",
-      "it": "Porto Alghepoli"
-    },
-    "badge": null,
-    "max_level": 34,
-    "sprite": "rivale"
   },
   {
     "id": 26,
