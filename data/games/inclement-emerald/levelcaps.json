@@ -16,7 +16,7 @@
       "it": "Petalbug Woods grunt"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 16
   },
   {
     "id": 2,
@@ -35,7 +35,7 @@
       "it": "Rustboro City"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 16
   },
   {
     "id": 3,
@@ -54,7 +54,7 @@
       "it": "Rustboro City"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 16
   },
   {
     "id": 4,
@@ -79,7 +79,7 @@
       "es": "Stone Badge",
       "it": "Stone Badge"
     },
-    "max_level": null,
+    "max_level": 16,
     "sprite": "Felizia"
   },
   {
@@ -105,7 +105,7 @@
       "es": "Knuckle Badge",
       "it": "Knuckle Badge"
     },
-    "max_level": null,
+    "max_level": 25,
     "sprite": "Kamillo"
   },
   {
@@ -125,7 +125,7 @@
       "it": "Slateport Museum"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 38
   },
   {
     "id": 7,
@@ -144,7 +144,7 @@
       "it": "Slateport Museum"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 38
   },
   {
     "id": 8,
@@ -163,7 +163,7 @@
       "it": "Route 110"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 38
   },
   {
     "id": 9,
@@ -182,7 +182,7 @@
       "it": "Route 110"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 38
   },
   {
     "id": 10,
@@ -201,7 +201,7 @@
       "it": "Mauville City"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 38,
     "sprite": "Heiko"
   },
   {
@@ -227,7 +227,7 @@
       "es": "Dynamo Badge",
       "it": "Dynamo Badge"
     },
-    "max_level": null,
+    "max_level": 38,
     "sprite": "Walter"
   },
   {
@@ -247,7 +247,7 @@
       "it": "Mt. Chimney"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 50,
     "sprite": "Kalle"
   },
   {
@@ -267,7 +267,7 @@
       "it": "Mt. Chimney"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 50
   },
   {
     "id": 14,
@@ -286,7 +286,7 @@
       "it": "Meteor Falls"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 50
   },
   {
     "id": 15,
@@ -311,7 +311,7 @@
       "es": "Heat Badge",
       "it": "Heat Badge"
     },
-    "max_level": null,
+    "max_level": 50,
     "sprite": "Flavia"
   },
   {
@@ -337,7 +337,7 @@
       "es": "Balance Badge",
       "it": "Balance Badge"
     },
-    "max_level": null
+    "max_level": 54
   },
   {
     "id": 17,
@@ -356,7 +356,7 @@
       "it": "Weather Institute"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 70,
     "sprite": "Kordula"
   },
   {
@@ -376,7 +376,7 @@
       "it": "Route 119"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 70
   },
   {
     "id": 19,
@@ -395,7 +395,7 @@
       "it": "Route 119"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 70
   },
   {
     "id": 20,
@@ -420,7 +420,7 @@
       "es": "Feather Badge",
       "it": "Feather Badge"
     },
-    "max_level": null,
+    "max_level": 70,
     "sprite": "Wibke"
   },
   {
@@ -440,7 +440,7 @@
       "it": "Mt. Pyre"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 85,
     "sprite": "Wolfgang"
   },
   {
@@ -460,7 +460,7 @@
       "it": "Team Magma Hideout"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 85
   },
   {
     "id": 23,
@@ -479,7 +479,7 @@
       "it": "Team Magma Hideout"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 85
   },
   {
     "id": 24,
@@ -498,7 +498,7 @@
       "it": "Lilycove City"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 85
   },
   {
     "id": 25,
@@ -517,7 +517,7 @@
       "it": "Lilycove City"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 85
   },
   {
     "id": 26,
@@ -536,7 +536,7 @@
       "it": "Team Aqua Hideout"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 85,
     "sprite": "Wolfgang"
   },
   {
@@ -562,7 +562,7 @@
       "es": "Mind Badge",
       "it": "Mind Badge"
     },
-    "max_level": null,
+    "max_level": 85,
     "sprite": "Ben & Svenja"
   },
   {
@@ -582,7 +582,7 @@
       "it": "Mossdeep Space Center"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 92,
     "sprite": "Kalle"
   },
   {
@@ -602,7 +602,7 @@
       "it": "Mossdeep Space Center"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 92
   },
   {
     "id": 30,
@@ -621,7 +621,7 @@
       "it": "Seafloor Cavern"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 92,
     "sprite": "Kordula"
   },
   {
@@ -641,7 +641,7 @@
       "it": "Seafloor Cavern"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 92
   },
   {
     "id": 32,
@@ -666,7 +666,7 @@
       "es": "Rain Badge",
       "it": "Rain Badge"
     },
-    "max_level": null
+    "max_level": 92
   },
   {
     "id": 33,
@@ -685,7 +685,7 @@
       "it": "Victory Road"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 95,
     "sprite": "Heiko"
   },
   {
@@ -705,7 +705,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 95,
     "sprite": "Ulrich"
   },
   {
@@ -725,7 +725,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 95,
     "sprite": "Antonia"
   },
   {
@@ -745,7 +745,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 95,
     "sprite": "Frosina"
   },
   {
@@ -765,7 +765,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 95,
     "sprite": "Dragan"
   },
   {
@@ -785,7 +785,7 @@
       "it": "Elite Four"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 95,
     "sprite": "Wassili"
   }
 ]
