@@ -860,18 +860,6 @@
     "region": "kanto"
   },
   {
-    "id": 49,
-    "names": {
-      "de": "Lugia Strudelinseln",
-      "en": "Lugia Whirl Islands",
-      "fr": "Lugia Tourb'Îles",
-      "es": "Lugia Islas Remolino",
-      "it": "Lugia Isole Vorticose"
-    },
-    "type": "static",
-    "region": "kanto"
-  },
-  {
     "id": 50,
     "names": {
       "de": "Ho-Oh Zinnturm",
@@ -879,6 +867,18 @@
       "fr": "Ho-Oh Tour Ferraille",
       "es": "Ho-Oh Torre Hojalata",
       "it": "Ho-Oh Torre di Latta"
+    },
+    "type": "static",
+    "region": "kanto"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Lugia Strudelinseln",
+      "en": "Lugia Whirl Islands",
+      "fr": "Lugia Tourb'Îles",
+      "es": "Lugia Islas Remolino",
+      "it": "Lugia Isole Vorticose"
     },
     "type": "static",
     "region": "kanto"

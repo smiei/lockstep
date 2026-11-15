@@ -6,11 +6,12 @@
   "dexLimit": 251,
   "spriteSet": "crystal",
   "versionGroup": "crystal",
+  "trainerSet": "gold-silver",
   "names": {
-    "de": "Gold / Silber",
-    "en": "Gold / Silver",
-    "fr": "Or / Argent",
-    "es": "Oro / Plata",
-    "it": "Oro / Argento"
+    "de": "Goldene Edition",
+    "en": "Gold",
+    "fr": "Version Or",
+    "es": "Edición Oro",
+    "it": "Versione Oro"
   }
 }

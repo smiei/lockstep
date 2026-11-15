@@ -94,6 +94,11 @@ describe("HeartGold / SoulSilver packs", () => {
     const gs = read<Route[]>("gold-silver", "routes.json");
     expect(gs.some((r) => r.names.en === "Dratini Dragon's Den")).toBe(false);
     expect(gs.find((r) => r.names.en === "Ho-Oh Bell Tower")?.region).toBe("kanto");
+    // like HeartGold/SoulSilver: Gold meets Ho-Oh first, Silver Lugia
+    const first = (game: string) =>
+      read<Route[]>(game, "routes.json").find((r) => r.names.en === "Ho-Oh Bell Tower" || r.names.en === "Lugia Whirl Islands")?.names.en;
+    expect(first("gold-silver")).toBe("Ho-Oh Bell Tower");
+    expect(first("silver")).toBe("Lugia Whirl Islands");
   });
 
   for (const game of ["sacred-gold", "storm-silver"]) {

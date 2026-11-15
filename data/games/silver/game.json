@@ -1,0 +1,17 @@
+{
+  "id": "silver",
+  "sort": 4,
+  "kind": "official",
+  "generation": 2,
+  "dexLimit": 251,
+  "spriteSet": "crystal",
+  "versionGroup": "crystal",
+  "trainerSet": "gold-silver",
+  "names": {
+    "de": "Silberne Edition",
+    "en": "Silver",
+    "fr": "Version Argent",
+    "es": "Edición Plata",
+    "it": "Versione Argento"
+  }
+}
