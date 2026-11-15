@@ -1,0 +1,21 @@
+{
+  "id": "blazed-glazed",
+  "sort": 40,
+  "kind": "romhack",
+  "generation": 3,
+  "dataGeneration": 6,
+  "dexLimit": 721,
+  "species": true,
+  "spriteSet": "emerald",
+  "versionGroup": "emerald",
+  "speciesData": "blazed-glazed",
+  "trainerSet": "emerald",
+  "names": {
+    "de": "Blazed Glazed",
+    "en": "Blazed Glazed",
+    "fr": "Blazed Glazed",
+    "es": "Blazed Glazed",
+    "it": "Blazed Glazed"
+  },
+  "source": "game data: Blazed Glazed v1.3 (species, moves, learnsets, evolutions, level caps, places); place list from Bassel-T/nuzlocke.app@2b4f2ec (glazed)"
+}

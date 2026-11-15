@@ -71,7 +71,7 @@ const HACKS = [
   // ORAS's mechanics, balls, movesets and trainer pictures.
   { id: "rising-ruby", src: "rrss", base: "emerald", trainerSet: "omega-ruby-alpha-sapphire", name: "Rising Ruby", generation: 6, dataGeneration: 6, spriteSet: "modern", versionGroup: "omega-ruby-alpha-sapphire", sort: 38 },
   { id: "sinking-sapphire", src: "ssaph", league: "rrss", patch: "rrss", base: "emerald", trainerSet: "omega-ruby-alpha-sapphire", name: "Sinking Sapphire", generation: 6, dataGeneration: 6, spriteSet: "modern", versionGroup: "omega-ruby-alpha-sapphire", sort: 39 },
-  { id: "glazed", src: "glazed", base: "emerald", name: "Blazed Glazed", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 40 },
+  { id: "glazed", src: "glazed", base: "emerald", name: "Glazed", generation: 3, dataGeneration: 6, spriteSet: "emerald", versionGroup: "emerald", sort: 40 },
   { id: "new-generations", src: "newgen", base: "firered", name: "New Generations", generation: 3, dataGeneration: 3, spriteSet: "emerald", versionGroup: "firered-leafgreen", sort: 41 },
   // Modern data on the Gen 3 engine: Pokémon up to Gen 8/9 with regional
   // forms, moves from the synthetic "modern" version group
