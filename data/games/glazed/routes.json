@@ -693,6 +693,17 @@
     "type": "route"
   },
   {
+    "id": 129,
+    "names": {
+      "de": "Route 27",
+      "en": "Route 27",
+      "fr": "Route 27",
+      "es": "Route 27",
+      "it": "Route 27"
+    },
+    "type": "route"
+  },
+  {
     "id": 52,
     "names": {
       "de": "Route 30",
@@ -825,6 +836,17 @@
     "type": "route"
   },
   {
+    "id": 130,
+    "names": {
+      "de": "Ecruteak City",
+      "en": "Ecruteak City",
+      "fr": "Ecruteak City",
+      "es": "Ecruteak City",
+      "it": "Ecruteak City"
+    },
+    "type": "route"
+  },
+  {
     "id": 62,
     "names": {
       "de": "Route 42",
@@ -865,6 +887,17 @@
       "fr": "Lake of Rage",
       "es": "Lake of Rage",
       "it": "Lake of Rage"
+    },
+    "type": "route"
+  },
+  {
+    "id": 131,
+    "names": {
+      "de": "Rocket Hideout",
+      "en": "Rocket Hideout",
+      "fr": "Rocket Hideout",
+      "es": "Rocket Hideout",
+      "it": "Rocket Hideout"
     },
     "type": "route"
   },
@@ -920,6 +953,28 @@
       "fr": "Route 39",
       "es": "Route 39",
       "it": "Route 39"
+    },
+    "type": "route"
+  },
+  {
+    "id": 132,
+    "names": {
+      "de": "Olivine City",
+      "en": "Olivine City",
+      "fr": "Olivine City",
+      "es": "Olivine City",
+      "it": "Olivine City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 133,
+    "names": {
+      "de": "Route 40",
+      "en": "Route 40",
+      "fr": "Route 40",
+      "es": "Route 40",
+      "it": "Route 40"
     },
     "type": "route"
   },
@@ -1329,6 +1384,17 @@
       "it": "Mesprit Peaks of Alpha"
     },
     "type": "static"
+  },
+  {
+    "id": 134,
+    "names": {
+      "de": "New Island",
+      "en": "New Island",
+      "fr": "New Island",
+      "es": "New Island",
+      "it": "New Island"
+    },
+    "type": "route"
   },
   {
     "id": 104,
