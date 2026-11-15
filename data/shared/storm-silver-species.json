@@ -1,7 +1,7 @@
 {
-  "source": "game data: Storm Silver 1.05",
+  "source": "game data: Storm Silver v1.05",
   "sourceVersion": "game-data",
-  "generatedAt": "2026-11-07T12:16:48.000Z",
+  "generatedAt": "2026-11-15T06:33:39.000Z",
   "species": [
     {
       "id": 1,
@@ -9105,6 +9105,231 @@
       },
       "catchRate": 3,
       "weight": 320
+    },
+    {
+      "id": 10001,
+      "name": "Deoxys",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 180,
+        "Vert.": 20,
+        "Sp.-A.": 180,
+        "Sp.-V.": 20,
+        "Init.": 150,
+        "Summe": 600
+      },
+      "catchRate": 3,
+      "weight": 60.8
+    },
+    {
+      "id": 10002,
+      "name": "Deoxys",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 70,
+        "Vert.": 160,
+        "Sp.-A.": 70,
+        "Sp.-V.": 160,
+        "Init.": 90,
+        "Summe": 600
+      },
+      "catchRate": 3,
+      "weight": 60.8
+    },
+    {
+      "id": 10003,
+      "name": "Deoxys",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 95,
+        "Vert.": 90,
+        "Sp.-A.": 95,
+        "Sp.-V.": 90,
+        "Init.": 180,
+        "Summe": 600
+      },
+      "catchRate": 3,
+      "weight": 60.8
+    },
+    {
+      "id": 10004,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "ground"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 99,
+        "Vert.": 125,
+        "Sp.-A.": 59,
+        "Sp.-V.": 85,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
+      "id": 10005,
+      "name": "Wormadam",
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "stats": {
+        "KP": 60,
+        "Ang.": 69,
+        "Vert.": 115,
+        "Sp.-A.": 69,
+        "Sp.-V.": 115,
+        "Init.": 36,
+        "Summe": 464
+      },
+      "catchRate": 45,
+      "weight": 6.5
+    },
+    {
+      "id": 10006,
+      "name": "Shaymin",
+      "types": [
+        "grass",
+        "flying"
+      ],
+      "stats": {
+        "KP": 100,
+        "Ang.": 103,
+        "Vert.": 75,
+        "Sp.-A.": 120,
+        "Sp.-V.": 75,
+        "Init.": 127,
+        "Summe": 600
+      },
+      "catchRate": 45,
+      "weight": 5.2
+    },
+    {
+      "id": 10007,
+      "name": "Giratina",
+      "types": [
+        "ghost",
+        "dragon"
+      ],
+      "stats": {
+        "KP": 150,
+        "Ang.": 120,
+        "Vert.": 100,
+        "Sp.-A.": 120,
+        "Sp.-V.": 100,
+        "Init.": 90,
+        "Summe": 680
+      },
+      "catchRate": 3,
+      "weight": 650
+    },
+    {
+      "id": 10008,
+      "name": "Rotom",
+      "types": [
+        "electric",
+        "fire"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 65,
+        "Vert.": 107,
+        "Sp.-A.": 105,
+        "Sp.-V.": 107,
+        "Init.": 86,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 0.3
+    },
+    {
+      "id": 10009,
+      "name": "Rotom",
+      "types": [
+        "electric",
+        "water"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 65,
+        "Vert.": 107,
+        "Sp.-A.": 105,
+        "Sp.-V.": 107,
+        "Init.": 86,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 0.3
+    },
+    {
+      "id": 10010,
+      "name": "Rotom",
+      "types": [
+        "electric",
+        "ice"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 65,
+        "Vert.": 107,
+        "Sp.-A.": 105,
+        "Sp.-V.": 107,
+        "Init.": 86,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 0.3
+    },
+    {
+      "id": 10011,
+      "name": "Rotom",
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 65,
+        "Vert.": 92,
+        "Sp.-A.": 105,
+        "Sp.-V.": 92,
+        "Init.": 116,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 0.3
+    },
+    {
+      "id": 10012,
+      "name": "Rotom",
+      "types": [
+        "electric",
+        "grass"
+      ],
+      "stats": {
+        "KP": 50,
+        "Ang.": 65,
+        "Vert.": 107,
+        "Sp.-A.": 105,
+        "Sp.-V.": 107,
+        "Init.": 86,
+        "Summe": 520
+      },
+      "catchRate": 45,
+      "weight": 0.3
     }
   ]
 }
