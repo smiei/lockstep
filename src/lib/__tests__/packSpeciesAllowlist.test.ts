@@ -15,7 +15,7 @@ describe("species allowlist of ROM hacks", () => {
   });
 
   it("Blazed Glazed keeps Eevee, whose two slots the game names Def-/Off-Eevee", () => {
-    const game = getGameById("glazed")!;
+    const game = getGameById("blazed-glazed")!;
     expect(isInDex(game, 133)).toBe(true);
     expect(isInDex(game, 43)).toBe(false); // Oddish is not in the game
   });

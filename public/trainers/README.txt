@@ -36,9 +36,9 @@ So: put a file in the flat ROOT to use it for ALL games; put one in a
 trainerSet SUBFOLDERS (one per base game; ROM hacks share their base game's
 folder, so a picture there serves all of them):
   firered/                FireRed / LeafGreen, New Generations, Radical Red
-  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Blazed Glazed, Run & Bun, Blazing Emerald v1.5.1, Blazing Emerald v1.6
+  emerald/                Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Blazed Glazed, Glazed, Run & Bun, Blazing Emerald v1.5.1, Blazing Emerald v1.6
   red-blue/               Red / Blue, Yellow
-  gold-silver/            Crystal, Gold / Silver
+  gold-silver/            Crystal, Gold, Silver
   platinum/               Platinum, Diamond / Pearl, Renegade Platinum
   heartgold-soulsilver/   HeartGold, SoulSilver, Sacred Gold, Storm Silver
   black-white/            Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux
@@ -126,7 +126,7 @@ A name listed under several folders can live once in the root instead.
     erika-rematch.png           Erika Rematch
     admin-ariana.png            Admin Ariana
 
-  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Blazed Glazed, Run & Bun, Blazing Emerald v1.5.1, Blazing Emerald v1.6  ->  emerald/   (93)
+  Emerald, Ruby, Sapphire, Emerald Kaizo, Inclement Emerald, Blazed Glazed, Glazed, Run & Bun, Blazing Emerald v1.5.1, Blazing Emerald v1.6  ->  emerald/   (93)
     rivale.png                  Rivale (Rival)   *
     felizia.png                 Felizia (Roxanne)
     kamillo.png                 Kamillo (Brawly)
@@ -237,7 +237,7 @@ A name listed under several folders can live once in the root instead.
     siegfried.png               Siegfried (Lance)
     champ.png                   Champ (Champion)
 
-  Crystal, Gold / Silver  ->  gold-silver/   (23)
+  Crystal, Gold, Silver  ->  gold-silver/   (23)
     falk.png                    Falk (Falkner)
     rivale.png                  Rivale (Rival)
     kai.png                     Kai (Bugsy)
