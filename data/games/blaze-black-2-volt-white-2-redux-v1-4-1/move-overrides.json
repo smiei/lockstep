@@ -1,0 +1,458 @@
+{
+  "absorb": {
+    "power": 35
+  },
+  "acid": {
+    "power": 35
+  },
+  "air-cutter": {
+    "pp": 15
+  },
+  "air-slash": {
+    "pp": 10
+  },
+  "aqua-tail": {
+    "power": 100,
+    "accuracy": 85
+  },
+  "arm-thrust": {
+    "power": 20
+  },
+  "astonish": {
+    "power": 35
+  },
+  "aura-sphere": {
+    "power": 90
+  },
+  "aurora-beam": {
+    "power": 75
+  },
+  "bite": {
+    "pp": 20
+  },
+  "blaze-kick": {
+    "accuracy": 100
+  },
+  "bubble-beam": {
+    "power": 70
+  },
+  "bulk-up": {
+    "pp": 10
+  },
+  "bullet-punch": {
+    "pp": 20
+  },
+  "calm-mind": {
+    "pp": 10
+  },
+  "charge-beam": {
+    "pp": 15
+  },
+  "chatter": {
+    "power": 90,
+    "pp": 10
+  },
+  "clamp": {
+    "type": "fire",
+    "power": 110,
+    "accuracy": 100,
+    "pp": 5
+  },
+  "confusion": {
+    "pp": 20
+  },
+  "covet": {
+    "type": "fairy",
+    "pp": 20
+  },
+  "cross-poison": {
+    "power": 90,
+    "pp": 15
+  },
+  "crunch": {
+    "pp": 10
+  },
+  "cut": {
+    "type": "grass",
+    "power": 60,
+    "accuracy": 100,
+    "pp": 20
+  },
+  "dark-pulse": {
+    "pp": 10
+  },
+  "dark-void": {
+    "accuracy": 90
+  },
+  "disarming-voice": {
+    "power": 50
+  },
+  "dive": {
+    "power": 100
+  },
+  "dragon-breath": {
+    "power": 70
+  },
+  "dragon-claw": {
+    "power": 85,
+    "pp": 10
+  },
+  "dragon-pulse": {
+    "power": 90
+  },
+  "dragon-rush": {
+    "accuracy": 80
+  },
+  "dragon-tail": {
+    "accuracy": 95
+  },
+  "draining-kiss": {
+    "power": 70
+  },
+  "echoed-voice": {
+    "power": 50
+  },
+  "esper-wing": {
+    "power": 70
+  },
+  "extrasensory": {
+    "pp": 15
+  },
+  "false-swipe": {
+    "pp": 30
+  },
+  "fire-pledge": {
+    "power": 75
+  },
+  "fire-punch": {
+    "pp": 10
+  },
+  "flame-charge": {
+    "power": 60
+  },
+  "flame-wheel": {
+    "power": 75,
+    "pp": 20
+  },
+  "flamethrower": {
+    "pp": 10
+  },
+  "flash-cannon": {
+    "power": 90
+  },
+  "fly": {
+    "power": 80,
+    "accuracy": 100
+  },
+  "focus-energy": {
+    "pp": 20
+  },
+  "frost-breath": {
+    "power": 50
+  },
+  "frustration": {
+    "power": 102
+  },
+  "fury-cutter": {
+    "power": 30
+  },
+  "gear-grind": {
+    "power": 65,
+    "accuracy": 95,
+    "pp": 10
+  },
+  "giga-drain": {
+    "power": 80
+  },
+  "glaciate": {
+    "power": 85,
+    "accuracy": 100
+  },
+  "grass-knot": {
+    "power": 65
+  },
+  "grass-pledge": {
+    "power": 75
+  },
+  "grass-whistle": {
+    "accuracy": 65
+  },
+  "gust": {
+    "pp": 20
+  },
+  "head-smash": {
+    "accuracy": 85
+  },
+  "headlong-rush": {
+    "accuracy": 90
+  },
+  "heart-stamp": {
+    "power": 75,
+    "pp": 15
+  },
+  "heat-wave": {
+    "power": 100
+  },
+  "hex": {
+    "pp": 15
+  },
+  "hidden-power": {
+    "power": 70
+  },
+  "hurricane": {
+    "accuracy": 80,
+    "pp": 5
+  },
+  "ice-ball": {
+    "type": "psychic",
+    "accuracy": 100
+  },
+  "ice-punch": {
+    "pp": 10
+  },
+  "ice-shard": {
+    "pp": 20
+  },
+  "inferno": {
+    "accuracy": 65
+  },
+  "infestation": {
+    "power": 35
+  },
+  "judgment": {
+    "power": 150
+  },
+  "leaf-tornado": {
+    "power": 70,
+    "accuracy": 100
+  },
+  "leech-life": {
+    "power": 80,
+    "pp": 10
+  },
+  "lick": {
+    "pp": 25
+  },
+  "mach-punch": {
+    "pp": 20
+  },
+  "magma-storm": {
+    "power": 120
+  },
+  "magnitude": {
+    "power": 70
+  },
+  "mega-drain": {
+    "power": 65
+  },
+  "meteor-mash": {
+    "power": 95
+  },
+  "moonblast": {
+    "pp": 10
+  },
+  "mud-slap": {
+    "power": 30,
+    "pp": 20
+  },
+  "mystical-fire": {
+    "power": 75
+  },
+  "needle-arm": {
+    "power": 100
+  },
+  "octazooka": {
+    "power": 90,
+    "pp": 5
+  },
+  "poison-fang": {
+    "power": 65,
+    "accuracy": 95
+  },
+  "poison-gas": {
+    "accuracy": 100,
+    "pp": 20
+  },
+  "poison-jab": {
+    "pp": 10
+  },
+  "poison-powder": {
+    "pp": 20
+  },
+  "poison-sting": {
+    "power": 30,
+    "pp": 20
+  },
+  "poison-tail": {
+    "power": 80,
+    "pp": 10
+  },
+  "power-gem": {
+    "power": 90,
+    "pp": 10
+  },
+  "power-up-punch": {
+    "power": 50
+  },
+  "psycho-cut": {
+    "power": 90,
+    "pp": 10
+  },
+  "psyshield-bash": {
+    "accuracy": 95
+  },
+  "quick-attack": {
+    "pp": 20
+  },
+  "raging-fury": {
+    "power": 95
+  },
+  "rapid-spin": {
+    "power": 50
+  },
+  "razor-shell": {
+    "accuracy": 100
+  },
+  "return": {
+    "power": 102
+  },
+  "rock-climb": {
+    "type": "rock",
+    "power": 80,
+    "accuracy": 95,
+    "pp": 10
+  },
+  "rock-smash": {
+    "power": 55
+  },
+  "rollout": {
+    "power": 40
+  },
+  "scald": {
+    "pp": 10
+  },
+  "shadow-ball": {
+    "pp": 10
+  },
+  "shadow-claw": {
+    "power": 90
+  },
+  "shadow-punch": {
+    "power": 90
+  },
+  "shadow-sneak": {
+    "pp": 20
+  },
+  "slash": {
+    "pp": 15
+  },
+  "sludge": {
+    "power": 70,
+    "pp": 15
+  },
+  "smog": {
+    "power": 35,
+    "accuracy": 90
+  },
+  "snore": {
+    "pp": 10
+  },
+  "spore": {
+    "pp": 10
+  },
+  "steamroller": {
+    "power": 100,
+    "accuracy": 90,
+    "pp": 10
+  },
+  "storm-throw": {
+    "power": 50
+  },
+  "strength": {
+    "power": 85,
+    "pp": 10
+  },
+  "stun-spore": {
+    "accuracy": 90,
+    "pp": 20
+  },
+  "sucker-punch": {
+    "power": 70
+  },
+  "swagger": {
+    "accuracy": 85
+  },
+  "sweet-scent": {
+    "type": "fairy",
+    "power": 40,
+    "damageClass": "special"
+  },
+  "tackle": {
+    "pp": 30
+  },
+  "techno-blast": {
+    "power": 140
+  },
+  "thief": {
+    "power": 50,
+    "pp": 15
+  },
+  "thunder": {
+    "pp": 5
+  },
+  "thunder-punch": {
+    "pp": 10
+  },
+  "thunder-shock": {
+    "pp": 25
+  },
+  "thunder-wave": {
+    "accuracy": 90
+  },
+  "thunderbolt": {
+    "pp": 10
+  },
+  "triple-axel": {
+    "power": 30
+  },
+  "twineedle": {
+    "power": 40
+  },
+  "twister": {
+    "power": 50
+  },
+  "venoshock": {
+    "pp": 15
+  },
+  "vine-whip": {
+    "power": 40,
+    "pp": 15
+  },
+  "water-pledge": {
+    "power": 75
+  },
+  "water-sport": {
+    "power": 60,
+    "accuracy": 100,
+    "damageClass": "physical"
+  },
+  "waterfall": {
+    "pp": 10
+  },
+  "wave-crash": {
+    "power": 110
+  },
+  "wild-charge": {
+    "pp": 10
+  },
+  "wrap": {
+    "power": 35,
+    "accuracy": 100
+  },
+  "x-scissor": {
+    "pp": 10
+  },
+  "zen-headbutt": {
+    "pp": 10
+  }
+}

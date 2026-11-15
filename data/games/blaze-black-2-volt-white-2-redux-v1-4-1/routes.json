@@ -1,0 +1,1143 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "de": "Starter",
+      "en": "Starter",
+      "fr": "Starter",
+      "es": "Starter",
+      "it": "Starter"
+    },
+    "type": "static"
+  },
+  {
+    "id": 3,
+    "names": {
+      "de": "Route 19",
+      "en": "Route 19",
+      "fr": "Route 19",
+      "es": "Route 19",
+      "it": "Route 19"
+    },
+    "type": "route"
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "Route 20",
+      "en": "Route 20",
+      "fr": "Route 20",
+      "es": "Route 20",
+      "it": "Route 20"
+    },
+    "type": "route"
+  },
+  {
+    "id": 6,
+    "names": {
+      "de": "Floccesy Ranch",
+      "en": "Floccesy Ranch",
+      "fr": "Floccesy Ranch",
+      "es": "Floccesy Ranch",
+      "it": "Floccesy Ranch"
+    },
+    "type": "route"
+  },
+  {
+    "id": 8,
+    "names": {
+      "de": "Virbank Complex",
+      "en": "Virbank Complex",
+      "fr": "Virbank Complex",
+      "es": "Virbank Complex",
+      "it": "Virbank Complex"
+    },
+    "type": "route"
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "Castelia City",
+      "en": "Castelia City",
+      "fr": "Castelia City",
+      "es": "Castelia City",
+      "it": "Castelia City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 64,
+    "names": {
+      "de": "Meloetta, Castelia City",
+      "en": "Meloetta, Castelia City",
+      "fr": "Meloetta, Castelia City",
+      "es": "Meloetta, Castelia City",
+      "it": "Meloetta, Castelia City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 65,
+    "names": {
+      "de": "Victini, Liberty Garden",
+      "en": "Victini, Liberty Garden",
+      "fr": "Victini, Liberty Garden",
+      "es": "Victini, Liberty Garden",
+      "it": "Victini, Liberty Garden"
+    },
+    "type": "static"
+  },
+  {
+    "id": 10,
+    "names": {
+      "de": "Castelia Sewers",
+      "en": "Castelia Sewers",
+      "fr": "Castelia Sewers",
+      "es": "Castelia Sewers",
+      "it": "Castelia Sewers"
+    },
+    "type": "route"
+  },
+  {
+    "id": 11,
+    "names": {
+      "de": "Relic Passage",
+      "en": "Relic Passage",
+      "fr": "Relic Passage",
+      "es": "Relic Passage",
+      "it": "Relic Passage"
+    },
+    "type": "route"
+  },
+  {
+    "id": 12,
+    "names": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Route 4",
+      "it": "Route 4"
+    },
+    "type": "route"
+  },
+  {
+    "id": 66,
+    "names": {
+      "de": "Braviary/Mandibuzz, Route 4",
+      "en": "Braviary/Mandibuzz, Route 4",
+      "fr": "Braviary/Mandibuzz, Route 4",
+      "es": "Braviary/Mandibuzz, Route 4",
+      "it": "Braviary/Mandibuzz, Route 4"
+    },
+    "type": "static"
+  },
+  {
+    "id": 13,
+    "names": {
+      "de": "Desert Resort",
+      "en": "Desert Resort",
+      "fr": "Desert Resort",
+      "es": "Desert Resort",
+      "it": "Desert Resort"
+    },
+    "type": "route"
+  },
+  {
+    "id": 67,
+    "names": {
+      "de": "Entei, Desert Resort",
+      "en": "Entei, Desert Resort",
+      "fr": "Entei, Desert Resort",
+      "es": "Entei, Desert Resort",
+      "it": "Entei, Desert Resort"
+    },
+    "type": "static"
+  },
+  {
+    "id": 14,
+    "names": {
+      "de": "Relic Castle",
+      "en": "Relic Castle",
+      "fr": "Relic Castle",
+      "es": "Relic Castle",
+      "it": "Relic Castle"
+    },
+    "type": "route"
+  },
+  {
+    "id": 68,
+    "names": {
+      "de": "Volcarona, Relic Castle",
+      "en": "Volcarona, Relic Castle",
+      "fr": "Volcarona, Relic Castle",
+      "es": "Volcarona, Relic Castle",
+      "it": "Volcarona, Relic Castle"
+    },
+    "type": "static"
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Route 5",
+      "en": "Route 5",
+      "fr": "Route 5",
+      "es": "Route 5",
+      "it": "Route 5"
+    },
+    "type": "route"
+  },
+  {
+    "id": 17,
+    "names": {
+      "de": "Route 16",
+      "en": "Route 16",
+      "fr": "Route 16",
+      "es": "Route 16",
+      "it": "Route 16"
+    },
+    "type": "route"
+  },
+  {
+    "id": 69,
+    "names": {
+      "de": "Raikou, Route 16",
+      "en": "Raikou, Route 16",
+      "fr": "Raikou, Route 16",
+      "es": "Raikou, Route 16",
+      "it": "Raikou, Route 16"
+    },
+    "type": "static"
+  },
+  {
+    "id": 18,
+    "names": {
+      "de": "Lostlorn Forest",
+      "en": "Lostlorn Forest",
+      "fr": "Lostlorn Forest",
+      "es": "Lostlorn Forest",
+      "it": "Lostlorn Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 70,
+    "names": {
+      "de": "Mew, Lostlorn Forest",
+      "en": "Mew, Lostlorn Forest",
+      "fr": "Mew, Lostlorn Forest",
+      "es": "Mew, Lostlorn Forest",
+      "it": "Mew, Lostlorn Forest"
+    },
+    "type": "static"
+  },
+  {
+    "id": 19,
+    "names": {
+      "de": "Driftveil Drawbridge",
+      "en": "Driftveil Drawbridge",
+      "fr": "Driftveil Drawbridge",
+      "es": "Driftveil Drawbridge",
+      "it": "Driftveil Drawbridge"
+    },
+    "type": "route"
+  },
+  {
+    "id": 21,
+    "names": {
+      "de": "Route 6",
+      "en": "Route 6",
+      "fr": "Route 6",
+      "es": "Route 6",
+      "it": "Route 6"
+    },
+    "type": "route"
+  },
+  {
+    "id": 71,
+    "names": {
+      "de": "Tornadus, Route 6",
+      "en": "Tornadus, Route 6",
+      "fr": "Tornadus, Route 6",
+      "es": "Tornadus, Route 6",
+      "it": "Tornadus, Route 6"
+    },
+    "type": "static"
+  },
+  {
+    "id": 2,
+    "names": {
+      "de": "Aspertia City",
+      "en": "Aspertia City",
+      "fr": "Aspertia City",
+      "es": "Aspertia City",
+      "it": "Aspertia City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 7,
+    "names": {
+      "de": "Virbank City",
+      "en": "Virbank City",
+      "fr": "Virbank City",
+      "es": "Virbank City",
+      "it": "Virbank City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 22,
+    "names": {
+      "de": "Clay Tunnel",
+      "en": "Clay Tunnel",
+      "fr": "Clay Tunnel",
+      "es": "Clay Tunnel",
+      "it": "Clay Tunnel"
+    },
+    "type": "route"
+  },
+  {
+    "id": 23,
+    "names": {
+      "de": "Mistralton Cave",
+      "en": "Mistralton Cave",
+      "fr": "Mistralton Cave",
+      "es": "Mistralton Cave",
+      "it": "Mistralton Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 72,
+    "names": {
+      "de": "Guidance Chamber",
+      "en": "Guidance Chamber",
+      "fr": "Guidance Chamber",
+      "es": "Guidance Chamber",
+      "it": "Guidance Chamber"
+    },
+    "type": "route"
+  },
+  {
+    "id": 24,
+    "names": {
+      "de": "Chargestone Cave",
+      "en": "Chargestone Cave",
+      "fr": "Chargestone Cave",
+      "es": "Chargestone Cave",
+      "it": "Chargestone Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 73,
+    "names": {
+      "de": "Zapdos, Chargestone Cave",
+      "en": "Zapdos, Chargestone Cave",
+      "fr": "Zapdos, Chargestone Cave",
+      "es": "Zapdos, Chargestone Cave",
+      "it": "Zapdos, Chargestone Cave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 25,
+    "names": {
+      "de": "Route 7",
+      "en": "Route 7",
+      "fr": "Route 7",
+      "es": "Route 7",
+      "it": "Route 7"
+    },
+    "type": "route"
+  },
+  {
+    "id": 26,
+    "names": {
+      "de": "Celestial Tower",
+      "en": "Celestial Tower",
+      "fr": "Celestial Tower",
+      "es": "Celestial Tower",
+      "it": "Celestial Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 74,
+    "names": {
+      "de": "Mesprit, Celestial Tower",
+      "en": "Mesprit, Celestial Tower",
+      "fr": "Mesprit, Celestial Tower",
+      "es": "Mesprit, Celestial Tower",
+      "it": "Mesprit, Celestial Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 75,
+    "names": {
+      "de": "Ho-Oh, Celestial Tower",
+      "en": "Ho-Oh, Celestial Tower",
+      "fr": "Ho-Oh, Celestial Tower",
+      "es": "Ho-Oh, Celestial Tower",
+      "it": "Ho-Oh, Celestial Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 27,
+    "names": {
+      "de": "Reversal Mountain",
+      "en": "Reversal Mountain",
+      "fr": "Reversal Mountain",
+      "es": "Reversal Mountain",
+      "it": "Reversal Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 76,
+    "names": {
+      "de": "Heatran, Reversal Mountain",
+      "en": "Heatran, Reversal Mountain",
+      "fr": "Heatran, Reversal Mountain",
+      "es": "Heatran, Reversal Mountain",
+      "it": "Heatran, Reversal Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 77,
+    "names": {
+      "de": "Moltres, Reversal Mountain",
+      "en": "Moltres, Reversal Mountain",
+      "fr": "Moltres, Reversal Mountain",
+      "es": "Moltres, Reversal Mountain",
+      "it": "Moltres, Reversal Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 78,
+    "names": {
+      "de": "Groudon, Reversal Mountain",
+      "en": "Groudon, Reversal Mountain",
+      "fr": "Groudon, Reversal Mountain",
+      "es": "Groudon, Reversal Mountain",
+      "it": "Groudon, Reversal Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 28,
+    "names": {
+      "de": "Strange House",
+      "en": "Strange House",
+      "fr": "Strange House",
+      "es": "Strange House",
+      "it": "Strange House"
+    },
+    "type": "route"
+  },
+  {
+    "id": 79,
+    "names": {
+      "de": "Darkrai, Strange House",
+      "en": "Darkrai, Strange House",
+      "fr": "Darkrai, Strange House",
+      "es": "Darkrai, Strange House",
+      "it": "Darkrai, Strange House"
+    },
+    "type": "static"
+  },
+  {
+    "id": 29,
+    "names": {
+      "de": "Undella Town",
+      "en": "Undella Town",
+      "fr": "Undella Town",
+      "es": "Undella Town",
+      "it": "Undella Town"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 30,
+    "names": {
+      "de": "Undella Bay",
+      "en": "Undella Bay",
+      "fr": "Undella Bay",
+      "es": "Undella Bay",
+      "it": "Undella Bay"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 80,
+    "names": {
+      "de": "Lugia/Kyogre, Abyssal Ruins",
+      "en": "Lugia/Kyogre, Abyssal Ruins",
+      "fr": "Lugia/Kyogre, Abyssal Ruins",
+      "es": "Lugia/Kyogre, Abyssal Ruins",
+      "it": "Lugia/Kyogre, Abyssal Ruins"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 31,
+    "names": {
+      "de": "Route 14",
+      "en": "Route 14",
+      "fr": "Route 14",
+      "es": "Route 14",
+      "it": "Route 14"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 81,
+    "names": {
+      "de": "Shaymin, Route 14",
+      "en": "Shaymin, Route 14",
+      "fr": "Shaymin, Route 14",
+      "es": "Shaymin, Route 14",
+      "it": "Shaymin, Route 14"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 32,
+    "names": {
+      "de": "Abundant Shrine",
+      "en": "Abundant Shrine",
+      "fr": "Abundant Shrine",
+      "es": "Abundant Shrine",
+      "it": "Abundant Shrine"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 82,
+    "names": {
+      "de": "Landorus, Abundant Shrine",
+      "en": "Landorus, Abundant Shrine",
+      "fr": "Landorus, Abundant Shrine",
+      "es": "Landorus, Abundant Shrine",
+      "it": "Landorus, Abundant Shrine"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 33,
+    "names": {
+      "de": "Seaside Cave",
+      "en": "Seaside Cave",
+      "fr": "Seaside Cave",
+      "es": "Seaside Cave",
+      "it": "Seaside Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 34,
+    "names": {
+      "de": "Route 13",
+      "en": "Route 13",
+      "fr": "Route 13",
+      "es": "Route 13",
+      "it": "Route 13"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 83,
+    "names": {
+      "de": "Cobalion, Route 13",
+      "en": "Cobalion, Route 13",
+      "fr": "Cobalion, Route 13",
+      "es": "Cobalion, Route 13",
+      "it": "Cobalion, Route 13"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 84,
+    "names": {
+      "de": "Suicune, Route 13",
+      "en": "Suicune, Route 13",
+      "fr": "Suicune, Route 13",
+      "es": "Suicune, Route 13",
+      "it": "Suicune, Route 13"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 35,
+    "names": {
+      "de": "Route 12",
+      "en": "Route 12",
+      "fr": "Route 12",
+      "es": "Route 12",
+      "it": "Route 12"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 36,
+    "names": {
+      "de": "Village Bridge",
+      "en": "Village Bridge",
+      "fr": "Village Bridge",
+      "es": "Village Bridge",
+      "it": "Village Bridge"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 37,
+    "names": {
+      "de": "Route 11",
+      "en": "Route 11",
+      "fr": "Route 11",
+      "es": "Route 11",
+      "it": "Route 11"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 85,
+    "names": {
+      "de": "Virizion, Route 11",
+      "en": "Virizion, Route 11",
+      "fr": "Virizion, Route 11",
+      "es": "Virizion, Route 11",
+      "it": "Virizion, Route 11"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 38,
+    "names": {
+      "de": "Route 9",
+      "en": "Route 9",
+      "fr": "Route 9",
+      "es": "Route 9",
+      "it": "Route 9"
+    },
+    "type": "route"
+  },
+  {
+    "id": 86,
+    "names": {
+      "de": "Thundurus, Route 9",
+      "en": "Thundurus, Route 9",
+      "fr": "Thundurus, Route 9",
+      "es": "Thundurus, Route 9",
+      "it": "Thundurus, Route 9"
+    },
+    "type": "static"
+  },
+  {
+    "id": 39,
+    "names": {
+      "de": "Route 21",
+      "en": "Route 21",
+      "fr": "Route 21",
+      "es": "Route 21",
+      "it": "Route 21"
+    },
+    "type": "route"
+  },
+  {
+    "id": 40,
+    "names": {
+      "de": "Humilau City",
+      "en": "Humilau City",
+      "fr": "Humilau City",
+      "es": "Humilau City",
+      "it": "Humilau City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 41,
+    "names": {
+      "de": "Route 22",
+      "en": "Route 22",
+      "fr": "Route 22",
+      "es": "Route 22",
+      "it": "Route 22"
+    },
+    "type": "route"
+  },
+  {
+    "id": 87,
+    "names": {
+      "de": "Terrakion, Route 22",
+      "en": "Terrakion, Route 22",
+      "fr": "Terrakion, Route 22",
+      "es": "Terrakion, Route 22",
+      "it": "Terrakion, Route 22"
+    },
+    "type": "static"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Giant Chasm",
+      "en": "Giant Chasm",
+      "fr": "Giant Chasm",
+      "es": "Giant Chasm",
+      "it": "Giant Chasm"
+    },
+    "type": "route"
+  },
+  {
+    "id": 88,
+    "names": {
+      "de": "Kyurem, Giant Chasm",
+      "en": "Kyurem, Giant Chasm",
+      "fr": "Kyurem, Giant Chasm",
+      "es": "Kyurem, Giant Chasm",
+      "it": "Kyurem, Giant Chasm"
+    },
+    "type": "static"
+  },
+  {
+    "id": 89,
+    "names": {
+      "de": "Deoxys, Giant Chasm",
+      "en": "Deoxys, Giant Chasm",
+      "fr": "Deoxys, Giant Chasm",
+      "es": "Deoxys, Giant Chasm",
+      "it": "Deoxys, Giant Chasm"
+    },
+    "type": "static"
+  },
+  {
+    "id": 44,
+    "names": {
+      "de": "Route 23",
+      "en": "Route 23",
+      "fr": "Route 23",
+      "es": "Route 23",
+      "it": "Route 23"
+    },
+    "type": "route"
+  },
+  {
+    "id": 90,
+    "names": {
+      "de": "Azelf, Route 23",
+      "en": "Azelf, Route 23",
+      "fr": "Azelf, Route 23",
+      "es": "Azelf, Route 23",
+      "it": "Azelf, Route 23"
+    },
+    "type": "static"
+  },
+  {
+    "id": 45,
+    "names": {
+      "de": "Victory Road",
+      "en": "Victory Road",
+      "fr": "Victory Road",
+      "es": "Victory Road",
+      "it": "Victory Road"
+    },
+    "type": "route"
+  },
+  {
+    "id": 46,
+    "names": {
+      "de": "Moor of Icirrus",
+      "en": "Moor of Icirrus",
+      "fr": "Moor of Icirrus",
+      "es": "Moor of Icirrus",
+      "it": "Moor of Icirrus"
+    },
+    "type": "route"
+  },
+  {
+    "id": 91,
+    "names": {
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Route 8",
+      "it": "Route 8"
+    },
+    "type": "route"
+  },
+  {
+    "id": 92,
+    "names": {
+      "de": "Keldeo, Pledge Grove",
+      "en": "Keldeo, Pledge Grove",
+      "fr": "Keldeo, Pledge Grove",
+      "es": "Keldeo, Pledge Grove",
+      "it": "Keldeo, Pledge Grove"
+    },
+    "type": "static"
+  },
+  {
+    "id": 47,
+    "names": {
+      "de": "Icirrus City",
+      "en": "Icirrus City",
+      "fr": "Icirrus City",
+      "es": "Icirrus City",
+      "it": "Icirrus City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 48,
+    "names": {
+      "de": "Dragonspiral Tower",
+      "en": "Dragonspiral Tower",
+      "fr": "Dragonspiral Tower",
+      "es": "Dragonspiral Tower",
+      "it": "Dragonspiral Tower"
+    },
+    "type": "route"
+  },
+  {
+    "id": 93,
+    "names": {
+      "de": "Reshiram/Zekrom, Dragonspiral Tower",
+      "en": "Reshiram/Zekrom, Dragonspiral Tower",
+      "fr": "Reshiram/Zekrom, Dragonspiral Tower",
+      "es": "Reshiram/Zekrom, Dragonspiral Tower",
+      "it": "Reshiram/Zekrom, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 94,
+    "names": {
+      "de": "Latias/Latios, Dragonspiral Tower",
+      "en": "Latias/Latios, Dragonspiral Tower",
+      "fr": "Latias/Latios, Dragonspiral Tower",
+      "es": "Latias/Latios, Dragonspiral Tower",
+      "it": "Latias/Latios, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 95,
+    "names": {
+      "de": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "en": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "fr": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "es": "Dialga/Palkia/Giratina, Dragonspiral Tower",
+      "it": "Dialga/Palkia/Giratina, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 96,
+    "names": {
+      "de": "Rayquaza, Dragonspiral Tower",
+      "en": "Rayquaza, Dragonspiral Tower",
+      "fr": "Rayquaza, Dragonspiral Tower",
+      "es": "Rayquaza, Dragonspiral Tower",
+      "it": "Rayquaza, Dragonspiral Tower"
+    },
+    "type": "static"
+  },
+  {
+    "id": 49,
+    "names": {
+      "de": "Twist Mountain",
+      "en": "Twist Mountain",
+      "fr": "Twist Mountain",
+      "es": "Twist Mountain",
+      "it": "Twist Mountain"
+    },
+    "type": "route"
+  },
+  {
+    "id": 97,
+    "names": {
+      "de": "Articuno, Twist Mountain",
+      "en": "Articuno, Twist Mountain",
+      "fr": "Articuno, Twist Mountain",
+      "es": "Articuno, Twist Mountain",
+      "it": "Articuno, Twist Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 98,
+    "names": {
+      "de": "Regigigas, Twist Mountain",
+      "en": "Regigigas, Twist Mountain",
+      "fr": "Regigigas, Twist Mountain",
+      "es": "Regigigas, Twist Mountain",
+      "it": "Regigigas, Twist Mountain"
+    },
+    "type": "static"
+  },
+  {
+    "id": 50,
+    "names": {
+      "de": "Underground Ruins",
+      "en": "Underground Ruins",
+      "fr": "Underground Ruins",
+      "es": "Underground Ruins",
+      "it": "Underground Ruins"
+    },
+    "type": "route"
+  },
+  {
+    "id": 99,
+    "names": {
+      "de": "Regirock/Regice/Registeel, Underground Ruins",
+      "en": "Regirock/Regice/Registeel, Underground Ruins",
+      "fr": "Regirock/Regice/Registeel, Underground Ruins",
+      "es": "Regirock/Regice/Registeel, Underground Ruins",
+      "it": "Regirock/Regice/Registeel, Underground Ruins"
+    },
+    "type": "static"
+  },
+  {
+    "id": 51,
+    "names": {
+      "de": "Marvelous Bridge",
+      "en": "Marvelous Bridge",
+      "fr": "Marvelous Bridge",
+      "es": "Marvelous Bridge",
+      "it": "Marvelous Bridge"
+    },
+    "type": "route"
+  },
+  {
+    "id": 100,
+    "names": {
+      "de": "Cresselia, Marvelous Bridge",
+      "en": "Cresselia, Marvelous Bridge",
+      "fr": "Cresselia, Marvelous Bridge",
+      "es": "Cresselia, Marvelous Bridge",
+      "it": "Cresselia, Marvelous Bridge"
+    },
+    "type": "static"
+  },
+  {
+    "id": 52,
+    "names": {
+      "de": "Route 15",
+      "en": "Route 15",
+      "fr": "Route 15",
+      "es": "Route 15",
+      "it": "Route 15"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 53,
+    "names": {
+      "de": "Pinwheel Forest",
+      "en": "Pinwheel Forest",
+      "fr": "Pinwheel Forest",
+      "es": "Pinwheel Forest",
+      "it": "Pinwheel Forest"
+    },
+    "type": "route"
+  },
+  {
+    "id": 101,
+    "names": {
+      "de": "Celebi, Pinwheel Forest",
+      "en": "Celebi, Pinwheel Forest",
+      "fr": "Celebi, Pinwheel Forest",
+      "es": "Celebi, Pinwheel Forest",
+      "it": "Celebi, Pinwheel Forest"
+    },
+    "type": "static"
+  },
+  {
+    "id": 102,
+    "names": {
+      "de": "Uxie, Nacrene City",
+      "en": "Uxie, Nacrene City",
+      "fr": "Uxie, Nacrene City",
+      "es": "Uxie, Nacrene City",
+      "it": "Uxie, Nacrene City"
+    },
+    "type": "static"
+  },
+  {
+    "id": 54,
+    "names": {
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Route 3",
+      "it": "Route 3"
+    },
+    "type": "route"
+  },
+  {
+    "id": 55,
+    "names": {
+      "de": "Wellspring Cave",
+      "en": "Wellspring Cave",
+      "fr": "Wellspring Cave",
+      "es": "Wellspring Cave",
+      "it": "Wellspring Cave"
+    },
+    "type": "route"
+  },
+  {
+    "id": 103,
+    "names": {
+      "de": "Mewtwo, Wellspring Cave",
+      "en": "Mewtwo, Wellspring Cave",
+      "fr": "Mewtwo, Wellspring Cave",
+      "es": "Mewtwo, Wellspring Cave",
+      "it": "Mewtwo, Wellspring Cave"
+    },
+    "type": "static"
+  },
+  {
+    "id": 56,
+    "names": {
+      "de": "Striaton City",
+      "en": "Striaton City",
+      "fr": "Striaton City",
+      "es": "Striaton City",
+      "it": "Striaton City"
+    },
+    "type": "route"
+  },
+  {
+    "id": 57,
+    "names": {
+      "de": "Dreamyard",
+      "en": "Dreamyard",
+      "fr": "Dreamyard",
+      "es": "Dreamyard",
+      "it": "Dreamyard"
+    },
+    "type": "route"
+  },
+  {
+    "id": 104,
+    "names": {
+      "de": "Jirachi, Dreamyard",
+      "en": "Jirachi, Dreamyard",
+      "fr": "Jirachi, Dreamyard",
+      "es": "Jirachi, Dreamyard",
+      "it": "Jirachi, Dreamyard"
+    },
+    "type": "static"
+  },
+  {
+    "id": 58,
+    "names": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Route 2",
+      "it": "Route 2"
+    },
+    "type": "route"
+  },
+  {
+    "id": 59,
+    "names": {
+      "de": "Route 1",
+      "en": "Route 1",
+      "fr": "Route 1",
+      "es": "Route 1",
+      "it": "Route 1"
+    },
+    "type": "route"
+  },
+  {
+    "id": 60,
+    "names": {
+      "de": "Route 17",
+      "en": "Route 17",
+      "fr": "Route 17",
+      "es": "Route 17",
+      "it": "Route 17"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 61,
+    "names": {
+      "de": "Route 18",
+      "en": "Route 18",
+      "fr": "Route 18",
+      "es": "Route 18",
+      "it": "Route 18"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 62,
+    "names": {
+      "de": "P2 Laboratory",
+      "en": "P2 Laboratory",
+      "fr": "P2 Laboratory",
+      "es": "P2 Laboratory",
+      "it": "P2 Laboratory"
+    },
+    "type": "route",
+    "postgame": true
+  },
+  {
+    "id": 105,
+    "names": {
+      "de": "Genesect, P2 Laboratory",
+      "en": "Genesect, P2 Laboratory",
+      "fr": "Genesect, P2 Laboratory",
+      "es": "Genesect, P2 Laboratory",
+      "it": "Genesect, P2 Laboratory"
+    },
+    "type": "static",
+    "postgame": true
+  },
+  {
+    "id": 63,
+    "names": {
+      "de": "Nature Preserve",
+      "en": "Nature Preserve",
+      "fr": "Nature Preserve",
+      "es": "Nature Preserve",
+      "it": "Nature Preserve"
+    },
+    "type": "route"
+  },
+  {
+    "id": 106,
+    "names": {
+      "de": "Arceus, Nature Preserve",
+      "en": "Arceus, Nature Preserve",
+      "fr": "Arceus, Nature Preserve",
+      "es": "Arceus, Nature Preserve",
+      "it": "Arceus, Nature Preserve"
+    },
+    "type": "static"
+  }
+]
