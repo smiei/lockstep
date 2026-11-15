@@ -239,6 +239,24 @@ async function addMoves(slugs) {
   await writeFile(file, JSON.stringify(sorted) + "\n", "utf-8");
 }
 
+// The HM moves of each version group (everything else a machine teaches is a TM).
+const HM_MOVES = {
+  "red-blue": ["cut", "fly", "surf", "strength", "flash"],
+  "yellow": ["cut", "fly", "surf", "strength", "flash"],
+  "gold-silver": ["cut", "fly", "surf", "strength", "flash", "whirlpool", "waterfall"],
+  "crystal": ["cut", "fly", "surf", "strength", "flash", "whirlpool", "waterfall"],
+  "ruby-sapphire": ["cut", "fly", "surf", "strength", "flash", "rock-smash", "waterfall", "dive"],
+  "emerald": ["cut", "fly", "surf", "strength", "flash", "rock-smash", "waterfall", "dive"],
+  "firered-leafgreen": ["cut", "fly", "surf", "strength", "flash", "rock-smash", "waterfall", "dive"],
+  "diamond-pearl": ["cut", "fly", "surf", "strength", "defog", "rock-smash", "waterfall", "rock-climb"],
+  "platinum": ["cut", "fly", "surf", "strength", "defog", "rock-smash", "waterfall", "rock-climb"],
+  "heartgold-soulsilver": ["cut", "fly", "surf", "strength", "whirlpool", "rock-smash", "waterfall", "rock-climb"],
+  "black-white": ["cut", "fly", "surf", "strength", "waterfall", "dive"],
+  "black-2-white-2": ["cut", "fly", "surf", "strength", "waterfall", "dive"],
+  "x-y": ["cut", "fly", "surf", "strength", "waterfall"],
+  "omega-ruby-alpha-sapphire": ["cut", "fly", "surf", "strength", "waterfall", "rock-smash", "dive"],
+};
+
 async function main() {
   if (process.argv[2] === "--add-moves") return addMoves(process.argv.slice(3));
   const only = process.argv.slice(2);
@@ -288,6 +306,10 @@ async function main() {
   // and slug -> { <vg>: "tm"|"hm" } for our version groups (from move.machines).
   const machineKindCache = new Map();
   const machineKindBySlug = new Map();
+  // PokeAPI has no machine records for several version groups (Ruby/Sapphire,
+  // Diamond/Pearl, Black 2/White 2, X/Y, Omega Ruby/Alpha Sapphire, Yellow), so
+  // their HMs came out as TMs. The HM lists are the games' own.
+  const hmKind = (slug, vg) => (HM_MOVES[vg]?.includes(slug) ? "hm" : undefined);
 
   // Alternate formes get their OWN rows: Deoxys, Wormadam and Shaymin genuinely
   // learn different moves per forme (Rotom, Castform and Giratina don't, but
@@ -388,7 +410,7 @@ async function main() {
           }
           for (const vg of machineVgs) {
             const entry = (tmCompat.get(vg)[slug] ??= {});
-            const kind = machineKindBySlug.get(slug)?.[vg] ?? "tm";
+            const kind = hmKind(slug, vg) ?? machineKindBySlug.get(slug)?.[vg] ?? "tm";
             (entry.machine ??= { kind, ids: [] }).ids.push(pid);
           }
           for (const vg of tutorVgs) {
@@ -448,7 +470,7 @@ async function main() {
       if (e.machine) {
         // Resolve TM-vs-HM from the now fully-populated per-move map; the kind
         // captured during the concurrent batch can be stale (see race above).
-        const kind = machineKindBySlug.get(slug)?.[vg] ?? e.machine.kind;
+        const kind = hmKind(slug, vg) ?? machineKindBySlug.get(slug)?.[vg] ?? e.machine.kind;
         out.machine = { kind, ids: e.machine.ids.sort((a, b) => a - b) };
       }
       if (e.tutor) out.tutor = e.tutor.sort((a, b) => a - b);
