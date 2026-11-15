@@ -149,12 +149,18 @@ export function getPokemonByIdForGame(game: GameInfo, id: number): Pokemon | und
 export function getPokemonFormsForGame(game: GameInfo): Pokemon[] {
   const generation = dataGeneration(game);
   const allowed = speciesAllowlist(game);
-  // The allowlist (Infinite Fusion) keeps exactly the formes it always had:
-  // Gen 6+ formes (`since`) are not in its dex.
+  // Infinite Fusion's allowlist keeps exactly the formes it always had: Gen 6+
+  // formes (`since`) are not in its dex. A ROM hack's allowlist (the species
+  // its own game data has) offers every forme of those species, as before.
   const forms = allowed
-    ? getPokemonList(undefined, generation).filter(
-        (p) => p.baseId !== undefined && p.since === undefined && allowed.has(p.baseId),
-      )
+    ? game.fusion
+      ? getPokemonList(undefined, generation).filter(
+          (p) => p.baseId !== undefined && p.since === undefined && allowed.has(p.baseId),
+        )
+      : [
+          ...getPokemonForms(undefined, generation).filter((p) => allowed.has(p.baseId!)),
+          ...packFakemon(game).filter((p) => p.baseId !== undefined),
+        ]
     : [...getPokemonForms(game.dexLimit, generation), ...packFakemon(game).filter((p) => p.baseId !== undefined)];
   return game.nameLang || game.speciesData ? forms.map((p) => forGame(game, p)) : forms;
 }
@@ -304,6 +310,6 @@ export type FusionSpriteConfig = {
 export function getFusionSpriteConfigForGame(game: GameInfo): FusionSpriteConfig | null {
   if (!game.fusion) return null;
   const ifIdByOurId: Record<number, number> = {};
-  for (const entry of getSpeciesList(game.id)) ifIdByOurId[entry.ourId] = entry.ifId;
+  for (const entry of getSpeciesList(game.id)) if (entry.ifId !== undefined) ifIdByOurId[entry.ourId] = entry.ifId;
   return { ...game.fusion, ifIdByOurId };
 }
