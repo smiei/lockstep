@@ -5,16 +5,17 @@
   "generation": 3,
   "dataGeneration": 6,
   "dexLimit": 721,
+  "species": true,
   "spriteSet": "emerald",
   "versionGroup": "emerald",
   "speciesData": "glazed",
   "trainerSet": "emerald",
   "names": {
-    "de": "Glazed",
-    "en": "Glazed",
-    "fr": "Glazed",
-    "es": "Glazed",
-    "it": "Glazed"
+    "de": "Blazed Glazed",
+    "en": "Blazed Glazed",
+    "fr": "Blazed Glazed",
+    "es": "Blazed Glazed",
+    "it": "Blazed Glazed"
   },
-  "source": "Bassel-T/nuzlocke.app@2b4f2ec (glazed)"
+  "source": "game data: Blazed Glazed v1.3 (species, moves, learnsets, evolutions, level caps, places); place list from Bassel-T/nuzlocke.app@2b4f2ec (glazed)"
 }
