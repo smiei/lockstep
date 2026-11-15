@@ -5,6 +5,7 @@
   "generation": 3,
   "dataGeneration": 8,
   "dexLimit": 905,
+  "species": true,
   "spriteSet": "emerald",
   "versionGroup": "modern",
   "speciesData": "run-and-bun",

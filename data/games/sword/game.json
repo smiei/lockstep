@@ -4,6 +4,7 @@
   "kind": "official",
   "generation": 8,
   "dexLimit": 898,
+  "species": true,
   "spriteSet": "modern",
   "versionGroup": "sword-shield",
   "trainerSet": "sword-shield",

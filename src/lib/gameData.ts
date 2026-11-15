@@ -128,8 +128,13 @@ function forGame(game: GameInfo, pokemon: Pokemon): Pokemon {
 export function getPokemonListForGame(game: GameInfo): Pokemon[] {
   const generation = dataGeneration(game);
   const allowed = speciesAllowlist(game);
+  // In a regionalForms pack a forme id in the allowlist means "the game has
+  // this forme but not its base species" (Run & Bun's Alolan Geodude); those
+  // formes are added below, so they must not be listed here a second time.
   const species = allowed
-    ? getPokemonList(undefined, generation).filter((p) => allowed.has(p.id))
+    ? getPokemonList(undefined, generation).filter(
+        (p) => allowed.has(p.id) && !(game.regionalForms && p.baseId !== undefined),
+      )
     : getPokemonList(game.dexLimit, generation);
   // GameInfo.regionalForms: Alolan Vulpix & co. are caught on routes, so they
   // are entries of their own here (after the species, ids 10001+).
@@ -158,7 +163,9 @@ export function getPokemonFormsForGame(game: GameInfo): Pokemon[] {
           (p) => p.baseId !== undefined && p.since === undefined && allowed.has(p.baseId),
         )
       : [
-          ...getPokemonForms(undefined, generation).filter((p) => allowed.has(p.baseId!)),
+          ...getPokemonForms(undefined, generation).filter(
+            (p) => allowed.has(p.baseId!) || allowed.has(p.id),
+          ),
           ...packFakemon(game).filter((p) => p.baseId !== undefined),
         ]
     : [...getPokemonForms(game.dexLimit, generation), ...packFakemon(game).filter((p) => p.baseId !== undefined)];
