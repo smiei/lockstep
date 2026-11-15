@@ -35,6 +35,10 @@ async function fetchJson(url) {
   return res.json();
 }
 
+// Evolutions whose condition fits none of the structured kinds: the key of the
+// sentence evolutionMethods.ts shows for them (OTHER_NOTES there).
+const OTHER_NOTES = {"700": "sylveon", "809": "melmetal", "865": "sirfetchd", "867": "runerigus", "869": "alcremie", "892": "urshifu", "899": "wyrdeer", "902": "basculegion", "904": "overqwil", "923": "steps", "925": "maushold", "947": "steps", "954": "steps", "979": "annihilape", "983": "kingambit", "1000": "gholdengo"};
+
 // Reduce PokeAPI evolution_details to the small structured method format the
 // app renders (see EvolutionMethod in src/lib/data.ts).
 function parseMethod(details) {
@@ -116,7 +120,10 @@ async function main() {
             const childId = extractIdFromUrl(child.species.url);
             if (childId !== null && idSet.has(childId)) {
               const method = parseMethod(child.evolution_details);
-              if (method) methods.set(childId, method);
+              if (method) {
+                const note = method.kind === "other" ? OTHER_NOTES[childId] : undefined;
+                methods.set(childId, note ? { kind: "other", note } : method);
+              }
             }
             walk(child);
           }

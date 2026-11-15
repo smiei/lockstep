@@ -519,7 +519,9 @@ export type EvolutionMethod =
   | { kind: "shed" }
   | { kind: "trade"; item?: string | null }
   | { kind: "beauty" }
-  | { kind: "other" };
+  // A condition none of the kinds above can hold; `note` names the sentence
+  // evolutionMethods.ts shows for it (OTHER_NOTES), none = no text.
+  | { kind: "other"; note?: string };
 
 export type EvolutionEntry = {
   id: number;
