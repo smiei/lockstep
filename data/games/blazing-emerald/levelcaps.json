@@ -42,7 +42,8 @@
       "it": "Dewford Town Gym"
     },
     "badge": null,
-    "max_level": 22
+    "max_level": 22,
+    "kind": "gym"
   },
   {
     "id": 3,
@@ -315,6 +316,7 @@
     },
     "badge": null,
     "max_level": 76,
-    "sprite": "Troy Trumm"
+    "sprite": "Troy Trumm",
+    "kind": "league"
   }
 ]

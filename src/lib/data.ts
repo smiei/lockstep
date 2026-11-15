@@ -196,6 +196,10 @@ export type Pokemon = {
   regional?: boolean;
 };
 
+// What a boss fight is to the rule "level caps only for gyms and the League"
+// (src/lib/levelCapRule.ts).
+export type CapKind = "gym" | "league" | "other";
+
 export type LevelCap = {
   id: number;
   names: LocalizedNames;
@@ -209,6 +213,9 @@ export type LevelCap = {
   // A Kanto fight in HeartGold/SoulSilver (Lt. Surge to Red), left out of
   // the Journey progress bar when the run excludes Kanto.
   region?: Region;
+  // Only where it cannot be read off the entry (capKind): a gym without a
+  // badge, Alola's kahunas and totems, a champion outside the Elite Four block.
+  kind?: CapKind;
 };
 
 // Parsed once per request, not once per call. The files are still re-read on

@@ -72,7 +72,13 @@
       "es": "Route 2",
       "it": "Route 2"
     },
-    "badge": null,
+    "badge": {
+      "de": "Basic Badge",
+      "en": "Basic Badge",
+      "fr": "Basic Badge",
+      "es": "Basic Badge",
+      "it": "Basic Badge"
+    },
     "max_level": 13
   },
   {
@@ -110,7 +116,13 @@
       "es": "Virbank City Gym",
       "it": "Virbank City Gym"
     },
-    "badge": null,
+    "badge": {
+      "de": "Toxic Badge",
+      "en": "Toxic Badge",
+      "fr": "Toxic Badge",
+      "es": "Toxic Badge",
+      "it": "Toxic Badge"
+    },
     "max_level": 20
   },
   {
@@ -129,13 +141,7 @@
       "es": "Icirrus City",
       "it": "Icirrus City"
     },
-    "badge": {
-      "de": "Freeze Badge",
-      "en": "Freeze Badge",
-      "fr": "Freeze Badge",
-      "es": "Freeze Badge",
-      "it": "Freeze Badge"
-    },
+    "badge": null,
     "max_level": 20,
     "sprite": "Sandro"
   },
@@ -219,13 +225,7 @@
       "es": "Nacrene City",
       "it": "Nacrene City"
     },
-    "badge": {
-      "de": "Basic Badge",
-      "en": "Basic Badge",
-      "fr": "Basic Badge",
-      "es": "Basic Badge",
-      "it": "Basic Badge"
-    },
+    "badge": null,
     "max_level": 30,
     "sprite": "Aloe"
   },
@@ -654,7 +654,13 @@
       "es": "Humilau City Gym",
       "it": "Humilau City Gym"
     },
-    "badge": null,
+    "badge": {
+      "de": "Wave Badge",
+      "en": "Wave Badge",
+      "fr": "Wave Badge",
+      "es": "Wave Badge",
+      "it": "Wave Badge"
+    },
     "max_level": 62
   },
   {

@@ -28,6 +28,7 @@ import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
 import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
 import { computePokemonRanks, rankForSumme } from "@/lib/ranking";
 import { displayNameWithForm, formLabel, formsOfSpecies } from "@/lib/forms";
+import { applyCapRule, teamLevel } from "@/lib/levelCapRule";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { comparePlayers } from "@/lib/players";
@@ -111,16 +112,17 @@ export default async function LinksPage({
   const ranks = computePokemonRanks(pokemonList);
 
   // Current level cap = the LAST DEFEATED Journey milestone with a cap (the
-  // cap you have earned). House rule: only one Pokémon may reach the cap
-  // itself, everyone else stays at cap-2 - so evolution availability is
-  // judged against cap-2. Nothing defeated yet -> no cap earned, nothing
-  // highlights.
+  // cap you have earned; which fights have one is the run's cap rule). House
+  // rule: only one Pokémon may reach the cap itself, everyone else stays the
+  // run's capTeamOffset below - so evolution availability is judged against
+  // that level. Nothing defeated yet -> no cap earned, nothing highlights.
   const progress = await prisma.levelCapProgress.findMany({ where: { runId } });
   const defeatedIds = new Set(progress.filter((p) => p.defeated).map((p) => p.levelCapId));
-  const lastDefeatedCap = getLevelCaps(gameId)
+  const lastDefeatedCap = applyCapRule(getLevelCaps(gameId), settings)
     .filter((c) => c.max_level !== null && defeatedIds.has(c.id))
     .at(-1);
-  const allowedLevel = lastDefeatedCap?.max_level != null ? lastDefeatedCap.max_level - 2 : 0;
+  const allowedLevel =
+    lastDefeatedCap?.max_level != null ? teamLevel(lastDefeatedCap.max_level, settings.capTeamOffset) : 0;
 
   // One lookup table for both the name and the sort below, and it resolves
   // the run's own added routes as well as the pack's.

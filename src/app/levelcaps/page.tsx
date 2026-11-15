@@ -6,6 +6,7 @@ import { tabMetadata } from "@/lib/pageMetadata";
 import { translations } from "@/lib/i18n/dictionary";
 import { computeLevelCapProgress, eliteFourIndex } from "@/lib/progress";
 import { levelCapsInRun } from "@/lib/regions";
+import { applyCapRule } from "@/lib/levelCapRule";
 import { LevelCapsView } from "@/components/LevelCapsView";
 import { CanonicalRun } from "@/components/CanonicalRun";
 import { RunLanding } from "@/components/RunLanding";
@@ -34,7 +35,11 @@ export default async function LevelCapsPage({
   const progressRows = await prisma.levelCapProgress.findMany({ where: { runId } });
   const defeatedIds = new Set(progressRows.filter((p) => p.defeated).map((p) => p.levelCapId));
 
-  const items = levelCaps.map((cap) => ({ ...cap, defeated: defeatedIds.has(cap.id) }));
+  // A fight the run's cap rule skips stays on the list, without a level.
+  const items = applyCapRule(
+    levelCaps.map((cap) => ({ ...cap, defeated: defeatedIds.has(cap.id) })),
+    resolvedRun.settings,
+  );
   // A Kanto the run leaves out does not count towards the journey.
   const progress = computeLevelCapProgress(levelCapsInRun(items, resolvedRun.settings));
   const markerAt = eliteFourIndex(items);
@@ -58,6 +63,7 @@ export default async function LevelCapsPage({
         levelCaps={items}
         trainerSet={trainerSet}
         includeKanto={resolvedRun.settings.includeKanto}
+        teamOffset={resolvedRun.settings.capTeamOffset}
       />
     </div>
   );

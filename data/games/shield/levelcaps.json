@@ -501,7 +501,8 @@
       "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
-    "max_level": 53
+    "max_level": 53,
+    "kind": "league"
   },
   {
     "id": 25,
@@ -520,7 +521,8 @@
       "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
-    "max_level": 53
+    "max_level": 53,
+    "kind": "league"
   },
   {
     "id": 26,
@@ -539,7 +541,8 @@
       "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
-    "max_level": 54
+    "max_level": 54,
+    "kind": "league"
   },
   {
     "id": 27,
@@ -558,7 +561,8 @@
       "it": "Goalwick, incontro di campionato"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "kind": "league"
   },
   {
     "id": 28,
@@ -596,7 +600,8 @@
       "it": "Goalwick, finale del campionato"
     },
     "badge": null,
-    "max_level": 65
+    "max_level": 65,
+    "kind": "league"
   },
   {
     "id": 30,

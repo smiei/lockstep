@@ -3,6 +3,7 @@
 // toggles are informational/UI-level rules - none of them make the server
 // reject writes, matching how the Species Clause has always worked.
 import type { Player } from "@/generated/prisma/enums";
+import { CAP_TEAM_OFFSET_DEFAULT, parseCapTeamOffset } from "@/lib/levelCapRule";
 
 // One name per possible player; a run only shows the ones it has (see
 // src/lib/players.ts), the rest simply stay empty.
@@ -82,6 +83,15 @@ export type RunSettings = {
   // post-game - collapsed on the Encounter tab, left out of the encounter and
   // Journey progress bars (src/lib/regions.ts).
   includeKanto: boolean;
+  // Only gyms and the League set a level cap; rivals and villain bosses stay
+  // on the Journey as stations without one (src/lib/levelCapRule.ts). Off =
+  // every fight the pack has a level for is a cap.
+  capsGymsOnly: boolean;
+  // How many levels the rest of the team stays under a cap ("one Pokemon at
+  // the cap, the others two below"); 0 = the whole team may reach it. Not a
+  // toggle - handled separately from the boolean keys below, like playerNames,
+  // but unlike them a house rule, so it travels in presets.
+  capTeamOffset: number;
   // Custom SoulLink player names (empty = fall back to the localized
   // "Player 1"/"Player 2"/...). Not a toggle - handled separately from the
   // boolean keys below.
@@ -110,6 +120,8 @@ export const DEFAULT_RUN_SETTINGS: RunSettings = {
   fusionLocksBothFamilies: true,
   randomizerFuseEverything: false,
   includeKanto: true,
+  capsGymsOnly: false,
+  capTeamOffset: CAP_TEAM_OFFSET_DEFAULT,
   playerNames: { PLAYER1: "", PLAYER2: "", PLAYER3: "", PLAYER4: "" },
 };
 
@@ -123,9 +135,27 @@ export const NEW_RUN_SETTINGS_JSON = JSON.stringify({
   evolutionOverridesImpossible: false,
   evolutionOverridesEasier: false,
   evolutionOverridesTimeBased: false,
+  capsGymsOnly: true,
 });
 
-// Only the boolean toggles - playerNames is handled separately.
+// A new run copies the settings of the run it was started from. A rule that is
+// on for new runs only (off in DEFAULT_RUN_SETTINGS so runs already being
+// played keep their caps) would be lost on that way whenever the source run
+// predates it - so a key the source never stored is filled in here.
+const NEW_RUN_ONLY_DEFAULTS = { capsGymsOnly: true };
+export function settingsForNewRun(sourceJson: string | null | undefined): string {
+  if (sourceJson == null) return NEW_RUN_SETTINGS_JSON;
+  let raw: unknown;
+  try {
+    raw = JSON.parse(sourceJson);
+  } catch {
+    return NEW_RUN_SETTINGS_JSON;
+  }
+  if (typeof raw !== "object" || raw === null) return NEW_RUN_SETTINGS_JSON;
+  return JSON.stringify({ ...NEW_RUN_ONLY_DEFAULTS, ...raw });
+}
+
+// Only the boolean toggles - playerNames and capTeamOffset are handled separately.
 export const RUN_SETTING_KEYS = (
   Object.keys(DEFAULT_RUN_SETTINGS) as (keyof RunSettings)[]
 ).filter((k) => typeof DEFAULT_RUN_SETTINGS[k] === "boolean") as (keyof RunSettings)[];
@@ -155,6 +185,7 @@ export function parseRunSettings(json: string): RunSettings {
     if (typeof value === "boolean") (settings[key] as boolean) = value;
   }
   if (settings.blindflugPermanent) settings.blindflug = true;
+  settings.capTeamOffset = parseCapTeamOffset((raw as Record<string, unknown>).capTeamOffset);
   settings.playerNames = parsePlayerNames((raw as Record<string, unknown>).playerNames);
   return settings;
 }
@@ -179,14 +210,15 @@ export function parsePlayerNames(raw: unknown): PlayerNames {
 export const PRESET_NAME_MAX = 40;
 
 
-// Serialize just the boolean toggles, for storing in RulePreset.settingsJson.
+// Serialize the rules (the boolean toggles and capTeamOffset), for storing in RulePreset.settingsJson.
 // playerNames is deliberately left out: it is the one part of a run's settings
 // that is about *that* run, so a preset carrying it would rename the players
 // of every run it was applied to. Reading a preset back needs no counterpart -
 // parseRunSettings already defaults every missing key, and the caller keeps
 // the run's own playerNames.
 export function serializePresetSettings(settings: RunSettings): string {
-  const out: Record<string, boolean> = {};
+  const out: Record<string, boolean | number> = {};
   for (const key of RUN_SETTING_KEYS) out[key] = settings[key] as boolean;
+  out.capTeamOffset = settings.capTeamOffset;
   return JSON.stringify(out);
 }

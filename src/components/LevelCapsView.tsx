@@ -14,6 +14,7 @@ import { Spinner } from "@/components/ui/Spinner";
 import { useToast } from "@/components/ui/ToastProvider";
 import { toggleLevelCapDefeated } from "@/lib/actions";
 import { ChevronDownIcon } from "@/components/ActionIcons";
+import { teamLevel } from "@/lib/levelCapRule";
 
 // The two regions' names read the same in every language the app speaks.
 const REGION_LABELS = { main: "Johto", kanto: "Kanto" } as const;
@@ -37,6 +38,7 @@ export function LevelCapsView({
   levelCaps,
   trainerSet,
   includeKanto = true,
+  teamOffset,
 }: {
   runKey: string;
   lang: Lang;
@@ -44,6 +46,8 @@ export function LevelCapsView({
   // The run's includeKanto rule (src/lib/regions.ts): off, the Kanto fights
   // are post-game and start collapsed, as on the Encounter tab.
   includeKanto?: boolean;
+  // The run's capTeamOffset rule: how far the rest of the team stays under a cap.
+  teamOffset: number;
   // Folder under public/trainers/ for game-specific avatars (see TrainerSprite).
   trainerSet: string;
 }) {
@@ -128,13 +132,15 @@ export function LevelCapsView({
             {pending && <Spinner className="shrink-0 text-ink-muted" />}
             {cap.max_level !== null && (
               <div className="shrink-0 text-right">
-                {/* "cap / cap-2": one team member may reach the cap, the rest
-                    stay two levels below (house rule). */}
+                {/* "cap / team": one team member may reach the cap, the rest
+                    stay the run's capTeamOffset below it (house rule). */}
                 <div
                   className={`font-mono text-lg font-semibold tabular-nums ${defeated ? "text-ink-muted" : "text-ink"}`}
                 >
                   {cap.max_level}
-                  <span className="text-ink-subtle"> / {cap.max_level - 2}</span>
+                  {teamOffset > 0 && (
+                    <span className="text-ink-subtle"> / {teamLevel(cap.max_level, teamOffset)}</span>
+                  )}
                 </div>
                 <div className="text-xs text-ink-subtle">{t.maxLevel}</div>
               </div>

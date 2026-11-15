@@ -382,6 +382,7 @@ export default async function OverviewPage({
     teamSummeMax,
     capCurrent,
     capNext,
+    capTeamOffset: settings.capTeamOffset,
     // Who the next cap belongs to, for the run sheet's headline.
     nextCap: nextCapEntry ? { names: nextCapEntry.names, location: nextCapEntry.location } : null,
   };

@@ -20,6 +20,7 @@ import { DeathPointPicker, type DeathPointOption } from "@/components/DeathPoint
 import { Card } from "@/components/ui/Card";
 import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
 import { GameCover } from "@/components/GameCover";
+import { teamLevel } from "@/lib/levelCapRule";
 import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
 
 export type OverviewStats = {
@@ -36,6 +37,8 @@ export type OverviewStats = {
   teamSummeMax: number;
   capCurrent: number | null;
   capNext: number | null;
+  // The run's rule: how far the rest of the team stays under a cap.
+  capTeamOffset: number;
   // The fight the next cap belongs to - the run sheet's headline.
   nextCap: { names: LocalizedNames; location: LocalizedNames } | null;
 };
@@ -238,7 +241,11 @@ export function OverviewView({
                   <p className="font-mono text-5xl font-semibold leading-none tabular-nums text-ink">
                     {stats.capNext}
                   </p>
-                  <p className="mt-1 text-xs text-ink-muted">{t.sheetTeamUpTo(stats.capNext - 2)}</p>
+                  {stats.capTeamOffset > 0 && (
+                    <p className="mt-1 text-xs text-ink-muted">
+                      {t.sheetTeamUpTo(teamLevel(stats.capNext, stats.capTeamOffset))}
+                    </p>
+                  )}
                 </div>
               </div>
             ) : (
@@ -246,7 +253,7 @@ export function OverviewView({
             )}
             {stats.capCurrent !== null && (
               <p className="mt-3 font-mono text-xs tabular-nums text-ink-subtle">
-                {t.sheetLastCap(stats.capCurrent, stats.capCurrent - 2)}
+                {t.sheetLastCap(stats.capCurrent, teamLevel(stats.capCurrent, stats.capTeamOffset))}
               </p>
             )}
           </div>
