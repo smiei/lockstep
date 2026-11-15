@@ -14,6 +14,9 @@
   "clamp": {
     "pp": 10
   },
+  "covet": {
+    "type": "fairy"
+  },
   "cut": {
     "power": 60,
     "type": "bug"
@@ -62,6 +65,9 @@
   },
   "rock-slide": {
     "accuracy": 95
+  },
+  "secret-power": {
+    "damageClass": "special"
   },
   "shadow-claw": {
     "power": 80
