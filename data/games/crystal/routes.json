@@ -165,6 +165,17 @@
     "type": "route"
   },
   {
+    "id": 95,
+    "names": {
+      "de": "Kurioses Ei Route 34",
+      "en": "Odd Egg Route 34",
+      "fr": "Œuf Bizarre Route 34",
+      "es": "Huevo Raro Ruta 34",
+      "it": "Uovo Strano Percorso 34"
+    },
+    "type": "static"
+  },
+  {
     "id": 18,
     "names": {
       "de": "Route 35",
