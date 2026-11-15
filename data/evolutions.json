@@ -5600,7 +5600,8 @@
     "evolvesFrom": 133,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "sylveon"
     }
   },
   {
@@ -6377,7 +6378,8 @@
     "evolvesFrom": 808,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "melmetal"
     }
   },
   {
@@ -6853,7 +6855,8 @@
     "evolvesFrom": 83,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "sirfetchd"
     }
   },
   {
@@ -6870,7 +6873,8 @@
     "evolvesFrom": 562,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "runerigus"
     }
   },
   {
@@ -6885,7 +6889,8 @@
     "evolvesFrom": 868,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "alcremie"
     }
   },
   {
@@ -7031,7 +7036,8 @@
     "evolvesFrom": 891,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "urshifu"
     }
   },
   {
@@ -7069,7 +7075,8 @@
     "evolvesFrom": 234,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "wyrdeer"
     }
   },
   {
@@ -7095,7 +7102,8 @@
     "evolvesFrom": 550,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "basculegion"
     }
   },
   {
@@ -7113,7 +7121,8 @@
     "evolvesFrom": 211,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "overqwil"
     }
   },
   {
@@ -7273,7 +7282,8 @@
     "evolvesFrom": 922,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "steps"
     }
   },
   {
@@ -7288,7 +7298,8 @@
     "evolvesFrom": 924,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "maushold"
     }
   },
   {
@@ -7468,7 +7479,8 @@
     "evolvesFrom": 946,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "steps"
     }
   },
   {
@@ -7520,7 +7532,8 @@
     "evolvesFrom": 953,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "steps"
     }
   },
   {
@@ -7702,7 +7715,8 @@
     "evolvesFrom": 57,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "annihilape"
     }
   },
   {
@@ -7739,7 +7753,8 @@
     "evolvesFrom": 625,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "kingambit"
     }
   },
   {
@@ -7841,7 +7856,8 @@
     "evolvesFrom": 999,
     "evolvesTo": [],
     "method": {
-      "kind": "other"
+      "kind": "other",
+      "note": "gholdengo"
     }
   },
   {

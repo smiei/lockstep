@@ -509,6 +509,91 @@ const TEMPLATES: Record<
   },
 };
 
+// What "other" evolutions need, keyed by EvolutionMethod.note (data/evolutions.json,
+// written by scripts/generate-evolutions.mjs). A note without an entry shows no text.
+const OTHER_NOTES: Record<Lang, Record<string, string>> = {
+  de: {
+    sylveon: "Level-Up mit einer Feen-Attacke und hoher Zuneigung",
+    melmetal: "400 Meltan-Bonbons in Pokémon GO",
+    sirfetchd: "3 Volltreffer in einem einzigen Kampf",
+    runerigus: "mindestens 49 KP Schaden nehmen, dann unter dem Steinbogen im Sandsturmkessel hindurchgehen",
+    alcremie: "sich drehen, während es eine Süßigkeit trägt",
+    urshifu: "den Turm des Unlichts oder den Turm des Wassers meistern",
+    wyrdeer: "Barrierenstoß 20-mal im Tempo-Stil einsetzen (Legenden: Arceus)",
+    basculegion: "294 KP Rückstoßschaden nehmen, ohne besiegt zu werden (Legenden: Arceus)",
+    overqwil: "Giftstachelregen 20-mal im Kraft-Stil einsetzen (Legenden: Arceus)",
+    steps: "1000 Schritte außerhalb des Pokéballs mitlaufen, dann Level-Up",
+    maushold: "Level-Up im Kampf ab Level 25",
+    annihilape: "Zornesfaust 20-mal einsetzen, dann Level-Up",
+    kingambit: "3 Caesurio besiegen, die ein Anführerzeichen tragen, dann Level-Up",
+    gholdengo: "999 Gierspenst-Münzen sammeln, dann Level-Up",
+  },
+  en: {
+    sylveon: "level up knowing a Fairy-type move, with high affection",
+    melmetal: "400 Meltan Candy in Pokémon GO",
+    sirfetchd: "3 critical hits in a single battle",
+    runerigus: "take at least 49 HP of damage, then walk under the stone arch in the Dusty Bowl",
+    alcremie: "spin around while it holds a Sweet",
+    urshifu: "clear the Tower of Darkness or the Tower of Waters",
+    wyrdeer: "use Psyshield Bash 20 times in Agile Style (Legends: Arceus)",
+    basculegion: "take 294 HP of recoil damage without fainting (Legends: Arceus)",
+    overqwil: "use Barb Barrage 20 times in Strong Style (Legends: Arceus)",
+    steps: "walk 1,000 steps with it outside its Poké Ball, then level up",
+    maushold: "level up in a battle from level 25",
+    annihilape: "use Rage Fist 20 times, then level up",
+    kingambit: "defeat 3 Bisharp that hold a Leader’s Crest, then level up",
+    gholdengo: "collect 999 Gimmighoul Coins, then level up",
+  },
+  fr: {
+    sylveon: "montée de niveau avec une capacité Fée et une grande affection",
+    melmetal: "400 Bonbons Meltan dans Pokémon GO",
+    sirfetchd: "3 coups critiques dans un même combat",
+    runerigus: "subir au moins 49 PV de dégâts, puis passer sous l’arche de pierre de la Cuvette Poussiéreuse",
+    alcremie: "tourner sur soi-même pendant qu’il tient une Friandise",
+    urshifu: "terminer la Tour des Ténèbres ou la Tour de l’Eau",
+    wyrdeer: "utiliser Sprint Bouclier 20 fois en style rapide (Légendes : Arceus)",
+    basculegion: "subir 294 PV de dégâts de contrecoup sans être mis K.O. (Légendes : Arceus)",
+    overqwil: "utiliser Multitoxik 20 fois en style puissant (Légendes : Arceus)",
+    steps: "marcher 1000 pas avec lui hors de sa Poké Ball, puis montée de niveau",
+    maushold: "montée de niveau en combat à partir du niveau 25",
+    annihilape: "utiliser Poing de Colère 20 fois, puis montée de niveau",
+    kingambit: "vaincre 3 Scalproie tenant un Emblème du Général, puis montée de niveau",
+    gholdengo: "réunir 999 Pièces de Mordudor, puis montée de niveau",
+  },
+  es: {
+    sylveon: "subir de nivel con un movimiento Hada y mucho afecto",
+    melmetal: "400 Caramelos de Meltan en Pokémon GO",
+    sirfetchd: "3 golpes críticos en un mismo combate",
+    runerigus: "recibir al menos 49 PS de daño y pasar bajo el arco de piedra de la Cuenca Polvorienta",
+    alcremie: "girar sobre uno mismo mientras lleva un Confite",
+    urshifu: "superar la Torre de las Sombras o la Torre de las Aguas",
+    wyrdeer: "usar Asalto Barrera 20 veces en estilo rápido (Leyendas: Arceus)",
+    basculegion: "recibir 294 PS de daño de retroceso sin debilitarse (Leyendas: Arceus)",
+    overqwil: "usar Mil Púas Tóxicas 20 veces en estilo fuerte (Leyendas: Arceus)",
+    steps: "caminar 1000 pasos con él fuera de la Poké Ball y subir de nivel",
+    maushold: "subir de nivel en combate desde el nivel 25",
+    annihilape: "usar Puño Furia 20 veces y subir de nivel",
+    kingambit: "derrotar a 3 Bisharp con Distintivo de Líder y subir de nivel",
+    gholdengo: "reunir 999 Monedas de Gimmighoul y subir de nivel",
+  },
+  it: {
+    sylveon: "salire di livello con una mossa Folletto e grande affetto",
+    melmetal: "400 Caramelle Meltan in Pokémon GO",
+    sirfetchd: "3 brutti colpi in una sola lotta",
+    runerigus: "subire almeno 49 PS di danni, poi passare sotto l’arco di pietra della Conca delle Sabbie",
+    alcremie: "girare su se stessi mentre tiene un Bonbon",
+    urshifu: "completare la Torre Buio o la Torre Acqua",
+    wyrdeer: "usare Barrierassalto 20 volte con la tecnica rapida (Leggende: Arceus)",
+    basculegion: "subire 294 PS di danni da contraccolpo senza andare KO (Leggende: Arceus)",
+    overqwil: "usare Mille Fielespine 20 volte con la tecnica potente (Leggende: Arceus)",
+    steps: "fare 1000 passi con lui fuori dalla Poké Ball, poi salire di livello",
+    maushold: "salire di livello in lotta dal livello 25",
+    annihilape: "usare Pugno Furibondo 20 volte, poi salire di livello",
+    kingambit: "sconfiggere 3 Bisharp con un Simbolo del Capo, poi salire di livello",
+    gholdengo: "raccogliere 999 Monete di Gimmighoul, poi salire di livello",
+  },
+};
+
 // Short human-readable description shown under each option in the evolve
 // dropdown, e.g. "ab Level 36" / "mit Wasserstein".
 export function formatEvolutionMethod(method: EvolutionMethod, lang: Lang): string | null {
@@ -541,6 +626,6 @@ export function formatEvolutionMethod(method: EvolutionMethod, lang: Lang): stri
     case "beauty":
       return t.beauty;
     case "other":
-      return null;
+      return (method.note && OTHER_NOTES[lang][method.note]) || null;
   }
 }
