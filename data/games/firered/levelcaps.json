@@ -16,7 +16,7 @@
       "it": "Biancavilla"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 5,
     "sprite": "champ"
   },
   {
@@ -36,7 +36,7 @@
       "it": "Percorso 22"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 9,
     "sprite": "champ"
   },
   {
@@ -106,7 +106,7 @@
       "it": "Celestopoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 18,
     "sprite": "champ"
   },
   {
@@ -126,7 +126,7 @@
       "it": "M/N Anna, Aranciopoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 20,
     "sprite": "champ"
   },
   {
@@ -171,7 +171,7 @@
       "it": "Torre Pokémon, Lavandonia"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 25,
     "sprite": "champ"
   },
   {
@@ -216,7 +216,7 @@
       "it": "Rifugio Rocket, Azzurropoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 29,
     "sprite": "giovanni"
   },
   {
@@ -236,7 +236,7 @@
       "it": "Silph SpA, Zafferanopoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 40,
     "sprite": "champ"
   },
   {
@@ -256,7 +256,7 @@
       "it": "Silph SpA, Zafferanopoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 41,
     "sprite": "giovanni"
   },
   {
@@ -376,7 +376,7 @@
       "it": "Percorso 22"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 53,
     "sprite": "champ"
   },
   {

@@ -41,7 +41,7 @@
       "it": "Azalina"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 16,
     "sprite": "rivale"
   },
   {
@@ -111,7 +111,7 @@
       "it": "Torre Bruciata, Amarantopoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 22,
     "sprite": "rivale"
   },
   {
@@ -231,7 +231,7 @@
       "it": "Fiordoropoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 32,
     "sprite": "rivale"
   },
   {
@@ -276,7 +276,7 @@
       "it": "Via Vittoria"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 38,
     "sprite": "rivale"
   },
   {
