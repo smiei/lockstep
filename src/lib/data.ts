@@ -89,6 +89,8 @@ export type GameInfo = {
   // data/games/<id>/species.json instead of "every id <= dexLimit". Exists
   // for Infinite Fusion, whose ~572 species are scattered up to national dex
   // #800, not a contiguous prefix - see getSpeciesList() and gameData.ts.
+  // ROM hacks that keep only part of the dex (Blazing Emerald, Blazed Glazed)
+  // use it too, with the species their own game data has.
   species?: boolean;
   // Forces every Pokemon name this pack shows to this ONE language,
   // regardless of the UI language - for a pack whose source game was never
@@ -475,8 +477,8 @@ export type SpeciesEntry = {
   // The source game's own dex number - what its fan sprite CDN (if any) keys
   // its URLs by. Unused by anything in this file; carried here so a pack that
   // needs it (Infinite Fusion's sprite lookup) has one place both the species
-  // allowlist and the id mapping come from.
-  ifId: number;
+  // allowlist and the id mapping come from. Only Infinite Fusion has it.
+  ifId?: number;
   // THIS app's pokemon.json id for that species - a national-dex id for most
   // entries, but a forme id (10001+) for the handful of species the source
   // game splits into what this app already models as separate alternate
