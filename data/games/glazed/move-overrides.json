@@ -1,0 +1,46 @@
+{
+  "aura-sphere": {
+    "power": 90,
+    "accuracy": 100
+  },
+  "dynamic-punch": {
+    "power": 120
+  },
+  "hypnosis": {
+    "accuracy": 70
+  },
+  "leech-life": {
+    "power": 80,
+    "pp": 10
+  },
+  "outrage": {
+    "pp": 15
+  },
+  "precipice-blades": {
+    "accuracy": 100
+  },
+  "rapid-spin": {
+    "power": 50
+  },
+  "seed-flare": {
+    "pp": 10
+  },
+  "skull-bash": {
+    "power": 100
+  },
+  "submission": {
+    "pp": 25
+  },
+  "surf": {
+    "power": 95
+  },
+  "swagger": {
+    "accuracy": 85
+  },
+  "thunder-wave": {
+    "accuracy": 90
+  },
+  "zen-headbutt": {
+    "power": 85
+  }
+}
