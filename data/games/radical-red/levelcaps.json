@@ -156,7 +156,7 @@
       "it": "Bill's House"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 26
   },
   {
     "id": 9,
@@ -245,7 +245,7 @@
       "it": "Route 11"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 32
   },
   {
     "id": 13,
@@ -264,7 +264,7 @@
       "it": "Lavender Town"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 39
   },
   {
     "id": 14,
@@ -386,7 +386,7 @@
       "it": "Saffron City Dojo"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 48
   },
   {
     "id": 20,
@@ -474,7 +474,7 @@
       "it": "Seafoam Islands"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 62
   },
   {
     "id": 24,
@@ -493,7 +493,7 @@
       "it": "Seafoam Islands"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 65
   },
   {
     "id": 25,
@@ -512,7 +512,7 @@
       "it": "Seafoam Islands"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 65
   },
   {
     "id": 26,
@@ -531,7 +531,7 @@
       "it": "Cinnabar Island"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 65
   },
   {
     "id": 27,
@@ -550,7 +550,7 @@
       "it": "Cinnabar Island"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 65
   },
   {
     "id": 28,
@@ -569,7 +569,7 @@
       "it": "Cinnabar Island"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 65
   },
   {
     "id": 29,
@@ -862,7 +862,7 @@
       "it": "Pewter City Gym"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 55
   },
   {
     "id": 44,
@@ -881,7 +881,7 @@
       "it": "Cerulean City Gym"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 54
   },
   {
     "id": 45,
@@ -900,7 +900,7 @@
       "it": "Vermillion City Gym"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 55
   },
   {
     "id": 46,
@@ -919,7 +919,7 @@
       "it": "Celadon City Gym"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 62
   },
   {
     "id": 47,

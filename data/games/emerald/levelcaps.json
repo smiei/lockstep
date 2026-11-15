@@ -16,7 +16,7 @@
       "it": "Percorso 103"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 5,
     "sprite": "rivale"
   },
   {
@@ -61,7 +61,7 @@
       "it": "Ferrugipoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 15,
     "sprite": "rivale"
   },
   {
@@ -106,7 +106,7 @@
       "it": "Percorso 110"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 20,
     "sprite": "rivale"
   },
   {
@@ -126,7 +126,7 @@
       "it": "Ciclamipoli"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 16
   },
   {
     "id": 5,
@@ -170,7 +170,7 @@
       "it": "Monte Camino"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 22
   },
   {
     "id": 7,
@@ -239,7 +239,7 @@
       "it": "Instituto Meteo"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 28
   },
   {
     "id": 9,
@@ -258,7 +258,7 @@
       "it": "Instituto Meteo"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 31,
     "sprite": "rivale"
   },
   {
@@ -303,7 +303,7 @@
       "it": "Rifugio Magma"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 33
   },
   {
     "id": 12,
@@ -322,7 +322,7 @@
       "it": "Rifugio Magma"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 39
   },
   {
     "id": 11,
@@ -341,7 +341,7 @@
       "it": "Porto Alghepoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 34,
     "sprite": "rivale"
   },
   {
@@ -361,7 +361,7 @@
       "it": "Rifugio Idro"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 34
   },
   {
     "id": 13,
@@ -405,7 +405,7 @@
       "it": "Centro Spaziale di Verdeazzupoli"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 44
   },
   {
     "id": 28,
@@ -424,7 +424,7 @@
       "it": "Antro Abissale"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 37
   },
   {
     "id": 14,
@@ -443,7 +443,7 @@
       "it": "Antro Abissale"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 43
   },
   {
     "id": 15,
@@ -487,7 +487,7 @@
       "it": "Via Vittoria"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 45
   },
   {
     "id": 17,
@@ -601,6 +601,6 @@
       "it": "Cascate Meteora"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 78
   }
 ]

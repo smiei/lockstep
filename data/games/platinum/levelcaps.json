@@ -16,7 +16,7 @@
       "it": "Percorso 201"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 5,
     "sprite": "rivale"
   },
   {
@@ -61,7 +61,7 @@
       "it": "Impianto Turbine"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 17
   },
   {
     "id": 3,
@@ -105,7 +105,7 @@
       "it": "Cuoripoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 27,
     "sprite": "rivale"
   },
   {
@@ -125,7 +125,7 @@
       "it": "Edificio del Team Galassia di Evopoli"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 23
   },
   {
     "id": 5,
@@ -194,7 +194,7 @@
       "it": "Pratopoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 36,
     "sprite": "rivale"
   },
   {
@@ -239,7 +239,7 @@
       "it": "Memoride"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 36
   },
   {
     "id": 9,
@@ -283,7 +283,7 @@
       "it": "Canalipoli"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 38,
     "sprite": "rivale"
   },
   {
@@ -303,7 +303,7 @@
       "it": "Lago Valore"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 40
   },
   {
     "id": 24,
@@ -322,7 +322,7 @@
       "it": "Lago Verità"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 40
   },
   {
     "id": 11,
@@ -366,7 +366,7 @@
       "it": "Sede Galassia"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 46
   },
   {
     "id": 26,
@@ -385,7 +385,7 @@
       "it": "Sede Galassia"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 44
   },
   {
     "id": 27,
@@ -404,7 +404,7 @@
       "it": "Vetta Lancia"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 46
   },
   {
     "id": 12,
@@ -423,7 +423,7 @@
       "it": "Mondo Distorto"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 48
   },
   {
     "id": 13,
@@ -467,7 +467,7 @@
       "it": "Lega Pokémon"
     },
     "badge": null,
-    "max_level": null,
+    "max_level": 51,
     "sprite": "rivale"
   },
   {
