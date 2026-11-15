@@ -133,11 +133,11 @@ A name listed under several folders can live once in the root instead.
     heiko.png                   Heiko (Wally)
     walter.png                  Walter (Wattson)
     kalle.png                   Kalle (Tabitha)
+    maxie.png                   Maxie
     flavia.png                  Flavia (Flannery)
     norman.png                  Norman
     kordula.png                 Kordula (Shelly)
     wibke.png                   Wibke (Winona)
-    maxie.png                   Maxie
     wolfgang.png                Wolfgang (Matt)
     ben-svenja.png              Ben & Svenja (Tate & Liza)
     maxie-kalle.png             Maxie & Kalle (Maxie & Tabitha)
@@ -238,8 +238,8 @@ A name listed under several folders can live once in the root instead.
     champ.png                   Champ (Champion)
 
   Crystal, Gold, Silver  ->  gold-silver/   (23)
-    falk.png                    Falk (Falkner)
     rivale.png                  Rivale (Rival)
+    falk.png                    Falk (Falkner)
     kai.png                     Kai (Bugsy)
     bianka.png                  Bianka (Whitney)
     jens.png                    Jens (Morty)
