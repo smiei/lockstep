@@ -4,6 +4,7 @@
   "kind": "official",
   "generation": 9,
   "dexLimit": 1025,
+  "species": true,
   "spriteSet": "modern",
   "versionGroup": "scarlet-violet",
   "trainerSet": "scarlet-violet",

@@ -20,6 +20,26 @@ describe("species allowlist of ROM hacks", () => {
     expect(isInDex(game, 43)).toBe(false); // Oddish is not in the game
   });
 
+  it("Run & Bun offers a regional forme whose base species the game lacks", () => {
+    const game = getGameById("run-and-bun")!;
+    const list = getPokemonListForGame(game);
+    expect(isInDex(game, 10)).toBe(false); // no Caterpie
+    expect(list.some((p) => p.id === 74)).toBe(false); // no Kantonian Geodude ...
+    const alolan = list.filter((p) => p.baseId === 74);
+    expect(alolan).toHaveLength(1); // ... but the Alolan one, listed once
+    expect(new Set(list.map((p) => p.id)).size).toBe(list.length);
+  });
+
+  it("Sword/Shield and Scarlet/Violet offer only the species the games have", () => {
+    const sword = getGameById("sword")!;
+    expect(isInDex(sword, 25)).toBe(true);
+    expect(isInDex(sword, 16)).toBe(false); // Pidgey is not in Sword/Shield
+    expect(getPokemonListForGame(sword).some((p) => p.regional)).toBe(true);
+    const sv = getGameById("scarlet-violet")!;
+    expect(isInDex(sv, 906)).toBe(true);
+    expect(isInDex(sv, 10)).toBe(false); // no Caterpie in Scarlet/Violet
+  });
+
   it("Infinite Fusion keeps its formes rule", () => {
     const game = getGameById("infinite-fusion-classic")!;
     expect(getPokemonListForGame(game).length).toBeGreaterThan(500);
