@@ -5,7 +5,6 @@ import {
   parseRunSettings,
   DEFAULT_RUN_SETTINGS,
   NEW_RUN_SETTINGS_JSON,
-  settingsForNewRun,
 } from "@/lib/runSettings";
 
 describe("parseRunSettings", () => {
@@ -134,22 +133,12 @@ describe("NEW_RUN_SETTINGS_JSON", () => {
       evolutionOverridesImpossible: false,
       evolutionOverridesEasier: false,
       evolutionOverridesTimeBased: false,
-      capsGymsOnly: true,
     });
   });
 
-  it("switches the gym-only caps on for a new run, whatever run it copies", () => {
-    // A run from before the rule never stored the key: the copy gets it on.
-    expect(parseRunSettings(settingsForNewRun('{"statics": false}'))).toMatchObject({
-      statics: false,
-      capsGymsOnly: true,
-    });
-    // A run that chose is copied as it is.
-    expect(parseRunSettings(settingsForNewRun('{"capsGymsOnly": false}')).capsGymsOnly).toBe(false);
-    expect(settingsForNewRun(null)).toBe(NEW_RUN_SETTINGS_JSON);
-    expect(settingsForNewRun("not json")).toBe(NEW_RUN_SETTINGS_JSON);
-    // Runs already being played keep every cap.
-    expect(parseRunSettings("{}").capsGymsOnly).toBe(false);
+  it("has the gym-only caps on unless a run switched them off", () => {
+    expect(parseRunSettings("{}").capsGymsOnly).toBe(true);
+    expect(parseRunSettings('{"capsGymsOnly": false}').capsGymsOnly).toBe(false);
   });
 
   it("leaves existing runs without the keys on the old defaults", () => {
