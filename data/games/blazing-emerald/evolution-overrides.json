@@ -80,16 +80,6 @@
     "category": "game"
   },
   {
-    "from": 170,
-    "to": 171,
-    "comment": "Chinchou -> Lanturn",
-    "method": {
-      "kind": "item",
-      "item": "dusk-stone"
-    },
-    "category": "game"
-  },
-  {
     "from": 61,
     "to": 186,
     "comment": "Poliwhirl -> Politoed",
@@ -288,5 +278,233 @@
       "level": 50
     },
     "category": "game"
+  },
+  {
+    "from": 14,
+    "to": 20033,
+    "comment": "Kakuna -> Drilladin",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 32,
+    "to": 33,
+    "comment": "Nidoran♂ -> Nidorino",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 16
+    }
+  },
+  {
+    "from": 95,
+    "to": 208,
+    "comment": "Onix -> Steelix",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    }
+  },
+  {
+    "from": 125,
+    "to": 466,
+    "comment": "Electabuzz -> Electivire",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "from": 126,
+    "to": 467,
+    "comment": "Magmar -> Magmortar",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "fire-stone"
+    }
+  },
+  {
+    "from": 170,
+    "to": 171,
+    "comment": "Chinchou -> Lanturn",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 27
+    }
+  },
+  {
+    "from": 356,
+    "to": 477,
+    "comment": "Dusclops -> Dusknoir",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 366,
+    "to": 367,
+    "comment": "Clamperl -> Huntail",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 366,
+    "to": 368,
+    "comment": "Clamperl -> Gorebyss",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 20030,
+    "to": 20031,
+    "comment": "Venonat (Hoennian Form) -> Muramoth",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 31
+    }
+  },
+  {
+    "from": 20030,
+    "to": 20032,
+    "comment": "Venonat (Hoennian Form) -> Lucemoth",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 31
+    }
+  },
+  {
+    "from": 20034,
+    "to": 20035,
+    "comment": "Dunsparce (Hoennian Form) -> Drasparath",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 40
+    }
+  },
+  {
+    "from": 20040,
+    "to": 20041,
+    "comment": "Teddiursa (Hoennian Form) -> Ursaring (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 20050,
+    "to": 20051,
+    "comment": "Tangela (Hoennian Form) -> Tangrowth (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 20054,
+    "to": 20055,
+    "comment": "Solosis (Hoennian Form) -> Duosion (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 20055,
+    "to": 20056,
+    "comment": "Duosion (Hoennian Form) -> Reuniclus (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "happiness",
+      "time": "day"
+    }
+  },
+  {
+    "from": 20057,
+    "to": 20058,
+    "comment": "Goomy (Hoennian Form) -> Goolossal",
+    "category": "game",
+    "method": {
+      "kind": "happiness"
+    }
+  },
+  {
+    "from": 20061,
+    "to": 20062,
+    "comment": "Onix (Hoennian Form) -> Chrysalix",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 48
+    }
+  },
+  {
+    "from": 20063,
+    "to": 20064,
+    "comment": "Tentacool (Hoennian Form) -> Tentacruel (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 30
+    }
+  },
+  {
+    "from": 20065,
+    "to": 20066,
+    "comment": "Seel (Hoennian Form) -> Dewgong (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 20067,
+    "to": 20068,
+    "comment": "Chinchou (Hoennian Form) -> Lanturn (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 20072,
+    "to": 20073,
+    "comment": "Dreepy (Hoennian Form) -> Drakloak (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 20073,
+    "to": 20074,
+    "comment": "Drakloak (Hoennian Form) -> Dragapult (Hoennian Form)",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 50
+    }
   }
 ]

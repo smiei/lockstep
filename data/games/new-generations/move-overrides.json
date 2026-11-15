@@ -33,7 +33,8 @@
   },
   "confuse-ray": {
     "power": 10,
-    "pp": 5
+    "pp": 5,
+    "damageClass": "physical"
   },
   "cosmic-power": {
     "pp": 2
@@ -56,7 +57,7 @@
     "accuracy": 90
   },
   "curse": {
-    "pp": 2
+    "pp": 5
   },
   "cut": {
     "power": 80,
@@ -102,7 +103,8 @@
     "power": 10,
     "accuracy": 100,
     "pp": 5,
-    "type": "electric"
+    "type": "electric",
+    "damageClass": "special"
   },
   "fly": {
     "power": 80,
@@ -182,7 +184,8 @@
   "poison-gas": {
     "power": 10,
     "accuracy": 65,
-    "pp": 5
+    "pp": 5,
+    "damageClass": "physical"
   },
   "razor-wind": {
     "power": 150
@@ -204,7 +207,8 @@
   },
   "sand-attack": {
     "power": 10,
-    "pp": 5
+    "pp": 5,
+    "damageClass": "physical"
   },
   "scary-face": {
     "pp": 2
@@ -229,7 +233,11 @@
   "smokescreen": {
     "power": 10,
     "pp": 5,
-    "type": "fire"
+    "type": "fire",
+    "damageClass": "special"
+  },
+  "splash": {
+    "pp": 99
   },
   "strength": {
     "type": "steel"
@@ -250,7 +258,8 @@
   "supersonic": {
     "power": 10,
     "pp": 5,
-    "type": "psychic"
+    "type": "psychic",
+    "damageClass": "special"
   },
   "sweet-scent": {
     "pp": 5

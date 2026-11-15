@@ -418,5 +418,115 @@
       "kind": "item",
       "item": "dusk-stone"
     }
+  },
+  {
+    "from": 82,
+    "to": 462,
+    "comment": "Magneton -> Magnezone",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "from": 234,
+    "to": 899,
+    "comment": "Stantler -> Wyrdeer",
+    "category": "game",
+    "method": {
+      "kind": "levelMove",
+      "move": "psyshield-bash"
+    }
+  },
+  {
+    "from": 299,
+    "to": 476,
+    "comment": "Nosepass -> Probopass",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "from": 737,
+    "to": 738,
+    "comment": "Charjabug -> Vikavolt",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "thunder-stone"
+    }
+  },
+  {
+    "from": 739,
+    "to": 740,
+    "comment": "Crabrawler -> Crabominable",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "ice-stone"
+    }
+  },
+  {
+    "from": 808,
+    "to": 809,
+    "comment": "Meltan -> Melmetal",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "metal-coat"
+    }
+  },
+  {
+    "from": 891,
+    "to": 10191,
+    "comment": "Kubfu -> Urshifu (Rapid Strike Style)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "water-stone"
+    }
+  },
+  {
+    "from": 10027,
+    "to": 10030,
+    "comment": "Pumpkaboo (Small Size) -> Gourgeist (Small Size)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    }
+  },
+  {
+    "from": 10028,
+    "to": 10031,
+    "comment": "Pumpkaboo (Large Size) -> Gourgeist (Large Size)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    }
+  },
+  {
+    "from": 10029,
+    "to": 10032,
+    "comment": "Pumpkaboo (Super Size) -> Gourgeist (Super Size)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "link-stone"
+    }
+  },
+  {
+    "from": 10179,
+    "to": 867,
+    "comment": "Yamask (Galarian Form) -> Runerigus",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
   }
 ]

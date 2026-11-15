@@ -379,5 +379,55 @@
       "kind": "item",
       "item": "ice-stone"
     }
+  },
+  {
+    "from": 25,
+    "to": 10100,
+    "comment": "Pikachu -> Raichu (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 102,
+    "to": 10114,
+    "comment": "Exeggcute -> Exeggutor (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "sun-stone"
+    }
+  },
+  {
+    "from": 104,
+    "to": 10115,
+    "comment": "Cubone -> Marowak (Alolan Form)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 10027,
+    "to": 10030,
+    "comment": "Pumpkaboo (Small Size) -> Gourgeist (Small Size)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
+  },
+  {
+    "from": 10028,
+    "to": 10031,
+    "comment": "Pumpkaboo (Large Size) -> Gourgeist (Large Size)",
+    "category": "game",
+    "method": {
+      "kind": "item",
+      "item": "dusk-stone"
+    }
   }
 ]

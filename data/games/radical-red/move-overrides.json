@@ -23,6 +23,9 @@
   "attack-order": {
     "power": 120
   },
+  "baby-doll-eyes": {
+    "pp": 10
+  },
   "baneful-bunker": {
     "pp": 5
   },
@@ -63,6 +66,9 @@
   "charge-beam": {
     "accuracy": 100
   },
+  "charm": {
+    "pp": 5
+  },
   "chatter": {
     "power": 80
   },
@@ -75,6 +81,9 @@
   "circle-throw": {
     "accuracy": 100,
     "pp": 5
+  },
+  "covet": {
+    "type": "fairy"
   },
   "crush-claw": {
     "accuracy": 100
@@ -89,7 +98,8 @@
     "accuracy": 80
   },
   "diamond-storm": {
-    "accuracy": 100
+    "accuracy": 100,
+    "damageClass": "special"
   },
   "double-hit": {
     "accuracy": 100
@@ -141,6 +151,9 @@
     "power": 60,
     "pp": 10,
     "type": "electric"
+  },
+  "fleur-cannon": {
+    "accuracy": 100
   },
   "fly": {
     "accuracy": 100
@@ -258,6 +271,9 @@
   "leech-life": {
     "pp": 15
   },
+  "light-of-ruin": {
+    "accuracy": 100
+  },
   "lovely-kiss": {
     "accuracy": 85
   },
@@ -339,6 +355,9 @@
   },
   "play-nice": {
     "pp": 10
+  },
+  "play-rough": {
+    "accuracy": 100
   },
   "poison-fang": {
     "power": 75
@@ -448,11 +467,19 @@
   "spacial-rend": {
     "accuracy": 100
   },
+  "sparkly-swirl": {
+    "power": 95,
+    "accuracy": 100
+  },
   "spiky-shield": {
     "pp": 5
   },
   "spin-out": {
     "power": 110
+  },
+  "springtide-storm": {
+    "accuracy": 90,
+    "pp": 10
   },
   "steam-eruption": {
     "power": 120,
@@ -466,6 +493,9 @@
   },
   "stone-edge": {
     "accuracy": 90
+  },
+  "strange-steam": {
+    "accuracy": 100
   },
   "strength-sap": {
     "pp": 5
@@ -481,6 +511,10 @@
   },
   "take-down": {
     "accuracy": 100
+  },
+  "take-heart": {
+    "type": "fairy",
+    "pp": 5
   },
   "thunder-fang": {
     "accuracy": 100
