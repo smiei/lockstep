@@ -73,7 +73,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 12
+    "max_level": 12,
+    "kind": "gym"
   },
   {
     "id": 5,
@@ -111,7 +112,8 @@
       "it": "Grande Prova di Hala"
     },
     "badge": null,
-    "max_level": 15
+    "max_level": 15,
+    "kind": "gym"
   },
   {
     "id": 7,
@@ -187,7 +189,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 20
+    "max_level": 20,
+    "kind": "gym"
   },
   {
     "id": 11,
@@ -206,7 +209,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 22
+    "max_level": 22,
+    "kind": "gym"
   },
   {
     "id": 12,
@@ -225,7 +229,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 24
+    "max_level": 24,
+    "kind": "gym"
   },
   {
     "id": 13,
@@ -263,7 +268,8 @@
       "it": "Tempio della Vita"
     },
     "badge": null,
-    "max_level": 27
+    "max_level": 27,
+    "kind": "gym"
   },
   {
     "id": 15,
@@ -320,7 +326,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 29
+    "max_level": 29,
+    "kind": "gym"
   },
   {
     "id": 18,
@@ -358,7 +365,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 33
+    "max_level": 33,
+    "kind": "gym"
   },
   {
     "id": 20,
@@ -434,7 +442,8 @@
       "it": "Malie"
     },
     "badge": null,
-    "max_level": 39
+    "max_level": 39,
+    "kind": "gym"
   },
   {
     "id": 24,
@@ -529,7 +538,8 @@
       "it": "Canyon di Poni"
     },
     "badge": null,
-    "max_level": 48
+    "max_level": 48,
+    "kind": "gym"
   },
   {
     "id": 29,
@@ -548,7 +558,8 @@
       "it": "Prova (Pokémon dominante)"
     },
     "badge": null,
-    "max_level": 45
+    "max_level": 45,
+    "kind": "gym"
   },
   {
     "id": 30,

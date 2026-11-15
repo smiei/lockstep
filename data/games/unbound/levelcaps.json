@@ -54,7 +54,8 @@
       "it": "Dresco Town Gym"
     },
     "badge": null,
-    "max_level": 21
+    "max_level": 21,
+    "kind": "gym"
   },
   {
     "id": 4,
@@ -92,7 +93,8 @@
       "it": "Crater Town Gym"
     },
     "badge": null,
-    "max_level": 26
+    "max_level": 26,
+    "kind": "gym"
   },
   {
     "id": 6,
@@ -168,7 +170,8 @@
       "it": "Blizzard City Gym"
     },
     "badge": null,
-    "max_level": 33
+    "max_level": 33,
+    "kind": "gym"
   },
   {
     "id": 10,
@@ -187,7 +190,8 @@
       "it": "Fallshore City Gym"
     },
     "badge": null,
-    "max_level": 36
+    "max_level": 36,
+    "kind": "gym"
   },
   {
     "id": 11,
@@ -282,7 +286,8 @@
       "it": "Dehara City Gym"
     },
     "badge": null,
-    "max_level": 45
+    "max_level": 45,
+    "kind": "gym"
   },
   {
     "id": 16,
@@ -358,7 +363,8 @@
       "it": "Antisis City Gym"
     },
     "badge": null,
-    "max_level": 53
+    "max_level": 53,
+    "kind": "gym"
   },
   {
     "id": 20,
@@ -377,7 +383,8 @@
       "it": "Polder Town Gym"
     },
     "badge": null,
-    "max_level": 58
+    "max_level": 58,
+    "kind": "gym"
   },
   {
     "id": 21,
@@ -472,7 +479,8 @@
       "it": "Redwood Village Gym"
     },
     "badge": null,
-    "max_level": 62
+    "max_level": 62,
+    "kind": "gym"
   },
   {
     "id": 26,

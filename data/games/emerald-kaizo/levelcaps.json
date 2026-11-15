@@ -617,7 +617,8 @@
     },
     "badge": null,
     "max_level": 77,
-    "sprite": "Wassili"
+    "sprite": "Wassili",
+    "kind": "gym"
   },
   {
     "id": 31,

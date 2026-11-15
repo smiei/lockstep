@@ -504,6 +504,12 @@ const de = {
     notesHeading: "Hausregeln & Notizen",
     showNotes: "Einblenden",
     hideNotes: "Ausblenden",
+    capTeamOffset: {
+      label: "Abstand des Teams zum Cap",
+      description:
+        "Ein Pokémon darf den Cap erreichen, die übrigen bleiben so viele Level darunter. Gilt für alle Anzeigen des Caps und dafür, welche Entwicklungen als erreichbar gelten.",
+      option: (n: number) => (n === 0 ? "kein Abstand" : `${n} Level`),
+    },
     toggles: {
       freeTeam: {
         label: "Freies Team (kein Nuzlocke)",
@@ -514,6 +520,11 @@ const de = {
         label: "Nur handgezeichnete Sprites",
         description:
           "Beim Fusionieren erscheint eine Warnung, wenn die gewählte Kombination kein handgezeichnetes Sprite hat, nur ein automatisch generiertes. Blockiert das Fusionieren nicht.",
+      },
+      capsGymsOnly: {
+        label: "Level-Caps nur bei Arenen und Liga",
+        description:
+          "Nur Arenaleiter (in Alola Inselkönige und Herrscher-Pokémon) und die Liga setzen einen Level-Cap. Rivalen und Schurken bleiben auf der Reise als Stationen zum Abhaken, ohne Level. Aus = jeder Kampf mit bekanntem Level ist ein Cap.",
       },
       includeKanto: {
         label: "Kanto einschließen",
@@ -1433,6 +1444,12 @@ const en: Dictionary = {
     notesHeading: "House rules & notes",
     showNotes: "Show",
     hideNotes: "Hide",
+    capTeamOffset: {
+      label: "Team’s distance to the cap",
+      description:
+        "One Pokémon may reach the cap, the others stay this many levels below it. Applies wherever the cap is shown and to which evolutions count as within reach.",
+      option: (n: number) => (n === 0 ? "none" : n === 1 ? "1 level" : `${n} levels`),
+    },
     toggles: {
       freeTeam: {
         label: "Free team (no Nuzlocke)",
@@ -1443,6 +1460,11 @@ const en: Dictionary = {
         label: "Hand-drawn sprites only",
         description:
           "Fusing shows a warning when the chosen pair has no hand-drawn sprite, only an auto-generated one. Never blocks the fusion.",
+      },
+      capsGymsOnly: {
+        label: "Level caps only for gyms and the League",
+        description:
+          "Only gym leaders (in Alola the kahunas and totem Pokémon) and the League set a level cap. Rivals and villains stay on the Journey as stations to tick off, without a level. Off = every fight with a known level is a cap.",
       },
       includeKanto: {
         label: "Include Kanto",
@@ -2358,6 +2380,12 @@ const fr: Dictionary = {
     notesHeading: "Règles maison & notes",
     showNotes: "Afficher",
     hideNotes: "Masquer",
+    capTeamOffset: {
+      label: "Écart de l’équipe par rapport à la limite",
+      description:
+        "Un Pokémon peut atteindre la limite, les autres restent ce nombre de niveaux en dessous. Vaut pour tous les affichages de la limite et pour les évolutions considérées comme accessibles.",
+      option: (n: number) => (n === 0 ? "aucun" : n === 1 ? "1 niveau" : `${n} niveaux`),
+    },
     toggles: {
       freeTeam: {
         label: "Équipe libre (sans Nuzlocke)",
@@ -2368,6 +2396,11 @@ const fr: Dictionary = {
         label: "Sprites dessinés à la main uniquement",
         description:
           "La fusion affiche un avertissement quand la paire choisie n’a pas de sprite dessiné à la main, seulement un généré automatiquement. Ne bloque jamais la fusion.",
+      },
+      capsGymsOnly: {
+        label: "Limites de niveau uniquement pour les Arènes et la Ligue",
+        description:
+          "Seuls les Champions d’Arène (à Alola, les Doyens et les Pokémon Dominants) et la Ligue fixent une limite de niveau. Les rivaux et les méchants restent des étapes à cocher dans le Voyage, sans niveau. Désactivé = chaque combat dont le niveau est connu est une limite.",
       },
       includeKanto: {
         label: "Inclure Kanto",
@@ -3284,6 +3317,12 @@ const es: Dictionary = {
     notesHeading: "Reglas propias y notas",
     showNotes: "Mostrar",
     hideNotes: "Ocultar",
+    capTeamOffset: {
+      label: "Distancia del equipo al límite",
+      description:
+        "Un Pokémon puede alcanzar el límite, los demás se quedan estos niveles por debajo. Se aplica a todas las indicaciones del límite y a qué evoluciones cuentan como alcanzables.",
+      option: (n: number) => (n === 0 ? "ninguna" : n === 1 ? "1 nivel" : `${n} niveles`),
+    },
     toggles: {
       freeTeam: {
         label: "Equipo libre (sin Nuzlocke)",
@@ -3294,6 +3333,11 @@ const es: Dictionary = {
         label: "Solo sprites dibujados a mano",
         description:
           "Al fusionar aparece un aviso si la combinación elegida no tiene un sprite dibujado a mano, solo uno generado automáticamente. Nunca bloquea la fusión.",
+      },
+      capsGymsOnly: {
+        label: "Límites de nivel solo en Gimnasios y Liga",
+        description:
+          "Solo los Líderes de Gimnasio (en Alola, los Kahunas y los Pokémon Dominantes) y la Liga fijan un límite de nivel. Los rivales y los villanos siguen en el Viaje como etapas que marcar, sin nivel. Desactivado = cada combate con nivel conocido es un límite.",
       },
       includeKanto: {
         label: "Incluir Kanto",
@@ -4210,6 +4254,12 @@ const it: Dictionary = {
     notesHeading: "Regole personali e note",
     showNotes: "Mostra",
     hideNotes: "Nascondi",
+    capTeamOffset: {
+      label: "Distanza della squadra dal limite",
+      description:
+        "Un Pokémon può raggiungere il limite, gli altri restano questi livelli al di sotto. Vale per tutte le indicazioni del limite e per le evoluzioni considerate raggiungibili.",
+      option: (n: number) => (n === 0 ? "nessuna" : n === 1 ? "1 livello" : `${n} livelli`),
+    },
     toggles: {
       freeTeam: {
         label: "Squadra libera (senza Nuzlocke)",
@@ -4220,6 +4270,11 @@ const it: Dictionary = {
         label: "Solo sprite disegnati a mano",
         description:
           "La fusione mostra un avviso se la coppia scelta non ha uno sprite disegnato a mano, solo uno generato automaticamente. Non blocca mai la fusione.",
+      },
+      capsGymsOnly: {
+        label: "Limiti di livello solo per Palestre e Lega",
+        description:
+          "Solo i Capipalestra (ad Alola i Kahuna e i Pokémon Dominanti) e la Lega fissano un limite di livello. Rivali e cattivi restano nel Viaggio come tappe da spuntare, senza livello. Disattivato = ogni lotta con livello noto è un limite.",
       },
       includeKanto: {
         label: "Includi Kanto",

@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import type { Player, Run, RunMode } from "@/generated/prisma/client";
 import { parseRunSettings, type RunSettings } from "@/lib/runSettings";
 import { levelCapsInRun } from "@/lib/regions";
+import { teamLevel } from "@/lib/levelCapRule";
 import { runPlayers } from "@/lib/players";
 import { isRunKeyShaped } from "@/lib/runKey";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
@@ -111,15 +112,21 @@ export async function listCapSummaries(runs: Run[]): Promise<RunCapSummary[]> {
   return runs.map((run) => {
     const done = new Set(defeated.filter((row) => row.runId === run.id).map((row) => row.levelCapId));
     // A Kanto the run leaves out (src/lib/regions.ts) has no next cap and no
-    // badges to count.
-    const caps = levelCapsInRun(getLevelCaps(run.gameId), parseRunSettings(run.settingsJson));
+    // badges to count; a fight the run's cap rule skips has no level here.
+    const settings = parseRunSettings(run.settingsJson);
+    const caps = levelCapsInRun(getLevelCaps(run.gameId), settings);
     const next = caps.find((cap) => cap.max_level !== null && !done.has(cap.id));
     const badgeCaps = caps.filter((cap) => cap.badge !== null);
     return {
       accessKey: run.accessKey,
       next:
         next && next.max_level !== null
-          ? { names: next.names, location: next.location, level: next.max_level }
+          ? {
+              names: next.names,
+              location: next.location,
+              level: next.max_level,
+              team: teamLevel(next.max_level, settings.capTeamOffset),
+            }
           : null,
       badges: badgeCaps.filter((cap) => done.has(cap.id)).length,
       badgesTotal: badgeCaps.length,

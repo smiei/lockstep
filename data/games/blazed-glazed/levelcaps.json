@@ -35,7 +35,8 @@
       "it": "Oceanview City Gym"
     },
     "badge": null,
-    "max_level": 16
+    "max_level": 16,
+    "kind": "gym"
   },
   {
     "id": 3,
@@ -54,7 +55,8 @@
       "it": "Serenity Isle Gym"
     },
     "badge": null,
-    "max_level": 26
+    "max_level": 26,
+    "kind": "gym"
   },
   {
     "id": 4,
@@ -149,7 +151,8 @@
       "it": "Seaspray Town Gym"
     },
     "badge": null,
-    "max_level": 31
+    "max_level": 31,
+    "kind": "gym"
   },
   {
     "id": 9,
@@ -168,7 +171,8 @@
       "it": "Stormy City Gym"
     },
     "badge": null,
-    "max_level": 33
+    "max_level": 33,
+    "kind": "gym"
   },
   {
     "id": 10,
@@ -225,7 +229,8 @@
       "it": "Northcoast Town Gym"
     },
     "badge": null,
-    "max_level": 36
+    "max_level": 36,
+    "kind": "gym"
   },
   {
     "id": 13,
@@ -301,7 +306,8 @@
       "it": "Southerly City Gym"
     },
     "badge": null,
-    "max_level": 41
+    "max_level": 41,
+    "kind": "gym"
   },
   {
     "id": 17,
@@ -320,7 +326,8 @@
       "it": "Palmtree Resort Gym"
     },
     "badge": null,
-    "max_level": 44
+    "max_level": 44,
+    "kind": "gym"
   },
   {
     "id": 18,
@@ -415,7 +422,8 @@
       "it": "Darkwood Town Gym"
     },
     "badge": null,
-    "max_level": 47
+    "max_level": 47,
+    "kind": "gym"
   },
   {
     "id": 23,
@@ -643,7 +651,8 @@
       "it": "Violet City Gym"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "kind": "gym"
   },
   {
     "id": 35,
@@ -662,7 +671,8 @@
       "it": "Ecruteak City Gym"
     },
     "badge": null,
-    "max_level": 57
+    "max_level": 57,
+    "kind": "gym"
   },
   {
     "id": 36,
@@ -700,7 +710,8 @@
       "it": "Olivine City Gym"
     },
     "badge": null,
-    "max_level": 58
+    "max_level": 58,
+    "kind": "gym"
   },
   {
     "id": 38,
@@ -738,7 +749,8 @@
       "it": "Azalea Town Gym"
     },
     "badge": null,
-    "max_level": 63
+    "max_level": 63,
+    "kind": "gym"
   },
   {
     "id": 40,
@@ -757,7 +769,8 @@
       "it": "Goldenrod City Gym"
     },
     "badge": null,
-    "max_level": 63
+    "max_level": 63,
+    "kind": "gym"
   },
   {
     "id": 41,
@@ -795,7 +808,8 @@
       "it": "Whitewood City Gym"
     },
     "badge": null,
-    "max_level": 65
+    "max_level": 65,
+    "kind": "gym"
   },
   {
     "id": 43,
@@ -1004,7 +1018,8 @@
       "it": "Evergreen Town Gym"
     },
     "badge": null,
-    "max_level": 64
+    "max_level": 64,
+    "kind": "gym"
   },
   {
     "id": 54,
@@ -1042,7 +1057,8 @@
       "it": "Blackthorn City Gym"
     },
     "badge": null,
-    "max_level": 69
+    "max_level": 69,
+    "kind": "gym"
   },
   {
     "id": 56,
@@ -1099,7 +1115,8 @@
       "it": "Johto League"
     },
     "badge": null,
-    "max_level": 72
+    "max_level": 72,
+    "kind": "league"
   },
   {
     "id": 59,
@@ -1118,7 +1135,8 @@
       "it": "Johto League"
     },
     "badge": null,
-    "max_level": 74
+    "max_level": 74,
+    "kind": "league"
   },
   {
     "id": 60,
@@ -1137,7 +1155,8 @@
       "it": "Johto League"
     },
     "badge": null,
-    "max_level": 76
+    "max_level": 76,
+    "kind": "league"
   },
   {
     "id": 61,
@@ -1156,7 +1175,8 @@
       "it": "Johto League"
     },
     "badge": null,
-    "max_level": 78
+    "max_level": 78,
+    "kind": "league"
   },
   {
     "id": 62,
@@ -1175,7 +1195,8 @@
       "it": "Johto League Champion"
     },
     "badge": null,
-    "max_level": 80
+    "max_level": 80,
+    "kind": "league"
   },
   {
     "id": 63,
@@ -1252,7 +1273,8 @@
       "it": "Nitro Isle Gym"
     },
     "badge": null,
-    "max_level": 77
+    "max_level": 77,
+    "kind": "gym"
   },
   {
     "id": 67,
@@ -1271,7 +1293,8 @@
       "it": "Kolo Isle Gym"
     },
     "badge": null,
-    "max_level": 78
+    "max_level": 78,
+    "kind": "gym"
   },
   {
     "id": 68,
@@ -1328,7 +1351,8 @@
       "it": "Alpha Isle Gym"
     },
     "badge": null,
-    "max_level": 80
+    "max_level": 80,
+    "kind": "gym"
   },
   {
     "id": 71,
@@ -1385,7 +1409,8 @@
       "it": "Reign Isle Gym"
     },
     "badge": null,
-    "max_level": 83
+    "max_level": 83,
+    "kind": "gym"
   },
   {
     "id": 74,
@@ -1518,7 +1543,8 @@
       "it": "Rankor Championship Battle"
     },
     "badge": null,
-    "max_level": 88
+    "max_level": 88,
+    "kind": "league"
   },
   {
     "id": 81,

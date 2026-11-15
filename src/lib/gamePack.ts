@@ -25,6 +25,8 @@ const ROUTE_TYPES = ["route", "static"];
 // A second region the run may leave out (HeartGold/SoulSilver's Kanto), on a
 // route or a level cap - see src/lib/regions.ts.
 const REGIONS = ["kanto"];
+// What a fight is to the rule "level caps only for gyms and the League".
+const CAP_KINDS: readonly string[] = ["gym", "league", "other"];
 const OVERRIDE_CATEGORIES = ["impossible", "easier", "timeBased", "game"];
 // Evolution-override method kinds and the fields each one needs.
 const METHOD_FIELDS: Record<string, Record<string, "number" | "string">> = {
@@ -268,6 +270,9 @@ function checkLevelCaps(c: Collector, caps: unknown) {
     if (cap.sprite !== undefined && typeof cap.sprite !== "string") c.error("levelcaps", `${at}.sprite`, "must be text");
     if (cap.region !== undefined && !REGIONS.includes(cap.region as string)) {
       c.error("levelcaps", `${at}.region`, "must be \"kanto\"");
+    }
+    if (cap.kind !== undefined && !CAP_KINDS.includes(cap.kind as string)) {
+      c.error("levelcaps", `${at}.kind`, "must be \"gym\", \"league\" or \"other\"");
     }
   });
   // The Journey/Overview progress bars mark where the Elite Four starts by

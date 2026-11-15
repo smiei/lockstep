@@ -5,6 +5,7 @@ import {
   parseRunSettings,
   DEFAULT_RUN_SETTINGS,
   NEW_RUN_SETTINGS_JSON,
+  settingsForNewRun,
 } from "@/lib/runSettings";
 
 describe("parseRunSettings", () => {
@@ -98,6 +99,15 @@ describe("serializePresetSettings", () => {
     expect(json.nicknames).toBe(true);
   });
 
+  it("carries the team's distance to the cap, and reads a bad one as the default", () => {
+    const settings = parseRunSettings('{"capTeamOffset": 0}');
+    expect(settings.capTeamOffset).toBe(0);
+    expect(parseRunSettings(serializePresetSettings(settings)).capTeamOffset).toBe(0);
+    for (const bad of ['{"capTeamOffset": -1}', '{"capTeamOffset": 99}', '{"capTeamOffset": "3"}', '{"capTeamOffset": 1.5}', "{}"]) {
+      expect(parseRunSettings(bad).capTeamOffset).toBe(2);
+    }
+  });
+
   it("never carries player names into a preset", () => {
     // The one part of a run's settings that is about *that* run: a preset
     // holding it would rename the players of every run it is applied to.
@@ -124,7 +134,22 @@ describe("NEW_RUN_SETTINGS_JSON", () => {
       evolutionOverridesImpossible: false,
       evolutionOverridesEasier: false,
       evolutionOverridesTimeBased: false,
+      capsGymsOnly: true,
     });
+  });
+
+  it("switches the gym-only caps on for a new run, whatever run it copies", () => {
+    // A run from before the rule never stored the key: the copy gets it on.
+    expect(parseRunSettings(settingsForNewRun('{"statics": false}'))).toMatchObject({
+      statics: false,
+      capsGymsOnly: true,
+    });
+    // A run that chose is copied as it is.
+    expect(parseRunSettings(settingsForNewRun('{"capsGymsOnly": false}')).capsGymsOnly).toBe(false);
+    expect(settingsForNewRun(null)).toBe(NEW_RUN_SETTINGS_JSON);
+    expect(settingsForNewRun("not json")).toBe(NEW_RUN_SETTINGS_JSON);
+    // Runs already being played keep every cap.
+    expect(parseRunSettings("{}").capsGymsOnly).toBe(false);
   });
 
   it("leaves existing runs without the keys on the old defaults", () => {

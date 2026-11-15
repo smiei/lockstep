@@ -19,7 +19,9 @@ export type RunCapSummary = {
   accessKey: string;
   // The first cap in the pack's order that is not ticked off yet - null once
   // every capped fight is done.
-  next: { names: LocalizedNames; location: LocalizedNames; level: number } | null;
+  // `team` is the level the rest of the team may reach under it (the run's
+  // capTeamOffset), equal to `level` when the rule is 0.
+  next: { names: LocalizedNames; location: LocalizedNames; level: number; team: number } | null;
   badges: number;
   badgesTotal: number;
 };

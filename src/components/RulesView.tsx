@@ -10,6 +10,7 @@ import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { PLAYER_NAME_MAX, type RunSettings } from "@/lib/runSettings";
 import { useDebugMode } from "@/lib/useDebugMode";
+import { CAP_TEAM_OFFSET_MAX } from "@/lib/levelCapRule";
 import { RunMode, type Player } from "@/generated/prisma/enums";
 import { useToast } from "@/components/ui/ToastProvider";
 import { Button } from "@/components/ui/Button";
@@ -20,8 +21,8 @@ import { PageHeader, Section } from "@/components/ui/Page";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import type { EvolutionOverrideCategory } from "@/lib/data";
 
-// The boolean rule toggles (playerNames is handled separately).
-type BooleanSettingKey = Exclude<keyof RunSettings, "playerNames">;
+// The boolean rule toggles (playerNames and capTeamOffset are handled separately).
+type BooleanSettingKey = Exclude<keyof RunSettings, "playerNames" | "capTeamOffset">;
 
 // react-markdown emits bare elements and Tailwind's preflight strips all
 // default styles, so every rendered element gets its look via this mapping.
@@ -81,6 +82,8 @@ const TOGGLE_ORDER: BooleanSettingKey[] = [
   "fusionLocksBothFamilies",
   "shinyClause",
   "nicknames",
+  // Followed by the capTeamOffset row (see the list's render below).
+  "capsGymsOnly",
   "evolutionOverridesImpossible",
   "evolutionOverridesEasier",
   "evolutionOverridesTimeBased",
@@ -256,6 +259,21 @@ export function RulesView({
     });
   }
 
+  function handleTeamOffset(next: number) {
+    const previous = local.capTeamOffset;
+    if (next === previous) return;
+    setLocal((prev) => ({ ...prev, capTeamOffset: next }));
+    startTransition(async () => {
+      const result = await updateRunSettings(runKey, { capTeamOffset: next });
+      if (result.success) {
+        router.refresh();
+      } else {
+        setLocal((prev) => ({ ...prev, capTeamOffset: previous }));
+        toast.error(formatActionError(result.error, lang));
+      }
+    });
+  }
+
   function commitName(player: Player, value: string) {
     const trimmed = value.trim().slice(0, PLAYER_NAME_MAX);
     if (trimmed === settings.playerNames[player]) return;
@@ -404,7 +422,33 @@ export function RulesView({
                   (kantoEnabled || !KANTO_ONLY_TOGGLES.has(key)) &&
                   (EVOLUTION_TOGGLES[key] === undefined || evolutionCategories.includes(EVOLUTION_TOGGLES[key])) &&
                   (players.length > 1 || !SOULLINK_ONLY_TOGGLES.has(key)),
-              ).map(renderToggle)}
+              ).flatMap((key) =>
+                key === "capsGymsOnly"
+                  ? [
+                      renderToggle(key),
+                      // Not a switch but a number, and a rule of its own: it
+                      // applies to every cap, whatever the toggle above says.
+                      <label key="capTeamOffset" className="flex items-center justify-between gap-4 px-4 py-3">
+                        <span className="min-w-0">
+                          <span className="block text-sm font-medium text-ink">{t.capTeamOffset.label}</span>
+                          <span className="block text-xs text-ink-muted">{t.capTeamOffset.description}</span>
+                        </span>
+                        <Select
+                          value={local.capTeamOffset}
+                          disabled={pending}
+                          onChange={(event) => handleTeamOffset(Number(event.target.value))}
+                          className="w-auto shrink-0"
+                        >
+                          {Array.from({ length: CAP_TEAM_OFFSET_MAX + 1 }, (_, n) => (
+                            <option key={n} value={n}>
+                              {t.capTeamOffset.option(n)}
+                            </option>
+                          ))}
+                        </Select>
+                      </label>,
+                    ]
+                  : [renderToggle(key)],
+              )}
             </Card>
           </Section>
 

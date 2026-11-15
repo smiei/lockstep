@@ -633,7 +633,8 @@
       "it": "Viridian City Gym"
     },
     "badge": null,
-    "max_level": 81
+    "max_level": 81,
+    "kind": "gym"
   },
   {
     "id": 32,

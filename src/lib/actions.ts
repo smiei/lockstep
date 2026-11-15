@@ -30,7 +30,7 @@ import { DEFAULT_RULES } from "@/lib/defaultRules";
 import { customGamesDir, removeCustomGame, writeCustomGame } from "@/lib/customGames";
 import { formatIssue, hasErrors, isCustomPackId, validateBundle, type GamePackBundle } from "@/lib/gamePack";
 import {
-  NEW_RUN_SETTINGS_JSON,
+  settingsForNewRun,
   PRESET_NAME_MAX,
   parsePlayerNames,
   parseRunSettings,
@@ -38,6 +38,7 @@ import {
   RUN_SETTING_KEYS,
   type RunSettings,
 } from "@/lib/runSettings";
+import { parseCapTeamOffset } from "@/lib/levelCapRule";
 import type { Lang } from "@/lib/i18n/dictionary";
 
 // Every run-scoped action takes the run's access key, never its numeric id
@@ -1341,7 +1342,7 @@ export async function createRun(
   const rulesMarkdown = source?.rulesMarkdown.trim()
     ? source.rulesMarkdown
     : DEFAULT_RULES[lang ?? "de"];
-  const settingsJson = source?.settingsJson ?? NEW_RUN_SETTINGS_JSON;
+  const settingsJson = settingsForNewRun(source?.settingsJson);
 
   const run = await prisma.run.create({
     data: {
@@ -1420,6 +1421,9 @@ export async function updateRunSettings(
   for (const key of RUN_SETTING_KEYS) {
     const value = changes[key];
     if (typeof value === "boolean") (settings[key] as boolean) = value;
+  }
+  if (changes.capTeamOffset !== undefined) {
+    settings.capTeamOffset = parseCapTeamOffset(changes.capTeamOffset);
   }
   if (changes.playerNames) {
     // Names the caller did not send keep their stored value.

@@ -17,7 +17,8 @@
     },
     "badge": null,
     "max_level": 20,
-    "sprite": "Rocko"
+    "sprite": "Rocko",
+    "kind": "gym"
   },
   {
     "id": 2,
@@ -36,7 +37,8 @@
       "it": "Pewter City Gym"
     },
     "badge": null,
-    "max_level": 20
+    "max_level": 20,
+    "kind": "gym"
   },
   {
     "id": 3,
@@ -55,7 +57,8 @@
       "it": "Pewter City Gym"
     },
     "badge": null,
-    "max_level": 20
+    "max_level": 20,
+    "kind": "gym"
   },
   {
     "id": 4,
@@ -74,7 +77,8 @@
       "it": "Cerulean City Gym"
     },
     "badge": null,
-    "max_level": 30
+    "max_level": 30,
+    "kind": "gym"
   },
   {
     "id": 5,
@@ -93,7 +97,8 @@
       "it": "Cerulean City Gym"
     },
     "badge": null,
-    "max_level": 30
+    "max_level": 30,
+    "kind": "gym"
   },
   {
     "id": 6,
@@ -112,7 +117,8 @@
       "it": "Cerulean City Gym"
     },
     "badge": null,
-    "max_level": 30
+    "max_level": 30,
+    "kind": "gym"
   },
   {
     "id": 7,
@@ -172,7 +178,8 @@
     },
     "badge": null,
     "max_level": 40,
-    "sprite": "Major Bob"
+    "sprite": "Major Bob",
+    "kind": "gym"
   },
   {
     "id": 10,
@@ -191,7 +198,8 @@
       "it": "Vermillion City Gym"
     },
     "badge": null,
-    "max_level": 40
+    "max_level": 40,
+    "kind": "gym"
   },
   {
     "id": 11,
@@ -210,7 +218,8 @@
       "it": "Vermillion City Gym"
     },
     "badge": null,
-    "max_level": 40
+    "max_level": 40,
+    "kind": "gym"
   },
   {
     "id": 12,
@@ -229,7 +238,8 @@
       "it": "Celadon City Gym"
     },
     "badge": null,
-    "max_level": 45
+    "max_level": 45,
+    "kind": "gym"
   },
   {
     "id": 13,
@@ -248,7 +258,8 @@
       "it": "Celadon City Gym"
     },
     "badge": null,
-    "max_level": 45
+    "max_level": 45,
+    "kind": "gym"
   },
   {
     "id": 14,
@@ -267,7 +278,8 @@
       "it": "Celadon City Gym"
     },
     "badge": null,
-    "max_level": 45
+    "max_level": 45,
+    "kind": "gym"
   },
   {
     "id": 15,
@@ -306,7 +318,8 @@
       "it": "Fuschia City Gym"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "kind": "gym"
   },
   {
     "id": 17,
@@ -325,7 +338,8 @@
       "it": "Fuschia City Gym"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "kind": "gym"
   },
   {
     "id": 18,
@@ -344,7 +358,8 @@
       "it": "Fuschia City Gym"
     },
     "badge": null,
-    "max_level": 55
+    "max_level": 55,
+    "kind": "gym"
   },
   {
     "id": 19,
@@ -383,7 +398,8 @@
       "it": "Saffron City Gym"
     },
     "badge": null,
-    "max_level": 65
+    "max_level": 65,
+    "kind": "gym"
   },
   {
     "id": 21,
@@ -402,7 +418,8 @@
       "it": "Saffron City Gym"
     },
     "badge": null,
-    "max_level": 65
+    "max_level": 65,
+    "kind": "gym"
   },
   {
     "id": 22,
@@ -421,7 +438,8 @@
       "it": "Saffron City Gym"
     },
     "badge": null,
-    "max_level": 65
+    "max_level": 65,
+    "kind": "gym"
   },
   {
     "id": 23,
@@ -441,7 +459,8 @@
     },
     "badge": null,
     "max_level": 70,
-    "sprite": "Pyro"
+    "sprite": "Pyro",
+    "kind": "gym"
   },
   {
     "id": 24,
@@ -460,7 +479,8 @@
       "it": "Cinnabar City Gym"
     },
     "badge": null,
-    "max_level": 70
+    "max_level": 70,
+    "kind": "gym"
   },
   {
     "id": 25,
@@ -479,7 +499,8 @@
       "it": "Cinnabar City Gym"
     },
     "badge": null,
-    "max_level": 70
+    "max_level": 70,
+    "kind": "gym"
   },
   {
     "id": 26,
@@ -499,7 +520,8 @@
     },
     "badge": null,
     "max_level": 80,
-    "sprite": "giovanni"
+    "sprite": "giovanni",
+    "kind": "gym"
   },
   {
     "id": 27,
@@ -518,7 +540,8 @@
       "it": "Viridian City Gym"
     },
     "badge": null,
-    "max_level": 80
+    "max_level": 80,
+    "kind": "gym"
   },
   {
     "id": 28,
@@ -537,7 +560,8 @@
       "it": "Viridian City Gym"
     },
     "badge": null,
-    "max_level": 80
+    "max_level": 80,
+    "kind": "gym"
   },
   {
     "id": 29,

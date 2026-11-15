@@ -32,9 +32,14 @@ export function NextCapCard({
   const summary = run ? caps.find((cap) => cap.accessKey === run.accessKey) : undefined;
   if (!run || !summary) return null;
 
+  // The level the rest of the team may reach, when the run's rule sets one
+  // below the cap (capTeamOffset; 0 = everyone may reach the cap).
+  const team = summary.next && summary.next.team < summary.next.level ? summary.next.team : null;
+  const teamNote = team !== null ? translations[lang].overview.sheetTeamUpTo(team) : null;
+
   if (variant === "chip") {
     if (!summary.next) return null;
-    const label = `${t.nextCap}: ${localizeName(summary.next.names, lang)}, ${summary.next.level} - ${translations[lang].overview.sheetTeamUpTo(summary.next.level - 2)}`;
+    const label = `${t.nextCap}: ${localizeName(summary.next.names, lang)}, ${summary.next.level}${teamNote ? ` - ${teamNote}` : ""}`;
     return (
       <Link
         href={`/levelcaps?run=${run.accessKey}`}
@@ -45,10 +50,12 @@ export function NextCapCard({
         <span className="text-xs text-ink-muted">{t.capShort}</span>
         <span className="font-mono leading-none tabular-nums">
           <span className="text-lg font-semibold">{summary.next.level}</span>
-          <span className="text-sm text-ink-muted">
-            {" / "}
-            {summary.next.level - 2}
-          </span>
+          {team !== null && (
+            <span className="text-sm text-ink-muted">
+              {" / "}
+              {team}
+            </span>
+          )}
         </span>
       </Link>
     );
@@ -66,18 +73,19 @@ export function NextCapCard({
             <span className="truncate text-base font-bold text-ink">
               {localizeName(summary.next.names, lang)}
             </span>
-            {/* The cap, then the team's level under it (cap - 2), as in the
-                Overview's run sheet. */}
-            <span
-              className="shrink-0 font-mono leading-none tabular-nums"
-              title={translations[lang].overview.sheetTeamUpTo(summary.next.level - 2)}
-            >
+            {/* The cap, then the team's level under it, as in the Overview's
+                run sheet. */}
+            <span className="shrink-0 font-mono leading-none tabular-nums" title={teamNote ?? undefined}>
               <span className="text-3xl font-semibold text-ink">{summary.next.level}</span>
-              <span className="text-lg text-ink-muted" aria-hidden="true">
-                {" / "}
-                {summary.next.level - 2}
-              </span>
-              <span className="sr-only">{`, ${translations[lang].overview.sheetTeamUpTo(summary.next.level - 2)}`}</span>
+              {team !== null && (
+                <>
+                  <span className="text-lg text-ink-muted" aria-hidden="true">
+                    {" / "}
+                    {team}
+                  </span>
+                  <span className="sr-only">{`, ${teamNote}`}</span>
+                </>
+              )}
             </span>
           </span>
           <span className="block truncate text-xs text-ink-muted">

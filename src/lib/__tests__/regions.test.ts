@@ -25,10 +25,18 @@ describe("applyRegionRule", () => {
 });
 
 describe("levelCapsInRun", () => {
-  const caps = [{ id: 1 }, { id: 2, region: "kanto" as const }];
+  const fight = { badge: null, location: { de: "Route 1", en: "Route 1" }, max_level: 20 };
+  const caps = [
+    { id: 1, ...fight },
+    { id: 2, ...fight, region: "kanto" as const },
+  ];
   it("drops the Kanto fights only when Kanto is excluded", () => {
-    expect(levelCapsInRun(caps, { includeKanto: true })).toHaveLength(2);
-    expect(levelCapsInRun(caps, { includeKanto: false }).map((c) => c.id)).toEqual([1]);
+    expect(levelCapsInRun(caps, { includeKanto: true, capsGymsOnly: false })).toHaveLength(2);
+    expect(levelCapsInRun(caps, { includeKanto: false, capsGymsOnly: false }).map((c) => c.id)).toEqual([1]);
+  });
+  it("applies the run's cap rule to the fights that stay", () => {
+    const out = levelCapsInRun(caps, { includeKanto: true, capsGymsOnly: true });
+    expect(out.map((c) => c.max_level)).toEqual([null, null]);
   });
 });
 

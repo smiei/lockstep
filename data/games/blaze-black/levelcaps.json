@@ -113,7 +113,8 @@
       "it": "Striaton Gym"
     },
     "badge": null,
-    "max_level": 14
+    "max_level": 14,
+    "kind": "gym"
   },
   {
     "id": 7,
@@ -665,7 +666,8 @@
     },
     "badge": null,
     "max_level": 93,
-    "sprite": "Anissa"
+    "sprite": "Anissa",
+    "kind": "league"
   },
   {
     "id": 33,
@@ -685,7 +687,8 @@
     },
     "badge": null,
     "max_level": 93,
-    "sprite": "Astor"
+    "sprite": "Astor",
+    "kind": "league"
   },
   {
     "id": 34,
@@ -705,7 +708,8 @@
     },
     "badge": null,
     "max_level": 93,
-    "sprite": "Kattlea"
+    "sprite": "Kattlea",
+    "kind": "league"
   },
   {
     "id": 35,
@@ -725,7 +729,8 @@
     },
     "badge": null,
     "max_level": 93,
-    "sprite": "Eugen"
+    "sprite": "Eugen",
+    "kind": "league"
   },
   {
     "id": 36,
@@ -745,6 +750,7 @@
     },
     "badge": null,
     "max_level": 100,
-    "sprite": "Lauro"
+    "sprite": "Lauro",
+    "kind": "league"
   }
 ]

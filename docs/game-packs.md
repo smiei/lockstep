@@ -93,6 +93,7 @@ There are two ways to add a game:
 
 - **Order:** one entry per boss fight, in play order.
 - **`max_level`:** the level cap, which is the highest level on the boss's team. It is `null` for a fight without a cap, such as a rival battle in some rulesets.
+- **`kind`:** optional: `"gym"`, `"league"` or `"other"`. The run rule "Level caps only for gyms and the League" keeps the caps of gyms and the League and shows every other fight without a level. Without the field a fight with a `badge` is a gym, the Elite Four block is the League and everything else is `other`, so it is only needed where that is wrong: a gym without a badge, a boss that stands in for a gym (kahunas, totem Pokémon), or a champion outside the Elite Four block.
 - **`badge`:** the gym badge, or `null`.
 - **Elite Four and Champion:** they use `"location": { "en": "Elite Four", ... }` and follow each other without gaps. The progress bar marks that block.
 - **`sprite`:** optional. The German file name of the trainer picture when it differs from the German name.
