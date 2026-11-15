@@ -1,0 +1,20 @@
+{
+  "id": "blaze-black-2-volt-white-2-redux-v1-4-1",
+  "sort": 35,
+  "kind": "romhack",
+  "generation": 5,
+  "dataGeneration": 6,
+  "dexLimit": 649,
+  "spriteSet": "black-white",
+  "versionGroup": "black-white",
+  "trainerSet": "black-white",
+  "speciesData": "blaze-black-2-volt-white-2-redux-v1-4-1",
+  "names": {
+    "de": "Blaze Black 2 / Volt White 2 Redux v1.4.1",
+    "en": "Blaze Black 2 / Volt White 2 Redux v1.4.1",
+    "fr": "Blaze Black 2 / Volt White 2 Redux v1.4.1",
+    "es": "Blaze Black 2 / Volt White 2 Redux v1.4.1",
+    "it": "Blaze Black 2 / Volt White 2 Redux v1.4.1"
+  },
+  "source": "game data v1.4.1 (species, moves, level-up moves, TMs and tutors, level caps, evolutions); route list from Bassel-T/nuzlocke.app@2b4f2ec (blazevolt2)"
+}

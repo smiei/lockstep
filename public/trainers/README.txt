@@ -41,7 +41,7 @@ folder, so a picture there serves all of them):
   gold-silver/            Crystal, Gold, Silver
   platinum/               Platinum, Diamond / Pearl, Renegade Platinum
   heartgold-soulsilver/   HeartGold, SoulSilver, Sacred Gold, Storm Silver
-  black-white/            Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux
+  black-white/            Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Blaze Black 2 / Volt White 2 Redux v1.4.1
   infinite-fusion/        Pokémon Infinite Fusion (Classic), Pokémon Infinite Fusion (Remix)
   black-2-white-2/        Black 2 / White 2
   x-y/                    X / Y
@@ -349,7 +349,7 @@ A name listed under several folders can live once in the root instead.
     lyra.png                    Lyra
     rocket-boss-giovanni.png    Rocket Boss Giovanni
 
-  Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux  ->  black-white/   (44)
+  Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Blaze Black 2 / Volt White 2 Redux v1.4.1  ->  black-white/   (44)
     cheren.png                  Cheren
     benny-maik-colin.png        Benny, Maik & Colin (Cilan, Chili & Cress)
     bel.png                     Bel (Bianca)
