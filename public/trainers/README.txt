@@ -350,22 +350,22 @@ A name listed under several folders can live once in the root instead.
     rocket-boss-giovanni.png    Rocket Boss Giovanni
 
   Black, White, Blaze Black, Volt White, Blaze Black 2 / Volt White 2 Redux, Blaze Black 2 / Volt White 2 Redux v1.4.1  ->  black-white/   (44)
+    bel.png                     Bel (Bianca)
     cheren.png                  Cheren
     benny-maik-colin.png        Benny, Maik & Colin (Cilan, Chili & Cress)
-    bel.png                     Bel (Bianca)
-    aloe.png                    Aloe (Lenora)
     n.png                       N
+    aloe.png                    Aloe (Lenora)
     artie.png                   Artie (Burgh)
     kamilla.png                 Kamilla (Elesa)
     turner.png                  Turner (Clay)
     geraldine.png               Géraldine (Skyla)
     sandro.png                  Sandro (Brycen)
-    g-cis.png                   G-Cis (Ghetsis)
     lysander.png                Lysander (Drayden)
     anissa.png                  Anissa (Shauntal)
     astor.png                   Astor (Grimsley)
     kattlea.png                 Kattlea (Caitlin)
     eugen.png                   Eugen (Marshal)
+    g-cis.png                   G-Cis (Ghetsis)
     lauro.png                   Lauro (Alder)
     lilia.png                   Lilia (Iris)
     chili-cress-or-cilan.png    Chili, Cress or Cilan

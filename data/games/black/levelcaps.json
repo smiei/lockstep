@@ -1,5 +1,24 @@
 [
   {
+    "id": 3,
+    "names": {
+      "de": "Bel",
+      "en": "Bianca",
+      "fr": "Bianca",
+      "es": "Bianca",
+      "it": "Bianca"
+    },
+    "location": {
+      "de": "Route 2",
+      "en": "Route 2",
+      "fr": "Route 2",
+      "es": "Ruta 2",
+      "it": "Percorso 2"
+    },
+    "badge": null,
+    "max_level": 7
+  },
+  {
     "id": 1,
     "names": {
       "de": "Cheren",
@@ -9,11 +28,11 @@
       "it": "Cheren"
     },
     "location": {
-      "de": "Route 2",
-      "en": "Route 2",
-      "fr": "Route 2",
-      "es": "Ruta 2",
-      "it": "Percorso 2"
+      "de": "Orion City",
+      "en": "Striaton City",
+      "fr": "Ogoesse",
+      "es": "Ciudad Gres",
+      "it": "Levantopoli"
     },
     "badge": null,
     "max_level": 8
@@ -44,23 +63,42 @@
     "max_level": 14
   },
   {
-    "id": 3,
+    "id": 27,
     "names": {
-      "de": "Bel",
-      "en": "Bianca",
-      "fr": "Bianca",
-      "es": "Bianca",
-      "it": "Bianca"
+      "de": "Cheren",
+      "en": "Cheren",
+      "fr": "Cheren",
+      "es": "Cheren",
+      "it": "Cheren"
     },
     "location": {
-      "de": "Traumbrache",
-      "en": "Dreamyard",
-      "fr": "Vestiges du Rêve",
-      "es": "Solar de los Sueños",
-      "it": "Cantiere dei Sogni"
+      "de": "Route 3",
+      "en": "Route 3",
+      "fr": "Route 3",
+      "es": "Ruta 3",
+      "it": "Percorso 3"
     },
     "badge": null,
-    "max_level": 7
+    "max_level": 14
+  },
+  {
+    "id": 5,
+    "names": {
+      "de": "N",
+      "en": "N",
+      "fr": "N",
+      "es": "N",
+      "it": "N"
+    },
+    "location": {
+      "de": "Septerna City",
+      "en": "Nacrene City",
+      "fr": "Maillard",
+      "es": "Ciudad Esmalte",
+      "it": "Zefiropoli"
+    },
+    "badge": null,
+    "max_level": 13
   },
   {
     "id": 4,
@@ -88,25 +126,6 @@
     "max_level": 20
   },
   {
-    "id": 5,
-    "names": {
-      "de": "N",
-      "en": "N",
-      "fr": "N",
-      "es": "N",
-      "it": "N"
-    },
-    "location": {
-      "de": "Septerna City",
-      "en": "Nacrene City",
-      "fr": "Maillard",
-      "es": "Ciudad Esmalte",
-      "it": "Zefiropoli"
-    },
-    "badge": null,
-    "max_level": 13
-  },
-  {
     "id": 6,
     "names": {
       "de": "Artie",
@@ -132,6 +151,25 @@
     "max_level": 23
   },
   {
+    "id": 28,
+    "names": {
+      "de": "Bel",
+      "en": "Bianca",
+      "fr": "Bianca",
+      "es": "Bianca",
+      "it": "Bianca"
+    },
+    "location": {
+      "de": "Route 4",
+      "en": "Route 4",
+      "fr": "Route 4",
+      "es": "Ruta 4",
+      "it": "Percorso 4"
+    },
+    "badge": null,
+    "max_level": 20
+  },
+  {
     "id": 7,
     "names": {
       "de": "Cheren",
@@ -146,6 +184,25 @@
       "fr": "Route 4",
       "es": "Ruta 4",
       "it": "Percorso 4"
+    },
+    "badge": null,
+    "max_level": 22
+  },
+  {
+    "id": 9,
+    "names": {
+      "de": "N",
+      "en": "N",
+      "fr": "N",
+      "es": "N",
+      "it": "N"
+    },
+    "location": {
+      "de": "Rayono City",
+      "en": "Nimbasa City",
+      "fr": "Méanville",
+      "es": "Ciudad Mayólica",
+      "it": "Sciroccopoli"
     },
     "badge": null,
     "max_level": 22
@@ -176,32 +233,13 @@
     "max_level": 27
   },
   {
-    "id": 9,
+    "id": 12,
     "names": {
-      "de": "N",
-      "en": "N",
-      "fr": "N",
-      "es": "N",
-      "it": "N"
-    },
-    "location": {
-      "de": "Rayono City",
-      "en": "Nimbasa City",
-      "fr": "Méanville",
-      "es": "Ciudad Mayólica",
-      "it": "Sciroccopoli"
-    },
-    "badge": null,
-    "max_level": 22
-  },
-  {
-    "id": 10,
-    "names": {
-      "de": "Bel",
-      "en": "Bianca",
-      "fr": "Bianca",
-      "es": "Bianca",
-      "it": "Bianca"
+      "de": "Cheren",
+      "en": "Cheren",
+      "fr": "Cheren",
+      "es": "Cheren",
+      "it": "Cheren"
     },
     "location": {
       "de": "Route 5",
@@ -211,7 +249,7 @@
       "it": "Percorso 5"
     },
     "badge": null,
-    "max_level": 28
+    "max_level": 26
   },
   {
     "id": 11,
@@ -239,23 +277,23 @@
     "max_level": 31
   },
   {
-    "id": 12,
+    "id": 10,
     "names": {
-      "de": "Cheren",
-      "en": "Cheren",
-      "fr": "Cheren",
-      "es": "Cheren",
-      "it": "Cheren"
+      "de": "Bel",
+      "en": "Bianca",
+      "fr": "Bianca",
+      "es": "Bianca",
+      "it": "Bianca"
     },
     "location": {
-      "de": "Route 6",
-      "en": "Route 6",
-      "fr": "Route 6",
-      "es": "Ruta 6",
-      "it": "Percorso 6"
+      "de": "Marea City",
+      "en": "Driftveil City",
+      "fr": "Port Yoneuve",
+      "es": "Ciudad Fayenza",
+      "it": "Libecciopoli"
     },
     "badge": null,
-    "max_level": 26
+    "max_level": 28
   },
   {
     "id": 13,
@@ -302,23 +340,23 @@
     "max_level": 35
   },
   {
-    "id": 15,
+    "id": 29,
     "names": {
-      "de": "Bel",
-      "en": "Bianca",
-      "fr": "Bianca",
-      "es": "Bianca",
-      "it": "Bianca"
+      "de": "Cheren",
+      "en": "Cheren",
+      "fr": "Cheren",
+      "es": "Cheren",
+      "it": "Cheren"
     },
     "location": {
-      "de": "Twindrake City",
-      "en": "Opelucid City",
-      "fr": "Janusia",
-      "es": "Ciudad Caolín",
-      "it": "Boreduopoli"
+      "de": "Wendelberg",
+      "en": "Twist Mountain",
+      "fr": "Mont Foré",
+      "es": "Monte Tuerca",
+      "it": "Monte Vite"
     },
     "badge": null,
-    "max_level": 40
+    "max_level": 35
   },
   {
     "id": 16,
@@ -346,23 +384,23 @@
     "max_level": 39
   },
   {
-    "id": 17,
+    "id": 15,
     "names": {
-      "de": "G-Cis",
-      "en": "Ghetsis",
-      "fr": "Ghetsis",
-      "es": "Ghetsis",
-      "it": "Ghetsis"
+      "de": "Bel",
+      "en": "Bianca",
+      "fr": "Bianca",
+      "es": "Bianca",
+      "it": "Bianca"
     },
     "location": {
-      "de": "Drachenstiege",
-      "en": "Dragonspiral Tower",
-      "fr": "Tour Dragospire",
-      "es": "Torre Duodraco",
-      "it": "Torre Dragospira"
+      "de": "Route 8",
+      "en": "Route 8",
+      "fr": "Route 8",
+      "es": "Ruta 8",
+      "it": "Percorso 8"
     },
     "badge": null,
-    "max_level": null
+    "max_level": 40
   },
   {
     "id": 18,
