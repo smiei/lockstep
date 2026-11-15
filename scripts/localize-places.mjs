@@ -26,7 +26,8 @@ const readJson = async (file) => JSON.parse(await readFile(file, "utf-8"));
 const PACK_GAMES = {
   "red-blue": ["R", "B"],
   yellow: ["Ge", "G"],
-  "gold-silver": ["Go", "Si", "K"],
+  "gold-silver": ["Go", "Si"],
+  crystal: ["K"],
   firered: ["FR", "BG"],
   ruby: ["RU", "Ru", "SA", "Sa"],
   sapphire: ["RU", "Ru", "SA", "Sa"],

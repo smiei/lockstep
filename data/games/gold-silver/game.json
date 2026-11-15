@@ -7,10 +7,10 @@
   "spriteSet": "crystal",
   "versionGroup": "crystal",
   "names": {
-    "de": "Gold / Silber / Kristall",
-    "en": "Gold / Silver / Crystal",
-    "fr": "Or / Argent / Cristal",
-    "es": "Oro / Plata / Cristal",
-    "it": "Oro / Argento / Cristallo"
+    "de": "Gold / Silber",
+    "en": "Gold / Silver",
+    "fr": "Or / Argent",
+    "es": "Oro / Plata",
+    "it": "Oro / Argento"
   }
 }
