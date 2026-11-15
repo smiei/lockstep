@@ -1,0 +1,539 @@
+[
+  {
+    "from": 77,
+    "to": 78,
+    "comment": "Ponyta -> Rapidash",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 79,
+    "to": 80,
+    "comment": "Slowpoke -> Slowbro",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 88,
+    "to": 89,
+    "comment": "Grimer -> Muk",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 109,
+    "to": 110,
+    "comment": "Koffing -> Weezing",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 111,
+    "to": 112,
+    "comment": "Rhyhorn -> Rhydon",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 138,
+    "to": 139,
+    "comment": "Omanyte -> Omastar",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 140,
+    "to": 141,
+    "comment": "Kabuto -> Kabutops",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 218,
+    "to": 219,
+    "comment": "Slugma -> Magcargo",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 307,
+    "to": 308,
+    "comment": "Meditite -> Medicham",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 320,
+    "to": 321,
+    "comment": "Wailmer -> Wailord",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 333,
+    "to": 334,
+    "comment": "Swablu -> Altaria",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 345,
+    "to": 346,
+    "comment": "Lileep -> Cradily",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 347,
+    "to": 348,
+    "comment": "Anorith -> Armaldo",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 353,
+    "to": 354,
+    "comment": "Shuppet -> Banette",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 355,
+    "to": 356,
+    "comment": "Duskull -> Dusclops",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 361,
+    "to": 362,
+    "comment": "Snorunt -> Glalie",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 431,
+    "to": 432,
+    "comment": "Glameow -> Purugly",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 451,
+    "to": 452,
+    "comment": "Skorupi -> Drapion",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 453,
+    "to": 454,
+    "comment": "Croagunk -> Toxicroak",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 559,
+    "to": 560,
+    "comment": "Scraggy -> Scrafty",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 568,
+    "to": 569,
+    "comment": "Trubbish -> Garbodor",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 574,
+    "to": 575,
+    "comment": "Gothita -> Gothorita",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 26
+    }
+  },
+  {
+    "from": 575,
+    "to": 576,
+    "comment": "Gothorita -> Gothitelle",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 577,
+    "to": 578,
+    "comment": "Solosis -> Duosion",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 26
+    }
+  },
+  {
+    "from": 578,
+    "to": 579,
+    "comment": "Duosion -> Reuniclus",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 580,
+    "to": 581,
+    "comment": "Ducklett -> Swanna",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 582,
+    "to": 583,
+    "comment": "Vanillite -> Vanillish",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 583,
+    "to": 584,
+    "comment": "Vanillish -> Vanilluxe",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 44
+    }
+  },
+  {
+    "from": 590,
+    "to": 591,
+    "comment": "Foongus -> Amoonguss",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 592,
+    "to": 593,
+    "comment": "Frillish -> Jellicent",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 595,
+    "to": 596,
+    "comment": "Joltik -> Galvantula",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 597,
+    "to": 598,
+    "comment": "Ferroseed -> Ferrothorn",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 599,
+    "to": 600,
+    "comment": "Klink -> Klang",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 600,
+    "to": 601,
+    "comment": "Klang -> Klinklang",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 44
+    }
+  },
+  {
+    "from": 602,
+    "to": 603,
+    "comment": "Tynamo -> Eelektrik",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 605,
+    "to": 606,
+    "comment": "Elgyem -> Beheeyem",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 607,
+    "to": 608,
+    "comment": "Litwick -> Lampent",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 610,
+    "to": 611,
+    "comment": "Axew -> Fraxure",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 32
+    }
+  },
+  {
+    "from": 619,
+    "to": 620,
+    "comment": "Mienfoo -> Mienshao",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 36
+    }
+  },
+  {
+    "from": 622,
+    "to": 623,
+    "comment": "Golett -> Golurk",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 624,
+    "to": 625,
+    "comment": "Pawniard -> Bisharp",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 37
+    }
+  },
+  {
+    "from": 627,
+    "to": 628,
+    "comment": "Rufflet -> Braviary",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 629,
+    "to": 630,
+    "comment": "Vullaby -> Mandibuzz",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 633,
+    "to": 634,
+    "comment": "Deino -> Zweilous",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 39
+    }
+  },
+  {
+    "from": 634,
+    "to": 635,
+    "comment": "Zweilous -> Hydreigon",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 59
+    }
+  },
+  {
+    "from": 636,
+    "to": 637,
+    "comment": "Larvesta -> Volcarona",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 50
+    }
+  },
+  {
+    "from": 667,
+    "to": 668,
+    "comment": "Litleo -> Pyroar",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 688,
+    "to": 689,
+    "comment": "Binacle -> Barbaracle",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 34
+    }
+  },
+  {
+    "from": 690,
+    "to": 691,
+    "comment": "Skrelp -> Dragalge",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 35
+    }
+  },
+  {
+    "from": 692,
+    "to": 693,
+    "comment": "Clauncher -> Clawitzer",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 33
+    }
+  },
+  {
+    "from": 714,
+    "to": 715,
+    "comment": "Noibat -> Noivern",
+    "category": "game",
+    "method": {
+      "kind": "level",
+      "level": 44
+    }
+  },
+  {
+    "from": 10027,
+    "to": 711,
+    "comment": "Pumpkaboo (Small Size) -> Gourgeist (Average Size)",
+    "category": "game",
+    "method": {
+      "kind": "trade"
+    }
+  },
+  {
+    "from": 10028,
+    "to": 711,
+    "comment": "Pumpkaboo (Large Size) -> Gourgeist (Average Size)",
+    "category": "game",
+    "method": {
+      "kind": "trade"
+    }
+  },
+  {
+    "from": 10029,
+    "to": 711,
+    "comment": "Pumpkaboo (Super Size) -> Gourgeist (Average Size)",
+    "category": "game",
+    "method": {
+      "kind": "trade"
+    }
+  }
+]
