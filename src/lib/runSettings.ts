@@ -85,7 +85,9 @@ export type RunSettings = {
   includeKanto: boolean;
   // Only gyms and the League set a level cap; rivals and villain bosses stay
   // on the Journey as stations without one (src/lib/levelCapRule.ts). Off =
-  // every fight the pack has a level for is a cap.
+  // every fight the pack has a level for is a cap. On by default, for runs
+  // from before the rule too: until then most packs had no level for those
+  // fights anyway.
   capsGymsOnly: boolean;
   // How many levels the rest of the team stays under a cap ("one Pokemon at
   // the cap, the others two below"); 0 = the whole team may reach it. Not a
@@ -120,7 +122,7 @@ export const DEFAULT_RUN_SETTINGS: RunSettings = {
   fusionLocksBothFamilies: true,
   randomizerFuseEverything: false,
   includeKanto: true,
-  capsGymsOnly: false,
+  capsGymsOnly: true,
   capTeamOffset: CAP_TEAM_OFFSET_DEFAULT,
   playerNames: { PLAYER1: "", PLAYER2: "", PLAYER3: "", PLAYER4: "" },
 };
@@ -135,25 +137,7 @@ export const NEW_RUN_SETTINGS_JSON = JSON.stringify({
   evolutionOverridesImpossible: false,
   evolutionOverridesEasier: false,
   evolutionOverridesTimeBased: false,
-  capsGymsOnly: true,
 });
-
-// A new run copies the settings of the run it was started from. A rule that is
-// on for new runs only (off in DEFAULT_RUN_SETTINGS so runs already being
-// played keep their caps) would be lost on that way whenever the source run
-// predates it - so a key the source never stored is filled in here.
-const NEW_RUN_ONLY_DEFAULTS = { capsGymsOnly: true };
-export function settingsForNewRun(sourceJson: string | null | undefined): string {
-  if (sourceJson == null) return NEW_RUN_SETTINGS_JSON;
-  let raw: unknown;
-  try {
-    raw = JSON.parse(sourceJson);
-  } catch {
-    return NEW_RUN_SETTINGS_JSON;
-  }
-  if (typeof raw !== "object" || raw === null) return NEW_RUN_SETTINGS_JSON;
-  return JSON.stringify({ ...NEW_RUN_ONLY_DEFAULTS, ...raw });
-}
 
 // Only the boolean toggles - playerNames and capTeamOffset are handled separately.
 export const RUN_SETTING_KEYS = (
