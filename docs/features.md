@@ -154,7 +154,7 @@ On top of the toggles:
 
 ## Appearance
 
-- **Settings** (the gear) is a page of its own: the open run (rename, copy its link, back it up, delete it), theme, shell colour, UI size, language, tab order, backups, installing the app, the version, and links to report a bug or suggest a feature. The theme switch, the language and "copy the run's link" also sit beside the gear.
+- **Settings** (the gear) is a page of its own: the open run (rename, copy its link, back it up, delete it), theme, shell colour, UI size, language, tab order, backups, installing the app, the version, and links to report a bug or suggest a feature. The theme switch and the language also sit beside the gear.
 - **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in Settings (the gear). The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
 - **Side rail:** on a desktop it carries the tabs and the next level cap with the team level beside it ("24 / 22"; the phone's top bar shows the same). An arrow at its foot folds it away, a small tab on the left edge brings it back; remembered per device.
 - **Light and dark** follow the device until switched by hand. Switching back to the device's own mode follows the device again.
