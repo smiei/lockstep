@@ -11,6 +11,7 @@ import { movepoolId } from "@/lib/forms";
 import { computeFusionTypes } from "@/lib/fusion";
 import { TYPE_LABELS, typeChipStyle } from "@/lib/pokemonTypes";
 import { useClampedIntInput } from "@/lib/useClampedIntInput";
+import { Button } from "@/components/ui/Button";
 import type { Player, RunMode } from "@/generated/prisma/client";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import type { Lang } from "@/lib/i18n/dictionary";
@@ -263,15 +264,11 @@ export function BattleCardBody({
             {...levelInput}
             className="h-11 w-20 rounded-md border border-line-strong bg-panel px-3 text-sm text-ink"
           />
-          <button
-            type="button"
-            onClick={() => onChange({ level: 100 })}
-            aria-label={t.setLevel100}
-            title={t.setLevel100}
-            className="inline-flex h-11 shrink-0 items-center rounded-md border border-line-strong px-3 text-sm font-medium text-ink-muted transition-colors hover:bg-hover hover:text-ink"
-          >
-            100
-          </button>
+          {/* A borderless "Max", not a framed "100": beside the field that
+              read as a second field holding the same number. */}
+          <Button variant="ghost" className="px-3" aria-label={t.setLevel100} title={t.setLevel100} onClick={() => onChange({ level: 100 })}>
+            Max
+          </Button>
         </div>
       </div>
 
