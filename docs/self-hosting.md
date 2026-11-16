@@ -124,11 +124,11 @@ Everything else is optional and usually best left out:
 | Variable | Purpose |
 | --- | --- |
 | `DATABASE_URL` | **Required.** `file:/app/db/nuzlocke.db` |
-| `DEFAULT_SHELL_COLOR` | Optional. The colour every device starts with: `green` (default), `red`, `blue` or `yellow`. The browser-tab icon, the home-screen icon and the installed app's splash screen and status bar take this colour too. Anyone can still pick their own colour in the gear menu, which is kept per device. |
+| `DEFAULT_SHELL_COLOR` | Optional. The colour every device starts with: `green` (default), `red`, `blue` or `yellow`. The browser-tab icon, the home-screen icon and the installed app's splash screen and status bar take this colour too. Anyone can still pick their own colour in Settings (the gear), which is kept per device. |
 | `CUSTOM_GAMES_DIR` | Optional. Where games imported in the app are saved (default: `custom-games` next to the database, see [Backups](#backups)). |
 | `TRAINER_SPRITES` | Optional. `off` skips the trainer-picture download (see [Trainer pictures](#trainer-pictures)). |
 | `COVERS` | Optional. `off` skips the game-cover download (see [Game covers](#game-covers)). |
-| `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with English as the last fallback. A language picked in the gear menu always wins. |
+| `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with English as the last fallback. A language picked in the app always wins. |
 
 Light and dark mode follow the device until someone switches them by hand. Switching back to the mode the device itself uses makes the app follow the device again.
 
@@ -200,7 +200,7 @@ Database migrations are applied automatically in every case. Existing runs are n
 
 ## Backups
 
-The easiest backup is in the app itself: gear menu → **Back up all runs**. It downloads a file that **Import backup** turns back into runs on any instance, without overwriting what is already there. It carries your rule presets too; an import adds the ones that are missing.
+The easiest backup is in the app itself: Settings (the gear) → **Back up all runs**. It downloads a file that **Import backup** turns back into runs on any instance, without overwriting what is already there. It carries your rule presets too; an import adds the ones that are missing.
 
 For a file-level backup, copy the database while the tracker is stopped:
 

@@ -210,9 +210,9 @@ export default async function RootLayout({
                         <NextCapCard runs={runs} caps={caps} variant="chip" />
                       </Suspense>
                     </div>
-                    <div className="order-2 flex items-center gap-2 sm:order-none lg:order-5 lg:px-4 lg:pt-3">
+                    <div className="order-2 flex flex-wrap items-center gap-2 sm:order-none lg:order-5 lg:px-4 lg:pt-3">
                       <Suspense fallback={<div className="h-10 w-10 rounded-md border border-line" />}>
-                        <HeaderMenu runs={runs} games={games} />
+                        <HeaderMenu runs={runs} />
                       </Suspense>
                       <ThemeToggle />
                       {/* Suspense because it reads ?run= via useSearchParams,

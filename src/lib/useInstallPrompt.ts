@@ -2,7 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from "react";
 
-// Drives the "install app" entry in the gear menu.
+// Drives the "install app" row on the Settings page.
 //
 // The captured `beforeinstallprompt` event does NOT live in React state: on a
 // warm repeat visit Chrome fires it before hydration, so a listener registered

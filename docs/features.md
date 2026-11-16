@@ -152,13 +152,13 @@ On top of the toggles:
 
 ## Appearance
 
-- **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in the gear menu. The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
+- **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in Settings (the gear). The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
 - **Side rail:** on a desktop it carries the tabs and the next level cap with the team level beside it ("24 / 22"; the phone's top bar shows the same). An arrow at its foot folds it away, a small tab on the left edge brings it back; remembered per device.
 - **Light and dark** follow the device until switched by hand. Switching back to the device's own mode follows the device again.
 
 ## Languages
 
-The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is in the gear menu, and a fresh install also offers it on the welcome page, each language named in its own words. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language. A device in none of the five languages gets English.
+The interface, Pokémon, routes, trainers and badges are available in German, English, French, Spanish and Italian. The picker is the language button beside the gear and in Settings, and a fresh install also offers it on the welcome page, each language named in its own words. Until someone picks one, a browser tab uses the server's `DEFAULT_LANGUAGE` (or else the device language), and the installed app uses the phone's language. A device in none of the five languages gets English.
 
 German and English are reviewed by hand. French, Spanish and Italian are **machine-translated** in the interface and may contain mistakes there. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI, and so are the **place names of the official games**, taken from PokéWiki for each game.
 
