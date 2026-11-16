@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getLang } from "@/lib/i18n/getLang";
 import { translations } from "@/lib/i18n/dictionary";
+import { getGameSummaries } from "@/lib/data";
 import { listRunsForHeader } from "@/lib/runs";
 import { SettingsView } from "@/components/SettingsView";
 
@@ -17,5 +18,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function SettingsPage() {
   const runs = await listRunsForHeader();
-  return <SettingsView runs={runs.map((run) => ({ id: run.id, accessKey: run.accessKey, name: run.name }))} />;
+  return (
+    <SettingsView
+      runs={runs.map((run) => ({ id: run.id, accessKey: run.accessKey, name: run.name, gameId: run.gameId }))}
+      fusionGameIds={getGameSummaries()
+        .filter((game) => game.fusion)
+        .map((game) => game.id)}
+    />
+  );
 }

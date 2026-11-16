@@ -9,6 +9,7 @@ import { BlindflugToggle } from "@/components/BlindflugToggle";
 import { HeaderTitle } from "@/components/HeaderTitle";
 import { RunSwitcher } from "@/components/RunSwitcher";
 import { HeaderMenu } from "@/components/HeaderMenu";
+import { Tour } from "@/components/Tour";
 import { NextCapCard } from "@/components/NextCapCard";
 import { DialogProvider } from "@/components/DialogProvider";
 import { ToastProvider } from "@/components/ui/ToastProvider";
@@ -257,6 +258,13 @@ export default async function RootLayout({
               <LiveRefresh />
               <ThemeColorSync />
               <TranslationNotice />
+              {/* Suspense: it reads ?run=, like the header's controls. */}
+              <Suspense fallback={null}>
+                <Tour
+                  runs={runs.map((run) => ({ id: run.id, accessKey: run.accessKey, gameId: run.gameId }))}
+                  fusionGameIds={games.filter((game) => game.fusion).map((game) => game.id)}
+                />
+              </Suspense>
               <ServiceWorkerRegistrar />
               {/* Watches a Cloudflare Access session, which only a private
                   instance sits behind. */}

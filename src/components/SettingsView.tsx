@@ -12,6 +12,7 @@ import { REPO_URL, feedbackUrl } from "@/lib/links";
 import { pickActiveRun } from "@/lib/runKey";
 import { useInstallPrompt } from "@/lib/useInstallPrompt";
 import { forgetRun } from "@/lib/visitedRuns";
+import { startTour } from "@/lib/tourStore";
 import { AppearanceSettings } from "@/components/AppearanceSettings";
 import { useDialog } from "@/components/DialogProvider";
 import { LanguagePicker } from "@/components/LanguagePicker";
@@ -63,7 +64,14 @@ type Busy = "backupRun" | "backupAll" | "delete" | "rename" | null;
 
 const subscribeNever = () => () => {};
 
-export function SettingsView({ runs }: { runs: { id: number; accessKey: string; name: string }[] }) {
+export function SettingsView({
+  runs,
+  fusionGameIds,
+}: {
+  runs: { id: number; accessKey: string; name: string; gameId: string }[];
+  // The packs with fusions - a run of one offers the fusion tour too.
+  fusionGameIds: string[];
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { lang } = useLanguage();
@@ -81,6 +89,7 @@ export function SettingsView({ runs }: { runs: { id: number; accessKey: string; 
   const backupImport = useBackupImport({ lang, existingNames: runs.map((r) => r.name), openPath: "/overview" });
 
   const activeRun = pickActiveRun(runs, searchParams.get("run"));
+  const fusionRun = activeRun !== undefined && fusionGameIds.includes(activeRun.gameId);
 
   // The name field follows the open run - synced during render, against the
   // last run and name seen, rather than in an effect.
@@ -298,6 +307,12 @@ export function SettingsView({ runs }: { runs: { id: number; accessKey: string; 
                 the image tag it is supposed to be. */}
             <span className="font-mono text-sm text-ink">{version}</span>
           </Row>
+          {activeRun && (
+            <Row title={t.tour.settingsTitle} hint={t.tour.settingsHint}>
+              <Button onClick={() => startTour("main")}>{t.tour.start}</Button>
+              {fusionRun && <Button onClick={() => startTour("fusion")}>{t.tour.startFusion}</Button>}
+            </Row>
+          )}
           <Row title={ts.feedbackTitle} hint={ts.feedbackHint}>
             <ButtonLink href={feedbackUrl("bug", version)} target="_blank" rel="noreferrer">
               {ts.reportBug}

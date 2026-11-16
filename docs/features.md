@@ -100,7 +100,7 @@ A per-run dashboard. In a SoulLink run every number also breaks down per player.
 
 ## Rules
 
-Per-run rule toggles. They are informational: they drive warnings and visibility, and never block a save. Available rules:
+Per-run rule toggles, grouped by theme (catching and clauses, level caps, Blindflug, randomizer, run and game) under a label that lists the rules in force. They are informational: they drive warnings and visibility, and never block a save. Available rules:
 - **Species Clause.** In SoulLink it can apply per player, optionally with "caught links lock for everyone".
 - **Shiny Clause** and **nicknames.**
 - **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"), for every official Gen 1–7 game and generated from the randomizer's own code; a game without such a list (the Switch games, ROM hacks) does not show them. Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
@@ -118,6 +118,8 @@ On top of the toggles:
 
 - **Start page:** the house icon next to the logo opens the collection: every run as a card with its game's cover, its team, route progress, badges, next level cap and deaths, played-last first. Each card can mark its run as won - it becomes a Hall of Fame entry with a gold seal, frame and label dated the day it was won - or lost (greyed out, struck through, a red frame and a red "Lost" stamp across its team). Either way it keeps its place in the list, "Open only" at the top hides both, and "Resume" takes the mark back. Deleting a run takes two clicks on its card: Delete, then Delete for good. A fresh install starts there with a short welcome instead of an empty run. A link without a run (and the installed app) opens the run played last.
 - **Runs and players:** any number of runs, each a SoulLink for 2, 3 or 4 players or a solo run, chosen at creation.
+- **New Run page:** the games as a grid of covers, grouped into official games, ROM hacks, fan games and your own, with a search field and a generation filter. Beside it the run's name, mode, players and the run whose rules it starts with (or the default rules).
+- **Guided tour:** a device that has not seen it is offered a short tour through the tabs, and a second one about fusions once an Infinite Fusion run is open. Both can be declined and started again from Settings.
 - **Game covers** show in the game picker, on the start page and on the Overview. They are downloaded on the first start; a ROM hack without a cover shows a drawn tile, or your own picture (see [self-hosting](self-hosting.md#game-covers)).
 - **Game packs:** each run plays one game pack: every main-series game from Red/Blue/Yellow to Scarlet/Violet, 17 ROM hack packs (Blazing Emerald as v1.5.1 and v1.6), and the fan game Pokémon Infinite Fusion (Classic and Remix). The full list is in the [README](../README.md#supported-games).
 - **Your own games:** New Run → *Import your own game* adds a ROM hack or any other game from a pack file (route list + boss level caps, see [game packs](game-packs.md)). It is checked before it is saved, appears under *Your own games*, and travels inside the backups of runs that play it.
@@ -152,6 +154,7 @@ On top of the toggles:
 
 ## Appearance
 
+- **Settings** (the gear) is a page of its own: the open run (rename, copy its link, back it up, delete it), theme, shell colour, UI size, language, tab order, backups, installing the app, the version, and links to report a bug or suggest a feature. The theme switch, the language and "copy the run's link" also sit beside the gear.
 - **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in Settings (the gear). The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
 - **Side rail:** on a desktop it carries the tabs and the next level cap with the team level beside it ("24 / 22"; the phone's top bar shows the same). An arrow at its foot folds it away, a small tab on the left edge brings it back; remembered per device.
 - **Light and dark** follow the device until switched by hand. Switching back to the device's own mode follows the device again.

@@ -104,6 +104,7 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
     // the square "+".
     <div
       ref={containerRef}
+      data-tour="run"
       className="relative flex w-full flex-wrap items-center gap-1.5 sm:w-auto lg:w-full"
     >
       {/* The list hangs off the box itself, not off the whole block: from lg
