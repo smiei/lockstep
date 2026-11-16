@@ -10,12 +10,12 @@ import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { Button } from "@/components/ui/Button";
 import { useToast } from "@/components/ui/ToastProvider";
 
-// Under the New-Run dialog's game picker: import a game pack file (see
+// Under the New Run page's game grid: import a game pack file (see
 // docs/game-packs.md) and, for an imported game that is selected, remove it.
 // The server validates the file with the repository's own rules and answers
 // with the list of problems; they are shown right here, because a toast
 // cannot hold "routes[12].names.de is required". Removing asks inline (two
-// steps) - the dialog is already a Modal, and Modals must never nest.
+// steps), as it did when this sat in a Modal - Modals must never nest.
 export function CustomGameControls({
   lang,
   gameId,

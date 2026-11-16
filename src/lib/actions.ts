@@ -1316,6 +1316,8 @@ export async function createRun(
   gameId?: string,
   lang?: Lang,
   playerCount?: number,
+  // The New Run page's "default rules": copy from no run at all.
+  freshRules?: boolean,
 ): Promise<CreateRunResult> {
   const trimmed = name.trim();
   if (!trimmed) {
@@ -1336,9 +1338,10 @@ export async function createRun(
   // numbers - id is monotonic and immune to that.
   // A public instance only copies from a run the caller holds the key to -
   // "the most recent run" would be a stranger's, player names included.
-  const source =
-    (sourceRunKey != null ? await findRunByKey(sourceRunKey) : null) ??
-    (IS_PUBLIC_INSTANCE ? null : await prisma.run.findFirst({ orderBy: { id: "desc" } }));
+  const source = freshRules
+    ? null
+    : ((sourceRunKey != null ? await findRunByKey(sourceRunKey) : null) ??
+      (IS_PUBLIC_INSTANCE ? null : await prisma.run.findFirst({ orderBy: { id: "desc" } })));
   const rulesMarkdown = source?.rulesMarkdown.trim()
     ? source.rulesMarkdown
     : DEFAULT_RULES[lang ?? "de"];

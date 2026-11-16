@@ -1,7 +1,7 @@
 // Game packs as data a contributor (or a user, see importGamePack) can hand in:
 // the one validator both CI (`npm run validate:packs`) and the in-app import
 // run, plus the single-file "bundle" format the import takes. Client-safe and
-// pure - no fs, no Prisma - so the New-Run dialog can check a file before it
+// pure - no fs, no Prisma - so the New Run page can check a file before it
 // is uploaded. docs/game-packs.md is the human-readable version of these rules.
 import { LANGS } from "@/lib/i18n/dictionary";
 
