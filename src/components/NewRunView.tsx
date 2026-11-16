@@ -14,7 +14,6 @@ import { CustomGameControls } from "@/components/CustomGameControls";
 import { EnglishOnlyNote } from "@/components/EnglishOnlyNote";
 import { GameCover } from "@/components/GameCover";
 import { Button, ButtonLink } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { cn } from "@/components/ui/cn";
 import { FieldLabel, Input, Select } from "@/components/ui/Input";
 import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
@@ -115,7 +114,10 @@ export function NewRunView({
       {/* The run's details in one band above the games, a column per field
           from xl, the create button at its end; the games take the whole
           width under it. */}
-      <Card className="mb-8">
+      {/* Not a Card: this is the page's one form, so it carries a heavier
+          frame in the shell colour and a soft shadow, set off from the
+          trays of the games below. */}
+      <div className="mb-8 rounded-md border-2 border-accent bg-panel p-4 shadow-md sm:p-5">
         <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1.2fr)_auto] xl:items-start">
           <div className="flex items-center gap-3 sm:col-span-2 xl:col-span-1">
             <GameCover src={picked?.cover} name={pickedName} size="sm" />
@@ -210,7 +212,7 @@ export function NewRunView({
           <div className="flex justify-end sm:col-span-2 xl:col-span-1 xl:col-start-6 xl:mt-5">{createButton}</div>
         </div>
         {picked?.kind === "romhack" && <EnglishOnlyNote lang={lang} className="mt-4" />}
-      </Card>
+      </div>
 
       <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-end gap-x-4 gap-y-3">
