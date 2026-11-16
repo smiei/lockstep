@@ -11,6 +11,8 @@ import { cn } from "@/components/ui/cn";
 const SIZES = {
   sm: "h-16 w-16",
   md: "h-24 w-24",
+  // As wide as its container - the New Run page's grid tiles.
+  fill: "aspect-square w-full",
 } as const;
 
 export function GameCover({

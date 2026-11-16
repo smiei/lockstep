@@ -162,4 +162,4 @@ The interface, Pokémon, routes, trainers and badges are available in German, En
 
 German and English are reviewed by hand. French, Spanish and Italian are **machine-translated** in the interface and may contain mistakes there. The app says so once per device and under the language buttons. **Pokémon names are official in every language**, because they come from PokéAPI, and so are the **place names of the official games**, taken from PokéWiki for each game.
 
-**ROM hacks** exist in English only, so the app names their places, trainers and badges in English in every language, exactly as the game shows them, and says so in the New-Run dialog and on the Encounter tab.
+**ROM hacks** exist in English only, so the app names their places, trainers and badges in English in every language, exactly as the game shows them, and says so on the New Run page and on the Encounter tab.

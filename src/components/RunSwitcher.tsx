@@ -1,11 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, useTransition } from "react";
-import { Button } from "@/components/ui/Button";
+import { useEffect, useRef, useState } from "react";
+import { ButtonLink } from "@/components/ui/Button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { createRun } from "@/lib/actions";
 import { pickActiveRun } from "@/lib/runKey";
-import { formatActionError } from "@/lib/actionErrors";
 import { useDropdown } from "@/lib/useDropdown";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
@@ -14,8 +12,6 @@ import { parseRunSettings } from "@/lib/runSettings";
 import { runPlayers } from "@/lib/players";
 import { RunMode } from "@/generated/prisma/enums";
 import type { GameSummary, RunSummary } from "@/lib/types";
-import { NewRunDialog } from "@/components/NewRunDialog";
-import { useToast } from "@/components/ui/ToastProvider";
 import { ChevronDownIcon, PlusIcon } from "@/components/ActionIcons";
 
 // A listed run, plus its settings when the layout has them (it passes the
@@ -23,7 +19,7 @@ import { ChevronDownIcon, PlusIcon } from "@/components/ActionIcons";
 type SwitcherRun = RunSummary & { settingsJson?: string };
 
 // The run box: the open run's name with its game and players under it, and a
-// list of every run to switch to - plus a compact "+" (new run). It used to
+// list of every run to switch to - plus a compact "+" (the New Run page). It used to
 // be a native <select>, which cut the name off in the rail and could say
 // nothing about the game or who plays. Rename/delete live in the header menu
 // (HeaderMenu) to keep this bar narrow on phones.
@@ -31,11 +27,8 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [pending, startTransition] = useTransition();
-  const [dialogOpen, setDialogOpen] = useState(false);
   const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const { lang } = useLanguage();
-  const toast = useToast();
   const t = translations[lang].runSwitcher;
   const tPlayer = translations[lang].player;
 
@@ -96,25 +89,12 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
     return run.mode === RunMode.CLASSIC ? t.modeClassic : `${t.modeSoullink} · ${playerNames(run)}`;
   }
 
-  const openNewRun = () => setDialogOpen(true);
+  // The New Run page copies the rules of the run that is on screen.
+  const newRunHref = activeRun ? `/new?run=${activeRun.accessKey}` : "/new";
 
   function handlePick(value: string) {
     setOpen(false);
     if (value !== activeRun?.accessKey) router.push(`${pathname}?run=${value}`);
-  }
-
-  function handleCreate(name: string, mode: RunMode, gameId: string, playerCount: number) {
-    startTransition(async () => {
-      // Inherit ruleset + rule toggles from the run that's on screen right
-      // now, then land on the Rules tab so they can be reviewed first.
-      const result = await createRun(name, mode, activeRun?.accessKey ?? null, gameId, lang, playerCount);
-      if (result.success) {
-        setDialogOpen(false);
-        router.push(`/rules?run=${result.runKey}`);
-      } else {
-        toast.error(formatActionError(result.error, lang));
-      }
-    });
   }
 
   return (
@@ -132,7 +112,7 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
       <div className="relative min-w-0 flex-1 sm:w-64 sm:flex-none lg:w-full lg:flex-none">
       <button
         type="button"
-        disabled={pending || runs.length === 0}
+        disabled={runs.length === 0}
         onClick={handleTrigger}
         {...triggerProps}
         aria-label={activeRun ? `${t.switchLabel}: ${activeRun.name}` : t.switchLabel}
@@ -196,40 +176,29 @@ export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameS
         </ul>
       )}
       </div>
-      {/* Two triggers for the one dialog below - exactly one is visible. */}
-      <Button
+      {/* Two links to the same page - exactly one is visible. */}
+      <ButtonLink
+        href={newRunHref}
         size="sm"
         iconOnly
-        loading={pending}
         icon={<PlusIcon className="h-5 w-5" />}
-        onClick={openNewRun}
         aria-label={t.newRunTitle}
         title={t.newRunTitle}
         className="lg:hidden"
       />
       {/* A wrapper carries the visibility: `cn` is a plain join, so a
-          `hidden` on the Button itself would fight its built-in inline-flex. */}
+          `hidden` on the link itself would fight its built-in inline-flex. */}
       <div className="hidden w-full lg:block">
-        <Button
+        <ButtonLink
+          href={newRunHref}
           size="sm"
           variant="ghost"
-          loading={pending}
           icon={<PlusIcon className="h-4 w-4" />}
-          onClick={openNewRun}
           className="w-full"
         >
           {t.newRunTitle}
-        </Button>
+        </ButtonLink>
       </div>
-      <NewRunDialog
-        lang={lang}
-        open={dialogOpen}
-        pending={pending}
-        games={games}
-        initialGameId={activeRun?.gameId ?? defaultGameId ?? ""}
-        onClose={() => setDialogOpen(false)}
-        onCreate={handleCreate}
-      />
     </div>
   );
 }

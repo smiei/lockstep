@@ -1,4 +1,5 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ComponentProps, ReactNode } from "react";
+import Link from "next/link";
 import { cn } from "./cn";
 import { Spinner } from "./Spinner";
 
@@ -68,17 +69,41 @@ export function Button({
       type={type}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
-      className={cn(
-        "inline-flex shrink-0 items-center justify-center gap-2 rounded-md font-semibold transition-colors",
-        "disabled:cursor-not-allowed disabled:opacity-50",
-        VARIANTS[variant],
-        iconOnly ? ICON_SIZES[size] : SIZES[size],
-        className,
-      )}
+      className={buttonClass(variant, size, iconOnly, className)}
       {...rest}
     >
       {loading ? <Spinner /> : icon}
       {!iconOnly && children}
     </button>
+  );
+}
+
+function buttonClass(variant: Variant, size: Size, iconOnly: boolean, className?: string) {
+  return cn(
+    "inline-flex shrink-0 items-center justify-center gap-2 rounded-md font-semibold transition-colors",
+    "disabled:cursor-not-allowed disabled:opacity-50",
+    VARIANTS[variant],
+    iconOnly ? ICON_SIZES[size] : SIZES[size],
+    className,
+  );
+}
+
+// A link that looks like a button - for what leads to another page ("New
+// Run", "Back") rather than doing something here. No loading/disabled: a
+// link is never pending.
+export function ButtonLink({
+  variant = "secondary",
+  size = "md",
+  icon,
+  iconOnly = false,
+  className,
+  children,
+  ...rest
+}: ComponentProps<typeof Link> & { variant?: Variant; size?: Size; icon?: ReactNode; iconOnly?: boolean }) {
+  return (
+    <Link className={buttonClass(variant, size, iconOnly, className)} {...rest}>
+      {icon}
+      {!iconOnly && children}
+    </Link>
   );
 }

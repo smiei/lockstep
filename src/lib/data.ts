@@ -44,7 +44,7 @@ export type GameInfo = {
   id: string;
   // Display order in the game picker.
   sort: number;
-  // Official game, ROM hack or fan game - groups the New-Run dialog's list.
+  // Official game, ROM hack or fan game - groups the New Run page's grid.
   // Missing = "official". Imported packs (id "custom-...") form a group of
   // their own whatever they say here.
   kind?: PackKind;
@@ -336,13 +336,14 @@ export function getPackContext(): PackContext {
   };
 }
 
-// The client-safe slice the header and the new-run dialog need.
+// The client-safe slice the header and the New Run page need.
 export function getGameSummaries(): GameSummary[] {
   return getGames().map((game) => ({
     id: game.id,
     names: game.names,
     fusion: Boolean(game.fusion),
     kind: game.kind ?? "official",
+    generation: game.generation,
     cover: getGameCover(game.id),
   }));
 }
