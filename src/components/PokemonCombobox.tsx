@@ -5,6 +5,7 @@ import type { Pokemon } from "@/lib/data";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { displayNameWithForm } from "@/lib/forms";
+import { matchesPokemon } from "@/lib/search";
 import { useDropdown } from "@/lib/useDropdown";
 import { PokemonSprite } from "@/components/PokemonSprite";
 
@@ -55,10 +56,7 @@ export function PokemonCombobox({
   }
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    const filtered = q
-      ? pokemonList.filter((p) => displayNameWithForm(p, lang).toLowerCase().includes(q))
-      : pokemonList;
+    const filtered = query.trim() ? pokemonList.filter((p) => matchesPokemon(p, lang, query)) : pokemonList;
     // Capped low to avoid firing off a burst of sprite requests just from
     // opening the dropdown (searching narrows this further anyway).
     return filtered.slice(0, 15);

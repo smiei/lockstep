@@ -3,6 +3,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
+import { foldSearch } from "@/lib/search";
 import { useDropdown } from "@/lib/useDropdown";
 import { TypeBadge } from "@/components/TypeBadge";
 import { Input } from "@/components/ui/Input";
@@ -43,8 +44,8 @@ export function MoveCombobox({
   }
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    const filtered = q ? moves.filter((m) => m.name.toLowerCase().includes(q)) : moves;
+    const q = foldSearch(query);
+    const filtered = q ? moves.filter((m) => foldSearch(m.name).includes(q)) : moves;
     return filtered.slice(0, 20);
   }, [moves, query]);
 
