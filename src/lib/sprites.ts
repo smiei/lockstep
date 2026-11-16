@@ -79,12 +79,6 @@ export function getPokemonSpriteUrls(pokemonId: number, spriteSet: string = DEFA
   return urls;
 }
 
-// The single most-preferred URL, for call sites that don't render a fallback
-// chain themselves.
-export function getPokemonSpriteUrl(pokemonId: number, spriteSet: string = DEFAULT_SPRITE_SET): string {
-  return getPokemonSpriteUrls(pokemonId, spriteSet)[0];
-}
-
 // A ball's item-sprite icon (src/lib/catchrate.ts ball ids). Infinite Fusion's
 // own balls (see CLAUDE.md) have no PokeAPI sprite at all, hotlinked or not -
 // their icon always comes from the game's own repository.

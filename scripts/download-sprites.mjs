@@ -5,7 +5,7 @@
 // public/ball-sprites/) so the running app never depends on an external CDN.
 // Already-downloaded files are skipped, so re-runs only fetch what's missing.
 // Run manually: node scripts/download-sprites.mjs
-import { mkdir, writeFile, readFile, readdir, rename } from "node:fs/promises";
+import { mkdir, writeFile, readFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -112,23 +112,6 @@ async function download(url, target) {
   await writeFile(target, buffer);
 }
 
-// Pre-sprite-set layouts kept the emerald sprites flat in
-// public/pokemon-sprites/*.png - move them into the emerald/ subfolder once
-// instead of re-downloading ~386 files.
-async function migrateFlatLayout() {
-  if (!existsSync(outRoot)) return;
-  const entries = await readdir(outRoot, { withFileTypes: true });
-  const flat = entries.filter((e) => e.isFile() && /^\d+\.png$/.test(e.name));
-  if (flat.length === 0) return;
-  const emeraldDir = path.join(outRoot, "emerald");
-  await mkdir(emeraldDir, { recursive: true });
-  for (const file of flat) {
-    const target = path.join(emeraldDir, file.name);
-    if (!existsSync(target)) await rename(path.join(outRoot, file.name), target);
-  }
-  console.log(`migrated ${flat.length} flat sprites into emerald/`);
-}
-
 // Same rule as src/lib/customGames.ts: CUSTOM_GAMES_DIR, else `custom-games`
 // beside the SQLite file of DATABASE_URL (relative paths are relative to prisma/).
 function customGamesDir() {
@@ -141,7 +124,6 @@ function customGamesDir() {
 }
 
 async function main() {
-  await migrateFlatLayout();
 
   // Which sets do the installed game packs need - the built-in ones and the
   // ones imported in the app (custom-games next to the database)? Per set the

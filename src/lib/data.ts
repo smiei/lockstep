@@ -380,10 +380,6 @@ export function getRoutes(gameId: string): Route[] {
   return readGameJson<Route[]>(gameId, "routes.json");
 }
 
-export function getRouteById(gameId: string, routeId: number): Route | undefined {
-  return getRoutes(gameId).find((route) => route.id === routeId);
-}
-
 // dexLimit (a game's highest obtainable national-dex id) filters the list;
 // omitted = everything in the file.
 // Hand-off point for the era corrections: pokemon.json stores PokeAPI's

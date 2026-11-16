@@ -69,8 +69,8 @@ export default async function OverviewPage({
   const game = getGameOrDefault(gameId);
   const lang = await getLang();
 
-  // A pair only forms if BOTH players catch. If a route has a Fled/Killed
-  // encounter, the pair never formed - the surviving catch is boxed and any
+  // A link only forms if EVERY player catches. If a route has a Fled/Killed
+  // encounter, the link never formed - the surviving catch is boxed and any
   // "dead" mark on it must NOT count as a death or show in the Memorial
   // (mirrors what the Pokémon tab hides). Classic runs never hide anything.
   const failedRouteIds =

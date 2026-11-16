@@ -9,10 +9,9 @@ mkdir -p /app/db
 # A failed download is not fatal - the app runs, images show a "?" fallback,
 # and the next container start retries.
 mkdir -p /app/public/pokemon-sprites /app/public/ball-sprites /app/public/trainers /app/public/badges
-# The script skips files that already exist, migrates the old flat layout
-# into pokemon-sprites/emerald/, and only fetches sprite sets that a game
-# pack actually references - so running it on every start is cheap once the
-# volume is filled.
+# The script skips files that already exist and only fetches sprite sets
+# that a game pack actually references - so running it on every start is
+# cheap once the volume is filled.
 echo "Checking Pokémon sprites (downloads only what's missing)..."
 node scripts/download-sprites.mjs || echo "WARNING: sprite download failed; missing Pokémon images will show a '?' until the next container start."
 

@@ -138,8 +138,8 @@ export function teamSlotsNeeded(groupEncounters: GroupableEncounter[]): number {
   return Math.max(1, ...units.values());
 }
 
-// The links a team view may show: a SoulLink pair only forms when both players
-// catch, so a route with a Fled/Killed encounter (`failedRouteIds`, empty in
+// The links a team view may show: a SoulLink link only forms when every player
+// catches, so a route with a Fled/Killed encounter (`failedRouteIds`, empty in
 // Classic) keeps its surviving catch boxed. A link BOUND to such a route's link
 // came out of that same catch and is boxed with it. A bond to a link that is
 // not in `links` at all (e.g. a query for living links only) is not judged.

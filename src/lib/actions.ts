@@ -75,7 +75,7 @@ export type SaveEncounterInput = {
 
 export type SaveEncounterResult = { success: true } | { success: false; error: ActionError };
 
-// A SoulLink pair only forms when BOTH players catch. If either slot on the
+// A SoulLink link only forms when EVERY player catches. If any slot on the
 // route ended Fled/Killed, the surviving catch is boxed - it must never hold
 // a team slot, and the Team tab hides the link entirely. Classic runs have no
 // partner, so nothing is ever broken there.

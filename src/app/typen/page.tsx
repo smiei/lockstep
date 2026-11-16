@@ -135,7 +135,7 @@ export default async function AnalyzePage({
   }
 
   // Current team per player for the battle matchup.
-  // A pair only forms when BOTH players catch: a route with a Fled/Killed
+  // A link only forms when EVERY player catches: a route with a Fled/Killed
   // encounter never produced a link, so its surviving catch is boxed and must
   // not show up as a team member here either (the Team tab hides it too).
   const failedRouteIds =

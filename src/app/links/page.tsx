@@ -66,8 +66,8 @@ export default async function LinksPage({
 
   const lang = await getLang();
 
-  // A SoulLink pair only forms if BOTH players catch. If one player's
-  // encounter on the route is Fled/Killed, the pair never formed - the
+  // A SoulLink link only forms if EVERY player catches. If one player's
+  // encounter on the route is Fled/Killed, the link never formed - the
   // surviving catch is boxed and must NOT show here as a usable link (it
   // stays visible on the Tracker tab, which records every raw encounter).
   // Classic runs have no partner, so nothing is ever hidden there.
