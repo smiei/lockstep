@@ -113,9 +113,10 @@ export function NewRunView({
       </PageHeader>
 
       {/* The run's details in one band above the games, a column per field
-          from xl; the games take the whole width under it. */}
+          from xl, the create button at its end; the games take the whole
+          width under it. */}
       <Card className="mb-8">
-        <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1.2fr)] xl:items-start">
+        <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1.2fr)_auto] xl:items-start">
           <div className="flex items-center gap-3 sm:col-span-2 xl:col-span-1">
             <GameCover src={picked?.cover} name={pickedName} size="sm" />
             <div className="min-w-0">
@@ -203,6 +204,10 @@ export function NewRunView({
               <p className="mt-1 text-xs text-ink-subtle">{tNew.rulesHint}</p>
             </div>
           )}
+
+          {/* In line with the fields from xl (the margin is a label's
+              height), at the band's end below that. */}
+          <div className="flex justify-end sm:col-span-2 xl:col-span-1 xl:col-start-6 xl:mt-5">{createButton}</div>
         </div>
         {picked?.kind === "romhack" && <EnglishOnlyNote lang={lang} className="mt-4" />}
       </Card>
@@ -306,15 +311,6 @@ export function NewRunView({
           onImported={setGameId}
           onRemoved={() => setGameId(games.find((game) => !isCustomPackId(game.id))?.id ?? "")}
         />
-      </div>
-
-      {/* The submit, in reach however far the grid scrolled. */}
-      <div className="sticky bottom-3 z-10 mt-6 flex items-center gap-3 rounded-md border border-line-strong bg-panel p-2 pl-3 shadow-lg">
-        <span className="min-w-0 flex-1 truncate text-sm font-semibold text-ink">
-          {pickedName}
-          {name.trim() && <span className="font-normal text-ink-muted"> · {name.trim()}</span>}
-        </span>
-        {createButton}
       </div>
     </form>
   );
