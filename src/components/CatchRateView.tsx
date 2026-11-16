@@ -543,7 +543,7 @@ export function CatchCardBody({
           />
           <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full border border-line bg-sunken">
             <div
-              className={`h-full rounded-full transition-all ${hpBarColor(hpPercent)}`}
+              className={`h-full rounded-full transition-[width,background-color] motion-reduce:transition-none ${hpBarColor(hpPercent)}`}
               style={{ width: `${hpPercent}%` }}
             />
           </div>
