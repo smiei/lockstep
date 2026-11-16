@@ -112,113 +112,11 @@ export function NewRunView({
         </ButtonLink>
       </PageHeader>
 
-      {/* On a phone the short form comes first and the long grid after it,
-          with the create button pinned to the bottom edge; from xl the grid
-          takes the page and the form stays in view beside it. */}
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem] xl:items-start">
-        <div className="order-2 min-w-0 xl:order-1">
-          <div className="mb-4 flex flex-wrap items-end gap-x-4 gap-y-3">
-            <div className="w-full sm:w-72">
-              <FieldLabel htmlFor={`${ids}-search`}>{tNew.search}</FieldLabel>
-              <Input
-                id={`${ids}-search`}
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                // Enter in the search field must not create the run.
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") e.preventDefault();
-                }}
-              />
-            </div>
-            <div>
-              <span className="mb-1 block text-xs font-medium text-ink-muted">{tNew.generationFilter}</span>
-              <div className="flex flex-wrap gap-1" role="group" aria-label={tNew.generationFilter}>
-                <Button
-                  size="sm"
-                  variant={generation === null ? "primary" : "secondary"}
-                  aria-pressed={generation === null}
-                  onClick={() => setGeneration(null)}
-                >
-                  {tNew.allGenerations}
-                </Button>
-                {generations.map((gen) => (
-                  <Button
-                    key={gen}
-                    size="sm"
-                    variant={generation === gen ? "primary" : "secondary"}
-                    aria-pressed={generation === gen}
-                    aria-label={tNew.generation(gen)}
-                    onClick={() => setGeneration(gen)}
-                    className="w-10 px-0 font-mono"
-                  >
-                    {gen}
-                  </Button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {groups.length === 0 && (
-            <EmptyState
-              title={tNew.noMatch}
-              action={
-                <Button
-                  size="sm"
-                  onClick={() => {
-                    setQuery("");
-                    setGeneration(null);
-                  }}
-                >
-                  {tNew.resetFilter}
-                </Button>
-              }
-            />
-          )}
-          {groups.map(([label, list]) => (
-            <Section key={label} title={label} actions={<span className="font-mono text-xs text-ink-muted">{list.length}</span>}>
-              <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 2xl:grid-cols-7">
-                {list.map((game) => {
-                  const selected = game.id === gameId;
-                  const gameName = localizeName(game.names, lang);
-                  return (
-                    <li key={game.id}>
-                      <button
-                        type="button"
-                        aria-pressed={selected}
-                        disabled={pending}
-                        onClick={() => setGameId(game.id)}
-                        className={cn(
-                          "flex h-full w-full flex-col gap-1.5 rounded-md border bg-panel p-2 text-left transition-colors hover:bg-hover disabled:cursor-not-allowed",
-                          selected ? "border-accent ring-2 ring-accent" : "border-line",
-                        )}
-                      >
-                        <GameCover src={game.cover} name={gameName} size="fill" />
-                        <span className="line-clamp-2 break-words text-sm font-semibold leading-tight text-ink">{gameName}</span>
-                        {/* The state in words too - the frame alone is colour. */}
-                        <span className="mt-auto font-mono text-xs text-ink-muted">
-                          {game.generation ? tNew.generation(game.generation) : ""}
-                          {selected && ` · ${tNew.selected}`}
-                        </span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </Section>
-          ))}
-
-          <CustomGameControls
-            lang={lang}
-            gameId={gameId}
-            disabled={pending}
-            onImported={setGameId}
-            onRemoved={() => setGameId(games.find((game) => !isCustomPackId(game.id))?.id ?? "")}
-          />
-        </div>
-
-        <Card className="order-1 xl:sticky xl:top-6 xl:order-2">
-          <div className="mb-4 flex items-center gap-3">
+      {/* The run's details in one band above the games, a column per field
+          from xl; the games take the whole width under it. */}
+      <Card className="mb-8">
+        <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1.2fr)] xl:items-start">
+          <div className="flex items-center gap-3 sm:col-span-2 xl:col-span-1">
             <GameCover src={picked?.cover} name={pickedName} size="sm" />
             <div className="min-w-0">
               <span className="block text-xs font-medium text-ink-muted">{t.gameLabel}</span>
@@ -228,9 +126,8 @@ export function NewRunView({
               )}
             </div>
           </div>
-          {picked?.kind === "romhack" && <EnglishOnlyNote lang={lang} className="mb-4" />}
 
-          <div className="mb-3">
+          <div>
             <FieldLabel htmlFor={`${ids}-name`}>{t.nameLabel}</FieldLabel>
             <Input
               id={`${ids}-name`}
@@ -244,31 +141,35 @@ export function NewRunView({
 
           {/* Mode is fixed at creation, so it is a two-way choice rather than a
               toggle: both options stay visible and the picked one is filled. */}
-          <span className="mb-1 block text-xs font-medium text-ink-muted">{t.modeLabel}</span>
-          <div className="grid grid-cols-2 gap-2" role="group" aria-label={t.modeLabel}>
-            {(
-              [
-                [RunMode.SOULLINK, t.modeSoullink],
-                [RunMode.CLASSIC, t.modeClassic],
-              ] as const
-            ).map(([value, label]) => (
-              <Button
-                key={value}
-                variant={mode === value ? "primary" : "secondary"}
-                aria-pressed={mode === value}
-                disabled={pending}
-                onClick={() => setMode(value)}
-              >
-                {label}
-              </Button>
-            ))}
+          <div>
+            <span className="mb-1 block text-xs font-medium text-ink-muted">{t.modeLabel}</span>
+            <div className="grid grid-cols-2 gap-2" role="group" aria-label={t.modeLabel}>
+              {(
+                [
+                  [RunMode.SOULLINK, t.modeSoullink],
+                  [RunMode.CLASSIC, t.modeClassic],
+                ] as const
+              ).map(([value, label]) => (
+                <Button
+                  key={value}
+                  variant={mode === value ? "primary" : "secondary"}
+                  aria-pressed={mode === value}
+                  disabled={pending}
+                  onClick={() => setMode(value)}
+                  className="px-2"
+                >
+                  {label}
+                </Button>
+              ))}
+            </div>
           </div>
 
           {/* Fixed at creation too: a player joining or leaving mid-run would
-              leave routes with entries for players the run no longer has. */}
-          {mode === RunMode.SOULLINK && (
-            <>
-              <span className="mb-1 mt-3 block text-xs font-medium text-ink-muted">{t.playersLabel}</span>
+              leave routes with entries for players the run no longer has.
+              A solo run keeps the column, so the band does not jump. */}
+          <div>
+            <span className="mb-1 block text-xs font-medium text-ink-muted">{t.playersLabel}</span>
+            {mode === RunMode.SOULLINK ? (
               <div className="grid grid-cols-3 gap-2" role="group" aria-label={t.playersLabel}>
                 {PLAYER_COUNTS.map((count) => (
                   <Button
@@ -277,16 +178,19 @@ export function NewRunView({
                     aria-pressed={playerCount === count}
                     disabled={pending}
                     onClick={() => setPlayerCount(count)}
+                    className="px-2"
                   >
                     {count}
                   </Button>
                 ))}
               </div>
-            </>
-          )}
+            ) : (
+              <p className="flex h-11 items-center font-mono text-sm text-ink-muted">1</p>
+            )}
+          </div>
 
           {runs.length > 0 && (
-            <div className="mt-3">
+            <div>
               <FieldLabel htmlFor={`${ids}-rules`}>{tNew.rulesFrom}</FieldLabel>
               <Select id={`${ids}-rules`} value={sourceKey} disabled={pending} onChange={(e) => setSourceKey(e.target.value)}>
                 {runs.map((run) => (
@@ -299,14 +203,117 @@ export function NewRunView({
               <p className="mt-1 text-xs text-ink-subtle">{tNew.rulesHint}</p>
             </div>
           )}
+        </div>
+        {picked?.kind === "romhack" && <EnglishOnlyNote lang={lang} className="mt-4" />}
+      </Card>
 
-          <div className="mt-5 hidden justify-end xl:flex">{createButton}</div>
-        </Card>
+      <div className="min-w-0">
+        <div className="mb-4 flex flex-wrap items-end gap-x-4 gap-y-3">
+          <div className="w-full sm:w-72">
+            <FieldLabel htmlFor={`${ids}-search`}>{tNew.search}</FieldLabel>
+            <Input
+              id={`${ids}-search`}
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              // Enter in the search field must not create the run.
+              onKeyDown={(e) => {
+                if (e.key === "Enter") e.preventDefault();
+              }}
+            />
+          </div>
+          <div>
+            <span className="mb-1 block text-xs font-medium text-ink-muted">{tNew.generationFilter}</span>
+            <div className="flex flex-wrap gap-1" role="group" aria-label={tNew.generationFilter}>
+              <Button
+                size="sm"
+                variant={generation === null ? "primary" : "secondary"}
+                aria-pressed={generation === null}
+                onClick={() => setGeneration(null)}
+              >
+                {tNew.allGenerations}
+              </Button>
+              {generations.map((gen) => (
+                <Button
+                  key={gen}
+                  size="sm"
+                  variant={generation === gen ? "primary" : "secondary"}
+                  aria-pressed={generation === gen}
+                  aria-label={tNew.generation(gen)}
+                  onClick={() => setGeneration(gen)}
+                  className="w-10 px-0 font-mono"
+                >
+                  {gen}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {groups.length === 0 && (
+          <EmptyState
+            title={tNew.noMatch}
+            action={
+              <Button
+                size="sm"
+                onClick={() => {
+                  setQuery("");
+                  setGeneration(null);
+                }}
+              >
+                {tNew.resetFilter}
+              </Button>
+            }
+          />
+        )}
+        {groups.map(([label, list]) => (
+          <Section key={label} title={label} actions={<span className="font-mono text-xs text-ink-muted">{list.length}</span>}>
+            <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8">
+              {list.map((game) => {
+                const selected = game.id === gameId;
+                const gameName = localizeName(game.names, lang);
+                return (
+                  <li key={game.id}>
+                    <button
+                      type="button"
+                      aria-pressed={selected}
+                      disabled={pending}
+                      onClick={() => setGameId(game.id)}
+                      className={cn(
+                        "flex h-full w-full flex-col gap-1.5 rounded-md border bg-panel p-2 text-left transition-colors hover:bg-hover disabled:cursor-not-allowed",
+                        selected ? "border-accent ring-2 ring-accent" : "border-line",
+                      )}
+                    >
+                      <GameCover src={game.cover} name={gameName} size="fill" />
+                      <span className="line-clamp-2 break-words text-sm font-semibold leading-tight text-ink">{gameName}</span>
+                      {/* The state in words too - the frame alone is colour. */}
+                      <span className="mt-auto font-mono text-xs text-ink-muted">
+                        {game.generation ? tNew.generation(game.generation) : ""}
+                        {selected && ` · ${tNew.selected}`}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </Section>
+        ))}
+
+        <CustomGameControls
+          lang={lang}
+          gameId={gameId}
+          disabled={pending}
+          onImported={setGameId}
+          onRemoved={() => setGameId(games.find((game) => !isCustomPackId(game.id))?.id ?? "")}
+        />
       </div>
 
-      {/* Below xl: the same submit, in reach however far the grid scrolled. */}
-      <div className="sticky bottom-3 z-10 mt-6 flex items-center gap-3 rounded-md border border-line-strong bg-panel p-2 pl-3 shadow-lg xl:hidden">
-        <span className="min-w-0 flex-1 truncate text-sm font-semibold text-ink">{pickedName}</span>
+      {/* The submit, in reach however far the grid scrolled. */}
+      <div className="sticky bottom-3 z-10 mt-6 flex items-center gap-3 rounded-md border border-line-strong bg-panel p-2 pl-3 shadow-lg">
+        <span className="min-w-0 flex-1 truncate text-sm font-semibold text-ink">
+          {pickedName}
+          {name.trim() && <span className="font-normal text-ink-muted"> · {name.trim()}</span>}
+        </span>
         {createButton}
       </div>
     </form>
