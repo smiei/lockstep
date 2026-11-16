@@ -5,6 +5,9 @@ import { translations } from "@/lib/i18n/dictionary";
 // each caller (which already knows the current UI language) can render the
 // message in the right language - avoids threading `lang` through every
 // mutating action just to format one string server-side.
+// What an action without a payload answers.
+export type ActionResult = { success: true } | { success: false; error: ActionError };
+
 export type ActionError =
   | { key: "unknownPokemon"; id: number }
   | { key: "unknownRoute"; id: number }

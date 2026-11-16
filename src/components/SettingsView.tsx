@@ -1,6 +1,7 @@
 "use client";
 
-import { useId, useState, useSyncExternalStore, useTransition, type ReactNode } from "react";
+import { useMounted } from "@/lib/useMounted";
+import { useId, useState, useTransition, type ReactNode } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useTheme } from "next-themes";
 import { deleteRun, exportAllBackup, exportRunBackup, renameRun } from "@/lib/actions";
@@ -62,8 +63,6 @@ function Row({ title, hint, children }: { title: string; hint?: string; children
 // is seconds of nothing otherwise.
 type Busy = "backupRun" | "backupAll" | "delete" | "rename" | null;
 
-const subscribeNever = () => () => {};
-
 export function SettingsView({
   runs,
   fusionGameIds,
@@ -83,7 +82,7 @@ export function SettingsView({
   const { canPrompt, isStandalone, isIos, mounted, promptInstall } = useInstallPrompt();
   const { theme, setTheme } = useTheme();
   // The stored theme is only known in the browser - see ThemeToggle.
-  const themeKnown = useSyncExternalStore(subscribeNever, () => true, () => false);
+  const themeKnown = useMounted();
   const t = translations[lang];
   const ts = t.settings;
   const backupImport = useBackupImport({ lang, existingNames: runs.map((r) => r.name), openPath: "/overview" });

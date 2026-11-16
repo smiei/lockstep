@@ -23,6 +23,7 @@ import { formedLinks, groupSoulLinks, teamSlotsNeeded } from "@/lib/fusionGroups
 import { clampPlayerCount, runPlayers } from "@/lib/players";
 import { localizeName } from "@/lib/i18n/localize";
 import type { ActionError } from "@/lib/actionErrors";
+import type { ActionResult } from "@/lib/actionErrors";
 import type { RunOutcome } from "@/lib/types";
 import type { BackupFile } from "@/lib/backup";
 import { applyBackup, backupFilename, buildBackup, buildBackupZip, parseBackup } from "@/lib/backup";
@@ -73,7 +74,6 @@ export type SaveEncounterInput = {
   shiny?: boolean;
 };
 
-export type SaveEncounterResult = { success: true } | { success: false; error: ActionError };
 
 // A SoulLink link only forms when EVERY player catches. If any slot on the
 // route ended Fled/Killed, the surviving catch is boxed - it must never hold
@@ -128,7 +128,7 @@ async function autoAssignTeamSlot(runId: number, routeId: number): Promise<boole
 
 export async function saveEncounter(
   input: SaveEncounterInput,
-): Promise<SaveEncounterResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(input.runKey);
   if (!run) return RUN_NOT_FOUND;
   return saveEncounterInRun(run, input);
@@ -139,7 +139,7 @@ export async function saveEncounter(
 async function saveEncounterInRun(
   run: Run,
   input: Omit<SaveEncounterInput, "runKey">,
-): Promise<SaveEncounterResult> {
+): Promise<ActionResult> {
   const runId = run.id;
   const { routeId, player, pokemonId, status } = input;
   // Normalize once; the in-game nickname limit is 10 characters (enforced in
@@ -373,7 +373,6 @@ async function lastDefeatedLevelCapId(runId: number): Promise<number | null> {
   return caps.at(-1)?.id ?? null;
 }
 
-export type MarkDeadResult = { success: true } | { success: false; error: ActionError };
 
 // deathPlayer (SoulLink only) records whose Pokémon fainted; both die
 // together, this is just who lost theirs.
@@ -455,7 +454,7 @@ export async function markDead(
   soulLinkId: number,
   deathPlayer?: Player | null,
   deathCause?: string | null,
-): Promise<MarkDeadResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -501,7 +500,6 @@ export async function markDead(
   return { success: true };
 }
 
-export type ClearEncounterResult = { success: true } | { success: false; error: ActionError };
 
 // Undo a mistaken encounter: delete the row and clean up an orphaned SoulLink
 // (same invariant as saveEncounter - a link always has >=1 encounter).
@@ -509,7 +507,7 @@ export async function clearEncounter(
   runKey: string,
   routeId: number,
   player: Player,
-): Promise<ClearEncounterResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -545,7 +543,7 @@ export async function setDeathPoint(
   runKey: string,
   soulLinkId: number,
   levelCapId: number | null,
-): Promise<MarkDeadResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -585,7 +583,7 @@ export async function setDeathPoint(
 
 // Counterpart to markDead - only flips the link's own status back, the
 // encounters' catch status was never touched.
-export async function markAlive(runKey: string, soulLinkId: number): Promise<MarkDeadResult> {
+export async function markAlive(runKey: string, soulLinkId: number): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -621,7 +619,6 @@ export async function markAlive(runKey: string, soulLinkId: number): Promise<Mar
 // touch it, but by reading it, not by these actions' validation rules.
 // ---------------------------------------------------------------------------
 
-export type FuseResult = { success: true } | { success: false; error: ActionError };
 
 // Keeps team slots in step with fusion groups (src/lib/fusionGroups.ts): a
 // group on the team holds exactly as many slots as it needs - one per battle
@@ -731,7 +728,7 @@ export async function fuseEncounters(
   runKey: string,
   hostId: number,
   donorId: number,
-): Promise<FuseResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -817,7 +814,6 @@ async function deleteBodyPointedInto(
   if (into?.isFusionBody) await deleteFusionBody(tx, runId, into);
 }
 
-export type SetEncounterBodyResult = { success: true } | { success: false; error: ActionError };
 
 // Infinite Fusion: the catch on this route was ALREADY a fusion (the game's
 // Randomized mode does that, and a house rule can want it anywhere). The body
@@ -829,7 +825,7 @@ export async function setEncounterBody(
   routeId: number,
   player: Player,
   bodyPokemonId: number | null,
-): Promise<SetEncounterBodyResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -917,7 +913,7 @@ export async function setEncounterBody(
 // hostId is the fusion's head; its donor (if any) is looked up via
 // fusedIntoId rather than passed in, so the caller only ever needs the one id
 // that stays stable across the fusion's lifetime.
-export async function unfuseEncounter(runKey: string, hostId: number): Promise<FuseResult> {
+export async function unfuseEncounter(runKey: string, hostId: number): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1004,7 +1000,7 @@ export async function unfuseEncounter(runKey: string, hostId: number): Promise<F
 // instead, so a caller tracking "the fusion at hostId" must switch to
 // tracking the (former) donor's id. Except for a wild-caught fusion, whose
 // rows keep their roles and swap species (see below).
-export async function swapFusion(runKey: string, hostId: number): Promise<FuseResult> {
+export async function swapFusion(runKey: string, hostId: number): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1062,7 +1058,6 @@ export async function swapFusion(runKey: string, hostId: number): Promise<FuseRe
   return { success: true };
 }
 
-export type EvolveResult = { success: true } | { success: false; error: ActionError };
 
 // Evolution never changes family_id, so it can never trigger the Species
 // Clause warning. It also only ever touches currentPokemonId, never pokemonId
@@ -1072,7 +1067,7 @@ export async function evolveEncounter(
   runKey: string,
   encounterId: number,
   targetPokemonId: number,
-): Promise<EvolveResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1118,7 +1113,7 @@ export async function setPokemonForm(
   runKey: string,
   encounterId: number,
   targetPokemonId: number,
-): Promise<EvolveResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1154,7 +1149,7 @@ export async function setPokemonForm(
   return { success: true };
 }
 
-export async function revertEvolution(runKey: string, encounterId: number): Promise<EvolveResult> {
+export async function revertEvolution(runKey: string, encounterId: number): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1217,7 +1212,6 @@ export async function toggleLevelCapDefeated(
   return { success: true, defeated: nextDefeated };
 }
 
-export type SetTeamSlotResult = { success: true } | { success: false; error: ActionError };
 
 // Assigns a link to one of the run's 6 team slots (position 0-5), or clears
 // the slot when soulLinkId is null. Enforces both invariants - a slot holds at
@@ -1235,7 +1229,7 @@ export async function setTeamSlot(
   runKey: string,
   position: number,
   soulLinkId: number | null,
-): Promise<SetTeamSlotResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   return setTeamSlotInRun(run.id, position, soulLinkId);
@@ -1246,7 +1240,7 @@ async function setTeamSlotInRun(
   runId: number,
   position: number,
   soulLinkId: number | null,
-): Promise<SetTeamSlotResult> {
+): Promise<ActionResult> {
   if (!Number.isInteger(position) || position < 0 || position > 5) {
     return { success: false, error: { key: "invalidTeamSlot" } };
   }
@@ -1290,7 +1284,7 @@ async function setTeamSlotInRun(
 // Empties all six team slots at once. Only the slot assignment is cleared -
 // the links themselves (and everything on the Encounter tab) are untouched,
 // exactly like setting each slot to "leer" by hand would.
-export async function clearTeam(runKey: string): Promise<SetTeamSlotResult> {
+export async function clearTeam(runKey: string): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1364,9 +1358,8 @@ export async function createRun(
   return { success: true, runKey: run.accessKey };
 }
 
-export type RenameRunResult = { success: true } | { success: false; error: ActionError };
 
-export async function renameRun(runKey: string, name: string): Promise<RenameRunResult> {
+export async function renameRun(runKey: string, name: string): Promise<ActionResult> {
   const trimmed = name.trim();
   if (!trimmed) {
     return { success: false, error: { key: "nameRequired" } };
@@ -1381,7 +1374,6 @@ export async function renameRun(runKey: string, name: string): Promise<RenameRun
   return { success: true };
 }
 
-export type SetRunOutcomeResult = { success: true } | { success: false; error: ActionError };
 
 // Marks a run as won or lost, or (null) takes the mark back. Bumps the
 // version for live sync but deliberately not changedAt: ending a run is not
@@ -1390,7 +1382,7 @@ export type SetRunOutcomeResult = { success: true } | { success: false; error: A
 export async function setRunOutcome(
   runKey: string,
   outcome: RunOutcome | null,
-): Promise<SetRunOutcomeResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const now = new Date();
@@ -1407,7 +1399,6 @@ export async function setRunOutcome(
   return { success: true };
 }
 
-export type UpdateRunSettingsResult = { success: true } | { success: false; error: ActionError };
 
 // Merges the given toggle changes into the run's stored settings. Only known
 // keys with boolean values are applied - anything else is ignored, matching
@@ -1415,7 +1406,7 @@ export type UpdateRunSettingsResult = { success: true } | { success: false; erro
 export async function updateRunSettings(
   runKey: string,
   changes: Partial<RunSettings>,
-): Promise<UpdateRunSettingsResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1449,9 +1440,8 @@ export async function updateRunSettings(
   return { success: true };
 }
 
-export type SaveRulesResult = { success: true } | { success: false; error: ActionError };
 
-export async function saveRules(runKey: string, markdown: string): Promise<SaveRulesResult> {
+export async function saveRules(runKey: string, markdown: string): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1504,7 +1494,6 @@ export async function addCustomRoute(
   return { success: true, routeId };
 }
 
-export type DeleteCustomRouteResult = { success: true } | { success: false; error: ActionError };
 
 // Takes the route's encounters (and their SoulLink) with it. There is no
 // foreign key on routeId - for every other route it points into a JSON pack -
@@ -1513,7 +1502,7 @@ export type DeleteCustomRouteResult = { success: true } | { success: false; erro
 export async function deleteCustomRoute(
   runKey: string,
   routeId: number,
-): Promise<DeleteCustomRouteResult> {
+): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
   const runId = run.id;
@@ -1777,7 +1766,6 @@ export async function saveRulePreset(
   return { success: true, id: preset.id };
 }
 
-export type ApplyRulePresetResult = { success: true } | { success: false; error: ActionError };
 
 // Overwrites the run's toggles and house rules with the preset's. The run's
 // own playerNames survive - a preset never carries them (see
@@ -1785,7 +1773,7 @@ export type ApplyRulePresetResult = { success: true } | { success: false; error:
 export async function applyRulePreset(
   runKey: string,
   presetId: number,
-): Promise<ApplyRulePresetResult> {
+): Promise<ActionResult> {
   if (IS_PUBLIC_INSTANCE) return NOT_ON_PUBLIC_INSTANCE;
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
@@ -1820,11 +1808,10 @@ export async function applyRulePreset(
   return { success: true };
 }
 
-export type DeleteRulePresetResult = { success: true } | { success: false; error: ActionError };
 
 // App-wide, so this removes it from every run's list. Runs that had it applied
 // keep their rules - a preset is a template, not a live link.
-export async function deleteRulePreset(presetId: number): Promise<DeleteRulePresetResult> {
+export async function deleteRulePreset(presetId: number): Promise<ActionResult> {
   if (IS_PUBLIC_INSTANCE) return NOT_ON_PUBLIC_INSTANCE;
   const preset = await prisma.rulePreset.findUnique({ where: { id: presetId } });
   if (!preset) {
@@ -1836,12 +1823,11 @@ export async function deleteRulePreset(presetId: number): Promise<DeleteRulePres
   return { success: true };
 }
 
-export type DeleteRunResult = { success: true } | { success: false; error: ActionError };
 
 // Cascades to that run's Encounters, SoulLinks, and LevelCapProgress rows
 // (onDelete: Cascade on the Run relation) - the UI is responsible for
 // confirming with the user before calling this, since it's unrecoverable.
-export async function deleteRun(runKey: string): Promise<DeleteRunResult> {
+export async function deleteRun(runKey: string): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
 
@@ -1967,9 +1953,8 @@ export async function importGamePack(json: string): Promise<ImportGamePackResult
   }
 }
 
-export type RemoveGamePackResult = { success: true } | { success: false; error: ActionError };
 
-export async function removeGamePack(gameId: string): Promise<RemoveGamePackResult> {
+export async function removeGamePack(gameId: string): Promise<ActionResult> {
   if (IS_PUBLIC_INSTANCE) return { success: false, error: { key: "notOnPublicInstance" } };
   if (typeof gameId !== "string" || !isCustomPackId(gameId)) return { success: false, error: { key: "packNotFound" } };
   if ((await prisma.run.count({ where: { gameId } })) > 0) return { success: false, error: { key: "packInUse" } };

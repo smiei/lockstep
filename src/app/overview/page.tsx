@@ -1,28 +1,21 @@
 import {
-  getEvolutionById,
-  getEvolutions,
   getGameOrDefault,
   getGameCover,
   getLevelCaps,
-  getMoveTypeHistory,
 } from "@/lib/data";
 import {
   getEffectivenessForGame,
   getPokemonByIdForGame,
   getPokemonListForGame,
-  getPokemonFormsForGame,
-  getMovesForGame,
   getAttackTypesForGame,
-  getDataGenerationForGame,
-  getFusionSpriteConfigForGame,
-  isInDex,
-  getMovesetForGame,
   getLearnsetForGame,
 } from "@/lib/gameData";
 import { teamOffensiveCoverage } from "@/lib/effectiveness";
 import { attackTypesAtLevel } from "@/lib/learnset";
 import { resolveEncounterMon } from "@/lib/encounterMon";
-import { formedLinks, groupSoulLinks, isFoldedDonor, teamLinkIds } from "@/lib/fusionGroups";
+import { failedRouteIdsOf, formedLinks, groupSoulLinks, isFoldedDonor, teamLinkIds } from "@/lib/fusionGroups";
+import { evolutionOptions } from "@/lib/runSettings";
+import { donorsByHost, encounterMonDepsFor, getDefeatedCapIds, movepoolResolver, teamsOf } from "@/lib/runPage";
 import { computeLevelCapProgress, computeRouteProgress, eliteFourIndex } from "@/lib/progress";
 import { applyRegionRule, levelCapsInRun } from "@/lib/regions";
 import { prisma } from "@/lib/prisma";
@@ -32,14 +25,9 @@ import { getRoutesForRun } from "@/lib/runRoutes";
 import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
 import { localizeName, pokemonName, routeName } from "@/lib/i18n/localize";
-import { movepoolId } from "@/lib/forms";
 import { EncounterStatus, LinkStatus, Player, RunMode } from "@/generated/prisma/client";
-import { SpriteSetProvider } from "@/components/SpriteSetProvider";
-import { CanonicalRun } from "@/components/CanonicalRun";
+import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
-import { BlindflugProvider } from "@/components/BlindflugProvider";
-import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
-import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
 import {
   OverviewView,
   type OverviewBadge,
@@ -47,7 +35,6 @@ import {
   type OverviewMemorialEntry,
   type OverviewStats,
 } from "@/components/OverviewView";
-import type { TeamMember } from "@/components/TeamWeaknessesView";
 
 export const dynamic = "force-dynamic";
 
@@ -65,7 +52,7 @@ export default async function OverviewPage({
   const { run } = await searchParams;
   const resolvedRun = await resolveRunId(run);
   if (!resolvedRun) return <RunLanding />;
-  const { runId, runKey, version, mode, players, gameId, settings } = resolvedRun;
+  const { runId, runKey, mode, players, gameId, settings } = resolvedRun;
   const game = getGameOrDefault(gameId);
   const lang = await getLang();
 
@@ -73,17 +60,12 @@ export default async function OverviewPage({
   // encounter, the link never formed - the surviving catch is boxed and any
   // "dead" mark on it must NOT count as a death or show in the Memorial
   // (mirrors what the Pokémon tab hides). Classic runs never hide anything.
-  const failedRouteIds =
-    mode === RunMode.SOULLINK
-      ? new Set(
-          (
-            await prisma.encounter.findMany({
-              where: { runId, status: { in: [EncounterStatus.FLED, EncounterStatus.KILLED] } },
-              select: { routeId: true },
-            })
-          ).map((e) => e.routeId),
-        )
-      : new Set<number>();
+  //
+  // Read unfiltered (any status, every player): the route-progress bar counts
+  // a route "done" once every player slot has an entry at all, same as the
+  // Tracker tab, regardless of whether a link ever formed.
+  const allEncounters = await prisma.encounter.findMany({ where: { runId } });
+  const failedRouteIds = failedRouteIdsOf(mode, allEncounters);
 
   // Ordered by the route's position in routes.json, not by route id: ids are
   // frozen while the array order is the display order and gets reshuffled, so
@@ -103,17 +85,7 @@ export default async function OverviewPage({
       (routeOrder.get(a.routeId) ?? Number.MAX_SAFE_INTEGER) -
       (routeOrder.get(b.routeId) ?? Number.MAX_SAFE_INTEGER),
   );
-  // Unfiltered (any status, both players) - the route-progress bar counts a
-  // route "done" once every player slot has an entry at all, same as the
-  // Tracker tab, regardless of whether a pair ever formed.
-  const allEncounters = await prisma.encounter.findMany({ where: { runId } });
-  const capProgressRows = await prisma.levelCapProgress.findMany({ where: { runId } });
-  const evoOptions = {
-    gameId,
-    impossible: settings.evolutionOverridesImpossible,
-    easier: settings.evolutionOverridesEasier,
-    timeBased: settings.evolutionOverridesTimeBased,
-  };
+  const evoOptions = evolutionOptions(gameId, settings);
 
   // Read before the team loop below: it decides whether a forme keeps its own
   // movepool or falls back to its species.
@@ -123,53 +95,28 @@ export default async function OverviewPage({
   // sit on either route's link (see src/lib/fusionGroups.ts) - so "on the
   // team" is asked of the group, a donor is folded into its host, and a host's
   // name/types/BST are the fused ones. All of this is a no-op without fusions.
-  const encounterMonDeps = {
-    pokemonById: (id: number) => getPokemonByIdForGame(game, id),
-    evolvesTo: (id: number) => getEvolutionById(id, evoOptions)?.evolvesTo ?? [],
-    inDex: (id: number) => isInDex(game, id),
-    lang,
-  };
+  const encounterMonDeps = encounterMonDepsFor(game, evoOptions, lang);
   const aliveLinks = soulLinks.filter((link) => link.status !== LinkStatus.DEAD);
   const onTeamLinkIds = teamLinkIds(aliveLinks);
   const visibleEncounterIds = new Set(soulLinks.flatMap((link) => link.encounters.map((e) => e.id)));
-  const donorByHostId = new Map(
-    allEncounters.filter((e) => e.fusedIntoId !== null).map((e) => [e.fusedIntoId as number, e]),
-  );
-  const movepoolOf = (pokemonId: number) => {
-    const pokemon = getPokemonByIdForGame(game, pokemonId);
-    // Formes with their own movepool keep it; the rest fall back.
-    return pokemon ? movepoolId(pokemon, (id) => learnset[String(id)] !== undefined) : pokemonId;
-  };
+  const donorByHostId = donorsByHost(allEncounters);
 
   // --- Team (alive + on a slot) per player: defensive + offensive coverage.
-  const teamByPlayer = new Map<Player, TeamMember[]>(players.map((p) => [p, []]));
-  for (const link of aliveLinks) {
-    if (!onTeamLinkIds.has(link.id)) continue;
-    for (const e of link.encounters) {
-      if (isFoldedDonor(e, visibleEncounterIds)) continue;
-      const mon = resolveEncounterMon(
-        e.currentPokemonId,
-        donorByHostId.get(e.id)?.currentPokemonId,
-        encounterMonDeps,
-      );
-      if (!mon) continue;
-      teamByPlayer.get(e.player)?.push({
-        encounterId: e.id,
-        pokemonId: e.currentPokemonId,
-        speciesId: movepoolOf(e.currentPokemonId),
-        name: mon.name,
-        types: mon.types,
-        bodyId: mon.bodyId,
-        bodySpeciesId: mon.bodyId !== null ? movepoolOf(mon.bodyId) : null,
-      });
-    }
-  }
-  const teams = players.map((p) => ({ player: p, members: teamByPlayer.get(p) ?? [] }));
+  const teams = teamsOf(
+    aliveLinks.filter((link) => onTeamLinkIds.has(link.id)),
+    players,
+    {
+      visibleEncounterIds,
+      donorByHostId,
+      deps: encounterMonDeps,
+      movepoolOf: movepoolResolver(game, learnset),
+    },
+  );
 
   // Level caps: last earned cap + the next one (computed early - the
   // offensive-gap coverage below is judged against the team's current cap,
   // not their theoretical level-100 moveset).
-  const defeatedIds = new Set(capProgressRows.filter((p) => p.defeated).map((p) => p.levelCapId));
+  const defeatedIds = await getDefeatedCapIds(runId);
   const levelCapItems = getLevelCaps(gameId).map((cap) => ({
     ...cap,
     defeated: defeatedIds.has(cap.id),
@@ -390,50 +337,30 @@ export default async function OverviewPage({
   const pokemonList = getPokemonListForGame(game);
 
   return (
-    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
-    <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
-      <PlayerNamesProvider names={settings.playerNames} lang={lang}>
-        <PokemonDetailProvider
-          pokemonList={pokemonList}
-          forms={getPokemonFormsForGame(game)}
-          evolutions={getEvolutions(evoOptions)}
-          moveData={{
-            movesets: getMovesetForGame(game),
-            moves: getMovesForGame(game, lang),
-          }}
-          moveTypeHistory={getMoveTypeHistory()}
-          effectiveness={table}
-          generation={getDataGenerationForGame(game)}
-          dexLimit={game.dexLimit}
-          lang={lang}
-        >
-          <OverviewView
-            lang={lang}
-            mode={mode}
-            teams={teams}
-            table={table}
-            attackTypes={defenderTypes}
-            offensiveGaps={offensiveGaps}
-            coverageLevel={coverageLevel}
-            hasMoveData={Object.keys(learnset).length > 0}
-            stats={stats}
-            deathTally={deathTally}
-            memorial={memorial}
-            runKey={runKey}
-            deathPointOptions={levelCapItems.map((cap) => ({
-              id: cap.id,
-              label: `${localizeName(cap.names, lang)} · ${localizeName(cap.location, lang)}`,
-            }))}
-            routeProgress={routeProgress}
-            levelCapProgress={levelCapProgress}
-            levelCapMarkerAt={levelCapMarkerAt}
-            badges={badges}
-            game={{ name: localizeName(game.names, lang), cover: getGameCover(game.id) }}
-          />
-        </PokemonDetailProvider>
-      </PlayerNamesProvider>
-    </SpriteSetProvider>
-    </BlindflugProvider>
+    <RunProviders run={resolvedRun} game={game} lang={lang} pokemonList={pokemonList} effectiveness={table}>
+      <OverviewView
+        lang={lang}
+        mode={mode}
+        teams={teams}
+        table={table}
+        attackTypes={defenderTypes}
+        offensiveGaps={offensiveGaps}
+        coverageLevel={coverageLevel}
+        hasMoveData={Object.keys(learnset).length > 0}
+        stats={stats}
+        deathTally={deathTally}
+        memorial={memorial}
+        runKey={runKey}
+        deathPointOptions={levelCapItems.map((cap) => ({
+          id: cap.id,
+          label: `${localizeName(cap.names, lang)} · ${localizeName(cap.location, lang)}`,
+        }))}
+        routeProgress={routeProgress}
+        levelCapProgress={levelCapProgress}
+        levelCapMarkerAt={levelCapMarkerAt}
+        badges={badges}
+        game={{ name: localizeName(game.names, lang), cover: getGameCover(game.id) }}
+      />
+    </RunProviders>
   );
 }

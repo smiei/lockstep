@@ -1,25 +1,17 @@
-import { getEvolutions, getGameOrDefault, getMoveTypeHistory } from "@/lib/data";
+import { getGameOrDefault } from "@/lib/data";
 import {
-  getEffectivenessForGame,
-  getMovesForGame,
   getPokemonListForGame,
-  getPokemonFormsForGame,
-  getDataGenerationForGame,
-  getFusionSpriteConfigForGame,
-  getMovesetForGame,
 } from "@/lib/gameData";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
-import { boundRouteMap, clauseView } from "@/lib/speciesClause";
+import { clauseView } from "@/lib/speciesClause";
+import { getBoundRoutes } from "@/lib/runPage";
 import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
 import { translations } from "@/lib/i18n/dictionary";
 import { PokedexTable } from "@/components/PokedexTable";
-import { CanonicalRun } from "@/components/CanonicalRun";
+import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
-import { BlindflugProvider } from "@/components/BlindflugProvider";
-import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
-import { SpriteSetProvider } from "@/components/SpriteSetProvider";
 import { PageHeader } from "@/components/ui/Page";
 
 // Run-scoped: the Pokédex reflects the current run's game (dex scope, sprites,
@@ -36,17 +28,11 @@ export default async function PokedexPage({
   const { run } = await searchParams;
   const resolvedRun = await resolveRunId(run);
   if (!resolvedRun) return <RunLanding />;
-  const { runId, runKey, version, players, gameId, settings } = resolvedRun;
+  const { runId, players, gameId, settings } = resolvedRun;
 
   const lang = await getLang();
   const game = getGameOrDefault(gameId);
   const pokemon = getPokemonListForGame(game);
-  const evolutions = getEvolutions({
-    gameId,
-    impossible: settings.evolutionOverridesImpossible,
-    easier: settings.evolutionOverridesEasier,
-    timeBased: settings.evolutionOverridesTimeBased,
-  });
   // Evolution families the Species Clause has used up (src/lib/speciesClause.ts),
   // for the availability filter. The Pokédex belongs to no player, so a family
   // only counts once no player may catch it any more.
@@ -54,36 +40,16 @@ export default async function PokedexPage({
     ...clauseView(await prisma.encounter.findMany({ where: { runId } }), {
       rules: settings,
       players,
-      boundRouteOf: boundRouteMap(
-        await prisma.soulLink.findMany({ where: { runId }, select: { id: true, routeId: true, boundToId: true } }),
-      ),
+      boundRouteOf: await getBoundRoutes(runId),
     }).lockedForAll(),
   ];
 
   return (
-    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
-    <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
-      <PokemonDetailProvider
-        pokemonList={pokemon}
-        forms={getPokemonFormsForGame(game)}
-        evolutions={evolutions}
-        moveData={{
-          movesets: getMovesetForGame(game),
-          moves: getMovesForGame(game, lang),
-        }}
-        moveTypeHistory={getMoveTypeHistory()}
-        effectiveness={getEffectivenessForGame(game)}
-        generation={getDataGenerationForGame(game)}
-        dexLimit={game.dexLimit}
-        lang={lang}
-      >
-        <div>
-          <PageHeader title={translations[lang].pokedex.heading} />
-          <PokedexTable pokemon={pokemon} lockedFamilyIds={lockedFamilyIds} />
-        </div>
-      </PokemonDetailProvider>
-    </SpriteSetProvider>
-    </BlindflugProvider>
+    <RunProviders run={resolvedRun} game={game} lang={lang} pokemonList={pokemon}>
+      <div>
+        <PageHeader title={translations[lang].pokedex.heading} />
+        <PokedexTable pokemon={pokemon} lockedFamilyIds={lockedFamilyIds} />
+      </div>
+    </RunProviders>
   );
 }

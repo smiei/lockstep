@@ -1,5 +1,6 @@
 "use client";
 
+import { useMounted } from "@/lib/useMounted";
 import { useCallback, useSyncExternalStore } from "react";
 
 // Drives the "install app" row on the Settings page.
@@ -37,13 +38,6 @@ function subscribePrompt(onChange: () => void) {
 const readPrompt = () => window.__nuzlockeInstallPrompt ?? null;
 const readPromptOnServer = () => null;
 
-// A store that never changes: false while rendering on the server and during
-// hydration, true afterwards. Lets the client-only checks below run without a
-// mounted flag held in state.
-const subscribeNever = () => () => {};
-const readTrue = () => true;
-const readFalse = () => false;
-
 function isStandaloneDisplay() {
   return (
     window.matchMedia("(display-mode: standalone)").matches ||
@@ -61,7 +55,7 @@ function isIosDevice() {
 
 export function useInstallPrompt() {
   const promptEvent = useSyncExternalStore(subscribePrompt, readPrompt, readPromptOnServer);
-  const mounted = useSyncExternalStore(subscribeNever, readTrue, readFalse);
+  const mounted = useMounted();
 
   const promptInstall = useCallback(async () => {
     const event = window.__nuzlockeInstallPrompt;

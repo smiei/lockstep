@@ -138,6 +138,16 @@ export function teamSlotsNeeded(groupEncounters: GroupableEncounter[]): number {
   return Math.max(1, ...units.values());
 }
 
+// The routes of a SoulLink run on which some player's encounter fled or was
+// killed, so no link formed there. Classic runs have no partner: always empty.
+export function failedRouteIdsOf(
+  mode: string,
+  encounters: readonly { routeId: number; status: string }[],
+): Set<number> {
+  if (mode !== "SOULLINK") return new Set();
+  return new Set(encounters.filter((e) => e.status === "FLED" || e.status === "KILLED").map((e) => e.routeId));
+}
+
 // The links a team view may show: a SoulLink link only forms when every player
 // catches, so a route with a Fled/Killed encounter (`failedRouteIds`, empty in
 // Classic) keeps its surviving catch boxed. A link BOUND to such a route's link

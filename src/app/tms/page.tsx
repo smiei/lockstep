@@ -1,12 +1,8 @@
-import { getEvolutions, getGameOrDefault, getMoveTypeHistory } from "@/lib/data";
+import { getGameOrDefault, getMoveTypeHistory } from "@/lib/data";
 import {
-  getEffectivenessForGame,
   getPokemonByIdForGame,
-  getPokemonListForGame,
-  getPokemonFormsForGame,
   getMovesForGame,
   getDataGenerationForGame,
-  getFusionSpriteConfigForGame,
   getMovesetForGame,
   getTmCompatForGame,
 } from "@/lib/gameData";
@@ -17,12 +13,8 @@ import { tabMetadata } from "@/lib/pageMetadata";
 import { displayNameWithForm, movepoolId } from "@/lib/forms";
 import { teamLinkIds } from "@/lib/fusionGroups";
 import { EncounterStatus, LinkStatus, Player } from "@/generated/prisma/client";
-import { SpriteSetProvider } from "@/components/SpriteSetProvider";
-import { CanonicalRun } from "@/components/CanonicalRun";
+import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
-import { BlindflugProvider } from "@/components/BlindflugProvider";
-import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
-import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
 import { TmCompatView, type TmTeamMember } from "@/components/TmCompatView";
 import type { MoveOption } from "@/components/MoveCombobox";
 
@@ -38,7 +30,7 @@ export default async function TmsPage({
   const { run } = await searchParams;
   const resolvedRun = await resolveRunId(run);
   if (!resolvedRun) return <RunLanding />;
-  const { runId, runKey, version, mode, players, gameId, settings } = resolvedRun;
+  const { runId, mode, players, gameId } = resolvedRun;
   const game = getGameOrDefault(gameId);
   const lang = await getLang();
 
@@ -102,42 +94,20 @@ export default async function TmsPage({
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
-    <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
-      <PlayerNamesProvider names={settings.playerNames} lang={lang}>
-        <PokemonDetailProvider
-          pokemonList={getPokemonListForGame(game)}
-          forms={getPokemonFormsForGame(game)}
-          evolutions={getEvolutions({
-            gameId,
-            impossible: settings.evolutionOverridesImpossible,
-            easier: settings.evolutionOverridesEasier,
-            timeBased: settings.evolutionOverridesTimeBased,
-          })}
-          moveData={{ movesets: moveset, moves: movesTable }}
-          moveTypeHistory={moveTypeHistory}
-          effectiveness={getEffectivenessForGame(game)}
-          generation={getDataGenerationForGame(game)}
-          dexLimit={game.dexLimit}
-          lang={lang}
-        >
-          <TmCompatView
-            lang={lang}
-            mode={mode}
-            teams={teams}
-            moves={moves}
-            tmCompat={tmCompat}
-            moveset={moveset}
-            movesTable={movesTable}
-            generation={getDataGenerationForGame(game)}
-            moveTypeHistory={moveTypeHistory}
-            // Infinite Fusion ships neither (see CLAUDE.md).
-            hasMoveData={Object.keys(tmCompat).length > 0 || Object.keys(moveset).length > 0}
-          />
-        </PokemonDetailProvider>
-      </PlayerNamesProvider>
-    </SpriteSetProvider>
-    </BlindflugProvider>
+    <RunProviders run={resolvedRun} game={game} lang={lang} moveData={{ movesets: moveset, moves: movesTable }}>
+      <TmCompatView
+        lang={lang}
+        mode={mode}
+        teams={teams}
+        moves={moves}
+        tmCompat={tmCompat}
+        moveset={moveset}
+        movesTable={movesTable}
+        generation={getDataGenerationForGame(game)}
+        moveTypeHistory={moveTypeHistory}
+        // Infinite Fusion ships neither (see CLAUDE.md).
+        hasMoveData={Object.keys(tmCompat).length > 0 || Object.keys(moveset).length > 0}
+      />
+    </RunProviders>
   );
 }

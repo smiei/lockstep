@@ -206,3 +206,16 @@ export function serializePresetSettings(settings: RunSettings): string {
   out.capTeamOffset = settings.capTeamOffset;
   return JSON.stringify(out);
 }
+
+// Which categories of the game pack's evolution overrides the run's three
+// randomizer rules switch on - the argument of getEvolutions/getEvolutionById.
+export type EvolutionRuleOptions = { gameId: string; impossible: boolean; easier: boolean; timeBased: boolean };
+
+export function evolutionOptions(gameId: string, settings: RunSettings): EvolutionRuleOptions {
+  return {
+    gameId,
+    impossible: settings.evolutionOverridesImpossible,
+    easier: settings.evolutionOverridesEasier,
+    timeBased: settings.evolutionOverridesTimeBased,
+  };
+}

@@ -1,5 +1,5 @@
 import { getGameOrDefault, getLevelCaps } from "@/lib/data";
-import { prisma } from "@/lib/prisma";
+import { getDefeatedCapIds } from "@/lib/runPage";
 import { resolveRunId } from "@/lib/runs";
 import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
@@ -32,8 +32,7 @@ export default async function LevelCapsPage({
   const game = getGameOrDefault(gameId);
   const trainerSet = game.trainerSet ?? game.id;
   const levelCaps = getLevelCaps(gameId);
-  const progressRows = await prisma.levelCapProgress.findMany({ where: { runId } });
-  const defeatedIds = new Set(progressRows.filter((p) => p.defeated).map((p) => p.levelCapId));
+  const defeatedIds = await getDefeatedCapIds(runId);
 
   // A fight the run's cap rule skips stays on the list, without a level.
   const items = applyCapRule(

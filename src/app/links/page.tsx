@@ -1,31 +1,20 @@
 import {
   getGameOrDefault,
   getEvolutionById,
-  getEvolutions,
-  getMoveTypeHistory,
   getLevelCaps,
 } from "@/lib/data";
 import {
-  getEffectivenessForGame,
   getPokemonByIdForGame,
   getPokemonListForGame,
   getPokemonFormsForGame,
-  getMovesForGame,
-  getDataGenerationForGame,
-  getFusionSpriteConfigForGame,
   isInDex,
-  getMovesetForGame,
 } from "@/lib/gameData";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { routeNumbers } from "@/lib/routeNumbers";
-import { EncounterStatus, LinkStatus, RunMode } from "@/generated/prisma/client";
-import { SpriteSetProvider } from "@/components/SpriteSetProvider";
-import { CanonicalRun } from "@/components/CanonicalRun";
+import { EncounterStatus, LinkStatus } from "@/generated/prisma/client";
+import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
-import { BlindflugProvider } from "@/components/BlindflugProvider";
 import { PageHeader } from "@/components/ui/Page";
-import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
-import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
 import { computePokemonRanks, rankForSumme } from "@/lib/ranking";
 import { displayNameWithForm, formLabel, formsOfSpecies } from "@/lib/forms";
 import { applyCapRule, teamLevel } from "@/lib/levelCapRule";
@@ -39,7 +28,9 @@ import { routeName, pokemonName } from "@/lib/i18n/localize";
 import { formatEvolutionMethod } from "@/lib/evolutionMethods";
 import { LinksView } from "@/components/LinksView";
 import { resolveEncounterMon } from "@/lib/encounterMon";
-import { formedLinks, groupSoulLinks, isFoldedDonor, teamSlotsNeeded } from "@/lib/fusionGroups";
+import { failedRouteIdsOf, formedLinks, groupSoulLinks, isFoldedDonor, teamSlotsNeeded } from "@/lib/fusionGroups";
+import { evolutionOptions } from "@/lib/runSettings";
+import { donorsByHost, encounterMonDepsFor, getDefeatedCapIds } from "@/lib/runPage";
 import type { SoulLinkView, FusableEncounter, EvolutionOptions } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -54,15 +45,10 @@ export default async function LinksPage({
   const { run } = await searchParams;
   const resolvedRun = await resolveRunId(run);
   if (!resolvedRun) return <RunLanding />;
-  const { runId, runKey, version, mode, players, gameId, settings } = resolvedRun;
+  const { runId, runKey, mode, players, gameId, settings } = resolvedRun;
   // The two randomizer rules decide which override categories from the game
   // pack's evolution-overrides.json apply (vs. vanilla methods).
-  const evoOptions = {
-    gameId,
-    impossible: settings.evolutionOverridesImpossible,
-    easier: settings.evolutionOverridesEasier,
-    timeBased: settings.evolutionOverridesTimeBased,
-  };
+  const evoOptions = evolutionOptions(gameId, settings);
 
   const lang = await getLang();
 
@@ -71,20 +57,8 @@ export default async function LinksPage({
   // surviving catch is boxed and must NOT show here as a usable link (it
   // stays visible on the Tracker tab, which records every raw encounter).
   // Classic runs have no partner, so nothing is ever hidden there.
-  const failedRouteIds =
-    mode === RunMode.SOULLINK
-      ? new Set(
-          (
-            await prisma.encounter.findMany({
-              where: {
-                runId,
-                status: { in: [EncounterStatus.FLED, EncounterStatus.KILLED] },
-              },
-              select: { routeId: true },
-            })
-          ).map((e) => e.routeId),
-        )
-      : new Set<number>();
+  const allEncounters = await prisma.encounter.findMany({ where: { runId } });
+  const failedRouteIds = failedRouteIdsOf(mode, allEncounters);
 
   const rawSoulLinks = await prisma.soulLink.findMany({
     where: { runId },
@@ -95,12 +69,7 @@ export default async function LinksPage({
   // Infinite Fusion: host encounter id -> its donor (the fusion's body). Read
   // from ALL of the run's encounters, not just the ones hanging off a SoulLink:
   // a wild-caught fusion's body deliberately has no link of its own.
-  const donorByHostId = new Map(
-    (await prisma.encounter.findMany({ where: { runId, fusedIntoId: { not: null } } })).map((e) => [
-      e.fusedIntoId as number,
-      e,
-    ]),
-  );
+  const donorByHostId = donorsByHost(allEncounters);
   // Ranks are computed within the game's dex, so "Rang #X" means the same
   // thing the Pokédex tab shows for that game.
   const game = getGameOrDefault(gameId);
@@ -116,8 +85,7 @@ export default async function LinksPage({
   // rule: only one Pokémon may reach the cap itself, everyone else stays the
   // run's capTeamOffset below - so evolution availability is judged against
   // that level. Nothing defeated yet -> no cap earned, nothing highlights.
-  const progress = await prisma.levelCapProgress.findMany({ where: { runId } });
-  const defeatedIds = new Set(progress.filter((p) => p.defeated).map((p) => p.levelCapId));
+  const defeatedIds = await getDefeatedCapIds(runId);
   const lastDefeatedCap = applyCapRule(getLevelCaps(gameId), settings)
     .filter((c) => c.max_level !== null && defeatedIds.has(c.id))
     .at(-1);
@@ -187,12 +155,7 @@ export default async function LinksPage({
     };
   }
 
-  const encounterMonDeps = {
-    pokemonById: (id: number) => getPokemonByIdForGame(game, id),
-    evolvesTo: (id: number) => getEvolutionById(id, evoOptions)?.evolvesTo ?? [],
-    inDex: (id: number) => isInDex(game, id),
-    lang,
-  };
+  const encounterMonDeps = encounterMonDepsFor(game, evoOptions, lang);
 
   // One card per fusion GROUP, not per route (see src/lib/fusionGroups.ts):
   // once a fusion joins two routes, a per-route card pairs one player's fusion
@@ -344,53 +307,33 @@ export default async function LinksPage({
   const heading = translations[lang].nav.links;
 
   return (
-    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
-    <div>
-      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
-      <PageHeader
-        title={heading}
-        description={
-          views.length > 0
-            ? translations[lang].links.summary(
-                views.filter((v) => v.status !== LinkStatus.DEAD && v.teamPosition !== null).length,
-                views.filter((v) => v.status !== LinkStatus.DEAD && v.teamPosition === null).length,
-                views.filter((v) => v.status === LinkStatus.DEAD).length,
-              )
-            : undefined
-        }
-      />
-      <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-        <PlayerNamesProvider names={settings.playerNames} lang={lang}>
-          <PokemonDetailProvider
-            pokemonList={pokemonList}
-            forms={getPokemonFormsForGame(game)}
-            evolutions={getEvolutions(evoOptions)}
-            moveData={{
-              movesets: getMovesetForGame(game),
-              moves: getMovesForGame(game, lang),
-            }}
-            moveTypeHistory={getMoveTypeHistory()}
-            effectiveness={getEffectivenessForGame(game)}
-            generation={getDataGenerationForGame(game)}
-            dexLimit={game.dexLimit}
-            lang={lang}
-          >
-            <LinksView
-              runKey={runKey}
-              mode={mode}
-              players={players}
-              lang={lang}
-              soulLinks={views}
-              freeTeam={settings.freeTeam}
-              pokemonList={pokemonList}
-              fusionEnabled={Boolean(game.fusion)}
-              fusableEncounters={fusableEncounters}
-              customSpritesOnly={settings.customSpritesOnly}
-            />
-          </PokemonDetailProvider>
-        </PlayerNamesProvider>
-      </SpriteSetProvider>
-    </div>
-    </BlindflugProvider>
+    <RunProviders run={resolvedRun} game={game} lang={lang} pokemonList={pokemonList} forms={formEntries}>
+      <div>
+        <PageHeader
+          title={heading}
+          description={
+            views.length > 0
+              ? translations[lang].links.summary(
+                  views.filter((v) => v.status !== LinkStatus.DEAD && v.teamPosition !== null).length,
+                  views.filter((v) => v.status !== LinkStatus.DEAD && v.teamPosition === null).length,
+                  views.filter((v) => v.status === LinkStatus.DEAD).length,
+                )
+              : undefined
+          }
+        />
+        <LinksView
+          runKey={runKey}
+          mode={mode}
+          players={players}
+          lang={lang}
+          soulLinks={views}
+          freeTeam={settings.freeTeam}
+          pokemonList={pokemonList}
+          fusionEnabled={Boolean(game.fusion)}
+          fusableEncounters={fusableEncounters}
+          customSpritesOnly={settings.customSpritesOnly}
+        />
+      </div>
+    </RunProviders>
   );
 }

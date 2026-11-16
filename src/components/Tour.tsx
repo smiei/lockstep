@@ -1,5 +1,6 @@
 "use client";
 
+import { useMounted } from "@/lib/useMounted";
 import { useEffect, useId, useRef, useSyncExternalStore } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
@@ -10,7 +11,6 @@ import { usePersistentState } from "@/lib/usePersistentState";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
-const subscribeNever = () => () => {};
 const GAP = 12;
 const PAD = 6;
 
@@ -40,7 +40,7 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
   const [seen, setSeen] = usePersistentState<TourKind[]>(TOUR_SEEN_KEY, []);
   // What this device has seen is only known in the browser; until then no
   // offer, or it would flash on every page load.
-  const mounted = useSyncExternalStore(subscribeNever, () => true, () => false);
+  const mounted = useMounted();
   const holeRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);

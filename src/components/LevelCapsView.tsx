@@ -1,5 +1,6 @@
 "use client";
 
+import { RegionHeading } from "@/components/RegionHeading";
 import { useId, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { LevelCap } from "@/lib/data";
@@ -21,15 +22,6 @@ const REGION_LABELS = { main: "Johto", kanto: "Kanto" } as const;
 
 // A divider between the regions of a game that has two (HeartGold/SoulSilver),
 // the same as on the Encounter tab.
-function RegionHeading({ label }: { label: string }) {
-  return (
-    <h2 className="mb-2 mt-6 flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-wider text-ink-muted first:mt-0">
-      <span>{label}</span>
-      <span aria-hidden="true" className="h-px flex-1 bg-line-strong" />
-    </h2>
-  );
-}
-
 type LevelCapWithProgress = LevelCap & { defeated: boolean };
 
 export function LevelCapsView({
@@ -180,9 +172,9 @@ export function LevelCapsView({
     return (
       <div>
         {next}
-        <RegionHeading label={REGION_LABELS.main} />
+        <RegionHeading className="mb-2 mt-6" label={REGION_LABELS.main} />
         {renderCard(firstRegion)}
-        <RegionHeading label={REGION_LABELS.kanto} />
+        <RegionHeading className="mb-2 mt-6" label={REGION_LABELS.kanto} />
         {renderCard(kanto)}
       </div>
     );

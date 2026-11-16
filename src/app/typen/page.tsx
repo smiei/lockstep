@@ -1,45 +1,40 @@
 import {
-  getEvolutionById,
-  getEvolutions,
   getGameOrDefault,
   getLevelCaps,
-  getMoveTypeHistory,
 } from "@/lib/data";
 import {
   getCatchRatesForGame,
   getEffectivenessForGame,
-  getPokemonByIdForGame,
   getPokemonListForGame,
   getPokemonFormsForGame,
   getMovesForGame,
   getAttackTypesForGame,
-  getDataGenerationForGame,
-  getFusionSpriteConfigForGame,
-  isInDex,
   getMovesetForGame,
   getLearnsetForGame,
 } from "@/lib/gameData";
 import { explosiveMove } from "@/lib/learnset";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
-import { boundRouteMap, clauseView } from "@/lib/speciesClause";
+import { clauseView } from "@/lib/speciesClause";
+import { evolutionOptions } from "@/lib/runSettings";
+import {
+  donorsByHost,
+  encounterMonDepsFor,
+  getBoundRoutes,
+  getDefeatedCapIds,
+  movepoolResolver,
+  teamsOf,
+} from "@/lib/runPage";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
 import { routeName } from "@/lib/i18n/localize";
-import { movepoolId } from "@/lib/forms";
-import { resolveEncounterMon } from "@/lib/encounterMon";
-import { formedLinks, groupTeamPositions, isFoldedDonor } from "@/lib/fusionGroups";
-import { EncounterStatus, LinkStatus, Player, RunMode } from "@/generated/prisma/client";
-import type { TeamMember } from "@/components/TeamWeaknessesView";
-import { CanonicalRun } from "@/components/CanonicalRun";
+import { failedRouteIdsOf, formedLinks, groupTeamPositions } from "@/lib/fusionGroups";
+import { LinkStatus } from "@/generated/prisma/client";
+import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
-import { BlindflugProvider } from "@/components/BlindflugProvider";
 import type { OpenSlot } from "@/components/CatchRateView";
 import { AnalyzeView } from "@/components/AnalyzeView";
-import { SpriteSetProvider } from "@/components/SpriteSetProvider";
-import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
-import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
 
 // Run-scoped: the combined Kampf & Fang tab uses the run's game (type chart,
 // dex, sprites, catch mechanics, level-up movesets) and its current team for
@@ -56,7 +51,7 @@ export default async function AnalyzePage({
   const { run } = await searchParams;
   const resolvedRun = await resolveRunId(run);
   if (!resolvedRun) return <RunLanding />;
-  const { runId, runKey, version, mode, players, gameId, settings } = resolvedRun;
+  const { runId, runKey, mode, players, gameId, settings } = resolvedRun;
 
   const lang = await getLang();
   const game = getGameOrDefault(gameId);
@@ -70,12 +65,7 @@ export default async function AnalyzePage({
   const pickableList = [...pokemonList, ...formEntries];
   const moveset = getMovesetForGame(game);
   const moves = getMovesForGame(game, lang);
-  const evoOptions = {
-    gameId,
-    impossible: settings.evolutionOverridesImpossible,
-    easier: settings.evolutionOverridesEasier,
-    timeBased: settings.evolutionOverridesTimeBased,
-  };
+  const evoOptions = evolutionOptions(gameId, settings);
 
   const catchRates = Object.fromEntries(
     getCatchRatesForGame(game).map((entry) => [entry.id, entry.catch_rate]),
@@ -85,14 +75,7 @@ export default async function AnalyzePage({
 
   // Gym badges the run holds (Gen 8/9's catch formula reads them): the
   // defeated level caps that award one, as on the Overview's badge row.
-  const defeatedCapIds = new Set(
-    (
-      await prisma.levelCapProgress.findMany({
-        where: { runId, defeated: true },
-        select: { levelCapId: true },
-      })
-    ).map((row) => row.levelCapId),
-  );
+  const defeatedCapIds = await getDefeatedCapIds(runId);
   const badgesEarned = getLevelCaps(gameId).filter(
     (cap) => cap.badge !== null && defeatedCapIds.has(cap.id),
   ).length;
@@ -103,9 +86,7 @@ export default async function AnalyzePage({
   const clause = clauseView(encounters, {
     rules: settings,
     players,
-    boundRouteOf: boundRouteMap(
-      await prisma.soulLink.findMany({ where: { runId }, select: { id: true, routeId: true, boundToId: true } }),
-    ),
+    boundRouteOf: await getBoundRoutes(runId),
   });
   const lockedFamilyIds = [...clause.lockedForAll()];
   const lockedFamilyIdsByPlayer = Object.fromEntries(
@@ -138,14 +119,7 @@ export default async function AnalyzePage({
   // A link only forms when EVERY player catches: a route with a Fled/Killed
   // encounter never produced a link, so its surviving catch is boxed and must
   // not show up as a team member here either (the Team tab hides it too).
-  const failedRouteIds =
-    mode === RunMode.SOULLINK
-      ? new Set(
-          encounters
-            .filter((e) => e.status === EncounterStatus.FLED || e.status === EncounterStatus.KILLED)
-            .map((e) => e.routeId),
-        )
-      : new Set<number>();
+  const failedRouteIds = failedRouteIdsOf(mode, encounters);
   const aliveLinks = formedLinks(
     await prisma.soulLink.findMany({
       where: { runId, status: LinkStatus.ALIVE },
@@ -165,90 +139,51 @@ export default async function AnalyzePage({
         (groupPositions.get(a.id) ?? 0) - (groupPositions.get(b.id) ?? 0) ||
         (a.teamPosition ?? Number.MAX_SAFE_INTEGER) - (b.teamPosition ?? Number.MAX_SAFE_INTEGER),
     );
-  const visibleEncounterIds = new Set(aliveLinks.flatMap((link) => link.encounters.map((e) => e.id)));
-  const donorByHostId = new Map(
-    encounters.filter((e) => e.fusedIntoId !== null).map((e) => [e.fusedIntoId as number, e]),
-  );
-  const encounterMonDeps = {
-    pokemonById: (id: number) => getPokemonByIdForGame(game, id),
-    evolvesTo: (id: number) => getEvolutionById(id, evoOptions)?.evolvesTo ?? [],
-    inDex: (id: number) => isInDex(game, id),
-    lang,
-  };
-  const movepoolOf = (pokemonId: number) => {
-    const pokemon = getPokemonByIdForGame(game, pokemonId);
-    return pokemon ? movepoolId(pokemon, (id) => learnsetTable[String(id)] !== undefined) : pokemonId;
-  };
-  const byPlayer = new Map<Player, TeamMember[]>(players.map((player) => [player, []]));
-  for (const link of teamLinks) {
-    for (const e of link.encounters) {
-      if (isFoldedDonor(e, visibleEncounterIds)) continue;
-      const mon = resolveEncounterMon(
-        e.currentPokemonId,
-        donorByHostId.get(e.id)?.currentPokemonId,
-        encounterMonDeps,
-      );
-      if (!mon) continue;
-      byPlayer.get(e.player)?.push({
-        encounterId: e.id,
-        pokemonId: e.currentPokemonId,
-        speciesId: movepoolOf(e.currentPokemonId),
-        name: mon.name,
-        types: mon.types,
-        bodyId: mon.bodyId,
-        bodySpeciesId: mon.bodyId !== null ? movepoolOf(mon.bodyId) : null,
-      });
-    }
-  }
-  const teams = players.map((player) => ({ player, members: byPlayer.get(player) ?? [] }));
+  const teams = teamsOf(teamLinks, players, {
+    visibleEncounterIds: new Set(aliveLinks.flatMap((link) => link.encounters.map((e) => e.id))),
+    donorByHostId: donorsByHost(encounters),
+    deps: encounterMonDepsFor(game, evoOptions, lang),
+    movepoolOf: movepoolResolver(game, learnsetTable),
+  });
 
   const effectiveness = getEffectivenessForGame(game);
   const attackTypes = getAttackTypesForGame(game);
 
   return (
-    <BlindflugProvider on={settings.blindflug} hideTypes={settings.blindflugTypes}>
-    <SpriteSetProvider spriteSet={game.spriteSet} fusion={getFusionSpriteConfigForGame(game)}>
-      <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
-      <PlayerNamesProvider names={settings.playerNames} lang={lang}>
-        <PokemonDetailProvider
-          pokemonList={pokemonList}
-          forms={formEntries}
-          evolutions={getEvolutions(evoOptions)}
-          moveData={{ movesets: moveset, moves }}
-          moveTypeHistory={getMoveTypeHistory()}
-          effectiveness={effectiveness}
-          generation={getDataGenerationForGame(game)}
-          dexLimit={game.dexLimit}
-          lang={lang}
-        >
-          <AnalyzeView
-            runKey={runKey}
-            mode={mode}
-            players={players}
-            pokemonList={pickableList}
-            // The real battle-mechanics generation (ball list, catch formula),
-            // deliberately NOT dataGeneration - see CatchRateView's use of it.
-            generation={game.generation}
-            // A hack's own capture engine stands in for the version group,
-            // which only the catch calculator reads here.
-            versionGroup={game.catchEngine ?? game.versionGroup}
-            missingBalls={game.missingBalls}
-            badgesEarned={badgesEarned}
-            effectiveness={effectiveness}
-            attackTypes={attackTypes}
-            catchRates={catchRates}
-            lockedFamilyIds={lockedFamilyIds}
-            lockedFamilyIdsByPlayer={lockedFamilyIdsByPlayer}
-            openSlots={openSlots}
-            learnset={learnsetTable}
-            teams={teams}
-            explosiveMap={explosiveMap}
-            settings={settings}
-            fusionEnabled={Boolean(game.fusion)}
-          />
-        </PokemonDetailProvider>
-      </PlayerNamesProvider>
-    </SpriteSetProvider>
-    </BlindflugProvider>
+    <RunProviders
+      run={resolvedRun}
+      game={game}
+      lang={lang}
+      pokemonList={pokemonList}
+      forms={formEntries}
+      moveData={{ movesets: moveset, moves }}
+      effectiveness={effectiveness}
+    >
+      <AnalyzeView
+        runKey={runKey}
+        mode={mode}
+        players={players}
+        pokemonList={pickableList}
+        // The real battle-mechanics generation (ball list, catch formula),
+        // deliberately NOT dataGeneration - see CatchRateView's use of it.
+        generation={game.generation}
+        // A hack's own capture engine stands in for the version group,
+        // which only the catch calculator reads here.
+        versionGroup={game.catchEngine ?? game.versionGroup}
+        missingBalls={game.missingBalls}
+        badgesEarned={badgesEarned}
+        effectiveness={effectiveness}
+        attackTypes={attackTypes}
+        catchRates={catchRates}
+        lockedFamilyIds={lockedFamilyIds}
+        lockedFamilyIdsByPlayer={lockedFamilyIdsByPlayer}
+        openSlots={openSlots}
+        learnset={learnsetTable}
+        teams={teams}
+        explosiveMap={explosiveMap}
+        settings={settings}
+        fusionEnabled={Boolean(game.fusion)}
+      />
+    </RunProviders>
   );
 }

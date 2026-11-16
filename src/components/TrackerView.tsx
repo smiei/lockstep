@@ -1,5 +1,6 @@
 "use client";
 
+import { RegionHeading } from "@/components/RegionHeading";
 import { useState, useTransition } from "react";
 import { usePersistentState } from "@/lib/usePersistentState";
 import type { Route, Pokemon } from "@/lib/data";
@@ -33,15 +34,6 @@ import { applyRegionRule, hasKanto } from "@/lib/regions";
 const REGION_LABELS = { main: "Johto", kanto: "Kanto" } as const;
 
 // A divider between the regions of a game that has two (HeartGold/SoulSilver).
-function RegionHeading({ label }: { label: string }) {
-  return (
-    <h2 className="mt-4 flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-wider text-ink-muted first:mt-0">
-      <span>{label}</span>
-      <span aria-hidden="true" className="h-px flex-1 bg-line-strong" />
-    </h2>
-  );
-}
-
 // Tailwind only sees whole class names, so the column count per player count
 // is spelled out rather than built from a number. Three players on two
 // columns would leave an empty, line-coloured cell (the columns are divided
@@ -378,9 +370,9 @@ export function TrackerView({
         <div className="flex flex-col gap-2">
           {sectioned ? (
             <>
-              {firstRegionRoutes.length > 0 && <RegionHeading label={REGION_LABELS.main} />}
+              {firstRegionRoutes.length > 0 && <RegionHeading className="mt-4" label={REGION_LABELS.main} />}
               {firstRegionRoutes.map(renderRoute)}
-              {kantoRoutes.length > 0 && <RegionHeading label={REGION_LABELS.kanto} />}
+              {kantoRoutes.length > 0 && <RegionHeading className="mt-4" label={REGION_LABELS.kanto} />}
               {kantoRoutes.map(renderRoute)}
             </>
           ) : (
