@@ -118,10 +118,10 @@ export function HeaderTitle() {
       )}
       {/* Deliberately not an <h1>: the app name is chrome, repeated on every
           page. The page title carries the <h1> (see ui/Page.tsx PageHeader). */}
-      <p className="truncate text-xl font-bold tracking-tight text-ink lg:text-2xl">
-        <span className="sm:hidden">{t.titleShort}</span>
-        <span className="hidden sm:inline">{t.titleFull}</span>
-      </p>
+      {/* From sm only: on a phone the logo alone stands for the app, which
+          is what lets the buttons share this row instead of taking a second
+          one (layout.tsx). */}
+      <p className="hidden truncate text-xl font-bold tracking-tight text-ink sm:block lg:text-2xl">{t.titleFull}</p>
     </div>
   );
 }

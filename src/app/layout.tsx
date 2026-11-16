@@ -188,7 +188,7 @@ export default async function RootLayout({
                       run switcher and the gear are occasional, the tabs are
                       constant. flex-wrap: on narrow screens the controls wrap
                       to a second line instead of widening the page. */}
-                  <header className="flex flex-wrap items-center gap-x-3 gap-y-2 bg-shell px-4 py-3 sm:px-6 lg:contents">
+                  <header className="flex flex-wrap items-center gap-x-2 gap-y-2 bg-shell px-4 py-3 sm:gap-x-3 sm:px-6 lg:contents">
                     <div className="mr-auto min-w-0 lg:order-1 lg:mr-0 lg:px-5 lg:pt-6 lg:pb-5">
                       <HeaderTitle />
                     </div>
@@ -215,7 +215,12 @@ export default async function RootLayout({
                       <Suspense fallback={<div className="h-10 w-10 rounded-md border border-line" />}>
                         <HeaderMenu runs={runs} />
                       </Suspense>
-                      <ThemeToggle />
+                      {/* Not on a phone: without it and the wordmark the
+                          buttons fit beside the logo, which saves a row
+                          there. Settings carries the theme on every size. */}
+                      <div className="hidden sm:contents">
+                        <ThemeToggle />
+                      </div>
                       {/* Suspense because it reads ?run= via useSearchParams,
                           which would otherwise opt the statically prerendered
                           "/" out of static rendering - the same reason

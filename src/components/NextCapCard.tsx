@@ -47,7 +47,9 @@ export function NextCapCard({
         title={label}
         className="flex h-10 items-center gap-1.5 rounded-md border border-line px-2.5 text-ink transition-colors hover:bg-hover"
       >
-        <span className="text-xs text-ink-muted">{t.capShort}</span>
+        {/* The word goes on the narrowest phones (the link keeps its name), so
+            the top bar stays one row at 360px. */}
+        <span className="text-xs text-ink-muted max-[379px]:hidden">{t.capShort}</span>
         <span className="font-mono leading-none tabular-nums">
           <span className="text-lg font-semibold">{summary.next.level}</span>
           {team !== null && (
