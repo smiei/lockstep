@@ -36,16 +36,6 @@ export function TrashIcon({ className }: { className?: string }) {
   );
 }
 
-// Copy the run's link: two chain links.
-export function LinkIcon({ className }: { className?: string }) {
-  return (
-    <LineIcon className={className}>
-      <path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2" />
-      <path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2" />
-    </LineIcon>
-  );
-}
-
 // A dropdown trigger's chevron - replaces the "▾" text glyph, which every
 // platform font drew at a different size and weight.
 export function ChevronDownIcon({ className }: { className?: string }) {

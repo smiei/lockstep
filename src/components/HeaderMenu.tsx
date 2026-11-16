@@ -4,13 +4,10 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useDropdown } from "@/lib/useDropdown";
 import { pickActiveRun } from "@/lib/runKey";
-import { useDialog } from "@/components/DialogProvider";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { LANGS, translations } from "@/lib/i18n/dictionary";
 import { NATIVE_NAMES } from "@/components/LanguagePicker";
 import type { RunSummary } from "@/lib/types";
-import { LinkIcon } from "@/components/ActionIcons";
-import { useToast } from "@/components/ui/ToastProvider";
 
 function GearIcon({ className }: { className?: string }) {
   return (
@@ -29,31 +26,16 @@ const squareClass =
   "flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-muted transition-colors hover:bg-hover hover:text-ink disabled:cursor-not-allowed disabled:opacity-50";
 
 // The header's utility buttons next to the theme switch: the gear (a link to
-// the Settings page, which took over what used to be a dropdown menu here),
-// "copy the run's link" and the language. Everything else lives on
+// the Settings page, which took over what used to be a dropdown menu here)
+// and the language. Everything else lives on
 // /settings (src/components/SettingsView.tsx).
 export function HeaderMenu({ runs }: { runs: RunSummary[] }) {
   const searchParams = useSearchParams();
   const { lang, setLang } = useLanguage();
-  const { alert } = useDialog();
-  const toast = useToast();
   const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
   const t = translations[lang];
 
   const activeRun = pickActiveRun(runs, searchParams.get("run"));
-
-  // An installed app has no address bar to copy the link from, and on a
-  // public instance the link is the only way into a run.
-  async function handleCopyLink() {
-    if (!activeRun) return;
-    const url = `${window.location.origin}/tracker?run=${activeRun.accessKey}`;
-    try {
-      await navigator.clipboard.writeText(url);
-      toast.success(t.menu.runLinkCopied);
-    } catch {
-      void alert({ message: t.menu.runLinkManual(url) });
-    }
-  }
 
   return (
     <>
@@ -65,16 +47,6 @@ export function HeaderMenu({ runs }: { runs: RunSummary[] }) {
       >
         <GearIcon className="h-5 w-5" />
       </Link>
-      <button
-        type="button"
-        disabled={!activeRun}
-        onClick={handleCopyLink}
-        aria-label={t.menu.copyRunLink}
-        title={t.menu.copyRunLink}
-        className={squareClass}
-      >
-        <LinkIcon className="h-5 w-5" />
-      </button>
       <div ref={containerRef} className="relative">
         <button
           type="button"
