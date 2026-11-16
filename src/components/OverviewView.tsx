@@ -83,7 +83,7 @@ function InfoHeading({
   const infoId = useId();
   return (
     <>
-      <div className="mb-2 flex items-center gap-1.5">
+      <div className="mb-2 flex items-center">
         <h3 className="text-sm font-semibold text-ink">{title}</h3>
         <button
           type="button"
@@ -92,11 +92,19 @@ function InfoHeading({
           aria-controls={infoId}
           aria-label={toggleLabel}
           title={info}
-          className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border font-serif text-xs italic transition-colors ${
-            open ? "border-ink-muted bg-hover text-ink" : "border-line-strong text-ink-muted hover:bg-hover hover:text-ink"
-          }`}
+          // The circle stays 24px; the button around it is the 40px target.
+          className="group -my-2 inline-flex h-10 w-10 shrink-0 items-center justify-center"
         >
-          <span aria-hidden="true">i</span>
+          <span
+            aria-hidden="true"
+            className={`inline-flex h-6 w-6 items-center justify-center rounded-full border font-serif text-xs italic transition-colors ${
+              open
+                ? "border-ink-muted bg-hover text-ink"
+                : "border-line-strong text-ink-muted group-hover:bg-hover group-hover:text-ink"
+            }`}
+          >
+            i
+          </span>
         </button>
       </div>
       <p id={infoId} hidden={!open} className="mb-2 text-xs text-ink-muted">

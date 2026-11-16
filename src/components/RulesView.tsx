@@ -201,7 +201,7 @@ function SwitchTrack({ on }: { on: boolean }) {
       }`}
     >
       <span
-        className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all ${
+        className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-[left] motion-reduce:transition-none ${
           on ? "left-[18px]" : "left-0.5"
         }`}
       />

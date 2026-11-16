@@ -338,6 +338,9 @@ const de = {
     FLED: "Geflohen",
   },
   tracker: {
+    searchRoutes: "Route suchen",
+    noRouteMatch: "Keine Route passt zur Suche.",
+    clearSearch: "Suche leeren",
     custom: {
       manage: "Eigene Routen",
       title: "Eigene Routen",
@@ -536,11 +539,13 @@ const de = {
     },
   },
   errorPage: {
+    loading: "Wird geladen",
     title: "Da ist etwas schiefgelaufen",
     hint: "Die Seite konnte nicht geladen werden. Ein neuer Versuch hilft meistens.",
     retry: "Erneut versuchen",
   },
   levelcaps: {
+    nextFight: "Nächster Kampf",
     postgameShow: (n: number) => `Post-Game anzeigen (${n} Kämpfe)`,
     postgameHide: "Post-Game ausblenden",
     heading: "Reise",
@@ -1371,6 +1376,9 @@ const en: Dictionary = {
     FLED: "Fled",
   },
   tracker: {
+    searchRoutes: "Search routes",
+    noRouteMatch: "No route matches the search.",
+    clearSearch: "Clear search",
     custom: {
       manage: "Custom routes",
       title: "Custom routes",
@@ -1568,11 +1576,13 @@ const en: Dictionary = {
     },
   },
   errorPage: {
+    loading: "Loading",
     title: "Something went wrong",
     hint: "This page could not be loaded. Trying again usually helps.",
     retry: "Try again",
   },
   levelcaps: {
+    nextFight: "Next fight",
     postgameShow: (n: number) => `Show post-game (${n} fights)`,
     postgameHide: "Hide post-game",
     heading: "Journey",
@@ -2394,6 +2404,9 @@ const fr: Dictionary = {
     FLED: "Enfui",
   },
   tracker: {
+    searchRoutes: "Chercher une route",
+    noRouteMatch: "Aucune route ne correspond à la recherche.",
+    clearSearch: "Effacer la recherche",
     custom: {
       manage: "Routes personnalisées",
       title: "Routes personnalisées",
@@ -2595,11 +2608,13 @@ const fr: Dictionary = {
     },
   },
   errorPage: {
+    loading: "Chargement",
     title: "Une erreur est survenue",
     hint: "Cette page n'a pas pu être chargée. Réessayer suffit généralement.",
     retry: "Réessayer",
   },
   levelcaps: {
+    nextFight: "Prochain combat",
     postgameShow: (n: number) => `Afficher le contenu post-ligue (${n} combats)`,
     postgameHide: "Masquer le contenu post-ligue",
     heading: "Aventure",
@@ -3422,6 +3437,9 @@ const es: Dictionary = {
     FLED: "Huido",
   },
   tracker: {
+    searchRoutes: "Buscar ruta",
+    noRouteMatch: "Ninguna ruta coincide con la búsqueda.",
+    clearSearch: "Borrar búsqueda",
     custom: {
       manage: "Rutas propias",
       title: "Rutas propias",
@@ -3623,11 +3641,13 @@ const es: Dictionary = {
     },
   },
   errorPage: {
+    loading: "Cargando",
     title: "Algo ha salido mal",
     hint: "No se ha podido cargar la página. Volver a intentarlo suele bastar.",
     retry: "Reintentar",
   },
   levelcaps: {
+    nextFight: "Próximo combate",
     postgameShow: (n: number) => `Mostrar posjuego (${n} combates)`,
     postgameHide: "Ocultar posjuego",
     heading: "Aventura",
@@ -4450,6 +4470,9 @@ const it: Dictionary = {
     FLED: "Fuggito",
   },
   tracker: {
+    searchRoutes: "Cerca percorso",
+    noRouteMatch: "Nessun percorso corrisponde alla ricerca.",
+    clearSearch: "Cancella ricerca",
     custom: {
       manage: "Percorsi personali",
       title: "Percorsi personali",
@@ -4651,11 +4674,13 @@ const it: Dictionary = {
     },
   },
   errorPage: {
+    loading: "Caricamento",
     title: "Qualcosa è andato storto",
     hint: "Impossibile caricare la pagina. Riprovare di solito basta.",
     retry: "Riprova",
   },
   levelcaps: {
+    nextFight: "Prossima lotta",
     postgameShow: (n: number) => `Mostra post-gioco (${n} lotte)`,
     postgameHide: "Nascondi post-gioco",
     heading: "Viaggio",

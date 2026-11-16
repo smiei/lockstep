@@ -146,10 +146,12 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
         : null;
     if (!offer) return null;
     return (
-      <Card role="region" aria-label={t.offer[offer].title} className="fixed bottom-4 right-4 z-40 w-80 max-w-[calc(100vw-2rem)] border-line-strong shadow-lg">
-        <p className="text-sm font-semibold text-ink">{t.offer[offer].title}</p>
-        <p className="mt-1 text-sm text-ink-muted">{t.offer[offer].text}</p>
-        <div className="mt-3 flex flex-wrap justify-end gap-2">
+      <Card role="region" aria-label={t.offer[offer].title} padding="none" className="fixed inset-x-2 bottom-2 z-40 flex items-center gap-2 border-line-strong p-2 pl-3 shadow-lg sm:inset-x-auto sm:bottom-4 sm:right-4 sm:block sm:w-80 sm:p-4">
+        {/* On a phone: one flat bar, title only, so the fields under it stay
+            in reach. From sm: the card with its sentence. */}
+        <p className="min-w-0 flex-1 text-sm font-semibold text-ink">{t.offer[offer].title}</p>
+        <p className="mt-1 hidden text-sm text-ink-muted sm:block">{t.offer[offer].text}</p>
+        <div className="flex shrink-0 justify-end gap-2 sm:mt-3">
           <Button size="sm" variant="ghost" onClick={() => setSeen((prev) => [...prev, offer])}>
             {t.decline}
           </Button>

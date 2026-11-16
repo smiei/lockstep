@@ -14,21 +14,23 @@ import { Spinner } from "./Spinner";
 type Variant = "primary" | "secondary" | "success" | "danger" | "danger-solid" | "ghost";
 type Size = "sm" | "md";
 
+// Each variant has a pressed tone beside its hover: a phone has no hover, and
+// without it a tap showed nothing until the spinner arrived.
 const VARIANTS: Record<Variant, string> = {
-  primary: "bg-accent text-accent-ink hover:opacity-90",
+  primary: "bg-accent text-accent-ink hover:opacity-90 active:opacity-80",
   // A tray-white control with a sage rule - it sits on the ground and on a
   // tray alike. Inside the green shell the same tokens give a green-on-green
   // control (globals.css `.shell`).
-  secondary: "border border-line-strong bg-panel text-ink hover:bg-hover",
+  secondary: "border border-line-strong bg-panel text-ink hover:bg-hover active:bg-sunken",
   // Symmetric with `danger`: an outline in the semantic colour, filling in on
   // hover. "Add to team", "evolve" and the quick-catch confirm all had this
   // exact string inline.
-  success: "border border-success-line bg-panel text-success hover:bg-success-bg",
-  danger: "border border-danger-line bg-panel text-danger hover:bg-danger-bg",
+  success: "border border-success-line bg-panel text-success hover:bg-success-bg active:bg-success-bg",
+  danger: "border border-danger-line bg-panel text-danger hover:bg-danger-bg active:bg-danger-bg",
   // The destructive counterpart of `primary`: for the one button that carries
   // out the deletion, not for every button that could lead to one.
-  "danger-solid": "bg-danger-solid text-danger-solid-ink hover:opacity-90",
-  ghost: "text-ink-muted hover:bg-hover hover:text-ink",
+  "danger-solid": "bg-danger-solid text-danger-solid-ink hover:opacity-90 active:opacity-80",
+  ghost: "text-ink-muted hover:bg-hover hover:text-ink active:bg-sunken",
 };
 
 const SIZES: Record<Size, string> = {
