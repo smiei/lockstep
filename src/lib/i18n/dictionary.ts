@@ -235,6 +235,10 @@ const de = {
   },
   // The Settings page (src/components/SettingsView.tsx).
   settings: {
+    reportBug: "Fehler melden",
+    requestFeature: "Feature wünschen",
+    feedbackTitle: "Rückmeldung",
+    feedbackHint: "Öffnet ein Formular auf GitHub. Dafür brauchst du ein GitHub-Konto.",
     title: "Einstellungen",
     description: "Der geöffnete Run, dieses Gerät und deine Backups.",
     runSection: (name: string) => `Run „${name}“`,
@@ -1221,6 +1225,10 @@ const en: Dictionary = {
     playersLabel: "Players",
   },
   settings: {
+    reportBug: "Report a bug",
+    requestFeature: "Suggest a feature",
+    feedbackTitle: "Feedback",
+    feedbackHint: "Opens a form on GitHub. You need a GitHub account for it.",
     title: "Settings",
     description: "The open run, this device and your backups.",
     runSection: (name: string) => `Run “${name}”`,
@@ -2195,6 +2203,10 @@ const fr: Dictionary = {
     playersLabel: "Joueurs",
   },
   settings: {
+    reportBug: "Signaler un bug",
+    requestFeature: "Proposer une fonction",
+    feedbackTitle: "Retours",
+    feedbackHint: "Ouvre un formulaire sur GitHub. Il te faut un compte GitHub.",
     title: "Paramètres",
     description: "La run ouverte, cet appareil et tes sauvegardes.",
     runSection: (name: string) => `Run « ${name} »`,
@@ -3174,6 +3186,10 @@ const es: Dictionary = {
     playersLabel: "Jugadores",
   },
   settings: {
+    reportBug: "Informar de un error",
+    requestFeature: "Proponer una función",
+    feedbackTitle: "Comentarios",
+    feedbackHint: "Abre un formulario en GitHub. Necesitas una cuenta de GitHub.",
     title: "Ajustes",
     description: "La run abierta, este dispositivo y tus copias de seguridad.",
     runSection: (name: string) => `Run «${name}»`,
@@ -4153,6 +4169,10 @@ const it: Dictionary = {
     playersLabel: "Giocatori",
   },
   settings: {
+    reportBug: "Segnala un bug",
+    requestFeature: "Proponi una funzione",
+    feedbackTitle: "Feedback",
+    feedbackHint: "Apre un modulo su GitHub. Serve un account GitHub.",
     title: "Impostazioni",
     description: "La run aperta, questo dispositivo e i tuoi backup.",
     runSection: (name: string) => `Run «${name}»`,

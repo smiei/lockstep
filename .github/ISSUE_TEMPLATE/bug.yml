@@ -1,0 +1,45 @@
+name: Report a bug
+description: Something in the app does not work, looks broken or behaves differently than it says.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected and what happened instead. A screenshot helps.
+      placeholder: 'I marked a link as dead on the Team tab, but it still shows in the team drawer.'
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the Team tab of a SoulLink run
+        2. ...
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Settings (the gear) → About. The link in the app fills this in.
+  - type: dropdown
+    id: install
+    attributes:
+      label: How do you run Lockstep?
+      options:
+        - Docker
+        - Windows app
+        - Pinokio
+        - npm (npm run setup)
+        - Something else
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: 'Pixel 8, Chrome; installed app'
+  - type: input
+    id: game
+    attributes:
+      label: Game of the run
+      description: If it only happens in one game, e.g. "Infinite Fusion (Classic)".
