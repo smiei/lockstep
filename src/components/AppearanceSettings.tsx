@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
 import { UI_SCALE_DEFAULT, UI_SCALE_STEPS } from "@/lib/uiScale";
@@ -7,48 +8,27 @@ import { useUiScale } from "@/lib/useUiScale";
 import { SHELL_COLORS, SHELL_COLOR_DEFAULT, SHELL_HEX } from "@/lib/shellColor";
 import { useShellColor } from "@/lib/useShellColor";
 import { Button } from "@/components/ui/Button";
-import { Modal } from "@/components/ui/Modal";
 
-// Opened from the header menu: the shell colour and the UI size, both per
-// device. A real slider rather than five buttons because
-// the whole interface resizes live underneath it, which makes dragging it the
-// obvious way to find the size you want. (`type="range"` is fine here - the
+// The Settings page's appearance block: the shell colour and the UI size,
+// both per device. A real slider rather than five buttons because the whole
+// interface resizes live underneath it, which makes dragging it the obvious
+// way to find the size you want. (`type="range"` is fine here - the
 // convention test bans `type="number"`, whose mobile UA validation fights a
 // React-controlled value.)
-export function AppearanceDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function AppearanceSettings() {
   const { lang } = useLanguage();
   const t = translations[lang].appearance;
   const [index, setIndex] = useUiScale();
   const [color, setColor] = useShellColor();
+  const ids = useId();
 
   return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      title={t.title}
-      footer={
-        <div className="flex w-full justify-between gap-2">
-          <Button
-            size="sm"
-            disabled={index === UI_SCALE_DEFAULT && color === SHELL_COLOR_DEFAULT}
-            onClick={() => {
-              setIndex(UI_SCALE_DEFAULT);
-              setColor(SHELL_COLOR_DEFAULT);
-            }}
-          >
-            {t.reset}
-          </Button>
-          <Button size="sm" variant="primary" onClick={onClose}>
-            {t.done}
-          </Button>
-        </div>
-      }
-    >
+    <div>
       {/* The shell colour: rail, top bar and primary buttons. Radio inputs
           under the swatches keep it a real, keyboard-operable choice. */}
       <fieldset className="mb-5">
         <legend className="mb-1.5 block text-xs font-medium text-ink-muted">{t.colorLabel}</legend>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           {SHELL_COLORS.map((option) => (
             <label
               key={option}
@@ -77,21 +57,21 @@ export function AppearanceDialog({ open, onClose }: { open: boolean; onClose: ()
         </div>
       </fieldset>
 
-      <label htmlFor="ui-scale" className="mb-1 block text-xs font-medium text-ink-muted">
+      <label htmlFor={`${ids}-scale`} className="mb-1 block text-xs font-medium text-ink-muted">
         {t.sizeLabel}
       </label>
       <input
-        id="ui-scale"
+        id={`${ids}-scale`}
         type="range"
         min={0}
         max={UI_SCALE_STEPS.length - 1}
         step={1}
         value={index}
         onChange={(event) => setIndex(Number(event.target.value))}
-        list="ui-scale-steps"
+        list={`${ids}-steps`}
         className="h-11 w-full accent-accent"
       />
-      <datalist id="ui-scale-steps">
+      <datalist id={`${ids}-steps`}>
         {UI_SCALE_STEPS.map((_, i) => (
           <option key={i} value={i} />
         ))}
@@ -108,7 +88,18 @@ export function AppearanceDialog({ open, onClose }: { open: boolean; onClose: ()
         <p className="text-sm text-ink">{t.preview}</p>
         <p className="mt-1 text-xs text-ink-muted">{t.previewSmall}</p>
       </div>
-      <p className="mt-3 text-xs text-ink-subtle">{t.hint}</p>
-    </Modal>
+      <div className="mt-3 flex justify-end">
+        <Button
+          size="sm"
+          disabled={index === UI_SCALE_DEFAULT && color === SHELL_COLOR_DEFAULT}
+          onClick={() => {
+            setIndex(UI_SCALE_DEFAULT);
+            setColor(SHELL_COLOR_DEFAULT);
+          }}
+        >
+          {t.reset}
+        </Button>
+      </div>
+    </div>
   );
 }

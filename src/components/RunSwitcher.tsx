@@ -21,8 +21,8 @@ type SwitcherRun = RunSummary & { settingsJson?: string };
 // The run box: the open run's name with its game and players under it, and a
 // list of every run to switch to - plus a compact "+" (the New Run page). It used to
 // be a native <select>, which cut the name off in the rail and could say
-// nothing about the game or who plays. Rename/delete live in the header menu
-// (HeaderMenu) to keep this bar narrow on phones.
+// nothing about the game or who plays. Rename/delete live on the Settings
+// page to keep this bar narrow on phones.
 export function RunSwitcher({ runs, games }: { runs: SwitcherRun[]; games: GameSummary[] }) {
   const router = useRouter();
   const pathname = usePathname();

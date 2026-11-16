@@ -12,7 +12,7 @@ import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { ImportBackupDialog } from "@/components/ImportBackupDialog";
 import { useToast } from "@/components/ui/ToastProvider";
 
-// Importing a backup file, shared by the gear menu and the start page: a
+// Importing a backup file, shared by the Settings page and the start page: a
 // hidden file picker, the parse (a .json or a .zip of them), the naming
 // dialog and the import itself. Render `elements` once and call `pick()`.
 // `openPath` is where a public instance opens the first imported run - it has
