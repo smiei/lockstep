@@ -516,6 +516,9 @@ const de = {
       "⚠ = kritische Schwäche: Der Angriffstyp trifft mindestens die Hälfte des Teams effektiv, ohne dass jemand resistiert.",
   },
   rules: {
+    groups: { catching: "Fangen & Clauses", caps: "Level-Caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run & Spiel" },
+    summaryHeading: "Aktive Regeln",
+    summaryNone: "keine aktiv",
     debugHeading: "Debug",
     heading: "Regeln",
     edit: "Bearbeiten",
@@ -1503,6 +1506,9 @@ const en: Dictionary = {
       "⚠ = critical weakness: this attack type hits at least half the team super-effectively with nobody resisting it.",
   },
   rules: {
+    groups: { catching: "Catching & clauses", caps: "Level caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run & game" },
+    summaryHeading: "Active rules",
+    summaryNone: "none active",
     debugHeading: "Debug",
     heading: "Rules",
     edit: "Edit",
@@ -2485,6 +2491,9 @@ const fr: Dictionary = {
       "⚠ = faiblesse critique : ce type d'attaque touche au moins la moitié de l'équipe de façon super efficace sans que personne n'y résiste.",
   },
   rules: {
+    groups: { catching: "Captures et clauses", caps: "Level caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run et jeu" },
+    summaryHeading: "Règles actives",
+    summaryNone: "aucune active",
     debugHeading: "Débogage",
     heading: "Règles",
     edit: "Modifier",
@@ -3468,6 +3477,9 @@ const es: Dictionary = {
       "⚠ = debilidad crítica: este tipo de ataque golpea de forma supereficaz al menos a la mitad del equipo sin que nadie lo resista.",
   },
   rules: {
+    groups: { catching: "Capturas y cláusulas", caps: "Level caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run y juego" },
+    summaryHeading: "Reglas activas",
+    summaryNone: "ninguna activa",
     debugHeading: "Depuración",
     heading: "Reglas",
     edit: "Editar",
@@ -4451,6 +4463,9 @@ const it: Dictionary = {
       "⚠ = debolezza critica: questo tipo d'attacco colpisce in modo superefficace almeno metà squadra senza che nessuno resista.",
   },
   rules: {
+    groups: { catching: "Catture e clausole", caps: "Level cap", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run e gioco" },
+    summaryHeading: "Regole attive",
+    summaryNone: "nessuna attiva",
     debugHeading: "Debug",
     heading: "Regole",
     edit: "Modifica",

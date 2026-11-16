@@ -66,36 +66,50 @@ const markdownComponents = {
   hr: () => <hr className="my-4 border-line" />,
 };
 
-// Display order. Some toggles are children of another one (CLAUSE_PARENTS):
-// indented under it and greyed out while any parent is off.
-const TOGGLE_ORDER: BooleanSettingKey[] = [
-  "freeTeam",
-  "blindflug",
-  "blindflugPermanent",
-  "blindflugTypes",
-  "speciesClause",
-  // SoulLink only: the per-player variants of the clause.
-  "speciesClausePerPlayer",
-  "speciesClauseLinkedLocksAll",
-  "staticsExemptFromClause",
-  // Infinite Fusion only, and a child of the clause like the line above it.
-  "fusionLocksBothFamilies",
-  "shinyClause",
-  "nicknames",
-  // Followed by the capTeamOffset row (see the list's render below).
-  "capsGymsOnly",
-  "evolutionOverridesImpossible",
-  "evolutionOverridesEasier",
-  "evolutionOverridesTimeBased",
-  // Infinite Fusion only, next to the other randomizer rules.
-  "randomizerFuseEverything",
-  "statics",
-  // HeartGold/SoulSilver only: whether Kanto is part of the run.
-  "includeKanto",
-  // Infinite Fusion only - filtered out below for every other pack, where
-  // there is nothing to fuse.
-  "wildFusionSplit",
-  "customSpritesOnly",
+// The switches by theme, in display order. Some are children of another one
+// (CLAUSE_PARENTS): indented under it and muted while any parent is off.
+type GroupId = "catching" | "caps" | "blindflug" | "randomizer" | "run";
+const GROUPS: [GroupId, BooleanSettingKey[]][] = [
+  [
+    "catching",
+    [
+      "speciesClause",
+      // SoulLink only: the per-player variants of the clause.
+      "speciesClausePerPlayer",
+      "speciesClauseLinkedLocksAll",
+      "staticsExemptFromClause",
+      // Infinite Fusion only, and a child of the clause like the line above it.
+      "fusionLocksBothFamilies",
+      "shinyClause",
+      "nicknames",
+    ],
+  ],
+  // Followed by the capTeamOffset row (see the group's render below).
+  ["caps", ["capsGymsOnly"]],
+  ["blindflug", ["blindflug", "blindflugPermanent", "blindflugTypes"]],
+  [
+    "randomizer",
+    [
+      "evolutionOverridesImpossible",
+      "evolutionOverridesEasier",
+      "evolutionOverridesTimeBased",
+      // Infinite Fusion only, next to the other randomizer rules.
+      "randomizerFuseEverything",
+    ],
+  ],
+  [
+    "run",
+    [
+      "freeTeam",
+      "statics",
+      // HeartGold/SoulSilver only: whether Kanto is part of the run.
+      "includeKanto",
+      // Infinite Fusion only - filtered out for every other pack, where
+      // there is nothing to fuse.
+      "wildFusionSplit",
+      "customSpritesOnly",
+    ],
+  ],
 ];
 
 // A toggle's parents, nearest last. The depth of the chain is its indentation.
@@ -159,15 +173,19 @@ function ToggleRow({
       aria-checked={on}
       disabled={disabled}
       onClick={onToggle}
-      className={`flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition-colors hover:bg-hover disabled:cursor-not-allowed ${
-        depth === 2 ? "pl-12" : depth === 1 ? "pl-8" : ""
-      } ${disabled ? "opacity-50" : ""}`}
+      className={`flex w-full items-center justify-between gap-4 py-3 pr-4 text-left transition-colors hover:bg-hover disabled:cursor-not-allowed disabled:hover:bg-transparent ${
+        depth === 2 ? "pl-12" : depth === 1 ? "pl-8" : "pl-4"
+      }`}
     >
+      {/* A locked row is muted, not faded: text under opacity drops below
+          the contrast floor. Only the track (no text) is dimmed. */}
       <span className="min-w-0">
-        <span className="block text-sm font-medium text-ink">{label}</span>
-        <span className="block text-xs text-ink-muted">{description}</span>
+        <span className={`block text-sm ${depth === 0 ? "font-semibold" : "font-medium"} ${disabled ? "text-ink-muted" : "text-ink"}`}>{label}</span>
+        <span className="block max-w-prose text-xs text-ink-muted">{description}</span>
       </span>
-      <SwitchTrack on={on} />
+      <span className={disabled ? "opacity-50" : undefined}>
+        <SwitchTrack on={on} />
+      </span>
     </button>
   );
 }
@@ -362,30 +380,47 @@ export function RulesView({
     });
   }
 
+  // What this run's game and mode show of each group, and which of those
+  // are in force: a child only counts while every parent is on.
+  const groups = GROUPS.map(([id, keys]) => {
+    const shown = keys.filter(
+      (key) =>
+        (fusionEnabled || !FUSION_ONLY_TOGGLES.has(key)) &&
+        (kantoEnabled || !KANTO_ONLY_TOGGLES.has(key)) &&
+        (EVOLUTION_TOGGLES[key] === undefined || evolutionCategories.includes(EVOLUTION_TOGGLES[key])) &&
+        (players.length > 1 || !SOULLINK_ONLY_TOGGLES.has(key)),
+    );
+    const active = shown.filter((key) => local[key] && (CLAUSE_PARENTS[key] ?? []).every((parent) => local[parent]));
+    return { id, shown, active };
+  }).filter((group) => group.shown.length > 0);
+  const totalShown = groups.reduce((sum, group) => sum + group.shown.length, 0);
+  const totalActive = groups.reduce((sum, group) => sum + group.active.length, 0);
+
   return (
     <div>
       <PageHeader title={t.heading}>
         {!IS_PUBLIC_INSTANCE && (
           <div className="flex flex-wrap items-center gap-2">
-            <Select
-              size="sm"
-              aria-label={t.presets.label}
-              // Always the placeholder: see handleApplyPreset.
-              value=""
-              // While the notes editor is open the two halves of the tab
-              // disagree - the draft on screen is not what a preset would
-              // replace - so both controls stand down until it is saved.
-              disabled={pending || editing || presets.length === 0}
-              onChange={(event) => handleApplyPreset(Number(event.target.value))}
-              className="w-auto max-w-52"
-            >
-              <option value="">{t.presets.placeholder}</option>
-              {presets.map((preset) => (
-                <option key={preset.id} value={preset.id}>
-                  {preset.name}
-                </option>
-              ))}
-            </Select>
+            <span className="w-52">
+              <Select
+                size="sm"
+                aria-label={t.presets.label}
+                // Always the placeholder: see handleApplyPreset.
+                value=""
+                // While the notes editor is open the two halves of the tab
+                // disagree - the draft on screen is not what a preset would
+                // replace - so both controls stand down until it is saved.
+                disabled={pending || editing || presets.length === 0}
+                onChange={(event) => handleApplyPreset(Number(event.target.value))}
+              >
+                <option value="">{t.presets.placeholder}</option>
+                {presets.map((preset) => (
+                  <option key={preset.id} value={preset.id}>
+                    {preset.name}
+                  </option>
+                ))}
+              </Select>
+            </span>
             <Button
               size="sm"
               disabled={pending || editing}
@@ -408,95 +443,86 @@ export function RulesView({
         />
       )}
 
-      {/* Two columns from lg up. Everything here used to be capped at
-          max-w-3xl inside a max-w-6xl main, so switching to this tab visibly
-          narrowed the content by ~380px - while the notes still want a
-          readable measure rather than the full page width. */}
-      <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <div>
-          <Section title={t.settingsHeading}>
-            <Card padding="none" className="divide-y divide-line overflow-hidden">
-              {TOGGLE_ORDER.filter(
-                (key) =>
-                  (fusionEnabled || !FUSION_ONLY_TOGGLES.has(key)) &&
-                  (kantoEnabled || !KANTO_ONLY_TOGGLES.has(key)) &&
-                  (EVOLUTION_TOGGLES[key] === undefined || evolutionCategories.includes(EVOLUTION_TOGGLES[key])) &&
-                  (players.length > 1 || !SOULLINK_ONLY_TOGGLES.has(key)),
-              ).flatMap((key) =>
-                key === "capsGymsOnly"
-                  ? [
-                      renderToggle(key),
-                      // Not a switch but a number, and a rule of its own: it
-                      // applies to every cap, whatever the toggle above says.
-                      <label key="capTeamOffset" className="flex items-center justify-between gap-4 px-4 py-3">
-                        <span className="min-w-0">
-                          <span className="block text-sm font-medium text-ink">{t.capTeamOffset.label}</span>
-                          <span className="block text-xs text-ink-muted">{t.capTeamOffset.description}</span>
-                        </span>
-                        <Select
-                          value={local.capTeamOffset}
-                          disabled={pending}
-                          onChange={(event) => handleTeamOffset(Number(event.target.value))}
-                          className="w-auto shrink-0"
-                        >
-                          {Array.from({ length: CAP_TEAM_OFFSET_MAX + 1 }, (_, n) => (
-                            <option key={n} value={n}>
-                              {t.capTeamOffset.option(n)}
-                            </option>
-                          ))}
-                        </Select>
-                      </label>,
-                    ]
-                  : [renderToggle(key)],
-              )}
-            </Card>
-          </Section>
-
-          {/* Its own section rather than a ninth row above: this is not a rule
-              of the run but a maintenance switch for correcting a game pack,
-              and unlike everything above it it never leaves this device. */}
-          <Section title={t.debugHeading}>
-            <Card padding="none" className="overflow-hidden">
-              <ToggleRow
-                label={t.toggles.debugMode.label}
-                description={t.toggles.debugMode.description}
-                on={debugMode}
-                onToggle={() => setDebugMode(!debugMode)}
-              />
-            </Card>
-          </Section>
-
-          {mode === RunMode.SOULLINK && (
-            <Section title={t.playerNamesHeading}>
-              <Card>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {players.map((player) => (
-                    <Input
-                      key={player}
-                      type="text"
-                      defaultValue={names[player]}
-                      disabled={pending}
-                      maxLength={PLAYER_NAME_MAX}
-                      placeholder={translations[lang].player[player]}
-                      aria-label={translations[lang].player[player]}
-                      onBlur={(e) => commitName(player, e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") e.currentTarget.blur();
-                      }}
-                    />
-                  ))}
-                </div>
-                <p className="mt-2 text-xs text-ink-muted">{t.playerNamesHint}</p>
-              </Card>
-            </Section>
-          )}
+      {/* The run's rules as its collection label: what is in force, read in
+          one look, before the switches that set it. */}
+      <section aria-labelledby="rules-summary" className="specimen-label mb-8 px-4 py-3 text-xs leading-relaxed text-ink">
+        <div className="mb-2 flex items-baseline justify-between gap-3 border-b border-ink pb-2">
+          <h2 id="rules-summary" className="text-sm font-semibold uppercase">
+            {t.summaryHeading}
+          </h2>
+          <span className="text-sm font-semibold">
+            {totalActive}/{totalShown}
+          </span>
         </div>
+        <dl className="grid gap-x-6 gap-y-1.5 sm:grid-cols-[minmax(9rem,max-content)_minmax(0,1fr)]">
+          {groups.map((group) => {
+            const names = group.active.map((key) => t.toggles[key].label);
+            // The distance is a rule of its own, in force whatever the
+            // switch beside it says.
+            if (group.id === "caps") names.push(`${t.capTeamOffset.label}: ${t.capTeamOffset.option(local.capTeamOffset)}`);
+            return (
+              <div key={group.id} className="contents">
+                <dt className="font-semibold">
+                  {t.groups[group.id]} {group.active.length}/{group.shown.length}
+                </dt>
+                <dd className={names.length > 0 ? "mb-1 sm:mb-0" : "mb-1 text-ink-muted sm:mb-0"}>
+                  {names.length > 0 ? names.join(" · ") : t.summaryNone}
+                </dd>
+              </div>
+            );
+          })}
+        </dl>
+      </section>
 
+      {/* The switches by theme: two columns of trays from lg, flowing like
+          the columns of a page so a long group does not leave a hole. */}
+      <div className="mb-2 gap-6 lg:columns-2">
+        {groups.map((group) => (
+          <section key={group.id} aria-labelledby={`rules-group-${group.id}`} className="mb-6 break-inside-avoid">
+            <Card padding="none" className="overflow-hidden">
+              <div className="flex items-baseline justify-between gap-3 border-b border-line-strong bg-sunken px-4 py-2.5">
+                <h2 id={`rules-group-${group.id}`} className="text-base font-bold tracking-tight text-ink">
+                  {t.groups[group.id]}
+                </h2>
+                <span className="font-mono text-xs text-ink-muted">
+                  {group.active.length}/{group.shown.length}
+                </span>
+              </div>
+              <div className="divide-y divide-line">
+                {group.shown.map(renderToggle)}
+                {group.id === "caps" && (
+                  // Not a switch but a number, and a rule of its own: it
+                  // applies to every cap, whatever the toggle above says.
+                  <label className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3">
+                    <span className="min-w-0 flex-1 basis-56">
+                      <span className="block text-sm font-semibold text-ink">{t.capTeamOffset.label}</span>
+                      <span className="block max-w-prose text-xs text-ink-muted">{t.capTeamOffset.description}</span>
+                    </span>
+                    <span className="w-32 shrink-0">
+                      <Select value={local.capTeamOffset} disabled={pending} onChange={(event) => handleTeamOffset(Number(event.target.value))}>
+                        {Array.from({ length: CAP_TEAM_OFFSET_MAX + 1 }, (_, n) => (
+                          <option key={n} value={n}>
+                            {t.capTeamOffset.option(n)}
+                          </option>
+                        ))}
+                      </Select>
+                    </span>
+                  </label>
+                )}
+              </div>
+            </Card>
+          </section>
+        ))}
+      </div>
+
+      {/* The written rules as a document at a readable measure, with what
+          belongs to the run but is not a rule beside it. */}
+      <div className="grid gap-x-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start">
         <Section
           title={t.notesHeading}
           actions={
             editing ? (
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Button size="sm" disabled={pending} onClick={handleLoadDefault}>
                   {t.loadDefault}
                 </Button>
@@ -533,11 +559,54 @@ export function RulesView({
           ) : (
             notesOpen && (
               <Card className="p-5">
-                <ReactMarkdown components={markdownComponents}>{markdown}</ReactMarkdown>
+                <div className="max-w-prose">
+                  <ReactMarkdown components={markdownComponents}>{markdown}</ReactMarkdown>
+                </div>
               </Card>
             )
           )}
         </Section>
+
+        <div>
+          {mode === RunMode.SOULLINK && (
+            <Section title={t.playerNamesHeading}>
+              <Card>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {players.map((player) => (
+                    <Input
+                      key={player}
+                      type="text"
+                      defaultValue={names[player]}
+                      disabled={pending}
+                      maxLength={PLAYER_NAME_MAX}
+                      placeholder={translations[lang].player[player]}
+                      aria-label={translations[lang].player[player]}
+                      onBlur={(e) => commitName(player, e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") e.currentTarget.blur();
+                      }}
+                    />
+                  ))}
+                </div>
+                <p className="mt-2 text-xs text-ink-muted">{t.playerNamesHint}</p>
+              </Card>
+            </Section>
+          )}
+
+          {/* Not a rule of the run but a maintenance switch for correcting a
+              game pack, and unlike everything above it never leaves this
+              device. */}
+          <Section title={t.debugHeading}>
+            <Card padding="none" className="overflow-hidden">
+              <ToggleRow
+                label={t.toggles.debugMode.label}
+                description={t.toggles.debugMode.description}
+                on={debugMode}
+                onToggle={() => setDebugMode(!debugMode)}
+              />
+            </Card>
+          </Section>
+        </div>
       </div>
     </div>
   );
