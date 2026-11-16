@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useId, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { LevelCap } from "@/lib/data";
 import type { Lang } from "@/lib/i18n/dictionary";
@@ -58,6 +58,7 @@ export function LevelCapsView({
   const [pendingId, setPendingId] = useState<number | null>(null);
   const [showPostgame, setShowPostgame] = useState(false);
   const [, startTransition] = useTransition();
+  const nextId = useId();
 
   function handleToggle(cap: LevelCapWithProgress) {
     const current = overrides[cap.id] ?? cap.defeated;
@@ -85,76 +86,100 @@ export function LevelCapsView({
   const firstRegion = levelCaps.filter((cap) => cap.region !== "kanto");
   const kanto = levelCaps.filter((cap) => cap.region === "kanto");
 
+  const renderRow = (cap: LevelCapWithProgress) => {
+    const defeated = overrides[cap.id] ?? cap.defeated;
+    const pending = pendingId === cap.id;
+    const name = levelCapName(cap, lang);
+    const location = levelCapLocation(cap, lang);
+    const badge = levelCapBadge(cap, lang);
+    return (
+      <button
+        key={cap.id}
+        type="button"
+        disabled={pending}
+        aria-pressed={defeated}
+        onClick={() => handleToggle(cap)}
+        // A defeated entry recedes through its tint, the strike-through, the
+        // muted text and the faded picture - not through opacity on the
+        // whole row, which took its text down to 1.6:1. The tint is green:
+        // a beaten leader is progress, and red only ever means a death.
+        className={`flex w-full items-center gap-4 p-3 text-left transition-colors disabled:opacity-70 sm:p-4 ${
+          defeated ? "bg-success-bg/70" : "hover:bg-hover"
+        }`}
+      >
+        {/* Sprite files are slugged from the canonical German name; the
+            trainerSet folder allows game-specific art (e.g. the rival). */}
+        <span className={`shrink-0 ${defeated ? "opacity-50" : ""}`}>
+          <TrainerSprite
+            canonicalName={cap.sprite ?? cap.names.de}
+            displayName={name}
+            trainerSet={trainerSet}
+            size={88}
+          />
+        </span>
+        <div className="min-w-0 flex-1">
+          <div
+            className={`truncate font-medium ${defeated ? "text-ink-muted line-through" : "text-ink"}`}
+          >
+            {name}
+          </div>
+          <div className="truncate text-xs text-ink-muted">
+            {location}
+            {badge ? ` \u00b7 ${badge}` : ""}
+          </div>
+        </div>
+        {pending && <Spinner className="shrink-0 text-ink-muted" />}
+        {cap.max_level !== null && (
+          <div className="shrink-0 text-right">
+            {/* "cap / team": one team member may reach the cap, the rest
+                stay the run's capTeamOffset below it (house rule). */}
+            <div
+              className={`font-mono text-lg font-semibold tabular-nums ${defeated ? "text-ink-muted" : "text-ink"}`}
+            >
+              {cap.max_level}
+              {teamOffset > 0 && (
+                <span className="text-ink-subtle"> / {teamLevel(cap.max_level, teamOffset)}</span>
+              )}
+            </div>
+            <div className="text-xs text-ink-subtle">{t.maxLevel}</div>
+          </div>
+        )}
+      </button>
+    );
+  };
+
   const renderCard = (caps: LevelCapWithProgress[]) => (
     <Card padding="none" className="divide-y divide-line overflow-hidden">
-      {caps.map((cap) => {
-        const defeated = overrides[cap.id] ?? cap.defeated;
-        const pending = pendingId === cap.id;
-        const name = levelCapName(cap, lang);
-        const location = levelCapLocation(cap, lang);
-        const badge = levelCapBadge(cap, lang);
-        return (
-          <button
-            key={cap.id}
-            type="button"
-            disabled={pending}
-            aria-pressed={defeated}
-            onClick={() => handleToggle(cap)}
-            // A defeated entry recedes through its tint, the strike-through, the
-            // muted text and the faded picture - not through opacity on the
-            // whole row, which took its text down to 1.6:1. The tint is green:
-            // a beaten leader is progress, and red only ever means a death.
-            className={`flex w-full items-center gap-4 p-3 text-left transition-colors disabled:opacity-70 sm:p-4 ${
-              defeated ? "bg-success-bg/70" : "hover:bg-hover"
-            }`}
-          >
-            {/* Sprite files are slugged from the canonical German name; the
-                trainerSet folder allows game-specific art (e.g. the rival). */}
-            <span className={`shrink-0 ${defeated ? "opacity-50" : ""}`}>
-              <TrainerSprite
-                canonicalName={cap.sprite ?? cap.names.de}
-                displayName={name}
-                trainerSet={trainerSet}
-                size={88}
-              />
-            </span>
-            <div className="min-w-0 flex-1">
-              <div
-                className={`truncate font-medium ${defeated ? "text-ink-muted line-through" : "text-ink"}`}
-              >
-                {name}
-              </div>
-              <div className="truncate text-xs text-ink-muted">
-                {location}
-                {badge ? ` \u00b7 ${badge}` : ""}
-              </div>
-            </div>
-            {pending && <Spinner className="shrink-0 text-ink-muted" />}
-            {cap.max_level !== null && (
-              <div className="shrink-0 text-right">
-                {/* "cap / team": one team member may reach the cap, the rest
-                    stay the run's capTeamOffset below it (house rule). */}
-                <div
-                  className={`font-mono text-lg font-semibold tabular-nums ${defeated ? "text-ink-muted" : "text-ink"}`}
-                >
-                  {cap.max_level}
-                  {teamOffset > 0 && (
-                    <span className="text-ink-subtle"> / {teamLevel(cap.max_level, teamOffset)}</span>
-                  )}
-                </div>
-                <div className="text-xs text-ink-subtle">{t.maxLevel}</div>
-              </div>
-            )}
-          </button>
-        );
-      })}
+      {caps.map(renderRow)}
     </Card>
   );
 
-  if (kanto.length === 0) return renderCard(levelCaps);
+  // The fight the run stands before, repeated above the list in a heavier
+  // frame: the list keeps every beaten fight in place, so further into a run
+  // the next one sits screens down. In the order the run plays them - an
+  // excluded Kanto comes after everything else.
+  const upcoming = [...firstRegion, ...kanto].find((cap) => !(overrides[cap.id] ?? cap.defeated));
+  const next = upcoming && (
+    <section aria-labelledby={nextId} className="mb-6">
+      <h2 id={nextId} className="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-ink-muted">
+        {t.nextFight}
+      </h2>
+      <div className="overflow-hidden rounded-md border-2 border-accent bg-panel shadow-md">{renderRow(upcoming)}</div>
+    </section>
+  );
+
+  if (kanto.length === 0) {
+    return (
+      <div>
+        {next}
+        {renderCard(levelCaps)}
+      </div>
+    );
+  }
   if (includeKanto) {
     return (
       <div>
+        {next}
         <RegionHeading label={REGION_LABELS.main} />
         {renderCard(firstRegion)}
         <RegionHeading label={REGION_LABELS.kanto} />
@@ -164,6 +189,7 @@ export function LevelCapsView({
   }
   return (
     <div className="flex flex-col gap-2">
+      {next}
       {renderCard(firstRegion)}
       <button
         type="button"

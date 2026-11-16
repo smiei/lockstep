@@ -22,6 +22,8 @@ import { useDebugMode } from "@/lib/useDebugMode";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { EmptyState, PageHeader } from "@/components/ui/Page";
+import { Input } from "@/components/ui/Input";
+import { foldSearch } from "@/lib/search";
 import { ChevronDownIcon } from "@/components/ActionIcons";
 import { formatCatalogueNumber, routeNumbers } from "@/lib/routeNumbers";
 import { EnglishOnlyNote } from "@/components/EnglishOnlyNote";
@@ -103,6 +105,9 @@ export function TrackerView({
   // by deferring the save - which in turn needed a whole draft-broadcast
   // mechanism so the other player still saw the in-progress pick. Both are gone.
   const [lastTouchedRouteId, setLastTouchedRouteId] = useState<number | null>(null);
+  // Narrows the list by route name. Not kept across visits: a search is for
+  // the one route wanted right now, unlike the "open only" habit.
+  const [routeQuery, setRouteQuery] = useState("");
   const [customOpen, setCustomOpen] = useState(false);
   // The report is fetched before the dialog opens rather than inside it, so
   // the dialog needs no loading state and no effect (which would land on the
@@ -157,9 +162,16 @@ export function TrackerView({
     null,
   );
   const keptRouteId = lastTouchedRouteId ?? lastSaved?.routeId ?? null;
-  const visible = openOnly
+  const openFiltered = openOnly
     ? trackable.filter((r) => !isRouteDone(r, encounters, players) || r.id === keptRouteId)
     : trackable;
+  // The name in the page's language or in English (what a guide calls it).
+  const needle = foldSearch(routeQuery);
+  const visible = needle
+    ? openFiltered.filter(
+        (r) => foldSearch(routeName(r, lang)).includes(needle) || foldSearch(routeName(r, "en")).includes(needle),
+      )
+    : openFiltered;
   const mainRoutes = visible.filter((r) => !r.postgame);
   const firstRegionRoutes = mainRoutes.filter((r) => r.region !== "kanto");
   const kantoRoutes = mainRoutes.filter((r) => r.region === "kanto");
@@ -285,6 +297,15 @@ export function TrackerView({
     <div>
       <PageHeader title={tTracker.heading}>
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <Input
+            type="search"
+            size="sm"
+            value={routeQuery}
+            onChange={(e) => setRouteQuery(e.target.value)}
+            placeholder={tTracker.searchRoutes}
+            aria-label={tTracker.searchRoutes}
+            className="w-full sm:w-48"
+          />
           <Button
             size="sm"
             variant={openOnly ? "primary" : "secondary"}
@@ -331,7 +352,16 @@ export function TrackerView({
         />
       )}
 
-      {visible.length === 0 ? (
+      {visible.length === 0 && needle ? (
+        <EmptyState
+          title={tTracker.noRouteMatch}
+          action={
+            <Button size="sm" onClick={() => setRouteQuery("")}>
+              {tTracker.clearSearch}
+            </Button>
+          }
+        />
+      ) : visible.length === 0 ? (
         // "Open only" with everything done used to leave an empty bordered
         // frame with no explanation and no way back.
         <EmptyState
@@ -368,7 +398,7 @@ export function TrackerView({
                 />
                 {showPostgame ? tTracker.postgameHide : tTracker.postgameShow(postgameRoutes.length)}
               </button>
-              {showPostgame && postgameRoutes.map(renderRoute)}
+              {(showPostgame || needle !== "") && postgameRoutes.map(renderRoute)}
             </>
           )}
         </div>
