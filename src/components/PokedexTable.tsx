@@ -6,6 +6,7 @@ import { computePokemonRanks } from "@/lib/ranking";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { dexNumber, displayNameWithForm } from "@/lib/forms";
+import { matchesPokemon } from "@/lib/search";
 import { TypeBadge } from "@/components/TypeBadge";
 import { useHideTypes } from "@/components/BlindflugProvider";
 import { PokemonSprite } from "@/components/PokemonSprite";
@@ -146,7 +147,7 @@ export function PokedexTable({
     return copy;
   }, [pokemon, sortKey, sortDir, ranks, lang]);
 
-  const query = search.trim().toLowerCase();
+  const query = search.trim();
 
   const visible = useMemo(() => {
     let list = sorted;
@@ -161,7 +162,7 @@ export function PokedexTable({
     // this long, because you search to narrow down, not to be shown where
     // something already was. That also retires the suggestion dropdown, its
     // click-outside listener and the scroll-into-view machinery.
-    if (query) list = list.filter((p) => displayNameWithForm(p, lang).toLowerCase().includes(query));
+    if (query) list = list.filter((p) => matchesPokemon(p, lang, query));
     return list;
   }, [sorted, avail, locked, onlyLegendary, query, lang]);
 

@@ -8,6 +8,7 @@ import { formatActionError } from "@/lib/actionErrors";
 import { isCustomPackId } from "@/lib/gamePack";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { localizeName } from "@/lib/i18n/localize";
+import { foldSearch } from "@/lib/search";
 import { MAX_SOULLINK_PLAYERS, MIN_SOULLINK_PLAYERS } from "@/lib/players";
 import type { GameSummary } from "@/lib/types";
 import { CustomGameControls } from "@/components/CustomGameControls";
@@ -63,13 +64,13 @@ export function NewRunView({
 
   // A game matches when its name - in the page's language or in English, the
   // one most people would type for a ROM hack - contains the search text.
-  const needle = query.trim().toLowerCase();
+  const needle = foldSearch(query);
   const shown = games.filter(
     (game) =>
       (generation === null || game.generation === generation) &&
       (!needle ||
-        localizeName(game.names, lang).toLowerCase().includes(needle) ||
-        game.names.en.toLowerCase().includes(needle)),
+        foldSearch(localizeName(game.names, lang)).includes(needle) ||
+        foldSearch(game.names.en).includes(needle)),
   );
   // Official games, ROM hacks, fan games and imported packs, in that order.
   const groups = (
