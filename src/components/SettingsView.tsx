@@ -196,14 +196,35 @@ export function SettingsView({
   }
 
   const idle = busy === null;
+  // Two views: what belongs to the open run and is shared by its players,
+  // and what belongs to this device or the whole install. Without a run
+  // there is only the second.
+  const [picked, setPicked] = useState<"run" | "app">("run");
+  const view = activeRun ? picked : "app";
   const version = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
 
   return (
     <div className="max-w-3xl">
       <PageHeader title={ts.title} description={ts.description} />
 
-      <Section title={activeRun ? ts.runSection(activeRun.name) : ts.runSectionNone}>
-        {activeRun ? (
+      {activeRun && (
+        <div className="mb-6 grid grid-cols-2 gap-2 sm:max-w-md" role="group" aria-label={ts.title}>
+          {(
+            [
+              ["run", ts.tabRun],
+              ["app", ts.tabApp],
+            ] as const
+          ).map(([value, label]) => (
+            <Button key={value} variant={view === value ? "primary" : "secondary"} aria-pressed={view === value} onClick={() => setPicked(value)}>
+              {label}
+            </Button>
+          ))}
+        </div>
+      )}
+
+      {view === "run" && activeRun && (
+        <Section title={ts.runSection(activeRun.name)}>
+          <p className="-mt-2 mb-3 text-xs text-ink-muted">{ts.runScope}</p>
           <Card padding="none" className="divide-y divide-line">
             <form onSubmit={handleRename} className="flex flex-wrap items-end gap-2 p-4">
               <div className="min-w-0 flex-1 basis-56">
@@ -222,20 +243,24 @@ export function SettingsView({
                 {ts.download}
               </Button>
             </Row>
+            <Row title={ts.rulesRow} hint={ts.rulesRowHint}>
+              <ButtonLink href={`/rules?run=${activeRun.accessKey}`}>{t.nav.rules}</ButtonLink>
+            </Row>
             <Row title={t.runSwitcher.deleteButton} hint={ts.deleteHint}>
               <Button variant="danger" loading={busy === "delete"} disabled={!idle} onClick={handleDelete}>
                 {t.runSwitcher.deleteButton}
               </Button>
             </Row>
           </Card>
-        ) : (
-          <p className="text-sm text-ink-muted">{ts.noRun}</p>
-        )}
-      </Section>
+        </Section>
+      )}
 
+      {view === "app" && (
+        <>
+          <p className="mb-6 text-xs text-ink-muted">{ts.appScope}</p>
       <Section title={t.appearance.title}>
         <Card padding="none" className="divide-y divide-line">
-          <Row title={ts.themeLabel} hint={t.appearance.hint}>
+          <Row title={ts.themeLabel}>
             <div className="flex gap-1" role="group" aria-label={ts.themeLabel}>
               {(
                 [
@@ -360,6 +385,8 @@ export function SettingsView({
           </div>
         </Card>
       </Section>
+        </>
+      )}
     </div>
   );
 }
