@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ComponentProps, ReactNode } from "react";
+import type { ComponentProps, ComponentPropsWithRef, ReactNode } from "react";
 import Link from "next/link";
 import { cn } from "./cn";
 import { Spinner } from "./Spinner";
@@ -41,7 +41,9 @@ const ICON_SIZES: Record<Size, string> = {
   md: "h-11 w-11",
 };
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+// ComponentPropsWithRef: React 19 passes ref as a normal prop, and the tour
+// focuses its "next" button.
+export type ButtonProps = ComponentPropsWithRef<"button"> & {
   variant?: Variant;
   size?: Size;
   // Swaps the icon slot for a spinner and disables the button. Every mutation

@@ -670,6 +670,14 @@ body {
   }
 }
 
+/* The guided tour's cut-out (Tour.tsx): the control it points at stays
+   clear, the shadow dims everything else, the ring marks the edge. */
+.tour-hole {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 200vmax rgb(0 0 0 / 0.6);
+}
+
 /* The desktop side rail can be folded away (RailToggle, data-rail on <html>,
    per device). Unlayered, so it wins over the rail's lg:flex utility. The
    expand tab exists only while the rail is folded and only from lg - below
