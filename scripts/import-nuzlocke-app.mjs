@@ -351,7 +351,7 @@ async function main() {
     : all;
   if (hacks.length === 0) throw new Error(`unknown pack "${only}"`);
   const locationNames = (await readJson(path.join(dataDir, "shared", "location-names.json"))).regions;
-  // Bosses no base pack names: their people's names from Bulbapedia
+  // Bosses no base pack names: their people's names from PokéWiki
   // (generate-trainer-names.mjs), put together per trainer-name-parts.mjs.
   const trainerNames = (await readJson(path.join(dataDir, "shared", "trainer-names.json"))).names;
   // Badges no base pack has (generate-badge-names.mjs), by region and leader.

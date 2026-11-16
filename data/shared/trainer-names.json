@@ -1,6 +1,6 @@
 {
-  "source": "Bulbapedia character pages, Names table (https://bulbapedia.bulbagarden.net)",
-  "generatedAt": "2026-10-31T23:59:29.219Z",
+  "source": "PokéWiki character pages, \"In anderen Sprachen\" table (https://www.pokewiki.de); entries from before 2026-11-16 were read from Bulbapedia's \"Names\" tables and checked against PokéWiki",
+  "generatedAt": "2026-11-16T20:05:51.298Z",
   "names": {
     "Aarune": {
       "de": "Johnson",
@@ -40,7 +40,7 @@
     },
     "Aqua Admin Matt": {
       "de": "Wolfgang",
-      "es": "Matías{{sup/3|RS}}{{sup/6|ORAS}} Tolo{{sup/3|E}}",
+      "es": "Matías",
       "fr": "Matthieu",
       "it": "Alan"
     },
@@ -85,6 +85,12 @@
       "es": "Dreo",
       "fr": "Saturnin",
       "it": "Savory"
+    },
+    "Barry": {
+      "de": "Barry",
+      "fr": "René",
+      "es": "Israel",
+      "it": "Barry"
     },
     "Bea": {
       "de": "Saida",
@@ -238,7 +244,7 @@
     },
     "Diantha": {
       "de": "Diantha",
-      "es": "Diantha",
+      "es": "Dianta",
       "it": "Diantha",
       "fr": "Dianthéa"
     },
@@ -537,7 +543,7 @@
     "Lt. Surge": {
       "de": "Major Bob",
       "fr": "Major Bob",
-      "es": "Teniente Surge Lt. Surge",
+      "es": "Lt. Surge",
       "it": "Lt. Surge"
     },
     "Lucas": {
@@ -614,7 +620,7 @@
     },
     "Matt": {
       "de": "Wolfgang",
-      "es": "Matías{{sup/3|RS}}{{sup/6|ORAS}} Tolo{{sup/3|E}}",
+      "es": "Matías",
       "fr": "Matthieu",
       "it": "Alan"
     },
@@ -882,6 +888,12 @@
       "it": "Saturno",
       "fr": "Saturne"
     },
+    "Serena": {
+      "de": "Serena",
+      "fr": "Serena",
+      "es": "Serena",
+      "it": "Serena"
+    },
     "Shauna": {
       "de": "Sannah",
       "fr": "Sannah",
@@ -940,7 +952,7 @@
       "de": "Tierno",
       "fr": "Tierno",
       "it": "Tierno",
-      "es": "Beni"
+      "es": "Benigno"
     },
     "Trevor": {
       "de": "Trovato",
@@ -953,6 +965,12 @@
       "es": "Tuli",
       "fr": "Tully",
       "it": "Tulipa"
+    },
+    "Valerie": {
+      "de": "Valerie",
+      "fr": "Valériane",
+      "es": "Valeria",
+      "it": "Valérie"
     },
     "Viola": {
       "de": "Viola",
@@ -976,7 +994,7 @@
       "de": "Walter",
       "it": "Walter",
       "es": "Erico",
-      "fr": "Voltere"
+      "fr": "Voltère"
     },
     "Whitney": {
       "de": "Bianka",

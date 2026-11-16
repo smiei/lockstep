@@ -59,7 +59,7 @@ All reference data is read from disk at runtime and never copied into the databa
 - `cover-sources.json`: where each game's cover comes from (`scripts/download-covers.mjs` saves them as `public/covers/<id>.webp`; `getGameCover` in `data.ts` decides on the server whether one exists).
 - `shared/`: the official names the game packs are built from, each with the script that fetches it:
   - places: `place-names.json` (`generate-place-names.mjs`, PokéWiki) and the hand-made `place-name-overrides.json`, applied by `localize-places.mjs`;
-  - bosses: `trainer-names.json` (`generate-trainer-names.mjs`, Bulbapedia); badges: `badge-names.json` (`generate-badge-names.mjs`, PokéWiki; `apply-badge-names.mjs` writes the names into every pack);
+  - bosses: `trainer-names.json` (`generate-trainer-names.mjs`, PokéWiki); badges: `badge-names.json` (`generate-badge-names.mjs`, PokéWiki; `apply-badge-names.mjs` writes the names into every pack);
   - a ROM hack's changed stats and types: `<id>-species.json` (first from `import-nuzlocke-app.mjs`, which since keeps existing files; most were checked against the hack's own data).
 
 **Game packs** live in `data/games/<gameId>/`:
