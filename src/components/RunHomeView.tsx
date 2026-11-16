@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { deleteRun, setRunOutcome } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
+import { feedbackUrl } from "@/lib/links";
 import { translations, type Lang } from "@/lib/i18n/dictionary";
 import { localizeName } from "@/lib/i18n/localize";
 import { RunMode } from "@/generated/prisma/enums";
@@ -115,6 +116,20 @@ export function RunHomeView({
       ) : (
         <Welcome lang={lang} actions={actions} />
       )}
+      {/* The way to reach the project, where everybody passes by. */}
+      <p className="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs text-ink-muted">
+        {(["bug", "feature"] as const).map((kind) => (
+          <a
+            key={kind}
+            href={feedbackUrl(kind, process.env.NEXT_PUBLIC_APP_VERSION ?? "dev")}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2 hover:text-ink"
+          >
+            {kind === "bug" ? t.settings.reportBug : t.settings.requestFeature}
+          </a>
+        ))}
+      </p>
       {backupImport.elements}
     </div>
   );

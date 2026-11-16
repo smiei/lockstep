@@ -8,7 +8,7 @@ import { formatActionError } from "@/lib/actionErrors";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { translations } from "@/lib/i18n/dictionary";
-import { REPO_URL } from "@/lib/links";
+import { REPO_URL, feedbackUrl } from "@/lib/links";
 import { pickActiveRun } from "@/lib/runKey";
 import { useInstallPrompt } from "@/lib/useInstallPrompt";
 import { forgetRun } from "@/lib/visitedRuns";
@@ -18,7 +18,7 @@ import { LanguagePicker } from "@/components/LanguagePicker";
 import { SpriteConsentSetting } from "@/components/SpriteConsentSetting";
 import { TabOrderSettings } from "@/components/TabOrderSettings";
 import { useBackupImport } from "@/components/useBackupImport";
-import { Button } from "@/components/ui/Button";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { FieldLabel, Input } from "@/components/ui/Input";
 import { PageHeader, Section } from "@/components/ui/Page";
@@ -187,6 +187,7 @@ export function SettingsView({ runs }: { runs: { id: number; accessKey: string; 
   }
 
   const idle = busy === null;
+  const version = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
 
   return (
     <div className="max-w-3xl">
@@ -295,7 +296,15 @@ export function SettingsView({ runs }: { runs: { id: number; accessKey: string; 
             {/* Baked in at build time (Dockerfile ARG APP_VERSION, inlined as
                 NEXT_PUBLIC_*), so a running instance can be checked against
                 the image tag it is supposed to be. */}
-            <span className="font-mono text-sm text-ink">{process.env.NEXT_PUBLIC_APP_VERSION ?? "dev"}</span>
+            <span className="font-mono text-sm text-ink">{version}</span>
+          </Row>
+          <Row title={ts.feedbackTitle} hint={ts.feedbackHint}>
+            <ButtonLink href={feedbackUrl("bug", version)} target="_blank" rel="noreferrer">
+              {ts.reportBug}
+            </ButtonLink>
+            <ButtonLink href={feedbackUrl("feature", version)} target="_blank" rel="noreferrer">
+              {ts.requestFeature}
+            </ButtonLink>
           </Row>
           <Row title={ts.source} hint={ts.sourceHint}>
             <a href={REPO_URL} target="_blank" rel="noreferrer" className="text-sm font-semibold text-ink underline underline-offset-2">

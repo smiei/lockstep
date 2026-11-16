@@ -1,0 +1,31 @@
+name: Suggest a feature
+description: An idea for something the app should do, or do differently.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to do?
+      description: The situation in your run where the app is in the way or leaves you alone.
+      placeholder: 'We play with a rule that every player may revive one Pokémon per run, and there is no place to track that.'
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How it could look or work. Optional - the situation above is the important part.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which kind of run is it for?
+      options:
+        - SoulLink
+        - Solo
+        - Both
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Settings (the gear) → About. The link in the app fills this in.
