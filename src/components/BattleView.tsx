@@ -144,6 +144,58 @@ function TeamMatchup({
   );
 }
 
+// Blindflug hides the team matchup, but the team itself is no secret: each
+// member stays a tap away from its info card, which is often why the tab was
+// opened mid-fight. Sprites and names only - no type, no multiplier.
+function TeamShortcuts({
+  teams,
+  mode,
+}: {
+  teams: { player: Player; members: TeamMember[] }[];
+  mode: RunMode;
+}) {
+  const detail = usePokemonDetail();
+  const { lang } = useLanguage();
+  const t = translations[lang].typen;
+  const playerLabel = usePlayerLabel();
+  return (
+    <section className="mb-8">
+      <h2 className="mb-1 text-sm font-semibold text-ink">{t.myTeamHeading}</h2>
+      <p className="mb-3 text-xs text-ink-muted">{t.myTeamHint}</p>
+      <div className="flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:gap-8">
+        {teams.map(
+          (team) =>
+            team.members.length > 0 && (
+              <div key={team.player} className="min-w-0">
+                {mode !== "CLASSIC" && (
+                  <h3 className="mb-1.5 text-xs font-semibold text-ink-muted">{playerLabel(team.player)}</h3>
+                )}
+                <ul className="flex flex-wrap gap-1.5">
+                  {team.members.map((m) => (
+                    <li key={m.encounterId}>
+                      <button
+                        type="button"
+                        onClick={() => detail?.open(m.pokemonId, m.bodyId ?? null)}
+                        className="flex w-20 flex-col items-center gap-0.5 rounded-md border border-line bg-panel px-1 pb-1.5 pt-1 text-center transition-colors hover:bg-hover"
+                      >
+                        {/* The name below is the button's name; the picture
+                            would only repeat it to a screen reader. */}
+                        <span aria-hidden="true">
+                          <PokemonSprite pokemonId={m.pokemonId} bodyId={m.bodyId ?? null} name={m.name} size="md" className="h-11 w-11" />
+                        </span>
+                        <span className="w-full truncate text-xs text-ink">{m.name}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ),
+        )}
+      </div>
+    </section>
+  );
+}
+
 // One component's list unchanged; for a fusion (two lists), each attack type
 // once, at the lower of the levels either component learns it.
 function mergeAttackTypes<T extends { type: string; level: number }>(lists: T[][]): T[] {
@@ -390,6 +442,8 @@ export function BattleCardBody({
             ))}
         </div>
       )}
+
+      {blindflug && hasTeam && <TeamShortcuts teams={teams} mode={mode} />}
 
       {/* Full type matrix (gen-aware) at the very bottom, dimmed to the opponent. */}
       <section>
