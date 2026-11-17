@@ -231,8 +231,11 @@ export function LinksView({
   // swap/split - shared by the drawer's trays (handed to TeamBar) and the Box
   // entries, so a Pokémon has the same buttons wherever it sits. `compact` is
   // the drawer's: two specimens share a tray, so the row is centred under its
-  // specimen and the buttons are narrower (still 40px tall).
-  function encounterControls(e: EncounterView, isDead: boolean, compact = false) {
+  // specimen and the buttons are narrower (still 40px tall). `inDrawer` drops
+  // "Revert evolution" from the team: late in a run nearly every member is
+  // fully evolved, so it was the one button left on each tray and mostly
+  // noise. The Box below keeps it, for the team's Pokémon too ("Show team").
+  function encounterControls(e: EncounterView, isDead: boolean, compact = false, inDrawer = false) {
     return (
       <>
         {!isDead && (
@@ -251,7 +254,7 @@ export function LinksView({
               currentId={e.pokemonId}
               options={e.formOptions}
             />
-            {e.evolvesFrom && (
+            {e.evolvesFrom && !inDrawer && (
               <RevertButton runKey={runKey} lang={lang} encounterId={e.id} compact={compact} />
             )}
             {fusionEnabled && !e.body && (
@@ -307,7 +310,7 @@ export function LinksView({
                   currentId={e.body.pokemonId}
                   options={e.body.formOptions}
                 />
-                {e.body.evolvesFrom && (
+                {e.body.evolvesFrom && !inDrawer && (
                   <RevertButton runKey={runKey} lang={lang} encounterId={e.body.encounterId} />
                 )}
               </div>
@@ -519,7 +522,7 @@ export function LinksView({
           players={players}
           lang={lang}
           links={soulLinks}
-          renderControls={(e) => encounterControls(e, false, true)}
+          renderControls={(e) => encounterControls(e, false, true, true)}
           actions={addButton}
           compareLinks={compareLinks}
         />
