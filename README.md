@@ -61,19 +61,26 @@ You know the rules. This is what the tracker handles so you don't have to.
 - **HeartGold/SoulSilver** (and Gold/Silver, Sacred Gold, Storm Silver) show Johto and Kanto as their own sections; a rule decides whether Kanto counts or is post-game.
 
 ### Planning the next fight
-- **Level caps** for every gym leader, rival and Elite Four member, with the next cap always in view.
+- **Level caps** for every gym leader, rival and Elite Four member, with the next cap always in view. By default only gyms and the League set one, and the rest of the team stays a chosen number of levels below it.
 - **Battle scout:** the opponent's moves by level and its matchup against each player's team.
 - **Team coverage** (weaknesses and offensive gaps), judged at your last level cap rather than at level 100.
 - **Base-stat totals** now and fully evolved, with a note when an evolution is possible within the cap.
+- **Evolution items:** a list per player of every stone and trade item your living Pokémon still need.
+
+### Your run in numbers
+- **Statistics** along the journey: catches, misses and deaths per player for every stretch up to the next fight, and a catch rate.
+- **Hall of fame:** the team each fight was won with.
+- **Memorial:** every loss with who lost it, how, and the fight that was next.
 
 ### And also
 - **[Pokémon Infinite Fusion](#pokémon-infinite-fusion)** (Classic and Remix): fusions are one battle unit, and a fused catch locks both families.
 - **Custom routes** for areas a game pack doesn't list.
 - **Free-team mode** for runs that aren't Nuzlockes.
 - **Blind flight**, which hides every calculated hint, optionally locked on for the whole run.
+- **Guided tours** through the app and through the rules, in every language.
 - **An installable phone app** in 5 languages: English, German, French, Spanish and Italian. German and English are reviewed by hand; French, Spanish and Italian are machine-translated. The names of Pokémon and of every official game's places are the official ones in each language. ROM hacks keep their English names, as in the game.
 - **Backups** of one run or all of them.
-- No account, no cloud: it runs on your PC or home server.
+- No cloud: it runs on your PC or home server. **Accounts are optional**, for groups where not everybody should see every run.
 
 ## Screenshots
 

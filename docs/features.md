@@ -14,6 +14,7 @@ Catch one Pokémon per route and player.
   - Post-game areas are collapsed by default.
   - HeartGold/SoulSilver, Gold/Silver, Sacred Gold and Storm Silver show Johto and Kanto as their own sections. With the rule **Include Kanto** off, Kanto counts as post-game: it collapses here and on the Journey tab and leaves the progress bars, badges and next level cap.
   - "Open only" hides finished routes, but keeps the route you just edited visible (after a reload: the route saved last).
+  - A search field narrows the list. It ignores accents and also finds a place by its English name.
   - Every route is a tray whose frame and badge show its outcome: open (dashed), waiting for a player, caught, or lost.
 - **Species Clause:** conflicts show a warning and never block a save.
 - **Buttons on each entry:**
@@ -83,7 +84,9 @@ Each row opens a detail card with:
 
 Boss battles with their level caps and trainer pictures: gym leaders, the rival, Team Rocket and the Elite Four.
 
-- Click an entry to mark it as defeated.
+- The next open fight sits on top.
+- Click an entry to mark it as defeated. The app notes when, and with which team, for the Statistics page.
+- By default only gym leaders and the League set a level cap; rivals and villains stay on the list as stations to tick off. The rule and the team's distance to the cap are on the Rules tab.
 - Every entry that grants a badge lights it up on the Overview tab.
 
 ## Overview
@@ -110,6 +113,7 @@ Per-run rule toggles, grouped by theme (catching and clauses, level caps, Blindf
 - **Randomizer evolution options** (PokeRandoZX's "impossible evolutions changed", "evolutions made easier" and "time-based evolutions removed"), for every official Gen 1–7 game and generated from the randomizer's own code; a game without such a list (the Switch games, ROM hacks) does not show them. Off for a run that has nothing to copy its rules from (the first run of a fresh install); a new run otherwise takes the rules of the run it was created from.
 - **A ROM hack's own evolutions** (Kadabra at level 36 in Renegade Platinum, Poliwhirl to Politoed with King's Rock in Blaze Black, ...) come from the hack's own game data and always apply in its pack; the evolve button and the Pokédex show the hack's method.
 - **Static encounters** and their clause exemption.
+- **Level caps only for gyms and the League** (on by default) and the **team's distance to the cap**: one Pokémon may reach the cap, the rest stay that many levels below it (0–10, default 2).
 - **Include Kanto** (only in games with Kanto as a second region, see the Encounter tab).
 
 On top of the toggles:
