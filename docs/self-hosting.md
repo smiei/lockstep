@@ -58,6 +58,7 @@ services:
       - DATABASE_URL=file:/app/db/nuzlocke.db
       # - DEFAULT_SHELL_COLOR=blue                  # optional: green (default), red, blue or yellow
       # - DEFAULT_LANGUAGE=en                       # optional: de, en, fr, es or it
+      # - LOCKSTEP_ACCOUNTS=off                     # optional: off = never ask about accounts, on = require them
     volumes:
       - db:/app/db                                  # your runs
       - sprites:/app/public/pokemon-sprites         # downloaded once, kept across updates
@@ -128,6 +129,7 @@ Everything else is optional and usually best left out:
 | `CUSTOM_GAMES_DIR` | Optional. Where games imported in the app are saved (default: `custom-games` next to the database, see [Backups](#backups)). |
 | `TRAINER_SPRITES` | Optional. `off` skips the trainer-picture download (see [Trainer pictures](#trainer-pictures)). |
 | `COVERS` | Optional. `off` skips the game-cover download (see [Game covers](#game-covers)). |
+| `LOCKSTEP_ACCOUNTS` | Optional. `off`: no accounts, and the first-start question is skipped. `on`: accounts are required. Unset: the app asks once on its first start (see [Accounts](#accounts-optional)). |
 | `DEFAULT_LANGUAGE` | Optional. The language a **browser tab** starts in: `de`, `en`, `fr`, `es` or `it`. The **installed app** (home screen) follows the phone's language instead. Without this variable, browser tabs follow the device language too, with English as the last fallback. A language picked in the app always wins. |
 
 Light and dark mode follow the device until someone switches them by hand. Switching back to the mode the device itself uses makes the app follow the device again.
@@ -197,6 +199,26 @@ Other ports: `npm start -- -p 4000`. To keep the tracker running after you close
 | Without Docker | `git pull`, `npm install`, `npm run setup`, then restart `npm start` |
 
 Database migrations are applied automatically in every case. Existing runs are never touched.
+
+## Accounts (optional)
+
+Without accounts, everybody who can open the address sees every run. That suits a tracker you share with the friends you play with. With accounts, each person logs in and lists only their own runs.
+
+- **First start:** a fresh installation asks once: create the first account, or *Continue without accounts*. An installation that already holds runs is not asked and stays as it was; switch accounts on under Settings → App & device → Accounts.
+- **The first account** manages the installation. It sees every run, and all runs that existed before belong to it.
+- **More people** register themselves with the **invite code**, which the first account finds in Settings and can replace at any time. Nobody without the code can create an account, so an installation reachable from the internet does not fill up with strangers.
+- **Playing together:** a run's link is still the invitation. A logged-in friend who opens it gets the run on their own list. Only the person who created a run (or the first account) can delete it.
+- **Forgotten password:** the first account sets a new one for anybody in Settings. If the first account itself is locked out, set its password on the server:
+
+  ```bash
+  docker exec -it <container> node scripts/reset-password.mjs "<name>" "<new password>"
+  ```
+
+- **Variable:** `LOCKSTEP_ACCOUNTS=off` skips the question and keeps accounts off, whatever was chosen in the app. `on` requires them. On Unraid, add it as a Variable like the others.
+- Passwords are stored as salted scrypt hashes. There is no e-mail, no password reset by mail, and no connection to any outside service. Accounts are not part of backups: a backup holds runs.
+- Switching accounts off again (first account only) shows every run to everybody as before; the accounts stay stored and return when you switch them back on.
+
+Accounts decide who lists which run. They do not replace HTTPS: over plain `http://` a password crosses your network unencrypted, so put an installation that is reachable from outside behind HTTPS (see below).
 
 ## Backups
 

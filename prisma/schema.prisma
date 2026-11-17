@@ -83,6 +83,7 @@ model Run {
   levelCapProgress LevelCapProgress[]
   customRoutes     CustomRoute[]
   routeEntries     RouteEntry[]
+  members          RunMember[]
 }
 
 // One SoulLink per (run, route), created once at least one player has a
@@ -278,4 +279,58 @@ model RouteEntry {
   run     Run      @relation(fields: [runId], references: [id], onDelete: Cascade)
 
   @@unique([runId, routeId])
+}
+
+// --- Accounts (optional, src/lib/auth.ts) ----------------------------------
+//
+// An installation decides once whether it uses accounts (AppSetting
+// "accounts": "on" | "off"; the LOCKSTEP_ACCOUNTS variable overrides it).
+// Without them none of these tables holds a row and every run is listed to
+// everyone, as before.
+
+// Installation-wide settings as key/value rows: "accounts" and "inviteCode".
+model AppSetting {
+  key   String @id
+  value String
+}
+
+model User {
+  id           Int         @id @default(autoincrement())
+  // As typed, for display.
+  name         String
+  // Lower-cased name: what a login looks up, so "Red" and "red" are one person.
+  nameKey      String      @unique
+  // scrypt, see src/lib/passwords.ts. Never leaves the server.
+  passwordHash String
+  // The first account of an installation; sees every run and manages accounts.
+  isAdmin      Boolean     @default(false)
+  createdAt    DateTime    @default(now())
+  sessions     Session[]
+  memberships  RunMember[]
+}
+
+// A login on one device. `id` is the SHA-256 of the cookie's token, so a copy
+// of the database does not hold anything a browser could present.
+model Session {
+  id        String   @id
+  userId    Int
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// Which runs an account lists. Created for whoever makes a run (owner) and
+// for whoever opens its link while logged in: the link is the invitation.
+model RunMember {
+  runId    Int
+  userId   Int
+  owner    Boolean  @default(false)
+  joinedAt DateTime @default(now())
+  run      Run      @relation(fields: [runId], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([runId, userId])
+  @@index([userId])
 }

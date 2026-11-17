@@ -40,6 +40,14 @@ export type ActionError =
   | { key: "packInUse" }
   | { key: "packNotFound" }
   | { key: "customPacksUnavailable" }
+  | { key: "loginRequired" }
+  | { key: "notAllowed" }
+  | { key: "invalidCredentials" }
+  | { key: "tooManyAttempts" }
+  | { key: "inviteCodeWrong" }
+  | { key: "accountNameInvalid" }
+  | { key: "accountNameTaken" }
+  | { key: "passwordTooShort" }
   | { key: "unexpected" };
 
 export function formatActionError(error: ActionError, lang: Lang): string {
@@ -107,6 +115,22 @@ export function formatActionError(error: ActionError, lang: Lang): string {
       return t.packNotFound;
     case "customPacksUnavailable":
       return t.customPacksUnavailable;
+    case "loginRequired":
+      return t.loginRequired;
+    case "notAllowed":
+      return t.notAllowed;
+    case "invalidCredentials":
+      return t.invalidCredentials;
+    case "tooManyAttempts":
+      return t.tooManyAttempts;
+    case "inviteCodeWrong":
+      return t.inviteCodeWrong;
+    case "accountNameInvalid":
+      return t.accountNameInvalid;
+    case "accountNameTaken":
+      return t.accountNameTaken;
+    case "passwordTooShort":
+      return t.passwordTooShort;
     case "unexpected":
       return t.unexpected;
   }

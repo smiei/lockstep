@@ -15,6 +15,8 @@ import { useInstallPrompt } from "@/lib/useInstallPrompt";
 import { forgetRun } from "@/lib/visitedRuns";
 import { startTour } from "@/lib/tourStore";
 import { AppearanceSettings } from "@/components/AppearanceSettings";
+import { AccountSettings } from "@/components/AccountSettings";
+import type { AccountView } from "@/lib/accountRules";
 import { useDialog } from "@/components/DialogProvider";
 import { LanguagePicker } from "@/components/LanguagePicker";
 import { SpriteConsentSetting } from "@/components/SpriteConsentSetting";
@@ -64,9 +66,12 @@ function Row({ title, hint, children }: { title: string; hint?: string; children
 type Busy = "backupRun" | "backupAll" | "delete" | "rename" | null;
 
 export function SettingsView({
+  account,
   runs,
   fusionGameIds,
 }: {
+  // The optional accounts: mode, who is logged in, and for the admin the rest.
+  account: AccountView;
   runs: { id: number; accessKey: string; name: string; gameId: string }[];
   // The packs with fusions - a run of one offers the fusion tour too.
   fusionGameIds: string[];
@@ -256,6 +261,8 @@ export function SettingsView({
 
       {view === "app" && (
         <>
+          {/* Installation-wide, unlike everything below it. */}
+          {!IS_PUBLIC_INSTANCE && <AccountSettings account={account} />}
           <p className="mb-6 text-xs text-ink-muted">{ts.appScope}</p>
       <Section title={t.appearance.title}>
         <Card padding="none" className="divide-y divide-line">

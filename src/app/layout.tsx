@@ -31,6 +31,9 @@ import { shellColorBootScript } from "@/lib/shellColor";
 import { railBootScript } from "@/lib/railCollapsed";
 import { RailCollapseButton, RailExpandButton } from "@/components/RailToggle";
 import { runtimeConfigFromEnv, runtimeConfigScript } from "@/lib/runtimeConfig";
+import { getViewer, isLockedOut } from "@/lib/auth";
+import { ACCOUNTS_ENV, accountsForcedByEnv } from "@/lib/accountRules";
+import { AccountGate } from "@/components/AccountGate";
 import "./globals.css";
 
 // The interface face and the label face of the collection world (DESIGN.md):
@@ -85,6 +88,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Optional accounts (src/lib/auth.ts): while nobody may see run data - the
+  // first start is undecided, or accounts are on and this browser is not
+  // logged in - the window stands in for the whole app. The data layer
+  // enforces the same on its own; `runs` is already empty then.
+  const viewer = await getViewer();
+  const gate = viewer.mode === "setup" ? "setup" : isLockedOut(viewer) ? "login" : null;
   const runs = await listRunsForHeader();
   const caps = await listCapSummaries(runs);
   const games = getGameSummaries();
@@ -162,6 +171,10 @@ export default async function RootLayout({
             <ToastProvider>
             <DialogProvider>
             <TabOrderProvider>
+              {gate ? (
+                <AccountGate mode={gate} forced={accountsForcedByEnv(process.env[ACCOUNTS_ENV]) === "on"} />
+              ) : (
+              <>
               {/* The shell: one green field that is a side rail from lg up and
                   a top bar plus the sticky tab strip below that. It is ONE set
                   of elements re-arranged by CSS, never rendered twice - the
@@ -270,6 +283,8 @@ export default async function RootLayout({
                   fusionGameIds={games.filter((game) => game.fusion).map((game) => game.id)}
                 />
               </Suspense>
+              </>
+              )}
               <ServiceWorkerRegistrar />
               {/* Watches a Cloudflare Access session, which only a private
                   instance sits behind. */}

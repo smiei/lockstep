@@ -28,6 +28,9 @@ services:
       - ./branding-local:/app/branding:ro
     environment:
       - DATABASE_URL=file:/app/db/nuzlocke.db
+      # Optional accounts: off = never ask, on = require them. Unset, a fresh
+      # installation asks once (docs/self-hosting.md#accounts-optional).
+      # - LOCKSTEP_ACCOUNTS=off
     restart: unless-stopped
 
 volumes:

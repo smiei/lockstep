@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { isRunKeyShaped } from "@/lib/runKey";
+import { getViewer, isLockedOut } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +11,9 @@ export const dynamic = "force-dynamic";
 // the point: this is the request that runs most often.
 export async function GET(_request: Request, { params }: { params: Promise<{ key: string }> }) {
   const { key } = await params;
-  const run = isRunKeyShaped(key)
+  // With accounts on, a visitor who is not logged in learns nothing.
+  const locked = isLockedOut(await getViewer());
+  const run = !locked && isRunKeyShaped(key)
     ? await prisma.run.findUnique({ where: { accessKey: key }, select: { version: true } })
     : null;
   if (!run) {

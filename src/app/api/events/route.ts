@@ -1,5 +1,6 @@
 import { subscribe } from "@/lib/liveBus";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
+import { getViewer, isLockedOut } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -12,6 +13,8 @@ export async function GET(request: Request) {
   // open on one while changes are published on another, and bill the open
   // connection the whole time. Public instances poll Run.version instead.
   if (IS_PUBLIC_INSTANCE) return new Response(null, { status: 404 });
+  // With accounts on, only a logged-in visitor hears that something changed.
+  if (isLockedOut(await getViewer())) return new Response(null, { status: 401 });
   const encoder = new TextEncoder();
 
   const stream = new ReadableStream({

@@ -9,6 +9,7 @@ import { isRunKeyShaped } from "@/lib/runKey";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
 import { VISITED_RUNS_COOKIE, parseVisitedRuns } from "@/lib/visitedRuns";
 import { getLevelCaps } from "@/lib/data";
+import { getViewer, isLockedOut, joinRun, visibleRunsWhere } from "@/lib/auth";
 import type { RunCapSummary } from "@/lib/types";
 
 export type ResolvedRun = {
@@ -58,10 +59,21 @@ function resolved(run: Run, canonical: boolean): ResolvedRun {
 // in the URL, else the most recent one this browser has visited (the
 // nuzlocke_runs cookie). Otherwise null, and the page shows RunLanding - an
 // id or "the oldest run" would hand a stranger somebody else's run.
+//
+// With accounts on (src/lib/auth.ts): nothing for a visitor who is not logged
+// in; a key opens its run and puts it on the account's list (the link is the
+// invitation); every fallback only looks among the account's own runs.
 export async function resolveRunId(rawRun: string | undefined): Promise<ResolvedRun | null> {
+  const viewer = await getViewer();
+  if (isLockedOut(viewer)) return null;
+  const mine = visibleRunsWhere(viewer);
+
   if (isRunKeyShaped(rawRun)) {
     const byKey = await prisma.run.findUnique({ where: { accessKey: rawRun } });
-    if (byKey) return resolved(byKey, true);
+    if (byKey) {
+      if (mine) await joinRun(byKey.id, viewer);
+      return resolved(byKey, true);
+    }
   }
 
   if (IS_PUBLIC_INSTANCE) {
@@ -75,14 +87,15 @@ export async function resolveRunId(rawRun: string | undefined): Promise<Resolved
   // At most 9 digits: anything longer cannot be a run id and would overflow
   // Prisma's Int before the lookup could simply miss.
   if (rawRun && /^\d{1,9}$/.test(rawRun)) {
-    const byId = await prisma.run.findUnique({ where: { id: Number(rawRun) } });
+    // A number is guessable: with accounts it only opens a run already listed.
+    const byId = await prisma.run.findFirst({ where: { id: Number(rawRun), ...mine } });
     if (byId) return resolved(byId, false);
   }
 
   // No run named: the one played last (the installed app starts here). With
   // no run at all the page shows the start page's welcome (RunLanding) -
   // nothing is created behind the user's back.
-  const fallback = await prisma.run.findFirst({ orderBy: { changedAt: "desc" } });
+  const fallback = await prisma.run.findFirst({ where: mine, orderBy: { changedAt: "desc" } });
   return fallback ? resolved(fallback, false) : null;
 }
 
@@ -92,7 +105,11 @@ export async function resolveRunId(rawRun: string | undefined): Promise<Resolved
 // browser has visited, most recent first.
 export async function listRunsForHeader(): Promise<Run[]> {
   if (!IS_PUBLIC_INSTANCE) {
-    return prisma.run.findMany({ orderBy: { changedAt: "desc" } });
+    // With accounts on: the account's own runs, all of them for the admin,
+    // none for a visitor who is not logged in.
+    const viewer = await getViewer();
+    if (isLockedOut(viewer)) return [];
+    return prisma.run.findMany({ where: visibleRunsWhere(viewer), orderBy: { changedAt: "desc" } });
   }
   const visited = parseVisitedRuns((await cookies()).get(VISITED_RUNS_COOKIE)?.value);
   if (visited.length === 0) return [];

@@ -161,8 +161,12 @@ export async function buildBackup(runIds?: number[]): Promise<BackupFile> {
 // instead of one combined JSON - each entry is independently importable
 // (matches the shape a single-run export already produces) and large
 // collections of runs no longer live in one unwieldy file.
-export async function buildBackupZip(): Promise<{ filename: string; data: Uint8Array }> {
+export async function buildBackupZip(
+  // Which runs: all of them, or - with accounts on - the ones an account lists.
+  where?: { members: { some: { userId: number } } },
+): Promise<{ filename: string; data: Uint8Array }> {
   const runs = await prisma.run.findMany({
+    where,
     orderBy: { createdAt: "asc" },
     include: BACKUP_INCLUDE,
   });

@@ -41,6 +41,7 @@ import {
 } from "@/lib/runSettings";
 import { parseCapTeamOffset } from "@/lib/levelCapRule";
 import type { Lang } from "@/lib/i18n/dictionary";
+import { getViewer, isLockedOut, joinRun, mayDeleteRun, visibleRunsWhere } from "@/lib/auth";
 
 // Every run-scoped action takes the run's access key, never its numeric id
 // (see src/lib/runKey.ts), and answers an unknown key with this.
@@ -49,6 +50,11 @@ const RUN_NOT_FOUND = { success: false, error: { key: "runNotFound" } } as const
 // What a public instance answers for the few actions that reach beyond one
 // run (see src/lib/instance.ts).
 const NOT_ON_PUBLIC_INSTANCE = { success: false, error: { key: "notOnPublicInstance" } } as const;
+
+// With accounts on (src/lib/auth.ts): what an action that is not tied to one
+// run answers a visitor who is not logged in. The run-scoped ones get there
+// through findRunByKey.
+const LOGIN_REQUIRED = { success: false, error: { key: "loginRequired" } } as const;
 
 // The tabs whose rendering depends on the run's route list or rule toggles.
 // Spelled out once instead of at each call site, which is how the list drifted
@@ -1317,6 +1323,8 @@ export async function createRun(
   if (!trimmed) {
     return { success: false, error: { key: "nameRequired" } };
   }
+  const viewer = await getViewer();
+  if (isLockedOut(viewer)) return LOGIN_REQUIRED;
   if (IS_PUBLIC_INSTANCE && (await tooManyNewRuns())) {
     return { success: false, error: { key: "tooManyNewRuns" } };
   }
@@ -1331,11 +1339,14 @@ export async function createRun(
   // TEXT while Prisma writes numbers, and SQLite sorts TEXT above all
   // numbers - id is monotonic and immune to that.
   // A public instance only copies from a run the caller holds the key to -
-  // "the most recent run" would be a stranger's, player names included.
+  // "the most recent run" would be a stranger's, player names included. With
+  // accounts on it is the most recent of the account's own runs.
   const source = freshRules
     ? null
     : ((sourceRunKey != null ? await findRunByKey(sourceRunKey) : null) ??
-      (IS_PUBLIC_INSTANCE ? null : await prisma.run.findFirst({ orderBy: { id: "desc" } })));
+      (IS_PUBLIC_INSTANCE
+        ? null
+        : await prisma.run.findFirst({ where: visibleRunsWhere(viewer), orderBy: { id: "desc" } })));
   const rulesMarkdown = source?.rulesMarkdown.trim()
     ? source.rulesMarkdown
     : DEFAULT_RULES[lang ?? "de"];
@@ -1353,6 +1364,8 @@ export async function createRun(
       settingsJson,
     },
   });
+  // Whoever makes a run owns it (accounts only).
+  await joinRun(run.id, viewer, true);
   revalidatePath("/", "layout");
   await markRunChanged(run.id);
   return { success: true, runKey: run.accessKey };
@@ -1813,6 +1826,7 @@ export async function applyRulePreset(
 // keep their rules - a preset is a template, not a live link.
 export async function deleteRulePreset(presetId: number): Promise<ActionResult> {
   if (IS_PUBLIC_INSTANCE) return NOT_ON_PUBLIC_INSTANCE;
+  if (isLockedOut(await getViewer())) return LOGIN_REQUIRED;
   const preset = await prisma.rulePreset.findUnique({ where: { id: presetId } });
   if (!preset) {
     return { success: false, error: { key: "presetNotFound", id: presetId } };
@@ -1830,6 +1844,10 @@ export async function deleteRulePreset(presetId: number): Promise<ActionResult> 
 export async function deleteRun(runKey: string): Promise<ActionResult> {
   const run = await findRunByKey(runKey);
   if (!run) return RUN_NOT_FOUND;
+  // With accounts on, a fellow player holds the link but not the run.
+  if (!(await mayDeleteRun(run.id, await getViewer()))) {
+    return { success: false, error: { key: "notAllowed" } };
+  }
 
   await prisma.run.delete({ where: { id: run.id } });
   revalidatePath("/", "layout");
@@ -1858,7 +1876,10 @@ export type BackupZipResult =
 export async function exportAllBackup(): Promise<BackupZipResult> {
   // Every run in the database - on a public instance, everybody's.
   if (IS_PUBLIC_INSTANCE) return NOT_ON_PUBLIC_INSTANCE;
-  const { filename, data } = await buildBackupZip();
+  // With accounts on: the runs the account lists (the admin's are all).
+  const viewer = await getViewer();
+  if (isLockedOut(viewer)) return LOGIN_REQUIRED;
+  const { filename, data } = await buildBackupZip(visibleRunsWhere(viewer));
   return { success: true, filename, zipBase64: Buffer.from(data).toString("base64") };
 }
 
@@ -1872,6 +1893,8 @@ export type ImportBackupResult =
 // collects a fresh name per run so a re-imported backup never silently
 // shadows a newer run that kept the original name.
 export async function importBackup(json: string, names?: string[]): Promise<ImportBackupResult> {
+  const viewer = await getViewer();
+  if (isLockedOut(viewer)) return LOGIN_REQUIRED;
   const parsed = parseBackup(json);
   if (!parsed) {
     return { success: false, error: { key: "backupInvalid" } };
@@ -1895,6 +1918,9 @@ export async function importBackup(json: string, names?: string[]): Promise<Impo
   let runKeys: string[];
   try {
     runKeys = await applyBackup(parsed);
+    // Imported runs belong to whoever imported them (accounts only).
+    const imported = await prisma.run.findMany({ where: { accessKey: { in: runKeys } }, select: { id: true } });
+    for (const run of imported) await joinRun(run.id, viewer, true);
   } catch (error) {
     console.error("importBackup failed:", error);
     return { success: false, error: { key: "unexpected" } };
@@ -1923,6 +1949,7 @@ const PACK_MAX_CHARS = 2_000_000;
 
 export async function importGamePack(json: string): Promise<ImportGamePackResult> {
   if (IS_PUBLIC_INSTANCE) return { success: false, error: { key: "notOnPublicInstance" } };
+  if (isLockedOut(await getViewer())) return LOGIN_REQUIRED;
   if (!customGamesDir()) return { success: false, error: { key: "customPacksUnavailable" } };
   if (typeof json !== "string" || json.length > PACK_MAX_CHARS) {
     return { success: false, error: { key: "packInvalid" } };
@@ -1956,6 +1983,7 @@ export async function importGamePack(json: string): Promise<ImportGamePackResult
 
 export async function removeGamePack(gameId: string): Promise<ActionResult> {
   if (IS_PUBLIC_INSTANCE) return { success: false, error: { key: "notOnPublicInstance" } };
+  if (isLockedOut(await getViewer())) return LOGIN_REQUIRED;
   if (typeof gameId !== "string" || !isCustomPackId(gameId)) return { success: false, error: { key: "packNotFound" } };
   if ((await prisma.run.count({ where: { gameId } })) > 0) return { success: false, error: { key: "packInUse" } };
   if (!removeCustomGame(gameId)) return { success: false, error: { key: "packNotFound" } };

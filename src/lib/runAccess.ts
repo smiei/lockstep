@@ -2,13 +2,18 @@ import type { Run } from "@/generated/prisma/client";
 import { prisma } from "@/lib/prisma";
 import { publishChange } from "@/lib/liveBus";
 import { isRunKeyShaped } from "@/lib/runKey";
+import { getViewer, isLockedOut } from "@/lib/auth";
 
 // The one way a server action gets hold of a run. Server actions are plain
 // POST endpoints that anyone can call with any arguments, so the key is
 // checked for shape before it reaches a query and a miss is simply "not
 // found" - there is no id fallback here, unlike resolveRunId's legacy URLs.
+//
+// With accounts on (src/lib/auth.ts) the key alone is not enough: whoever
+// asks must be logged in. Not being logged in looks like an unknown key.
 export async function findRunByKey(key: unknown): Promise<Run | null> {
   if (!isRunKeyShaped(key)) return null;
+  if (isLockedOut(await getViewer())) return null;
   return prisma.run.findUnique({ where: { accessKey: key } });
 }
 
