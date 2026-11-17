@@ -10,6 +10,7 @@ import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { routeName } from "@/lib/i18n/localize";
 import { isRouteDone, computeRouteProgress } from "@/lib/progress";
+import { keptRouteIds } from "@/lib/openOnlyKeep";
 import { EncounterEditor } from "@/components/EncounterEditor";
 import { CustomRoutesDialog } from "@/components/CustomRoutesDialog";
 import { ProgressBar } from "@/components/ProgressBar";
@@ -85,8 +86,8 @@ export function TrackerView({
   const [openOnly, setOpenOnly] = usePersistentState("nuzlocke:tracker:openOnly", false);
   // The route the user last edited. "Open only" keeps it on screen even once it
   // is complete, so filling in a species no longer makes the row vanish before
-  // the nickname, shiny flag or status can be set. Exactly one extra row, and
-  // it moves along as you work down the list.
+  // the nickname, shiny flag or status can be set. It moves along as you work
+  // down the list.
   //
   // This replaces the "Bestätigen" button that used to solve the same problem
   // by deferring the save - which in turn needed a whole draft-broadcast
@@ -120,20 +121,13 @@ export function TrackerView({
   // clothes; it has no business on the Encounter tab.
   const onTheMap = routes.filter((r) => !r.hidden);
   const trackable = settings.statics ? onTheMap : onTheMap.filter((r) => r.type === "route");
-  // Until something is edited on this page, the kept route is the one saved
-  // last (by anyone) - the in-memory one alone was lost on every reload, tab
-  // switch and edit from another device.
+  // Besides the route edited here, the route of the newest catch (by anyone)
+  // stays - the in-memory one alone was lost on every reload, tab switch and
+  // edit from another device. The rule: src/lib/openOnlyKeep.ts.
   const trackableIds = new Set(trackable.map((r) => r.id));
-  const lastSaved = encounters.reduce<Encounter | null>(
-    (latest, e) =>
-      trackableIds.has(e.routeId) && (!latest || new Date(e.updatedAt) > new Date(latest.updatedAt))
-        ? e
-        : latest,
-    null,
-  );
-  const keptRouteId = lastTouchedRouteId ?? lastSaved?.routeId ?? null;
+  const kept = keptRouteIds(encounters, trackableIds, lastTouchedRouteId);
   const openFiltered = openOnly
-    ? trackable.filter((r) => !isRouteDone(r, encounters, players) || r.id === keptRouteId)
+    ? trackable.filter((r) => !isRouteDone(r, encounters, players) || kept.has(r.id))
     : trackable;
   // The name in the page's language or in English (what a guide calls it).
   const needle = foldSearch(routeQuery);
