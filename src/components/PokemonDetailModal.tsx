@@ -29,6 +29,8 @@ import { Modal } from "@/components/ui/Modal";
 import { TypeEffectiveness } from "@/components/ui/TypeEffectiveness";
 import { BlindflugNotice, useBlindflug } from "@/components/BlindflugProvider";
 import { PokemonSprite } from "@/components/PokemonSprite";
+import type { ClauseLockInfo } from "@/components/PokemonDetailProvider";
+import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 
 // Order + label keys for the base stats (matching pokedex.columns).
 type StatRow = {
@@ -118,6 +120,8 @@ export function PokemonDetailModal({
   onSelect,
   onClose,
   body = null,
+  clauseLocks = [],
+  soloRun = true,
 }: {
   pokemon: Pokemon;
   // Infinite Fusion: set when this is a fusion's card - `pokemon` is then the
@@ -137,8 +141,13 @@ export function PokemonDetailModal({
   // single modal instance, so no duplicate cards ever stack up.
   onSelect: (pokemonId: number) => void;
   onClose: () => void;
+  // The run's Species Clause locks (src/lib/speciesClause.ts); the card shows
+  // the ones for this Pokémon's family (both families for a fusion).
+  clauseLocks?: ClauseLockInfo[];
+  soloRun?: boolean;
 }) {
   const t = translations[lang];
+  const playerLabel = usePlayerLabel();
   const blindflug = useBlindflug();
   const td = t.pokedex.detail;
   const searchParams = useSearchParams();
@@ -180,6 +189,8 @@ export function PokemonDetailModal({
       }
     : null;
   const displayName = fusion?.name ?? displayNameWithForm(pokemon, lang);
+  const families = new Set([pokemon.family_id, ...(body ? [body.family_id] : [])]);
+  const locks = clauseLocks.filter((lock) => families.has(lock.familyId));
   const types = fusion?.types ?? pokemon.types;
   const stats = fusion?.stats ?? pokemon.stats;
   // The evolution tree is keyed by SPECIES, so a forme resolves to its base.
@@ -333,6 +344,30 @@ export function PokemonDetailModal({
                 }
               />
             </SpecimenLabel>
+            {locks.length > 0 && (
+              // Informational like the clause everywhere else: who may no
+              // longer catch this family, and which encounter used it up.
+              <section aria-labelledby="clause-locks" className="mt-1 rounded-md border border-warning-line px-3 py-2 text-xs">
+                <h3 id="clause-locks" className="mb-1 font-semibold text-warning">
+                  {td.clauseHeading}
+                </h3>
+                <ul className="space-y-1 text-ink">
+                  {locks.map((lock, i) => (
+                    <li key={i}>
+                      <span className="font-semibold">
+                        {soloRun ? td.clauseLocked : td.clauseLockedFor(lock.lockedFor.map(playerLabel).join(", "))}
+                      </span>
+                      {": "}
+                      {lock.name}
+                      {!soloRun && ` ${td.clauseBy(playerLabel(lock.player))}`}
+                      <span className="text-ink-muted">
+                        {lock.route && ` · ${lock.route}`} · {t.status[lock.status]}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
             <Link
               href={analyzeHref}
               onClick={onClose}

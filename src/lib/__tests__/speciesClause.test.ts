@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { EncounterStatus, Player } from "@/generated/prisma/enums";
 import {
   boundRouteMap,
+  clauseLocks,
   clauseView,
   formedRouteIds,
   type ClauseEncounter,
@@ -168,5 +169,24 @@ describe("lockingEncounters", () => {
     const view = clauseView([mine, enc(5, P2, 16)], { rules: YOUTUBER, players: TWO });
     const found = view.lockingEncounters(P1, (e) => e.id === mine.id);
     expect(found.map((e) => e.familyId)).toEqual([16]);
+  });
+});
+
+describe("clauseLocks", () => {
+  it("lists each locking encounter with the players it locks", () => {
+    const fled = enc(5, P1, CHARMANDER, { status: EncounterStatus.FLED });
+    const shiny = enc(6, P2, BULBASAUR, { shiny: true });
+    const locks = clauseLocks([fled, shiny], { rules: PER_PLAYER, players: TWO });
+    // The shiny locks nobody, the fled one only its own player.
+    expect(locks).toEqual([{ encounter: fled, lockedFor: [P1] }]);
+  });
+
+  it("names every player once a run-wide clause applies", () => {
+    const caught = enc(5, P1, CHARMANDER);
+    expect(clauseLocks([caught], { rules: rules(), players: TWO })[0].lockedFor).toEqual([P1, P2]);
+  });
+
+  it("is empty with the clause off", () => {
+    expect(clauseLocks([enc(5, P1, CHARMANDER)], { rules: rules({ speciesClause: false }), players: TWO })).toEqual([]);
   });
 });

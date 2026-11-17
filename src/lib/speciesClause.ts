@@ -143,3 +143,23 @@ export function clauseView<T extends ClauseEncounter>(encounters: readonly T[], 
     },
   };
 }
+
+// Every encounter that uses up its family for at least one player, with the
+// players it locks - what the Pokédex card shows ("locked for Player 2 by
+// Player 1's Charmander on Route 3"). Built from clauseView, so it follows the
+// same rules as every other consumer.
+export function clauseLocks<T extends ClauseEncounter>(
+  encounters: readonly T[],
+  ctx: ClauseContext,
+): { encounter: T; lockedFor: Player[] }[] {
+  const view = clauseView(encounters, ctx);
+  const lockedBy = new Map(
+    ctx.players.map((player) => [player, new Set(view.lockingEncounters(player).map((e) => e.id))]),
+  );
+  return encounters
+    .map((encounter) => ({
+      encounter,
+      lockedFor: ctx.players.filter((player) => lockedBy.get(player)?.has(encounter.id)),
+    }))
+    .filter((entry) => entry.lockedFor.length > 0);
+}

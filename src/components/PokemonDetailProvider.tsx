@@ -6,6 +6,21 @@ import type { Moveset, MovesTable, MoveTypeHistoryEntry } from "@/lib/learnset";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { PokemonDetailModal } from "@/components/PokemonDetailModal";
+import type { EncounterStatus, Player } from "@/generated/prisma/enums";
+
+// One encounter that uses up its evolution family under the Species Clause,
+// ready to print on the card (see clauseLockInfo in RunProviders).
+export type ClauseLockInfo = {
+  familyId: number;
+  // The players who may no longer catch this family because of it.
+  lockedFor: Player[];
+  // Whose encounter it was, what it was (nickname when the run uses them),
+  // where (null for a place that is not a route) and how it ended.
+  player: Player;
+  name: string;
+  route: string | null;
+  status: EncounterStatus;
+};
 
 // Lets any component under a run-scoped page open the Pokédex detail card
 // (Pokémon tab sprite click, Encounter/Catchrate info buttons, Pokédex rows)
@@ -26,6 +41,8 @@ export function PokemonDetailProvider({
   generation,
   dexLimit,
   lang,
+  clauseLocks = [],
+  soloRun = true,
   children,
 }: {
   pokemonList: Pokemon[];
@@ -39,6 +56,9 @@ export function PokemonDetailProvider({
   generation: number;
   dexLimit: number;
   lang: Lang;
+  clauseLocks?: ClauseLockInfo[];
+  // One player: the card leaves out "for whom" and "whose".
+  soloRun?: boolean;
   children: React.ReactNode;
 }) {
   const [opened, setOpened] = useState<{ id: number; bodyId: number | null } | null>(null);
@@ -65,6 +85,8 @@ export function PokemonDetailProvider({
           generation={generation}
           dexLimit={dexLimit}
           lang={lang}
+          clauseLocks={clauseLocks}
+          soloRun={soloRun}
           // Evolution links and a fusion's component tiles both open a
           // single species' card.
           onSelect={(id) => setOpened({ id, bodyId: null })}

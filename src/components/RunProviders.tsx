@@ -17,7 +17,48 @@ import { BlindflugProvider } from "@/components/BlindflugProvider";
 import { SpriteSetProvider } from "@/components/SpriteSetProvider";
 import { CanonicalRun } from "@/components/CanonicalRun";
 import { PlayerNamesProvider } from "@/components/PlayerNamesProvider";
-import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
+import { PokemonDetailProvider, type ClauseLockInfo } from "@/components/PokemonDetailProvider";
+import { prisma } from "@/lib/prisma";
+import { clauseLocks } from "@/lib/speciesClause";
+import { getBoundRoutes } from "@/lib/runPage";
+import { getRoutesForRun } from "@/lib/runRoutes";
+import { getPokemonByIdForGame } from "@/lib/gameData";
+import { pokemonName, routeName } from "@/lib/i18n/localize";
+
+// What the Pokédex card says about the Species Clause: every encounter of the
+// run that uses up its family, for whom (src/lib/speciesClause.ts). Nothing
+// with the clause switched off.
+async function clauseLockInfo(run: ResolvedRun, game: GameInfo, lang: Lang): Promise<ClauseLockInfo[]> {
+  if (!run.settings.speciesClause) return [];
+  const [encounters, boundRouteOf, routes] = await Promise.all([
+    prisma.encounter.findMany({ where: { runId: run.runId } }),
+    getBoundRoutes(run.runId),
+    getRoutesForRun(run.runId, run.gameId),
+  ]);
+  const routeById = new Map(routes.map((route) => [route.id, route]));
+  const encounterById = new Map(encounters.map((e) => [e.id, e]));
+  return clauseLocks(encounters, { rules: run.settings, players: run.players, boundRouteOf }).map(
+    ({ encounter: e, lockedFor }) => {
+      const pokemon = getPokemonByIdForGame(game, e.pokemonId);
+      // A fusion body and a split-off body sit on hidden routes; name the
+      // place the catch belongs to instead.
+      const headRouteId = e.fusedIntoId !== null ? encounterById.get(e.fusedIntoId)?.routeId : undefined;
+      const routeId = boundRouteOf.get(e.routeId) ?? headRouteId ?? e.routeId;
+      const route = routeById.get(routeId);
+      const species = pokemon ? pokemonName(pokemon, lang) : `#${e.pokemonId}`;
+      // A nickname alone would not say which member of the family it was.
+      const nickname = run.settings.nicknames ? e.nickname : null;
+      return {
+        familyId: e.familyId,
+        lockedFor,
+        player: e.player,
+        name: nickname ? `${nickname} (${species})` : species,
+        route: route && !route.hidden ? routeName(route, lang) : null,
+        status: e.status,
+      };
+    },
+  );
+}
 
 // What every run-scoped page with Pokémon on it wraps its view in: the run's
 // Blindflug rule, sprite set, player names, the address-bar/version report
@@ -26,7 +67,7 @@ import { PokemonDetailProvider } from "@/components/PokemonDetailProvider";
 //
 // The optional props are for a page that has already read that data for its
 // own view - passing it on saves building the same table twice.
-export function RunProviders({
+export async function RunProviders({
   run,
   game,
   lang,
@@ -61,6 +102,8 @@ export function RunProviders({
             generation={getDataGenerationForGame(game)}
             dexLimit={game.dexLimit}
             lang={lang}
+            clauseLocks={await clauseLockInfo(run, game, lang)}
+            soloRun={run.players.length < 2}
           >
             {children}
           </PokemonDetailProvider>
