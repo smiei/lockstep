@@ -3,13 +3,13 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import ReactMarkdown from "react-markdown";
-import { applyRulePreset, saveRules, updateRunSettings } from "@/lib/actions";
+import { applyRulePreset, exportRouteOrder, saveRules, updateRunSettings } from "@/lib/actions";
 import { formatActionError } from "@/lib/actionErrors";
 import { useDialog } from "@/components/DialogProvider";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { PLAYER_NAME_MAX, type RunSettings } from "@/lib/runSettings";
-import { useDebugMode } from "@/lib/useDebugMode";
+import { DebugOrderDialog } from "@/components/DebugOrderDialog";
 import { CAP_TEAM_OFFSET_MAX } from "@/lib/levelCapRule";
 import { RunMode, type Player } from "@/generated/prisma/enums";
 import { useToast } from "@/components/ui/ToastProvider";
@@ -122,6 +122,11 @@ const CLAUSE_PARENTS: Partial<Record<BooleanSettingKey, BooleanSettingKey[]>> = 
   fusionLocksBothFamilies: ["speciesClause"],
 };
 
+// Children that can be set while their parent is off: the choice is kept for
+// whenever the parent comes on (Blindflug is often switched from the header
+// icon mid-session, so its options are prepared here beforehand).
+const PRESETTABLE_CHILDREN = new Set<BooleanSettingKey>(["blindflugTypes"]);
+
 // Toggles that only mean something with more than one player.
 const SOULLINK_ONLY_TOGGLES = new Set<BooleanSettingKey>([
   "speciesClausePerPlayer",
@@ -147,7 +152,7 @@ const EVOLUTION_TOGGLES: Partial<Record<BooleanSettingKey, EvolutionOverrideCate
 // Toggles that only mean something in a game with a second region.
 const KANTO_ONLY_TOGGLES = new Set<BooleanSettingKey>(["includeKanto"]);
 
-// One switch row, shared by the rule toggles and the debug switch below them.
+// One switch row of the rule toggles.
 // The whole row is the control; it used to be a 20x36px target sitting at the
 // far end.
 function ToggleRow({
@@ -247,8 +252,10 @@ export function RulesView({
   const [draft, setDraft] = useState(markdown);
   const [notesOpen, setNotesOpen] = useState(true);
   const [presetDialogOpen, setPresetDialogOpen] = useState(false);
-  // Per device, not per run setting - see useDebugMode.
-  const [debugMode, setDebugMode] = useDebugMode(runKey);
+  // The order report is fetched before its dialog opens, so the dialog needs
+  // no loading state and no effect.
+  const [orderText, setOrderText] = useState<string | null>(null);
+  const [exporting, startExport] = useTransition();
   const [pending, startTransition] = useTransition();
   // Optimistic toggle state; server state (possibly changed on another
   // device via live sync) wins whenever a refresh delivers new props -
@@ -334,6 +341,14 @@ export function RulesView({
     });
   }
 
+  function handleExportOrder() {
+    startExport(async () => {
+      const result = await exportRouteOrder(runKey);
+      if (result.success) setOrderText(result.text);
+      else toast.error(formatActionError(result.error, lang));
+    });
+  }
+
   function renderToggle(key: BooleanSettingKey) {
     const parents = CLAUSE_PARENTS[key] ?? [];
     return (
@@ -346,7 +361,7 @@ export function RulesView({
         // child switch, which is the whole point of the rule.
         disabled={
           pending ||
-          parents.some((parent) => !local[parent]) ||
+          (!PRESETTABLE_CHILDREN.has(key) && parents.some((parent) => !local[parent])) ||
           (key === "blindflug" && local.blindflugPermanent)
         }
         depth={parents.length}
@@ -593,19 +608,26 @@ export function RulesView({
             </Section>
           )}
 
-          {/* Not a rule of the run but a maintenance switch for correcting a
-              game pack, and unlike everything above it never leaves this
-              device. */}
-          <Section title={t.debugHeading}>
-            <Card padding="none" className="overflow-hidden">
-              <ToggleRow
-                label={t.toggles.debugMode.label}
-                description={t.toggles.debugMode.description}
-                on={debugMode}
-                onToggle={() => setDebugMode(!debugMode)}
-              />
+          {/* Not a rule of the run but a report for correcting a game pack's
+              route list. The order is recorded on every save (RouteEntry),
+              so the export is always there. */}
+          <Section title={t.order.heading}>
+            <Card>
+              <p className="mb-3 max-w-prose text-xs text-ink-muted">{t.order.description}</p>
+              <Button size="sm" loading={exporting} onClick={handleExportOrder}>
+                {translations[lang].tracker.debug.export}
+              </Button>
             </Card>
           </Section>
+          {orderText !== null && (
+            <DebugOrderDialog
+              open
+              onClose={() => setOrderText(null)}
+              lang={lang}
+              text={orderText}
+              filename="encounter-order.txt"
+            />
+          )}
         </div>
       </div>
     </div>

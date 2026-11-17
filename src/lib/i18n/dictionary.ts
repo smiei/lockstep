@@ -543,7 +543,11 @@ const de = {
     groups: { catching: "Fangen & Clauses", caps: "Level-Caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run & Spiel" },
     summaryHeading: "Aktive Regeln",
     summaryNone: "keine aktiv",
-    debugHeading: "Debug",
+    order: {
+      heading: "Encounter-Reihenfolge",
+      description:
+        "Die App zeichnet immer auf, in welcher Reihenfolge Routen zum ersten Mal eingetragen wurden. Der Export hilft, die Routenliste eines Spielpakets zu korrigieren.",
+    },
     heading: "Regeln",
     edit: "Bearbeiten",
     save: "Speichern",
@@ -644,12 +648,7 @@ const de = {
       blindflugTypes: {
         label: "Auch Pokémon-Typen ausblenden",
         description:
-          "Blendet zusätzlich die Typen der Pokémon aus – im Team, im Pokédex, in Kampf & Fang und bei jedem anderen Pokémon. Es bleiben das Encounter- und Link-Tracking und die Typentabelle.",
-      },
-      debugMode: {
-        label: "Debug: Encounter-Reihenfolge aufzeichnen",
-        description:
-          "Blendet im Encounter-Tab einen Export der Reihenfolge ein, in der Routen eingetragen wurden – zum Korrigieren der routes.json eines Spielpakets. Aufgezeichnet wird immer; der Schalter blendet nur den Export ein und gilt nur auf diesem Gerät.",
+          "Blendet zusätzlich die Typen der Pokémon aus – im Team, im Pokédex, in Kampf & Fang und bei jedem anderen Pokémon. Es bleiben das Encounter- und Link-Tracking und die Typentabelle. Lässt sich schon vorher einstellen und wirkt, sobald Blindflug an ist – auch wenn du ihn über das Symbol oben einschaltest.",
       },
       speciesClause: {
         label: "Species Clause",
@@ -1593,7 +1592,11 @@ const en: Dictionary = {
     groups: { catching: "Catching & clauses", caps: "Level caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run & game" },
     summaryHeading: "Active rules",
     summaryNone: "none active",
-    debugHeading: "Debug",
+    order: {
+      heading: "Encounter order",
+      description:
+        "The app always records the order in which routes were first entered. The export helps to correct a game pack’s route list.",
+    },
     heading: "Rules",
     edit: "Edit",
     save: "Save",
@@ -1693,12 +1696,7 @@ const en: Dictionary = {
       blindflugTypes: {
         label: "Hide Pokémon types too",
         description:
-          "Also hides the Pokémon's own types - on the team, in the Pokédex, in Battle & Catch and everywhere else. What stays is the encounter and link tracking and the type chart.",
-      },
-      debugMode: {
-        label: "Debug: record encounter order",
-        description:
-          "Shows an export of the order routes were entered in on the Encounter tab – for correcting a game pack’s routes.json. The order is always recorded; this only reveals the export, and only on this device.",
+          "Also hides the Pokémon's own types - on the team, in the Pokédex, in Battle & Catch and everywhere else. What stays is the encounter and link tracking and the type chart. Can be set in advance and takes effect as soon as Blindflug is on, also when you switch it on with the icon at the top.",
       },
       speciesClause: {
         label: "Species Clause",
@@ -2638,7 +2636,11 @@ const fr: Dictionary = {
     groups: { catching: "Captures et clauses", caps: "Level caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run et jeu" },
     summaryHeading: "Règles actives",
     summaryNone: "aucune active",
-    debugHeading: "Débogage",
+    order: {
+      heading: "Ordre des rencontres",
+      description:
+        "L’app enregistre toujours l’ordre dans lequel les routes ont été saisies pour la première fois. L’export aide à corriger la liste des routes d’un pack.",
+    },
     heading: "Règles",
     edit: "Modifier",
     save: "Enregistrer",
@@ -2738,12 +2740,7 @@ const fr: Dictionary = {
       blindflugTypes: {
         label: "Masquer aussi les types des Pokémon",
         description:
-          "Masque en plus les types des Pokémon - dans l'équipe, le Pokédex, Combat & Capture et partout ailleurs. Il reste le suivi des rencontres et des liens et la table des types.",
-      },
-      debugMode: {
-        label: "Débogage : enregistrer l’ordre des rencontres",
-        description:
-          "Affiche dans l’onglet Rencontres un export de l’ordre dans lequel les routes ont été saisies – pour corriger le routes.json d’un pack. L’ordre est toujours enregistré ; ceci ne fait qu’afficher l’export, et seulement sur cet appareil.",
+          "Masque en plus les types des Pokémon - dans l'équipe, le Pokédex, Combat & Capture et partout ailleurs. Il reste le suivi des rencontres et des liens et la table des types. Peut être réglé à l'avance et s'applique dès que le Blindflug est activé, aussi via l'icône en haut.",
       },
       speciesClause: {
         label: "Species Clause",
@@ -3684,7 +3681,11 @@ const es: Dictionary = {
     groups: { catching: "Capturas y cláusulas", caps: "Level caps", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run y juego" },
     summaryHeading: "Reglas activas",
     summaryNone: "ninguna activa",
-    debugHeading: "Depuración",
+    order: {
+      heading: "Orden de encuentros",
+      description:
+        "La app siempre registra el orden en que se anotaron las rutas por primera vez. La exportación ayuda a corregir la lista de rutas de un paquete.",
+    },
     heading: "Reglas",
     edit: "Editar",
     save: "Guardar",
@@ -3784,12 +3785,7 @@ const es: Dictionary = {
       blindflugTypes: {
         label: "Ocultar también los tipos de los Pokémon",
         description:
-          "Oculta además los tipos de los Pokémon: en el equipo, en la Pokédex, en Combate y Captura y en cualquier otro lugar. Quedan el seguimiento de encuentros y vínculos y la tabla de tipos.",
-      },
-      debugMode: {
-        label: "Depuración: registrar el orden de encuentros",
-        description:
-          "Muestra en la pestaña Encuentros una exportación del orden en que se introdujeron las rutas, para corregir el routes.json de un paquete. El orden siempre se registra; esto solo muestra la exportación, y solo en este dispositivo.",
+          "Oculta además los tipos de los Pokémon: en el equipo, en la Pokédex, en Combate y Captura y en cualquier otro lugar. Quedan el seguimiento de encuentros y vínculos y la tabla de tipos. Se puede ajustar de antemano y se aplica en cuanto Blindflug está activo, también al activarlo con el icono de arriba.",
       },
       speciesClause: {
         label: "Species Clause",
@@ -4730,7 +4726,11 @@ const it: Dictionary = {
     groups: { catching: "Catture e clausole", caps: "Level cap", blindflug: "Blindflug", randomizer: "Randomizer", run: "Run e gioco" },
     summaryHeading: "Regole attive",
     summaryNone: "nessuna attiva",
-    debugHeading: "Debug",
+    order: {
+      heading: "Ordine degli incontri",
+      description:
+        "L’app registra sempre l’ordine in cui i percorsi sono stati inseriti per la prima volta. L’esportazione aiuta a correggere l’elenco dei percorsi di un pacchetto.",
+    },
     heading: "Regole",
     edit: "Modifica",
     save: "Salva",
@@ -4830,12 +4830,7 @@ const it: Dictionary = {
       blindflugTypes: {
         label: "Nascondi anche i tipi dei Pokémon",
         description:
-          "Nasconde anche i tipi dei Pokémon: nella squadra, nel Pokédex, in Lotta e Cattura e ovunque altro. Restano il tracciamento di incontri e legami e la tabella dei tipi.",
-      },
-      debugMode: {
-        label: "Debug: registra l’ordine degli incontri",
-        description:
-          "Mostra nella scheda Incontri un’esportazione dell’ordine in cui i percorsi sono stati inseriti, per correggere il routes.json di un pacchetto. L’ordine viene sempre registrato; questo mostra solo l’esportazione, e solo su questo dispositivo.",
+          "Nasconde anche i tipi dei Pokémon: nella squadra, nel Pokédex, in Lotta e Cattura e ovunque altro. Restano il tracciamento di incontri e legami e la tabella dei tipi. Si può impostare in anticipo e vale non appena Blindflug è attivo, anche se lo attivi con l'icona in alto.",
       },
       speciesClause: {
         label: "Species Clause",

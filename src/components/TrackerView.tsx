@@ -1,7 +1,7 @@
 "use client";
 
 import { RegionHeading } from "@/components/RegionHeading";
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { usePersistentState } from "@/lib/usePersistentState";
 import type { Route, Pokemon } from "@/lib/data";
 import type { Encounter, Player } from "@/generated/prisma/client";
@@ -10,16 +10,11 @@ import type { Lang } from "@/lib/i18n/dictionary";
 import { translations } from "@/lib/i18n/dictionary";
 import { routeName } from "@/lib/i18n/localize";
 import { isRouteDone, computeRouteProgress } from "@/lib/progress";
-import { exportRouteOrder } from "@/lib/actions";
-import { formatActionError } from "@/lib/actionErrors";
 import { EncounterEditor } from "@/components/EncounterEditor";
 import { CustomRoutesDialog } from "@/components/CustomRoutesDialog";
-import { DebugOrderDialog } from "@/components/DebugOrderDialog";
-import { useToast } from "@/components/ui/ToastProvider";
 import { ProgressBar } from "@/components/ProgressBar";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import type { RunSettings } from "@/lib/runSettings";
-import { useDebugMode } from "@/lib/useDebugMode";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { EmptyState, PageHeader } from "@/components/ui/Page";
@@ -101,15 +96,6 @@ export function TrackerView({
   // the one route wanted right now, unlike the "open only" habit.
   const [routeQuery, setRouteQuery] = useState("");
   const [customOpen, setCustomOpen] = useState(false);
-  // The report is fetched before the dialog opens rather than inside it, so
-  // the dialog needs no loading state and no effect (which would land on the
-  // set-state-in-effect lint baseline).
-  const [orderText, setOrderText] = useState<string | null>(null);
-  const [exporting, startExport] = useTransition();
-  const toast = useToast();
-  // Per device: the phone in the same run must not sprout debug controls
-  // because the PC switched them on.
-  const [debugMode] = useDebugMode(runKey);
 
   // Every route in display order, for the "insert after" picker - statics
   // included, since an added location may well belong after one, but not the
@@ -126,14 +112,6 @@ export function TrackerView({
       // confirmation says how many.
       encounterCount: encounters.filter((e) => e.routeId === route.id).length,
     }));
-
-  function handleExportOrder() {
-    startExport(async () => {
-      const result = await exportRouteOrder(runKey);
-      if (result.success) setOrderText(result.text);
-      else toast.error(formatActionError(result.error, lang));
-    });
-  }
 
   // "statics" rule off = static locations aren't tracked at all. The full
   // `routes` array still goes to the editors below - it's their lookup table
@@ -310,11 +288,6 @@ export function TrackerView({
           <Button size="sm" onClick={() => setCustomOpen(true)}>
             {tTracker.custom.manage}
           </Button>
-          {debugMode && (
-            <Button size="sm" loading={exporting} onClick={handleExportOrder}>
-              {tTracker.debug.export}
-            </Button>
-          )}
           <ProgressBar
             done={progress.done}
             total={progress.total}
@@ -334,15 +307,6 @@ export function TrackerView({
         routeOptions={routeOptions}
         customRoutes={customRoutes}
       />
-      {orderText !== null && (
-        <DebugOrderDialog
-          open
-          onClose={() => setOrderText(null)}
-          lang={lang}
-          text={orderText}
-          filename={"encounter-order.txt"}
-        />
-      )}
 
       {visible.length === 0 && needle ? (
         <EmptyState
