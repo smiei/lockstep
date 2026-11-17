@@ -272,6 +272,7 @@ export function TeamBar({
                         showRoute={link.linkIds.length > 1}
                         variant="specimen"
                         lang={lang}
+                        anchor
                       >
                         {renderControls?.(e)}
                       </EncounterTile>

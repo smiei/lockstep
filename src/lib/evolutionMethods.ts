@@ -408,7 +408,7 @@ const PARTY_SPECIES_LABELS: Record<Lang, Record<string, string>> = {
   },
 };
 
-function itemLabel(slug: string, lang: Lang): string {
+export function itemLabel(slug: string, lang: Lang): string {
   return ITEM_LABELS[lang][slug] ?? slug;
 }
 

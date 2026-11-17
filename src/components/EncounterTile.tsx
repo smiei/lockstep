@@ -8,6 +8,7 @@ import { PokemonSprite } from "@/components/PokemonSprite";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { SparkleIcon } from "@/components/ActionIcons";
+import { encounterAnchorId } from "@/lib/evolutionItems";
 
 // One Pokémon's display inside a team tray or a Box entry: sprite, name,
 // types, player/route/static line, rank·BST, plus any extra controls
@@ -19,6 +20,10 @@ import { SparkleIcon } from "@/components/ActionIcons";
 // side by side in their tray. `compact` is the Box column's: one dense row -
 // a small sprite, the text, and the controls beside it. `row` is the plain
 // sprite-beside-text layout.
+// A tile reached through its fragment scrolls clear of the sticky header and
+// shows where the jump landed.
+const ANCHOR_CLASS = "scroll-mt-24 rounded-md target:bg-hover";
+
 export function EncounterTile({
   encounter,
   isDead,
@@ -26,6 +31,7 @@ export function EncounterTile({
   showRoute = false,
   variant = "row",
   lang,
+  anchor = false,
   children,
 }: {
   encounter: EncounterView;
@@ -36,6 +42,10 @@ export function EncounterTile({
   showRoute?: boolean;
   variant?: "row" | "compact" | "specimen";
   lang: Lang;
+  // Carries the Pokémon's fragment id (encounterAnchorId) for links from
+  // other tabs. Only one tile per Pokémon may set it - the team drawer's, or
+  // the Box's when it is not on the team.
+  anchor?: boolean;
   children?: React.ReactNode;
 }) {
   const t = translations[lang];
@@ -43,6 +53,7 @@ export function EncounterTile({
   const playerLabel = usePlayerLabel();
   const specimen = variant === "specimen";
   const compact = variant === "compact";
+  const anchorProps = anchor ? { id: encounterAnchorId(encounter.id) } : {};
   const infoParts = [
     ...(!isClassic ? [playerLabel(encounter.player)] : []),
     ...(showRoute ? [encounter.routeName] : []),
@@ -130,7 +141,7 @@ export function EncounterTile({
     ];
     const lead = rowInfo.length > 0 ? `${rowInfo.join(" · ")} · ` : "";
     return (
-      <div className="flex w-full flex-wrap items-center gap-x-2.5 gap-y-1">
+      <div {...anchorProps} className={`flex w-full flex-wrap items-center gap-x-2.5 gap-y-1 ${ANCHOR_CLASS}`}>
         {spriteSlot}
         {/* min-w-40: where the text would get narrower than that, the button
             wraps to a line of its own instead of squeezing the text into a
@@ -159,11 +170,12 @@ export function EncounterTile({
 
   return (
     <div
-      className={
+      {...anchorProps}
+      className={`${
         specimen
           ? "flex w-full min-w-0 flex-col items-center gap-1 text-center"
           : "flex w-full items-center gap-3"
-      }
+      } ${ANCHOR_CLASS}`}
     >
       {spriteSlot}
       <div

@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
+import Link from "next/link";
 import { Player, RunMode } from "@/generated/prisma/enums";
 import type { EffectivenessTable } from "@/lib/effectiveness";
 import type { Lang } from "@/lib/i18n/dictionary";
@@ -22,6 +23,7 @@ import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
 import { GameCover } from "@/components/GameCover";
 import { teamLevel } from "@/lib/levelCapRule";
 import { LabelRow, SpecimenLabel } from "@/components/ui/SpecimenLabel";
+import { encounterAnchorId, type EvolutionItemKind } from "@/lib/evolutionItems";
 
 export type OverviewStats = {
   perPlayer: {
@@ -64,6 +66,28 @@ export type OverviewMemorialEntry = {
   recorded: boolean;
   sortIndex: number;
   diedAt: number | null;
+};
+
+// One player's evolution items (see the Overview page): each item once, with
+// every living Pokémon that needs it for the rest of its line.
+export type OverviewEvolutionItems = {
+  player: Player;
+  items: {
+    item: string;
+    kind: EvolutionItemKind;
+    entries: {
+      encounterId: number;
+      pokemonId: number;
+      name: string;
+      // The stage that uses the item when it is not the Pokémon itself yet
+      // (Oddish needs the Leaf Stone "via Gloom").
+      fromName: string | null;
+      toId: number;
+      toName: string;
+      alternative: boolean;
+      onTeam: boolean;
+    }[];
+  }[];
 };
 
 // A card heading with an "i" that folds an explanation out underneath. The
@@ -131,6 +155,7 @@ export function OverviewView({
   levelCapMarkerAt,
   badges,
   deathPointOptions,
+  evolutionItems,
   hasMoveData = true,
   game,
 }: {
@@ -152,6 +177,7 @@ export function OverviewView({
   levelCapMarkerAt: number | null;
   badges: OverviewBadge[];
   deathPointOptions: DeathPointOption[];
+  evolutionItems: OverviewEvolutionItems[];
   // False for a game pack without learnset data (Infinite Fusion): every
   // type would otherwise read as an offensive gap.
   hasMoveData?: boolean;
@@ -517,6 +543,65 @@ export function OverviewView({
             ))}
           </ul>
         )}
+      </Section>
+
+      {/* Evolution items: a shopping list per player, one tray each, the
+          item as the heading and the Pokémon that need it under it. Each
+          Pokémon links to its tile on the Team tab. */}
+      <Section title={t.evoItems.heading}>
+        <p className="mb-3 max-w-prose text-xs text-ink-muted">{t.evoItems.hint}</p>
+        <div className="grid gap-4 lg:grid-cols-2">
+          {evolutionItems.map(({ player, items }) => (
+            <Card key={player} className="min-w-0">
+              {!isClassic && <h3 className="mb-3 border-b border-line-strong pb-2 text-base font-bold tracking-tight text-ink">{playerLabel(player)}</h3>}
+              {items.length === 0 ? (
+                <p className="text-sm text-ink-muted">{t.evoItems.empty}</p>
+              ) : (
+                <ul className="divide-y divide-line">
+                  {items.map((group) => (
+                    <li key={`${group.kind}:${group.item}`} className="py-2 first:pt-0 last:pb-0">
+                      <p className="text-sm font-semibold text-ink">
+                        {group.item}
+                        {group.kind !== "use" && (
+                          <span className="font-normal text-ink-subtle">
+                            {" "}
+                            · {group.kind === "held" ? t.evoItems.held : t.evoItems.trade}
+                          </span>
+                        )}
+                      </p>
+                      <ul className="mt-1 flex flex-col">
+                        {group.entries.map((entry) => (
+                          <li key={`${entry.encounterId}-${entry.toId}`}>
+                            <Link
+                              href={`/links?run=${runKey}#${encounterAnchorId(entry.encounterId)}`}
+                              className="flex min-h-10 items-center gap-2 rounded-md px-1 text-sm text-ink transition-colors hover:bg-hover"
+                            >
+                              <PokemonSprite pokemonId={entry.pokemonId} name={entry.name} size="sm" />
+                              <span className="min-w-0 flex-1">
+                                <span className="font-medium">{entry.name}</span>
+                                <span className="text-ink-muted">
+                                  {" "}
+                                  → {entry.toName}
+                                  {entry.fromName && ` (${t.evoItems.via(entry.fromName)})`}
+                                </span>
+                                {entry.alternative && (
+                                  <span className="text-xs text-ink-subtle"> · {t.evoItems.alternative}</span>
+                                )}
+                              </span>
+                              <span className="shrink-0 font-mono text-xs text-ink-subtle">
+                                {entry.onTeam ? t.evoItems.team : t.evoItems.box}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Card>
+          ))}
+        </div>
       </Section>
     </div>
   );

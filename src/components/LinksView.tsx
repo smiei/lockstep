@@ -359,6 +359,8 @@ export function LinksView({
               showRoute={link.linkIds.length > 1}
               variant="compact"
               lang={lang}
+              // On the team, the drawer's tile is the jump target.
+              anchor={!onTeam}
             >
               {encounterControls(e, isDead, true)}
             </EncounterTile>

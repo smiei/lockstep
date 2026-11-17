@@ -1,4 +1,5 @@
 import {
+  getEvolutions,
   getGameOrDefault,
   getGameCover,
   getLevelCaps,
@@ -9,7 +10,10 @@ import {
   getPokemonListForGame,
   getAttackTypesForGame,
   getLearnsetForGame,
+  isInDex,
 } from "@/lib/gameData";
+import { evolutionItemSteps } from "@/lib/evolutionItems";
+import { itemLabel } from "@/lib/evolutionMethods";
 import { teamOffensiveCoverage } from "@/lib/effectiveness";
 import { attackTypesAtLevel } from "@/lib/learnset";
 import { resolveEncounterMon } from "@/lib/encounterMon";
@@ -33,6 +37,7 @@ import {
   OverviewView,
   type OverviewBadge,
   type OverviewDeathTally,
+  type OverviewEvolutionItems,
   type OverviewMemorialEntry,
   type OverviewStats,
 } from "@/components/OverviewView";
@@ -306,6 +311,55 @@ export default async function OverviewPage({
     }
   }
 
+  // --- Evolution items per player: what every living Pokémon (team and box)
+  // still needs for the rest of its line, grouped by item.
+  const evolutionById = new Map(getEvolutions(evoOptions).map((entry) => [entry.id, entry]));
+  const inGame = (id: number) => isInDex(game, id);
+  const nameOfId = (id: number) => {
+    const pokemon = getPokemonByIdForGame(game, id);
+    return pokemon ? pokemonName(pokemon, lang) : `#${id}`;
+  };
+  const evolutionItems: OverviewEvolutionItems[] = players.map((player) => {
+    const byItem = new Map<string, OverviewEvolutionItems["items"][number]>();
+    for (const link of aliveLinks) {
+      for (const e of link.encounters) {
+        if (e.player !== player || e.status !== EncounterStatus.CAUGHT) continue;
+        // A forme evolves like its species.
+        const pokemon = getPokemonByIdForGame(game, e.currentPokemonId);
+        const startId = evolutionById.has(e.currentPokemonId)
+          ? e.currentPokemonId
+          : (pokemon?.baseId ?? e.currentPokemonId);
+        const species = nameOfId(e.currentPokemonId);
+        const nickname = settings.nicknames ? e.nickname : null;
+        for (const step of evolutionItemSteps(startId, evolutionById, inGame)) {
+          const key = `${step.kind}:${step.item}`;
+          const group = byItem.get(key) ?? {
+            item: itemLabel(step.item, lang),
+            kind: step.kind,
+            entries: [],
+          };
+          group.entries.push({
+            encounterId: e.id,
+            pokemonId: e.currentPokemonId,
+            name: nickname ? `${nickname} (${species})` : species,
+            fromName: step.fromId === startId ? null : nameOfId(step.fromId),
+            toId: step.toId,
+            toName: nameOfId(step.toId),
+            alternative: step.alternative,
+            onTeam: onTeamLinkIds.has(link.id),
+          });
+          byItem.set(key, group);
+        }
+      }
+    }
+    const items = [...byItem.values()].sort((a, b) => a.item.localeCompare(b.item, lang));
+    // The team first, then the box; each by name.
+    for (const group of items) {
+      group.entries.sort((a, b) => Number(b.onTeam) - Number(a.onTeam) || a.name.localeCompare(b.name, lang));
+    }
+    return { player, items };
+  });
+
   // Chronological by Journey progress. Deaths recorded before this was
   // tracked (sortIndex -Infinity) stay at the top in their existing route
   // order until edited; equal progress falls back to when it was marked.
@@ -355,6 +409,7 @@ export default async function OverviewPage({
         stats={stats}
         deathTally={deathTally}
         memorial={memorial}
+        evolutionItems={evolutionItems}
         runKey={runKey}
         deathPointOptions={levelCapItems.map((cap) => ({
           id: cap.id,
