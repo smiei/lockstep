@@ -19,6 +19,7 @@ import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { usePokemonDetail } from "@/components/PokemonDetailProvider";
 import { DeathPointPicker, type DeathPointOption } from "@/components/DeathPointPicker";
 import { Card } from "@/components/ui/Card";
+import { ButtonLink } from "@/components/ui/Button";
 import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
 import { GameCover } from "@/components/GameCover";
 import { teamLevel } from "@/lib/levelCapRule";
@@ -247,6 +248,9 @@ export function OverviewView({
     <div>
       <PageHeader title={t.heading}>
         <div className="flex items-center gap-3">
+          <ButtonLink size="sm" href={`/stats?run=${runKey}`}>
+            {translations[lang].stats.overviewLink}
+          </ButtonLink>
           <span className="font-mono text-xs text-ink-muted">{game.name}</span>
           <GameCover src={game.cover} name={game.name} size="sm" />
         </div>

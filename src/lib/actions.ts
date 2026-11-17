@@ -19,7 +19,7 @@ import {
 import { EncounterStatus, LinkStatus, Player, RunMode, type Prisma, type Run } from "@/generated/prisma/client";
 import { getRouteForRun, getRoutesForRun, nextCustomRouteId } from "@/lib/runRoutes";
 import { CUSTOM_ROUTE_NAME_MAX, isCustomRouteId } from "@/lib/customRoutes";
-import { formedLinks, groupSoulLinks, teamSlotsNeeded } from "@/lib/fusionGroups";
+import { formedLinks, groupSoulLinks, teamLinkIds, teamSlotsNeeded } from "@/lib/fusionGroups";
 import { clampPlayerCount, runPlayers } from "@/lib/players";
 import { localizeName } from "@/lib/i18n/localize";
 import type { ActionError } from "@/lib/actionErrors";
@@ -42,6 +42,7 @@ import {
 import { parseCapTeamOffset } from "@/lib/levelCapRule";
 import { levelCapsInRun } from "@/lib/regions";
 import { nextOpenCapId } from "@/lib/deathPoint";
+import type { TeamSnapshotMember } from "@/lib/runStats";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { getViewer, isLockedOut, joinRun, mayDeleteRun, visibleRunsWhere } from "@/lib/auth";
 
@@ -1192,6 +1193,35 @@ export async function revertEvolution(runKey: string, encounterId: number): Prom
   return { success: true };
 }
 
+// The team as it stands, for the record of who won a fight (statistics page).
+// Every living link whose fusion group holds a slot; a fused body is folded
+// into its host, as the Team tab shows it.
+async function teamSnapshot(runId: number): Promise<TeamSnapshotMember[]> {
+  const links = await prisma.soulLink.findMany({
+    where: { runId, status: LinkStatus.ALIVE },
+    include: { encounters: true },
+  });
+  const onTeam = teamLinkIds(links);
+  const team = links
+    .filter((link) => onTeam.has(link.id))
+    .sort((a, b) => (a.teamPosition ?? TEAM_SNAPSHOT_LAST) - (b.teamPosition ?? TEAM_SNAPSHOT_LAST));
+  const encounters = team.flatMap((link) => link.encounters);
+  const ids = new Set(encounters.map((e) => e.id));
+  const donorOf = new Map(
+    encounters.filter((e) => e.fusedIntoId !== null).map((e) => [e.fusedIntoId as number, e]),
+  );
+  return encounters
+    .filter((e) => !(e.fusedIntoId !== null && ids.has(e.fusedIntoId)))
+    .map((e) => ({
+      player: e.player,
+      routeId: e.routeId,
+      pokemonId: e.currentPokemonId,
+      bodyPokemonId: donorOf.get(e.id)?.currentPokemonId ?? null,
+      nickname: e.nickname,
+    }));
+}
+const TEAM_SNAPSHOT_LAST = 99;
+
 export type ToggleLevelCapResult =
   | { success: true; defeated: boolean }
   | { success: false; error: ActionError };
@@ -1212,10 +1242,14 @@ export async function toggleLevelCapDefeated(
   });
   const nextDefeated = !(existing?.defeated ?? false);
 
+  // Statistics: when it was won and with which team; undoing forgets both.
+  const record = nextDefeated
+    ? { defeatedAt: new Date(), teamJson: JSON.stringify(await teamSnapshot(runId)) }
+    : { defeatedAt: null, teamJson: null };
   await prisma.levelCapProgress.upsert({
     where: { runId_levelCapId: { runId, levelCapId } },
-    create: { runId, levelCapId, defeated: nextDefeated },
-    update: { defeated: nextDefeated },
+    create: { runId, levelCapId, defeated: nextDefeated, ...record },
+    update: { defeated: nextDefeated, ...record },
   });
 
   revalidatePath("/levelcaps");

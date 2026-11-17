@@ -194,6 +194,13 @@ model LevelCapProgress {
   runId      Int
   levelCapId Int
   defeated   Boolean  @default(false)
+  // Since 7.0, for the statistics page (src/lib/runStats.ts): when the fight
+  // was ticked off, and the team that won it as JSON (TeamSnapshotMember[]:
+  // player, routeId, Pokémon - by route, not encounter id, so a backup
+  // restores it as is). Both null while not defeated; rows defeated before
+  // 7.0 got defeatedAt from updatedAt and have no team.
+  defeatedAt DateTime?
+  teamJson   String?
   updatedAt  DateTime @updatedAt
   run        Run      @relation(fields: [runId], references: [id], onDelete: Cascade)
 

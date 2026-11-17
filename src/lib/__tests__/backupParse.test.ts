@@ -184,3 +184,33 @@ describe("rulePresets (v6)", () => {
     expect(BACKUP_VERSION).toBe(7);
   });
 });
+
+describe("level cap progress (v7 statistics)", () => {
+  const run = (levelCapProgress: unknown[]) =>
+    envelope([
+      {
+        name: "Stats Run",
+        mode: "CLASSIC",
+        gameId: "firered",
+        rulesMarkdown: "",
+        settingsJson: "{}",
+        createdAt: "2026-01-01T00:00:00.000Z",
+        soulLinks: [],
+        encounters: [],
+        levelCapProgress,
+      },
+    ]);
+
+  it("reads when a fight was won and the team that won it", () => {
+    const team = JSON.stringify([{ player: "PLAYER1", routeId: 3, pokemonId: 4, bodyPokemonId: null, nickname: null }]);
+    const parsed = parseBackup(
+      run([{ levelCapId: 1, defeated: true, updatedAt: "2026-02-01T00:00:00.000Z", defeatedAt: "2026-01-15T00:00:00.000Z", teamJson: team }]),
+    )!;
+    expect(parsed.runs[0].levelCapProgress[0]).toMatchObject({ defeatedAt: "2026-01-15T00:00:00.000Z", teamJson: team });
+  });
+
+  it("leaves both null in an older file", () => {
+    const parsed = parseBackup(run([{ levelCapId: 1, defeated: true, updatedAt: "2026-02-01T00:00:00.000Z" }]))!;
+    expect(parsed.runs[0].levelCapProgress[0]).toMatchObject({ defeatedAt: null, teamJson: null });
+  });
+});

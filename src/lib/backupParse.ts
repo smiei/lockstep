@@ -31,7 +31,8 @@ export const BACKUP_FORMAT = "nuzlocke-tracker-backup";
 // 6 added `rulePresets`: the server's rule presets (Rules tab), which are not
 // tied to a run - every backup carries all of them, and an import adds the
 // ones whose name is missing, leaving existing presets alone.
-// 7 added `deathCapIsNext` on SoulLink (since 7.0 the death point names the
+// 7 added `defeatedAt`/`teamJson` on levelCapProgress (statistics) and
+// `deathCapIsNext` on SoulLink (since 7.0 the death point names the
 // next open fight, older rows the last one won - src/lib/deathPoint.ts);
 // missing = false, the old meaning, which is right for every older file.
 export const BACKUP_VERSION = 7;
@@ -94,6 +95,10 @@ export type BackupLevelCapProgress = {
   levelCapId: number;
   defeated: boolean;
   updatedAt: string;
+  // Added in v7 (statistics): when the fight was won and the team that won
+  // it, as stored (LevelCapProgress.teamJson). null in older files.
+  defeatedAt: string | null;
+  teamJson: string | null;
 };
 
 export type BackupCustomRoute = {
@@ -272,6 +277,8 @@ export function parseBackup(json: string): BackupFile | null {
             levelCapId: num(lc.levelCapId),
             defeated: lc.defeated === true,
             updatedAt: isoString(lc.updatedAt),
+            defeatedAt: isoStringOrNull(lc.defeatedAt),
+            teamJson: typeof lc.teamJson === "string" ? lc.teamJson : null,
           }))
         : [],
       customRoutes: Array.isArray(rawRun.customRoutes)

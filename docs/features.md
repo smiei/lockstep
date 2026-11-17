@@ -77,6 +77,7 @@ Each row opens a detail card with:
 - type weaknesses;
 - evolutions with their conditions;
 - the full level-up move list with localized move names.
+- in a run with the Species Clause: whether the family is already used up, for which players, and by whose encounter on which route.
 
 ## Journey
 
@@ -96,7 +97,10 @@ A per-run dashboard. In a SoulLink run every number also breaks down per player.
 2. **Team coverage:**
    - defensive weaknesses;
    - offensive gaps: types nobody on the team hits super-effectively, judged against the last level cap you reached.
-3. **Memorial:** every fallen Pokémon by nickname, with who lost it, the cause, and the journey milestone the run had reached.
+3. **Memorial:** every fallen Pokémon by nickname, with who lost it, the cause, and the fight that was next on the journey when it died.
+4. **Evolution items:** per player, every item (stones, held and trade items) the living Pokémon on the team and in the box still need for the rest of their evolution line, grouped by item. Branches (Eevee, Gloom) are marked as one option. Each entry jumps to the Pokémon on the Team tab.
+
+A **Statistics** page (button in the Overview's header) follows the run along its journey: one segment per fight ("up to Brock", "up to Misty" ...), with each player's catches, missed encounters (fled or defeated) and deaths, a catch rate, and a **hall of fame** with the team every fight was won with. Teams are recorded from 7.0 on; fights won before that show their date only.
 
 ## Rules
 
@@ -109,10 +113,12 @@ Per-run rule toggles, grouped by theme (catching and clauses, level caps, Blindf
 - **Include Kanto** (only in games with Kanto as a second region, see the Encounter tab).
 
 On top of the toggles:
-- **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions. **Lock blind flight** (nested under it) keeps it on for runs played without any help: the header button can no longer switch it off for a quick peek, only the rule itself can. **Hide Pokémon types too** (also nested under it) takes away the Pokémon's own types as well - on the team, in the Pokédex (its type column), in Battle & Catch, and the Team tab's type filter - leaving the encounter and link tracking and the plain type chart.
+- **Blind flight** hides everything the app works out for you: type matchups, move lists and descriptions. **Lock blind flight** (nested under it) keeps it on for runs played without any help: the header button can no longer switch it off for a quick peek, only the rule itself can. **Hide Pokémon types too** (also nested under it, and settable in advance while blind flight is off) takes away the Pokémon's own types as well - on the team, in the Pokédex (its type column), in Battle & Catch, and the Team tab's type filter - leaving the encounter and link tracking and the plain type chart.
 - **Player names** replace "Player 1 / Player 2" everywhere.
 - **House rules** are a Markdown section, edited in the browser.
 - **Rule presets** carry a rule set from one playthrough to the next.
+- **A guided tour** explains the Rules tab group by group. It is offered on the first visit and can be started again from the tab's header or from Settings.
+- **Encounter order export:** the order in which routes were first entered is always recorded; the Rules tab exports it as a report for correcting a game pack's route list.
 
 ## Runs, games and players
 

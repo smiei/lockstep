@@ -123,6 +123,8 @@ function runToBackupRun(run: RunWithRelations): BackupRun {
       levelCapId: lc.levelCapId,
       defeated: lc.defeated,
       updatedAt: lc.updatedAt.toISOString(),
+      defeatedAt: lc.defeatedAt?.toISOString() ?? null,
+      teamJson: lc.teamJson,
     })),
     customRoutes: run.customRoutes.map((cr) => ({
       routeId: cr.routeId,
@@ -315,7 +317,15 @@ export async function applyBackup(backup: BackupFile): Promise<string[]> {
 
         for (const lc of run.levelCapProgress) {
           await tx.levelCapProgress.create({
-            data: { runId: createdRun.id, levelCapId: lc.levelCapId, defeated: lc.defeated },
+            data: {
+              runId: createdRun.id,
+              levelCapId: lc.levelCapId,
+              defeated: lc.defeated,
+              // A file older than v7 has no date: the last change is the best
+              // guess, as the migration assumed for existing rows.
+              defeatedAt: lc.defeated ? new Date(lc.defeatedAt ?? lc.updatedAt) : null,
+              teamJson: lc.defeated ? lc.teamJson : null,
+            },
           });
         }
 
