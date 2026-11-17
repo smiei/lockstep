@@ -133,6 +133,9 @@ export async function listCapSummaries(runs: Run[]): Promise<RunCapSummary[]> {
     const settings = parseRunSettings(run.settingsJson);
     const caps = levelCapsInRun(getLevelCaps(run.gameId), settings);
     const next = caps.find((cap) => cap.max_level !== null && !done.has(cap.id));
+    // The last capped fight won before it (all of them once every cap is done).
+    const before = next ? caps.slice(0, caps.indexOf(next)) : caps;
+    const previous = before.findLast((cap) => cap.max_level !== null && done.has(cap.id));
     const badgeCaps = caps.filter((cap) => cap.badge !== null);
     return {
       accessKey: run.accessKey,
@@ -144,6 +147,10 @@ export async function listCapSummaries(runs: Run[]): Promise<RunCapSummary[]> {
               level: next.max_level,
               team: teamLevel(next.max_level, settings.capTeamOffset),
             }
+          : null,
+      previous:
+        previous && previous.max_level !== null
+          ? { names: previous.names, team: teamLevel(previous.max_level, settings.capTeamOffset) }
           : null,
       badges: badgeCaps.filter((cap) => done.has(cap.id)).length,
       badgesTotal: badgeCaps.length,

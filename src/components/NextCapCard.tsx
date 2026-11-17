@@ -97,6 +97,22 @@ export function NextCapCard({
       ) : (
         <span className="mt-1 block text-sm font-bold text-ink">{t.allCapsDone}</span>
       )}
+      {/* The rail only (the phone's chip has no room): the lower number of
+          the last fight won, the level the rest of the team was held to
+          until then. */}
+      {summary.previous && (
+        <span
+          className="mt-2 flex items-baseline justify-between gap-2 text-xs text-ink-muted"
+          title={t.previousCapTitle(localizeName(summary.previous.names, lang), summary.previous.team)}
+        >
+          <span className="truncate">
+            {t.previousCap} · {localizeName(summary.previous.names, lang)}
+          </span>
+          <span className="shrink-0 font-mono text-base font-semibold leading-none tabular-nums text-ink">
+            {summary.previous.team}
+          </span>
+        </span>
+      )}
       {summary.badgesTotal > 0 && (
         <span className="mt-2 block border-t border-line pt-1.5 font-mono text-xs tabular-nums text-ink-muted">
           {t.badges(summary.badges, summary.badgesTotal)}

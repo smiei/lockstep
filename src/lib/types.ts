@@ -22,6 +22,10 @@ export type RunCapSummary = {
   // `team` is the level the rest of the team may reach under it (the run's
   // capTeamOffset), equal to `level` when the rule is 0.
   next: { names: LocalizedNames; location: LocalizedNames; level: number; team: number } | null;
+  // The last capped fight won before `next` (the rail's "old cap" line):
+  // `team` is that cap less the run's capTeamOffset - the "lower" number the
+  // Journey shows beside it. null before the first win.
+  previous: { names: LocalizedNames; team: number } | null;
   badges: number;
   badgesTotal: number;
 };

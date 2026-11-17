@@ -23,6 +23,8 @@ const de = {
     badges: (earned: number, total: number) => `${earned} von ${total} Orden`,
     allCapsDone: "Alle Level-Caps geschafft",
     capShort: "Cap",
+    previousCap: "Altes Cap",
+    previousCapTitle: (name: string, level: number) => `Der zuletzt geschlagene Kampf (${name}): der Rest des Teams bis Level ${level}`,
   },
   nav: {
     tracker: "Encounter",
@@ -1145,6 +1147,8 @@ const en: Dictionary = {
     badges: (earned: number, total: number) => `${earned} of ${total} badges`,
     allCapsDone: "Every level cap done",
     capShort: "Cap",
+    previousCap: "Old cap",
+    previousCapTitle: (name: string, level: number) => `The last fight won (${name}): the rest of the team up to level ${level}`,
   },
   nav: {
     tracker: "Encounter",
@@ -2250,6 +2254,8 @@ const fr: Dictionary = {
     badges: (earned: number, total: number) => `${earned} badges sur ${total}`,
     allCapsDone: "Tous les plafonds atteints",
     capShort: "Max.",
+    previousCap: "Ancien plafond",
+    previousCapTitle: (name: string, level: number) => `Le dernier combat gagné (${name}) : le reste de l’équipe jusqu’au niveau ${level}`,
   },
   nav: {
     tracker: "Rencontres",
@@ -3362,6 +3368,8 @@ const es: Dictionary = {
     badges: (earned: number, total: number) => `${earned} de ${total} medallas`,
     allCapsDone: "Todos los topes superados",
     capShort: "Tope",
+    previousCap: "Tope anterior",
+    previousCapTitle: (name: string, level: number) => `El último combate ganado (${name}): el resto del equipo hasta el nivel ${level}`,
   },
   nav: {
     tracker: "Encuentros",
@@ -4473,6 +4481,8 @@ const it: Dictionary = {
     badges: (earned: number, total: number) => `${earned} medaglie su ${total}`,
     allCapsDone: "Tutti i tetti superati",
     capShort: "Tetto",
+    previousCap: "Tetto precedente",
+    previousCapTitle: (name: string, level: number) => `L’ultimo combattimento vinto (${name}): il resto della squadra fino al livello ${level}`,
   },
   nav: {
     tracker: "Incontri",
