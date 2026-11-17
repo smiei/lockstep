@@ -327,25 +327,6 @@
     "max_level": 35
   },
   {
-    "id": 16,
-    "names": {
-      "de": "Rivale",
-      "en": "Rival",
-      "fr": "Rival",
-      "es": "Rival",
-      "it": "Rivale"
-    },
-    "location": {
-      "de": "Dukatia-Passage",
-      "en": "Goldenrod Tunnel",
-      "fr": "Doublon-Tunnel",
-      "es": "Túnel Trigal",
-      "it": "Fiortunnel"
-    },
-    "badge": null,
-    "max_level": 34
-  },
-  {
     "id": 17,
     "names": {
       "de": "Vorstand Lamda",
@@ -363,6 +344,25 @@
     },
     "badge": null,
     "max_level": 32
+  },
+  {
+    "id": 16,
+    "names": {
+      "de": "Rivale",
+      "en": "Rival",
+      "fr": "Rival",
+      "es": "Rival",
+      "it": "Rivale"
+    },
+    "location": {
+      "de": "Dukatia-Passage",
+      "en": "Goldenrod Tunnel",
+      "fr": "Doublon-Tunnel",
+      "es": "Túnel Trigal",
+      "it": "Fiortunnel"
+    },
+    "badge": null,
+    "max_level": 34
   },
   {
     "id": 18,

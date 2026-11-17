@@ -438,6 +438,25 @@
     "sprite": "Vorstand Lamda"
   },
   {
+    "id": 25,
+    "names": {
+      "de": "Silver",
+      "en": "Silver",
+      "fr": "Silver",
+      "es": "Silver",
+      "it": "Silver"
+    },
+    "location": {
+      "de": "Goldenrod Underground",
+      "en": "Goldenrod Underground",
+      "fr": "Goldenrod Underground",
+      "es": "Goldenrod Underground",
+      "it": "Goldenrod Underground"
+    },
+    "badge": null,
+    "max_level": 46
+  },
+  {
     "id": 21,
     "names": {
       "de": "Executive Proton",
@@ -515,25 +534,6 @@
     },
     "badge": null,
     "max_level": 50
-  },
-  {
-    "id": 25,
-    "names": {
-      "de": "Silver",
-      "en": "Silver",
-      "fr": "Silver",
-      "es": "Silver",
-      "it": "Silver"
-    },
-    "location": {
-      "de": "Goldenrod Underground",
-      "en": "Goldenrod Underground",
-      "fr": "Goldenrod Underground",
-      "es": "Goldenrod Underground",
-      "it": "Goldenrod Underground"
-    },
-    "badge": null,
-    "max_level": 46
   },
   {
     "id": 26,
