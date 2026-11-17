@@ -22,7 +22,7 @@ const REGION_LABELS = { main: "Johto", kanto: "Kanto" } as const;
 
 // A divider between the regions of a game that has two (HeartGold/SoulSilver),
 // the same as on the Encounter tab.
-type LevelCapWithProgress = LevelCap & { defeated: boolean };
+type LevelCapWithProgress = LevelCap & { defeated: boolean; skippedLevel?: number };
 
 export function LevelCapsView({
   runKey,
@@ -134,6 +134,15 @@ export function LevelCapsView({
               )}
             </div>
             <div className="text-xs text-ink-subtle">{t.maxLevel}</div>
+          </div>
+        )}
+        {/* A fight the run's cap rule skips (capsGymsOnly): its level in
+            brackets and smaller, so the opponent's strength is still known
+            without it reading as a cap. */}
+        {cap.max_level === null && cap.skippedLevel !== undefined && (
+          <div className="shrink-0 text-right" title={t.skippedCapTitle(cap.skippedLevel)}>
+            <div className="font-mono text-sm tabular-nums text-ink-muted">({cap.skippedLevel})</div>
+            <div className="text-xs text-ink-subtle">{t.noCap}</div>
           </div>
         )}
       </button>

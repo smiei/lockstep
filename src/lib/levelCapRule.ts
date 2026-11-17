@@ -22,13 +22,18 @@ export function capKind(cap: KindSource): CapKind {
 
 // The run's caps: with capsGymsOnly every other fight loses its level and is
 // then, like a fight the pack has no level for, a station without a cap.
+// `skippedLevel` keeps the level it had, for display only (the Journey shows
+// it small, in brackets, so the opponent's strength is still known); nothing
+// may treat it as a cap.
 export function applyCapRule<T extends KindSource & { max_level: number | null }>(
   caps: T[],
   rule: { capsGymsOnly: boolean },
-): T[] {
+): (T & { skippedLevel?: number })[] {
   if (!rule.capsGymsOnly) return caps;
   return caps.map((cap) =>
-    cap.max_level !== null && capKind(cap) === "other" ? { ...cap, max_level: null } : cap,
+    cap.max_level !== null && capKind(cap) === "other"
+      ? { ...cap, max_level: null, skippedLevel: cap.max_level }
+      : cap,
   );
 }
 

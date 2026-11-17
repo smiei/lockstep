@@ -43,6 +43,8 @@ describe("applyCapRule", () => {
     const out = applyCapRule(caps, { capsGymsOnly: true });
     expect(out.map((c) => c.id)).toEqual([1, 2, 3, 4]);
     expect(out.map((c) => c.max_level)).toEqual([null, 14, 50, 12]);
+    // The skipped fight keeps its level for display, the capped ones get none.
+    expect(out.map((c) => c.skippedLevel)).toEqual([30, undefined, undefined, undefined]);
     // The pack's own list is not touched.
     expect(caps[0].max_level).toBe(30);
   });

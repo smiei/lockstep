@@ -552,6 +552,8 @@ const de = {
     postgameHide: "Post-Game ausblenden",
     heading: "Reise",
     maxLevel: "Max. Level",
+    noCap: "kein Cap",
+    skippedCapTitle: (level: number) => `Gegner bis Level ${level}. Kein Level-Cap: die Regel zählt nur Arenen und die Liga.`,
     progressTitle: (done: number, total: number, percent: number) =>
       `${done} von ${total} Kämpfen abgeschlossen (${percent}%)`,
     eliteFourMarker: "Ab hier: Top 4",
@@ -1665,6 +1667,8 @@ const en: Dictionary = {
     postgameHide: "Hide post-game",
     heading: "Journey",
     maxLevel: "Max Level",
+    noCap: "no cap",
+    skippedCapTitle: (level: number) => `Opponents up to level ${level}. Not a level cap: the run counts only gyms and the League.`,
     progressTitle: (done: number, total: number, percent: number) =>
       `${done} of ${total} battles completed (${percent}%)`,
     eliteFourMarker: "Elite Four starts here",
@@ -2773,6 +2777,8 @@ const fr: Dictionary = {
     postgameHide: "Masquer le contenu post-ligue",
     heading: "Aventure",
     maxLevel: "Niveau max",
+    noCap: "pas de plafond",
+    skippedCapTitle: (level: number) => `Adversaires jusqu’au niveau ${level}. Pas un plafond de niveau : la règle ne compte que les arènes et la Ligue.`,
     progressTitle: (done: number, total: number, percent: number) =>
       `${done} combats sur ${total} terminés (${percent}%)`,
     eliteFourMarker: "Le Conseil 4 commence ici",
@@ -3882,6 +3888,8 @@ const es: Dictionary = {
     postgameHide: "Ocultar posjuego",
     heading: "Aventura",
     maxLevel: "Nivel máx.",
+    noCap: "sin tope",
+    skippedCapTitle: (level: number) => `Rivales hasta el nivel ${level}. No es un tope de nivel: la regla solo cuenta gimnasios y la Liga.`,
     progressTitle: (done: number, total: number, percent: number) =>
       `${done} de ${total} combates completados (${percent}%)`,
     eliteFourMarker: "Aquí empieza el Alto Mando",
@@ -4991,6 +4999,8 @@ const it: Dictionary = {
     postgameHide: "Nascondi post-gioco",
     heading: "Viaggio",
     maxLevel: "Livello max",
+    noCap: "nessun tetto",
+    skippedCapTitle: (level: number) => `Avversari fino al livello ${level}. Non è un tetto di livello: la regola conta solo palestre e Lega.`,
     progressTitle: (done: number, total: number, percent: number) =>
       `${done} di ${total} combattimenti completati (${percent}%)`,
     eliteFourMarker: "Qui inizia la Superquattro",
