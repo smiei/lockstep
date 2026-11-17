@@ -19,6 +19,7 @@ import { Input, Select, Textarea } from "@/components/ui/Input";
 import { RulePresetDialog, type RulePresetSummary } from "@/components/RulePresetDialog";
 import { PageHeader, Section } from "@/components/ui/Page";
 import { IS_PUBLIC_INSTANCE } from "@/lib/instance";
+import { startTour } from "@/lib/tourStore";
 import type { EvolutionOverrideCategory } from "@/lib/data";
 
 // The boolean rule toggles (playerNames and capTeamOffset are handled separately).
@@ -414,38 +415,43 @@ export function RulesView({
   return (
     <div>
       <PageHeader title={t.heading}>
-        {!IS_PUBLIC_INSTANCE && (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="w-52">
-              <Select
+        <div className="flex flex-wrap items-center gap-2">
+          <Button size="sm" variant="ghost" onClick={() => startTour("rules")}>
+            {translations[lang].tour.rules.title}
+          </Button>
+          {!IS_PUBLIC_INSTANCE && (
+            <div data-tour="rules-presets" className="flex flex-wrap items-center gap-2">
+              <span className="w-52">
+                <Select
+                  size="sm"
+                  aria-label={t.presets.label}
+                  // Always the placeholder: see handleApplyPreset.
+                  value=""
+                  // While the notes editor is open the two halves of the tab
+                  // disagree - the draft on screen is not what a preset would
+                  // replace - so both controls stand down until it is saved.
+                  disabled={pending || editing || presets.length === 0}
+                  onChange={(event) => handleApplyPreset(Number(event.target.value))}
+                >
+                  <option value="">{t.presets.placeholder}</option>
+                  {presets.map((preset) => (
+                    <option key={preset.id} value={preset.id}>
+                      {preset.name}
+                    </option>
+                  ))}
+                </Select>
+              </span>
+              <Button
                 size="sm"
-                aria-label={t.presets.label}
-                // Always the placeholder: see handleApplyPreset.
-                value=""
-                // While the notes editor is open the two halves of the tab
-                // disagree - the draft on screen is not what a preset would
-                // replace - so both controls stand down until it is saved.
-                disabled={pending || editing || presets.length === 0}
-                onChange={(event) => handleApplyPreset(Number(event.target.value))}
+                disabled={pending || editing}
+                title={editing ? t.presets.editingHint : undefined}
+                onClick={() => setPresetDialogOpen(true)}
               >
-                <option value="">{t.presets.placeholder}</option>
-                {presets.map((preset) => (
-                  <option key={preset.id} value={preset.id}>
-                    {preset.name}
-                  </option>
-                ))}
-              </Select>
-            </span>
-            <Button
-              size="sm"
-              disabled={pending || editing}
-              title={editing ? t.presets.editingHint : undefined}
-              onClick={() => setPresetDialogOpen(true)}
-            >
-              {t.presets.manage}
-            </Button>
-          </div>
-        )}
+                {t.presets.manage}
+              </Button>
+            </div>
+          )}
+        </div>
       </PageHeader>
 
       {!IS_PUBLIC_INSTANCE && (
@@ -460,7 +466,7 @@ export function RulesView({
 
       {/* The run's rules as its collection label: what is in force, read in
           one look, before the switches that set it. */}
-      <section aria-labelledby="rules-summary" className="specimen-label mb-8 px-4 py-3 text-xs leading-relaxed text-ink">
+      <section data-tour="rules-summary" aria-labelledby="rules-summary" className="specimen-label mb-8 px-4 py-3 text-xs leading-relaxed text-ink">
         <div className="mb-2 flex items-baseline justify-between gap-3 border-b border-ink pb-2">
           <h2 id="rules-summary" className="text-sm font-semibold uppercase">
             {t.summaryHeading}
@@ -533,54 +539,56 @@ export function RulesView({
       {/* The written rules as a document at a readable measure, with what
           belongs to the run but is not a rule beside it. */}
       <div className="grid gap-x-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start">
-        <Section
-          title={t.notesHeading}
-          actions={
-            editing ? (
-              <div className="flex flex-wrap gap-2">
-                <Button size="sm" disabled={pending} onClick={handleLoadDefault}>
-                  {t.loadDefault}
-                </Button>
-                <Button size="sm" disabled={pending} onClick={() => setEditing(false)}>
-                  {t.cancel}
-                </Button>
-                <Button size="sm" variant="primary" loading={pending} onClick={handleSave}>
-                  {t.save}
-                </Button>
-              </div>
-            ) : (
-              <div className="flex gap-2">
-                <Button size="sm" onClick={() => setNotesOpen((open) => !open)}>
-                  {notesOpen ? t.hideNotes : t.showNotes}
-                </Button>
-                {notesOpen && (
-                  <Button size="sm" onClick={handleEdit}>
-                    {t.edit}
+        <div data-tour="rules-notes">
+          <Section
+            title={t.notesHeading}
+            actions={
+              editing ? (
+                <div className="flex flex-wrap gap-2">
+                  <Button size="sm" disabled={pending} onClick={handleLoadDefault}>
+                    {t.loadDefault}
                   </Button>
-                )}
-              </div>
-            )
-          }
-        >
-          {editing ? (
-            <Textarea
-              value={draft}
-              disabled={pending}
-              onChange={(e) => setDraft(e.target.value)}
-              spellCheck={false}
-              aria-label={t.notesHeading}
-              className="h-[32rem] font-mono"
-            />
-          ) : (
-            notesOpen && (
-              <Card className="p-5">
-                <div className="max-w-prose">
-                  <ReactMarkdown components={markdownComponents}>{markdown}</ReactMarkdown>
+                  <Button size="sm" disabled={pending} onClick={() => setEditing(false)}>
+                    {t.cancel}
+                  </Button>
+                  <Button size="sm" variant="primary" loading={pending} onClick={handleSave}>
+                    {t.save}
+                  </Button>
                 </div>
-              </Card>
-            )
-          )}
-        </Section>
+              ) : (
+                <div className="flex gap-2">
+                  <Button size="sm" onClick={() => setNotesOpen((open) => !open)}>
+                    {notesOpen ? t.hideNotes : t.showNotes}
+                  </Button>
+                  {notesOpen && (
+                    <Button size="sm" onClick={handleEdit}>
+                      {t.edit}
+                    </Button>
+                  )}
+                </div>
+              )
+            }
+          >
+            {editing ? (
+              <Textarea
+                value={draft}
+                disabled={pending}
+                onChange={(e) => setDraft(e.target.value)}
+                spellCheck={false}
+                aria-label={t.notesHeading}
+                className="h-[32rem] font-mono"
+              />
+            ) : (
+              notesOpen && (
+                <Card className="p-5">
+                  <div className="max-w-prose">
+                    <ReactMarkdown components={markdownComponents}>{markdown}</ReactMarkdown>
+                  </div>
+                </Card>
+              )
+            )}
+          </Section>
+        </div>
 
         <div>
           {mode === RunMode.SOULLINK && (

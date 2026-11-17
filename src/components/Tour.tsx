@@ -51,6 +51,7 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
   const step = state ? steps[state.step] : undefined;
   const stepHref = step?.href;
   const selector = step?.selector;
+  const block = step?.block;
 
   // A tab step opens its tab.
   useEffect(() => {
@@ -76,7 +77,7 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
         timer = setTimeout(() => place(scroll), 100);
         return;
       }
-      if (target && scroll) target.scrollIntoView({ block: "nearest", inline: "center" });
+      if (target && scroll) target.scrollIntoView({ block: block ?? "nearest", inline: "center" });
       const vw = window.innerWidth;
       const vh = window.innerHeight;
       const cw = card.offsetWidth;
@@ -116,7 +117,7 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
       window.removeEventListener("resize", onMove);
       window.removeEventListener("scroll", onMove, true);
     };
-  }, [step, selector, pathname]);
+  }, [step, selector, block, pathname]);
 
   const kind = state?.kind;
   function finish() {
@@ -139,11 +140,15 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
     // The offer: the main tour first, the fusion round once a fusion run is
     // open. Only with a run on screen - the tour walks through its tabs.
     if (!mounted || !activeRun || pathname === "/new") return null;
-    const offer: TourKind | null = !seen.includes("main")
-      ? "main"
-      : fusionGameIds.includes(activeRun.gameId) && !seen.includes("fusion")
-        ? "fusion"
-        : null;
+    // On the Rules tab its own tour comes first: that is where it helps.
+    const offer: TourKind | null =
+      pathname === "/rules" && !seen.includes("rules")
+        ? "rules"
+        : !seen.includes("main")
+          ? "main"
+          : fusionGameIds.includes(activeRun.gameId) && !seen.includes("fusion")
+            ? "fusion"
+            : null;
     if (!offer) return null;
     return (
       <Card role="region" aria-label={t.offer[offer].title} padding="none" className="fixed inset-x-2 bottom-2 z-40 flex items-center gap-2 border-line-strong p-2 pl-3 shadow-lg sm:inset-x-auto sm:bottom-4 sm:right-4 sm:block sm:w-80 sm:p-4">
@@ -165,7 +170,8 @@ export function Tour({ runs, fusionGameIds }: { runs: { id: number; accessKey: s
 
   const texts = t[state.kind] as Record<string, string>;
   const tabKey = step.href ? (step.href.slice(1) as keyof typeof tNav) : null;
-  const title = tabKey ? tNav[tabKey] : (texts[`${step.id}Title`] ?? t[state.kind].title);
+  // A step's own title wins; a tab step without one is named after its tab.
+  const title = texts[`${step.id}Title`] ?? (tabKey ? tNav[tabKey] : t[state.kind].title);
   const last = state.step === steps.length - 1;
 
   return (

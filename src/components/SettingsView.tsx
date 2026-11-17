@@ -342,6 +342,7 @@ export function SettingsView({
             <Row title={t.tour.settingsTitle} hint={t.tour.settingsHint}>
               <Button onClick={() => startTour("main")}>{t.tour.start}</Button>
               {fusionRun && <Button onClick={() => startTour("fusion")}>{t.tour.startFusion}</Button>}
+              <Button onClick={() => startTour("rules")}>{t.tour.startRules}</Button>
             </Row>
           )}
           <Row title={ts.feedbackTitle} hint={ts.feedbackHint}>
