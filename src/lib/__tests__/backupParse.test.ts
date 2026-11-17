@@ -60,6 +60,8 @@ describe("parseBackup v3 fields", () => {
     const parsed = parseBackup(json)!;
     expect(parsed.runs[0].soulLinks[0].deathLevelCapId).toBe(5);
     expect(parsed.runs[0].soulLinks[0].diedAt).toBe("2026-02-01T00:00:00.000Z");
+    // No deathCapIsNext in the file: the old meaning (last fight won).
+    expect(parsed.runs[0].soulLinks[0].deathCapIsNext).toBe(false);
     expect(parsed.runs[0].encounters[0].fusedInto).toEqual({ routeId: 6, player: "PLAYER1" });
   });
 
@@ -178,7 +180,7 @@ describe("rulePresets (v6)", () => {
     expect(withPresets([])?.rulePresets).toBeUndefined();
   });
 
-  it("is version 6", () => {
-    expect(BACKUP_VERSION).toBe(6);
+  it("is version 7", () => {
+    expect(BACKUP_VERSION).toBe(7);
   });
 });

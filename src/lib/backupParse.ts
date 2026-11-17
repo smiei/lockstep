@@ -31,7 +31,10 @@ export const BACKUP_FORMAT = "nuzlocke-tracker-backup";
 // 6 added `rulePresets`: the server's rule presets (Rules tab), which are not
 // tied to a run - every backup carries all of them, and an import adds the
 // ones whose name is missing, leaving existing presets alone.
-export const BACKUP_VERSION = 6;
+// 7 added `deathCapIsNext` on SoulLink (since 7.0 the death point names the
+// next open fight, older rows the last one won - src/lib/deathPoint.ts);
+// missing = false, the old meaning, which is right for every older file.
+export const BACKUP_VERSION = 7;
 
 export type BackupRulePreset = {
   name: string;
@@ -50,6 +53,8 @@ export type BackupSoulLink = {
   // it predates death-point tracking - the two look the same on import,
   // which just means it parks at the top of the Memorial until edited).
   deathLevelCapId: number | null;
+  // Added in v7; false in an older file (= the old meaning, see above).
+  deathCapIsNext: boolean;
   diedAt: string | null;
   // Added in v4: the routeId of the link this one is bound to (SoulLink
   // .boundToId), which like soulLinkRouteId is unique per run and needs no
@@ -236,6 +241,7 @@ export function parseBackup(json: string): BackupFile | null {
             deathPlayer: isEnumValue(Player, sl.deathPlayer) ? sl.deathPlayer : null,
             deathCause: typeof sl.deathCause === "string" ? sl.deathCause : null,
             deathLevelCapId: typeof sl.deathLevelCapId === "number" ? sl.deathLevelCapId : null,
+            deathCapIsNext: sl.deathCapIsNext === true,
             diedAt: isoStringOrNull(sl.diedAt),
             boundToRouteId: typeof sl.boundToRouteId === "number" ? sl.boundToRouteId : null,
             createdAt: isoString(sl.createdAt),

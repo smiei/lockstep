@@ -40,6 +40,8 @@ import {
   type RunSettings,
 } from "@/lib/runSettings";
 import { parseCapTeamOffset } from "@/lib/levelCapRule";
+import { levelCapsInRun } from "@/lib/regions";
+import { nextOpenCapId } from "@/lib/deathPoint";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { getViewer, isLockedOut, joinRun, mayDeleteRun, visibleRunsWhere } from "@/lib/auth";
 
@@ -360,23 +362,24 @@ export async function quickCatch(
   return { success: true, addedToTeam: link?.teamPosition != null };
 }
 
-// The last Journey milestone defeated in this run, in the game pack's display
-// order - level cap ids are frozen while the array order is what the player
-// walks through, so the file's order decides "last", not the id.
-async function lastDefeatedLevelCapId(runId: number): Promise<number | null> {
-  const run = await prisma.run.findUnique({ where: { id: runId } });
-  if (!run) return null;
+// The first Journey fight of this run not yet defeated, in the game pack's
+// display order - level cap ids are frozen while the array order is what the
+// player walks through, so the file's order decides "next", not the id. The
+// run's region rule applies (an excluded Kanto is not part of the journey).
+async function nextOpenLevelCapId(run: Run): Promise<number | null> {
   const defeated = new Set(
     (
       await prisma.levelCapProgress.findMany({
-        where: { runId, defeated: true },
+        where: { runId: run.id, defeated: true },
         select: { levelCapId: true },
       })
     ).map((row) => row.levelCapId),
   );
-  if (defeated.size === 0) return null;
-  const caps = getLevelCaps(run.gameId).filter((cap) => defeated.has(cap.id));
-  return caps.at(-1)?.id ?? null;
+  const caps = levelCapsInRun(getLevelCaps(run.gameId), parseRunSettings(run.settingsJson));
+  return nextOpenCapId(
+    caps.map((cap) => cap.id),
+    defeated,
+  );
 }
 
 
@@ -477,18 +480,19 @@ export async function markDead(
   // DEAD/ALIVE state lives on the SoulLink alone. A dead link also leaves
   // the team automatically (teamPosition -> null).
   const cause = (deathCause ?? "").trim().slice(0, 80) || null;
-  // Where in the run this happened: the last Journey milestone already
-  // defeated. Null when none is - that still counts as "recorded", which is
-  // what diedAt marks, so the Memorial can tell it apart from the deaths that
-  // predate this being tracked at all.
-  const lastCap = await lastDefeatedLevelCapId(runId);
+  // Where in the run this happened: the next Journey fight still open (see
+  // src/lib/deathPoint.ts). Null when every fight is won - that still counts
+  // as "recorded", which is what diedAt marks, so the Memorial can tell it
+  // apart from the deaths that predate this being tracked at all.
+  const nextCap = await nextOpenLevelCapId(run);
   const diedAt = new Date();
   const data = {
     status: LinkStatus.DEAD,
     teamPosition: null,
     deathPlayer: deathPlayer ?? null,
     deathCause: cause,
-    deathLevelCapId: lastCap,
+    deathLevelCapId: nextCap,
+    deathCapIsNext: true,
     diedAt,
   };
 
@@ -574,6 +578,7 @@ export async function setDeathPoint(
         where: { id: link.id },
         data: {
           deathLevelCapId: levelCapId,
+          deathCapIsNext: true,
           // Setting a point marks it as recorded; clearing sends it back to
           // the unknown group.
           diedAt: levelCapId === null ? null : link.diedAt ?? now,

@@ -18,6 +18,7 @@ import { evolutionOptions } from "@/lib/runSettings";
 import { donorsByHost, encounterMonDepsFor, getDefeatedCapIds, movepoolResolver, teamsOf } from "@/lib/runPage";
 import { computeLevelCapProgress, computeRouteProgress, eliteFourIndex } from "@/lib/progress";
 import { applyRegionRule, levelCapsInRun } from "@/lib/regions";
+import { effectiveDeathCapId } from "@/lib/deathPoint";
 import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { comparePlayers } from "@/lib/players";
@@ -167,6 +168,9 @@ export default async function OverviewPage({
   // Display order of the Journey milestones, so the Memorial reads in the
   // order the run actually happened rather than by level-cap id.
   const capOrder = new Map(levelCapItems.map((cap, i) => [cap.id, i]));
+  // The fight a death belongs to: the next one still open when it happened
+  // (older deaths stored the last one won and are moved one fight forward).
+  const runCapIds = runCapItems.map((cap) => cap.id);
 
   // --- Counts, team/bank BST, death tally and the memorial in one pass.
   const caught = new Map<Player, number>(players.map((p) => [p, 0]));
@@ -202,6 +206,7 @@ export default async function OverviewPage({
     const first = members[0];
     const groupEncounters = members.flatMap((link) => link.encounters);
     const groupEncounterIds = new Set(groupEncounters.map((e) => e.id));
+    const deathCapId = first.diedAt === null ? null : effectiveDeathCapId(first, runCapIds);
     totalDeaths++;
     // Death-tally scoreboard: only links that actually formed (every player
     // caught) count, same as the Journey tab's version did. A bound link (a
@@ -249,24 +254,24 @@ export default async function OverviewPage({
         }),
       deathPlayer: first.deathPlayer,
       deathCause: first.deathCause,
-      deathLevelCapId: first.deathLevelCapId,
+      deathLevelCapId: deathCapId,
       deathPointLabel:
-        first.deathLevelCapId !== null
+        deathCapId !== null
           ? (() => {
-              const cap = levelCapItems.find((c) => c.id === first.deathLevelCapId);
+              const cap = levelCapItems.find((c) => c.id === deathCapId);
               return cap ? `${localizeName(cap.names, lang)} · ${localizeName(cap.location, lang)}` : null;
             })()
           : null,
       // null = predates death-point tracking; those park at the top until
-      // edited. A recorded death with no cap yet has diedAt set and sorts
-      // ahead of every cap instead.
+      // edited. A recorded death with no open fight left (all won) sorts
+      // after every fight instead.
       recorded: first.diedAt !== null,
       sortIndex:
         first.diedAt === null
           ? -Infinity
-          : first.deathLevelCapId === null
-            ? -1
-            : (capOrder.get(first.deathLevelCapId) ?? Number.MAX_SAFE_INTEGER),
+          : deathCapId === null
+            ? Number.MAX_SAFE_INTEGER
+            : (capOrder.get(deathCapId) ?? Number.MAX_SAFE_INTEGER),
       diedAt: first.diedAt?.getTime() ?? null,
     });
   }
