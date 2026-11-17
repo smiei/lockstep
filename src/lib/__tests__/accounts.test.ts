@@ -37,6 +37,9 @@ describe("decideAccountsMode", () => {
   it("ignores a value it does not know", () => {
     expect(decideAccountsMode({ ...base, env: "maybe", hasRuns: true })).toBe("off");
     expect(accountsForcedByEnv("maybe")).toBeNull();
+    // What the Unraid template sends for "ask on the first start".
+    expect(accountsForcedByEnv("ask")).toBeNull();
+    expect(decideAccountsMode({ ...base, env: "ask" })).toBe("setup");
     expect(accountsForcedByEnv("0")).toBe("off");
     expect(accountsForcedByEnv("true")).toBe("on");
   });

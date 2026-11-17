@@ -9,7 +9,8 @@ export type AccountsMode = "off" | "on" | "setup";
 
 export const ACCOUNTS_ENV = "LOCKSTEP_ACCOUNTS";
 
-// The variable is an override, the stored choice the normal case.
+// The variable is an override, the stored choice the normal case. Any other
+// value (the Unraid template sends "ask") counts as unset.
 //
 // An installation that already holds runs and never chose is "off": it was
 // set up before accounts existed, and a registration window in front of
