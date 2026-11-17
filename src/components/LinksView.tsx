@@ -126,15 +126,16 @@ export function LinksView({
 
   // Dead links always sink to the end; within alive/dead groups the chosen
   // sort applies (server order already has dead last for the default sort).
-  const sortedLinks = [...collectionLinks].sort(
-    (a, b) =>
-      Number(a.status === LinkStatus.DEAD) - Number(b.status === LinkStatus.DEAD) ||
-      (sortMode === "summe"
-        ? totalSumme(b) - totalSumme(a)
-        : sortMode === "summeMax"
-          ? totalSummeMax(b) - totalSummeMax(a)
-          : 0),
-  );
+  // The team drawer's slot picker uses the same order, so the list it offers
+  // reads like the Box below.
+  const compareLinks = (a: SoulLinkView, b: SoulLinkView) =>
+    Number(a.status === LinkStatus.DEAD) - Number(b.status === LinkStatus.DEAD) ||
+    (sortMode === "summe"
+      ? totalSumme(b) - totalSumme(a)
+      : sortMode === "summeMax"
+        ? totalSummeMax(b) - totalSummeMax(a)
+        : 0);
+  const sortedLinks = [...collectionLinks].sort(compareLinks);
 
   const visibleLinks = sortedLinks.filter((link) => {
     // A fusion's body evolves on its own, so it counts too.
@@ -518,6 +519,7 @@ export function LinksView({
           links={soulLinks}
           renderControls={(e) => encounterControls(e, false, true)}
           actions={addButton}
+          compareLinks={compareLinks}
         />
 
         <aside className="min-w-0">

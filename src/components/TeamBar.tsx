@@ -148,6 +148,7 @@ export function TeamBar({
   links,
   renderControls,
   actions,
+  compareLinks,
 }: {
   runKey: string;
   mode: RunMode;
@@ -157,6 +158,9 @@ export function TeamBar({
   renderControls?: (encounter: EncounterView) => ReactNode;
   // Extra header actions - the free-team run's "add Pokémon" button.
   actions?: ReactNode;
+  // The Box's current sort (default / BST / max BST), so a slot's picker
+  // lists the links in the order the player sees them below.
+  compareLinks?: (a: SoulLinkView, b: SoulLinkView) => number;
 }) {
   const router = useRouter();
   const toast = useToast();
@@ -175,6 +179,7 @@ export function TeamBar({
   // Only living links can be on the team; dead ones are filtered out here too
   // (defence in depth - markDead already clears their teamPosition).
   const aliveLinks = links.filter((l) => l.status !== LinkStatus.DEAD);
+  const pickerOptions = compareLinks ? [...aliveLinks].sort(compareLinks) : aliveLinks;
   // A card is one fusion group (see links/page.tsx), and a group can hold
   // more than one slot while one player has more separate Pokémon in it than
   // the other (see teamSlotsNeeded). Its card sits in its lowest slot; every
@@ -381,7 +386,7 @@ export function TeamBar({
                     slotLabel={t.links.teamSlotLabel(i + 1)}
                     placeholder={t.links.teamSelectPlaceholder}
                     current={link}
-                    options={aliveLinks}
+                    options={pickerOptions}
                     pending={pending}
                     onPick={(id) => handleSelect(i, id)}
                   />
