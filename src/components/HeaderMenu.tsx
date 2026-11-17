@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useDropdown } from "@/lib/useDropdown";
 import { pickActiveRun } from "@/lib/runKey";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { LANGS, translations } from "@/lib/i18n/dictionary";
-import { NATIVE_NAMES } from "@/components/LanguagePicker";
+import { translations } from "@/lib/i18n/dictionary";
 import type { RunSummary } from "@/lib/types";
 
 function GearIcon({ className }: { className?: string }) {
@@ -22,69 +20,25 @@ function GearIcon({ className }: { className?: string }) {
   );
 }
 
-const squareClass =
-  "flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-muted transition-colors hover:bg-hover hover:text-ink disabled:cursor-not-allowed disabled:opacity-50";
-
-// The header's utility buttons next to the theme switch: the gear (a link to
-// the Settings page, which took over what used to be a dropdown menu here)
-// and the language. Everything else lives on
-// /settings (src/components/SettingsView.tsx).
+// The header's gear: a link to the Settings page, which took over what used
+// to be a dropdown menu here. The language had a quick switch of its own
+// beside it until 6.0; it is set once, so it lives in Settings like the rest
+// (src/components/SettingsView.tsx) and the rail's buttons fit on one row.
 export function HeaderMenu({ runs }: { runs: RunSummary[] }) {
   const searchParams = useSearchParams();
-  const { lang, setLang } = useLanguage();
-  const { open, setOpen, toggle, containerRef, triggerProps } = useDropdown();
+  const { lang } = useLanguage();
   const t = translations[lang];
 
   const activeRun = pickActiveRun(runs, searchParams.get("run"));
 
   return (
-    <>
-      <Link
-        href={activeRun ? `/settings?run=${activeRun.accessKey}` : "/settings"}
-        aria-label={t.settings.title}
-        title={t.settings.title}
-        className={squareClass}
-      >
-        <GearIcon className="h-5 w-5" />
-      </Link>
-      <div ref={containerRef} className="relative">
-        <button
-          type="button"
-          onClick={toggle}
-          {...triggerProps}
-          aria-label={`${t.menu.language}: ${NATIVE_NAMES[lang]}`}
-          title={t.menu.language}
-          className={`${squareClass} text-xs font-semibold uppercase`}
-        >
-          {lang}
-        </button>
-        {open && (
-          // z-50: the phone's tab strip below the header is sticky at z-40
-          // and this list opens straight down across it. From lg the button
-          // sits at the foot of the side rail, so the list opens upwards.
-          // `unshell`: a page surface, not part of the green field.
-          <ul className="unshell absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-lg border border-line-strong bg-panel py-1 shadow-lg lg:bottom-full lg:left-0 lg:right-auto lg:mb-1 lg:mt-0">
-            {LANGS.map((code) => (
-              <li key={code}>
-                <button
-                  type="button"
-                  lang={code}
-                  aria-current={code === lang ? "true" : undefined}
-                  onClick={() => {
-                    setLang(code);
-                    setOpen(false);
-                  }}
-                  className={`flex min-h-10 w-full items-center px-3 py-2 text-left text-sm text-ink hover:bg-hover ${
-                    code === lang ? "bg-sunken font-semibold" : ""
-                  }`}
-                >
-                  {NATIVE_NAMES[code]}
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </>
+    <Link
+      href={activeRun ? `/settings?run=${activeRun.accessKey}` : "/settings"}
+      aria-label={t.settings.title}
+      title={t.settings.title}
+      className="flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-muted transition-colors hover:bg-hover hover:text-ink"
+    >
+      <GearIcon className="h-5 w-5" />
+    </Link>
   );
 }
