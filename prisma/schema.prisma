@@ -106,7 +106,7 @@ model SoulLink {
   // WHERE in the run it died, as a levelcaps.json id. Lets the Memorial read
   // in the order things actually happened rather than by route. Not a foreign
   // key - level-cap ids live in the game pack, like routeId.
-  // With deathCapIsNext (since 7.0): the first fight not yet defeated at that
+  // With deathCapIsNext (since 6.0): the first fight not yet defeated at that
   // moment, null = every fight was won. Without it (older rows): the last
   // fight defeated, null = none yet - src/lib/deathPoint.ts reads both.
   deathLevelCapId Int?
@@ -194,11 +194,11 @@ model LevelCapProgress {
   runId      Int
   levelCapId Int
   defeated   Boolean  @default(false)
-  // Since 7.0, for the statistics page (src/lib/runStats.ts): when the fight
+  // Since 6.0, for the statistics page (src/lib/runStats.ts): when the fight
   // was ticked off, and the team that won it as JSON (TeamSnapshotMember[]:
   // player, routeId, Pokémon - by route, not encounter id, so a backup
   // restores it as is). Both null while not defeated; rows defeated before
-  // 7.0 got defeatedAt from updatedAt and have no team.
+  // 6.0 got defeatedAt from updatedAt and have no team.
   defeatedAt DateTime?
   teamJson   String?
   updatedAt  DateTime @updatedAt

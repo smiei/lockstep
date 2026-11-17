@@ -100,7 +100,7 @@ A per-run dashboard. In a SoulLink run every number also breaks down per player.
 3. **Memorial:** every fallen Pokémon by nickname, with who lost it, the cause, and the fight that was next on the journey when it died.
 4. **Evolution items:** per player, every item (stones, held and trade items) the living Pokémon on the team and in the box still need for the rest of their evolution line, grouped by item. Branches (Eevee, Gloom) are marked as one option. Each entry jumps to the Pokémon on the Team tab.
 
-A **Statistics** page (button in the Overview's header) follows the run along its journey: one segment per fight ("up to Brock", "up to Misty" ...), with each player's catches, missed encounters (fled or defeated) and deaths, a catch rate, and a **hall of fame** with the team every fight was won with. Teams are recorded from 7.0 on; fights won before that show their date only.
+A **Statistics** page (button in the Overview's header) follows the run along its journey: one segment per fight ("up to Brock", "up to Misty" ...), with each player's catches, missed encounters (fled or defeated) and deaths, a catch rate, and a **hall of fame** with the team every fight was won with. Teams are recorded from 6.0 on; fights won before that show their date only.
 
 ## Rules
 

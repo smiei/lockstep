@@ -1,6 +1,6 @@
 // Where in the run a link died, as a Journey fight. Client-safe and pure.
 //
-// Since 7.0 the stored `SoulLink.deathLevelCapId` names the NEXT OPEN fight at
+// Since 6.0 the stored `SoulLink.deathLevelCapId` names the NEXT OPEN fight at
 // the moment of death (the fight the team was heading for), not the last one
 // already won. Deaths recorded before that have `deathCapIsNext = false` and
 // still hold the last fight won; `effectiveDeathCapId` moves them one fight

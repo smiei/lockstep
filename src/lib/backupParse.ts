@@ -32,7 +32,7 @@ export const BACKUP_FORMAT = "nuzlocke-tracker-backup";
 // tied to a run - every backup carries all of them, and an import adds the
 // ones whose name is missing, leaving existing presets alone.
 // 7 added `defeatedAt`/`teamJson` on levelCapProgress (statistics) and
-// `deathCapIsNext` on SoulLink (since 7.0 the death point names the
+// `deathCapIsNext` on SoulLink (since 6.0 the death point names the
 // next open fight, older rows the last one won - src/lib/deathPoint.ts);
 // missing = false, the old meaning, which is right for every older file.
 export const BACKUP_VERSION = 7;
