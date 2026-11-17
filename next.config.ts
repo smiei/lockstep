@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/*": ["./data/**/*"],
   },
+  // Local, gitignored working folders never belong in a trace. The runtime
+  // paths above are broad enough that the tracer otherwise reads (and hashes)
+  // whatever sits in them - multi-gigabyte files there made local builds fail
+  // with "os error 1450" and stall the whole machine.
+  outputFileTracingExcludes: {
+    "/*": ["./branding-local/**/*", "./brag-output*/**/*", "./release-assets/**/*"],
+  },
   // Since Next 16.4 Turbopack warns about every runtime path it cannot trace.
   // These two files build theirs on purpose at runtime: imported game packs in
   // custom-games/ beside the database, and the sprite folder an import checks.
