@@ -30,6 +30,24 @@ const USER_AGENT = "Lockstep cover download (https://github.com/smiei/lockstep; 
 const SIZE = 400;
 const CONCURRENCY = 4;
 
+// libretro-thumbnails keeps many box arts as git symlinks to another region's
+// file; raw.githubusercontent.com serves those as a short text body holding
+// the target's file name. Follow such a link (relative to the same folder)
+// instead of handing the text to sharp.
+async function download(url, hops = 0) {
+  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const body = Buffer.from(await res.arrayBuffer());
+  const type = res.headers.get("content-type") || "";
+  if (type.startsWith("text/plain") && body.length < 300 && hops < 3) {
+    const target = body.toString("utf-8").trim();
+    if (/\.(png|jpe?g|webp)$/i.test(target) && !target.includes("\n")) {
+      return download(new URL(encodeURIComponent(target).replace(/%2F/g, "/"), url).href, hops + 1);
+    }
+  }
+  return body;
+}
+
 async function main() {
   if ((process.env.COVERS || "").trim().toLowerCase() === "off") {
     console.log("covers: COVERS=off - skipped");
@@ -55,15 +73,7 @@ async function main() {
   // Sword and Shield share one banner: fetch each URL once.
   const fetched = new Map();
   const load = (url) => {
-    if (!fetched.has(url)) {
-      fetched.set(
-        url,
-        fetch(url, { headers: { "User-Agent": USER_AGENT } }).then(async (res) => {
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          return Buffer.from(await res.arrayBuffer());
-        }),
-      );
-    }
+    if (!fetched.has(url)) fetched.set(url, download(url));
     return fetched.get(url);
   };
 
