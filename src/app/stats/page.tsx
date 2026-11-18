@@ -107,6 +107,8 @@ export default async function StatsPage({ searchParams }: { searchParams: Promis
         sprite: cap ? (cap.sprite ?? cap.names.de) : null,
         place: cap ? localizeName(cap.location, lang) : null,
         wonOn: defeatedAt !== null ? dateOf(defeatedAt) : null,
+        approx: defeatedAt !== null && !row?.defeatedAt,
+        badge: cap?.badge ? { en: cap.badge.en, label: localizeName(cap.badge, lang) } : null,
         open: cap !== null && defeatedAt === null,
         perPlayer: segment.perPlayer,
         unattributedDeaths: segment.unattributedDeaths,

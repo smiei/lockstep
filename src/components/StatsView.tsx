@@ -7,6 +7,7 @@ import { catchRate, type PlayerCounts, type TeamSnapshotMember } from "@/lib/run
 import { usePlayerLabel } from "@/components/PlayerNamesProvider";
 import { PokemonSprite } from "@/components/PokemonSprite";
 import { TrainerSprite } from "@/components/TrainerSprite";
+import { BadgeIcon } from "@/components/BadgeIcon";
 import { ButtonLink } from "@/components/ui/Button";
 import { EmptyState, PageHeader, Section } from "@/components/ui/Page";
 
@@ -19,6 +20,10 @@ export type StatsFight = {
   sprite: string | null;
   place: string | null;
   wonOn: string | null;
+  // Won before 6.0 recorded when: the date is the row's last change.
+  approx: boolean;
+  // A gym's badge (English name for the artwork, localized label).
+  badge: { en: string; label: string } | null;
   open: boolean;
   perPlayer: { player: Player; counts: PlayerCounts }[];
   unattributedDeaths: number;
@@ -181,9 +186,6 @@ export function StatsView({
           tokens, so every shell colour keeps its contrast). */}
       <section className="shell mb-6 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 rounded-md bg-shell px-5 py-6 sm:px-8 sm:py-8">
         <div className="min-w-0">
-          <p className="truncate text-sm text-ink-muted">
-            {runName} · {gameName}
-          </p>
           <h2 className="flex items-center gap-3 text-5xl font-bold leading-tight tracking-tight text-ink sm:text-6xl">
             {/* A won run wears the crown of the start page's hall of fame,
                 a lost one the Memorial's headstone. */}
@@ -198,7 +200,9 @@ export function StatsView({
             )}
             {outcomeWord}
           </h2>
-          {outcomeLine && <p className="mt-1 text-sm text-ink-muted">{outcomeLine}</p>}
+          <p className="mt-1 text-sm text-ink-muted">
+            {[runName, gameName, outcomeLine].filter(Boolean).join(" · ")}
+          </p>
         </div>
         <div className="text-right">
           <p className="font-mono font-semibold leading-none tabular-nums text-ink">
@@ -209,8 +213,6 @@ export function StatsView({
         </div>
       </section>
 
-      <p className="mb-6 max-w-prose text-sm text-ink-muted">{t.intro}</p>
-
       {!anything ? (
         <EmptyState title={t.empty} />
       ) : (
@@ -220,6 +222,14 @@ export function StatsView({
             {totals.map(({ player, counts }) => {
               const rate = catchRate(counts);
               const name = solo ? t.totals : playerLabel(player);
+              if (counts.caught + counts.missed + counts.deaths === 0) {
+                return (
+                  <li key={player} className="flex flex-col gap-2 rounded-md border border-dashed border-line-strong bg-panel p-4 sm:p-6">
+                    <h3 className="text-2xl font-bold tracking-tight text-ink">{name}</h3>
+                    <p className="text-sm text-ink-muted">{t.empty}</p>
+                  </li>
+                );
+              }
               return (
                 <li key={player} className={`grid gap-5 rounded-md border border-line bg-panel p-4 sm:p-6 ${solo ? "lg:grid-cols-2 lg:items-center lg:gap-10" : ""}`}>
                   <div className="flex flex-col gap-5">
@@ -271,9 +281,10 @@ export function StatsView({
                       <Icon name={award.icon} className="h-6 w-6" />
                     </span>
                     <div className="min-w-0">
-                      <p className="text-base font-bold tracking-tight text-ink">{award.title}</p>
-                      <p className="text-sm text-ink-muted">
-                        <span className="font-semibold text-gold">{award.who.map(playerLabel).join(" & ")}</span> · {award.note}
+                      <p className="text-xl font-bold leading-tight tracking-tight text-ink">{award.who.map(playerLabel).join(" & ")}</p>
+                      <p className="text-sm">
+                        <span className="font-semibold text-gold">{award.title}</span>
+                        <span className="text-ink-muted"> · {award.note}</span>
                       </p>
                     </div>
                   </li>
@@ -283,30 +294,50 @@ export function StatsView({
           )}
 
           <Section title={t.hall}>
-            <p className="-mt-1 mb-3 max-w-prose text-xs text-ink-muted">{t.hallHint}</p>
+            <p className="-mt-1 mb-3 max-w-prose text-xs text-ink-muted">{t.intro}</p>
             <ol className="grid gap-2.5 sm:grid-cols-2 2xl:grid-cols-3">
               {fights.map((fight) => {
                 const won = fight.wonOn !== null;
+                const happened = fight.perPlayer.filter(({ counts }) => counts.caught + counts.missed + counts.deaths > 0);
+                const hasTeam = fight.team !== null && fight.team.length > 0;
+                // A fight won before teams were recorded, with nothing on its
+                // stretch: one line, not a card of empty slots.
+                const quiet = won && !hasTeam && happened.length === 0 && fight.unattributedDeaths === 0;
                 return (
                   <li
                     key={fight.key}
-                    className={`flex flex-col gap-3 rounded-md border bg-panel p-3 ${won ? "border-line" : "border-dashed border-line-strong"}`}
+                    className={`flex flex-col overflow-hidden rounded-md border bg-panel ${won ? "border-line" : "border-dashed border-line-strong"}`}
                   >
+                    {/* The result strip, tinted like a route's label on the
+                        Encounter tab: won green, still ahead grey. */}
+                    <div className={`flex items-baseline justify-between gap-2 px-3 py-1 text-xs ${won ? "bg-success-bg" : "bg-sunken"}`}>
+                      <span className={`font-semibold ${won ? "text-success" : "text-ink-muted"}`}>
+                        {won ? t.outcomeWon : fight.open ? t.open : t.endSegment}
+                      </span>
+                      {fight.wonOn && (
+                        // An approximate date (won before 6.0) is marked and
+                        // muted rather than set like a recorded one.
+                        <span className={`font-mono tabular-nums ${fight.approx ? "text-ink-muted" : "text-success"}`} title={fight.approx ? t.approx : undefined}>
+                          {fight.approx && <span aria-hidden="true">~ </span>}
+                          {fight.approx && <span className="sr-only">{t.approx} </span>}
+                          {fight.wonOn}
+                        </span>
+                      )}
+                    </div>
+                    <div className={`flex flex-1 flex-col gap-3 ${quiet ? "px-3 py-2" : "p-3"}`}>
                     <div className="flex items-center gap-3">
                       {fight.sprite && (
                         <span className={`shrink-0 ${won ? "" : "opacity-60"}`}>
-                          <TrainerSprite canonicalName={fight.sprite} displayName={fight.trainer ?? ""} trainerSet={trainerSet} size={48} />
+                          <TrainerSprite canonicalName={fight.sprite} displayName={fight.trainer ?? ""} trainerSet={trainerSet} size={quiet ? 36 : 48} />
                         </span>
                       )}
                       <div className="min-w-0 flex-1">
                         <h3 className="truncate text-base font-bold tracking-tight text-ink">{fight.trainer ?? t.endSegment}</h3>
                         {fight.place && <p className="truncate text-xs text-ink-muted">{fight.place}</p>}
                       </div>
-                      <span className={`shrink-0 font-mono text-xs tabular-nums ${won ? "text-success" : "text-ink-muted"}`}>
-                        {fight.wonOn ?? (fight.open ? t.open : "")}
-                      </span>
+                      {fight.badge && <BadgeIcon nameEn={fight.badge.en} label={fight.badge.label} earned={won} size={quiet ? 28 : 36} />}
                     </div>
-                    {won && (
+                    {won && !quiet && (
                       fight.team && fight.team.length > 0 ? (
                         <div className="flex flex-col gap-1">
                           {players.map((player) => {
@@ -328,27 +359,32 @@ export function StatsView({
                         <p className="text-xs text-ink-muted">{t.noTeam}</p>
                       )
                     )}
-                    {/* What each player caught, missed and lost on the way. */}
-                    <div className="mt-auto flex flex-wrap gap-x-5 gap-y-1.5 border-t border-line pt-2">
-                      {fight.perPlayer.map(({ player, counts }) => (
-                        <div key={player} className="flex items-center gap-2">
-                          {!solo && <span className="text-xs font-semibold text-ink-muted">{playerLabel(player)}</span>}
-                          <dl className="flex gap-2.5">
-                            {FIGURES.map((figure) => (
-                              <div key={figure} className={`flex items-center gap-0.5 ${counts[figure] === 0 ? "text-ink-subtle" : TONE[figure]}`}>
-                                <dt>
-                                  <Icon name={figure} className="h-3.5 w-3.5" />
-                                  <span className="sr-only">{t[figure]}</span>
-                                </dt>
-                                <dd className="font-mono text-sm font-semibold tabular-nums">{counts[figure]}</dd>
-                              </div>
-                            ))}
-                          </dl>
-                        </div>
-                      ))}
-                      {fight.unattributedDeaths > 0 && (
-                        <span className="text-xs text-danger">{t.unattributed(fight.unattributedDeaths)}</span>
-                      )}
+                    {/* What happened on the way there, and only that: a
+                        player with nothing on the stretch is left out, and
+                        so is every figure that stayed at zero. */}
+                    {(happened.length > 0 || fight.unattributedDeaths > 0) && (
+                      <div className="mt-auto flex flex-wrap gap-x-5 gap-y-1.5 border-t border-line pt-2">
+                        {happened.map(({ player, counts }) => (
+                          <div key={player} className="flex items-center gap-2">
+                            {!solo && <span className="text-xs font-semibold text-ink-muted">{playerLabel(player)}</span>}
+                            <dl className="flex gap-2.5">
+                              {FIGURES.filter((figure) => counts[figure] > 0).map((figure) => (
+                                <div key={figure} className={`flex items-center gap-0.5 ${TONE[figure]}`}>
+                                  <dt>
+                                    <Icon name={figure} className="h-3.5 w-3.5" />
+                                    <span className="sr-only">{t[figure]}</span>
+                                  </dt>
+                                  <dd className="font-mono text-sm font-semibold tabular-nums">{counts[figure]}</dd>
+                                </div>
+                              ))}
+                            </dl>
+                          </div>
+                        ))}
+                        {fight.unattributedDeaths > 0 && (
+                          <span className="text-xs text-danger">{t.unattributed(fight.unattributedDeaths)}</span>
+                        )}
+                      </div>
+                    )}
                     </div>
                   </li>
                 );
