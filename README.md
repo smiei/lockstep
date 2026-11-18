@@ -13,7 +13,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
-https://github.com/user-attachments/assets/f7191534-8d36-472e-bc7f-660101b234cd
+https://github.com/user-attachments/assets/57994866-04c4-4575-b6bf-82af48a0ac17
 
 <details>
 <summary>New to the format?</summary>
@@ -86,21 +86,21 @@ You know the rules. This is what the tracker handles so you don't have to.
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/c779d1b7-d5df-4415-b17f-39353f910860" alt="Team tab: the six team slots as specimen trays, each linked pair with its label, types, base stats and evolutions"></td>
-    <td><img src="https://github.com/user-attachments/assets/4ac44ff5-1e5f-462f-aace-d3643884258d" alt="Encounter tab: one catch per route and player"></td>
+    <td><img src="https://github.com/user-attachments/assets/2292ecc2-53c4-448d-a66e-c2d2ff25f85c" alt="Team tab: the six team slots as specimen trays, each linked pair with its label, types, base stats and evolutions"></td>
+    <td><img src="https://github.com/user-attachments/assets/b98fb8e1-1ed3-4553-8dac-50a6b5cef376" alt="Encounter tab: one catch per route and player"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/853ded65-2508-472a-8b70-019227f7cb28" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
-    <td><img src="https://github.com/user-attachments/assets/167c8e9d-dde3-46a2-b731-e40b9679caf1" alt="Overview: the next level cap, progress, badges and per-player figures"></td>
+    <td><img src="https://github.com/user-attachments/assets/31071a18-b6e4-433a-adad-6665f2784cde" alt="Battle & Catch: the opponent's attack types and how your team matches up"></td>
+    <td><img src="https://github.com/user-attachments/assets/893b5e32-e027-4a9d-ac80-83589592e938" alt="Overview: the next level cap, progress, badges and per-player figures"></td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a8a442e4-01e1-4c69-a9eb-3ee3002cabf1" alt="Memorial: who was lost, by whom, how and when" width="70%">
+  <img src="https://github.com/user-attachments/assets/5d241f85-9aca-4731-b1e4-84e3214fcfd0" alt="Memorial: who was lost, by whom, how and when" width="70%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c29125ff-d726-4b78-8968-1a81e59c259b" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
+  <img src="https://github.com/user-attachments/assets/4a5e9c50-baef-4df7-a380-8ecee6dc12f8" alt="The tracker on a phone: Encounter, Team and Overview" width="85%">
 </p>
 
 ## Pokémon Infinite Fusion
