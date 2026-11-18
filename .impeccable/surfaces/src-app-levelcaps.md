@@ -11,7 +11,7 @@ Mode: Operate. Players check the next fight's level cap before every gym and tic
 
 Job: where am I on the run's road, what is the next fight and its cap (and the team level under it), tick it off, undo a mistaken tick. Constraints: every fight stays toggleable; skipped caps (capsGymsOnly) show their level in brackets; Johto/Kanto and an excluded Kanto as post-game; five languages; the established Naturkunde-Sammlung world (DESIGN.md) unchanged.
 
-Chosen by the user on 2026-11-18 from three prototypes (badge case + log, route band, elevation profile): the route band, without any Pokémon list (the user plays randomized and reads Pokémon rows as opponent spoilers).
+Chosen by the user on 2026-11-18 from three prototypes (badge case + log, route band, elevation profile): the route band. No opponent Pokémon ever (the user plays randomized); the last fight won shows the player's own winning team, labelled "won with" (user, 2026-11-18, after first asking to drop it when it looked like the opponent's).
 
 ## Direction contract
 THESIS: the Journey is a road, not a table. The run's fights are stations on one horizontal route line with a "you are here" flag; it refuses the category's stacked list of identical trainer rows.

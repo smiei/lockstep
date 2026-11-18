@@ -12,6 +12,10 @@ import { CanonicalRun } from "@/components/CanonicalRun";
 import { RunLanding } from "@/components/RunLanding";
 import { ProgressBar } from "@/components/ProgressBar";
 import { PageHeader } from "@/components/ui/Page";
+import { RunProviders } from "@/components/RunProviders";
+import { parseTeamSnapshot } from "@/lib/runStats";
+import { getPokemonByIdForGame } from "@/lib/gameData";
+import { pokemonName } from "@/lib/i18n/localize";
 
 export const dynamic = "force-dynamic";
 
@@ -34,7 +38,7 @@ export default async function LevelCapsPage({
   const levelCaps = getLevelCaps(gameId);
   const won = await prisma.levelCapProgress.findMany({
     where: { runId, defeated: true },
-    select: { levelCapId: true, defeatedAt: true },
+    select: { levelCapId: true, defeatedAt: true, teamJson: true },
   });
   // When each fight was won, for "last beaten" - formatted here so the server
   // and the browser render the same day. Rows ticked before 6.0 have no date.
@@ -45,9 +49,30 @@ export default async function LevelCapsPage({
     ]),
   );
 
+  // The team each fight was won with (recorded since 6.0), for "won with"
+  // under the last fight beaten. Nicknames as the run's rule shows them.
+  const wonWith = new Map(
+    won.map((row) => [
+      row.levelCapId,
+      parseTeamSnapshot(row.teamJson)?.map((member) => {
+        const pokemon = getPokemonByIdForGame(game, member.pokemonId);
+        const species = pokemon ? pokemonName(pokemon, lang) : `#${member.pokemonId}`;
+        return {
+          ...member,
+          name: resolvedRun.settings.nicknames && member.nickname ? `${member.nickname} (${species})` : species,
+        };
+      }) ?? null,
+    ]),
+  );
+
   // A fight the run's cap rule skips stays on the Journey, its level in brackets.
   const items = applyCapRule(
-    levelCaps.map((cap) => ({ ...cap, defeated: wonOn.has(cap.id), wonOn: wonOn.get(cap.id) ?? null })),
+    levelCaps.map((cap) => ({
+      ...cap,
+      defeated: wonOn.has(cap.id),
+      wonOn: wonOn.get(cap.id) ?? null,
+      team: wonWith.get(cap.id) ?? null,
+    })),
     resolvedRun.settings,
   );
   // A Kanto the run leaves out does not count towards the journey.
@@ -55,7 +80,7 @@ export default async function LevelCapsPage({
   const markerAt = eliteFourIndex(items);
 
   return (
-    <div>
+    <RunProviders run={resolvedRun} game={game} lang={lang}>
       <CanonicalRun runKey={runKey} version={version} solo={resolvedRun.players.length < 2} />
       <PageHeader title={t.heading}>
         <ProgressBar
@@ -74,7 +99,8 @@ export default async function LevelCapsPage({
         trainerSet={trainerSet}
         includeKanto={resolvedRun.settings.includeKanto}
         teamOffset={resolvedRun.settings.capTeamOffset}
+        players={resolvedRun.players}
       />
-    </div>
+    </RunProviders>
   );
 }

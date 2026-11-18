@@ -16,6 +16,10 @@ import { Spinner } from "@/components/ui/Spinner";
 import { useToast } from "@/components/ui/ToastProvider";
 import { toggleLevelCapDefeated } from "@/lib/actions";
 import { ChevronDownIcon } from "@/components/ActionIcons";
+import { PokemonSprite } from "@/components/PokemonSprite";
+import { usePlayerLabel } from "@/components/PlayerNamesProvider";
+import type { TeamSnapshotMember } from "@/lib/runStats";
+import type { Player } from "@/generated/prisma/enums";
 
 // The Journey tab (since 6.0): the run's fights as stations on one route band
 // - trainers above the line, gyms as their badge on it, rivals and villains
@@ -33,6 +37,8 @@ type JourneyCap = LevelCap & {
   skippedLevel?: number;
   // When it was won, formatted on the server (one time zone for both renders).
   wonOn?: string | null;
+  // The player's own team that won it (null before 6.0 recorded teams).
+  team?: (TeamSnapshotMember & { name: string })[] | null;
 };
 
 function CheckIcon({ className }: { className?: string }) {
@@ -87,6 +93,7 @@ export function LevelCapsView({
   trainerSet,
   includeKanto = true,
   teamOffset,
+  players,
 }: {
   runKey: string;
   lang: Lang;
@@ -96,12 +103,15 @@ export function LevelCapsView({
   includeKanto?: boolean;
   // The run's capTeamOffset rule: how far the rest of the team stays under a cap.
   teamOffset: number;
+  // The run's players, in order: "won with" groups the team by player.
+  players: Player[];
   // Folder under public/trainers/ for game-specific avatars (see TrainerSprite).
   trainerSet: string;
 }) {
   const router = useRouter();
   const t = translations[lang].levelcaps;
   const toast = useToast();
+  const playerLabel = usePlayerLabel();
   const [overrides, setOverrides] = useState<Record<number, boolean>>({});
   const [pendingId, setPendingId] = useState<number | null>(null);
   const [, startTransition] = useTransition();
@@ -337,7 +347,7 @@ export function LevelCapsView({
           // that station, large.
           <section
             aria-label={`${t.nextFight}: ${levelCapName(next, lang)}`}
-            className="flex flex-col gap-4 rounded-md border-2 border-accent bg-panel p-4 sm:flex-row sm:items-center sm:gap-6 sm:p-6"
+            className="flex flex-col gap-4 self-start rounded-md border-2 border-accent bg-panel p-4 sm:flex-row sm:items-center sm:gap-6 sm:p-6 lg:w-full"
           >
             <span className="self-start sm:self-center">
               <TrainerSprite canonicalName={next.sprite ?? next.names.de} displayName={levelCapName(next, lang)} trainerSet={trainerSet} size={128} />
@@ -377,7 +387,7 @@ export function LevelCapsView({
             </div>
           </section>
         ) : (
-          <section className="flex items-center gap-3 rounded-md border border-success-line bg-success-bg p-4 sm:p-6">
+          <section className="flex items-center gap-3 self-start rounded-md border border-success-line bg-success-bg p-4 sm:p-6">
             <CheckIcon className="h-6 w-6 text-success" />
             <h2 className="text-lg font-bold tracking-tight text-ink">{t.allDone}</h2>
           </section>
@@ -394,6 +404,27 @@ export function LevelCapsView({
                 {levelCapName(lastWon, lang)}
                 <span className="font-normal text-ink-muted"> · {levelCapLocation(lastWon, lang)}</span>
               </p>
+              {/* The player's own team, never the opponent's: the same
+                  record as the Statistics page's hall of fame. */}
+              {lastWon.team && lastWon.team.length > 0 && (
+                <div className="mt-2 flex flex-col gap-1.5 border-t border-line pt-2">
+                  <h4 className="text-xs text-ink-muted">{t.wonWith}</h4>
+                  {players.map((player) => {
+                    const members = lastWon.team!.filter((m) => m.player === player);
+                    if (members.length === 0) return null;
+                    return (
+                      <div key={player} className="flex flex-wrap items-center gap-0.5">
+                        {players.length > 1 && (
+                          <span className="w-full text-xs font-semibold text-ink-muted">{playerLabel(player)}</span>
+                        )}
+                        {members.map((m, i) => (
+                          <PokemonSprite key={`${m.routeId}-${i}`} pokemonId={m.pokemonId} bodyId={m.bodyPokemonId} name={m.name} size="sm" className="h-10 w-10" />
+                        ))}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </section>
           )}
           {upNext.length > 0 && (
