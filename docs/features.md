@@ -12,8 +12,8 @@ Catch one Pokémon per route and player.
 - **Route list:**
   - Static locations (gifts, fossils, legendaries) are pre-marked from the game data.
   - Post-game areas are collapsed by default.
-  - HeartGold/SoulSilver, Gold/Silver, Sacred Gold and Storm Silver show Johto and Kanto as their own sections. With the rule **Include Kanto** off, Kanto counts as post-game: it collapses here and on the Journey tab and leaves the progress bars, badges and next level cap.
-  - "Open only" hides finished routes, but keeps the route you just edited visible (after a reload: the route saved last).
+  - HeartGold/SoulSilver, Gold/Silver, Sacred Gold and Storm Silver show Johto and Kanto as their own sections. With the rule **Include Kanto** off, Kanto counts as post-game: it collapses here, comes after everything else on the Journey tab and leaves the progress bars, badges and next level cap.
+  - "Open only" hides finished routes, but keeps two in view: the route you are editing, and the route of the newest catch. Evolving or renaming a Pokémon on the Team tab does not count as a new entry.
   - A search field narrows the list. It ignores accents and also finds a place by its English name.
   - Every route is a tray whose frame and badge show its outcome: open (dashed), waiting for a player, caught, or lost.
 - **Species Clause:** conflicts show a warning and never block a save.
@@ -30,7 +30,7 @@ A drawer of six team slots, and below it the **Box** (alive, off the team) and t
 - **Mark as dead:**
   - In SoulLink you pick which player lost their Pokémon, with undo, and can record a cause of death for the Memorial.
   - The catch-time status stays untouched.
-- **Evolve and devolve**, with the evolution method. The evolve button glows when a level evolution is reachable within the level cap you have earned.
+- **Evolve and devolve**, with the evolution method. The evolve button glows when a level evolution is reachable within the level cap you have earned. Devolving is in the Box (with "Show team" also for the team), not on the team's trays.
 - **Sorting and filtering:**
   - for the Box and Memorial column: an "evolvable only" filter and a type filter;
   - "Show team" lists the team members in the Box too, framed in green and marked with their slot, so one sort ranks every living link;
@@ -58,7 +58,7 @@ Enter a Pokémon once per card, then switch between **Wild** and **Trainer**. A 
 **Trainer** is a battle scout. It shows:
 - the opponent's types and its damaging attack types by level;
 - the full type matrix, Gen 1 chart included; tapping a type at the top or on the left highlights its column or row (again to undo);
-- a team-matchup table: how well each of your Pokémon takes that opponent's attacks;
+- a team-matchup table: how well each of your Pokémon takes that opponent's attacks (under blind flight it gives way to your team as a row of pictures, each opening that Pokémon's info card);
 - a ⚠ warning for Self-Destruct and Explosion learners.
 
 ## TMs
@@ -82,11 +82,11 @@ Each row opens a detail card with:
 
 ## Journey
 
-Boss battles with their level caps and trainer pictures: gym leaders, the rival, Team Rocket and the Elite Four.
+Boss battles with their level caps and trainer pictures, laid out as a route: gym leaders, the rival, Team Rocket and the Elite Four as stations on one line, gyms as their badge, with "you are here" before the next open fight.
 
-- The next open fight sits on top.
-- Click an entry to mark it as defeated. The app notes when, and with which team, for the Statistics page.
-- By default only gym leaders and the League set a level cap; rivals and villains stay on the list as stations to tick off. The rule and the team's distance to the cap are on the Rules tab.
+- Below the route the next fight is shown large, with its cap, the team level and a button to mark it as beaten; beside it the last fight won (with the date) and the next three.
+- Click a station to mark it as defeated, or to undo that. The app notes when, and with which team, for the Statistics page.
+- By default only gym leaders and the League set a level cap; rivals and villains stay on the route as stations to tick off, with their level small and in brackets. The rule and the team's distance to the cap are on the Rules tab.
 - Every entry that grants a badge lights it up on the Overview tab.
 
 ## Overview
@@ -165,9 +165,9 @@ On top of the toggles:
 ## Appearance
 
 - **Accounts (optional):** a self-hosted installation can ask people to log in, so that everybody lists only their own runs. A fresh installation asks once; friends register with an invite code, and a run's link is the invitation to play along. See [self-hosting](self-hosting.md#accounts-optional).
-- **Settings** (the gear) is a page of its own: the open run (rename, copy its link, back it up, delete it), theme, shell colour, UI size, language, tab order, backups, installing the app, the version, and links to report a bug or suggest a feature. The theme switch and the language also sit beside the gear.
+- **Settings** (the gear) is a page of its own: the open run (rename, copy its link, back it up, delete it), theme, shell colour, UI size, language, tab order, backups, installing the app, the version, and links to report a bug or suggest a feature. The theme switch also sits beside the gear.
 - **Shell colour:** bottle green, Poké Ball red, blue or yellow, chosen per device in Settings (the gear). The side rail, the buttons and the page's tint follow, and so does the logo in the rail. The server can set the colour every device starts with (`DEFAULT_SHELL_COLOR`, see [self-hosting](self-hosting.md#environment-variables)).
-- **Side rail:** on a desktop it carries the tabs and the next level cap with the team level beside it ("24 / 22"; the phone's top bar shows the same). An arrow at its foot folds it away, a small tab on the left edge brings it back; remembered per device.
+- **Side rail:** on a desktop it carries the tabs and the next level cap with the team level beside it ("24 / 22"; the phone's top bar shows the same), and under it the old cap: the team level of the last fight won. An arrow at its foot folds it away, a small tab on the left edge brings it back; remembered per device.
 - **Light and dark** follow the device until switched by hand. Switching back to the device's own mode follows the device again.
 
 ## Languages
