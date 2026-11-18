@@ -14,7 +14,7 @@ import { computeRunStats, parseTeamSnapshot, type StatsDeath, type StatsEncounte
 import { EncounterStatus, LinkStatus } from "@/generated/prisma/client";
 import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
-import { StatsView, type StatsHallEntry, type StatsSegmentRow } from "@/components/StatsView";
+import { StatsView, type StatsFight } from "@/components/StatsView";
 
 // The run's statistics (linked from the Overview, not a tab of its own):
 // catches, misses and deaths along the Journey, and the team each fight was
@@ -84,61 +84,70 @@ export default async function StatsPage({ searchParams }: { searchParams: Promis
 
   const stats = computeRunStats({ caps: statsCaps, players, encounters: statsEncounters, deaths });
 
-  const capName = (cap: (typeof caps)[number]) => `${localizeName(cap.names, lang)} · ${localizeName(cap.location, lang)}`;
   const capById = new Map(caps.map((cap) => [cap.id, cap]));
   const dateOf = (ms: number) => new Date(ms).toLocaleDateString(lang, { day: "numeric", month: "short", year: "numeric" });
 
-  // Every segment up to the fight the run is at, plus any later one that
-  // already has something in it (fights can be won out of order).
+  // The run's fights for the page, in Journey order: every stretch up to the
+  // fight the run is at, plus any later one that already has something in it
+  // or was won (fights can be won out of order), each with the team that won it.
   const currentIndex = statsCaps.findIndex((cap) => cap.defeatedAt === null);
-  const segments: StatsSegmentRow[] = stats.segments.flatMap((segment, index) => {
+  const fights: StatsFight[] = stats.segments.flatMap((segment, index) => {
     const cap = segment.key === "end" ? null : capById.get(segment.key)!;
     const defeatedAt = cap ? (statsCaps[index]?.defeatedAt ?? null) : null;
     const hasData =
       segment.unattributedDeaths > 0 ||
       segment.perPlayer.some(({ counts }) => counts.caught + counts.missed + counts.deaths > 0);
     const reached = segment.key === "end" ? currentIndex === -1 : currentIndex === -1 || index <= currentIndex;
-    if (!reached && !hasData) return [];
-    return {
-      key: String(segment.key),
-      label: cap ? capName(cap) : null,
-      wonOn: defeatedAt !== null ? dateOf(defeatedAt) : null,
-      open: cap !== null && defeatedAt === null,
-      perPlayer: segment.perPlayer,
-      unattributedDeaths: segment.unattributedDeaths,
-    };
-  });
-
-  // The hall of fame: every fight won, in Journey order, with its team.
-  const hall: StatsHallEntry[] = caps.flatMap((cap, index) => {
-    const row = progressById.get(cap.id);
-    const defeatedAt = statsCaps[index].defeatedAt;
-    if (!row?.defeated || defeatedAt === null) return [];
+    if (!reached && !hasData && defeatedAt === null) return [];
+    const row = cap ? progressById.get(cap.id) : undefined;
     return [
       {
-        id: cap.id,
-        label: capName(cap),
-        wonOn: dateOf(defeatedAt),
+        key: String(segment.key),
+        trainer: cap ? localizeName(cap.names, lang) : null,
+        sprite: cap ? (cap.sprite ?? cap.names.de) : null,
+        place: cap ? localizeName(cap.location, lang) : null,
+        wonOn: defeatedAt !== null ? dateOf(defeatedAt) : null,
+        open: cap !== null && defeatedAt === null,
+        perPlayer: segment.perPlayer,
+        unattributedDeaths: segment.unattributedDeaths,
         team:
-          parseTeamSnapshot(row.teamJson)?.map((member) => {
-            const pokemon = getPokemonByIdForGame(game, member.pokemonId);
-            const species = pokemon ? pokemonName(pokemon, lang) : `#${member.pokemonId}`;
-            return { ...member, name: settings.nicknames && member.nickname ? `${member.nickname} (${species})` : species };
-          }) ?? null,
+          defeatedAt !== null
+            ? (parseTeamSnapshot(row?.teamJson)?.map((member) => {
+                const pokemon = getPokemonByIdForGame(game, member.pokemonId);
+                const species = pokemon ? pokemonName(pokemon, lang) : `#${member.pokemonId}`;
+                return { ...member, name: settings.nicknames && member.nickname ? `${member.nickname} (${species})` : species };
+              }) ?? null)
+            : null,
       },
     ];
   });
+
+  // The banner: won, lost or still on the road, and since when.
+  const runRow = await prisma.run.findUnique({
+    where: { id: runId },
+    select: { name: true, createdAt: true, wonAt: true, lostAt: true },
+  });
+  const outcome = runRow?.wonAt
+    ? { kind: "won" as const, date: dateOf(runRow.wonAt.getTime()) }
+    : runRow?.lostAt
+      ? { kind: "lost" as const, date: dateOf(runRow.lostAt.getTime()) }
+      : { kind: "running" as const, date: runRow ? dateOf(runRow.createdAt.getTime()) : null };
 
   return (
     <RunProviders run={resolvedRun} game={game} lang={lang}>
       <StatsView
         lang={lang}
         runKey={runKey}
+        runName={runRow?.name ?? ""}
+        gameName={localizeName(game.names, lang)}
+        outcome={outcome}
+        fightsWon={statsCaps.filter((cap) => cap.defeatedAt !== null).length}
+        fightsTotal={statsCaps.length}
         players={players}
         totals={stats.totals}
-        segments={segments}
+        fights={fights}
         unplacedDeaths={stats.unplacedDeaths}
-        hall={hall}
+        trainerSet={game.trainerSet ?? game.id}
       />
     </RunProviders>
   );
