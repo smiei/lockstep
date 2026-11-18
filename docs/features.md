@@ -84,7 +84,7 @@ Each row opens a detail card with:
 
 Boss battles with their level caps and trainer pictures, laid out as a route: gym leaders, the rival, Team Rocket and the Elite Four as stations on one line, gyms as their badge, with "you are here" before the next open fight.
 
-- Below the route the next fight is shown large, with its cap, the team level and a button to mark it as beaten; beside it the last fight won (with the date) and the next three.
+- Below the route the next fight is shown large, with its cap, the team level and a button to mark it as beaten; beside it the last fight won (with the date and the team that won it) and the next three.
 - Click a station to mark it as defeated, or to undo that. The app notes when, and with which team, for the Statistics page.
 - By default only gym leaders and the League set a level cap; rivals and villains stay on the route as stations to tick off, with their level small and in brackets. The rule and the team's distance to the cap are on the Rules tab.
 - Every entry that grants a badge lights it up on the Overview tab.
