@@ -1,5 +1,5 @@
 import { getGameOrDefault, getLevelCaps } from "@/lib/data";
-import { getDefeatedCapIds } from "@/lib/runPage";
+import { prisma } from "@/lib/prisma";
 import { resolveRunId } from "@/lib/runs";
 import { getLang } from "@/lib/i18n/getLang";
 import { tabMetadata } from "@/lib/pageMetadata";
@@ -32,11 +32,22 @@ export default async function LevelCapsPage({
   const game = getGameOrDefault(gameId);
   const trainerSet = game.trainerSet ?? game.id;
   const levelCaps = getLevelCaps(gameId);
-  const defeatedIds = await getDefeatedCapIds(runId);
+  const won = await prisma.levelCapProgress.findMany({
+    where: { runId, defeated: true },
+    select: { levelCapId: true, defeatedAt: true },
+  });
+  // When each fight was won, for "last beaten" - formatted here so the server
+  // and the browser render the same day. Rows ticked before 6.0 have no date.
+  const wonOn = new Map(
+    won.map((row) => [
+      row.levelCapId,
+      row.defeatedAt ? row.defeatedAt.toLocaleDateString(lang, { day: "numeric", month: "short" }) : null,
+    ]),
+  );
 
-  // A fight the run's cap rule skips stays on the list, without a level.
+  // A fight the run's cap rule skips stays on the Journey, its level in brackets.
   const items = applyCapRule(
-    levelCaps.map((cap) => ({ ...cap, defeated: defeatedIds.has(cap.id) })),
+    levelCaps.map((cap) => ({ ...cap, defeated: wonOn.has(cap.id), wonOn: wonOn.get(cap.id) ?? null })),
     resolvedRun.settings,
   );
   // A Kanto the run leaves out does not count towards the journey.

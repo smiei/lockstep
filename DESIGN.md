@@ -344,6 +344,9 @@ A double-ruled box of small mono data with tabular figures, 6px × 8px padding, 
 ### Next-Cap Card
 In the rail: a hover-sage block with the next trainer's location (label), name (title, 700) and the cap number as figure-large mono, with a hairline-ruled mono footer line. On a phone it collapses to a 40px chip: label word plus the mono number.
 
+### Journey route band
+The Journey tab's fights as stations on one horizontal line, in a tray-white band (full-bleed with hairlines on a phone, a bordered tray from `lg`). Each station is a toggle (`aria-pressed`): trainer sprite above, the node on the line, then name and place (two balanced lines each, fixed height so the level row aligns), the cap in mono and, once beaten, its win date in caught-green mono. The line is solid caught-green (`success-solid`) up to the next fight and a dashed control-sage line after it. Gyms sit on the line as their own badge, grey until earned; the League are larger round nodes, every other fight a small dot. A filled accent label ("You are here") marks the next station, which the band keeps centred (instant on arrival, a glide after a tick, none under reduced motion). Region changes are a ruled label chip over a heavier post. From `sm` the band fades at both edges under two secondary icon buttons that scroll it and disable at either end. Below it the next fight repeats large in a 2px accent frame, its cap and the primary "Mark as beaten" as one focal column. It never shows Pokémon.
+
 ### Specimen tile
 `EncounterTile` has three layouts: `specimen` (sprite on top, centred name in title size, mono details under - the Team drawer), `compact` (Box and memorial cards) and `row` (lists). A fusion passes its body through so the fused sprite shows.
 
