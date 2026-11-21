@@ -70,7 +70,8 @@ describe("HeartGold / SoulSilver packs", () => {
       // One contiguous block per part.
       const parts = list.map((r) => (r.postgame ? 2 : r.region === "kanto" ? 1 : 0));
       expect([...parts].sort()).toEqual(parts);
-      expect(list.filter((r) => r.postgame).map((r) => r.id).sort((a, b) => a - b)).toEqual([67, 68, 120]);
+      // Cliff Edge Gate (43) needs Rock Climb, which comes after all 16 badges.
+      expect(list.filter((r) => r.postgame).map((r) => r.id).sort((a, b) => a - b)).toEqual([43, 67, 68, 120]);
       // Places without any encounter were dropped.
       for (const id of [18, 22, 47, 66]) expect(list.some((r) => r.id === id)).toBe(false);
     });
@@ -110,13 +111,13 @@ describe("HeartGold / SoulSilver packs", () => {
   });
 
   for (const game of ["sacred-gold", "storm-silver"]) {
-    it(`${game}: Johto, Kanto from Vermilion City, Cerulean Cave post-game`, () => {
+    it(`${game}: Johto, Kanto from Vermilion City, Cliff Edge Gate and Cerulean Cave post-game`, () => {
       const list = read<Route[]>(game, "routes.json");
       const firstKanto = list.findIndex((r) => r.region === "kanto");
       expect(list[firstKanto].names.en).toBe("Vermilion City");
       const parts = list.map((r) => (r.postgame ? 2 : r.region === "kanto" ? 1 : 0));
       expect([...parts].sort()).toEqual(parts);
-      expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Cerulean Cave", "Cerulean Cave (Mewtwo)"]);
+      expect(list.filter((r) => r.postgame).map((r) => r.names.en)).toEqual(["Cliff Edge Gate", "Cerulean Cave", "Cerulean Cave (Mewtwo)"]);
     });
   }
 

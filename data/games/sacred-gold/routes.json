@@ -473,17 +473,6 @@
     "type": "route"
   },
   {
-    "id": 108,
-    "names": {
-      "de": "Cliff Edge Gate",
-      "en": "Cliff Edge Gate",
-      "fr": "Cliff Edge Gate",
-      "es": "Cliff Edge Gate",
-      "it": "Cliff Edge Gate"
-    },
-    "type": "route"
-  },
-  {
     "id": 109,
     "names": {
       "de": "Cianwood City (Pikachu)",
@@ -1407,6 +1396,18 @@
     },
     "type": "static",
     "region": "kanto"
+  },
+  {
+    "id": 108,
+    "names": {
+      "de": "Cliff Edge Gate",
+      "en": "Cliff Edge Gate",
+      "fr": "Cliff Edge Gate",
+      "es": "Cliff Edge Gate",
+      "it": "Cliff Edge Gate"
+    },
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 96,

@@ -429,17 +429,6 @@
     "type": "static"
   },
   {
-    "id": 43,
-    "names": {
-      "de": "Felsklippentor",
-      "en": "Cliff Edge Gate",
-      "fr": "Portail Falaise",
-      "es": "Paso Acantilado",
-      "it": "Ingresso Falesia"
-    },
-    "type": "route"
-  },
-  {
     "id": 44,
     "names": {
       "de": "Route 47",
@@ -1294,6 +1283,18 @@
     },
     "type": "static",
     "region": "kanto"
+  },
+  {
+    "id": 43,
+    "names": {
+      "de": "Felsklippentor",
+      "en": "Cliff Edge Gate",
+      "fr": "Portail Falaise",
+      "es": "Paso Acantilado",
+      "it": "Ingresso Falesia"
+    },
+    "type": "route",
+    "postgame": true
   },
   {
     "id": 120,
