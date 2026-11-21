@@ -165,7 +165,15 @@ export function LevelCapsView({
   const next = nextIndex >= 0 ? order[nextIndex] : null;
   const won = (nextIndex >= 0 ? order.slice(0, nextIndex) : order).filter(isDone);
   const lastWon = won[won.length - 1] ?? null;
-  const upNext = nextIndex >= 0 ? order.slice(nextIndex + 1, nextIndex + 4) : [];
+  // "Up next" stays in the story: a Kanto the run leaves out is post-game and
+  // only shows once the team is there.
+  const upNext =
+    nextIndex >= 0
+      ? order
+          .slice(nextIndex + 1)
+          .filter((cap) => includeKanto || next?.region === "kanto" || cap.region !== "kanto")
+          .slice(0, 3)
+      : [];
 
   // Keep the next fight in the middle of the band: at once on arrival, with
   // a glide when a tick moves it on (none under reduced motion).
