@@ -308,7 +308,7 @@ function RunCard({ card, lang, games }: { card: RunHomeCard; lang: Lang; games: 
                           bodyId={member.bodyId}
                           name=""
                           size="lg"
-                          className={`h-full w-full ${lost ? "opacity-50 grayscale" : ""}`}
+                          className={`h-full w-full ${lost ? "opacity-50 grayscale" : member.fallen ? "grayscale" : ""}`}
                         />
                       ) : (
                         <span className="h-1/2 w-1/2 rounded-sm border border-dashed border-line-strong" />

@@ -1,8 +1,10 @@
 import { prisma } from "@/lib/prisma";
-import { getGameById } from "@/lib/data";
+import { getGameById, getLevelCaps } from "@/lib/data";
+import { effectiveDeathCapId } from "@/lib/deathPoint";
 import { comparePlayers, runPlayers } from "@/lib/players";
 import { computeRouteProgress } from "@/lib/progress";
-import { applyRegionRule } from "@/lib/regions";
+import { applyRegionRule, levelCapsInRun } from "@/lib/regions";
+import { TEAM_SIZE } from "@/lib/runStats";
 import { getRoutesForRun } from "@/lib/runRoutes";
 import { listCapSummaries, listRunsForHeader } from "@/lib/runs";
 import { parseRunSettings } from "@/lib/runSettings";
@@ -16,7 +18,7 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
   const runs = await listRunsForHeader();
   if (runs.length === 0) return [];
   const runIds = runs.map((run) => run.id);
-  const [caps, encounters, links] = await Promise.all([
+  const [caps, encounters, links, wins] = await Promise.all([
     listCapSummaries(runs),
     prisma.encounter.findMany({
       where: { runId: { in: runIds } },
@@ -28,11 +30,24 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
         currentPokemonId: true,
         fusedIntoId: true,
         soulLinkId: true,
+        status: true,
       },
     }),
     prisma.soulLink.findMany({
       where: { runId: { in: runIds } },
-      select: { id: true, runId: true, status: true, teamPosition: true },
+      select: {
+        id: true,
+        runId: true,
+        status: true,
+        teamPosition: true,
+        diedAt: true,
+        deathLevelCapId: true,
+        deathCapIsNext: true,
+      },
+    }),
+    prisma.levelCapProgress.findMany({
+      where: { runId: { in: runIds }, defeated: true },
+      select: { runId: true, levelCapId: true, defeatedAt: true },
     }),
   ]);
 
@@ -47,19 +62,42 @@ export async function listRunHomeCards(): Promise<RunHomeCard[]> {
 
       // The team in slot order, each slot the whole link: every player's
       // Pokémon in player order - a fusion as its head with the body it carries.
+      const slotOf = (link: (typeof runLinks)[number], fallen: boolean) =>
+        own
+          .filter((e) => e.soulLinkId === link.id && e.fusedIntoId === null && e.status === "CAUGHT")
+          .sort((a, b) => comparePlayers(a.player, b.player))
+          .map((head) => ({
+            pokemonId: head.currentPokemonId,
+            bodyId: own.find((e) => e.fusedIntoId === head.id)?.currentPokemonId ?? null,
+            fallen,
+          }));
       const team = runLinks
         .filter((link) => link.teamPosition !== null && link.status === "ALIVE")
         .sort((a, b) => a.teamPosition! - b.teamPosition!)
-        .map((link) =>
-          own
-            .filter((e) => e.soulLinkId === link.id && e.fusedIntoId === null)
-            .sort((a, b) => comparePlayers(a.player, b.player))
-            .map((head) => ({
-              pokemonId: head.currentPokemonId,
-              bodyId: own.find((e) => e.fusedIntoId === head.id)?.currentPokemonId ?? null,
-            })),
-        )
+        .map((link) => slotOf(link, false))
         .filter((members) => members.length > 0);
+
+      // A won run's free slots hold the Pokémon that fell in the fight that
+      // won it (the last one ticked off), newest death first.
+      const finalFight = run.wonAt
+        ? wins
+            .filter((row) => row.runId === run.id)
+            .sort((a, b) => (b.defeatedAt?.getTime() ?? 0) - (a.defeatedAt?.getTime() ?? 0))[0]
+        : undefined;
+      if (finalFight && team.length < TEAM_SIZE) {
+        const capIds = levelCapsInRun(getLevelCaps(run.gameId), settings).map((cap) => cap.id);
+        const fallen = runLinks
+          .filter(
+            (link) =>
+              link.status === "DEAD" &&
+              link.diedAt !== null &&
+              effectiveDeathCapId(link, capIds) === finalFight.levelCapId,
+          )
+          .sort((a, b) => b.diedAt!.getTime() - a.diedAt!.getTime())
+          .map((link) => slotOf(link, true))
+          .filter((members) => members.length > 0);
+        team.push(...fallen.slice(0, TEAM_SIZE - team.length));
+      }
 
       const cap = caps.find((c) => c.accessKey === run.accessKey);
       const game = getGameById(run.gameId);

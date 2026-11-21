@@ -38,7 +38,7 @@ type JourneyCap = LevelCap & {
   // When it was won, formatted on the server (one time zone for both renders).
   wonOn?: string | null;
   // The player's own team that won it (null before 6.0 recorded teams).
-  team?: (TeamSnapshotMember & { name: string })[] | null;
+  team?: (TeamSnapshotMember & { name: string; fallen?: boolean })[] | null;
 };
 
 function CheckIcon({ className }: { className?: string }) {
@@ -418,7 +418,14 @@ export function LevelCapsView({
                           <span className="w-full text-xs font-semibold text-ink-muted">{playerLabel(player)}</span>
                         )}
                         {members.map((m, i) => (
-                          <PokemonSprite key={`${m.routeId}-${i}`} pokemonId={m.pokemonId} bodyId={m.bodyPokemonId} name={m.name} size="sm" className="h-10 w-10" />
+                          <PokemonSprite
+                            key={`${m.routeId}-${i}`}
+                            pokemonId={m.pokemonId}
+                            bodyId={m.bodyPokemonId}
+                            name={m.fallen ? t.fellInFight(m.name) : m.name}
+                            size="sm"
+                            className={`h-10 w-10 ${m.fallen ? "grayscale" : ""}`}
+                          />
                         ))}
                       </div>
                     );

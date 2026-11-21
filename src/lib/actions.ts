@@ -42,7 +42,7 @@ import {
 import { parseCapTeamOffset } from "@/lib/levelCapRule";
 import { levelCapsInRun } from "@/lib/regions";
 import { nextOpenCapId } from "@/lib/deathPoint";
-import type { TeamSnapshotMember } from "@/lib/runStats";
+import { snapshotMembers, type TeamSnapshotMember } from "@/lib/runStats";
 import type { Lang } from "@/lib/i18n/dictionary";
 import { getViewer, isLockedOut, joinRun, mayDeleteRun, visibleRunsWhere } from "@/lib/auth";
 
@@ -1205,20 +1205,7 @@ async function teamSnapshot(runId: number): Promise<TeamSnapshotMember[]> {
   const team = links
     .filter((link) => onTeam.has(link.id))
     .sort((a, b) => (a.teamPosition ?? TEAM_SNAPSHOT_LAST) - (b.teamPosition ?? TEAM_SNAPSHOT_LAST));
-  const encounters = team.flatMap((link) => link.encounters);
-  const ids = new Set(encounters.map((e) => e.id));
-  const donorOf = new Map(
-    encounters.filter((e) => e.fusedIntoId !== null).map((e) => [e.fusedIntoId as number, e]),
-  );
-  return encounters
-    .filter((e) => !(e.fusedIntoId !== null && ids.has(e.fusedIntoId)))
-    .map((e) => ({
-      player: e.player,
-      routeId: e.routeId,
-      pokemonId: e.currentPokemonId,
-      bodyPokemonId: donorOf.get(e.id)?.currentPokemonId ?? null,
-      nickname: e.nickname,
-    }));
+  return snapshotMembers(team.flatMap((link) => link.encounters));
 }
 const TEAM_SNAPSHOT_LAST = 99;
 

@@ -10,7 +10,14 @@ import { getPokemonByIdForGame } from "@/lib/gameData";
 import { levelCapsInRun } from "@/lib/regions";
 import { effectiveDeathCapId } from "@/lib/deathPoint";
 import { failedRouteIdsOf, formedLinks, groupSoulLinks } from "@/lib/fusionGroups";
-import { computeRunStats, parseTeamSnapshot, type StatsDeath, type StatsEncounter } from "@/lib/runStats";
+import {
+  computeRunStats,
+  fallenByFight,
+  parseTeamSnapshot,
+  withFallen,
+  type StatsDeath,
+  type StatsEncounter,
+} from "@/lib/runStats";
 import { EncounterStatus, LinkStatus } from "@/generated/prisma/client";
 import { RunProviders } from "@/components/RunProviders";
 import { RunLanding } from "@/components/RunLanding";
@@ -84,7 +91,20 @@ export default async function StatsPage({ searchParams }: { searchParams: Promis
 
   const stats = computeRunStats({ caps: statsCaps, players, encounters: statsEncounters, deaths });
 
+  // Who fell in each fight: they fill the free slots of the team that won it.
+  const fallen = fallenByFight(
+    links
+      .filter((link) => link.status === LinkStatus.DEAD)
+      .map((link) => ({
+        diedAt: link.diedAt,
+        capId: link.diedAt ? effectiveDeathCapId(link, runCapIds) : null,
+        encounters: link.encounters.map((e) => ({ ...e, caught: e.status === EncounterStatus.CAUGHT })),
+      })),
+  );
+
   const capById = new Map(caps.map((cap) => [cap.id, cap]));
+  const withTeamOf = (team: ReturnType<typeof parseTeamSnapshot>, fell: Parameters<typeof withFallen>[1]) =>
+    team ? withFallen(team, fell) : null;
   const dateOf = (ms: number) => new Date(ms).toLocaleDateString(lang, { day: "numeric", month: "short", year: "numeric" });
 
   // The run's fights for the page, in Journey order: every stretch up to the
@@ -114,7 +134,7 @@ export default async function StatsPage({ searchParams }: { searchParams: Promis
         unattributedDeaths: segment.unattributedDeaths,
         team:
           defeatedAt !== null
-            ? (parseTeamSnapshot(row?.teamJson)?.map((member) => {
+            ? (withTeamOf(parseTeamSnapshot(row?.teamJson), cap ? (fallen.get(cap.id) ?? []) : [])?.map((member) => {
                 const pokemon = getPokemonByIdForGame(game, member.pokemonId);
                 const species = pokemon ? pokemonName(pokemon, lang) : `#${member.pokemonId}`;
                 return { ...member, name: settings.nicknames && member.nickname ? `${member.nickname} (${species})` : species };

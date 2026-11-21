@@ -163,6 +163,7 @@ export type RunHomeCard = {
   nextCap: RunCapSummary["next"];
   deaths: number;
   // The living team in slot order, each slot a link with every player's
-  // Pokémon in player order; a fusion carries its body.
-  team: { pokemonId: number; bodyId: number | null }[][];
+  // Pokémon in player order; a fusion carries its body. A won run fills its
+  // free slots with the Pokémon that fell in its last fight (`fallen`).
+  team: { pokemonId: number; bodyId: number | null; fallen: boolean }[][];
 };

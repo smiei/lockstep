@@ -28,7 +28,7 @@ export type StatsFight = {
   perPlayer: { player: Player; counts: PlayerCounts }[];
   unattributedDeaths: number;
   // The player's own team that won it; null = not won, or won before 6.0.
-  team: (TeamSnapshotMember & { name: string })[] | null;
+  team: (TeamSnapshotMember & { name: string; fallen?: boolean })[] | null;
 };
 
 export type StatsOutcome = { kind: "won" | "lost" | "running"; date: string | null };
@@ -348,7 +348,14 @@ export function StatsView({
                                 {!solo && <span className="w-14 shrink-0 truncate text-xs font-semibold text-ink-muted">{playerLabel(player)}</span>}
                                 <span className="flex min-w-0 flex-wrap">
                                   {members.map((m, i) => (
-                                    <PokemonSprite key={`${m.routeId}-${i}`} pokemonId={m.pokemonId} bodyId={m.bodyPokemonId} name={m.name} size="sm" className="h-9 w-9" />
+                                    <PokemonSprite
+                                      key={`${m.routeId}-${i}`}
+                                      pokemonId={m.pokemonId}
+                                      bodyId={m.bodyPokemonId}
+                                      name={m.fallen ? t.fellInFight(m.name) : m.name}
+                                      size="sm"
+                                      className={`h-9 w-9 ${m.fallen ? "grayscale" : ""}`}
+                                    />
                                   ))}
                                 </span>
                               </div>

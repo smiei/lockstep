@@ -13,7 +13,9 @@ import { RunLanding } from "@/components/RunLanding";
 import { ProgressBar } from "@/components/ProgressBar";
 import { PageHeader } from "@/components/ui/Page";
 import { RunProviders } from "@/components/RunProviders";
-import { parseTeamSnapshot } from "@/lib/runStats";
+import { fallenByFight, parseTeamSnapshot, withFallen } from "@/lib/runStats";
+import { effectiveDeathCapId } from "@/lib/deathPoint";
+import { EncounterStatus, LinkStatus } from "@/generated/prisma/client";
 import { getPokemonByIdForGame } from "@/lib/gameData";
 import { pokemonName } from "@/lib/i18n/localize";
 
@@ -36,10 +38,13 @@ export default async function LevelCapsPage({
   const game = getGameOrDefault(gameId);
   const trainerSet = game.trainerSet ?? game.id;
   const levelCaps = getLevelCaps(gameId);
-  const won = await prisma.levelCapProgress.findMany({
-    where: { runId, defeated: true },
-    select: { levelCapId: true, defeatedAt: true, teamJson: true },
-  });
+  const [won, deadLinks] = await Promise.all([
+    prisma.levelCapProgress.findMany({
+      where: { runId, defeated: true },
+      select: { levelCapId: true, defeatedAt: true, teamJson: true },
+    }),
+    prisma.soulLink.findMany({ where: { runId, status: LinkStatus.DEAD }, include: { encounters: true } }),
+  ]);
   // When each fight was won, for "last beaten" - formatted here so the server
   // and the browser render the same day. Rows ticked before 6.0 have no date.
   const wonOn = new Map(
@@ -49,20 +54,33 @@ export default async function LevelCapsPage({
     ]),
   );
 
+  // Who fell in each fight: they fill the free slots of the team that won it.
+  const runCapIds = levelCapsInRun(levelCaps, resolvedRun.settings).map((cap) => cap.id);
+  const fallen = fallenByFight(
+    deadLinks.map((link) => ({
+      diedAt: link.diedAt,
+      capId: link.diedAt ? effectiveDeathCapId(link, runCapIds) : null,
+      encounters: link.encounters.map((e) => ({ ...e, caught: e.status === EncounterStatus.CAUGHT })),
+    })),
+  );
+
   // The team each fight was won with (recorded since 6.0), for "won with"
   // under the last fight beaten. Nicknames as the run's rule shows them.
   const wonWith = new Map(
-    won.map((row) => [
-      row.levelCapId,
-      parseTeamSnapshot(row.teamJson)?.map((member) => {
-        const pokemon = getPokemonByIdForGame(game, member.pokemonId);
-        const species = pokemon ? pokemonName(pokemon, lang) : `#${member.pokemonId}`;
-        return {
-          ...member,
-          name: resolvedRun.settings.nicknames && member.nickname ? `${member.nickname} (${species})` : species,
-        };
-      }) ?? null,
-    ]),
+    won.map((row) => {
+      const team = parseTeamSnapshot(row.teamJson);
+      const named = team
+        ? withFallen(team, fallen.get(row.levelCapId) ?? []).map((member) => {
+            const pokemon = getPokemonByIdForGame(game, member.pokemonId);
+            const species = pokemon ? pokemonName(pokemon, lang) : `#${member.pokemonId}`;
+            return {
+              ...member,
+              name: resolvedRun.settings.nicknames && member.nickname ? `${member.nickname} (${species})` : species,
+            };
+          })
+        : null;
+      return [row.levelCapId, named] as const;
+    }),
   );
 
   // A fight the run's cap rule skips stays on the Journey, its level in brackets.

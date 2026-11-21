@@ -43,6 +43,104 @@ export function parseTeamSnapshot(json: string | null | undefined): TeamSnapshot
   }
 }
 
+// The encounter fields a snapshot is made of.
+export type SnapshotEncounter = {
+  id: number;
+  player: Player;
+  routeId: number;
+  currentPokemonId: number;
+  fusedIntoId: number | null;
+  nickname: string | null;
+};
+
+// Encounters as team members, the way the Team tab shows them: a fused body
+// is folded into its host (when both are in the list) and the rest stay
+// single members, in the given order.
+export function snapshotMembers(encounters: readonly SnapshotEncounter[]): TeamSnapshotMember[] {
+  const ids = new Set(encounters.map((e) => e.id));
+  const donorOf = new Map(
+    encounters.filter((e) => e.fusedIntoId !== null).map((e) => [e.fusedIntoId as number, e]),
+  );
+  return encounters
+    .filter((e) => !(e.fusedIntoId !== null && ids.has(e.fusedIntoId)))
+    .map((e) => ({
+      player: e.player,
+      routeId: e.routeId,
+      pokemonId: e.currentPokemonId,
+      bodyPokemonId: donorOf.get(e.id)?.currentPokemonId ?? null,
+      nickname: e.nickname,
+    }));
+}
+
+export const TEAM_SIZE = 6;
+
+// A Pokémon that died in a fight, for filling the team that won it.
+export type FallenMember = TeamSnapshotMember & { diedAt: number };
+
+// The Pokémon that fell in each fight (src/lib/deathPoint.ts: a death belongs
+// to the fight that was still open), newest death first. Only recorded
+// deaths of caught Pokémon count.
+export function fallenByFight(
+  links: readonly {
+    diedAt: Date | null;
+    capId: number | null;
+    encounters: readonly (SnapshotEncounter & { caught: boolean })[];
+  }[],
+): Map<number, FallenMember[]> {
+  const byFight = new Map<number, { diedAt: number; encounter: SnapshotEncounter }[]>();
+  for (const link of links) {
+    if (link.diedAt === null || link.capId === null) continue;
+    const list = byFight.get(link.capId) ?? [];
+    for (const encounter of link.encounters) {
+      if (encounter.caught) list.push({ diedAt: link.diedAt.getTime(), encounter });
+    }
+    byFight.set(link.capId, list);
+  }
+  const result = new Map<number, FallenMember[]>();
+  for (const [capId, list] of byFight) {
+    // Newest first; a fused pair folds into its host with the host's time.
+    list.sort((a, b) => b.diedAt - a.diedAt);
+    const diedAtOf = new Map(list.map((item) => [item.encounter.id, item.diedAt]));
+    const members = snapshotMembers(list.map((item) => item.encounter));
+    const hostIds = list
+      .map((item) => item.encounter)
+      .filter((e) => !(e.fusedIntoId !== null && diedAtOf.has(e.fusedIntoId)))
+      .map((e) => e.id);
+    result.set(
+      capId,
+      members.map((member, i) => ({ ...member, diedAt: diedAtOf.get(hostIds[i]) ?? 0 })),
+    );
+  }
+  return result;
+}
+
+// The team that won a fight, its free slots filled with the Pokémon that fell
+// in that fight - they were part of the team until the fight took them. Each
+// player's free slots take that player's newest deaths first.
+export function withFallen(
+  team: readonly TeamSnapshotMember[],
+  fallen: readonly FallenMember[],
+): (TeamSnapshotMember & { fallen: boolean })[] {
+  const result = team.map((member) => ({ ...member, fallen: false }));
+  const taken = new Map<Player, number>();
+  for (const member of team) taken.set(member.player, (taken.get(member.player) ?? 0) + 1);
+  const inTeam = new Set(team.map((m) => `${m.player}:${m.routeId}`));
+  for (const member of fallen) {
+    const count = taken.get(member.player) ?? 0;
+    if (count >= TEAM_SIZE || inTeam.has(`${member.player}:${member.routeId}`)) continue;
+    taken.set(member.player, count + 1);
+    result.push({
+      player: member.player,
+      routeId: member.routeId,
+      pokemonId: member.pokemonId,
+      bodyPokemonId: member.bodyPokemonId,
+      nickname: member.nickname,
+      fallen: true,
+    });
+  }
+  return result;
+}
+
 // A fight of the run, in Journey order.
 export type StatsCap = { id: number; defeatedAt: number | null };
 
